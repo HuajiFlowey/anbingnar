@@ -1,0 +1,11 @@
+anbi_ab1_the_doubt_1 = {
+	opinion = -25
+	years = 25
+	yearly_decay = 1
+}
+anbi_merfolk_wants_to_conquer = {
+	opinion = -100
+}
+anbi_merfolk_drinking = {
+	opinion = 100
+}

@@ -1,0 +1,5206 @@
+namespace = anbi_kuhai
+#苦海革命（1）
+country_event = {
+	id = anbi_kuhai.1
+	title = anbi_kuhai.1.t
+	desc = anbi_kuhai.1.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_owned_province = {
+				add_unrest = 10
+			}
+		}
+	}
+
+	option = {
+		name = anbi_kuhai.1.a
+		tooltip = {
+			every_owned_province = {
+				add_unrest = 10
+			}	
+		}
+		set_country_flag = the_greatest_yanshen
+		add_stability = -1
+		hidden_effect = {
+			change_government = anbi_republic
+		}
+		add_government_reform = anbi_kuhai_salter_republic
+		define_ruler = {
+			name = "Ke"
+			dynasty = "Huang"
+			adm = 2
+			dip = 4
+			mil = 5
+			female = yes
+			age = 21
+		}
+		hidden_effect = {
+			add_ruler_personality = mage_personality
+			add_ruler_personality = huangke_mil_personality
+			add_ruler_personality = huangke_adm_personality
+			set_ruler_flag = is_huangke
+			set_ruler_flag = evocation_1
+			set_ruler_flag = evocation_2
+			set_ruler_flag = divination_1
+			set_ruler_flag = divination_2
+			set_ruler_flag = conjuration_1
+			set_ruler_flag = enchantment_1
+			set_ruler_flag = enchantment_2
+			set_ruler_flag = initialized_magic_flags
+			set_country_flag = necromancy_disallowed
+			add_faction_influence = {
+				faction = anbi_feiten_0
+				influence = -15
+			}
+			add_country_modifier = {
+				name = faction_timer_mod
+				duration = -1
+				hidden = yes
+			}
+			country_event = {
+				id = anbi_kuhai.200
+				days = 365
+			}
+		}
+		save_global_event_target_as = kuhai_or_was_kuhai_target
+		swap_free_idea_group = yes
+		swap_non_generic_missions = yes
+	}
+}
+country_event = {
+	id = anbi_kuhai.2
+	title = anbi_kuhai.2.t
+	desc = anbi_kuhai.2.d
+	picture = REFORM_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.2.a
+		add_stability = 1
+		create_alliance = Y20
+		create_alliance = Y05
+		Y20 = {	add_historical_friend = ROOT }
+		Y05 = {	add_historical_friend = ROOT }
+		add_historical_friend = Y20
+		add_historical_friend = Y05
+		hidden_effect = {
+			Y20 = {
+				force_remove_rival = Y26
+				force_remove_rival = Y05
+				force_remove_rival = ROOT
+				add_historical_friend = Y26
+				add_historical_friend = Y05
+			}
+			Y05 = {
+				force_remove_rival = Y20
+				force_remove_rival = Y26
+				force_remove_rival = ROOT
+				add_historical_friend = Y20
+				add_historical_friend = Y26
+			}
+			Y26 = {
+				force_remove_rival = Y20
+				force_remove_rival = Y05
+				force_remove_rival = ROOT
+				add_historical_friend = Y20
+				add_historical_friend = Y05
+			}
+			force_remove_rival = Y26
+			force_remove_rival = Y05
+			force_remove_rival = Y20
+		}
+	}
+}
+#黄恪选举
+country_event = {
+	id = anbi_kuhai.3
+	title = anbi_kuhai.3.t
+	desc = anbi_kuhai.3.d
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_reform = anbi_kuhai_salter_republic
+			has_reform = anbi_kuhai_new_republic
+		}
+		has_ruler_flag = is_huangke
+	}
+
+	option = {
+		name = anbi_kuhai.3.a
+		add_faction_influence = {
+			faction = anbi_feiten_0
+			influence = 5
+		}
+	}
+	option = {
+		name = anbi_kuhai.3.b
+		add_faction_influence = {
+			faction = anbi_lanjin_0
+			influence = 5
+		}
+	}
+	option = {
+		name = anbi_kuhai.3.c
+		add_faction_influence = {
+			faction = anbi_yinquan_0
+			influence = 5
+		}
+	}
+}
+#甘甜苦海 
+country_event = {
+	id = anbi_kuhai.4
+	title = anbi_kuhai.4.t
+	desc = anbi_kuhai.4.d
+	picture = WOKOU_INCIDENT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.4.a
+		change_adm = 1
+		tianlou_area = {
+			add_permanent_claim = ROOT
+		}
+	}
+}
+#隐泉战争
+country_event = {
+	id = anbi_kuhai.5
+	title = anbi_kuhai.5.t
+	desc = anbi_kuhai.5.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		event_target:kuhai_or_was_kuhai_target = {
+			OR = {
+				owns = 4872
+				owns = 5420
+				owns = 4903
+				owns = 4875
+			}
+		}
+	}
+
+	option = {
+		name = anbi_kuhai.5.a
+		hidden_effect = {
+			if = {
+				limit = { 
+					4872 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				4872 = {
+					cede_province = Y26
+				}
+			}
+			if = {
+				limit = { 
+					5420 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				5420 = {
+					cede_province = Y26
+				}
+			}
+			if = {
+				limit = { 
+					4903 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				4903 = {
+					cede_province = Y26
+				}
+			}
+			if = {
+				limit = { 
+					4875 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				4875 = {
+					cede_province = Y26
+				}
+			}
+		}
+	}
+}
+#解散贵族
+country_event = {
+	id = anbi_kuhai.6
+	title = anbi_kuhai.6.t
+	desc = anbi_kuhai.6.d
+	picture = FARMING_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = anbi_kuhai.6.a
+		set_estate_privilege = anbi_kuhai_kill_the_eunuch1_p
+		change_adm = 1
+		add_manpower = -0.5
+		anbi_add_kuhai_gold_var = yes
+	}
+	option = {
+		name = anbi_kuhai.6.b
+		set_estate_privilege = anbi_kuhai_kill_the_eunuch2_p
+		change_adm = 1
+		add_manpower = -0.5
+		anbi_add_kuhai_blue_var = yes
+	}
+}
+#附庸隐泉
+country_event = {
+	id = anbi_kuhai.7
+	title = anbi_kuhai.7.t
+	desc = anbi_kuhai.7.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		4872 = {
+			owned_by = Y26
+		}
+		5420 = {
+			owned_by = Y26
+		}
+		4903 = {
+			owned_by = Y26
+		}
+		4875 = {
+			owned_by = Y26
+		}
+		OR = {
+			tag = Y27
+			AND = {
+				tag = Y20
+				has_country_flag = the_greatest_yanshen
+			}
+		}
+	}
+
+	option = {
+		name = anbi_kuhai.7.a
+		vassalize = Y26
+		add_country_modifier = {
+			name = anbi_kuhai_Y26_argeement
+			duration = 18250
+		}
+	}
+}
+#蓝巾会剧情
+country_event = {
+	id = anbi_kuhai.8
+	title = anbi_kuhai.8.t
+	desc = anbi_kuhai.8.d
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		4868 = {
+			owned_by = Y05
+		}
+		OR = {
+			tag = Y27
+			AND = {
+				tag = Y20
+				has_country_flag = the_greatest_yanshen
+			}
+		}
+		has_country_flag = anbi_kuhai_continue_the_blue_war_cf
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = anbi_kuhai.8.a
+		original_yanszin = {
+			add_permanent_claim = ROOT
+		}
+		change_dip = 1
+	}
+}
+#与飞腾的联合
+country_event = {
+	id = anbi_kuhai.9
+	title = anbi_kuhai.9.t
+	desc = anbi_kuhai.9.d
+	picture = REFORM_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.9.a
+		hidden_effect = {
+			Y20 = {
+				change_government = anbi_republic
+			}
+		}
+		Y20 = {
+			add_government_reform = anbi_kuhai_twin_republic
+		}
+		create_subject = {
+			subject_type = twin_empire
+			who = Y20
+		}
+	}
+}
+#成立飞腾补丁
+country_event = {
+	id = anbi_kuhai.23
+	title = anbi_kuhai.23.t
+	desc = anbi_kuhai.23.d
+	picture = anbingnar_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.23.a
+		change_tag_and_keep_color = { tag = Y20 } 
+		hidden_effect = { save_global_event_target_as = kuhai_or_was_kuhai_target } 
+		override_country_name = "Y27_Y20_united_states"
+		anbi_add_kuhai_blue_var = yes
+	}
+}
+#挫败宁池氏阴谋集团
+country_event = {
+	id = anbi_kuhai.10
+	title = anbi_kuhai.10.t
+	desc = anbi_kuhai.10.d
+	picture = BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			Y05 = {
+				kill_ruler = yes
+			}
+			4868 = {
+				cede_province = Y13
+			}
+			erluxi_area = {
+				add_core = Y13
+				cede_province = Y13
+			}
+			Y13 = {
+				declare_war_with_cb = {
+					casus_belli = cb_annex
+					who = Y05
+				}
+			}
+		}
+	}
+
+	option = {
+		name = anbi_kuhai.10.a
+		create_subject = {
+			subject_type = twin_empire
+			who = Y05
+		}
+		custom_tooltip = anbi_kuhai.10_ct
+		#就算还是农民共和国，黄恪也大概率连任，并产生属性增加bug，所以添加兜底
+		hidden_effect = {
+			country_event = {
+				id = anbi_kuhai.12
+				days = 1430 #3年+11个月
+			}
+		}
+	}
+
+}
+#整合蓝巾会
+country_event = {
+	id = anbi_kuhai.11
+	title = anbi_kuhai.11.t
+	desc = anbi_kuhai.11.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		Y05 = {
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = twin_empire
+			}
+		}
+		NOT = {
+			exists = Y13
+		}	
+	}
+
+	option = {
+		name = anbi_kuhai.11.a
+		hidden_effect = {
+			Y05 = {
+				change_government = anbi_republic
+			}
+		}
+		Y05 = {
+			add_government_reform = anbi_kuhai_twin_republic
+		}
+	}
+}
+#蓝巾会红豆吃多了
+country_event = {
+	id = anbi_kuhai.12
+	title = anbi_kuhai.12.t
+	desc = anbi_kuhai.12.d
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		Y05 = {
+			NOT = {
+				has_reform = anbi_kuhai_twin_republic
+			}
+		}
+	}
+
+	option = {
+		name = anbi_hukai.12.a
+		Y05 = {
+			hidden_effect = {
+				change_government = anbi_republic
+			}
+			add_government_reform = anbi_kuhai_twin_republic
+		}
+		add_republican_tradition = -50
+	}
+
+	option = {
+		name = anbi_kuhai.12.b
+		Y05 = {
+			remove_historical_friend = ROOT
+			grant_independence = yes
+		}
+	}
+
+}
+#金狗狗可爱捏
+country_event = {
+	id = anbi_kuhai.13
+	title = anbi_kuhai.13.t
+	desc = anbi_kuhai.13.d
+	picture = KOBOLD_BALRIS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.13.a
+		trigger = {
+			Y85 = {
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+		}
+		capital_scope = {
+			add_kobold_minority_size_effect = yes
+		}
+		largest_increase_of_kobold_tolerance_effect = yes
+		anbi_add_kuhai_purple_var = yes
+	}
+	option = {
+		name = anbi_kuhai.13.b
+		trigger = {
+			Y85 = {
+				NOT = {
+					has_opinion = {
+						who = ROOT
+						value = 149
+					}
+				}
+			}
+		}
+		Y85 = {
+			every_owned_province = {
+				add_permanent_claim = ROOT
+			}
+		}
+		small_decrease_of_kobold_tolerance_effect = yes
+		anbi_add_kuhai_gold_var = yes
+	}
+}
+#净化烟心
+country_event = {
+	id = anbi_kuhai.14
+	title = anbi_kuhai.14.t
+	desc = anbi_kuhai.14.d
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			original_yanszin = {
+				limit = {
+					OR = {
+						owned_by = Y05
+						AND = {
+							ROOT = {
+								alliance_with = Y85
+							}
+							owned_by = Y85
+						}
+						owned_by_subject_of = ROOT
+					}
+				}
+				remove_core = Y85
+				remove_core = Y05
+				cede_province = ROOT
+				add_territorial_core = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = anbi_kuhai.14.a
+		jaddempire_move_court_minorities_from_to = {
+			from = capital_scope
+			province_id = 4859
+		}
+		4859 = {
+			move_capital_effect = yes
+		}
+		add_adm_power = -100
+		anbi_add_kuhai_blue_var = yes
+	}
+	option = {
+		name = anbi_kuhai.14.b
+		jaddempire_move_court_minorities_from_to = {
+			from = capital_scope
+			province_id = 4859
+		}
+		4859 = {
+			move_capital_effect = yes
+			add_base_manpower = -1
+			add_base_production = -1
+			change_religion = ROOT
+		}
+		add_mil_power = -100
+		anbi_add_kuhai_gold_var = yes
+	}
+}
+#附庸北渡港
+country_event = {
+	id = anbi_kuhai.15
+	title = anbi_kuhai.15.t
+	desc = anbi_kuhai.15.d
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.15.a
+		vassalize = Y15
+		1371 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 36500
+				power = 25
+				key = anbi_kuhai_controlled_ocean
+			}
+		}
+		1372 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 36500
+				power = 25
+				key = anbi_kuhai_controlled_ocean
+			}
+		}
+	}
+}
+#烟州共和国，成立嘞！
+country_event = {
+	id = anbi_kuhai.16
+	title = anbi_kuhai.16.t
+	desc = anbi_kuhai.16.d
+	picture = anbi_flag_army_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = anbi_kuhai.16.a
+		#这里是为了保证湖联统一
+		hidden_effect = {
+			federation_increase_cohesion_all = yes
+			federation_increase_cohesion_all = yes
+			federation_increase_cohesion_all = yes
+		}	
+		country_event = {
+			id = anbi_kuhai.17
+		}
+	}
+}
+country_event = {
+	id = anbi_kuhai.17
+	title = anbi_kuhai.17.t
+	desc = anbi_kuhai.17.d
+	picture = anbi_speech2_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = anbi_kuhai.17.a
+		restore_country_name = yes
+		set_government_rank = 3
+		change_dip = 1
+		change_mil = 1
+		change_tag = Z65
+		change_government_reform_progress = 50
+		add_government_reform = anbi_kuhai_united_yanshen
+		inherit = Y05
+		inherit = Y26
+		inherit = Y15
+		yanshen_superregion = {
+			add_permanent_claim = ROOT
+		}
+		add_country_modifier = {
+			name = anbi_kuhai_admin_cooldown
+			duration = 3650
+		}
+		set_country_flag = the_greatest_yanshen_founded
+		swap_non_generic_missions = yes
+		custom_tooltip = the_greatest_yanshen_founded_tt
+		hidden_effect = {
+			save_global_event_target_as = feiten_or_was_feiten_target
+			save_global_event_target_as = kuhai_or_was_kuhai_target
+			country_event = {
+				id = anbi_kuhai.1020
+			}
+		}
+	}
+}
+#跟金狗谈判
+country_event = {
+	id = anbi_kuhai.18
+	title = anbi_kuhai.18.t
+	desc = anbi_kuhai.18.d
+	picture = KOBOLD_BALRIS_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		mission_completed = anbi_kuhai_the_gold_dragon_faith
+		tag = Z65
+		exists = Y85
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = anbi_kuhai.18.a
+		vassalize = Y85
+		add_dip_power = -100
+		anbi_add_kuhai_purple_var = yes
+	}
+	option = {
+		name = anbi_kuhai.18.b
+		add_mil_power = -100
+		add_adm_power = -100
+		small_decrease_of_kobold_tolerance_effect = yes
+		Y85 = {
+			every_owned_province = {
+				add_core = ROOT
+			}
+			add_historical_rival = ROOT
+			if = {
+				limit = { 
+					is_subject_of = ROOT
+				}
+				grant_independence = yes
+			}
+		}
+		anbi_add_kuhai_gold_var = yes
+	}
+}
+#栓噬批
+country_event = {
+	id = anbi_kuhai.19
+	title = anbi_kuhai.19.t
+	desc = anbi_kuhai.19.d
+	picture = WITCHBURNING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.19.a
+		every_owned_province = {
+			limit = {
+				religion = devouring_path
+			}
+			add_province_modifier = {
+				name = anbi_kuhai_no_devouring
+				duration = 3650
+			}
+		}
+		add_country_modifier = {
+			name = anbi_kuhai_no_devouring_country
+			duration = -1
+		}
+	}
+}
+#炮打学者坊
+country_event = {
+	id = anbi_kuhai.20
+	title = anbi_kuhai.20.t
+	desc = anbi_kuhai.20.d
+	picture = FORT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.20.a
+		4871 = {
+			destroy_great_project = {
+				type = palace_of_divine_call
+			}
+			add_unrest = 5
+			add_devastation = 10
+			add_permanent_province_modifier = {
+				name = anbi_kuhai_destory_palace_of_divine_call
+				duration = -1
+			}
+		}
+	}
+}
+#肢解命令
+country_event = {
+	id = anbi_kuhai.21
+	title = anbi_kuhai.21.t
+	desc = anbi_kuhai.21.d
+	picture = anbi_speech_eventPicture
+
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		has_country_flag = anbi_kuhai_kill_the_command_cf
+		war_score_against = {
+			who = R62
+			value = 90
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			white_peace = R62
+			R62 = {
+				every_owned_province = {
+					add_permanent_province_modifier = {
+						name = anbi_kuhai_the_end_of_command
+						duration = 10
+					}
+				}
+				every_subject_country = {
+					limit = {
+						NOT = {
+							tag = R81
+							tag = R65
+							tag	= R66
+						}
+					}
+					every_owned_province = {
+						add_permanent_province_modifier = {
+							name = anbi_kuhai_the_end_of_command
+							duration = 10
+						}
+					}
+					release_all_possible_countries = yes
+				}
+				if = {
+					limit = { 
+						exists = R81
+					}
+					R81 = {
+						every_owned_province = {
+							random_list = {
+								1 = {
+									cede_province = R65
+									add_territorial_core = R65
+								}
+								1 = {
+									cede_province = R66
+									add_territorial_core = R66
+								}
+							}
+						}
+					}								
+				}
+				release_all_subjects = yes
+				release_all_possible_countries = yes
+				every_owned_province = {
+					remove_province_modifier = anbi_kuhai_the_end_of_command
+					limit = { 
+						superregion = vimdatrong_superregion
+					}
+					cede_province = R68
+					add_territorial_core = R68
+				}
+				every_owned_province = {
+					remove_province_modifier = anbi_kuhai_the_end_of_command
+					limit = { 
+						superregion = rahen_superregion
+						NOT = {
+							region = shamakhad_region
+						}
+					}
+					cede_province = R67
+					add_territorial_core = R67
+				}
+				every_owned_province = {
+					remove_province_modifier = anbi_kuhai_the_end_of_command
+					limit = { 
+						superregion = yanshen_superregion
+					}
+					cede_province = R69
+					add_territorial_core = R69
+				}
+				every_owned_province = {
+					remove_province_modifier = anbi_kuhai_the_end_of_command
+					random_list = {
+						1 = {
+							cede_province = R94
+							add_territorial_core = R94 
+						}
+						1 = {
+							cede_province = R95
+							add_territorial_core = R95
+						}
+						1 = {
+							cede_province = R96
+							add_territorial_core = R96
+						}
+					}
+					
+				}
+			}
+			every_country = {
+				limit = {
+					capital_scope = {
+						OR = {
+							superregion = vimdatrong_superregion
+							superregion = yanshen_superregion
+							superregion = rahen_superregion
+						}
+					}
+					any_owned_province = {
+						has_province_modifier = anbi_kuhai_the_end_of_command
+					}
+				}
+				set_country_flag = anbi_kuhai_republican_subject_state_cf
+			}
+		}
+	}
+
+	option = {
+		name = anbi_kuhai.21.a
+		remove_country_modifier = anbi_kuhai_defend_hobgoblin_buff_country
+		hidden_effect = {
+			every_owned_province = {
+				remove_province_modifier = anbi_kuhai_defend_hobgoblin_buff
+				remove_province_modifier = anbi_kuhai_defend_hobgoblin_buff2
+			}
+		}
+		add_prestige_or_monarch_power = { amount = 100 }
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_stability = 3
+		add_war_exhaustion = -20
+	}
+}
+#低等哲学
+country_event = {
+	id = anbi_kuhai.22
+	title = anbi_kuhai.22.t
+	desc = anbi_kuhai.22.d
+	picture = anbi_foxgirl_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.22.a
+		every_province = {
+			limit = {
+				religion_group = raheni
+			}
+			add_permanent_province_modifier = {
+				name = anbi_kuhai_crush_the_high_raheni
+				duration = 36500
+			}
+		}
+		add_country_modifier = {
+			name = anbi_kuhai_the_quetion_of_temple_buff
+			duration = -1
+		}
+	}
+}
+#23是飞腾成立bug补丁，已移至上方
+#和湖人贴贴
+country_event = {
+	id = anbi_kuhai.24
+	title = anbi_kuhai.24.t
+	desc = anbi_kuhai.24.d
+	picture = anbi_speech_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.24.a
+		custom_tooltip = anbi_kuhai.24_tt
+		hidden_effect = {
+			J33 = {
+				every_owned_province = {
+					limit = {
+						continent = asia
+						NOT = {
+							superregion = forbidden_lands_superregion
+						}
+					}
+					add_territorial_core = ROOT
+					cede_province = ROOT
+				}
+			}
+		}
+		create_subject = {
+			subject_type = twin_empire
+			who = J33
+		}
+		J33 = {
+			change_country_color = {
+				country = Z65
+			}
+			hidden_effect = {
+				change_government = anbi_republic
+			}
+			add_government_reform = anbi_kuhai_twin_republic
+		}
+		forbidden_lands_superregion = {
+			add_permanent_claim = J33
+		}
+	}
+}
+#天楼炸了
+country_event = {
+	id = anbi_kuhai.25
+	title = anbi_kuhai.25.t
+	desc = anbi_kuhai.25.d
+	picture = GREAT_SPIRIT_TUGHAYASA_EVIL_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.25.a
+		custom_tooltip = flavour_anbingnar_daxugo.31453_ct
+		4871 = {
+			add_base_tax = -3
+			add_base_production = -3
+			add_base_manpower = -3
+			add_devastation = 75
+			remove_loot = { who = ROOT amount = 100 }
+			ruin_temple = yes
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = rending_startup_complete }
+				}
+				set_global_flag = rending_active
+				every_country = {
+					if = {
+						limit = {
+							any_owned_province = {
+								OR = {
+									has_province_modifier = damaged_temple_complex
+									has_province_modifier = derelict_temple_complex
+									has_province_modifier = corrupted_temple_complex
+									has_province_modifier = corrupted_temple_complex_inactive
+								}
+							}
+						}
+						country_event = { id = spirits.701 }
+					}
+					else_if = {
+						limit = { any_owned_province = { continent = asia NOT = { superregion = forbidden_lands_superregion } } }
+						country_event = { id = spirits.702 days = 180 }
+					}
+				}
+			}
+			country_event = {
+				id = anbi_kuhai.26
+				days = 200
+			}
+		}
+	}
+}
+country_event = {
+	id = anbi_kuhai.26
+	title = anbi_kuhai.26.t
+	desc = anbi_kuhai.26.d
+	picture = GREAT_SPIRIT_TUGHAYASA_EVIL_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.26.a
+		set_country_flag = the_greatest_yanshen_prepare
+		swap_non_generic_missions = yes
+	}
+}
+#原先的27由于无法实现预定效果而被移除。
+#反革命同盟
+country_event = {
+	id = anbi_kuhai.28
+	title = anbi_kuhai.28.t
+	desc = anbi_kuhai.28.d
+	picture = REVOLUTION_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+	option = { 
+		name = anbi_kuhai.28.a
+		random_country = {
+			limit = {
+				has_country_flag = anbi_kuhai_is_B05
+			}
+			save_global_event_target_as = anbi_kuhai_is_B05_target
+		}
+		random_country = {
+			limit = {
+				has_country_flag = anbi_kuhai_is_F46
+			}
+			save_global_event_target_as = anbi_kuhai_is_F46_target
+		}
+		random_country = {
+			limit = {
+				has_country_flag = anbi_kuhai_is_G52
+			}
+			save_global_event_target_as = anbi_kuhai_is_G52_target
+		}
+		event_target:anbi_kuhai_is_B05_target = {
+			add_historical_friend = event_target:anbi_kuhai_is_F46_target
+			force_remove_rival = event_target:anbi_kuhai_is_F46_target
+			add_historical_friend = event_target:anbi_kuhai_is_G52_target
+			force_remove_rival = event_target:anbi_kuhai_is_G52_target
+			add_historical_rival = Z65
+		}
+		event_target:anbi_kuhai_is_F46_target = {
+			add_historical_friend = event_target:anbi_kuhai_is_B05_target
+			add_historical_friend = event_target:anbi_kuhai_is_G52_target
+			force_remove_rival = event_target:anbi_kuhai_is_B05_target
+			force_remove_rival = event_target:anbi_kuhai_is_G52_target
+			create_alliance = event_target:anbi_kuhai_is_B05_target
+			create_alliance = event_target:anbi_kuhai_is_G52_target
+			add_historical_rival = Z65
+		}
+		event_target:anbi_kuhai_is_G52_target = {
+			add_historical_friend = event_target:anbi_kuhai_is_B05_target
+			add_historical_friend = event_target:anbi_kuhai_is_F46_target
+			force_remove_rival = event_target:anbi_kuhai_is_B05_target
+			force_remove_rival = event_target:anbi_kuhai_is_F46_target
+			create_alliance = event_target:anbi_kuhai_is_B05_target
+			add_historical_rival = Z65
+		}
+		Z65 = {
+			add_historical_rival = event_target:anbi_kuhai_is_F46_target
+			add_historical_rival = event_target:anbi_kuhai_is_G52_target
+			add_historical_rival = ROOT
+		}
+	}
+}
+##东洲事件
+#与各势力合作（29-40）
+country_event = {
+	id = anbi_kuhai.29
+	title = anbi_kuhai.29.t
+	desc = anbi_kuhai.29.d
+	picture = CAVE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = anbi_kuhai_the_jade_question
+	}
+
+	option = {
+		name = anbi_kuhai.29.a
+		custom_tooltip = anbi_kuhai.29.act
+	}
+	option = {
+		name = anbi_kuhai.29.b
+		set_country_flag = anbi_kuhai_the_jade_question_goblin
+		custom_tooltip = anbi_kuhai_the_jade_question_goblin_ct
+		if = {
+			limit = { 
+				jade_mines_region = {
+					owned_by = ROOT
+				}
+			}
+			hidden_effect = {
+				jade_mines_region = {
+					limit = {
+						country_or_subject_holds = ROOT
+					}
+					add_core = R81
+					cede_province = R81
+				}
+			}
+			jade_mines_region = {
+				add_permanent_claim = R81
+			}
+			R81 = {
+				change_government = republic
+			}
+			create_subject = {
+				subject_type = anbi_kuhai_republican_subject_state
+				who = R81
+			}
+		}
+	}
+	option = {
+		name = anbi_kuhai.29.c
+		set_country_flag = anbi_kuhai_the_jade_question_dwarven
+		custom_tooltip = anbi_kuhai_the_jade_question_dwarven_ct
+		if = {
+			limit = { 
+				jade_mines_region = {
+					owned_by = ROOT
+				}
+			}
+			hidden_effect = {
+				jade_mines_region = {
+					limit = {
+						country_or_subject_holds = ROOT
+					}
+					add_core = I22
+					cede_province = I22
+				}
+			}
+			jade_mines_region = {
+				add_permanent_claim = I22
+			}
+			I22 = {
+				change_government = republic
+			}
+			create_subject = {
+				subject_type = anbi_kuhai_republican_subject_state
+				who = I22
+			}
+		}
+	}
+}
+#老乡堡
+country_event = {
+	id = anbi_kuhai.30
+	title = anbi_kuhai.30.t
+	desc = anbi_kuhai.30.d
+	picture = FAT_LOOT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.30.a
+		thidinkai_region = {
+			add_permanent_claim = ROOT
+		}
+		largest_increase_of_dwarven_tolerance_effect = yes
+		4879 = {
+			add_dwarven_minority_size_effect = yes
+		}
+		4896 = {
+			add_dwarven_minority_size_effect = yes
+		}
+		4907 = {
+			add_dwarven_minority_size_effect = yes
+		}
+		4930 = {
+			add_dwarven_minority_size_effect = yes
+		}
+		4931 = {
+			add_dwarven_minority_size_effect = yes
+		}
+		4826 = {
+			add_dwarven_minority_size_effect = yes
+		}
+		4839 = {
+			add_dwarven_minority_size_effect = yes
+		}
+		4871 = {
+			add_dwarven_minority_size_effect = yes
+		}
+		4914 = {
+			add_dwarven_minority_size_effect = yes
+		}
+		4868 = {
+			add_dwarven_minority_size_effect = yes
+		}
+		4925 = {
+			add_dwarven_minority_size_effect = yes
+		}
+		4861 = {
+			add_dwarven_minority_size_effect = yes
+		}
+		4859 = {
+			add_dwarven_minority_size_effect = yes
+		}
+		4849 = {
+			add_dwarven_minority_size_effect = yes
+		}
+		4869 = {
+			add_dwarven_minority_size_effect = yes
+		}
+		if = {
+			limit = { 
+				exists = Y63
+			}
+			Y63 = {
+				change_government = republic
+			}
+			create_subject = {
+				subject_type = anbi_kuhai_republican_subject_state
+				who = Y63
+			}
+		}
+	}
+}
+#希德里翁
+country_event = {
+	id = anbi_kuhai.31
+	title = anbi_kuhai.31.t
+	desc = anbi_kuhai.31.d
+	picture = FAT_LOOT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.31.a
+		bomdan_region = {
+			add_permanent_claim = ROOT
+		}
+		if = {
+			limit = { 
+				exists = Y86
+			}
+			Y86 = {
+				change_government = republic
+			}
+			create_subject = {
+				subject_type = anbi_kuhai_republican_subject_state
+				who = Y86
+			}
+		}
+	}
+}
+#大屁精
+country_event = {
+	id = anbi_kuhai.32
+	title = anbi_kuhai.32.t
+	desc = anbi_kuhai.32.d
+	picture = SWORD_OF_OSMAN_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.32.a
+		shamakhad_region = {
+			add_permanent_claim = ROOT
+		}
+		large_increase_of_hobgoblin_tolerance_effect = yes
+		large_increase_of_half_orcish_tolerance_effect = yes
+		small_increase_of_orcish_tolerance_effect = yes
+		capital_scope = {
+			add_hobgoblin_minority_size_effect = yes
+			add_half_orcish_minority_size_effect = yes
+		}
+		add_accepted_culture = dragon_command
+		custom_tooltip = hobgoblin_yanification_enabled_tt
+		custom_tooltip = hobgoblin_elite_mercs_enabled_tt
+		custom_tooltip = merc_elite_no_army_prof_tt
+		custom_tooltip = orc_yanification_enabled_tt
+		custom_tooltip = anbi_kuhai.32_tt
+		hidden_effect = { 
+			set_country_flag = orc_yanification_enabled_flag
+			set_country_flag = hobgoblin_yanification_enabled_flag
+			unlock_merc_company = { merc_company = merc_bianfang_hobgoblin_army }
+		}
+	}
+	option = {
+		name = anbi_kuhai.32.b
+		shamakhad_region = {
+			add_permanent_claim = ROOT
+		}
+		large_decrease_of_hobgoblin_tolerance_effect = yes
+		large_decrease_of_orcish_tolerance_effect = yes
+		add_stability_or_adm_power = yes
+		add_prestige_or_monarch_power = { amount = 100 }
+		custom_tooltip = hobgoblins_never_able_to_be_yanified_tt
+		custom_tooltip = orcs_never_able_to_be_yanified_tt
+		custom_tooltip = bianfang_raheni_appeased_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = { culture_group = upper_raheni }
+				add_province_modifier = {
+					name = bianfang_upper_raheni_appeased_modifier
+					duration = 36500
+				}
+			}
+		}
+	}
+}
+#鸦佬克林
+country_event = {
+	id = anbi_kuhai.33
+	title = anbi_kuhai.33.t
+	desc = anbi_kuhai.33.d
+	picture = TRADEGOODS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.33.a
+		lupulan_rainforest_region = {
+			add_permanent_claim = ROOT
+		}
+		4963 = {
+			add_core = ROOT
+			cede_province = ROOT
+			change_culture = ROOT
+			change_religion = ROOT
+			add_province_modifier = {
+				name = anbi_kuhai_arawkelin_trade_buff
+				duration = -1
+			}
+		}
+	}
+}
+#废除种姓
+country_event = {
+	id = anbi_kuhai.34
+	title = anbi_kuhai.34.t
+	desc = anbi_kuhai.34.d
+	picture = NUSANTARA_QUEEN_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.34.a
+		add_prestige_or_monarch_power = {
+			amount = 100
+		}
+		custom_tooltip = anbi_kuhai.34_ct
+		hidden_effect = {
+			rahen_superregion = {
+				limit = {
+					culture_is_human = yes
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+#金塔斯
+country_event = {
+	id = anbi_kuhai.35
+	title = anbi_kuhai.35.t
+	desc = anbi_kuhai.35.d
+	picture = NUSANTARA_QUEEN_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.35.a
+		add_prestige_or_monarch_power = {
+			amount = 100
+		}
+		add_country_modifier = {
+			name = the_abolish_slavery_act
+			duration = -1
+		}
+		every_subject_country = {
+			add_country_modifier = {
+				name = the_abolish_slavery_act
+				duration = -1
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = slaves
+				}
+				change_trade_goods = unknown
+				remove_building = tradecompany
+			}
+			every_subject_country = {
+				every_owned_province = {
+					limit = {
+						trade_goods = slaves
+					}
+					change_trade_goods = unknown
+					remove_building = tradecompany
+				}
+			}
+		}
+		set_country_flag = anbi_kuhai_brass_dragon
+	}
+}
+#找金山君（50-60）
+country_event = {
+	id = anbi_kuhai.50
+	title = anbi_kuhai.50.t
+	desc = anbi_kuhai.50.d
+	picture = KOBOLD_BALRIS_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.50.a
+		custom_tooltip = anbi_kuhai_jinshanjun_issue_ct
+		add_country_modifier = {
+			name = anbi_kuhai_jinshanjun_issue_buff
+			duration = 1825
+		}
+		start_debate = anbi_kuhai_jinshanjun_issue
+	}
+}
+country_event = {
+	id = anbi_kuhai.51
+	title = anbi_kuhai.51.t
+	desc = anbi_kuhai.51.d
+	picture = KOBOLD_BALRIS_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = anbi_kuhai.51.a
+		add_republican_tradition = -25
+		add_prestige = -25
+		custom_tooltip = anbi_kuhai.51.ct
+		set_country_flag = anbi_kuhai_jinshanjun_issue_enacted
+	}
+}
+country_event = {
+	id = anbi_kuhai.52
+	title = anbi_kuhai.52.t
+	desc = anbi_kuhai.52.d
+	picture = KOBOLD_BALRIS_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = anbi_kuhai.52.a
+		add_prestige = 10
+		hidden_effect = {
+			country_event = {
+				id = anbi_kuhai.53
+				days = 365
+			}
+		}
+	}
+}
+country_event = {
+	id = anbi_kuhai.53
+	title = anbi_kuhai.53.t
+	desc = anbi_kuhai.53.d
+	picture = KOBOLD_BALRIS_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = anbi_kuhai.53.a
+		add_prestige = 10
+		hidden_effect = {
+			country_event = {
+				id = anbi_kuhai.54
+				days = 730
+			}
+		}
+	}
+}
+country_event = {
+	id = anbi_kuhai.54
+	title = anbi_kuhai.54.t
+	desc = anbi_kuhai.54.d
+	picture = KOBOLD_BALRIS_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = anbi_kuhai.54.a
+		add_country_modifier = {
+			name = anbi_kuhai_250_miles
+			duration = 365
+		}
+		country_event = {
+			id = anbi_kuhai.55
+			days = 10
+		}
+	}
+}
+country_event = {
+	id = anbi_kuhai.55
+	title = anbi_kuhai.55.t
+	desc = anbi_kuhai.55.d
+	picture = KOBOLD_BALRIS_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = anbi_kuhai.55.a
+		add_country_modifier = {
+			name = anbi_kuhai_the_jinshanjun
+			duration = -1
+		}
+	}
+}
+
+##黄恪故事（200）
+#她的父亲
+country_event = {
+	id = anbi_kuhai.200
+	title = anbi_kuhai.200.t
+	desc = anbi_kuhai.200.d
+	picture = FARMING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.200.a
+		hidden_effect = {
+			country_event = { 
+				id = anbi_kuhai.201 
+				days = 365
+			}
+		}
+	}
+}
+#她的悲剧 - 7岁
+country_event = {
+	id = anbi_kuhai.201
+	title = anbi_kuhai.201.t
+	desc = anbi_kuhai.201.d
+	picture = FARMING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.201.a
+		hidden_effect = {
+			country_event = { 
+				id = anbi_kuhai.202 
+				days = 365
+			}
+		}
+	}
+}
+#她的幸运
+country_event = {
+	id = anbi_kuhai.202
+	title = anbi_kuhai.202.t
+	desc = anbi_kuhai.202.d
+	picture = FARMING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.202.a
+		hidden_effect = {
+			country_event = { 
+				id = anbi_kuhai.203 
+				days = 1825
+			}
+		}
+		
+	}
+}
+#她的潜伏 - 18岁
+country_event = {
+	id = anbi_kuhai.203
+	title = anbi_kuhai.203.t
+	desc = anbi_kuhai.203.d
+	picture = FARMING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.203.a
+		anbi_add_kuhai_blue_var = yes
+	}
+	option = {
+		name = anbi_kuhai.203.b
+		anbi_add_kuhai_gold_var = yes
+	}
+	option = {
+		name = anbi_kuhai.203.c
+		anbi_add_kuhai_purple_var = yes
+	}
+
+	after = {
+		country_event = {
+			id = anbi_kuhai.204
+			days = 8030 #22 years
+		}
+	}
+}
+
+#她的衰老 - 50岁
+country_event = {
+	id = anbi_kuhai.204
+	title = anbi_kuhai.204.t
+	desc = {
+		trigger = {
+			OR = {
+				has_reform = anbi_kuhai_salter_republic
+				has_reform = anbi_kuhai_new_republic
+			}
+		}
+		desc = anbi_kuhai.204.d1
+	}
+	desc = {
+		trigger = {
+			has_reform = anbi_kuhai_united_yanshen
+		}
+		desc = anbi_kuhai.204.d2
+	}
+	picture = FARMING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.204.a
+		hidden_effect = {
+			country_event = {
+				id = anbi_kuhai.205
+				days = 3650
+			}
+		}
+	}
+}
+#她的立宪 - 60岁
+country_event = {
+	id = anbi_kuhai.205
+	title = anbi_kuhai.205.t
+	desc = {
+		trigger = {
+			OR = {
+				has_reform = anbi_kuhai_salter_republic
+				has_reform = anbi_kuhai_new_republic
+			}
+		}
+		desc = anbi_kuhai.205.d1
+	}
+	desc = {
+		trigger = {
+			has_reform = anbi_kuhai_united_yanshen
+		}
+		desc = anbi_kuhai.205.d2
+	}
+	picture = GREAT_BUILDING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.205.a
+		if = {
+			limit = { 
+				OR = {
+					has_reform = anbi_kuhai_salter_republic
+					has_reform = anbi_kuhai_new_republic
+				}
+			}
+			custom_tooltip = anbi_kuhai.205_ct
+		}
+		add_country_modifier = {
+			name = anbi_kuhai_make_a_great_law
+			duration = 3650
+		}
+		hidden_effect = {
+			country_event = {
+				id = anbi_kuhai.206
+				days = 3650
+			}
+		}
+	}
+}
+#看看玩家是不是菜鸡
+country_event = {
+	id = anbi_kuhai.206
+	title = anbi_kuhai.206.t
+	desc = anbi_kuhai.206.d
+	picture = FARMING_eventPicture
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	option = {
+		name = anbi_kuhai.206.a
+		if = {
+			limit = { 
+				has_reform = anbi_kuhai_united_yanshen
+			}
+			country_event = {
+				id = anbi_kuhai.207
+			}
+		}
+		else = {
+			country_event = {
+				id = anbi_kuhai.208
+			}
+		}
+		
+	}
+}
+#立宪，退休(70)
+country_event = {
+	id = anbi_kuhai.207
+	title = anbi_kuhai.207.t
+	desc = anbi_kuhai.207.d
+	picture = GREAT_BUILDING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.207.a
+		if = {
+			limit = { 
+				is_variable_equal = {
+					which = kuhai_blue_var
+					which = kuhai_gold_var
+				}
+				is_variable_equal = {
+					which = kuhai_blue_var
+					which = kuhai_purple_var
+				}
+			}
+			add_government_reform = anbi_kuhai_blue_gold_and_purple_flag
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = kuhai_blue_var
+					which = kuhai_gold_var
+				}
+				NOT = {
+					is_variable_equal = {
+						which = kuhai_blue_var
+						which = kuhai_gold_var
+					}
+				}
+				is_variable_equal = {
+					which = kuhai_blue_var
+					which = kuhai_purple_var
+				}
+			}
+			add_government_reform = anbi_kuhai_blue_and_purple_flag
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = kuhai_blue_var
+					which = kuhai_purple_var
+				}
+				NOT = {
+					is_variable_equal = {
+						which = kuhai_blue_var
+						which = kuhai_purple_var
+					}
+				}
+				is_variable_equal = {
+					which = kuhai_blue_var
+					which = kuhai_gold_var
+				}
+			}
+			add_government_reform = anbi_kuhai_blue_and_gold_flag
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = kuhai_gold_var
+					which = kuhai_blue_var
+				}
+				NOT = {
+					is_variable_equal = {
+						which = kuhai_gold_var
+						which = kuhai_blue_var
+					}
+				}
+				is_variable_equal = {
+					which = kuhai_gold_var
+					which = kuhai_purple_var
+				}
+			}
+			add_government_reform = anbi_kuhai_gold_and_purple_flag
+		}
+		else_if = {
+			limit = { 
+				check_variable = {
+					which = kuhai_blue_var
+					which = kuhai_gold_var
+				}
+				check_variable = {
+					which = kuhai_blue_var
+					which = kuhai_purple_var
+				}
+			}
+			add_government_reform = anbi_kuhai_blue_flag
+		}
+		else_if = {
+			limit = { 
+				check_variable = {
+					which = kuhai_gold_var
+					which = kuhai_blue_var
+				}
+				check_variable = {
+					which = kuhai_gold_var
+					which = kuhai_purple_var
+				}
+			}
+			add_government_reform = anbi_kuhai_gold_flag
+		}
+		else_if = {
+			limit = { 
+				check_variable = {
+					which = kuhai_purple_var
+					which = kuhai_gold_var
+				}
+				check_variable = {
+					which = kuhai_purple_var
+					which = kuhai_blue_var
+				}
+			}
+			add_government_reform = anbi_kuhai_purple_flag
+		}
+		add_country_modifier = {
+			name = anbi_kuhai_huangke_alive
+			duration = -1
+		}
+
+		set_ruler_flag = is_huangke_tired
+		clr_ruler_flag = is_huangke
+		country_event = {
+			id = anbi_kuhai.1010
+		}
+		if = {
+			limit = { 
+				has_government_attribute = anbi_kuhai_parliament
+			}
+			country_event = {
+				id = anbi_kuhai.1005
+			}
+		}
+	}
+
+	after = {
+		country_event = {
+			id = anbi_kuhai.209
+			days = 7300
+		}
+	}
+}
+#玩家太菜了，共和国崩了
+country_event = {
+	id = anbi_kuhai.208
+	title = anbi_kuhai.208.t
+	desc = anbi_kuhai.208.d
+	picture = WITCHBURNING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.208.a
+		add_government_reform = oligarchy_reform
+		clr_country_flag = the_greatest_yanshen
+		clr_ruler_flag = is_huangke
+		kill_ruler = yes
+		add_stability = -3
+		add_republican_tradition = -50
+		swap_free_idea_group = yes
+		swap_non_generic_missions = yes
+		every_subject_country = {
+			grant_independence = yes
+		}
+	}
+}
+#她的死 - 90
+country_event = {
+	id = anbi_kuhai.209
+	title = anbi_kuhai.209.t
+	desc = anbi_kuhai.209.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.209.a
+		remove_country_modifier = anbi_kuhai_huangke_alive
+		change_innovativeness = 5
+	}
+}
+#复生
+country_event = {
+	id = anbi_kuhai.210
+	title = anbi_kuhai.210.t
+	desc = anbi_kuhai.210.d
+	picture = MAGE_MOON_ALTER_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.210.a
+		set_country_flag = anbi_kuhai_resurgence_huangke_1
+	}
+}
+country_event = {
+	id = anbi_kuhai.211
+	title = anbi_kuhai.211.t
+	desc = anbi_kuhai.211.d
+	picture = MAGE_MOON_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.211.a
+		clr_country_flag = anbi_kuhai_resurgence_huangke_1
+		set_country_flag = anbi_kuhai_resurgence_huangke_2
+	}
+}
+country_event = {
+	id = anbi_kuhai.212
+	title = anbi_kuhai.212.t
+	desc = anbi_kuhai.212.d
+	picture = FAR_AND_WIDE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.212.a
+		clr_country_flag = anbi_kuhai_resurgence_huangke_2
+		set_country_flag = anbi_kuhai_resurgence_huangke_3
+		hidden_effect = {
+			country_event = {
+				id = anbi_kuhai.213
+				days = 730
+			}
+		}
+		
+	}
+}
+#归来！
+country_event = {
+	id = anbi_kuhai.213
+	title = anbi_kuhai.213.t
+	desc = anbi_kuhai.213.d
+	picture = BIG_STAR_IN_SKY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.213.a
+		add_country_modifier = {
+			name = anbi_kuhai_huangke_great
+			duration = -1
+		}
+		5406 = {
+			destroy_great_project = {
+				type = anbi_the_resurgence_huangke_a
+			}
+		}
+		4925 = {
+			destroy_great_project = {
+				type = anbi_the_resurgence_huangke_b
+			}
+		}
+		5356 = {
+			destroy_great_project = {
+				type = anbi_the_resurgence_huangke_c
+			}
+		}
+	}
+}
+##女乐彩蛋
+#祥女彩蛋（214）
+country_event = {
+	id = anbi_kuhai.214
+	title = anbi_kuhai.214.t
+	desc = anbi_kuhai.214.d
+	picture = anbi_guitar_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.214.a
+		define_advisor = {
+			name = "Xiansheng Chuan"
+			type = court_mage
+			discount = yes
+			skill = 3
+			culture = jiangszun
+			cost_multiplier = 0.1
+			female = yes
+			religion = ROOT
+		}
+	}
+}
+#波奇彩蛋（215）
+country_event = {
+	id = anbi_kuhai.215
+	title = anbi_kuhai.215.t
+	desc = anbi_kuhai.215.d
+	picture = anbi_guitar_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.215.a
+		add_prestige = 10
+		define_advisor = {
+			type = artist
+			name = "Lian Teng"
+			religion = ROOT
+			culture = ROOT
+			cost_multiplier = 0.1
+			age = 16
+			skill = 5
+		}
+	}
+}
+
+
+##机制实现(1000)
+#致敬传奇无恶名人
+country_event = {
+	id = anbi_kuhai.1000
+	title = anbi_kuhai.1000.t
+	desc = anbi_kuhai.1000.d
+	picture = anbingnar_eventPicture
+
+	trigger = {
+		has_ruler_flag = is_huangke
+		check_variable = {
+			which = pointsWitchKing
+			value = 0
+		}
+	}
+
+	hidden = yes
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		clear_witch_king_points = yes
+	}
+}
+#被三势力夺舍的事件
+country_event = {
+	id = anbi_kuhai.1001
+	title = anbi_kuhai.1001.t
+	desc = {
+		trigger = {
+			faction_influence = {
+				faction = anbi_feiten_0
+				influence = 75
+			}
+		}
+		desc = anbi_kuhai.1001.d1
+	}
+	desc = {
+		trigger = {
+			faction_influence = {
+				faction = anbi_yinquan_0
+				influence = 75
+			}
+		}
+		desc = anbi_kuhai.1001.d2
+	}
+	desc = {
+		trigger = {
+			faction_influence = {
+				faction = anbi_lanjin_0
+				influence = 75
+			}
+		}
+		desc = anbi_kuhai.1001.d3
+	}
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 30
+	}
+	trigger = {
+		OR = {
+			faction_influence = {
+				faction = anbi_feiten_0
+				influence = 75
+			}
+			faction_influence = {
+				faction = anbi_lanjin_0
+				influence = 75
+			}
+			faction_influence = {
+				faction = anbi_yinquan_0
+				influence = 75
+			}
+		}
+		is_subject = no
+	}
+
+	immediate = {
+		hidden_effect = {
+			add_government_reform = oligarchy_reform
+			clr_ruler_flag = is_huangke
+			kill_ruler = yes
+			every_subject_country = {
+				grant_independence = yes
+			}
+			trigger_switch = { 
+				on_trigger = faction_in_power
+				anbi_feiten_0 = { Y20 = { vassalize = ROOT } }
+				anbi_lanjin_0 = { Y05 = { vassalize = ROOT } }
+				anbi_yinquan_0 = { Y26 = { vassalize = ROOT } }
+			}
+		}
+		
+	}
+
+	option = {
+		name = anbi_kuhai.1001.a
+		tooltip = {
+			every_subject_country = {
+				grant_independence = yes
+			}
+			trigger_switch = { 
+				on_trigger = faction_in_power
+				anbi_feiten_0 = { Y20 = { vassalize = ROOT } }
+				anbi_lanjin_0 = { Y05 = { vassalize = ROOT } }
+				anbi_yinquan_0 = { Y26 = { vassalize = ROOT } }
+			}
+		}
+		
+	}
+}
+#被三势力断盟的事件(1002,在测试中发现此系统极其垃圾，已移除)
+#在战争中自动移交土地给盟友（1003，由于各种意外的外交情况，此系统已被移除。）
+#隐泉战争和平事件
+country_event = {
+	id = anbi_kuhai.1018
+ 	title = anbi_kuhai.1018.t
+ 	desc = anbi_kuhai.1018.d
+ 	picture = anbingnar_eventPicture
+
+ 	hidden = yes
+ 	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = Y26
+			OR = {
+				tag = Y27
+				AND = {
+					tag = Y20
+					has_country_flag = the_greatest_yanshen
+				}
+			}
+			is_subject_of = Y27
+			AND = {
+				is_subject_of = Y20
+				Y20 = {
+					has_country_flag = the_greatest_yanshen
+				}
+			}
+		}
+		war_with = Y25
+		has_global_flag = anbi_kuhai_Y26_giving_lands
+		4872 = {
+			controller = {
+				OR = {
+					NOT = {
+						war_with = Y27
+						AND = {
+							war_with = Y20
+							Y20 = {
+								has_country_flag = the_greatest_yanshen
+							}
+						}
+					}
+					tag = Y26
+					tag = Y27
+					AND = {
+						tag = Y20
+						has_country_flag = the_greatest_yanshen
+					}
+					is_subject_of = Y27
+					AND = {
+						is_subject_of = Y20
+						Y20 = {
+							has_country_flag = the_greatest_yanshen
+						}
+					}
+				}			
+			}
+		}
+		4903 = {
+			controller = {
+				OR = {
+					NOT = {
+						war_with = Y27
+						AND = {
+							war_with = Y20
+							Y20 = {
+								has_country_flag = the_greatest_yanshen
+							}
+						}
+					}
+					tag = Y26
+					tag = Y27
+					AND = {
+						tag = Y20
+						has_country_flag = the_greatest_yanshen
+					}
+					AND = {
+						is_subject_of = Y20
+						Y20 = {
+							has_country_flag = the_greatest_yanshen
+						}
+					}
+				}
+			}
+		}
+		5420 = {
+			controller = {
+				OR = {
+					NOT = {
+						war_with = Y27
+						AND = {
+							war_with = Y20
+							Y20 = {
+								has_country_flag = the_greatest_yanshen
+							}
+						}
+					}
+					tag = Y26
+					tag = Y27
+					AND = {
+						tag = Y20
+						has_country_flag = the_greatest_yanshen
+					}
+					AND = {
+						is_subject_of = Y20
+						Y20 = {
+							has_country_flag = the_greatest_yanshen
+						}
+					}
+				}
+			}
+		}
+		4875 = {
+			controller = {
+				OR = {
+					NOT = {
+						war_with = Y27
+						AND = {
+							war_with = Y20
+							Y20 = {
+								has_country_flag = the_greatest_yanshen
+							}
+						}
+					}
+					tag = Y26
+					tag = Y27
+					AND = {
+						tag = Y20
+						has_country_flag = the_greatest_yanshen
+					}
+					AND = {
+						is_subject_of = Y20
+						Y20 = {
+							has_country_flag = the_greatest_yanshen
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = anbi_kuhai.1018.a
+		Y25 = {
+			white_peace = Y27
+			if = {
+				limit = { 
+					Y20 = {
+						has_country_flag = the_greatest_yanshen
+					}
+				}
+				white_peace = Y20
+			}
+			white_peace = Y26
+		}
+		4872 = {
+			cede_province = Y26
+		}
+		4903 = {
+			cede_province = Y26
+		}
+		5420 = {
+			cede_province = Y26
+		}
+		4875 = {
+			cede_province = Y26
+		}
+	}
+}
+#蓝巾会战争和平事件
+country_event = {
+	id = anbi_kuhai.1019
+ 	title = anbi_kuhai.1019.t
+ 	desc = anbi_kuhai.1019.d
+ 	picture = anbingnar_eventPicture
+
+ 	hidden = yes
+ 	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			tag = Y05
+			tag = Y27
+			AND = {
+				tag = Y20
+				has_country_flag = the_greatest_yanshen
+			}
+			AND = {
+				is_subject_of = Y20
+				Y20 = {
+					has_country_flag = the_greatest_yanshen
+				}
+			}
+		}
+		war_with = Y13
+		has_global_flag = anbi_kuhai_Y05_giving_lands
+		4868 = {
+			controller = {
+				OR = {
+					tag = Y05
+					tag = Y27
+			AND = {
+				tag = Y20
+				has_country_flag = the_greatest_yanshen
+			}
+					AND = {
+						is_subject_of = Y20
+						Y20 = {
+							has_country_flag = the_greatest_yanshen
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = anbi_kuhai.1019.a
+		Y13 = {
+			white_peace = Y05
+			white_peace = Y27
+			
+		}
+		Y13 = {
+			every_owned_province = {
+				cede_province = Y05
+			}
+		}
+	}
+}
+#移除全局战争标志，防止反复触发
+country_event = {
+	id = anbi_kuhai.1004
+	title = anbi_kuhai.1004.t
+	desc = anbi_kuhai.1004.d
+	picture = anbingnar_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_global_flag = anbi_kuhai_Y05_giving_lands
+			has_global_flag = anbi_kuhai_Y26_giving_lands
+		}
+		OR = {
+			tag = Y13
+			tag = Y25
+		}
+	}
+
+	option = {
+		clr_global_flag = anbi_kuhai_Y05_giving_lands
+		clr_global_flag = anbi_kuhai_Y26_giving_lands
+	}
+}
+#实现自动给予省份议席
+country_event = {
+	id = anbi_kuhai.1005
+	title = anbi_kuhai.1005.t
+	desc = anbi_kuhai.1005.d
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	trigger = {
+		any_owned_province = {
+			OR = {
+				development = 20
+				has_terrain = city_terrain
+				area = hongnguan_area
+			}
+			superregion = yanshen_superregion
+			is_state = yes
+		}		
+		tag = Z65
+		has_government_attribute = anbi_kuhai_parliament
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.1005.a
+		every_owned_province = {
+			limit = {
+				OR = {
+					development = 20
+					has_terrain = city_terrain
+					area = hongnguan_area
+				}
+				superregion = yanshen_superregion
+				is_state = yes
+				NOT = {
+					has_province_modifier = anbi_kuhai_yanshen_parliament_buff
+				}
+			}
+			set_seat_in_parliament = yes
+			add_province_modifier = {
+				name = anbi_kuhai_yanshen_parliament_buff
+				duration = -1
+			}	
+		}		
+		hidden_effect = {
+			if = {
+				limit = { 
+					has_government_attribute = anbi_kuhai_is_blue
+				}
+				country_event = {
+					id = anbi_kuhai.1013
+				}
+			}
+		}
+	}
+}
+#实现烟州省份自动减造核
+country_event = {
+	id = anbi_kuhai.1006
+	title = anbi_kuhai.1006.t
+	desc = anbi_kuhai.1006.d
+	picture = anbingnar_eventPicture
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	hidden = yes
+
+	trigger = {
+		tag = Z65
+		has_country_flag = the_greatest_yanshen_founded
+		any_owned_province = {
+			superregion = yanshen_superregion
+			NOT = {
+				is_state_core = ROOT
+				has_province_modifier = anbi_kuhai_yanshen_nationalism
+			}			
+		}
+	}
+	
+	option = {
+		name = anbi_kuhai.1006.a
+		every_owned_province = {
+			limit = {
+				superregion = yanshen_superregion
+				NOT = {
+					is_state_core = ROOT
+				}	
+			}
+			add_province_modifier = {
+				name = anbi_kuhai_yanshen_nationalism
+				duration = 18250
+			}
+		}
+	}
+}
+#实现自动转化升道与化道
+country_event = {
+	id = anbi_kuhai.1007
+	title = anbi_kuhai.1007.t
+	desc = anbi_kuhai.1007.d
+	picture = anbingnar_eventPicture
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	hidden = yes
+
+	trigger = {
+		has_government_attribute = anbi_zhengdao_path_department
+		any_owned_province = {
+			OR = {
+				religion = accretive_path
+				religion = transmutative_path
+			}
+		}
+	}
+
+	option = {
+		name = anbi_kuhai.1007.a
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						religion = accretive_path
+						religion = transmutative_path
+					}
+				}
+				change_religion = zhengdao_path
+			}
+		}
+	}
+}
+#正道节日
+country_event = {
+	id = anbi_kuhai.1008
+	title = anbi_kuhai.1008.t
+	desc = anbi_kuhai.1008.d
+	picture = anbi_flag_army_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.1008.a
+		if = { limit = { has_church_aspect = anbi_zhengdao_feiten } 4879 = { add_province_modifier = { name = anbi_kuhai_city_festival duration = 1825 } } }
+		if = { limit = { has_church_aspect = anbi_zhengdao_kuhai } 4896 = { add_province_modifier = { name = anbi_kuhai_city_festival duration = 1825 } } }
+		if = { limit = { has_church_aspect = anbi_zhengdao_beidugang } 4907 = { add_province_modifier = { name = anbi_kuhai_city_festival duration = 1825 } } }
+		if = { limit = { has_church_aspect = anbi_zhengdao_lanjinhui } 4930 = { add_province_modifier = { name = anbi_kuhai_city_festival duration = 1825 } } }
+		if = { limit = { has_church_aspect = anbi_zhengdao_yinquan } 4931 = { add_province_modifier = { name = anbi_kuhai_city_festival duration = 1825 } } }
+		if = { limit = { has_church_aspect = anbi_zhengdao_bianfang } 4826 = { add_province_modifier = { name = anbi_kuhai_city_festival duration = 1825 } } }
+		if = { limit = { has_church_aspect = anbi_zhengdao_zhuyue } 4839 = { add_province_modifier = { name = anbi_kuhai_city_festival duration = 1825 } } }
+		if = { limit = { has_church_aspect = anbi_zhengdao_tianlou } 4871 = { add_province_modifier = { name = anbi_kuhai_city_festival duration = 1825 } } }
+		if = { limit = { has_church_aspect = anbi_zhengdao_gushuoguan } 4914 = { add_province_modifier = { name = anbi_kuhai_city_festival duration = 1825 } } }
+		if = { limit = { has_church_aspect = anbi_zhengdao_jiangdu } 4868 = { add_province_modifier = { name = anbi_kuhai_city_festival duration = 1825 } } }
+		if = { limit = { has_church_aspect = anbi_zhengdao_jianqiang } 4925 = { add_province_modifier = { name = anbi_kuhai_city_festival duration = 1825 } } }
+		if = { limit = { has_church_aspect = anbi_zhengdao_yangcheng } 4861 = { add_province_modifier = { name = anbi_kuhai_city_festival duration = 1825 } } }
+		if = { limit = { has_church_aspect = anbi_zhengdao_yanzhong } 4859 = { add_province_modifier = { name = anbi_kuhai_city_festival duration = 1825 } } }
+		if = { limit = { has_church_aspect = anbi_zhengdao_yingzhen } 4849 = { add_province_modifier = { name = anbi_kuhai_city_festival duration = 1825 } } }
+		if = { limit = { has_church_aspect = anbi_zhengdao_xiangnv } 4869 = { add_province_modifier = { name = anbi_kuhai_city_festival duration = 1825 } } }
+		add_years_of_manpower_scaled_to_seats = 2
+		hidden_effect = {
+			clr_zhengdao_path_aspects = yes
+		}
+	}
+}
+#殖民地超人
+country_event = {
+	id = anbi_kuhai.1009
+	title = anbi_kuhai.1009.t
+	desc = anbi_kuhai.1009.d
+	picture = anbingnar_eventPicture
+
+	trigger = {
+		has_country_flag = anbi_kuhai_the_world_is_ours_cf
+		any_subject_country = {
+			is_colonial_nation_of = Z65
+			NOT = {
+				has_country_modifier = anbi_kuhai_the_world_is_ours_buff
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	hidden = yes
+
+	option = {
+		every_subject_country = {
+			limit = {
+				is_colonial_nation_of = Z65
+				NOT = {
+					has_country_modifier = anbi_kuhai_the_world_is_ours_buff
+				}
+			}
+			add_country_modifier = {
+				name = anbi_kuhai_the_world_is_ours_buff
+				duration = -1
+			}
+		}
+	}
+}
+#烟州选举(1010-1011)
+country_event = {
+	id = anbi_kuhai.1010
+	title = anbi_kuhai.1010.t
+	desc = anbi_kuhai.1010.d
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_seat_in_parliament = yes
+				}
+				add_province_modifier = {
+					name = anbi_kuhai_the_gold_fair_law
+					duration = 730
+				}
+			}
+		}
+	}
+
+	trigger = {
+		has_reform = anbi_kuhai_united_yanshen
+	}
+
+	option = {
+		name = "EVTOPTA700"	# Current ruler stays
+		trigger = {
+			has_regency = no
+			NOT = { 
+				has_ruler_flag = leader_has_been_pushed_out
+				has_ruler_flag = is_huangke_tired
+			}
+			OR = {
+				NOT = { has_government_attribute = has_limited_terms }
+				check_variable = {
+					which = max_election_term
+					which = election_term
+				}
+			}
+		}
+		ai_chance = { 
+			factor = 60
+			modifier = {
+				factor = 0
+				NOT = { republican_tradition = 25 }
+			}	
+			modifier = {
+				factor = 0.5
+				NOT = { republican_tradition = 50 }
+			}				
+			modifier = {
+				factor = 0.5
+				NOT = { republican_tradition = 75 }
+			}	
+			modifier = {
+				factor = 2.0
+				republican_tradition = 90
+			}		
+			
+			#Anbennar
+			modifier = {
+				factor = 2.0
+				ruler_has_mage_personality = yes
+			}	
+			modifier = {
+				factor = 100.0
+				OR = {
+					ruler_has_personality = great_conqueror_personality
+					ruler_has_personality = mythical_conqueror_personality
+				}
+			}
+		}
+		custom_tooltip = remains_ruler
+		if = {
+			limit = { has_government_attribute = has_limited_terms }
+			custom_tooltip = current_term_tt
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_ruler_flag = is_huangke
+				}
+			}
+			random_list = {
+				1 = {
+					change_adm = 1
+				}
+				1 = {
+					change_dip = 1
+				}
+				1 = {
+					change_mil = 1
+				}
+			}
+		}	
+		if = {
+			limit = {
+				is_tribal = no 
+				government = republic
+				NOT = { republican_tradition = 20 }				
+				NOT = { is_revolutionary_republic_trigger = yes }
+				has_dlc = "Res Publica"
+				NOT = { has_government_attribute = cannot_become_dictatorship }
+				
+				#Anbennar
+				NOT = { has_reform = northern_league_magnates } # need a special case for this
+			}
+			add_government_reform = presidential_despot_reform	
+		}
+		else_if = {
+			limit = {
+				government = republic
+				NOT = { republican_tradition = 20 }	
+				is_revolutionary_republic_trigger = yes
+				
+				#Anbennar
+				NOT = { has_reform = northern_league_magnates } # need a special case for this
+			}
+			change_government = monarchy
+			add_government_reform = revolutionary_empire_reform
+		}
+		if = {
+			limit = {
+				is_tribal = no  
+				government = republic
+				NOT = { republican_tradition = 20 }
+				NOT = { has_dlc = "Res Publica" }
+				NOT = { has_government_attribute = cannot_become_dictatorship }
+				
+				#Anbennar
+				NOT = { has_reform = northern_league_magnates } # need a special case for this
+			}
+			change_government = monarchy
+			#set_legacy_government = despotic_monarchy
+		}
+		if = {
+			limit = {
+				has_ruler_flag = is_huangke
+			}
+			custom_tooltip = anbi_is_huangke_remains
+			add_prestige_or_monarch_power = { amount = 5 }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = strengthened_signoria_flag
+			}
+			custom_tooltip = strengthened_signoria_election_tt
+			clr_country_flag = strengthened_signoria_flag
+		}
+		else_if = {	#long-lived races
+			limit = {
+				OR = {
+					has_country_modifier = gnomish_administration
+					has_country_modifier = elven_administration
+					has_country_modifier = dwarven_administration
+				}
+			}
+			add_scaled_republican_tradition = -3
+		}
+		else = {
+			if = {
+				limit = {
+					has_country_flag = increased_election_cost
+				}
+				add_scaled_republican_tradition = -15
+				clr_country_flag = increased_election_cost
+			}
+			else = {
+				add_scaled_republican_tradition = -10
+			}
+		}
+		random_list = {
+			10 = {
+				add_adm_power = 50
+			}
+			10 = {
+				add_dip_power = 50
+			}
+			10 = {
+				add_mil_power = 50
+			}
+		}
+		if = {
+			limit = {
+				has_government_attribute = reelection_depowers_estates
+			}
+			add_estate_influence_modifier = {
+				estate = all
+				influence = -10
+				duration = 1460
+				desc = REELCTION_DEPOWER_ESTATES
+			}
+		}
+		if = {
+			limit = { has_government_attribute = elections_influence_estates }
+			add_estate_loyalty = {
+				estate = all
+				loyalty = 5
+			}
+		}
+		if = {
+			limit = { has_government_attribute = reelection_increases_absolutism }
+			tooltip = {
+				add_absolutism = 10
+			}
+			custom_tooltip = ADD_ABSOLUTISM_BASED_ON_ELECTION_TERM
+			hidden_effect = {
+				for_variable_amount = {
+					variable = election_term
+					effect = "
+						add_absolutism = 10
+					"
+				}
+			}
+			hidden_effect = {
+				change_variable = {
+					which = election_term
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { has_government_attribute = elections_increase_factions_influence }
+			add_influence_to_random_faction = {
+				influence = 20
+			}
+		}
+		add_karma = -5
+		if = {
+			limit = {
+				has_government_attribute = has_limited_terms
+			}
+			hidden_effect = {
+				change_variable = {
+					which = election_term
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = ynn_forced_reelection
+			}
+			clr_country_flag = ynn_forced_reelection
+		}
+		if = { #so Tanizu dont get free 6/6/6
+			limit = {
+				has_reform = namasoguziza_reform
+			}
+			add_legitimacy = -25
+		}
+		#Silver republic
+		if = {
+			limit = {
+				has_ruler_flag = is_from_ekha
+			}
+			402 = {
+				add_province_modifier = {
+					name = silver_touched_province
+					duration = 2920
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_ruler_flag = is_from_khasa
+			}
+			400 = {
+				add_province_modifier = {
+					name = silver_touched_province
+					duration = 2920
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_ruler_flag = is_from_deshak
+			}
+			382 = {
+				add_province_modifier = {
+					name = silver_touched_province
+					duration = 2920
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_ruler_flag = is_from_sigilan
+			}
+			5813 = {
+				add_province_modifier = {
+					name = silver_touched_province
+					duration = 2920
+				}
+			}
+		}
+		
+		if = { #Ikogshaantus
+			limit = { has_reform = ikogshaantus_khantaar_industrial_council }
+			add_estate_loyalty = {
+				estate = all
+				loyalty = -3
+			}
+		}
+	}
+	option = {
+		name = anbi_kuhai.1010.a
+		trigger = {
+			NOT = {
+				has_ruler_flag = is_huangke
+			}
+		}
+		define_ruler = {
+			random_gender = yes
+			change_adm = 2
+			change_dip = 1
+			change_mil = 1
+			religion = ROOT
+			culture = ROOT
+		}
+		add_ruler_personality = anbi_kuhai_is_purple_party
+	}
+	option = {
+		name = anbi_kuhai.1010.b
+		trigger = {
+			NOT = {
+				has_ruler_flag = is_huangke
+			}
+		}
+		define_ruler = {
+			random_gender = yes
+			change_adm = 1
+			change_dip = 2
+			change_mil = 1
+			religion = ROOT
+			culture = ROOT
+		}
+		add_ruler_personality = anbi_kuhai_is_blue_party
+	}
+	option = {
+		name = anbi_kuhai.1010.c
+		trigger = {
+			NOT = {
+				has_ruler_flag = is_huangke
+			}
+		}
+		define_ruler = {
+			random_gender = yes
+			change_adm = 1
+			change_dip = 1
+			change_mil = 2
+			religion = ROOT
+			culture = ROOT
+		}
+		add_ruler_personality = anbi_kuhai_is_gold_party
+	}
+	option = {
+		name = anbi_kuhai.1010.e
+		trigger = {
+			NOT = {
+				has_ruler_flag = is_huangke
+			}
+		}
+		define_ruler = {
+			random_gender = yes
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+			religion = ROOT
+			culture = ROOT
+		}
+		add_ruler_personality = anbi_kuhai_is_white_party
+	}
+
+	after = {
+		set_ruler_flag = human_ruler
+	}
+}
+country_event = {
+	id = anbi_kuhai.1011
+	title = anbi_kuhai.1011.t
+	desc = anbi_kuhai.1011.d
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = anbi_kuhai_united_yanshen
+		NOT = {
+			has_ruler_flag = is_huangke
+		}
+	}
+
+	option = {
+		name = anbi_kuhai.1010.a
+		trigger = {
+			NOT = {
+				has_ruler_flag = is_huangke
+			}
+		}
+		define_ruler = {
+			random_gender = yes
+			change_adm = 2
+			change_dip = 1
+			change_mil = 1
+			religion = ROOT
+			culture = ROOT
+		}
+		add_ruler_personality = anbi_kuhai_is_purple_party
+	}
+	option = {
+		name = anbi_kuhai.1010.b
+		trigger = {
+			NOT = {
+				has_ruler_flag = is_huangke
+			}
+		}
+		define_ruler = {
+			random_gender = yes
+			change_adm = 1
+			change_dip = 2
+			change_mil = 1
+			religion = ROOT
+			culture = ROOT
+		}
+		add_ruler_personality = anbi_kuhai_is_blue_party
+	}
+	option = {
+		name = anbi_kuhai.1010.c
+		trigger = {
+			NOT = {
+				has_ruler_flag = is_huangke
+			}
+		}
+		define_ruler = {
+			random_gender = yes
+			change_adm = 1
+			change_dip = 1
+			change_mil = 2
+			religion = ROOT
+			culture = ROOT
+		}
+		add_ruler_personality = anbi_kuhai_is_gold_party
+	}
+	option = {
+		name = anbi_kuhai.1010.e
+		trigger = {
+			NOT = {
+				has_ruler_flag = is_huangke
+			}
+		}
+		define_ruler = {
+			random_gender = yes
+			max_random_adm = 4
+			max_random_dip = 4
+			max_random_mil = 4
+			change_adm = 2
+			change_dip = 2
+			change_mil = 2
+			religion = ROOT
+			culture = ROOT
+		}
+		add_ruler_personality = anbi_kuhai_is_white_party
+	}
+
+	after = {
+		set_ruler_flag = human_ruler
+	}
+}
+#烟州速度，小子！
+country_event = {
+	id = anbi_kuhai.1012
+	title = anbi_kuhai.1012.t
+	desc = anbi_kuhai.1012.d
+	picture = SPELL_LIST_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.1012.a
+		every_owned_province = {
+			if = {
+				limit = { has_province_modifier = damaged_temple_complex }
+				remove_province_modifier = damaged_temple_complex
+				add_permanent_province_modifier = {
+					name = temple_complex
+					duration = -1
+				}
+				upgrade_temple_wards = yes
+			}
+			if = {
+				limit = { has_province_modifier = derelict_temple_complex }
+				remove_province_modifier = derelict_temple_complex
+				add_permanent_province_modifier = {
+					name = temple_complex
+					duration = -1
+				}
+				upgrade_temple_wards = yes
+			}
+		}
+		every_subject_country = {
+			every_owned_province = {
+				if = {
+					limit = { has_province_modifier = damaged_temple_complex }
+					remove_province_modifier = damaged_temple_complex
+					add_permanent_province_modifier = {
+						name = temple_complex
+						duration = -1
+					}
+					upgrade_temple_wards = yes
+				}
+				if = {
+					limit = { has_province_modifier = derelict_temple_complex }
+					remove_province_modifier = derelict_temple_complex
+					add_permanent_province_modifier = {
+						name = temple_complex
+						duration = -1
+					}
+					upgrade_temple_wards = yes
+				}
+			}
+		}
+	}
+}
+#蓝色自由宪法实现
+country_event = {
+	id = anbi_kuhai.1013
+	title = anbi_kuhai.1013.t
+	desc = anbi_kuhai.1013.d
+	picture = anbingnar_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		every_owned_province = {
+			limit = {
+				has_seat_in_parliament = yes
+			}
+			add_province_modifier = {
+				name = anbi_kuhai_the_blue_liberty_law
+				duration = -1
+			}
+		}
+	}
+}
+#自动移交蛇脊省份
+country_event = {
+	id = anbi_kuhai.1014
+	title = anbi_kuhai.1014.t
+	desc = anbi_kuhai.1014.d
+	picture = anbingnar_eventPicture
+
+	hidden = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		OR = {
+			has_country_flag = anbi_kuhai_the_jade_question_dwarven
+			has_country_flag = anbi_kuhai_the_jade_question_goblin
+		}
+		any_owned_province = {
+			continent = serpentspine
+		}		
+	}
+
+	option = {
+		name = anbi_kuhai.1014.a
+		if = {
+			limit = { 
+				has_country_flag = anbi_kuhai_the_jade_question_goblin
+			}
+			serpentspine = {
+				limit = {
+					owned_by = ROOT
+				}
+				cede_province = R81
+			}
+		}
+		else_if = {
+			limit = { 
+				has_country_flag = anbi_kuhai_the_jade_question_dwarven
+			}
+			serpentspine = {
+				limit = {
+					owned_by = ROOT
+				}
+				cede_province = I22
+			}
+		}
+	}
+}
+#自动图地精
+country_event = {
+	id = anbi_kuhai.1015
+	title = anbi_kuhai.1015.t
+	desc = anbi_kuhai.1015.d
+	picture = anbingnar_eventPicture
+
+	hidden = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		tag = I22
+		Z65 = {
+			has_country_flag = anbi_kuhai_the_jade_question_dwarven
+		}
+		any_owned_province = {
+			region = jade_mines_region
+			culture_is_goblin = yes
+		}
+		is_subject_of_type_with_overlord = {
+			who = Z65
+			type = anbi_kuhai_republican_subject_state
+		}
+	}
+
+	option = {
+		name = anbi_kuhai.1015.a
+		every_owned_province = {
+			limit = {
+				region = jade_mines_region
+				culture_is_goblin = yes
+			}
+			change_religion = ROOT
+			change_culture = ROOT
+			add_base_tax = -1
+			add_base_manpower = -1
+			add_base_production = -1
+		}
+	}
+}
+#飞腾水母+科学法师特权补丁
+country_event = {
+	id = anbi_kuhai.1016
+	title = anbi_kuhai.1016.t
+	desc = anbi_kuhai.1016.d
+	picture = anbingnar_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.1016.a
+		if = {
+			limit = { 
+				NOT = {
+					has_estate_privilege = estate_artificers_organization_feiten_shuimu_cadre
+				}
+			}
+			set_estate_privilege = estate_artificers_organization_feiten_shuimu_cadre
+		}
+		if = {
+			limit = { 
+				NOT = {
+					has_estate_privilege = anbi_kuhai_mages_education_privilege
+				}
+			}
+			set_estate_privilege = anbi_kuhai_mages_education_privilege
+			set_estate_privilege = estate_mages_organization_science_mages
+		}
+	}
+}
+#吸血鬼阶层提示
+country_event = {
+	id = anbi_kuhai.1017
+	title = anbi_kuhai.1017.t
+	desc = anbi_kuhai.1017.d
+	picture = anbingnar_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = the_greatest_yanshen
+		has_estate = estate_vampires
+	}
+
+	option = {
+		name = anbi_kuhai.1017.a
+		highlight = yes
+		clr_country_flag = has_vampires_estate
+	}
+	option = {
+		name = anbi_kuhai.1017.b
+		add_adm_power = 1
+	}
+}
+#1018、1019为蓝巾会、隐泉战争和平事件，已移至上方。
+#1020（任务切换补丁）
+country_event = {
+	id = anbi_kuhai.1020
+	title = anbi_kuhai.1020.t
+	desc = anbi_kuhai.1020.d
+	picture = anbingnar_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.1020.a
+		highlight = yes
+		custom_tooltip = anbi_kuhai.1020_tt
+		set_country_flag = anbi_mission_tree_bug_fix
+	}
+	option = {
+		name = anbi_kuhai.1020.b
+	}
+}
+
+
+#烟州飞腾局任务（2000）
+country_event = {
+	id = anbi_kuhai.2000
+	title = anbi_kuhai.2000.t
+	desc = anbi_kuhai.2000.d
+	picture = AIRSHIP_SKYPORT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.2000.zz
+		highlight = yes
+		clr_country_flag = anbi_kuhai_feiten_department_open
+	}
+
+	#继续水母研究
+	option = {
+		trigger = {
+			NOT = {
+				has_country_flag = feiten_jellyfish_scouts_unlocked
+			}
+			NOT = {
+				AND = {
+					OR = {
+						has_mil_advisor_3 = yes
+						mil = 5
+					}
+					AND = {
+						adm_power = 50
+						dip_power = 50
+						mil_power = 50
+					}
+				}
+			}			
+		}
+		custom_tooltip = anbi_kuhai.2000.act
+		custom_tooltip = anbi_kuhai.2000.act1
+		name = anbi_kuhai.2000.a1
+		hidden_effect = {
+			country_event = {
+				id = anbi_kuhai.2001
+			}
+		}
+	}
+	option = {
+		name = anbi_kuhai.2000.a2
+		trigger = {
+			hidden_trigger = {
+				AND = {
+					OR = {
+						has_mil_advisor_3 = yes
+						mil = 5
+					}
+					AND = {
+						adm_power = 50
+						dip_power = 50
+						mil_power = 50
+					}
+				}
+				NOT = {
+					has_country_flag = feiten_jellyfish_scouts_unlocked
+				}
+			}		
+		}
+		highlight = yes
+		add_adm_power = -50
+		add_dip_power = -50
+		add_mil_power = -50
+		custom_tooltip = anbi_kuhai.2000.act2
+		hidden_effect = { 1371 = { add_province_triggered_modifier = feiten_daily_pulse } }
+		unlock_merc_company = {
+			merc_company = merc_feiten_jellyfish_scouts
+			free_merc = yes
+		}
+		set_country_flag = feiten_jellyfish_scouts_unlocked
+		hidden_effect = {
+			country_event = {
+				id = anbi_kuhai.2001
+			}
+		}
+	}
+
+	#扶持水母工程队
+	option = {
+		trigger = {
+			NOT = {
+				has_estate_privilege = anbi_kuhai_the_shuimu_engineer_up
+			}
+			NOT = {
+				AND = {
+					iongsim_area = {
+						type = all
+						development = 10
+					}
+					calc_true_if = {
+						amount = 2
+						has_estate_privilege = artifice_invention_feiten_nitroglycerin_rockets
+						has_estate_privilege = artifice_invention_feiten_nitroglycerin_tnt
+						has_estate_privilege = artifice_invention_feiten_farsight_telescopes
+						has_estate_privilege = artifice_invention_feiten_porcelain_caged_firebirds
+						has_estate_privilege = artifice_invention_feiten_specialized_construction_arms
+						has_estate_privilege = artifice_invention_feiten_expanding_storage_holds
+						has_estate_privilege = artifice_invention_feiten_skywriting
+						has_estate_privilege = artifice_invention_feiten_electroplated_armor
+						has_estate_privilege = artifice_invention_feiten_ivory_conduits
+						has_estate_privilege = artifice_invention_feiten_silken_cladding
+						has_estate_privilege = artifice_invention_feiten_damestear_ribbing
+						has_estate_privilege = artifice_invention_feiten_long_rockets
+						has_estate_privilege = artifice_invention_feiten_lightning_amplifier
+						has_estate_privilege = artifice_invention_feiten_steel_rudders
+					}
+				}				
+			}		
+		}
+		goto = 4879
+		custom_tooltip = anbi_kuhai.2000.bct
+		custom_tooltip = anbi_kuhai.2000.bct1
+
+		name = anbi_kuhai.2000.b1
+		hidden_effect = {
+			country_event = {
+				id = anbi_kuhai.2001
+			}
+		}
+	}
+	option = {
+		trigger = {
+			hidden_trigger = {
+				iongsim_area = {
+					type = all
+					development = 10
+				}
+				calc_true_if = {
+					amount = 2
+					has_estate_privilege = artifice_invention_feiten_nitroglycerin_rockets
+					has_estate_privilege = artifice_invention_feiten_nitroglycerin_tnt
+					has_estate_privilege = artifice_invention_feiten_farsight_telescopes
+					has_estate_privilege = artifice_invention_feiten_porcelain_caged_firebirds
+					has_estate_privilege = artifice_invention_feiten_specialized_construction_arms
+					has_estate_privilege = artifice_invention_feiten_expanding_storage_holds
+					has_estate_privilege = artifice_invention_feiten_skywriting
+					has_estate_privilege = artifice_invention_feiten_electroplated_armor
+					has_estate_privilege = artifice_invention_feiten_ivory_conduits
+					has_estate_privilege = artifice_invention_feiten_silken_cladding
+					has_estate_privilege = artifice_invention_feiten_damestear_ribbing
+					has_estate_privilege = artifice_invention_feiten_long_rockets
+					has_estate_privilege = artifice_invention_feiten_lightning_amplifier
+					has_estate_privilege = artifice_invention_feiten_steel_rudders	
+				}
+				NOT = {
+					has_estate_privilege = anbi_kuhai_the_shuimu_engineer_up
+				}
+			}
+		}
+		highlight = yes
+		goto = 4879
+		set_country_flag = anbi_kuhai_the_shuimu_engineer_up_cf
+		set_estate_privilege = anbi_kuhai_the_shuimu_engineer_up
+
+		custom_tooltip = anbi_kuhai.2000.bct
+		custom_tooltip = anbi_kuhai.2000.bct2
+		name = anbi_kuhai.2000.b2
+		hidden_effect = {
+			country_event = {
+				id = anbi_kuhai.2001
+			}
+		}
+	}
+
+	#闪电水母
+	option = {
+		trigger = {	
+			has_country_flag = feiten_jellyfish_scouts_unlocked
+			NOT = {
+				AND = {
+					num_of_trading_bonuses = 5
+					1371 = { trade_node_value = 50 }
+					estate_loyalty = {
+						estate = estate_artificers
+						loyalty = 80
+					}
+					estate_influence = {
+						estate = estate_artificers
+						influence = 40
+					}
+				}
+			}
+			NOT = {
+				has_country_flag = feiten_lightning_shuimu_unlocked
+			}
+		}
+		custom_tooltip = anbi_kuhai.2000.cct
+		custom_tooltip = anbi_kuhai.2000.cct1
+
+		name = anbi_kuhai.2000.c1
+		hidden_effect = {
+			country_event = {
+				id = anbi_kuhai.2001
+			}
+		}
+	}
+	option = {
+		trigger = {
+			hidden_trigger = {
+				has_country_flag = feiten_jellyfish_scouts_unlocked
+				NOT = {
+					has_country_flag = feiten_lightning_shuimu_unlocked
+				}
+				num_of_trading_bonuses = 5
+				1371 = { trade_node_value = 50 }
+				estate_loyalty = {
+					estate = estate_artificers
+					loyalty = 80
+				}
+				estate_influence = {
+					estate = estate_artificers
+					influence = 40
+				}
+			}
+		}
+		highlight = yes
+		set_country_flag = feiten_lightning_shuimu_unlocked
+		unlock_merc_company = {
+			merc_company = merc_feiten_lightning_jellyfish
+			free_merc = yes
+		}
+
+		custom_tooltip = anbi_kuhai.2000.cct
+		custom_tooltip = anbi_kuhai.2000.cct2
+		name = anbi_kuhai.2000.c2
+		hidden_effect = {
+			country_event = {
+				id = anbi_kuhai.2001
+			}
+		}
+	}
+}
+#飞腾局任务自触发
+country_event = {
+	id = anbi_kuhai.2001
+	title = anbi_kuhai.2001.t
+	desc = anbi_kuhai.2001.d
+	picture = anbingnar_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		country_event = {
+			id = anbi_kuhai.2000
+		}
+	}
+}
+
+
+
+
+##预设剧本
+#开局设置（10000）
+country_event = {
+	id = anbi_kuhai.10000
+	title = anbi_kuhai.10000.t
+	desc = anbi_kuhai.10000.d
+	picture = anbingnar_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		federation_increase_cohesion_all = yes
+		federation_increase_cohesion_all = yes
+		federation_increase_cohesion_all = yes
+		set_global_flag = anbi_greatest_yanshen_worldline
+		B05 = {
+			set_country_flag = necromancy_disallowed
+			set_country_flag = anbi_kuhai_is_B05
+			add_ruler_personality = mythical_conqueror_personality
+			set_country_flag = feudal_escann_kingdom
+			add_ruler_modifier = {
+				name = mythical_conqueror_modifier
+				duration = -1
+			}
+			add_country_modifier = {
+				name = anbi_kuhai_B05_buff
+				duration = 73000
+			}
+			escann_superregion = {
+				add_permanent_claim = PREV
+			}
+			western_cannor_superregion = {
+				add_permanent_claim = PREV
+			}
+			gerudia_superregion = {
+				add_permanent_claim = PREV
+			}
+			deepwoods_superregion = {
+				add_permanent_claim = PREV
+			}
+			set_ai_personality = {
+				personality = ai_militarist
+				locked = yes
+			}
+		}
+		F46 = {
+			set_country_flag = necromancy_disallowed
+			set_country_flag = anbi_kuhai_is_F46
+			add_ruler_personality = mythical_conqueror_personality
+			add_ruler_modifier = {
+				name = mythical_conqueror_modifier
+				duration = -1
+			}
+			add_country_modifier = {
+				name = anbi_kuhai_F51_buff
+				duration = 73000
+			}
+			set_ai_personality = {
+				personality = ai_militarist
+				locked = yes
+			}
+			djinnakah_superregion = {
+				add_permanent_claim = PREV
+			}
+			taneyas_superregion = {
+				add_permanent_claim = PREV
+			}
+			tanib_dajek_superregion = {
+				add_permanent_claim = PREV
+			}
+			south_salahad_superregion = {
+				add_permanent_claim = PREV
+			}
+			east_sarhal_superregion = {
+				add_permanent_claim = PREV
+			}
+			fangaula_superregion = {
+				add_permanent_claim = PREV
+			}
+			fangaula_superregion = {
+				add_permanent_claim = PREV
+			}
+			bulwar_superregion = {
+				add_permanent_claim = PREV
+			}
+		}
+		G52 = {
+			set_country_flag = necromancy_disallowed
+			set_country_flag = anbi_kuhai_is_G52
+			add_ruler_personality = mythical_conqueror_personality
+			add_ruler_modifier = {
+				name = mythical_conqueror_modifier
+				duration = -1
+			}
+			add_country_modifier = {
+				name = anbi_kuhai_G52_buff
+				duration = 73000
+			}
+			set_ai_personality = {
+				personality = ai_militarist
+				locked = yes
+			}
+			taychend_superregion = {
+				add_permanent_claim = PREV
+			}
+			amadia_region = {
+				add_permanent_claim = PREV
+			}
+			kheionai_superregion = {
+				add_permanent_claim = PREV
+			}
+			effelai_superregion = {
+				add_permanent_claim = PREV
+			}
+		}
+		R62 = {
+			add_country_modifier = {
+				name = anbi_kuhai_R62_no_mage
+				duration = -1
+			}
+		}
+	}
+}
+#开局介绍（10001）
+country_event = {
+	id = anbi_kuhai.10001
+	title = anbi_kuhai.10001.t
+	desc = anbi_kuhai.10001.d
+	picture = anbingnar_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = anbi_kuhai.10000
+			}
+		}
+	}
+
+	trigger = {
+		ai = no
+		tag = Y27
+	}
+
+	option = {
+		name = anbi_kuhai.10001.a
+		add_adm_power = 1
+	}
+	option = {
+		name = anbi_huhai.10001.b
+		custom_tooltip = anbi_kuhai.10001_ct
+		set_bankruptcy = ROOT
+		add_country_modifier = {
+			name = anbi_no_agree_with_me
+			duration = -1
+		}
+	}
+
+}
+#贾德预设（10002-10003）
+country_event = {
+	id = anbi_kuhai.10002
+	title = anbi_kuhai.10002.t
+	desc = anbi_kuhai.10002.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+
+	trigger = {
+		has_global_flag = anbi_greatest_yanshen_worldline
+		OR = {
+			tag = F46
+			tag = F51
+		}
+		any_owned_province = {
+			continent = asia
+			NOT = {
+				superregion = forbidden_lands_superregion
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	hidden = yes
+
+	option = {
+		name = anbi_kuhai.10002.a
+		if = {
+			limit = { 
+				NOT = {
+					exists = R74
+					R74 = {
+						is_subject_of = F46
+					}
+					R74 = {
+						is_subject_of = F51
+					}
+				}
+			}
+			every_owned_province = {
+				limit = {
+					continent = asia
+					NOT = {
+						superregion = forbidden_lands_superregion
+					}
+				}
+				add_core = R74
+				cede_province = R74
+			}
+			create_union = R74
+			R74 = {
+				add_country_modifier = {
+					name = anbi_kuhai_R74_buff
+					duration = -1
+				}
+			}
+		}
+		else = {
+			every_owned_province = {
+				limit = {
+					continent = asia
+					NOT = {
+						superregion = forbidden_lands_superregion
+					}
+				}
+				cede_province = R74
+			}
+		}
+	}
+}
+country_event = {
+	id = anbi_kuhai.10003
+	title = anbi_kuhai.10003.t
+	desc = anbi_kuhai.10003.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		has_global_flag = anbi_greatest_yanshen_worldline
+		OR = {
+			tag = F46
+			tag = F51
+		}
+		any_war_enemy_country = {
+			OR = {
+				is_in_war = {
+					attacker_leader = ROOT
+				}
+				is_in_war = {
+					defender_leader = ROOT
+				}
+			}
+			capital_scope = {
+				continent = asia
+			}
+		}
+		NOT = {
+			is_year = 1600
+			has_global_flag = anbi_kuhai_the_great_war
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+		name = anbi_kuhai.10003.a
+		every_war_enemy_country = {
+			limit = {
+				capital_scope = {
+					continent = asia
+				}
+				OR = {
+					is_in_war = {
+						attacker_leader = ROOT
+					}
+					is_in_war = {
+						defender_leader = ROOT
+					}
+				}
+				is_free_or_tributary_trigger = yes
+			}
+			white_peace = F46
+			white_peace = F51
+		}
+	}
+}
+#命令操控（10004-10005）
+country_event = {
+	id = anbi_kuhai.10004
+	title = anbi_kuhai.10004.t
+	desc = anbi_kuhai.10004.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+
+	hidden = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = command_sir_revolt_started
+		tag = R62
+		has_global_flag = anbi_greatest_yanshen_worldline
+	}
+
+	option = {
+		name = anbi_kuhai.10004.a
+		add_country_modifier = {
+			name = anbi_kuhai_R62_command_sir_revolt_started
+			duration = 4380
+		}
+	}
+}
+country_event = {
+	id = anbi_kuhai.10005
+	title = anbi_kuhai.10005.t
+	desc = anbi_kuhai.10005.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+
+	hidden = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	fire_only_once = yes
+	trigger = {
+		has_country_modifier = anbi_kuhai_R62_command_sir_revolt_started
+		NOT = {
+			has_country_flag = command_sir_revolt_started
+		}
+		tag = R62
+	}
+
+	option = {
+		name = anbi_kuhai.10004.a
+		remove_country_modifier = anbi_kuhai_R62_command_sir_revolt_started
+	}
+}
+#哈兰世界大战(10006)
+country_event = {
+	id = anbi_kuhai.10006
+	title = anbi_kuhai.10006.t
+	desc = anbi_kuhai.10006.d
+	picture = EMPTY_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		play_sound = "anbi_hebeimoqiling"
+	}
+
+	option = {
+		name = anbi_kuhai.10006.a
+		every_subject_country = {
+			add_country_modifier = {
+				name = anbi_kuhai_the_world_war_buff
+				duration = -1
+			}
+		}
+		add_country_modifier = {
+			name = anbi_kuhai_the_world_war_buff
+			duration = -1
+		}
+		random_country = {
+			limit = {
+				has_country_flag = anbi_kuhai_is_B05
+			}
+			add_country_modifier = {
+				name = anbi_kuhai_the_world_war_buff
+				duration = -1
+			}
+		}
+		random_country = {
+			limit = {
+				has_country_flag = anbi_kuhai_is_B05
+			}
+			add_country_modifier = {
+				name = anbi_kuhai_the_world_war_buff
+				duration = -1
+			}
+		}
+		random_country = {
+			limit = {
+				has_country_flag = anbi_kuhai_is_B05
+			}
+			add_country_modifier = {
+				name = anbi_kuhai_the_world_war_buff
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = anbi_kuhai.10006.b
+		highlight = yes
+		custom_tooltip = anbi_kuhai.10006_tt
+		country_event = {
+			id = anbi_kuhai.10010
+		}
+		country_event = {
+			id = anbi_kuhai.10011
+		}
+		country_event = {
+			id = anbi_kuhai.10012
+		}
+	}
+}
+#努尔塞斯提尔入主安本(10007)
+country_event = {
+	id = anbi_kuhai.10007
+	title = anbi_kuhai.10007.t
+	desc = anbi_kuhai.10007.d
+	picture = anbingnar_eventPicture
+
+	hidden = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 1580
+		has_country_flag = anbi_kuhai_is_B05
+	}
+
+	option = {
+		change_government = monarchy
+		define_ruler = {
+			name = "Camir"
+			dynasty = "Silmuna"
+			adm = 6
+			dip = 5
+			mil = 6
+			age = 30
+		}
+		add_ruler_personality = mage_personality
+		add_ruler_personality = conqueror_personality
+		add_ruler_personality = mythical_conqueror_personality
+		add_ruler_modifier = {
+			name = mythical_conqueror_modifier
+			duration = -1
+		}
+		set_country_flag = witch_king_flag
+		add_ruler_modifier = {
+			name = witch_king_modifier
+			duration = -1
+		}
+		country_event = {
+			id = anbi_kuhai.10008
+		}
+	}
+}
+country_event = {
+	id = anbi_kuhai.10008
+	title = anbi_kuhai.10008.t
+	desc = anbi_kuhai.10008.d
+	picture = anbingnar_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.10008.a
+		set_emperor = yes
+		set_in_empire = yes
+		hre_inheritable = yes
+		set_hre_religion_locked = yes
+		hidden_effect = {
+			country_event = {
+				id = anbi_kuhai.10009
+				days = 1825
+			}
+		}
+	}
+}
+country_event = {
+	id = anbi_kuhai.10009
+	title = anbi_kuhai.10009.t
+	desc = anbi_kuhai.10009.d
+	picture = anbingnar_eventPicture
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.10009.a
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			ROOT = {
+				inherit = PREV
+			}
+		}
+		change_tag = Z01
+		swap_free_idea_group = yes
+	}
+}
+#傀儡三国
+country_event = {
+	id = anbi_kuhai.10010
+	title = anbi_kuhai.10010.t
+	desc = anbi_kuhai.10010.d
+	picture = anbi_RUIN_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = anbi_kuhai_the_great_war
+		tag = Z65
+		war_score_against = {
+			who = event_target:anbi_kuhai_is_B05_target
+			value = 75
+		}
+	}
+
+	option = {
+		name = anbi_kuhai.10010.a
+		white_peace = event_target:anbi_kuhai_is_B05_target
+		create_subject = {
+			subject_type = anbi_kuhai_republican_subject_state
+			who = event_target:anbi_kuhai_is_B05_target
+		}
+		event_target:anbi_kuhai_is_B05_target = {
+			kill_ruler = yes
+			change_government = republic
+			override_country_name = anbi_B05_fail
+			change_country_color = {
+				country = Z65
+			}
+			add_country_modifier = {
+				name = anbi_kuhai_the_fail_country
+				duration = -1
+			}
+		}
+	}
+}
+country_event = {
+	id = anbi_kuhai.10011
+	title = anbi_kuhai.10011.t
+	desc = anbi_kuhai.10011.d
+	picture = anbi_SOLDIER_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = anbi_kuhai_the_great_war
+		tag = Z65
+		war_score_against = {
+			who = event_target:anbi_kuhai_is_G52_target
+			value = 75
+		}
+	}
+
+	option = {
+		name = anbi_kuhai.10011.a
+		white_peace = event_target:anbi_kuhai_is_G52_target
+		create_subject = {
+			subject_type = anbi_kuhai_republican_subject_state
+			who = event_target:anbi_kuhai_is_G52_target
+		}
+		event_target:anbi_kuhai_is_G52_target = {
+			kill_ruler = yes
+			change_government = republic
+			override_country_name = anbi_G52_fail
+			change_country_color = {
+				country = Z65
+			}
+			add_country_modifier = {
+				name = anbi_kuhai_the_fail_country
+				duration = -1
+			}
+		}
+	}
+}
+country_event = {
+	id = anbi_kuhai.10012
+	title = anbi_kuhai.10012.t
+	desc = anbi_kuhai.10012.d
+	picture = anbi_FAIL_JADD_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = anbi_kuhai_the_great_war
+		tag = Z65
+		war_score_against = {
+			who = event_target:anbi_kuhai_is_F46_target
+			value = 75
+		}
+	}
+
+	option = {
+		name = anbi_kuhai.10012.a
+		white_peace = event_target:anbi_kuhai_is_F46_target
+		create_subject = {
+			subject_type = anbi_kuhai_republican_subject_state
+			who = event_target:anbi_kuhai_is_F46_target
+		}
+		event_target:anbi_kuhai_is_F46_target = {
+			kill_ruler = yes
+			change_government = republic
+			override_country_name = anbi_F46_fail
+			change_country_color = {
+				country = Z65
+			}
+			add_country_modifier = {
+				name = anbi_kuhai_the_fail_country
+				duration = -1
+			}
+		}
+	}
+}
+#烟州，win！
+country_event = {
+	id = anbi_kuhai.10013
+	title = anbi_kuhai.10013.t
+	desc = anbi_kuhai.10013.d
+	picture = EMPTY_eventPicture
+
+	fire_only_once = yes
+
+	immediate = {
+		play_sound = "anbi_geshengyuweixiao"
+	}
+
+	trigger = {
+		has_global_flag = anbi_kuhai_the_great_war
+		event_target:anbi_kuhai_is_F46_target = {
+			is_subject_of = ROOT
+		}
+		event_target:anbi_kuhai_is_G52_target = {
+			is_subject_of = ROOT
+		}
+		event_target:anbi_kuhai_is_B05_target = {
+			is_subject_of = ROOT
+		}
+		has_country_flag = the_greatest_yanshen
+	}
+
+	option = {
+		name = anbi_kuhai.10013.a
+		set_country_flag = the_greatest_yanshen_end
+		swap_non_generic_missions = yes
+	}
+}
+#烟州，lost！
+country_event = {
+	id = anbi_kuhai.10014
+	title = anbi_kuhai.10014.t
+	desc = anbi_kuhai.10014.d
+	picture = anbingnar_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = anbi_kuhai_the_great_war
+		has_country_flag = the_greatest_yanshen
+		tag = Z65
+		OR = {
+			war_with = event_target:anbi_kuhai_is_F46_target
+			war_with = event_target:anbi_kuhai_is_G52_target
+			war_with = event_target:anbi_kuhai_is_B05_target
+		}
+		OR = {
+			event_target:anbi_kuhai_is_B05_target = {
+				war_score_against = {
+					who = ROOT
+					value = 75
+				}
+			}
+			event_target:anbi_kuhai_is_G52_target = {
+				war_score_against = {
+					who = ROOT
+					value = 75
+				}
+			}
+			event_target:anbi_kuhai_is_F46_target = {
+				war_score_against = {
+					who = ROOT
+					value = 75
+				}
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			white_peace = event_target:anbi_kuhai_is_B05_target
+			white_peace = event_target:anbi_kuhai_is_F46_target
+			white_peace = event_target:anbi_kuhai_is_G52_target
+
+			release_all_possible_countries = yes
+			release_all_subjects = yes
+			set_bankruptcy = ROOT
+			add_war_exhaustion = 20
+		}
+	}
+
+	option = {
+		name = anbi_kuhai.10014.a
+		hidden_effect = {
+			yanshen_superregion = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_core = Y19
+				cede_province = Y19
+			}
+			rahen_superregion = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_core = event_target:anbi_kuhai_is_F46_target
+				cede_province = event_target:anbi_kuhai_is_F46_target
+			}
+			vimdatrong_superregion = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_core = event_target:anbi_kuhai_is_B05_target
+				cede_province = event_target:anbi_kuhai_is_B05_target
+			}
+			north_america = {
+				add_core = event_target:anbi_kuhai_is_G52_target
+				cede_province = event_target:anbi_kuhai_is_G52_target
+			}
+			gozengun_superregion = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_core = Y98
+				cede_province = Y98
+			}
+			override_country_name = ANBIKUHAI_FAIL
+		}
+	}
+}
+#贾德布勒瓦尔征服
+country_event = {
+	id = anbi_kuhai.10015
+	title = anbi_kuhai.10015.t
+	desc = anbi_kuhai.10015.d
+	picture = anbingnar_eventPicture
+
+	major = yes
+	fire_only_once = yes
+	trigger = {
+		is_year = 1550
+		has_country_flag = anbi_kuhai_is_F46
+	}
+	
+	option = {
+		name = anbi_kuhai.10015.a
+		bulwar_superregion = {
+			limit = {
+				NOT = {
+					owned_by = ROOT
+				}
+			}
+			add_core = ROOT
+			cede_province = ROOT
+		}
+	}
+}
+##划分坎诺
+#安本纳尔共和国
+country_event = {
+	id = anbi_kuhai.10016
+	title = anbi_kuhai.10016.t
+	desc = anbi_kuhai.10016.d
+	picture = anbi_STREET_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.10016.a
+		Z01 = {
+			override_country_name = anbi_Z01_NEW
+		}
+		B32 = {
+			change_government = republic
+			override_country_name = anbi_B32_NEW
+		}
+		hidden_effect = {
+			Z01 = {
+				restore_country_color = yes
+				change_religion = regent_court
+			}
+			B32 = {
+				add_country_modifier = {
+					name = anbi_kuhai_the_fail_country
+					duration = -1
+				}
+				change_religion = corinite
+			}
+			west_castanor_region = {
+				add_core = B32
+				cede_province = B32
+			}
+			south_castanor_region = {
+				add_core = B32
+				cede_province = B32
+			}
+			inner_castanor_region = {
+				add_core = B32
+				cede_province = B32
+			}
+			whistlevale_area = {
+				add_core = B32
+				cede_province = B32
+			}
+			cursewood_area = {
+				add_core = B32
+				cede_province = B32
+			}
+			create_subject = {
+				subject_type = anbi_kuhai_republican_subject_state
+				who = B32
+			}
+			country_event = {
+				id = anbi_kuhai.10017
+				days = 30
+			}
+		}
+	}
+}
+#多斯塔诺共和国
+country_event = {
+	id = anbi_kuhai.10017
+	title = anbi_kuhai.10017.t
+	desc = anbi_kuhai.10017.d
+	picture = anbi_STREET_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.10017.a
+		Z07 = {
+			override_country_name = anbi_Z07_NEW
+			change_government = republic
+		}
+		hidden_effect = {
+			dostanor_region = {
+				add_core = Z07
+				cede_province = Z07
+			}
+			daravans_folly_region = {
+				add_core = Z07
+				cede_province = Z07
+			}
+			ourdia_region = {
+				add_core = Z07
+				cede_province = Z07
+			}
+			create_subject = {
+				subject_type = anbi_kuhai_republican_subject_state
+				who = Z07
+			}
+			Z07 = {
+				add_country_modifier = {
+					name = anbi_kuhai_the_fail_country
+					duration = -1
+				}
+				change_religion = regent_court
+			}
+			country_event = {
+				id = anbi_kuhai.10018
+				days = 30
+			}
+		}
+	}
+}
+#伦瑟诺共和国
+country_event = {
+	id = anbi_kuhai.10018
+	title = anbi_kuhai.10018.t
+	desc = anbi_kuhai.10018.d
+	picture = anbi_STREET_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.10018.a
+		A01 = {
+			override_country_name = anbi_A01_NEW
+			change_government = republic
+		}
+		hidden_effect = {
+			lencenor_region = {
+				add_core = A01
+				cede_province = A01
+			}
+			create_subject = {
+				subject_type = anbi_kuhai_republican_subject_state
+				who = A01
+			}
+			A01 = {
+				add_country_modifier = {
+					name = anbi_kuhai_the_fail_country
+					duration = -1
+				}
+				change_religion = regent_court
+			}
+			country_event = {
+				id = anbi_kuhai.10019
+				days = 30
+			}
+		}
+	}
+}
+#小人共和国
+country_event = {
+	id = anbi_kuhai.10019
+	title = anbi_kuhai.10019.t
+	desc = anbi_kuhai.10019.d
+	picture = anbi_STREET_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.10019.a
+		A97 = {
+			override_country_name = anbi_A97_NEW
+			change_government = republic
+		}
+		hidden_effect = {
+			small_country_region = {
+				add_core = A97
+				cede_province = A97
+			}
+			create_subject = {
+				subject_type = anbi_kuhai_republican_subject_state
+				who = A97
+			}
+			country_event = {
+				id = anbi_kuhai.10020
+				days = 30
+			}
+			A97 = {
+				add_country_modifier = {
+					name = anbi_kuhai_the_fail_country
+					duration = -1
+				}
+				change_religion = regent_court
+			}
+		}
+		4879 = {
+			add_halfling_minority_size_effect = yes
+		}
+		4896 = {
+			add_halfling_minority_size_effect = yes
+		}
+		4907 = {
+			add_halfling_minority_size_effect = yes
+		}
+		4930 = {
+			add_halfling_minority_size_effect = yes
+		}
+		4931 = {
+			add_halfling_minority_size_effect = yes
+		}
+		4826 = {
+			add_halfling_minority_size_effect = yes
+		}
+		4839 = {
+			add_halfling_minority_size_effect = yes
+		}
+		4871 = {
+			add_halfling_minority_size_effect = yes
+		}
+		4914 = {
+			add_halfling_minority_size_effect = yes
+		}
+		4868 = {
+			add_halfling_minority_size_effect = yes
+		}
+		4925 = {
+			add_halfling_minority_size_effect = yes
+		}
+		4861 = {
+			add_halfling_minority_size_effect = yes
+		}
+		4859 = {
+			add_halfling_minority_size_effect = yes
+		}
+		4849 = {
+			add_halfling_minority_size_effect = yes
+		}
+		4869 = {
+			add_halfling_minority_size_effect = yes
+		}
+	}
+}
+#侏儒共和国
+country_event = {
+	id = anbi_kuhai.10020
+	title = anbi_kuhai.10020.t
+	desc = anbi_kuhai.10020.d
+	picture = anbi_STREET_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = anbi_kuhai.10020.a
+		A79 = {
+			override_country_name = anbi_A79_NEW
+			change_government = republic
+		}
+		hidden_effect = {
+			dragon_coast_region = {
+				add_core = A79
+				cede_province = A79
+			}
+			create_subject = {
+				subject_type = anbi_kuhai_republican_subject_state
+				who = A79
+			}
+			country_event = {
+				id = anbi_kuhai.10021
+				days = 30
+			}
+		}
+		
+	}
+}
+#北方联盟共和国
+country_event = {
+	id = anbi_kuhai.10021
+	title = anbi_kuhai.10021.t
+	desc = anbi_kuhai.10021.d
+	picture = anbi_STREET_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = anbi_kuhai.10021.a
+		A13 = {
+			override_country_name = anbi_A13_NEW
+			change_government = republic
+		}
+		hidden_effect = {
+			A13 = {
+				add_country_modifier = {
+					name = anbi_kuhai_the_fail_country
+					duration = -1
+				}
+				change_religion = regent_court
+			}
+			alenic_frontier_region = {
+				add_core = A13
+				cede_province = A13
+			}
+			dalr_region = {
+				add_core = A13
+				cede_province = A13
+			}
+			serpentshead_area = {
+				add_core = A13
+				cede_province = A13
+			}
+			west_chillsbay_area = {
+				add_core = A13
+				cede_province = A13
+			}
+			northern_greatwoods_area = {
+				add_core = A13
+				cede_province = A13
+			}
+			coast_of_vics_area = {
+				add_core = A13
+				cede_province = A13
+			}
+			create_subject = {
+				subject_type = anbi_kuhai_republican_subject_state
+				who = A13
+			}
+			country_event = {
+				id = anbi_kuhai.10022
+				days = 30
+			}
+		}
+	}
+}
+#边区共和国
+country_event = {
+	id = anbi_kuhai.10022
+	title = anbi_kuhai.10022.t
+	desc = anbi_kuhai.10022.d
+	picture = anbi_STREET_eventPicture
+
+	is_triggered_only = yes
+	option = {
+		name = anbi_kuhai.10022.a
+		Z45 = {
+			override_country_name = anbi_Z45_NEW
+			change_government = republic
+		}
+		hidden_effect = {
+			Z45 = {
+				add_country_modifier = {
+					name = anbi_kuhai_the_fail_country
+					duration = -1
+				}
+				change_religion = regent_court
+			}
+			east_chillsbay_area = {
+				add_core = Z45
+				cede_province = Z45
+			}
+			sondaar_area = {
+				add_core = Z45
+				cede_province = Z45
+			}
+			wudhal_area = {
+				add_core = Z45
+				cede_province = Z45
+			}
+			gulletpeak_area = {
+				add_core = Z45
+				cede_province = Z45
+			}
+			cedesck_area = {
+				add_core = Z45
+				cede_province = Z45
+			}
+			vrorenmarch_area = {
+				add_core = Z45
+				cede_province = Z45
+			}
+			vrorenwall_area = {
+				add_core = Z45
+				cede_province = Z45
+			}
+			southern_giants_tears_area = {
+				add_core = Z45
+				cede_province = Z45
+			}
+			northern_giants_tears_area = {
+				add_core = Z45
+				cede_province = Z45
+			}
+			gerudian_frontier_region = {
+				add_core = Z45
+				cede_province = Z45
+			}
+			olavlund_region = {
+				add_core = Z45
+				cede_province = Z45
+			}
+			create_subject = {
+				subject_type = anbi_kuhai_republican_subject_state
+				who = Z45
+			}
+			country_event = {
+				id = anbi_kuhai.10023
+				days = 30
+			}
+		}
+	}
+}
+#深木共和国
+country_event = {
+	id = anbi_kuhai.10023
+	title = anbi_kuhai.10023.t
+	desc = anbi_kuhai.10023.d
+	picture = anbi_STREET_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.10023.a
+		I45 = {
+			override_country_name = anbi_I45_NEW
+			change_government = republic
+		}
+		hidden_effect = {
+			I45 = {
+				add_country_modifier = {
+					name = anbi_kuhai_the_fail_country
+					duration = -1
+				}
+			}
+			deepwoods_superregion = {
+				add_core = I45
+				cede_province = I45
+			}
+			create_subject = {
+				subject_type = anbi_kuhai_republican_subject_state
+				who = I45
+			}
+		}
+	}
+}
+##划分阳洲
+#苏拉克什
+country_event = {
+	id = anbi_kuhai.10024
+	title = anbi_kuhai.10024.t
+	desc = anbi_kuhai.10024.d
+	picture = anbi_STREET_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.10024.a
+		F52 = {
+			override_country_name = anbi_F52_NEW
+			change_government = republic
+		}
+		hidden_effect = {
+			bulwar_superregion = {
+				add_core = F52
+				cede_province = F52
+			}
+			create_subject = {
+				subject_type = anbi_kuhai_republican_subject_state
+				who = F52
+			}
+			F52 = {
+				add_country_modifier = {
+					name = anbi_kuhai_the_fail_country
+					duration = -1
+				}
+			}
+			country_event = {
+				id = anbi_kuhai.10025
+				days = 30
+			}
+		}
+	}
+}
+#赫特拉塔
+country_event = {
+	id = anbi_kuhai.10025
+	title = anbi_kuhai.10025.t
+	desc = anbi_kuhai.10025.d
+	picture = anbi_STREET_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.10025.a
+		U01 = {
+			override_country_name = anbi_U01_NEW
+			change_government = republic
+		}
+		hidden_effect = {
+			north_salahad_superregion = {
+				add_core = U01
+				cede_province = U01
+			}
+			create_subject = {
+				subject_type = anbi_kuhai_republican_subject_state
+				who = U01
+			}
+			U01 = {
+				add_country_modifier = {
+					name = anbi_kuhai_the_fail_country
+					duration = -1
+				}
+			}
+			country_event = {
+				id = anbi_kuhai.10026
+				days = 30
+			}
+		}
+	}
+}
+#东阳洲
+country_event = {
+	id = anbi_kuhai.10026
+	title = anbi_kuhai.10026.t
+	desc = anbi_kuhai.10026.d
+	picture = anbi_STREET_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_kuhai.10026.a
+		L65 = {
+			override_country_name = anbi_L65_NEW
+			change_government = republic
+		}
+		hidden_effect = {
+			east_sarhal_superregion = {
+				add_core = L65
+				cede_province = L65
+			}
+			create_subject = {
+				subject_type = anbi_kuhai_republican_subject_state
+				who = L65
+			}
+			L65 = {
+				add_country_modifier = {
+					name = anbi_kuhai_the_fail_country
+					duration = -1
+				}
+			}
+			country_event = {
+				id = anbi_kuhai.10027
+				days = 30
+			}
+		}
+	}
+}
+#剩下的
+country_event = {
+	id = anbi_kuhai.10027
+	title = anbi_kuhai.10027.t
+	desc = anbi_kuhai.10027.d
+	picture = anbi_STREET_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			NOT = {
+				AND = {
+					S16 = {
+						is_subject_of = ROOT
+						is_subject_of_type = anbi_kuhai_republican_subject_state
+					}
+					djinnakah_superregion = {
+						type = all
+						owned_by = S16
+					}
+				}				
+			}
+			NOT = {
+				AND = {
+					S81 = {
+						is_subject_of = ROOT
+						is_subject_of_type = anbi_kuhai_republican_subject_state
+					}
+					taneyas_superregion = {
+						type = all
+						owned_by = S81
+					}
+				}					
+			}
+			NOT = {
+				AND = {
+					S71 = {
+						is_subject_of = ROOT
+						is_subject_of_type = anbi_kuhai_republican_subject_state
+					}
+					tanib_dajek_superregion = {
+						type = all
+						owned_by = S71
+					}
+				}						
+			}
+			NOT = {
+				AND = {
+					L23 = {
+						is_subject_of = ROOT
+						is_subject_of_type = anbi_kuhai_republican_subject_state
+					}
+					fangaula_superregion = {
+						type = all
+						owned_by = L23
+					}
+				}						
+			}
+			NOT = {
+				AND = {
+					F28 = {
+						is_subject_of = ROOT
+						is_subject_of_type = anbi_kuhai_republican_subject_state
+					}
+					fangaula_superregion = {
+						type = all
+						owned_by = F28
+					}
+				}						
+			}
+		}
+	}
+
+	option = {
+		name = anbi_kuhai.10027.a
+		random_list = {
+			1 = {
+				trigger = {
+					NOT = {
+						AND = {
+							S16 = {
+								is_subject_of = ROOT
+								is_subject_of_type = anbi_kuhai_republican_subject_state
+							}
+							djinnakah_superregion = {
+								type = all
+								owned_by = S16
+							}
+						}						
+					}
+				}
+				S16 = {
+					override_country_name = anbi_S16_NEW
+					change_government = republic
+				}
+				hidden_effect = {
+					djinnakah_superregion = {
+						add_core = S16
+						cede_province = S16
+					}
+					create_subject = {
+						subject_type = anbi_kuhai_republican_subject_state
+						who = S16
+					}
+					S16 = {
+						add_country_modifier = {
+							name = anbi_kuhai_the_fail_country
+							duration = -1
+						}
+					} 
+				}
+			}
+			1 = {
+				trigger = {
+					NOT = {
+						AND = {
+							S81 = {
+								is_subject_of = ROOT
+								is_subject_of_type = anbi_kuhai_republican_subject_state
+							}
+							taneyas_superregion = {
+								type = all
+								owned_by = S81
+							}
+						}					
+					}
+				}
+				S81 = {
+					override_country_name = anbi_S81_NEW
+					change_government = republic
+				}
+				hidden_effect = {
+					taneyas_superregion = {
+						add_core = S81
+						cede_province = S81
+					}
+					create_subject = {
+						subject_type = anbi_kuhai_republican_subject_state
+						who = S81
+					}
+					S81 = {
+						add_country_modifier = {
+							name = anbi_kuhai_the_fail_country
+							duration = -1
+						}
+					} 
+				}
+			}
+			1 = {
+				trigger = {
+					NOT = {
+						AND = {
+							S71 = {
+								is_subject_of = ROOT
+								is_subject_of_type = anbi_kuhai_republican_subject_state
+							}
+							tanib_dajek_superregion = {
+								type = all
+								owned_by = S71
+							}
+						}						
+					}
+				}
+				S71 = {
+					override_country_name = anbi_S71_NEW
+					change_government = republic
+				}
+				hidden_effect = {
+					tanib_dajek_superregion = {
+						add_core = S71
+						cede_province = S71
+					}
+					create_subject = {
+						subject_type = anbi_kuhai_republican_subject_state
+						who = S71
+					}
+					S71 = {
+						add_country_modifier = {
+							name = anbi_kuhai_the_fail_country
+							duration = -1
+						}
+					} 
+				}
+			}
+			1 = {
+				trigger = {
+					NOT = {
+						AND = {
+							L23 = {
+								is_subject_of = ROOT
+								is_subject_of_type = anbi_kuhai_republican_subject_state
+							}
+							fangaula_superregion = {
+								type = all
+								owned_by = L23
+							}
+						}						
+					}
+				}
+				L23 = {
+					override_country_name = anbi_L23_NEW
+					change_government = republic
+				}
+				hidden_effect = {
+					fangaula_superregion = {
+						add_core = L23
+						cede_province = L23
+					}
+					create_subject = {
+						subject_type = anbi_kuhai_republican_subject_state
+						who = L23
+					}
+					L23 = {
+						add_country_modifier = {
+							name = anbi_kuhai_the_fail_country
+							duration = -1
+						}
+					} 
+				}
+			}
+			1 = {
+				trigger = {
+					NOT = {
+						AND = {
+							F28 = {
+								is_subject_of = ROOT
+								is_subject_of_type = anbi_kuhai_republican_subject_state
+							}
+							fangaula_superregion = {
+								type = all
+								owned_by = F28
+							}
+						}						
+					}
+				}
+				F28 = {
+					override_country_name = anbi_F28_NEW
+					change_government = republic
+				}
+				hidden_effect = {
+					south_salahad_superregion = {
+						add_core = F28
+						cede_province = F28
+					}
+					create_subject = {
+						subject_type = anbi_kuhai_republican_subject_state
+						who = F28
+					}
+					F28 = {
+						add_country_modifier = {
+							name = anbi_kuhai_the_fail_country
+							duration = -1
+						}
+					} 
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = anbi_kuhai.10028
+			}
+		}
+	}
+}
+#自触发
+country_event = {
+	id = anbi_kuhai.10028
+	title = anbi_kuhai.10028.t
+	desc = anbi_kuhai.10028.d
+	picture = anbi_STREET_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = anbi_kuhai.10087.a
+		country_event = {
+			id = anbi_kuhai.10027
+		}
+	}
+}

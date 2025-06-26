@@ -1,0 +1,8 @@
+anbi_mage_admiral = {
+	allow = {
+		has_country_flag = anbi_merfolk_mage_school_cf
+	}
+	hull_size_modifier = 0.1
+	number_of_cannons_modifier = 0.1
+	naval_tradition_from_battle = -1
+}

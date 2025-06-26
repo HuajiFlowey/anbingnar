@@ -1,0 +1,9 @@
+
+setup_vision = yes
+government = anbingnar_monarchy
+add_government_reform = anbi_merfolk_the_refugee
+government_rank = 1
+primary_culture = baashidi_merfolk
+religion = merfolk_religion
+technology_group = tech_baashidi
+capital = 6061

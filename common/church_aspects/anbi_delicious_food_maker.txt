@@ -1,0 +1,330 @@
+#怪物食材
+anbi_AB1_food_orcs = {
+	cost = 100
+	potential = {
+		always = yes
+	}
+	monarch_power = adm
+	modifier = {
+		land_morale = 0.05
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_food_goblin = {
+	cost = 100
+	potential = {
+		always = yes
+	}
+	monarch_power = adm
+	modifier = {
+		infantry_fire = 0.25
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_food_troll = {
+	cost = 100
+	potential = {
+		has_global_flag = eat_troll
+	}
+	monarch_power = adm
+	modifier = {
+		shock_damage = 0.05
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_food_centaur = {
+	cost = 100
+	potential = {
+		has_global_flag = eat_centaur
+	}
+	monarch_power = adm
+	modifier = {
+		global_trade_power = 0.2
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_food_xianling = {
+	cost = 100
+	potential = {
+		has_global_flag = eat_xianling
+	}
+	monarch_power = adm
+	modifier = {
+		development_cost = -0.15
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_food_ogre = {
+	cost = 100
+	potential = {
+		has_global_flag = eat_ogre
+	}
+	monarch_power = adm
+	modifier = {
+		global_trade_goods_size = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_food_harpy = {
+	cost = 100
+	potential = {
+		has_global_flag = eat_harpy
+	}
+	monarch_power = adm
+	modifier = {
+		siege_ability = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_food_khet = {
+	cost = 100
+	potential = {
+		has_global_flag = eat_khet
+	}
+	monarch_power = adm
+	modifier = {
+		discipline = 0.05
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_food_evil_elven = {
+	cost = 100
+	potential = {
+		has_global_flag = eat_evil_elven
+	}
+	monarch_power = adm
+	modifier = {
+		naval_morale = 0.15
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_food_kobold = {
+	cost = 100
+	potential = {
+		has_global_flag = eat_kobold
+	}
+	monarch_power = adm
+	modifier = {
+		garrison_size = 0.5
+		land_forcelimit_modifier = 0.05
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_food_gnollish = {
+	cost = 100
+	potential = {
+		has_global_flag = eat_gnollish
+	}
+	monarch_power = adm
+	modifier = {
+		military_tactics = 0.25
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+#烹饪手法
+anbi_AB1_cook_kao = {
+	cost = 100
+	potential = {
+		
+	}
+	monarch_power = dip
+	modifier = {
+		interest = -1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_cook_dun = {
+	cost = 100
+	potential = {
+		
+	}
+	monarch_power = dip
+	modifier = {
+		technology_cost = -0.05
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_cook_jian = {
+	cost = 100
+	potential = {
+		
+	}
+	monarch_power = dip
+	modifier = {
+		global_institution_spread = 0.25
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_cook_chao = {
+	cost = 100
+	potential = {
+		
+	}
+	monarch_power = dip
+	modifier = {
+		advisor_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_cook_zha = {
+	cost = 100
+	potential = {
+		
+	}
+	monarch_power = dip
+	modifier = {
+		global_unrest = -1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_cook_zheng = {
+	cost = 100
+	potential = {
+		
+	}
+	monarch_power = dip
+	modifier = {
+		tolerance_own = 1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_cook_yan = {
+	cost = 100
+	potential = {
+		
+	}
+	monarch_power = dip
+	modifier = {
+		global_missionary_strength = 0.02
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_cook_lu = {
+	cost = 100
+	potential = {
+		
+	}
+	monarch_power = dip
+	modifier = {
+		trade_efficiency = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+#辅食
+anbi_AB1_spice_bread = {
+	cost = 100
+	potential = {
+		
+	}
+	monarch_power = mil
+	modifier = {
+		ae_impact = -0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_spice_vegetable = {
+	cost = 100
+	potential = {
+		
+	}
+	monarch_power = mil
+	modifier = {
+		manpower_in_culture_group_provinces = 0.1
+		manpower_in_own_culture_provinces = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_spice_mushroom = {
+	cost = 100
+	potential = {
+		
+	}
+	monarch_power = mil
+	modifier = {
+		backrow_artillery_damage = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_spice_meat = {
+	cost = 100
+	potential = {
+		
+	}
+	monarch_power = mil
+	modifier = {
+		movement_speed = 0.2
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_spice_tear = {
+	cost = 100
+	potential = {
+		has_country_modifier = castanor_folding_in_anbennarian
+	}
+	monarch_power = mil
+	modifier = {
+		all_power_cost = -0.025
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_AB1_spice_wine = {
+	cost = 100
+	potential = {
+		
+	}
+	monarch_power = mil
+	modifier = {
+		global_regiment_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}

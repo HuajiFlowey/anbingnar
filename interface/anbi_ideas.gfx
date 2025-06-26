@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = "merfolk_ab3_1_level"
+		texturefile = "gfx//interface//ideas_eu4//merfolk_ab3_1_level.dds"
+	}
+	spriteType = {
+		name = "merfolk_ab3_2_level"
+		texturefile = "gfx//interface//ideas_eu4//merfolk_ab3_2_level.dds"
+	}
+	spriteType = {
+		name = "merfolk_ab3_3_level"
+		texturefile = "gfx//interface//ideas_eu4//merfolk_ab3_3_level.dds"
+	}
+	spriteType = {
+		name = "merfolk_ab3_great_level"
+		texturefile = "gfx//interface//ideas_eu4//merfolk_ab3_great_level.dds"
+	}
+}

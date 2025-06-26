@@ -1,0 +1,1130 @@
+country_decisions = {		
+	Y98_kudieta_yanner = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_daxugo_flag }
+			OR = {
+				primary_culture = shuvuush
+				primary_culture = guwaadun
+			}
+			OR = {
+				tag = Y91
+				tag = Y96
+			}
+			has_heir = yes
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4925
+				province_id = 4859
+				province_id = 4879
+				province_id = 4871
+				province_id = 4868
+			}
+		}
+		allow = {
+			owns_core_province = 4925
+			owns_core_province = 4859
+			owns_core_province = 4879
+			owns_core_province = 4871
+			owns_core_province = 4868
+			has_heir = yes
+			heir_age = 16
+			is_subject = no
+			is_at_war = no
+			has_regency = no
+			NOT = { exists = Y98 }
+			num_of_owned_provinces_with = {
+				value = 100
+				superregion = yanshen_superregion
+			}
+			NOT = { has_ruler_modifier = faceless_queen_modifier }
+		}
+		effect = {
+			change_tag = Y98
+			custom_tooltip = Y98_allow_to_faceless_queen_rebellions_work
+			set_country_flag = faceless_queen_rebellions_work
+			hidden_effect = { restore_country_name = yes }
+			remove_non_electors_emperors_from_empire_effect = yes
+			swap_non_generic_missions = yes
+			kill_ruler = yes
+			add_stability = 1
+			add_prestige = 25
+			set_country_flag = formed_daxugo_flag
+			set_ruler_flag = daxugo_former
+			add_ruler_modifier = {
+				name = Y91_daxugo_fomer_mod
+				duration = -1  
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			change_government = anbingnar_monarchy
+			add_government_reform = anbingnar_daxugo_harem_reform
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_modifier = anbi_Y91_horde_heritage_1
+					}
+					remove_country_modifier = anbi_Y91_horde_heritage_1
+				}
+			}
+			custom_tooltip = Y91_horde_heritage_tt
+			hidden_effect = {
+				add_country_modifier = {
+					name = anbi_Y91_horde_heritage_1
+					duration = -1
+				}
+			}
+			yanshen_superregion = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			primary_and_ruler_culture_change = { race = human new_culture = daxug }
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = { culture = shuvuush }
+					change_culture = daxug
+				}
+				if = {
+					limit = { 
+						Y90 = { 
+							is_subject_of = ROOT
+						}
+					}
+					Y90 = {
+						change_primary_culture = daxug
+						set_ruler_culture = daxug
+						set_heir_culture = daxug
+						every_owned_province = {
+							limit = { culture = shuvuush }
+							change_culture = daxug
+						}
+					}
+				}
+				if = {
+					limit = { 
+						Y92 = { 
+							is_subject_of = ROOT
+						}
+					}
+					Y92 = {
+						change_primary_culture = daxug
+						set_ruler_culture = daxug
+						set_heir_culture = daxug
+						every_owned_province = {
+							limit = { culture = shuvuush }
+							change_culture = daxug
+						}
+					}
+				}
+			}
+			jaddempire_move_court_minorities_from_to = {
+				from = capital_scope
+				province_id = 4871
+			}
+			country_event = { id = flavor_nuugdan_tsarai.67 days = 30 }
+			4871 = {
+				move_capital_effect = yes 
+				if = {
+					limit = {
+						4871 = {
+							NOT = { culture = shuvuush }
+						}
+					}
+					change_culture = daxug
+				}
+				change_province_name = "Duzhekho"
+				change_religion = ROOT
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavor_nuugdan_tsarai.103
+					days = 3
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	#安抚烟州人
+	Y98_jiangyang_work = {
+		major = yes
+		potential = {
+			has_country_flag = faceless_queen_rebellions_work
+			has_ruler_flag = daxugo_former
+			tag = Y98
+			NOT = { has_country_flag = daxugo_jiangyang_happy }
+		}
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			culture = jiangyang
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+					development = 10
+				}
+			}
+		}
+
+
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = Y91_own_all_jiangyang
+				yanshen_superregion = {
+					type = all
+					OR = {
+						owned_by = ROOT
+						NOT = { culture = jiangyang }
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = Y91_core_all_jiangyang
+				yanshen_superregion = {
+					type = all
+					OR = {
+						is_core = ROOT
+						NOT = { culture = jiangyang }
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = Y91_dev_all_jiangyang
+				yanshen_superregion = {
+					type = all
+					OR = {
+						development = 10
+						NOT = { culture = jiangyang }
+					}
+				}
+			}
+			yanshen_superregion = {
+				type = all
+				OR = {
+					NOT = { culture = jiangyang }
+					NOT = { controlled_by = REB }
+				}
+			}
+			OR = {
+				has_estate_privilege = estate_nobles_right_of_counsel
+				NOT = { has_estate = estate_nobles }
+			}
+			OR = {
+				consort_culture = jiangyang
+				employed_advisor = {
+					culture = jiangyang
+					type = diplomat
+				}
+				dip_power = 200
+				has_country_flag = faceless_queen_great_conquer_good
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							consort_culture = jiangyang
+							employed_advisor = {
+								culture = jiangyang
+								type = diplomat
+							}
+							has_country_flag = faceless_queen_great_conquer_good
+						}
+					}
+				}
+				add_dip_power = -200
+			}
+			custom_tooltip = Y98_jiangyang_work_ctt
+			set_country_flag = daxugo_jiangyang_happy
+		}
+	}
+
+	Y98_beikling_work = {
+		major = yes
+		potential = {
+			has_country_flag = faceless_queen_rebellions_work
+			has_ruler_flag = daxugo_former
+			tag = Y98
+			NOT = { has_country_flag = daxugo_beikling_happy }
+		}
+
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			culture = beikling
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = Y91_own_all_beikling
+				yanshen_superregion = {
+					type = all
+					OR = {
+						owned_by = ROOT
+						NOT = { culture = beikling }
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = Y91_core_all_beikling
+				yanshen_superregion = {
+					type = all
+					OR = {
+						is_core = ROOT
+						NOT = { culture = beikling }
+					}
+				}
+			}
+			calc_true_if = {
+				amount = 6
+				yanshen_superregion = {
+					type = all
+					culture = beikling
+					has_production_or_gold_building_trigger = yes
+				}
+			}
+			yanshen_superregion = {
+				type = all
+				OR = {
+					NOT = { culture = beikling }
+					NOT = { controlled_by = REB }
+				}
+			}
+			OR = {
+				consort_culture = beikling
+				employed_advisor = {
+					culture = beikling
+					type = diplomat
+				}
+				dip_power = 200
+				has_country_flag = faceless_queen_great_conquer_good
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							consort_culture = beikling
+							employed_advisor = {
+								culture = beikling
+								type = diplomat
+							}
+							has_country_flag = faceless_queen_great_conquer_good
+						}
+					}
+				}
+				add_dip_power = -200
+			}
+			custom_tooltip = Y98_beikling_work_ctt
+			set_country_flag = daxugo_beikling_happy
+		}
+	}
+
+	Y98_jiangszun_work = {
+		major = yes
+		potential = {
+			has_country_flag = faceless_queen_rebellions_work
+			has_ruler_flag = daxugo_former
+			tag = Y98
+			NOT = { has_country_flag = daxugo_jiangszun_happy }
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					superregion = yanshen_superregion
+					culture = jiangszun
+					OR = {
+						AND = {
+							has_terrain = city_terrain
+							NOT = {
+								province_has_center_of_trade_of_level = 2
+								has_trade_building_trigger = yes
+							}
+						}
+					}
+				}
+				AND = {
+					province_group = golden_highway_yanshen_coast
+					NOT = { has_province_modifier = golden_highway }
+				}
+				AND = {
+					province_group = golden_highway_upper_yanshen
+					NOT = { has_province_modifier = golden_highway }
+				}
+			}
+		}
+
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = Y91_own_all_jiangszun
+				yanshen_superregion = {
+					type = all
+					OR = {
+						owned_by = ROOT
+						NOT = { culture = jiangszun }
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = Y91_core_all_jiangszun
+				yanshen_superregion = {
+					type = all
+					OR = {
+						is_core = ROOT
+						NOT = { culture = jiangszun }
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = anbi_Y91_dev_all_jiangszun
+				yanshen_superregion = {
+					type = all
+					OR = {
+						AND = {
+							province_has_center_of_trade_of_level = 2
+							has_trade_building_trigger = yes
+						}
+						NOT = { culture = jiangszun }
+						NOT = { has_terrain = city_terrain }
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = Y91_road_all_jiangszun
+				golden_highway_yanshen_coast = {
+					type = all
+					has_province_modifier = golden_highway
+				}
+				golden_highway_upper_yanshen = {
+					type = all
+					has_province_modifier = golden_highway
+				}
+			}
+			
+			if = { limit = { has_estate = estate_burghers} has_estate_privilege = estate_burghers_free_enterprise }
+            
+			yanshen_superregion = {
+				type = all
+				OR = {
+					NOT = { 
+						culture = jiangszun 
+					}
+					NOT = {
+						controlled_by = REB
+					}
+				}
+			}
+			OR = {
+				consort_culture = jiangszun
+				employed_advisor = {
+					culture = jiangszun
+					type = diplomat
+				}
+				dip_power = 200
+				has_country_flag = faceless_queen_great_conquer_good
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							consort_culture = beikling
+							employed_advisor = {
+								culture = beikling
+								type = diplomat
+							}
+							has_country_flag = faceless_queen_great_conquer_good
+						}
+					}
+				}
+				add_dip_power = -200
+			}
+			custom_tooltip = Y98_jiangszun_work_ctt
+			set_country_flag = daxugo_jiangszun_happy
+		}
+	}
+
+	Y98_gangim_work = {
+		major = yes
+		potential = {
+			has_country_flag = faceless_queen_rebellions_work
+			has_ruler_flag = daxugo_former
+			tag = Y98
+			NOT = { has_country_flag = daxugo_gangim_happy }
+		}
+
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			culture = gangim
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = Y91_own_all_gangim
+				yanshen_superregion = {
+					type = all
+					OR = {
+						owned_by = ROOT
+						NOT = { culture = gangim }
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = Y91_core_all_gangim
+				yanshen_superregion = {
+					type = all
+					OR = {
+						is_core = ROOT
+						NOT = { culture = gangim }
+					}
+				}
+			}
+			yanshen_superregion = {
+				type = all
+				OR = {
+					NOT = { culture = gangim }
+					NOT = { controlled_by = REB }
+				}
+			}
+			OR = {
+				consort_culture = gangim
+				employed_advisor = {
+					culture = gangim
+					type = diplomat
+				}
+				dip_power = 200
+				has_country_flag = faceless_queen_great_conquer_good
+			}
+			navy_size_percentage = 0.50
+			1371 = { is_strongest_trade_power = ROOT }
+			if = {
+				limit = { has_dlc = "Emperor" has_estate = estate_burghers }
+				has_estate_privilege = estate_burghers_private_trade_fleets
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							consort_culture = gangim
+							employed_advisor = {
+								culture = gangim
+								type = diplomat
+							}
+							has_country_flag = faceless_queen_great_conquer_good
+						}
+					}
+				}
+				add_dip_power = -200
+			}
+			custom_tooltip = Y98_gangim_work_ctt
+			set_country_flag = daxugo_gangim_happy
+		}
+	}
+
+	Y98_naamjyut_work = {
+		major = yes
+		potential = {
+			has_country_flag = faceless_queen_rebellions_work
+			has_ruler_flag = daxugo_former
+			tag = Y98
+			NOT = { has_country_flag = daxugo_naamjyut_happy }
+		}
+
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			culture = naamjyut
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+		
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = Y91_own_all_naamjyut
+				yanshen_superregion = {
+					type = all
+					OR = {
+						owned_by = ROOT
+						NOT = { culture = naamjyut }
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = Y91_core_all_naamjyut
+				yanshen_superregion = {
+					type = all
+					OR = {
+						is_core = ROOT
+						NOT = { culture = naamjyut }
+					}
+				}
+			}
+			yanshen_superregion = {
+				type = all
+				OR = {
+					NOT = { culture = naamjyut }
+					NOT = { controlled_by = REB }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = Y91_lupulan_wood
+				OR = {
+					any_ally = {
+						any_owned_province = {
+							trade_goods = tropical_wood
+							region = lupulan_rainforest_region
+						}
+					}
+					any_subject_country = {
+						any_owned_province = {
+							region = lupulan_rainforest_region
+							trade_goods = tropical_wood
+						}
+						
+					}
+					any_owned_province = {
+						region = lupulan_rainforest_region
+						trade_goods = tropical_wood
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = Y91_plant_growth
+				any_owned_province = {
+					OR = {
+						has_province_modifier = magic_realm_transmutation_plant_growth_1
+						has_province_modifier = magic_realm_transmutation_plant_growth_2
+						has_province_modifier = magic_realm_transmutation_plant_growth_3
+						has_province_modifier = magic_realm_transmutation_plant_growth_4
+					}
+				}
+			}
+			OR = {
+				consort_culture = naamjyut
+				employed_advisor = {
+					culture = naamjyut
+					type = diplomat
+				}
+				dip_power = 200
+				has_country_flag = faceless_queen_great_conquer_good
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							consort_culture = naamjyut
+							employed_advisor = {
+								culture = naamjyut
+								type = diplomat
+							}
+							has_country_flag = faceless_queen_great_conquer_good
+						}
+					}
+				}
+				add_dip_power = -200
+			}
+			custom_tooltip = Y98_naamjyut_work_ctt
+			set_country_flag = daxugo_naamjyut_happy
+		}
+	}
+	#烟化
+	Y98_runsuuhei_yanhua = {
+		potential = {
+			has_country_flag = Y91_yan_change_project_flag
+			NOT = {
+				has_country_flag = runsukhi_is_daxugo
+			}
+		}
+		provinces_to_highlight = {
+			asia = {
+				type = all
+				OR = {
+					NOT = {
+						OR = {
+							culture = runsukhi
+							culture = plateau_runsukhi
+						}
+					}
+					AND = {
+						OR = {
+							culture = runsukhi
+							culture = plateau_runsukhi
+						}
+						NOT = {
+							AND ={
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = Y98_runsuuhei_yanhua_ctt
+				asia = {
+					type = all
+					OR = {
+						NOT = {
+							OR = {
+								culture = runsukhi
+								culture = plateau_runsukhi
+							}
+						}
+						AND = {
+							OR = {
+								culture = runsukhi
+								culture = plateau_runsukhi
+							}
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+				}
+			}
+			treasury = 2000
+			dip_power = 100
+			adm_power = 100
+			mission_completed = Y91_the_last_fight
+		}
+		effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = runsukhi
+						culture = plateau_runsukhi
+					}
+				}
+				change_culture = ROOT
+				change_religion = ROOT
+			}
+			add_treasury = -2000
+			add_dip_power = -100
+			add_adm_power = -100
+			set_country_flag = runsukhi_is_daxugo
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1
+	}
+
+	Y98_guwadun_yanhua = {
+		potential = {
+			has_country_flag = Y91_yan_change_project_flag
+			NOT = {
+				has_country_flag = gowon_is_daxugo
+			}
+		}
+		provinces_to_highlight = {
+			asia = {
+				type = all
+				OR = {
+					NOT = {
+						culture_group = gowon
+					}
+					AND = {
+						culture_group = gowon
+						NOT = {
+							AND = {
+								is_core = ROOT
+								owned_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = Y98_guwadun_yanhua_ctt
+				asia = {
+					type = all
+					OR = {
+						NOT = {
+							culture_group = gowon
+						}
+						AND = {
+							culture_group = gowon
+							is_core = ROOT
+							owned_by = ROOT
+						}
+					}
+				}
+			}
+			mission_completed = Y91_develop_economy
+			treasury = 3000
+			dip_power = 100
+			adm_power = 100
+		}
+
+		effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = gowon
+				}
+				change_culture = shuokyuan
+				change_religion = ROOT
+			}
+			add_treasury = -3000
+			add_dip_power = -100
+			add_adm_power = -100
+			set_country_flag = gowon_is_daxugo
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1
+	}
+	#碳佬五块钱决议
+	Y98_C16 = {
+		major = yes
+		potential = {
+			is_playing_custom_nation = yes
+			capital_scope = {
+				region = shuvuushudi_region
+			}
+			NOT = {
+				has_country_flag = C16_TANLAO
+			}
+		}
+
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = Y98_TANYAOZHAUNYONG
+				always = yes
+			}
+		}
+
+		effect = {
+			inherit = Y91
+			change_tag = Y91
+			change_government = tribal
+			set_country_flag = faceless_queen_spawner
+			set_country_flag = C16_TANLAO
+			swap_non_generic_missions = yes
+			hidden_effect = {
+				every_owned_province = {
+					kill_units = {
+						who = owner
+						type = heavy_ship
+					}
+					kill_units = {
+						who = owner
+						type = light_ship
+					}
+					kill_units = {
+						who = owner
+						type = galley
+					}
+					kill_units = {
+						who = owner
+						type = transport
+					}
+				}
+			}
+			add_ruler_modifier = { 
+				name = faceless_queen_modifier
+				duration = -1
+			}
+			country_event = {
+				id = flavour_anbingnar_daxugo.44444 days = 5
+			}
+		}
+	}
+
+	Y98_C16_2 = {
+		major = yes
+		potential = {
+			has_custom_ideas = yes
+			has_country_flag = Y98_holi_consort
+		}
+
+		allow = {
+			heir_has_mage_personality = no
+		}
+
+		effect = {
+			add_heir_personality = mage_personality
+		}
+	}
+	#holi的任务罢了
+	Y98_holi_mission = {
+		major = yes
+		color = {
+			255 192 203
+		}
+		potential = {
+			NOT = {
+				has_country_flag = Y98_holi_mission_cf
+			}
+			has_country_flag = Y98_holi_consort
+			has_ruler_flag = Y98_holi_consort_r
+		}
+
+		allow = {
+			OR = {
+				ruler_has_mage_personality = yes
+				court_mage = 3
+				estate_influence = {
+					estate = estate_mages
+					influence = 66
+				}
+			}
+			treasury = 10000
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+		}
+
+		effect = {
+			custom_tooltip = Y98_holi_mission_ct
+			set_country_flag = Y98_holi_mission_cf
+			add_treasury = -10000
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+		}
+	}
+	#修院子
+	Y98_anbencity = {
+		major = yes
+		color = {
+			255 192 203
+		}
+		potential = {
+			has_country_flag = Y98_cannor_war
+			NOT = {
+				OR = {
+					has_country_flag = Y98_anben_palace_building
+					4871 = {
+						has_province_modifier = Y98_anben_palace
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 8
+				superregion = western_cannor_superregion
+			}
+			NOT = {
+				AND = {
+					is_core = ROOT
+					owned_by = ROOT
+				}
+			}
+		}
+
+		allow = {
+			treasury = 10000
+			adm_power = 100
+			manpower = 10
+			4871 = {
+				owned_by = ROOT
+				has_great_project = {
+					type = palace_of_divine_call
+					tier = 3
+				}
+				NOT = { has_province_modifier = palace_is_building_Y98 }
+			}
+			8 = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 50
+				superregion = western_cannor_superregion
+			}
+			castonath_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 50
+				superregion = escann_superregion
+			}
+		}
+
+		effect = {
+			add_treasury = -8000
+			set_country_flag = Y98_anben_palace_building
+			set_country_flag = Y98_escann_rule
+
+			country_event = {
+				id = flavour_anbingnar_daxugo.1000
+			}
+		}
+	}
+	#看看批
+	Y98_havealook = {
+		major = yes
+		color = {
+			255 192 203
+		}
+		potential = {
+			has_consort = yes
+			OR = {
+				has_country_flag = anbi_daxugo_harem_from_yanshen
+				has_country_flag = anbi_daxugo_harem_from_huagai
+				has_country_flag = anbi_daxugo_harem_from_tanxiang
+				has_country_flag = anbi_daxugo_harem_from_jinan
+				has_country_flag = anbi_daxugo_harem_from_rahen
+				has_country_flag = anbi_daxugo_harem_from_harimari
+				has_country_flag = anbi_daxugo_harem_from_khet
+				has_country_flag = anbi_daxugo_harem_from_bulwar
+				has_ruler_flag = Y98_holi_consort_r
+				has_ruler_flag = anbi_wumou_consort_r
+			}		
+			NOT = {
+				has_country_flag = anbi_Y98_havealook_cf
+			}
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = Y98_havealook_1
+				has_country_modifier = Y98_havealook_2
+			}
+		}
+		effect = {
+			set_country_flag = anbi_Y98_havealook_cf
+			hidden_effect = {
+				country_event = {
+					id = flavour_anbingnar_daxugo.2010
+				}
+			}
+		}
+	}
+	#追求乌眸
+	Y98_lovewumou = {
+		major = yes
+		color = {
+			255 192 203
+		}
+		potential = {
+			has_country_flag = anbi_y98_can_love_wumou
+		}
+		allow = {
+			if = {
+				limit = { 
+					has_ruler_flag = Y98_holi_consort_r
+				}
+				custom_trigger_tooltip = {
+					tooltip = anbi_y98_can_love_wumou_but_holi
+					always = no
+				}
+			}
+			if = {
+				limit = { 
+					has_country_flag = y98_is_parading
+				}
+				custom_trigger_tooltip = {
+					tooltip = y98_is_parading
+					always = no
+				}
+			}
+			if = {
+				limit = { 
+					has_country_flag = Y98_holi_is_watching_you
+				}
+				custom_trigger_tooltip = {
+					tooltip = Y98_holi_is_watching_you
+					always = no
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = Y98_lovewumou_ct
+			clr_country_flag = anbi_y98_can_love_wumou
+			hidden_effect = {
+				country_event = {
+					id = flavour_anbingnar_daxugo.31447
+				}
+			}
+			
+		}
+	}
+	Y98_lovewumou_2 = {
+		major = yes
+		color = {
+			255 192 203
+		}
+		potential = {
+			has_country_flag = anbi_y98_I_love_wumou
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_y98_wumou_test_battle_ctt
+				check_variable = {
+					which = anbi_y98_wumou_test_battle
+					value = 25
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 200
+				religion = saanorgegh
+			}
+		}
+		effect = {
+			custom_tooltip = Y98_lovewumou_2_ct
+			clr_country_flag = anbi_y98_I_love_wumou
+			hidden_effect = {
+				country_event = {
+					id = flavour_anbingnar_daxugo.31448
+				}
+			}
+		}
+	}
+}

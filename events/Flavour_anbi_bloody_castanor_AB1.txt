@@ -1,0 +1,6488 @@
+namespace = bloody_castanor
+#卡城起义
+country_event = {
+	id = bloody_castanor.1
+	title = bloody_castanor.1.t
+	picture = FAILED_REVOLUTION_eventPicture
+	desc = bloody_castanor.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = B30
+		ai = no
+	}
+
+	option = {
+		name = bloody_castanor.1.a
+		highlight = yes
+		custom_tooltip = bloody_castanor.1_ct
+		hidden_effect = {
+			833 = {
+				add_institution_embracement ={
+					which = feudalism
+					value = 100
+				}
+				cede_province = AB1
+				add_core = AB1
+				change_religion = regent_court
+				change_culture = castanorian
+				
+			}
+			AB1 = {
+				add_manpower = 5
+				add_treasury = 100
+				west_castanor_region = {
+					discover_country = AB1
+				}
+				inner_castanor_region = {
+					discover_country = AB1
+				}
+				south_castanor_region = {
+					discover_country = AB1
+				}
+				vrorenwall_area = {
+					discover_country = AB1
+				}
+				gulletpeak_area = {
+					discover_country = AB1
+				}
+				1326 = {
+					discover_country = AB1
+				}
+				cursewood_area = {
+					discover_country = AB1
+				}
+				whistlevale_area = {
+					discover_country = AB1
+				}
+				define_ruler = {
+					change_adm = 1
+					change_dip = 1
+					change_mil = 1
+					culture = castanorian
+					religion = regent_court
+				}
+				set_country_flag = castonath_patricians_reinstated
+				set_country_flag = formed_enteben
+				set_country_flag = feudal_escann_kingdom
+			}
+			833 = {
+				infantry = AB1
+				infantry = AB1
+				infantry = AB1
+			}
+			castonath_area = {
+				remove_province_modifier = castonath_patrician_influence_full
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = bloody_castanor.1.b
+		custom_tooltip = bloody_castanor.1_ct.b
+		add_manpower = -0.1
+		ai_chance = {
+			factor = 10000
+		}
+	}
+
+	after = {
+		if = {
+			limit = { 
+				exists = AB1
+			}
+			switch_tag = AB1
+			AB1 = {
+				declare_war_with_cb = {
+					casus_belli = cb_anbi_canstanor_rebellion
+					who = B30
+				}
+				country_event = {
+					id = bloody_castanor.2 days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = bloody_castanor.2
+	title = bloody_castanor.2.t
+	picture = anbingnar_eventPicture
+	desc = bloody_castanor.2.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOT = { tag = AB1 }
+					OR = {
+						AND = {
+							has_reform = adventurer_reform
+							capital_scope = { continent = europe }
+						}
+						tag = B55
+						tag = B36
+					}
+				}
+				add_opinion = { who = AB1 modifier = opinion_fought_alongside_corin }
+			}
+		}
+	}
+
+	option = {
+		highlight = yes
+		name = bloody_castanor.2.a
+		add_country_modifier = {
+			name = anbi_AB1_the_human_rebellion_army
+			duration = 730
+		}
+	}
+	option = {
+		name = bloody_castanor.2.b
+		add_country_modifier = {
+			name = anbi_AB1_the_human_rebellion_army
+			duration = 730
+		}
+	}
+	option = {
+		name = bloody_castanor.2.c
+		add_country_modifier = {
+			name = anbi_AB1_the_human_rebellion_army
+			duration = 730
+		}
+	}
+	option = {
+		name = bloody_castanor.2.e
+		add_country_modifier = {
+			name = anbi_AB1_the_human_rebellion_army
+			duration = 730
+		}
+	}
+
+	after = {
+		country_event = {
+			id = bloody_castanor.1000 days = 5
+		}
+		set_country_flag = formed_castanor_flag
+	}
+
+}
+#起义胜利
+country_event = {
+	id = bloody_castanor.3
+	title = bloody_castanor.3.t
+	picture = REVOLUTION_eventPicture
+	desc = bloody_castanor.3.d
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			religion = giantkin_regent_court
+		}
+		B30 = {
+			war_with = AB1
+		}
+		capital_scope = {
+			controlled_by = AB1
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			B30 = {
+				every_tribal_land_province = {
+					change_tribal_land = ROOT
+				}
+				every_owned_province = {
+					cede_province = ---
+					change_tribal_land = ROOT
+				}
+			}
+			castonath_area = {
+				add_institution_embracement ={
+					which = feudalism
+					value = 100
+				}
+				cede_province = ROOT
+				add_core = ROOT
+				change_religion = ROOT
+				change_culture = ROOT
+				add_base_tax = -2
+				add_base_production = -2
+				add_base_manpower = -2
+			}
+		}
+	}
+
+
+	option = {
+		tooltip = {
+			castonath_area = {
+				add_base_tax = -2
+				add_base_production = -2
+				add_base_manpower = -2
+			}
+		}
+		add_country_modifier = {
+			name = anbi_AB1_reconstruction_work
+			duration = 1825
+		}
+		name = bloody_castanor.3.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 10
+	}
+
+	after = {
+		country_event = {
+			id = bloody_castanor.4 days = 10
+		}
+	}
+}
+#恶魔献祭
+country_event = {
+	id = bloody_castanor.4
+	title = bloody_castanor.4.t
+	picture = LOOMING_DEATH_eventPicture
+	desc = bloody_castanor.4.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.4.a
+		hidden_effect = {
+			country_event = {
+				id = bloody_castanor.5 days = 10
+			}
+		}
+	}
+}
+country_event = {
+	id = bloody_castanor.5
+	title = bloody_castanor.5.t
+	picture = LOOMING_DEATH_eventPicture
+	desc = bloody_castanor.5.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_stability = -3
+		}
+	}
+
+	option = {
+		name = bloody_castanor.5.a
+		add_stability = 3
+		define_ruler = {
+			name = Panzer
+			dynasty = Bloodtooth
+			religion = giantkin_regent_court
+			culture = ROOT
+			adm = 6
+			dip = 6 
+			mil = 6
+			age = 67
+			male = yes
+		}
+		change_religion = giantkin_regent_court
+		castonath_area = {
+			change_religion = giantkin_regent_court
+		}
+		add_government_reform = anbi_castanor_panzer_reform
+		set_country_flag = necromancy_disallowed
+		set_country_flag = AB1_panzer_bloodtooth_cf
+		swap_free_idea_group = yes
+		swap_non_generic_missions = yes
+		add_government_power = {
+			mechanic_type = anbi_has_doubt_count_mechanics
+			power_type = anbi_AB1_doubt_count
+			value = 10
+		}
+		add_country_modifier = {
+			name = anbi_AB1_ban_colonies
+			duration = -1
+		}
+		hidden_effect = {
+			add_ruler_personality = conqueror_personality
+			add_ruler_personality = inspiring_leader_personality
+			add_ruler_personality = mage_personality
+			set_ruler_flag = mage_ruler_general
+			set_ruler_flag = long_lived_ruler
+			set_ruler_flag = immortal_ruler
+			remove_country_modifier = anbi_AB1_ban_colonies
+		}
+	}
+
+	after = {
+		country_event = {
+			id = bloody_castanor.32 days = 5
+		}
+	}
+}
+
+#魔法保存补丁(不知道生不生效)
+country_event = {
+	id = bloody_castanor.32
+	title = bloody_castanor.32.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.32.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	trigger = {
+		has_country_flag = AB1_panzer_bloodtooth_cf
+	}
+
+	option = {
+		name = bloody_castanor.32.a
+		ruler_save_spell_schools = yes
+	}
+}
+#转换文化
+country_event = { #Change culture of conquered adventurer provinces
+	id = bloody_castanor.6
+	title = marcher.3.t
+	desc = marcher.3.d
+	picture = EUROPEAN_REFUGEES_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		any_owned_province = {
+			OR = {
+				region = west_castanor_region
+				region = south_castanor_region
+				region = inner_castanor_region
+				area = clouded_wood_area
+				area = whistlevale_area
+			}
+			AND = {
+				culture_is_human = yes
+				NOT = {
+					culture_group = escanni
+					culture = marrodic
+				}
+			}
+		}
+		has_country_flag = anbi_ab1_same_in_the_differece_cf
+	}
+	mean_time_to_happen = {
+		months = 24
+	}
+	option = {
+		name = marcher.3.a
+		trigger = {
+			OR = {
+				capital_scope = {
+					region = west_castanor_region
+				}
+				capital_scope = {
+					region = south_castanor_region
+				}
+				capital_scope = {
+					region = inner_castanor_region
+				}
+				capital_scope = {
+					area = whistlevale_area
+				}
+				capital_scope = {
+					area = cursewood_area
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+		
+		every_owned_province = {
+			limit = {
+				OR = {
+					region = west_castanor_region
+					region = south_castanor_region
+					region = inner_castanor_region
+					area = whistlevale_area
+					area = cursewood_area
+				}
+				NOT = { has_province_flag = escanni_culture_change }
+			}
+			if = { #Esthil
+				limit = {
+					NOT = { culture = ROOT }
+					culture = aldresian
+					OR = {
+						is_core = B20 #Iron Sceptre
+						is_core = B54 #Esthil
+					}
+				}
+				change_culture = esthili
+			}
+			if = { #Covenblad
+				limit = {
+					NOT = { culture = ROOT }
+					culture = aldresian
+					NOT = {
+						is_core = B20
+						is_core = B54
+					}
+				}
+				change_culture = covenbladic
+			}
+			if = { #Stalbor
+				limit = {
+					NOT = { culture = ROOT }
+					culture = busilari
+				}
+				change_culture = stalboric
+			}
+			if = { #Ravenmarch
+				limit = {
+					NOT = { culture = ROOT }
+					culture = corvurian
+				}
+				change_culture = ravenmarcher
+			}
+			if = { #Araionn
+				limit = {
+					NOT = { culture = ROOT }
+					culture = crownsman
+				}
+				change_culture = ionnic
+			}
+			if = { #Rogieria
+				limit = {
+					NOT = { culture = ROOT }
+					culture = east_damerian
+					OR = {
+						is_core = B07 #Sons of Dameria
+						is_core = B37 #Rogieria
+					}
+				}
+				change_culture = rogieran
+			}
+			if = { #Nurcestir
+				limit = {
+					NOT = { culture = ROOT }
+					culture = east_damerian
+					NOT = {
+						is_core = B07
+						is_core = B37
+					}
+				}
+				change_culture = nurcestiran
+			}
+			if = { #Estaire
+				limit = {
+					NOT = { culture = ROOT }
+					culture = esmari
+				}
+				change_culture = estairey
+			}
+			if = { #Alenor
+				limit = {
+					NOT = { culture = ROOT }
+					culture = gawedi
+				}
+				change_culture = alenori
+			}
+			if = { #Rosande
+				limit = {
+					NOT = { culture = ROOT }
+					culture = high_lorentish
+				}
+				change_culture = rosanda
+			}
+			if = { #Elikhand
+				limit = {
+					NOT = { culture = ROOT }
+					culture = korosheshi
+				}
+				change_culture = elikhander
+			}
+			if = { #Newshire
+				limit = {
+					NOT = { culture = ROOT }
+					culture = redfoot_halfling
+				}
+				change_culture = newfoot_halfling
+			}
+			if = { #Luciande
+				limit = {
+					NOT = { culture = ROOT }
+					culture = roilsardi
+				}
+				change_culture = luciander
+			}
+			if = { #Wyvernheart
+				limit = {
+					NOT = { culture = ROOT }
+					culture = vernman
+				}
+				change_culture = heartman
+			}
+			if = { #Ancardia
+				limit = {
+					NOT = { culture = ROOT }
+					culture = west_damerian
+				}
+				change_culture = ancardian
+			}
+		}
+	}
+	option = {
+		name = marcher.3.a
+		trigger = {
+			NOT = {
+				capital_scope = {
+					region = west_castanor_region
+				}
+				capital_scope = {
+					region = south_castanor_region
+				}
+				capital_scope = {
+					region = inner_castanor_region
+				}
+				capital_scope = {
+					area = whistlevale_area
+				}
+				capital_scope = {
+					area = cursewood_area
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+		
+		every_owned_province = {
+			limit = {
+				OR = {
+					region = west_castanor_region
+					region = south_castanor_region
+					region = inner_castanor_region
+					area = whistlevale_area
+					area = cursewood_area
+				}
+				NOT = { has_province_flag = escanni_culture_change }
+			}
+			set_province_flag = escanni_culture_change
+			if = { #Esthil
+				limit = {
+					culture = aldresian
+					OR = {
+						is_core = B20 #Iron Sceptre
+						is_core = B54 #Esthil
+					}
+				}
+				change_culture = esthili
+			}
+			if = { #Covenblad
+				limit = {
+					culture = aldresian
+					NOT = {
+						is_core = B20
+						is_core = B54
+					}
+				}
+				change_culture = covenbladic
+			}
+			if = { #Stalbor
+				limit = {
+					culture = busilari
+				}
+				change_culture = stalboric
+			}
+			if = { #Ravenmarch
+				limit = {
+					culture = corvurian
+				}
+				change_culture = ravenmarcher
+			}
+			if = { #Araionn
+				limit = {
+					culture = crownsman
+				}
+				change_culture = ionnic
+			}
+			if = { #Rogieria
+				limit = {
+					culture = east_damerian
+					OR = {
+						is_core = B07 #Sons of Dameria
+						is_core = B37 #Rogieria
+					}
+				}
+				change_culture = rogieran
+			}
+			if = { #Nurcestir
+				limit = {
+					culture = east_damerian
+					NOT = {
+						is_core = B07
+						is_core = B37
+					}
+				}
+				change_culture = nurcestiran
+			}
+			if = { #Estaire
+				limit = {
+					culture = esmari
+				}
+				change_culture = estairey
+			}
+			if = { #Alenor
+				limit = {
+					culture = gawedi
+				}
+				change_culture = alenori
+			}
+			if = { #Rosande
+				limit = {
+					culture = high_lorentish
+				}
+				change_culture = rosanda
+			}
+			if = { #Elikhand
+				limit = {
+					culture = korosheshi
+				}
+				change_culture = elikhander
+			}
+			if = { #Newshire
+				limit = {
+					culture = redfoot_halfling
+				}
+				change_culture = newfoot_halfling
+			}
+			if = { #Luciande
+				limit = {
+					culture = roilsardi
+				}
+				change_culture = luciander
+			}
+			if = { #Wyvernheart
+				limit = {
+					culture = vernman
+				}
+				change_culture = heartman
+			}
+			if = { #Ancardia
+				limit = {
+					culture = west_damerian
+				}
+				change_culture = ancardian
+			}
+		}
+	}
+}
+#半兽人地位
+country_event = {
+	id = bloody_castanor.7
+	title = bloody_castanor.7.t
+	picture = CITY_DEVELOPMENT_eventPicture
+	desc = bloody_castanor.7.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.7.a
+		largest_increase_of_half_orcish_tolerance_effect = yes
+		castonath_area = {
+			add_half_orcish_minority_size_effect = yes
+		}
+	}
+}
+#重建南要塞
+country_event = {
+	id = bloody_castanor.8
+	title = bloody_castanor.8.t
+	picture = COPTIC_CITY_eventPicture
+	desc = bloody_castanor.8.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.8.a
+		set_country_flag = castanor_south_citadel_restored
+		834 = {
+			add_permanent_province_modifier = {
+				name = castanor_south_citadel_restored
+				duration = -1
+			}
+		}
+	}
+}
+#邀请法拉内安
+country_event = {
+	id = bloody_castanor.9
+	title = bloody_castanor.9.t
+	picture = CITY_DEVELOPMENT_eventPicture
+	desc = bloody_castanor.9.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.9.a
+		whistlevale_area = {
+			add_base_tax = 2
+			add_elven_minority_size_effect = yes
+			add_half_elven_minority_size_effect = yes
+		}
+	}
+	option = {
+		name = bloody_castanor.9.b
+		castonath_area = {
+			add_base_tax = 1
+			add_elven_minority_size_effect = yes
+			add_half_elven_minority_size_effect = yes
+		}
+		whistlevale_area = {
+			add_base_tax = 1
+			add_elven_minority_size_effect = yes
+			add_half_elven_minority_size_effect = yes
+		}
+	}
+}
+#卡斯坦试炼
+country_event = {
+	id = bloody_castanor.10
+	title = castanortrials.101.t
+	picture = KING_SICK_IN_BED_eventPicture
+	desc = bloody_castanor.10.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = castanortrials.101.a
+		hidden_effect = {
+			country_event = {
+				id = bloody_castanor.11 days = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = bloody_castanor.11
+	title = bloody_castanor.11.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.11.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = bloody_castanor.11.a
+		custom_tooltip = bloody_castanor.11_ct
+		add_government_reform = anbi_castanor_empire_reform
+		add_government_reform = anbi_castanor_panzer_reform2
+		change_tag = AB2
+		restore_country_name = yes
+		swap_non_generic_missions = yes
+		set_country_flag = anbi_ab1_the_great_war
+		clr_ruler_flag = mage_ruler_general
+		remove_country_modifier = anbi_ab1_put_on_the_ring_modifier
+		remove_country_modifier = anbi_ab1_tight_the_dog_chain_modifier
+		hidden_effect = {
+			add_country_modifier = {
+				name = anbi_ab1_against_the_great_war
+				duration = -1
+			}
+			remove_country_modifier = anbi_AB1_doubt_1
+			remove_country_modifier = anbi_AB1_doubt_2
+			remove_country_modifier = anbi_AB1_doubt_3
+			remove_country_modifier = anbi_AB1_doubt_4
+			remove_country_modifier = anbi_AB1_doubt_5
+			country_event = {
+				id = bloody_castanor.14 days = 10
+			}
+			country_event = {
+				id = bloody_castanor.31 days = 30
+			}
+		}
+		increase_witch_king_points_massive = yes
+		increase_witch_king_points_massive = yes
+		increase_witch_king_points_massive = yes
+		increase_witch_king_points_massive = yes
+		increase_witch_king_points_massive = yes
+		increase_witch_king_points_massive = yes
+		increase_witch_king_points_massive = yes
+		increase_witch_king_points_massive = yes
+	}
+
+}
+##坎诺反血卡包围网
+country_event = {
+	id = bloody_castanor.12
+	title = bloody_castanor.12.t
+	picture = WITCHBURNING_eventPicture
+	desc = bloody_castanor.12.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = AB2_great_war_cf
+				}
+				declare_war_with_cb = {
+					casus_belli = cb_super_badboy
+					who = AB2
+				}
+				set_country_flag = AB2_great_war_target_cf
+				save_global_event_target_as = AB2_great_war_target
+			}
+			every_country = {
+				limit = {
+					has_country_flag = AB2_great_war_cf
+				}
+				join_all_offensive_wars_of = event_target:AB2_great_war_target
+			}
+			remove_country_modifier = anbi_ab1_against_the_great_war
+			every_owned_province = {
+				limit = {
+					unrest = 10
+				}
+				spawn_rebels = {
+					size = 1
+				}
+			}
+			add_country_modifier = {
+				name = anbi_ab1_keep_the_great_dream
+				duration = 3650
+			}
+		}
+	}
+
+	option = {
+		name = bloody_castanor.12.a
+		custom_tooltip = bloody_castanor.12_ct
+		add_country_modifier = {
+			name = anbi_ab1_keep_the_great_dream
+			duration = 3650
+		}
+	}
+}
+country_event = {
+	id = bloody_castanor.13
+	title = bloody_castanor.13.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.13.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.13.a
+		if = {
+			limit = { 
+				alliance_with = AB2
+			}
+			break_alliance = AB2
+		}
+		every_war_enemy_country = {
+			white_peace = ROOT
+		}
+		add_aggressive_expansion = {
+			who = AB2
+			value = 100
+			apply_calc = no
+		}
+		form_coalition_against = AB2
+		set_country_flag = AB2_great_war_cf
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = bloody_castanor.13.b
+		if = {
+			limit = { 
+				alliance_with = AB2
+			}
+			break_alliance = AB2
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+#包围网战争补丁
+country_event = {
+	id = bloody_castanor.31
+	title = bloody_castanor.31.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.31.d
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		every_country = {
+			limit = {
+				capital_scope = {
+					OR = {
+						superregion = western_cannor_superregion
+						superregion = escann_superregion
+						superregion = gerudia_superregion
+					}
+				}
+				NOT = {
+					TAG = ROOT
+					has_country_modifier = monstrous_nation
+					religion = skaldhyrric_faith
+					truce_with = ROOT
+				}
+				is_subject = no
+			}
+			castonath_area = {
+				discover_country = PREV
+			}
+			country_event = {
+				id = bloody_castanor.13
+			}
+		}
+	}
+	after = {
+		country_event = {
+			id = bloody_castanor.12 days = 2
+		}
+	}
+}
+#国内暴乱
+country_event = {
+	id = bloody_castanor.14
+	title = bloody_castanor.14.t
+	picture = COUNTRY_COLLAPSE_eventPicture
+	desc = bloody_castanor.14.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.14.a
+		custom_tooltip = bloody_castanor.14_ct
+		add_country_modifier = {
+			name = anbi_ab1_the_trade_down
+			duration = -1
+		}
+		add_country_modifier = {
+			name = anbi_ab1_the_adventurer_down
+			duration = -1
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					is_core = ROOT
+					NOT = {
+						nationalism = 1
+					}
+				}
+				random_list = {
+					5 = {
+						change_religion = ROOT
+					}
+					5 = {
+					}
+				}
+			}
+			every_owned_province = {
+				remove_province_modifier = anbi_ab1_eat_green_meat_happy
+			}
+		}
+	}
+
+	after = {
+		every_owned_province = {
+			limit = {
+				NOT = {
+					region = ROOT
+				}
+			}
+			add_unrest = 10
+		}
+	}
+}
+#战胜包围网
+country_event = {
+	id = bloody_castanor.15
+	title = bloody_castanor.15.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.15.d
+
+	is_triggered_only = yes
+	major = yes
+
+	trigger = {
+		has_country_flag = AB2_great_war_target_cf
+		NOT = {
+			war_with = AB2
+		} 
+	}
+
+	option = {
+		name = bloody_castanor.15.a
+		clr_country_flag = AB2_great_war_target_cf
+		AB2 = {
+			country_event = {
+				id = bloody_castanor.16
+			}
+		}
+		every_country = {
+			limit = {
+				has_country_flag = AB2_great_war_cf
+			}
+			clr_country_flag = AB2_great_war_cf
+			add_country_modifier = {
+				name = anbi_ab1_the_big_failure
+				duration = 7300
+			}
+			add_aggressive_expansion = {
+				who = AB2
+				value = -50
+				apply_calc = no
+			}
+		}
+		ai_chance = {
+			factor = 10000
+		}
+	}
+
+	option = {
+		name = bloody_castanor.15.a
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = bloody_castanor.16
+	title = bloody_castanor.16.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.16.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_country_modifier = anbi_ab1_keep_the_great_dream
+	}
+
+	option = {
+		name = bloody_castanor.16.a
+		add_war_exhaustion = -20
+		tooltip = {
+			remove_country_modifier = anbi_ab1_keep_the_great_dream
+		}
+		custom_tooltip = bloody_castanor.16_ct
+		if = {
+			limit = {
+				833 = {
+					NOT = {
+						has_province_modifier = anbi_ab1_the_great_war_monument
+					}
+				}
+			}
+			833 = {
+				add_permanent_province_modifier = {
+					name = anbi_ab1_the_great_war_monument
+					duration = -1
+				}
+			}
+		}
+		clr_country_flag = anbi_ab1_the_great_war
+		#移除占位
+		clr_country_flag = anbi_ab1_the_great_war_first_death
+		clr_country_flag = anbi_ab1_the_great_war_second_death
+		clr_country_flag = anbi_ab1_the_great_war_third_death
+		clr_country_flag = anbi_ab1_the_great_war_last_death
+		remove_country_modifier = anbi_ab1_the_adventurer_down
+		remove_country_modifier = anbi_ab1_the_trade_down
+		#添加决议
+		set_country_flag = anbi_ab1_the_castanor_development_menu
+		add_country_modifier = {
+			name = anbi_ab1_the_peace_of_bloody
+			duration = 1825
+		}
+		dostanor_region = {
+			add_permanent_claim = ROOT
+		}
+		daravans_folly_region = {
+			add_permanent_claim = ROOT
+		}
+		ourdia_region = {
+			add_permanent_claim = ROOT
+		}
+		east_chillsbay_area = {
+			add_permanent_claim = ROOT
+		}
+		sondaar_area = {
+			add_permanent_claim = ROOT
+		}
+		wudhal_area = {
+			add_permanent_claim = ROOT
+		}
+		gulletpeak_area = {
+			add_permanent_claim = ROOT
+		}
+		cedesck_area = {
+			add_permanent_claim = ROOT
+		}
+		vrorenmarch_area = {
+			add_permanent_claim = ROOT
+		}
+		vrorenwall_area = {
+			add_permanent_claim = ROOT
+		}
+		southern_giants_tears_area = {
+			add_permanent_claim = ROOT
+		}
+		northern_giants_tears_area = {
+			add_permanent_claim = ROOT
+		}
+	}
+}
+#战争分数-50判定
+country_event = {
+	id = bloody_castanor.17
+	title = bloody_castanor.17.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.17.d
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		tag = AB2
+		has_country_flag = anbi_ab1_the_great_war
+		NOT = {
+			war_score_against = {
+				who = event_target:AB2_great_war_target
+				value = -50
+			}
+		}
+	}
+
+	option = {
+		name = bloody_castanor.17.a
+		country_event = {
+			id = bloody_castanor.18
+		}
+	}
+}
+#血卡斯塔诺的崩溃
+country_event = {
+	id = bloody_castanor.18
+	title = bloody_castanor.18.t
+	picture = COUNTRY_COLLAPSE_eventPicture
+	desc = bloody_castanor.18.d
+
+	major = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = AB2_great_war_target_cf
+		OR = {
+			NOT = {
+				war_with = AB2
+			} 
+			AB2 = {
+				had_country_flag = {
+					flag = anbi_ab1_the_great_war
+					days = 3700
+				}
+			}
+			war_score_against = {
+				who = AB2
+				value = 50
+			}
+		}
+	}
+
+	option = {
+		name = bloody_castanor.18.a
+		clr_country_flag = AB2_great_war_target_cf
+		if = {
+			limit = { 
+				war_with = AB2
+			}
+			white_peace = AB2
+		}
+		AB2 = {
+			country_event = {
+				id = bloody_castanor.19
+			}
+		}
+		every_country = {
+			limit = {
+				has_country_flag = AB2_great_war_cf
+			}
+			clr_country_flag = AB2_great_war_cf
+			add_prestige = 100
+			add_war_exhaustion = -20
+		}
+		ai_chance = {
+			factor = 10000
+		}
+	}
+
+	option = {
+		name = bloody_castanor.18.a
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+}
+country_event = {
+	id = bloody_castanor.19
+	title = bloody_castanor.19.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.19.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			release_all_subjects = yes
+			release_all_possible_countries = yes
+			set_bankruptcy = ROOT
+		}
+	}
+
+	option = {
+		name = bloody_castanor.19.a
+		castonath_area = {
+			add_base_tax = -10
+			add_base_production = -10
+			add_base_manpower = -10
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					religion = giantkin_regent_court
+				}
+				random_list = {
+					5 = {
+						change_religion = corinite
+					}
+					5 = {
+						change_religion = regent_court
+					}
+				}
+			}
+			every_owned_province = {
+				add_core = B32
+				cede_province = B32
+			}
+			B32 = {
+				change_religion = regent_court
+				override_country_name = AB2_fail
+			}
+		}
+	}
+}
+country_event = {
+	id = bloody_castanor.20
+	title = bloody_castanor.20.t
+	picture = LOOMING_DEATH_eventPicture
+	desc = bloody_castanor.20.d
+
+	hidden = yes
+	trigger = {
+		NOT = {
+			has_country_modifier = anbi_ab1_keep_the_great_dream
+		}
+		any_country = {
+			has_country_flag = AB2_great_war_target_cf
+		}
+	}
+
+	option = {
+		name = bloody_castanor.20.a
+		hidden_effect = {
+			random_country = {
+				limit = {
+					has_country_flag = AB2_great_war_target_cf
+				}
+				country_event = {
+					id = bloody_castanor.18
+				}
+			}
+		}
+	}
+}
+#灭亡安本
+country_event = {
+	id = bloody_castanor.21
+	title = bloody_castanor.21.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.21.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.21.a
+		add_prestige = 100
+		dismantle_hre = yes
+		bahar_region = {
+			add_permanent_claim = ROOT
+		}
+		harpy_hills_region = {
+			add_permanent_claim = ROOT
+		}
+	}
+}
+#对敌最后通牒
+country_event = {
+	id = bloody_castanor.22
+	title = bloody_castanor.22.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.22.d
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.22.a
+		every_owned_province = {
+			add_core = AB2
+			cede_province = AB2
+			hidden_effect = {
+				province_event = {
+					id = bloody_castanor.23 days = 1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				NOT = {
+					total_development = 50
+				}
+			}
+			modifier = {
+				factor = 5
+				NOT = {
+					num_of_cities = 1
+				}
+			}
+			modifier = {
+				factor = 5
+				NOT = {
+					army_balance = {
+						who = AB2
+						value = 0.05
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				AB2 = {
+					is_hegemon = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = bloody_castanor.22.b
+		every_owned_province = {
+			add_permanent_claim = AB2
+		}
+		ai_chance = {
+			factor = 4
+		}
+	}
+}
+province_event = {
+	id = bloody_castanor.23
+	title = bloody_castanor.23.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.23.d
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		add_province_modifier = {
+			name = anbi_ab1_the_automony_state
+			duration = 18250
+		}
+	}
+}
+#北方探索队
+country_event = {
+	id = bloody_castanor.24
+	title = bloody_castanor.24.t
+	picture = HIGH_TEMPLE_IN_DISTANCE_eventPicture
+	desc = bloody_castanor.24.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.24.a
+		hidden_effect = {
+			country_event = { id = bloody_castanor.25 days = 1825 random = 3600 }
+		}
+	}
+}
+country_event = {
+	id = bloody_castanor.25
+	title = bloody_castanor.25.t
+	picture = HIGH_TEMPLE_IN_DISTANCE_eventPicture
+	desc = bloody_castanor.25.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			ogre_valley_region = {
+				discover_country = ROOT
+			}
+			northern_pass_region = {
+				discover_country = ROOT
+			}
+			yyl_moista_region = {
+				discover_country = ROOT
+			}
+			north_yarikhoi_region = {
+				discover_country = ROOT
+			}
+			south_yarikhoi_region = {
+				discover_country = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = bloody_castanor.25.a
+		add_country_modifier = {
+			name = anbi_ab1_northeast_colonies
+			duration = 18250
+		}
+	}
+	option = {
+		name = bloody_castanor.25.b
+		add_stability_or_adm_power = yes
+	}
+}
+#征服布勒瓦尔
+country_event = {
+	id = bloody_castanor.26
+	title = bloody_castanor.26.t
+	picture = HIGH_TEMPLE_IN_DISTANCE_eventPicture
+	desc = bloody_castanor.26.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = AB2
+		num_of_owned_provinces_with = {
+			value = 100
+			OR = {
+				region = bulwar_proper_region
+				region = far_bulwar_region
+			}
+		}
+	}
+
+	option = {
+		name = bloody_castanor.26.a
+		add_accepted_culture = bahari
+		add_accepted_culture = gelkar
+		add_accepted_culture = brasanni
+		add_accepted_culture = surani
+		add_accepted_culture = zanite
+		add_accepted_culture = maqeti
+		add_accepted_culture = masnsih
+		add_accepted_culture = sadnatu
+		add_accepted_culture = kuzarami
+		add_country_modifier = { name = castanor_folding_in_bulwari duration = -1 }
+		hidden_effect = {
+			kheterata_region = {
+				add_permanent_claim = ROOT
+			}
+			every_province = {
+				limit = {
+					continent = africa
+					culture_group = gnollish
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+#购买剑屿
+country_event = {
+	id = bloody_castanor.27
+	title = bloody_castanor.27.t
+	picture = HIGH_TEMPLE_IN_DISTANCE_eventPicture
+	desc = bloody_castanor.27.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.27.a
+		add_treasury = -2000
+		4837 = {
+			owner = {
+				country_event = {
+					id = bloody_castanor.28
+				}
+			}
+		}
+	}
+	option = {
+		name = bloody_castanor.27.b
+		add_prestige = 5
+	}
+}
+country_event = {
+	id = bloody_castanor.28
+	title = bloody_castanor.28.t
+	picture = HIGH_TEMPLE_IN_DISTANCE_eventPicture
+	desc = bloody_castanor.28.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.28.a
+		4837 = {
+			add_core = AB2
+			cede_province = AB2
+		}
+		AB2 = {
+			country_event = {
+				id = bloody_castanor.29
+			}
+		}
+		add_treasury = 2000
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = bloody_castanor.28.b
+		add_prestige = 5
+		AB2 = {
+			country_event = {
+				id = bloody_castanor.29
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = bloody_castanor.29
+	title = bloody_castanor.29.t
+	picture = HIGH_TEMPLE_IN_DISTANCE_eventPicture
+	desc = {
+		trigger = {
+			4837 = {
+				owned_by = ROOT
+			}
+		}
+		desc = bloody_castanor.29.d1
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				4837 = {
+					owned_by = ROOT
+				}
+			}
+		}
+		desc = bloody_castanor.29.d2
+	}
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			4837 = {
+				owned_by = ROOT
+			}
+		}
+		name = bloody_castanor.29.a
+	}
+	option = {
+		trigger = {
+			NOT = {
+				4837 = {
+					owned_by = ROOT
+				}
+			}
+		}
+		name = bloody_castanor.29.b
+		4837 = {
+			add_permanent_claim = ROOT
+		}
+	}
+}
+#血牙转生
+country_event = {
+	id = bloody_castanor.30
+	title = bloody_castanor.30.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.30.d
+
+	trigger = {
+		has_country_flag = AB1_panzer_bloodtooth_cf
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		hidden_effect = {
+			define_ruler = {
+				name = Panzer
+				dynasty = Bloodtooth
+				religion = giantkin_regent_court
+				culture = ROOT
+				adm = 6
+				dip = 6 
+				mil = 6
+				age = 67
+				male = yes
+			}
+		}
+		if = {
+			limit = { 
+				has_reform = anbi_castanor_panzer_reform
+			}
+			set_ruler_flag = mage_ruler_general
+		}
+		add_stability = -1
+		name = bloody_castanor.30.a
+	}
+
+	after = {
+		set_ruler_flag = long_lived_ruler
+		set_ruler_flag = immortal_ruler
+		add_ruler_personality = conqueror_personality
+		add_ruler_personality = inspiring_leader_personality
+		add_ruler_personality = mage_personality
+		ruler_give_saved_spell_schools = yes
+		ruler_save_spell_schools = yes
+		if = {
+			limit = { 
+				has_country_flag = witch_king_flag
+			}
+			add_ruler_modifier = {
+				name = witch_king_modifier
+				duration = -1
+			}
+		}
+		set_ruler_flag = initialized_magic_flags
+	}
+}
+#31为包围网补丁，已被占用，移动至上方
+#32为魔法补丁，已被占用，移动至上方
+#反对革命
+country_event = {
+	id = bloody_castanor.33
+	title = bloody_castanor.33.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.33.d
+
+	trigger = {
+		has_country_flag = anbi_ab1_anti_revolution
+		has_first_revolution_started = yes
+	}
+	fire_only_once = yes
+
+	option = {
+		name = bloody_castanor.33.a
+		set_country_flag = had_revolution
+		if = {
+			limit = { 
+				any_owned_province = {
+					has_revolution_in_province = yes
+				}
+			}
+			every_owned_province = {
+				limit = {
+					has_revolution_in_province = yes
+				}
+				remove_revolution_from_province_effect = yes
+			}
+			remove_center_of_revolution = yes
+		}
+		if = {
+			limit = { 
+				any_country = {
+					any_owned_province = {
+						has_revolution_in_province = yes
+					}
+					NOT = {
+						tag = ROOT
+						government = republic
+					}
+				}
+			}
+			add_mil_power = -100
+			every_country = {
+				limit = {
+					any_owned_province = {
+						has_revolution_in_province = yes
+					}
+					NOT = {
+						tag = ROOT
+						government = republic
+					}
+				}
+				every_owned_province = {
+					remove_revolution_from_province_effect = yes
+				}
+				remove_center_of_revolution = yes
+			}
+		}
+		if = {
+			limit = { 
+				revolution_target_exists = yes
+			}
+			add_country_modifier = {
+				name = anbi_ab1_anti_revolution_modifier
+				duration = 7300
+			}
+		}
+	}
+}
+#吸血鬼
+country_event = {
+	id = bloody_castanor.34
+	title = bloody_castanor.34.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.34.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.34.a
+		clr_country_flag = has_vampires_estate
+		add_years_of_income = 1
+		add_stability = -1
+	}
+
+	option = {
+		name = bloody_castanor.34.b
+		add_estate_influence_modifier = {
+			influence = 50
+			duration = -1
+			estate = estate_vampires
+			desc = castanor_estate_vampires
+		}
+	}
+}
+#哈兰盛宴
+country_event = {
+	id = bloody_castanor.35
+	title = bloody_castanor.35.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.35.d
+
+	is_triggered_only = yes
+
+	option = {
+		custom_tooltip = bloody_castanor.35_ct
+		set_global_flag = anbi_ab2_the_end
+		hidden_effect = {
+			remove_estate_privilege = estate_eat_orcs_a
+			remove_estate_privilege = estate_eat_orcs_b
+			remove_estate_privilege = estate_eat_orcs_c
+			remove_estate_privilege = estate_eat_orcs_abc_upup
+			remove_estate_privilege = estate_eat_goblin_a
+			remove_estate_privilege = estate_eat_greenskin_liver
+			remove_estate_privilege = estate_eat_harpy
+			remove_estate_privilege = estate_eat_troll
+			remove_estate_privilege = estate_eat_ogre
+			remove_estate_privilege = estate_eat_centaur
+			remove_estate_privilege = estate_eat_xianling
+			remove_estate_privilege = estate_eat_khet
+			remove_estate_privilege = estate_eat_evil_elven
+			remove_estate_privilege = estate_eat_kobold
+			remove_estate_privilege = estate_eat_gnollish
+		}
+		set_estate_privilege = estate_eat_all_monster
+		name = bloody_castanor.35.a
+		country_event = {
+			id = bloody_castanor.36
+		}
+	}
+}
+country_event = {
+	id = bloody_castanor.36
+	title = bloody_castanor.36.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.36.d
+
+	is_triggered_only = yes
+
+	option = {
+		custom_tooltip = bloody_castanor.36_ct
+		set_country_flag = anbi_canstanor_annex_world_cf
+		name = bloody_castanor.36.a
+	}
+}
+#埃利赫特
+country_event = {
+	id = bloody_castanor.37
+	title = bloody_castanor.37.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.37.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		kheterat_proper_area = {
+			spawn_rebels = {
+				size = 10
+			}
+			spawn_rebels = {
+				size = 10
+			}
+			spawn_rebels = {
+				size = 10
+			}
+			spawn_rebels = {
+				size = 10
+			}
+			spawn_rebels = {
+				size = 10
+			}
+		}
+	}
+
+	option = {
+		mothers_sorrow_group = {
+			limit = {
+				owned_by = ROOT
+			}
+			change_trade_goods = livestock
+			add_permanent_province_modifier = {
+				name = anbi_khet_is_delicious
+				duration = -1
+			}
+		}
+		name = bloody_castanor.37.a
+	}
+}
+#安本宫
+country_event = {
+	id = bloody_castanor.38
+	title = bloody_castanor.38.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.38.d
+
+	mean_time_to_happen = {
+		days = 365
+	}
+
+	trigger = {
+		tag = AB2
+		OR = {
+			AND = {
+				833 = {
+					has_great_project = {
+						type = anbi_ab2_anbennar_palace
+						tier = 1
+					}
+				}
+				any_owned_province = {
+					OR = {
+						culture_is_elven = yes
+						culture_is_gnomish = yes
+						culture_is_halfling = yes
+					}
+					NOT = {
+						culture = anbi_castanor_elven
+						culture = anbi_castanor_gnomish
+						culture = anbi_castanor_halfling
+					}
+				}
+			}
+			AND = {
+				833 = {
+					has_great_project = {
+						type = anbi_ab2_anbennar_palace
+						tier = 2
+					}
+				}
+				any_owned_province = {
+					OR = {
+						culture_is_harimari = yes
+						culture_is_dwarven = yes
+						culture_is_elven = yes
+						culture_is_gnomish = yes
+						culture_is_halfling = yes
+					}
+					NOT = {
+						culture = anbi_castanor_dwarven
+						culture = anbi_castanor_elven
+						culture = anbi_castanor_gnomish
+						culture = anbi_castanor_halfling
+						culture = anbi_castanor_harimari
+					}
+				}
+			}
+			AND = {
+				833 = {
+					has_great_project = {
+						type = anbi_ab2_anbennar_palace
+						tier = 3
+					}
+				}
+				any_owned_province = {
+					OR = {
+						culture_is_harimari = yes
+						culture_is_dwarven = yes
+						culture_is_elven = yes
+						culture_is_gnomish = yes
+						culture_is_halfling = yes
+						culture_is_ruinborn = yes
+					}
+					NOT = {
+						culture = anbi_castanor_dwarven
+						culture = anbi_castanor_elven
+						culture = anbi_castanor_gnomish
+						culture = anbi_castanor_halfling
+						culture = anbi_castanor_harimari
+						culture = anbi_castanor_ruinborn
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = bloody_castanor.38.a
+		trigger = {
+			833 = {
+				has_great_project = {
+					type = anbi_ab2_anbennar_palace
+					tier = 1
+				}
+			}
+		}
+		every_owned_province = {
+			limit = {
+				culture_is_elven = yes
+			}
+			change_culture = anbi_castanor_elven
+		}
+		every_owned_province = {
+			limit = {
+				culture_is_gnomish = yes
+			}
+			change_culture = anbi_castanor_gnomish
+		}
+		every_owned_province = {
+			limit = {
+				culture_is_halfling = yes
+			}
+			change_culture = anbi_castanor_halfling
+		}
+	}
+	option = {
+		name = bloody_castanor.38.a
+		trigger = {
+			833 = {
+				has_great_project = {
+					type = anbi_ab2_anbennar_palace
+					tier = 2
+				}
+			}
+		}
+		every_owned_province = {
+			limit = {
+				culture_is_elven = yes
+			}
+			change_culture = anbi_castanor_elven
+		}
+		every_owned_province = {
+			limit = {
+				culture_is_gnomish = yes
+			}
+			change_culture = anbi_castanor_gnomish
+		}
+		every_owned_province = {
+			limit = {
+				culture_is_halfling = yes
+			}
+			change_culture = anbi_castanor_halfling
+		}
+		every_owned_province = {
+			limit = {
+				culture_is_harimari = yes
+			}
+			change_culture = anbi_castanor_harimari
+		}
+		every_owned_province = {
+			limit = {
+				culture_is_dwarven = yes
+			}
+			change_culture = anbi_castanor_dwarven	
+		}
+		every_subject_country = {
+			limit = {
+				culture_is_dwarven = yes
+			}
+			if = {
+				limit = { 
+					NOT = {
+						primary_culture = anbi_castanor_dwarven
+					}
+				}
+				change_primary_culture = anbi_castanor_dwarven
+			}
+			every_owned_province = {
+				limit = {
+					culture_is_dwarven = yes
+				}
+				change_culture = anbi_castanor_dwarven
+			}
+		}
+	}
+	option = {
+		name = bloody_castanor.38.a
+		trigger = {
+			833 = {
+				has_great_project = {
+					type = anbi_ab2_anbennar_palace
+					tier = 3
+				}
+			}
+		}
+		every_owned_province = {
+			limit = {
+				culture_is_elven = yes
+			}
+			change_culture = anbi_castanor_elven
+		}
+		every_owned_province = {
+			limit = {
+				culture_is_gnomish = yes
+			}
+			change_culture = anbi_castanor_gnomish
+		}
+		every_owned_province = {
+			limit = {
+				culture_is_halfling = yes
+			}
+			change_culture = anbi_castanor_halfling
+		}
+		every_owned_province = {
+			limit = {
+				culture_is_harimari = yes
+			}
+			change_culture = anbi_castanor_harimari
+		}
+		every_owned_province = {
+			limit = {
+				culture_is_dwarven = yes
+			}
+			change_culture = anbi_castanor_dwarven
+		}
+		every_owned_province = {
+			limit = {
+				culture_is_ruinborn = yes
+			}
+			change_culture = anbi_castanor_ruinborn
+		}
+		every_subject_country = {
+			limit = {
+				culture_is_dwarven = yes
+			}
+			if = {
+				limit = { 
+					NOT = {
+						primary_culture = anbi_castanor_dwarven
+					}
+				}
+				change_primary_culture = anbi_castanor_dwarven
+			}
+			every_owned_province = {
+				limit = {
+					culture_is_dwarven = yes
+				}
+				change_culture = anbi_castanor_dwarven
+			}
+		}
+		every_subject_country = {
+			limit = {
+				any_owned_province = {
+					culture_is_ruinborn = yes
+				}
+			}
+			every_owned_province = {
+				limit = {
+					culture_is_ruinborn = yes
+				}
+				change_culture = anbi_castanor_ruinborn
+			}
+			if = {
+				limit = { 
+					NOT = {
+						accepted_culture = anbi_castanor_ruinborn
+					}
+				}
+				add_accepted_culture = anbi_castanor_ruinborn
+			}
+		}
+	}
+}
+#深红洪水
+country_event = {
+	id = bloody_castanor.39
+	title = bloody_castanor.39.t
+	picture = HRE_eventPicture
+	desc = bloody_castanor.39.d
+
+	trigger = {
+		has_country_modifier = anbi_ab1_corinite_cooperator
+		has_global_flag = crimson_deluge
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = bloody_castanor.38.a
+		add_country_modifier = {
+			name = anbi_ab1_crimson_deluge
+			duration = 3650
+		}
+	}
+}
+
+#加特权
+country_event = {
+	id = bloody_castanor.1000
+	title = bloody_castanor.1000.t
+	picture = LOOMING_DEATH_eventPicture
+	desc = bloody_castanor.1000.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.4.a
+		set_estate_privilege = estate_mages_organization_state
+		set_estate_privilege = estate_adventurers_organization_licensed_adventurers
+		change_estate_land_share = {
+			estate = estate_castonath_patricians
+			share = 50
+		}
+	}
+}
+#怀疑度
+country_event = {
+	id = bloody_castanor.1001
+	title = bloody_castanor.1001.t
+	picture = LOOMING_DEATH_eventPicture
+	desc = bloody_castanor.1001.d
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	trigger = {
+		has_government_power = {
+			mechanic_type = anbi_has_doubt_count_mechanics
+			power_type = anbi_AB1_doubt_count
+			value = 25
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					capital_scope = {
+						OR = {
+							superregion = western_cannor_superregion
+							superregion = escann_superregion
+							superregion = gerudia_superregion
+						}
+					}
+					NOT = {
+						has_country_modifier = monstrous_nation
+						religion = skaldhyrric_faith
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = anbi_ab1_the_doubt_1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = bloody_castanor.1001.a
+		custom_tooltip = bloody_castanor.1001_ct
+		add_prestige = -10
+	}
+}
+country_event = {
+	id = bloody_castanor.1002
+	title = bloody_castanor.1002.t
+	picture = LOOMING_DEATH_eventPicture
+	desc = bloody_castanor.1002.d
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	fire_only_once = yes
+	trigger = {
+		has_government_power = {
+			mechanic_type = anbi_has_doubt_count_mechanics
+			power_type = anbi_AB1_doubt_count
+			value = 50
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			castonath_area = {
+				add_base_manpower = -1
+				add_base_production = -1
+				add_base_tax = -1
+			}
+		}
+	}
+
+
+	option = {
+		tooltip = {
+			castonath_area = {
+				add_base_manpower = -1
+				add_base_production = -1
+				add_base_tax = -1
+			}
+		}
+		name = bloody_castanor.1002.a
+	}
+}
+country_event = {
+	id = bloody_castanor.1003
+	title = bloody_castanor.1003.t
+	picture = LOOMING_DEATH_eventPicture
+	desc = bloody_castanor.1003.d
+
+	trigger = {
+		has_government_power = {
+			mechanic_type = anbi_has_doubt_count_mechanics
+			power_type = anbi_AB1_doubt_count
+			value = 90
+		}
+		NOT = {
+			has_country_modifier = anbi_ab1_the_rebel_is_coming
+		}
+	}
+
+	option = {
+		name = bloody_castanor.1003.a
+		add_country_modifier = {
+			name = anbi_ab1_the_rebel_is_coming
+			duration = 365
+		}
+	}
+}
+country_event = {
+	id = bloody_castanor.1004
+	title = bloody_castanor.1004.t
+	picture = LOOMING_DEATH_eventPicture
+	desc = bloody_castanor.1004.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = anbi_ab1_ban_war
+				duration = -1
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+						is_subject = yes
+						has_country_modifier = monstrous_nation
+						religion = skaldhyrric_faith
+					}
+					capital_scope = {
+						OR = {
+							superregion = western_cannor_superregion
+							superregion = escann_superregion
+							superregion = gerudia_superregion
+						}
+					}
+				}
+				add_aggressive_expansion = {
+					who = AB1
+					value = 1000
+					apply_calc = no
+				}
+				form_coalition_against = AB1
+				set_country_flag = AB2_great_war_cf
+			}
+			random_country = {
+				limit = {
+					has_country_flag = AB2_great_war_cf
+				}
+				declare_war_with_cb = {
+					casus_belli = cb_super_badboy
+					who = ROOT
+				}
+			}
+			anbi_ab1_the_doubt_growing = yes
+			anbi_ab1_the_doubt_growing = yes
+			anbi_ab1_the_doubt_growing = yes
+			anbi_ab1_the_doubt_growing = yes
+			every_owned_province = {
+				limit = {
+					unrest = 10
+				}
+				spawn_rebels = {
+					size = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = bloody_castanor.1004.a
+		tooltip = {
+			add_country_modifier = {
+				name = anbi_ab1_ban_war
+				duration = -1
+			}
+		}
+		custom_tooltip = bloody_castanor.1004_ct
+	}
+
+	after = {
+		every_country = {
+			limit = {
+				has_country_flag = AB2_great_war_cf
+			}
+			clr_country_flag = AB2_great_war_cf
+		}
+		country_event = {
+			id = bloody_castanor.19 days = 365
+		}
+	}
+}
+#杂交技术
+country_event = {
+	id = bloody_castanor.1005
+	title = bloody_castanor.1005.t
+	picture = LOOMING_DEATH_eventPicture
+	desc = bloody_castanor.1005.d
+
+	hidden = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		has_country_flag = anbi_ab1_the_labs_of_orcs_food
+		any_owned_province = {
+			NOT = {
+				has_province_modifier = anbi_ab1_cross_food
+			}
+			trade_goods = livestock
+		}
+	}
+
+	option = {
+		name = bloody_castanor.1005.a
+		every_owned_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = anbi_ab1_cross_food
+				}
+				trade_goods = livestock
+			}
+			add_province_modifier = {
+				name = anbi_ab1_cross_food
+				duration = -1
+			}
+		}
+	}
+}
+
+
+#打包来的军团大道
+country_event = { 
+	id = bloody_castanor.2000
+	title = flavor_castanor.3.t
+	desc = flavor_castanor.3.desc
+	picture = LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = build_legionway_menu_open
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_1 }
+				save_event_target_as = dragonflame_legion
+				location = { save_event_target_as = location_of_dragonflame }
+			}
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_2 }
+				save_event_target_as = sword_legion
+				location = { save_event_target_as = location_of_sword }
+			}
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_3 }
+				save_event_target_as = shield_legion
+				location = { save_event_target_as = location_of_shield }
+			}
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_4 }
+				save_event_target_as = giantsbane_legion
+				location = { save_event_target_as = location_of_giantsbane }
+			}
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_5 }
+				save_event_target_as = bridgeburners_legion
+				location = { save_event_target_as = location_of_bridgeburners }
+			}
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_6 }
+				save_event_target_as = thundersworn_legion
+				location = { save_event_target_as = location_of_thundersworn }
+			}
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_7 }
+				save_event_target_as = magebound_legion
+				location = { save_event_target_as = location_of_magebound }
+			}
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_8 }
+				save_event_target_as = hordebreaker_legion
+				location = { save_event_target_as = location_of_hordebreaker }
+			}
+		}
+	}
+
+	# Nevermind
+	option = {
+		name = flavor_castanor_go_back
+		highlight = yes
+		clr_country_flag = build_legionway_menu_open
+	}
+	# Connect Inner Castanor
+	option = {
+		name = flavor_castanor.3.a
+		trigger = {
+			legionway_inner_castanor = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_inner_castanor = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_inner_castanor
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_inner_castanor } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_inner_castanor
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Connect South Castanor
+	option = {
+		name = flavor_castanor.3.b
+		trigger = {
+			legionway_south_castanor = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_south_castanor = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_south_castanor
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_south_castanor } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_south_castanor
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Connect West Castanor
+	option = {
+		name = flavor_castanor.3.c
+		trigger = {
+			legionway_west_castanor = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_west_castanor = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_west_castanor
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_west_castanor } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_west_castanor
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Castanor -> Bal Vroren
+	option = {
+		name = flavor_castanor.3.d
+		goto = 740 #Bal Vroren
+		trigger = {
+			legionway_inner_castanor = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			legionway_to_bal_vroren = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_to_bal_vroren = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_to_bal_vroren
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_to_bal_vroren } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_to_bal_vroren
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+
+	# Bal Vroren -> Bal Eldesgaht
+	option = {
+		name = flavor_castanor.3.e
+		goto = 956 #Konungrhavnr/Bal Eldesgaht
+		trigger = {
+			legionway_to_bal_vroren = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			legionway_bal_vroren_to_konungrhaven_citadel = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_bal_vroren_to_konungrhaven_citadel = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+			956 = {
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_bal_vroren_to_konungrhaven_citadel
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_bal_vroren_to_konungrhaven_citadel } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_bal_vroren_to_konungrhaven_citadel
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Mire -> Bal Vertesk
+	option = {
+		name = flavor_castanor.3.f
+		goto = 216 #Vertesk/Bal Vertesk
+		trigger = {
+			legionway_west_castanor = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			legionway_bal_mire_to_bal_vertesk = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_bal_mire_to_bal_vertesk = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_bal_mire_to_bal_vertesk
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_bal_mire_to_bal_vertesk } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_bal_mire_to_bal_vertesk
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Vertesk -> Bal Drachonarcen
+	# Fuuuuuuuuck why are there so many
+	option = {
+		name = flavor_castanor.3.g
+		goto = 183 #Foddimadd/Bal Drachonarcen
+		trigger = {
+			183 = {
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+			legionway_bal_mire_to_bal_vertesk = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			legionway_bal_vertesk_to_foddimad_citadel = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_bal_vertesk_to_foddimad_citadel = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_bal_vertesk_to_foddimad_citadel
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_bal_vertesk_to_foddimad_citadel } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_bal_vertesk_to_foddimad_citadel
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Vertesk -> Bal Hyl
+	option = {
+		name = flavor_castanor.3.h
+		goto = 306 #Wexkeep/Bal Hyl
+		trigger = {
+			legionway_bal_mire_to_bal_vertesk = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			legionway_bal_vertesk_to_bal_hyl = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_bal_vertesk_to_bal_hyl = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_bal_vertesk_to_bal_hyl
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_bal_vertesk_to_bal_hyl } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_bal_vertesk_to_bal_hyl
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Hyl -> West Castanor
+	option = {
+		name = flavor_castanor.3.i
+		trigger = {
+			legionway_west_castanor = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			legionway_forlorn_vale = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_forlorn_vale = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_forlorn_vale
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_forlorn_vale } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_forlorn_vale
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Hyl -> Bal Dostan
+	option = {
+		name = flavor_castanor.3.j
+		goto = 441 #Arca Corvur/Bal Dostan
+		trigger = {
+			legionway_south_castanor = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			legionway_bal_dostan_to_bal_hyl = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_bal_dostan_to_bal_hyl = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_bal_dostan_to_bal_hyl
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_bal_dostan_to_bal_hyl } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_bal_dostan_to_bal_hyl
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Drachonarcen -> Bal Rodwudor
+	option = {
+		name = flavor_castanor.3.k1
+		goto = 68 #Redfort/Bal Rodwudor
+		trigger = {
+			legionway_bal_vertesk_to_foddimad_citadel = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			68 = {
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+			legionway_dragon_coast_to_redfort_citadel = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_dragon_coast_to_redfort_citadel = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_dragon_coast_to_redfort_citadel
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_dragon_coast_to_redfort_citadel } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_dragon_coast_to_redfort_citadel
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Drachonarcen -> Bal Lipewudor
+	option = {
+		name = flavor_castanor.3.k2
+		goto = 58 #Daromsfort/Bal Lipewudor
+		trigger = {
+			legionway_bal_vertesk_to_foddimad_citadel = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			58 = {
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+			legionway_dragon_coast_to_daromsfort_citadel = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_dragon_coast_to_daromsfort_citadel = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_dragon_coast_to_daromsfort_citadel
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_dragon_coast_to_daromsfort_citadel } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_dragon_coast_to_daromsfort_citadel
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Dostan -> Bal Ouord
+	option = {
+		name = flavor_castanor.3.l
+		goto = 510 #Bal Ouord
+		trigger = {
+			legionway_south_castanor = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			legionway_to_bal_ouord = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_to_bal_ouord = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_to_bal_ouord
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_to_bal_ouord } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_to_bal_ouord
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Ouord -> Bal Hefun
+	option = {
+		name = flavor_castanor.3.m
+		goto = 665 #Gelkalis/Bal Hefun
+		trigger = {
+			legionway_to_bal_ouord = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			665 = {
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+			legionway_bal_ouord_to_gelkalis = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_bal_ouord_to_gelkalis = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_bal_ouord_to_gelkalis
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_bal_ouord_to_gelkalis } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_bal_ouord_to_gelkalis
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Hefun -> Bal Lencsar
+	option = {
+		name = flavor_castanor.3.n
+		goto = 560 #Anzabad/Bal Lencsar
+		trigger = {
+			legionway_bal_ouord_to_gelkalis = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			560 = {
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+			legionway_gelkalis_to_anzabad = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_gelkalis_to_anzabad = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_gelkalis_to_anzabad
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_gelkalis_to_anzabad } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_gelkalis_to_anzabad
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Hefun -> Bal Stencsar
+	option = {
+		name = flavor_castanor.3.o
+		goto = 643 #Azka-Sur/Bal Stencsar
+		trigger = {
+			legionway_bal_ouord_to_gelkalis = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			643 = {
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+			legionway_gelkalis_to_azka_sur = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_gelkalis_to_azka_sur = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+			golden_highway_far_bulwar = {
+				type = all
+				has_province_modifier = golden_highway
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_gelkalis_to_azka_sur
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_gelkalis_to_azka_sur } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_gelkalis_to_azka_sur
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Lencsar -> Bal Cat
+	option = {
+		name = flavor_castanor.3.p
+		goto = 468 #Sorrowgate/Bal Ledgaht
+		trigger = {
+			legionway_gelkalis_to_anzabad = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			468 = {
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+			legionway_anzabad_to_sorrowgate = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_anzabad_to_sorrowgate = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+			golden_highway_bulwar_proper = {
+				type = all
+				has_province_modifier = golden_highway
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_anzabad_to_sorrowgate
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_anzabad_to_sorrowgate } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_anzabad_to_sorrowgate
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Hefun -> Bal Cat
+	option = {
+		name = flavor_castanor.3.q
+		goto = 468 #Sorrowgate/Bal Ledgaht
+		trigger = {
+			legionway_gelkalis_to_azka_sur = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			468 = {
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+			legionway_gelkalis_to_sorrowgate = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_gelkalis_to_sorrowgate = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+			golden_highway_bulwar_proper = {
+				type = all
+				has_province_modifier = golden_highway
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_gelkalis_to_sorrowgate
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_gelkalis_to_sorrowgate } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_gelkalis_to_sorrowgate
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Manual with Legion 1
+	option = {
+		name = flavor_castanor.3.legion_1
+		goto = location_of_dragonflame
+		trigger = { any_hired_mercenary_company = { template = merc_castanorian_legion_1 } }
+		if = {
+			limit = {
+				any_hired_mercenary_company = {
+					template = merc_castanorian_legion_1
+					location = {
+						NOT = { has_province_modifier = castanor_legionway }
+						NOT = { has_province_modifier = castanor_building_legionway_survey }
+						NOT = { has_province_modifier = castanor_building_legionway_construction }
+						NOT = { province_group = golden_highway_bulwar_proper }
+						NOT = { province_group = golden_highway_far_bulwar }
+						NOT = { province_group = golden_highway_dhujat }
+						NOT = { province_group = golden_highway_far_salahad }
+						NOT = { province_group = golden_highway_yanshen_coast }
+						NOT = { province_group = golden_highway_rahen_coast }
+						NOT = { province_group = golden_highway_upper_yanshen }
+						NOT = { province_group = golden_highway_xianjie }
+						NOT = { province_group = triunic_road }
+						NOT = { has_terrain = dwarven_road }
+						any_neighbor_province = {
+							OR = {
+								has_province_modifier = castanor_legionway
+								has_province_modifier = castanor_building_legionway_survey
+								has_province_modifier = castanor_building_legionway_construction
+								AND = {
+									OR = {
+										has_province_modifier = federation_triunic_road
+										has_province_modifier = golden_highway
+									}
+									any_neighbor_province = {
+										OR = {
+											has_province_modifier = castanor_legionway
+											has_province_modifier = castanor_building_legionway_survey
+											has_province_modifier = castanor_building_legionway_construction
+										}
+									}
+								}
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			add_adm_power = -10
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_1 }
+				location = {
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+		else = { castanor_build_legionway_with_hired_legion = { event_target = dragonflame_legion } }
+	}
+	# Manual with Legion 2
+	option = {
+		name = flavor_castanor.3.legion_2
+		goto = location_of_sword
+		trigger = { any_hired_mercenary_company = { template = merc_castanorian_legion_2 } }
+		if = {
+			limit = {
+				event_target:sword_legion = {
+					location = {
+						NOT = { has_province_modifier = castanor_legionway }
+						NOT = { has_province_modifier = castanor_building_legionway_survey }
+						NOT = { has_province_modifier = castanor_building_legionway_construction }
+						NOT = { province_group = golden_highway_bulwar_proper }
+						NOT = { province_group = golden_highway_far_bulwar }
+						NOT = { province_group = golden_highway_dhujat }
+						NOT = { province_group = golden_highway_far_salahad }
+						NOT = { province_group = golden_highway_yanshen_coast }
+						NOT = { province_group = golden_highway_rahen_coast }
+						NOT = { province_group = golden_highway_upper_yanshen }
+						NOT = { province_group = golden_highway_xianjie }
+						NOT = { province_group = triunic_road }
+						NOT = { has_terrain = dwarven_road }
+						any_neighbor_province = {
+							OR = {
+								has_province_modifier = castanor_legionway
+								has_province_modifier = castanor_building_legionway_survey
+								has_province_modifier = castanor_building_legionway_construction
+								AND = {
+									OR = {
+										has_province_modifier = federation_triunic_road
+										has_province_modifier = golden_highway
+									}
+									any_neighbor_province = {
+										OR = {
+											has_province_modifier = castanor_legionway
+											has_province_modifier = castanor_building_legionway_survey
+											has_province_modifier = castanor_building_legionway_construction
+										}
+									}
+								}
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			add_adm_power = -10
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_2 }
+				location = {
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+		# build the tooltip
+		else = { castanor_build_legionway_with_hired_legion = { event_target = sword_legion } }
+	}
+	# You get the idea I hope
+	option = {
+		name = flavor_castanor.3.legion_3
+		goto = location_of_shield
+		trigger = { any_hired_mercenary_company = { template = merc_castanorian_legion_3 } }
+		if = {
+			limit = {
+				any_hired_mercenary_company = {
+					template = merc_castanorian_legion_3
+					location = {
+						NOT = { has_province_modifier = castanor_legionway }
+						NOT = { has_province_modifier = castanor_building_legionway_survey }
+						NOT = { has_province_modifier = castanor_building_legionway_construction }
+						NOT = { province_group = golden_highway_bulwar_proper }
+						NOT = { province_group = golden_highway_far_bulwar }
+						NOT = { province_group = golden_highway_dhujat }
+						NOT = { province_group = golden_highway_far_salahad }
+						NOT = { province_group = golden_highway_yanshen_coast }
+						NOT = { province_group = golden_highway_rahen_coast }
+						NOT = { province_group = golden_highway_upper_yanshen }
+						NOT = { province_group = golden_highway_xianjie }
+						NOT = { province_group = triunic_road }
+						NOT = { has_terrain = dwarven_road }
+						any_neighbor_province = {
+							OR = {
+								has_province_modifier = castanor_legionway
+								has_province_modifier = castanor_building_legionway_survey
+								has_province_modifier = castanor_building_legionway_construction
+								AND = {
+									OR = {
+										has_province_modifier = federation_triunic_road
+										has_province_modifier = golden_highway
+									}
+									any_neighbor_province = {
+										OR = {
+											has_province_modifier = castanor_legionway
+											has_province_modifier = castanor_building_legionway_survey
+											has_province_modifier = castanor_building_legionway_construction
+										}
+									}
+								}
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			add_adm_power = -10
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_3 }
+				location = {
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+		else = { castanor_build_legionway_with_hired_legion = { event_target = shield_legion } }
+	}
+	option = {
+		name = flavor_castanor.3.legion_4
+		goto = location_of_giantsbane
+		trigger = { any_hired_mercenary_company = { template = merc_castanorian_legion_4 } }
+		if = {
+			limit = {
+				any_hired_mercenary_company = {
+					template = merc_castanorian_legion_4
+					location = {
+						NOT = { has_province_modifier = castanor_legionway }
+						NOT = { has_province_modifier = castanor_building_legionway_survey }
+						NOT = { has_province_modifier = castanor_building_legionway_construction }
+						NOT = { province_group = golden_highway_bulwar_proper }
+						NOT = { province_group = golden_highway_far_bulwar }
+						NOT = { province_group = golden_highway_dhujat }
+						NOT = { province_group = golden_highway_far_salahad }
+						NOT = { province_group = golden_highway_yanshen_coast }
+						NOT = { province_group = golden_highway_rahen_coast }
+						NOT = { province_group = golden_highway_upper_yanshen }
+						NOT = { province_group = golden_highway_xianjie }
+						NOT = { province_group = triunic_road }
+						NOT = { has_terrain = dwarven_road }
+						any_neighbor_province = {
+							OR = {
+								has_province_modifier = castanor_legionway
+								has_province_modifier = castanor_building_legionway_survey
+								has_province_modifier = castanor_building_legionway_construction
+								AND = {
+									OR = {
+										has_province_modifier = federation_triunic_road
+										has_province_modifier = golden_highway
+									}
+									any_neighbor_province = {
+										OR = {
+											has_province_modifier = castanor_legionway
+											has_province_modifier = castanor_building_legionway_survey
+											has_province_modifier = castanor_building_legionway_construction
+										}
+									}
+								}
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			add_adm_power = -10
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_4 }
+				location = {
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+		else = { castanor_build_legionway_with_hired_legion = { event_target = giantsbane_legion } }
+	}
+	option = {
+		name = flavor_castanor.3.legion_5
+		goto = location_of_bridgeburners
+		trigger = { any_hired_mercenary_company = { template = merc_castanorian_legion_5 } }
+		if = {
+			limit = {
+				any_hired_mercenary_company = {
+					template = merc_castanorian_legion_5
+					location = {
+						NOT = { has_province_modifier = castanor_legionway }
+						NOT = { has_province_modifier = castanor_building_legionway_survey }
+						NOT = { has_province_modifier = castanor_building_legionway_construction }
+						NOT = { province_group = golden_highway_bulwar_proper }
+						NOT = { province_group = golden_highway_far_bulwar }
+						NOT = { province_group = golden_highway_dhujat }
+						NOT = { province_group = golden_highway_far_salahad }
+						NOT = { province_group = golden_highway_yanshen_coast }
+						NOT = { province_group = golden_highway_rahen_coast }
+						NOT = { province_group = golden_highway_upper_yanshen }
+						NOT = { province_group = golden_highway_xianjie }
+						NOT = { province_group = triunic_road }
+						NOT = { has_terrain = dwarven_road }
+						any_neighbor_province = {
+							OR = {
+								has_province_modifier = castanor_legionway
+								has_province_modifier = castanor_building_legionway_survey
+								has_province_modifier = castanor_building_legionway_construction
+								AND = {
+									OR = {
+										has_province_modifier = federation_triunic_road
+										has_province_modifier = golden_highway
+									}
+									any_neighbor_province = {
+										OR = {
+											has_province_modifier = castanor_legionway
+											has_province_modifier = castanor_building_legionway_survey
+											has_province_modifier = castanor_building_legionway_construction
+										}
+									}
+								}
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			add_adm_power = -10
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_5 }
+				location = {
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+		else = { castanor_build_legionway_with_hired_legion = { event_target = bridgeburners_legion } }
+	}
+	option = {
+		name = flavor_castanor.3.legion_6
+		goto = location_of_thundersworn
+		trigger = { any_hired_mercenary_company = { template = merc_castanorian_legion_6 } }
+		if = {
+			limit = {
+				any_hired_mercenary_company = {
+					template = merc_castanorian_legion_6
+					location = {
+						NOT = { has_province_modifier = castanor_legionway }
+						NOT = { has_province_modifier = castanor_building_legionway_survey }
+						NOT = { has_province_modifier = castanor_building_legionway_construction }
+						NOT = { province_group = golden_highway_bulwar_proper }
+						NOT = { province_group = golden_highway_far_bulwar }
+						NOT = { province_group = golden_highway_dhujat }
+						NOT = { province_group = golden_highway_far_salahad }
+						NOT = { province_group = golden_highway_yanshen_coast }
+						NOT = { province_group = golden_highway_rahen_coast }
+						NOT = { province_group = golden_highway_upper_yanshen }
+						NOT = { province_group = golden_highway_xianjie }
+						NOT = { province_group = triunic_road }
+						NOT = { has_terrain = dwarven_road }
+						any_neighbor_province = {
+							OR = {
+								has_province_modifier = castanor_legionway
+								has_province_modifier = castanor_building_legionway_survey
+								has_province_modifier = castanor_building_legionway_construction
+								AND = {
+									OR = {
+										has_province_modifier = federation_triunic_road
+										has_province_modifier = golden_highway
+									}
+									any_neighbor_province = {
+										OR = {
+											has_province_modifier = castanor_legionway
+											has_province_modifier = castanor_building_legionway_survey
+											has_province_modifier = castanor_building_legionway_construction
+										}
+									}
+								}
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			add_adm_power = -10
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_6 }
+				location = {
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+		else = { castanor_build_legionway_with_hired_legion = { event_target = thundersworn } }
+	}
+	option = {
+		name = flavor_castanor.3.legion_7
+		goto = location_of_magebound
+		trigger = { any_hired_mercenary_company = { template = merc_castanorian_legion_7 } }
+		if = {
+			limit = {
+				any_hired_mercenary_company = {
+					template = merc_castanorian_legion_7
+					location = {
+						NOT = { has_province_modifier = castanor_legionway }
+						NOT = { has_province_modifier = castanor_building_legionway_survey }
+						NOT = { has_province_modifier = castanor_building_legionway_construction }
+						NOT = { province_group = golden_highway_bulwar_proper }
+						NOT = { province_group = golden_highway_far_bulwar }
+						NOT = { province_group = golden_highway_dhujat }
+						NOT = { province_group = golden_highway_far_salahad }
+						NOT = { province_group = golden_highway_yanshen_coast }
+						NOT = { province_group = golden_highway_rahen_coast }
+						NOT = { province_group = golden_highway_upper_yanshen }
+						NOT = { province_group = golden_highway_xianjie }
+						NOT = { province_group = triunic_road }
+						NOT = { has_terrain = dwarven_road }
+						any_neighbor_province = {
+							OR = {
+								has_province_modifier = castanor_legionway
+								has_province_modifier = castanor_building_legionway_survey
+								has_province_modifier = castanor_building_legionway_construction
+								AND = {
+									OR = {
+										has_province_modifier = federation_triunic_road
+										has_province_modifier = golden_highway
+									}
+									any_neighbor_province = {
+										OR = {
+											has_province_modifier = castanor_legionway
+											has_province_modifier = castanor_building_legionway_survey
+											has_province_modifier = castanor_building_legionway_construction
+										}
+									}
+								}
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			add_adm_power = -10
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_7 }
+				location = {
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+		else = { castanor_build_legionway_with_hired_legion = { event_target = magebound_legion } }
+	}
+	option = {
+		name = flavor_castanor.3.legion_8
+		goto = location_of_hordebreaker
+		trigger = { any_hired_mercenary_company = { template = merc_castanorian_legion_8 } }
+		if = {
+			limit = {
+				any_hired_mercenary_company = {
+					template = merc_castanorian_legion_8
+					location = {
+						NOT = { has_province_modifier = castanor_legionway }
+						NOT = { has_province_modifier = castanor_building_legionway_survey }
+						NOT = { has_province_modifier = castanor_building_legionway_construction }
+						NOT = { province_group = golden_highway_bulwar_proper }
+						NOT = { province_group = golden_highway_far_bulwar }
+						NOT = { province_group = golden_highway_dhujat }
+						NOT = { province_group = golden_highway_far_salahad }
+						NOT = { province_group = golden_highway_yanshen_coast }
+						NOT = { province_group = golden_highway_rahen_coast }
+						NOT = { province_group = golden_highway_upper_yanshen }
+						NOT = { province_group = golden_highway_xianjie }
+						NOT = { province_group = triunic_road }
+						NOT = { has_terrain = dwarven_road }
+						any_neighbor_province = {
+							OR = {
+								has_province_modifier = castanor_legionway
+								has_province_modifier = castanor_building_legionway_survey
+								has_province_modifier = castanor_building_legionway_construction
+								AND = {
+									OR = {
+										has_province_modifier = federation_triunic_road
+										has_province_modifier = golden_highway
+									}
+									any_neighbor_province = {
+										OR = {
+											has_province_modifier = castanor_legionway
+											has_province_modifier = castanor_building_legionway_survey
+											has_province_modifier = castanor_building_legionway_construction
+										}
+									}
+								}
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			add_adm_power = -10
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_8 }
+				location = {
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+		else = { castanor_build_legionway_with_hired_legion = { event_target = hordebreaker_legion } }
+	}
+
+	after = {
+		if = {
+			limit = { has_country_flag = build_legionway_menu_open }
+			country_event = { id = bloody_castanor.2001 }
+		}
+	}
+}
+country_event = {
+	id = bloody_castanor.2001
+	title = flavor_castanor.3.t
+	desc = flavor_castanor.3.desc
+	picture = LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = build_legionway_menu_open
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_1 }
+				save_event_target_as = dragonflame_legion
+				location = { save_event_target_as = location_of_dragonflame }
+			}
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_2 }
+				save_event_target_as = sword_legion
+				location = { save_event_target_as = location_of_sword }
+			}
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_3 }
+				save_event_target_as = shield_legion
+				location = { save_event_target_as = location_of_shield }
+			}
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_4 }
+				save_event_target_as = giantsbane_legion
+				location = { save_event_target_as = location_of_giantsbane }
+			}
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_5 }
+				save_event_target_as = bridgeburners_legion
+				location = { save_event_target_as = location_of_bridgeburners }
+			}
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_6 }
+				save_event_target_as = thundersworn_legion
+				location = { save_event_target_as = location_of_thundersworn }
+			}
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_7 }
+				save_event_target_as = magebound_legion
+				location = { save_event_target_as = location_of_magebound }
+			}
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_8 }
+				save_event_target_as = hordebreaker_legion
+				location = { save_event_target_as = location_of_hordebreaker }
+			}
+		}
+	}
+
+	# Nevermind
+	option = {
+		name = flavor_castanor_go_back
+		highlight = yes
+		clr_country_flag = build_legionway_menu_open
+	}
+	# Connect Inner Castanor
+	option = {
+		name = flavor_castanor.3.a
+		trigger = {
+			legionway_inner_castanor = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_inner_castanor = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_inner_castanor
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_inner_castanor } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_inner_castanor
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Connect South Castanor
+	option = {
+		name = flavor_castanor.3.b
+		trigger = {
+			legionway_south_castanor = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_south_castanor = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_south_castanor
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_south_castanor } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_south_castanor
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Connect West Castanor
+	option = {
+		name = flavor_castanor.3.c
+		trigger = {
+			legionway_west_castanor = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_west_castanor = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_west_castanor
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_west_castanor } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_west_castanor
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Castanor -> Bal Vroren
+	option = {
+		name = flavor_castanor.3.d
+		goto = 740 #Bal Vroren
+		trigger = {
+			legionway_inner_castanor = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			legionway_to_bal_vroren = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_to_bal_vroren = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_to_bal_vroren
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_to_bal_vroren } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_to_bal_vroren
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+
+	# Bal Vroren -> Bal Konungrhaven
+	option = {
+		name = flavor_castanor.3.e
+		trigger = {
+			legionway_to_bal_vroren = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			legionway_bal_vroren_to_konungrhaven_citadel = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_bal_vroren_to_konungrhaven_citadel = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+			956 = { # Konungrhaven
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_bal_vroren_to_konungrhaven_citadel
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_bal_vroren_to_konungrhaven_citadel } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_bal_vroren_to_konungrhaven_citadel
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Mire -> Bal Vertesk
+	option = {
+		name = flavor_castanor.3.f
+		trigger = {
+			legionway_west_castanor = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			legionway_bal_mire_to_bal_vertesk = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_bal_mire_to_bal_vertesk = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_bal_mire_to_bal_vertesk
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_bal_mire_to_bal_vertesk } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_bal_mire_to_bal_vertesk
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Vertesk -> Bal Drachonarcen
+	# Fuuuuuuuuck why are there so many
+	option = {
+		name = flavor_castanor.3.g
+		trigger = {
+			183 = { # Foddimodd
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+			legionway_bal_mire_to_bal_vertesk = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			legionway_bal_vertesk_to_foddimad_citadel = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_bal_vertesk_to_foddimad_citadel = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_bal_vertesk_to_foddimad_citadel
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_bal_vertesk_to_foddimad_citadel } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_bal_vertesk_to_foddimad_citadel
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Vertesk -> Bal Hyl
+	option = {
+		name = flavor_castanor.3.h
+		trigger = {
+			legionway_bal_mire_to_bal_vertesk = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			legionway_bal_vertesk_to_bal_hyl = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_bal_vertesk_to_bal_hyl = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_bal_vertesk_to_bal_hyl
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_bal_vertesk_to_bal_hyl } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_bal_vertesk_to_bal_hyl
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Hyl -> West Castanor
+	option = {
+		name = flavor_castanor.3.i
+		trigger = {
+			legionway_west_castanor = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			legionway_forlorn_vale = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_forlorn_vale = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_forlorn_vale
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_forlorn_vale } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_forlorn_vale
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Hyl -> Bal Dostan
+	option = {
+		name = flavor_castanor.3.j
+		trigger = {
+			legionway_south_castanor = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			legionway_bal_dostan_to_bal_hyl = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_bal_dostan_to_bal_hyl = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_bal_dostan_to_bal_hyl
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_bal_dostan_to_bal_hyl } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_bal_dostan_to_bal_hyl
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Drachonarcen -> Redfort Citadel
+	option = {
+		name = flavor_castanor.3.k1
+		trigger = {
+			legionway_bal_vertesk_to_foddimad_citadel = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			68 = {
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+			legionway_dragon_coast_to_redfort_citadel = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_dragon_coast_to_redfort_citadel = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_dragon_coast_to_redfort_citadel
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_dragon_coast_to_redfort_citadel } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_dragon_coast_to_redfort_citadel
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Drachonarcen -> Daromsfort Citadel
+	option = {
+		name = flavor_castanor.3.k2
+		trigger = {
+			legionway_bal_vertesk_to_foddimad_citadel = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			58 = {
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+			legionway_dragon_coast_to_daromsfort_citadel = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_dragon_coast_to_daromsfort_citadel = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_dragon_coast_to_daromsfort_citadel
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_dragon_coast_to_daromsfort_citadel } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_dragon_coast_to_daromsfort_citadel
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Dostan -> Bal Ouord
+	option = {
+		name = flavor_castanor.3.l
+		trigger = {
+			legionway_south_castanor = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			legionway_to_bal_ouord = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_to_bal_ouord = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_to_bal_ouord
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_to_bal_ouord } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_to_bal_ouord
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Ouord -> Gelkalis
+	option = {
+		name = flavor_castanor.3.m
+		trigger = {
+			legionway_to_bal_ouord = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			665 = { # Gelkalis
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+			legionway_bal_ouord_to_gelkalis = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_bal_ouord_to_gelkalis = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_bal_ouord_to_gelkalis
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_bal_ouord_to_gelkalis } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_bal_ouord_to_gelkalis
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Gelkalis -> Anzabad
+	option = {
+		name = flavor_castanor.3.n
+		trigger = {
+			legionway_bal_ouord_to_gelkalis = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			560 = { # Anzabad
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+			legionway_gelkalis_to_anzabad = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_gelkalis_to_anzabad = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_gelkalis_to_anzabad
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_gelkalis_to_anzabad } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_gelkalis_to_anzabad
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Gelkalis -> Azka-Sur
+	option = {
+		name = flavor_castanor.3.o
+		trigger = {
+			legionway_bal_ouord_to_gelkalis = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			643 = { # Azka-Sur
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+			legionway_gelkalis_to_azka_sur = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_gelkalis_to_azka_sur = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+			golden_highway_far_bulwar = {
+				type = all
+				has_province_modifier = golden_highway
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_gelkalis_to_azka_sur
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_gelkalis_to_azka_sur } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_gelkalis_to_azka_sur
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Anzabad -> Bal Cat
+	option = {
+		name = flavor_castanor.3.p
+		trigger = {
+			legionway_gelkalis_to_anzabad = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			468 = { # Sorrowgate
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+			legionway_anzabad_to_sorrowgate = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_anzabad_to_sorrowgate = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+			golden_highway_bulwar_proper = {
+				type = all
+				has_province_modifier = golden_highway
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_anzabad_to_sorrowgate
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_anzabad_to_sorrowgate } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_anzabad_to_sorrowgate
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Bal Hefun -> Bal Cat
+	option = {
+		name = flavor_castanor.3.q
+		goto = 468 #Sorrowgate/Bal Ledgaht
+		trigger = {
+			legionway_gelkalis_to_azka_sur = {
+				type = all
+				has_province_modifier = castanor_legionway
+			}
+			468 = {
+				OR = {
+					has_province_modifier = castanorian_citadel
+					has_province_modifier = castanor_citadel_local_admin_center
+					has_province_modifier = castanor_new_citadel
+				}
+			}
+			legionway_gelkalis_to_sorrowgate = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legionway_gelkalis_to_sorrowgate = {
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+			}
+			golden_highway_bulwar_proper = {
+				type = all
+				has_province_modifier = golden_highway
+			}
+		}
+		custom_tooltip = castanor_survey_cost_predefined_tt
+		every_owned_province = {
+			limit = { 
+				NOT = { has_province_modifier = castanor_legionway }
+				NOT = { has_province_modifier = castanor_building_legionway_survey }
+				NOT = { has_province_modifier = castanor_building_legionway_construction }
+				country_or_non_sovereign_subject_holds = ROOT
+				province_group = legionway_gelkalis_to_sorrowgate
+			}
+			custom_tooltip = castanor_start_legionway_survey_tt
+			hidden_effect = {
+				owner = { add_adm_power = -5 }
+				add_permanent_province_modifier = {
+					name = castanor_building_legionway_survey
+					duration = -1
+				}
+				set_province_flag = legionway_construction_prov_@ROOT
+			}
+		}
+		every_subject_country = {
+			limit = { any_owned_province = { province_group = legionway_gelkalis_to_sorrowgate } }
+			every_owned_province = {
+				limit = { 
+					NOT = { has_province_modifier = castanor_legionway }
+					NOT = { has_province_modifier = castanor_building_legionway_survey }
+					NOT = { has_province_modifier = castanor_building_legionway_construction }
+					country_or_non_sovereign_subject_holds = ROOT
+					province_group = legionway_gelkalis_to_sorrowgate
+				}
+				custom_tooltip = castanor_start_legionway_survey_tt
+				hidden_effect = {
+					B32 = { add_adm_power = -5 }
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+	}
+	# Manual with Legion 1
+	option = {
+		name = flavor_castanor.3.legion_1
+		goto = location_of_dragonflame
+		trigger = { any_hired_mercenary_company = { template = merc_castanorian_legion_1 } }
+		if = {
+			limit = {
+				any_hired_mercenary_company = {
+					template = merc_castanorian_legion_1
+					location = {
+						NOT = { has_province_modifier = castanor_legionway }
+						NOT = { has_province_modifier = castanor_building_legionway_survey }
+						NOT = { has_province_modifier = castanor_building_legionway_construction }
+						NOT = { province_group = golden_highway_bulwar_proper }
+						NOT = { province_group = golden_highway_far_bulwar }
+						NOT = { province_group = golden_highway_dhujat }
+						NOT = { province_group = golden_highway_far_salahad }
+						NOT = { province_group = golden_highway_yanshen_coast }
+						NOT = { province_group = golden_highway_rahen_coast }
+						NOT = { province_group = golden_highway_upper_yanshen }
+						NOT = { province_group = golden_highway_xianjie }
+						NOT = { province_group = triunic_road }
+						NOT = { has_terrain = dwarven_road }
+						any_neighbor_province = {
+							OR = {
+								has_province_modifier = castanor_legionway
+								has_province_modifier = castanor_building_legionway_survey
+								has_province_modifier = castanor_building_legionway_construction
+								AND = {
+									OR = {
+										has_province_modifier = federation_triunic_road
+										has_province_modifier = golden_highway
+									}
+									any_neighbor_province = {
+										OR = {
+											has_province_modifier = castanor_legionway
+											has_province_modifier = castanor_building_legionway_survey
+											has_province_modifier = castanor_building_legionway_construction
+										}
+									}
+								}
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			add_adm_power = -10
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_1 }
+				location = {
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+		else = { castanor_build_legionway_with_hired_legion = { event_target = dragonflame_legion } }
+	}
+	# Manual with Legion 2
+	option = {
+		name = flavor_castanor.3.legion_2
+		goto = location_of_sword
+		trigger = { any_hired_mercenary_company = { template = merc_castanorian_legion_2 } }
+		if = {
+			limit = {
+				event_target:sword_legion = {
+					location = {
+						NOT = { has_province_modifier = castanor_legionway }
+						NOT = { has_province_modifier = castanor_building_legionway_survey }
+						NOT = { has_province_modifier = castanor_building_legionway_construction }
+						NOT = { province_group = golden_highway_bulwar_proper }
+						NOT = { province_group = golden_highway_far_bulwar }
+						NOT = { province_group = golden_highway_dhujat }
+						NOT = { province_group = golden_highway_far_salahad }
+						NOT = { province_group = golden_highway_yanshen_coast }
+						NOT = { province_group = golden_highway_rahen_coast }
+						NOT = { province_group = golden_highway_upper_yanshen }
+						NOT = { province_group = golden_highway_xianjie }
+						NOT = { province_group = triunic_road }
+						NOT = { has_terrain = dwarven_road }
+						any_neighbor_province = {
+							OR = {
+								has_province_modifier = castanor_legionway
+								has_province_modifier = castanor_building_legionway_survey
+								has_province_modifier = castanor_building_legionway_construction
+								AND = {
+									OR = {
+										has_province_modifier = federation_triunic_road
+										has_province_modifier = golden_highway
+									}
+									any_neighbor_province = {
+										OR = {
+											has_province_modifier = castanor_legionway
+											has_province_modifier = castanor_building_legionway_survey
+											has_province_modifier = castanor_building_legionway_construction
+										}
+									}
+								}
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			add_adm_power = -10
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_2 }
+				location = {
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+		# build the tooltip
+		else = { castanor_build_legionway_with_hired_legion = { event_target = sword_legion } }
+	}
+	# You get the idea I hope
+	option = {
+		name = flavor_castanor.3.legion_3
+		goto = location_of_shield
+		trigger = { any_hired_mercenary_company = { template = merc_castanorian_legion_3 } }
+		if = {
+			limit = {
+				any_hired_mercenary_company = {
+					template = merc_castanorian_legion_3
+					location = {
+						NOT = { has_province_modifier = castanor_legionway }
+						NOT = { has_province_modifier = castanor_building_legionway_survey }
+						NOT = { has_province_modifier = castanor_building_legionway_construction }
+						NOT = { province_group = golden_highway_bulwar_proper }
+						NOT = { province_group = golden_highway_far_bulwar }
+						NOT = { province_group = golden_highway_dhujat }
+						NOT = { province_group = golden_highway_far_salahad }
+						NOT = { province_group = golden_highway_yanshen_coast }
+						NOT = { province_group = golden_highway_rahen_coast }
+						NOT = { province_group = golden_highway_upper_yanshen }
+						NOT = { province_group = golden_highway_xianjie }
+						NOT = { province_group = triunic_road }
+						NOT = { has_terrain = dwarven_road }
+						any_neighbor_province = {
+							OR = {
+								has_province_modifier = castanor_legionway
+								has_province_modifier = castanor_building_legionway_survey
+								has_province_modifier = castanor_building_legionway_construction
+								AND = {
+									OR = {
+										has_province_modifier = federation_triunic_road
+										has_province_modifier = golden_highway
+									}
+									any_neighbor_province = {
+										OR = {
+											has_province_modifier = castanor_legionway
+											has_province_modifier = castanor_building_legionway_survey
+											has_province_modifier = castanor_building_legionway_construction
+										}
+									}
+								}
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			add_adm_power = -10
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_3 }
+				location = {
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+		else = { castanor_build_legionway_with_hired_legion = { event_target = shield_legion } }
+	}
+	option = {
+		name = flavor_castanor.3.legion_4
+		goto = location_of_giantsbane
+		trigger = { any_hired_mercenary_company = { template = merc_castanorian_legion_4 } }
+		if = {
+			limit = {
+				any_hired_mercenary_company = {
+					template = merc_castanorian_legion_4
+					location = {
+						NOT = { has_province_modifier = castanor_legionway }
+						NOT = { has_province_modifier = castanor_building_legionway_survey }
+						NOT = { has_province_modifier = castanor_building_legionway_construction }
+						NOT = { province_group = golden_highway_bulwar_proper }
+						NOT = { province_group = golden_highway_far_bulwar }
+						NOT = { province_group = golden_highway_dhujat }
+						NOT = { province_group = golden_highway_far_salahad }
+						NOT = { province_group = golden_highway_yanshen_coast }
+						NOT = { province_group = golden_highway_rahen_coast }
+						NOT = { province_group = golden_highway_upper_yanshen }
+						NOT = { province_group = golden_highway_xianjie }
+						NOT = { province_group = triunic_road }
+						NOT = { has_terrain = dwarven_road }
+						any_neighbor_province = {
+							OR = {
+								has_province_modifier = castanor_legionway
+								has_province_modifier = castanor_building_legionway_survey
+								has_province_modifier = castanor_building_legionway_construction
+								AND = {
+									OR = {
+										has_province_modifier = federation_triunic_road
+										has_province_modifier = golden_highway
+									}
+									any_neighbor_province = {
+										OR = {
+											has_province_modifier = castanor_legionway
+											has_province_modifier = castanor_building_legionway_survey
+											has_province_modifier = castanor_building_legionway_construction
+										}
+									}
+								}
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			add_adm_power = -10
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_4 }
+				location = {
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+		else = { castanor_build_legionway_with_hired_legion = { event_target = giantsbane_legion } }
+	}
+	option = {
+		name = flavor_castanor.3.legion_5
+		goto = location_of_bridgeburners
+		trigger = { any_hired_mercenary_company = { template = merc_castanorian_legion_5 } }
+		if = {
+			limit = {
+				any_hired_mercenary_company = {
+					template = merc_castanorian_legion_5
+					location = {
+						NOT = { has_province_modifier = castanor_legionway }
+						NOT = { has_province_modifier = castanor_building_legionway_survey }
+						NOT = { has_province_modifier = castanor_building_legionway_construction }
+						NOT = { province_group = golden_highway_bulwar_proper }
+						NOT = { province_group = golden_highway_far_bulwar }
+						NOT = { province_group = golden_highway_dhujat }
+						NOT = { province_group = golden_highway_far_salahad }
+						NOT = { province_group = golden_highway_yanshen_coast }
+						NOT = { province_group = golden_highway_rahen_coast }
+						NOT = { province_group = golden_highway_upper_yanshen }
+						NOT = { province_group = golden_highway_xianjie }
+						NOT = { province_group = triunic_road }
+						NOT = { has_terrain = dwarven_road }
+						any_neighbor_province = {
+							OR = {
+								has_province_modifier = castanor_legionway
+								has_province_modifier = castanor_building_legionway_survey
+								has_province_modifier = castanor_building_legionway_construction
+								AND = {
+									OR = {
+										has_province_modifier = federation_triunic_road
+										has_province_modifier = golden_highway
+									}
+									any_neighbor_province = {
+										OR = {
+											has_province_modifier = castanor_legionway
+											has_province_modifier = castanor_building_legionway_survey
+											has_province_modifier = castanor_building_legionway_construction
+										}
+									}
+								}
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			add_adm_power = -10
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_5 }
+				location = {
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+		else = { castanor_build_legionway_with_hired_legion = { event_target = bridgeburners_legion } }
+	}
+	option = {
+		name = flavor_castanor.3.legion_6
+		goto = location_of_thundersworn
+		trigger = { any_hired_mercenary_company = { template = merc_castanorian_legion_6 } }
+		if = {
+			limit = {
+				any_hired_mercenary_company = {
+					template = merc_castanorian_legion_6
+					location = {
+						NOT = { has_province_modifier = castanor_legionway }
+						NOT = { has_province_modifier = castanor_building_legionway_survey }
+						NOT = { has_province_modifier = castanor_building_legionway_construction }
+						NOT = { province_group = golden_highway_bulwar_proper }
+						NOT = { province_group = golden_highway_far_bulwar }
+						NOT = { province_group = golden_highway_dhujat }
+						NOT = { province_group = golden_highway_far_salahad }
+						NOT = { province_group = golden_highway_yanshen_coast }
+						NOT = { province_group = golden_highway_rahen_coast }
+						NOT = { province_group = golden_highway_upper_yanshen }
+						NOT = { province_group = golden_highway_xianjie }
+						NOT = { province_group = triunic_road }
+						NOT = { has_terrain = dwarven_road }
+						any_neighbor_province = {
+							OR = {
+								has_province_modifier = castanor_legionway
+								has_province_modifier = castanor_building_legionway_survey
+								has_province_modifier = castanor_building_legionway_construction
+								AND = {
+									OR = {
+										has_province_modifier = federation_triunic_road
+										has_province_modifier = golden_highway
+									}
+									any_neighbor_province = {
+										OR = {
+											has_province_modifier = castanor_legionway
+											has_province_modifier = castanor_building_legionway_survey
+											has_province_modifier = castanor_building_legionway_construction
+										}
+									}
+								}
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			add_adm_power = -10
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_6 }
+				location = {
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+		else = { castanor_build_legionway_with_hired_legion = { event_target = thundersworn } }
+	}
+	option = {
+		name = flavor_castanor.3.legion_7
+		goto = location_of_magebound
+		trigger = { any_hired_mercenary_company = { template = merc_castanorian_legion_7 } }
+		if = {
+			limit = {
+				any_hired_mercenary_company = {
+					template = merc_castanorian_legion_7
+					location = {
+						NOT = { has_province_modifier = castanor_legionway }
+						NOT = { has_province_modifier = castanor_building_legionway_survey }
+						NOT = { has_province_modifier = castanor_building_legionway_construction }
+						NOT = { province_group = golden_highway_bulwar_proper }
+						NOT = { province_group = golden_highway_far_bulwar }
+						NOT = { province_group = golden_highway_dhujat }
+						NOT = { province_group = golden_highway_far_salahad }
+						NOT = { province_group = golden_highway_yanshen_coast }
+						NOT = { province_group = golden_highway_rahen_coast }
+						NOT = { province_group = golden_highway_upper_yanshen }
+						NOT = { province_group = golden_highway_xianjie }
+						NOT = { province_group = triunic_road }
+						NOT = { has_terrain = dwarven_road }
+						any_neighbor_province = {
+							OR = {
+								has_province_modifier = castanor_legionway
+								has_province_modifier = castanor_building_legionway_survey
+								has_province_modifier = castanor_building_legionway_construction
+								AND = {
+									OR = {
+										has_province_modifier = federation_triunic_road
+										has_province_modifier = golden_highway
+									}
+									any_neighbor_province = {
+										OR = {
+											has_province_modifier = castanor_legionway
+											has_province_modifier = castanor_building_legionway_survey
+											has_province_modifier = castanor_building_legionway_construction
+										}
+									}
+								}
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			add_adm_power = -10
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_7 }
+				location = {
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+		else = { castanor_build_legionway_with_hired_legion = { event_target = magebound_legion } }
+	}
+	option = {
+		name = flavor_castanor.3.legion_8
+		goto = location_of_hordebreaker
+		trigger = { any_hired_mercenary_company = { template = merc_castanorian_legion_8 } }
+		if = {
+			limit = {
+				any_hired_mercenary_company = {
+					template = merc_castanorian_legion_8
+					location = {
+						NOT = { has_province_modifier = castanor_legionway }
+						NOT = { has_province_modifier = castanor_building_legionway_survey }
+						NOT = { has_province_modifier = castanor_building_legionway_construction }
+						NOT = { province_group = golden_highway_bulwar_proper }
+						NOT = { province_group = golden_highway_far_bulwar }
+						NOT = { province_group = golden_highway_dhujat }
+						NOT = { province_group = golden_highway_far_salahad }
+						NOT = { province_group = golden_highway_yanshen_coast }
+						NOT = { province_group = golden_highway_rahen_coast }
+						NOT = { province_group = golden_highway_upper_yanshen }
+						NOT = { province_group = golden_highway_xianjie }
+						NOT = { province_group = triunic_road }
+						NOT = { has_terrain = dwarven_road }
+						any_neighbor_province = {
+							OR = {
+								has_province_modifier = castanor_legionway
+								has_province_modifier = castanor_building_legionway_survey
+								has_province_modifier = castanor_building_legionway_construction
+								AND = {
+									OR = {
+										has_province_modifier = federation_triunic_road
+										has_province_modifier = golden_highway
+									}
+									any_neighbor_province = {
+										OR = {
+											has_province_modifier = castanor_legionway
+											has_province_modifier = castanor_building_legionway_survey
+											has_province_modifier = castanor_building_legionway_construction
+										}
+									}
+								}
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			add_adm_power = -10
+			random_hired_mercenary_company = {
+				limit = { template = merc_castanorian_legion_8 }
+				location = {
+					add_permanent_province_modifier = {
+						name = castanor_building_legionway_survey
+						duration = -1
+					}
+					set_province_flag = legionway_construction_prov_@ROOT
+				}
+			}
+		}
+		else = { castanor_build_legionway_with_hired_legion = { event_target = hordebreaker_legion } }
+	}
+
+	after = {
+		if = {
+			limit = { has_country_flag = build_legionway_menu_open }
+			country_event = { id = bloody_castanor.2000 }
+		}
+	}
+}
+##打包来的石城重生
+# Castonath in flux/frenzy of building
+country_event = {
+	id = bloody_castanor.2002
+	title = bloody_castanor.2002.t
+	desc = bloody_castanor.2002.desc
+	picture = BIG_ARABIAN_CITY_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		has_estate = estate_artificers
+		mission_completed = anbi_ab1_the_neon_city
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = bloody_castanor.2002.a
+		castonath_area = {
+			add_province_modifier = {
+				name = castanor_castonath_frenzied_development
+				duration = 1825
+			}
+			add_province_modifier = {
+				name = castanor_castonath_artificery_revolution
+				duration = -1
+			}
+			add_base_manpower = 1
+			add_base_production = 1
+			add_base_tax = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = bloody_castanor.2003
+				days = 730	random = 180
+			}
+		}
+	}
+}
+# Old Bazaar - different races establish large merchant quarters
+country_event = {
+	id = bloody_castanor.2003
+	title = bloody_castanor.2003.t
+	desc = bloody_castanor.2003.desc
+	picture = BIG_ARABIAN_CITY_eventPicture
+	goto = 832
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = { NOT = { area = castonath_area } }
+				save_event_target_as = migrate_from_province
+			}
+			random_owned_province = {
+				limit = {
+					NOT = { area = castonath_area }
+					calc_true_if = {
+						amount = 1
+						has_any_elven_pop_trigger = yes
+						has_any_dwarven_pop_trigger = yes
+						has_any_gnomish_pop_trigger = yes
+						has_any_halfling_pop_trigger = yes
+					}
+				}
+				save_event_target_as = migrate_from_province
+			}
+			random_owned_province = {
+				limit = {
+					NOT = { area = castonath_area }
+					calc_true_if = {
+						amount = 2
+						has_any_elven_pop_trigger = yes
+						has_any_dwarven_pop_trigger = yes
+						has_any_gnomish_pop_trigger = yes
+						has_any_halfling_pop_trigger = yes
+					}
+				}
+				save_event_target_as = migrate_from_province
+			}
+			random_owned_province = {
+				limit = {
+					NOT = { area = castonath_area }
+					calc_true_if = {
+						amount = 3
+						has_any_elven_pop_trigger = yes
+						has_any_dwarven_pop_trigger = yes
+						has_any_gnomish_pop_trigger = yes
+						has_any_halfling_pop_trigger = yes
+					}
+				}
+				save_event_target_as = migrate_from_province
+			}
+			random_owned_province = {
+				limit = {
+					NOT = { area = castonath_area }
+					calc_true_if = {
+						amount = 4
+						has_any_elven_pop_trigger = yes
+						has_any_dwarven_pop_trigger = yes
+						has_any_gnomish_pop_trigger = yes
+						has_any_halfling_pop_trigger = yes
+					}
+				}
+				save_event_target_as = migrate_from_province
+			}
+		}
+	}
+
+	option = {
+		name = bloody_castanor.2003.a
+		832 = {
+			if = {
+				limit = { has_large_elven_minority_trigger = yes }
+				add_base_tax = 1
+			}
+			else = { add_elven_minority_size_effect = yes }
+			if = {
+				limit = { has_large_dwarven_minority_trigger = yes }
+				add_base_production = 1
+			}
+			else = { add_dwarven_minority_size_effect = yes }
+			if = {
+				limit = { has_large_gnomish_minority_trigger = yes }
+				add_base_production = 1
+			}
+			else = { add_gnomish_minority_size_effect = yes }
+			if = {
+				limit = { has_large_halfling_minority_trigger = yes }
+				add_base_tax = 1
+			}
+			else = { add_halfling_minority_size_effect = yes }
+		}
+		event_target:migrate_from_province = {
+			add_base_tax = -1
+			add_base_manpower = -1
+		}
+		hidden_effect = {
+			country_event = {
+				id = bloody_castanor.2004
+				days = 730	random = 180
+			}
+		}
+	}
+}
+# Silverfall - 'elevators', lifts, pulleys, ect.
+country_event = {
+	id = bloody_castanor.2004
+	title = bloody_castanor.2004.t
+	desc = bloody_castanor.2004.desc
+	picture = BIG_ARABIAN_CITY_eventPicture
+	goto = 832
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.2004.a
+		832 = {
+			add_base_production = 3
+			add_province_modifier = {
+				name = castanor_castonath_silverfall_power
+				duration = 18250
+			}
+			if = {
+				limit = { is_institution_enabled = industrialization }
+				add_institution_embracement = {
+					which = industrialization
+					value = 33
+				}
+			}
+			if = {
+				limit = { is_institution_enabled = manufactories }
+				add_institution_embracement = {
+					which = manufactories
+					value = 33
+				}
+			}
+		}
+		add_years_of_income = -0.33
+		hidden_effect = {
+			country_event = {
+				id = bloody_castanor.2005
+				days = 730	random = 180
+			}
+		}
+	}
+}
+# Dragonforge - use residual heat/geothermal energy to power early steam engines and shit
+country_event = {
+	id = bloody_castanor.2005
+	title = bloody_castanor.2005.t
+	desc = bloody_castanor.2005.desc
+	picture = BIG_ARABIAN_CITY_eventPicture
+	goto = 831
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.2005.a
+		831 = {
+			add_base_production = 3
+			add_province_modifier = {
+				name = castanor_castonath_dragonforge_steamworks
+				duration = 18250
+			}
+			if = {
+				limit = { is_institution_enabled = industrialization }
+				add_institution_embracement = {
+					which = industrialization
+					value = 33
+				}
+			}
+			if = {
+				limit = { is_institution_enabled = manufactories }
+				add_institution_embracement = {
+					which = manufactories
+					value = 33
+				}
+			}
+		}
+		add_years_of_income = -0.33
+		small_decrease_of_dwarven_tolerance_effect = yes
+		hidden_effect = {
+			country_event = {
+				id = bloody_castanor.2006
+				days = 730	random = 180
+			}
+		}
+	}
+}
+# The Crags - general buildings + population boom
+country_event = {
+	id = bloody_castanor.2006
+	title = bloody_castanor.2006.t
+	desc = bloody_castanor.2006.desc
+	picture = BIG_ARABIAN_CITY_eventPicture
+	goto = 831
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.2006.a
+		831 = {
+			add_base_manpower = 1
+			add_base_tax = 2
+			add_province_modifier = {
+				name = castanor_castonath_crags_influx_of_workers
+				duration = 7300
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = bloody_castanor.2007
+				days = 730	random = 180
+			}
+		}
+	}
+}
+# Legion Square - center of universities and shit, taking advantage of sprawl of buildings and empty barracks as dorms/classrooms/ect.
+country_event = {
+	id = bloody_castanor.2007
+	title = bloody_castanor.2007.t
+	desc = bloody_castanor.2007.desc
+	picture = UNIVERSITY_eventPicture
+	goto = 831
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.2007.a
+		831 = {
+			if = {
+				limit = { NOT = { has_building = university } }
+				add_building = university
+			}
+			else = {
+				owner = {
+					add_innovativeness_small_effect = yes
+				}
+			}
+			add_province_modifier = {
+				name = castanor_castonath_center_of_universities
+				duration = -1
+			}
+			if = {
+				limit = {
+					is_institution_enabled = enlightenment
+					NOT = { enlightenment = 100 }
+				}
+				add_institution_embracement = {
+					which = enlightenment
+					value = 50
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { owner = { innovativeness = 100 } }
+				}
+				owner = { add_innovativeness_big_effect = yes }
+			}
+			else = {
+				owner = { add_mil_power = 50 }
+				owner = { add_dip_power = 50 }
+				owner = { add_adm_power = 50 }
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = bloody_castanor.2008
+				days = 730	random = 180
+			}
+		}
+	}
+}
+# Upper District - gondolas and automatic carriages going between towers and shit
+country_event = {
+	id = bloody_castanor.2008
+	title = bloody_castanor.2008.t
+	desc = bloody_castanor.2008.desc
+	picture = BIG_ARABIAN_CITY_eventPicture
+	goto = 833
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.2008.a
+		833 = {
+			add_base_tax = 3
+			add_province_modifier = {
+				name = castanor_castonath_patrician_gondolas_and_carriages
+				duration = 18250
+			}
+		}
+		add_years_of_income = -0.25
+		hidden_effect = {
+			country_event = {
+				id = bloody_castanor.2009
+				days = 730	random = 180
+			}
+		}
+	}
+}
+# Pantheonway - build a museum and make Pantheonway the center of culture and shit
+country_event = {
+	id = bloody_castanor.2009
+	title = bloody_castanor.2009.t
+	desc = bloody_castanor.2009.desc
+	picture = BIG_ARABIAN_CITY_eventPicture
+	goto = 833
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.2009.a
+		833 = {
+			add_province_modifier = {
+				name = castanor_castonath_pantheonway_museum
+				duration = 18250
+			}
+			add_base_tax = 2
+			if = {
+				limit = { is_institution_enabled = enlightenment }
+				add_institution_embracement = {
+					which = enlightenment
+					value = 50
+				}
+			}
+		}
+		add_prestige_excess_to_splendour_effect = { VAL = 10 }
+		hidden_effect = {
+			country_event = {
+				id = bloody_castanor.2010
+				days = 730	random = 180
+			}
+		}
+	}
+}
+# Imperial Quarter - build the Imperial Gardens
+country_event = {
+	id = bloody_castanor.2010
+	title = bloody_castanor.2010.t
+	desc = bloody_castanor.2010.desc
+	picture = GOOD_WITH_MONARCH_eventPicture
+	goto = 833
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.2010.a
+		add_years_of_income = -0.5
+		add_country_modifier = {
+			name = castanor_finished_modernizing_castonath_best
+			duration = -1
+		}
+		833 = {
+			add_province_modifier = {
+				name = castanor_castonath_imperial_gardens
+				duration = 18250
+			}
+		}
+	}
+}
+
+##风味事件
+country_event = {
+	id = bloody_castanor.3000
+	title = bloody_castanor.3000.t
+	picture = LOOMING_DEATH_eventPicture
+	desc = bloody_castanor.3000.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.3000.a
+		change_price = {
+			trade_goods = cloves
+			key = bloody_castanor.3000.d
+			value = 0.5
+			duration = -1
+		}
+	}
+}
+country_event = {
+	id = bloody_castanor.3001
+	title = bloody_castanor.3001.t
+	picture = FARMING_eventPicture
+	desc = bloody_castanor.3001.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.3001.a
+		change_price = {
+			trade_goods = livestock
+			key = bloody_castanor.3001.d
+			value = 0.5
+			duration = -1
+		}
+	}
+}
+country_event = {
+	id = bloody_castanor.3002
+	title = bloody_castanor.3002.t
+	picture = FARMING_eventPicture
+	desc = bloody_castanor.3002.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.3002.a
+		every_owned_province = {
+			limit = {
+				trade_goods = tropical_wood
+			}
+			add_permanent_province_modifier = {
+				name = anbi_ab1_grill_xianling
+				duration = -1
+			}
+		}
+	}
+}
+country_event = {
+	id = bloody_castanor.3003
+	title = bloody_castanor.3003.t
+	picture = KING_DOING_GREAT_eventPicture
+	desc = bloody_castanor.3003.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.3003.a
+		add_country_modifier = {
+			name = anbi_abi_kfc_is_delicious
+			duration = -1
+		}
+	}
+}
+
+#战争与和平
+country_event = {
+	id = bloody_castanor.3004
+	title = bloody_castanor.3004.t
+	picture = FARMING_eventPicture
+	desc = bloody_castanor.3004.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.3004.a
+		add_war_exhaustion = -2
+		set_country_flag = anbi_ab1_the_great_war_first_death
+	}
+}
+country_event = {
+	id = bloody_castanor.3005
+	title = bloody_castanor.3005.t
+	picture = FARMING_eventPicture
+	desc = bloody_castanor.3005.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.3005.a
+		add_war_exhaustion = -2
+		add_years_of_income = -0.25
+		set_country_flag = anbi_ab1_the_great_war_second_death
+	}
+}
+country_event = {
+	id = bloody_castanor.3006
+	title = bloody_castanor.3006.t
+	picture = FARMING_eventPicture
+	desc = bloody_castanor.3006.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.3006.a
+		add_war_exhaustion = 1
+		add_manpower = 25
+		set_country_flag = anbi_ab1_the_great_war_third_death
+	}
+}
+country_event = {
+	id = bloody_castanor.3007
+	title = bloody_castanor.3007.t
+	picture = FARMING_eventPicture
+	desc = bloody_castanor.3007.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.3007.a
+		add_war_exhaustion = -2
+		set_country_flag = anbi_ab1_the_great_war_last_death
+		833 = {
+			add_permanent_province_modifier = {
+				name = anbi_ab1_the_great_war_monument
+				duration = -1
+			}
+		}
+	}
+}
+
+
+#捅死你捅死你捅死你捅死你捅死你捅死你捅死你捅死你捅死你
+country_event = {
+	id = bloody_castanor.10000
+	title = bloody_castanor.10000.t
+	picture = ANBI_TONGSINI_eventPicture
+	desc = bloody_castanor.10000.d
+
+	trigger = {
+		has_country_flag = can_form_bd
+		has_country_flag = AB1_panzer_bloodtooth_cf
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		clr_country_flag = can_form_bd
+	}
+
+	option = {
+		name = bloody_castanor.10000.a
+		add_country_modifier = {
+			name = escanni_wars_escanni_imperialism
+			duration = -1
+		}
+		if = {
+			limit = {
+				NOT = {
+					tag = AB1
+					tag = AB2
+				}
+			}
+			change_tag = AB2
+			override_country_name = AB1_second
+			swap_non_generic_missions = yes
+		}
+	}
+	after = {
+		change_government = anbi_castanor_monarchy
+		add_government_reform = anbi_castanor_state_reform
+		add_government_reform = anbi_castanor_panzer_reform
+	}
+}
+country_event = {
+	id = bloody_castanor.10001
+	title = bloody_castanor.10000.t
+	picture = ANBI_TONGSINI_eventPicture
+	desc = bloody_castanor.10001.d
+
+	trigger = {
+		NOT = {
+			religion = giantkin_regent_court
+		}
+		has_country_flag = AB1_panzer_bloodtooth_cf
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = bloody_castanor.10001.a
+		change_religion = giantkin_regent_court
+	}
+}
+
+#宗教节日
+country_event = {
+	id = bloody_castanor.20000
+	title = bloody_castanor.20000.t
+	picture = FARMING_eventPicture
+	desc = bloody_castanor.20000.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.20000.a
+		trigger_switch = {
+			on_trigger = has_church_aspect
+			anbi_AB1_food_orcs = { add_yearly_manpower = 1 }
+			anbi_AB1_food_goblin = { add_war_exhaustion = -5 }
+			anbi_AB1_food_troll = { add_corruption = -2 }
+			anbi_AB1_food_centaur = { add_mercantilism_excess_to_diplo_power_effect = { VAL = 5 }}
+			anbi_AB1_food_xianling = { add_stability = 1 }
+			anbi_AB1_food_ogre = { add_prestige_or_monarch_power = { amount = 100 }}
+			anbi_AB1_food_harpy = { custom_tooltip = anbi_AB1_food_harpy_ct every_owned_province = { limit = { trade_goods = livestock } add_base_production = 3 }}
+			anbi_AB1_food_khet = { custom_tooltip = anbi_AB1_food_khet_ct if = { limit = { is_at_war = yes}	every_war_enemy_country = { set_bankruptcy = THIS }}  else = { add_church_power = 200 }}
+			anbi_AB1_food_evil_elven = { add_yearly_sailors = 2 add_dip_power = 200 }
+			anbi_AB1_food_kobold = { custom_tooltip = anbi_AB1_food_kobold_ct every_owned_province = { add_devastation = -100 add_local_autonomy = -25 }}
+			anbi_AB1_food_gnollish = { custom_tooltip = anbi_AB1_food_gnollish_ct every_owned_province = {add_nationalism = -100} }
+		}
+		anbi_ab1_the_food_research_add = yes
+		hidden_effect = {
+			remove_church_aspect = anbi_AB1_food_orcs
+			remove_church_aspect = anbi_AB1_food_goblin
+			remove_church_aspect = anbi_AB1_food_troll
+			remove_church_aspect = anbi_AB1_food_centaur
+			remove_church_aspect = anbi_AB1_food_xianling
+			remove_church_aspect = anbi_AB1_food_ogre
+			remove_church_aspect = anbi_AB1_food_harpy
+			remove_church_aspect = anbi_AB1_food_khet
+			remove_church_aspect = anbi_AB1_food_evil_elven
+			remove_church_aspect = anbi_AB1_food_kobold
+			remove_church_aspect = anbi_AB1_food_gnollish
+			remove_church_aspect = anbi_AB1_cook_kao
+			remove_church_aspect = anbi_AB1_cook_dun
+			remove_church_aspect = anbi_AB1_cook_jian
+			remove_church_aspect = anbi_AB1_cook_chao
+			remove_church_aspect = anbi_AB1_cook_zha
+			remove_church_aspect = anbi_AB1_cook_zheng
+			remove_church_aspect = anbi_AB1_cook_yan
+			remove_church_aspect = anbi_AB1_cook_lu
+			remove_church_aspect = anbi_AB1_spice_bread
+			remove_church_aspect = anbi_AB1_spice_vegetable
+			remove_church_aspect = anbi_AB1_spice_mushroom
+			remove_church_aspect = anbi_AB1_spice_meat
+			remove_church_aspect = anbi_AB1_spice_tear
+			remove_church_aspect = anbi_AB1_spice_wine
+		}
+	}
+}

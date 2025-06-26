@@ -1,0 +1,4841 @@
+Dream_of_the_castanor_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		NOT = { has_country_flag = AB1_panzer_bloodtooth_cf } 
+	}
+
+	anbi_Dream_for_north = {
+		icon = mission_invade_kheterata
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = Dream_of_the_castanor
+				always = no
+			}
+		}
+
+		effect = {  } 
+	}
+}
+Dream_of_the_castanor_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		NOT = { has_country_flag = AB1_panzer_bloodtooth_cf } 
+	}
+
+	anbi_Dream_for_west = {
+		icon = mission_invade_kheterata
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = Dream_of_the_castanor
+				always = no
+			}
+		}
+
+		effect = {  } 
+	}
+}
+Dream_of_the_castanor_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		NOT = { has_country_flag = AB1_panzer_bloodtooth_cf } 
+	}
+
+	anbi_Dream_for_castanor = {
+		icon = mission_swiss_mercenaries_flipped
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = Dream_of_the_castanor
+				always = no
+			}
+		}
+
+		effect = {  } 
+	}
+
+	anbi_a_new_castanor_empire = {
+		icon = mission_empire
+		position = 2
+		required_missions = {
+			anbi_Dream_for_castanor
+			anbi_Dream_for_east
+			anbi_Dream_for_south
+			anbi_Dream_for_north
+			anbi_Dream_for_west
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = Dream_of_the_castanor
+				always = no
+			}
+		}
+
+		effect = {  } 
+	}
+}
+Dream_of_the_castanor_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		NOT = { has_country_flag = AB1_panzer_bloodtooth_cf } 
+	}
+
+	anbi_Dream_for_east = {
+		icon = mission_invade_kheterata
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = Dream_of_the_castanor
+				always = no
+			}
+		}
+
+		effect = {  } 
+	}
+}
+Dream_of_the_castanor_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		NOT = { has_country_flag = AB1_panzer_bloodtooth_cf } 
+	}
+
+	anbi_Dream_for_south = {
+		icon = mission_invade_kheterata
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = Dream_of_the_castanor
+				always = no
+			}
+		}
+
+		effect = {  } 
+	}
+}
+bloody_canstanor_first_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		has_country_flag = AB1_panzer_bloodtooth_cf
+	}
+
+	anbi_ab1_eat_the_orcs = {
+		icon = mission_skull
+		position = 2
+		required_missions = { anbi_ab1_the_start_of_blood } 
+		provinces_to_highlight = {
+			escann_superregion = {
+				type = all
+				NOT = {
+					OR = {
+						tribal_land_of = ROOT
+						is_city = yes
+					}
+				}
+			}
+		}
+
+		trigger = {
+			OR = {
+				AND = {
+					calc_true_if = {
+						amount = 20
+						escann_superregion = {
+							type = all
+							tribal_land_of = ROOT
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = anbi_ab1_eat_the_orcs_ctt
+						always = yes
+					}
+				}
+				castonath_area = {
+					type = all
+					development = 20
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = anbi_ab1_eat_the_orcs_ctt2
+				has_country_flag = food_menu_GUI_open
+			}
+		}
+
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_church_power = 100
+			largest_decrease_of_orcish_tolerance_effect = yes
+			add_government_power = {
+				mechanic_type = anbi_has_doubt_count_mechanics
+				power_type = anbi_AB1_doubt_count
+				value = 5
+			}
+			anbi_ab1_the_food_research_add = yes
+		}
+	}
+
+	anbi_ab1_the_sweet_colonies = {
+		icon = mission_silblaidd
+		position = 4
+		required_missions = { anbi_ab1_put_on_the_ring } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_at_war = no
+			adm_tech = 5
+			treasury = 200
+		}
+
+		effect = {
+			add_treasury = -200
+			remove_country_modifier = anbi_AB1_ban_colonies
+			custom_tooltip = anbi_ab1_the_sweet_colonies_ct
+			hidden_effect = {
+				escann_superregion = {
+					limit = {
+						tribal_land_of = ROOT
+						is_empty = yes
+					}
+					add_core = ROOT
+					change_culture = ROOT
+					change_religion = regent_court
+					cede_province = ROOT
+				}
+				escann_superregion = {
+					limit = {
+						tribal_land_of = ROOT
+						is_city = yes
+					}
+					add_core = ROOT
+					change_tribal_land = ---
+				}
+			}
+			clr_country_flag = anbi_canstanor_vs_monster_cf
+		}
+	}
+}
+bloody_canstanor_first_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		has_country_flag = AB1_panzer_bloodtooth_cf
+	}
+
+	anbi_ab1_put_on_the_ring = {
+		icon = mission_assassination
+		position = 3
+		required_missions = { anbi_ab1_eat_the_orcs } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			years_of_income = 0.5
+			adm_power = 75
+			estate_loyalty = {
+				estate = estate_adventurers
+				loyalty = 50
+			}
+			has_estate_privilege = estate_adventurers_generous_quest_rewards
+		}
+
+		effect = {
+			add_years_of_income = -0.5
+			add_adm_power = -75
+			add_country_modifier = {
+				name = "anbi_ab1_put_on_the_ring_modifier"
+				duration = -1
+			}
+		}
+	}
+}
+bloody_canstanor_first_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		has_country_flag = AB1_panzer_bloodtooth_cf
+	}
+
+	anbi_ab1_the_start_of_blood = {
+		icon = mission_comet_star_animated
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = panzer_bloodtooth_king
+				always = yes
+			}
+		}
+
+		effect = {
+			largest_decrease_of_orcish_tolerance_effect = yes
+			custom_tooltip = panzer_bloodtooth_king_war
+			set_country_flag = anbi_canstanor_vs_monster_cf
+			anbi_ab1_the_doubt_growing = yes
+		}
+	}
+
+	anbi_ab1_eat_slowly = {
+		icon = mission_tree_fishing
+		position = 2
+		required_missions = { anbi_ab1_the_start_of_blood } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+			any_owned_province = { has_any_orcish_pop_trigger = yes } 
+		}
+
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			random_owned_province = { remove_orcish_minority_size_effect = yes } 
+			largest_decrease_of_orcish_tolerance_effect = yes
+			custom_tooltip = anbi_ab1_eat_slowly_ct
+			set_country_flag = food_menu_GUI_open
+			anbi_ab1_the_food_research_add = yes
+		}
+	}
+
+	anbi_ab1_the_chosen_state = {
+		icon = mission_swiss_mercenaries_flipped
+		position = 5
+		required_missions = {
+			anbi_ab1_the_sweet_colonies
+			anbi_ab1_into_the_country
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				castonath_area = {
+					type = all
+					development = 35
+				}
+				num_of_cities = 30
+			}
+			years_of_income = 1
+			has_institution = renaissance
+			is_at_war = no
+		}
+
+		effect = {
+			override_country_name = "AB1_second"
+			add_years_of_income = -1
+			set_government_rank = 3
+			set_country_flag = bloody_canstanor_second_cf
+			inner_castanor_region = { add_permanent_claim = ROOT } 
+			burnoll_area = { add_permanent_claim = ROOT } 
+			themin_area = { add_permanent_claim = ROOT } 
+			oudeben_area = { add_permanent_claim = ROOT } 
+			oudmerewood_area = { add_permanent_claim = ROOT } 
+			nortmerewood_area = { add_permanent_claim = ROOT } 
+			silvervord_area = { add_permanent_claim = ROOT } 
+			swap_non_generic_missions = yes
+			anbi_ab1_the_doubt_growing = yes
+			add_country_modifier = {
+				name = "anbi_ab1_the_legecy_of_colonies"
+				duration = 36500
+			}
+		}
+	}
+}
+bloody_canstanor_first_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		has_country_flag = AB1_panzer_bloodtooth_cf
+	}
+
+	anbi_ab1_tight_the_dog_chain = {
+		icon = mission_beheading
+		position = 3
+		required_missions = { anbi_ab1_reconstruction_the_cas } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			years_of_income = 0.5
+			adm_power = 75
+			estate_loyalty = {
+				estate = estate_mages
+				loyalty = 50
+			}
+			has_estate_privilege = estate_mages_patronage_of_the_magical_arts
+		}
+
+		effect = {
+			add_years_of_income = -0.5
+			add_adm_power = -75
+			add_country_modifier = {
+				name = "anbi_ab1_tight_the_dog_chain_modifier"
+				duration = -1
+			}
+		}
+	}
+}
+bloody_canstanor_first_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		has_country_flag = AB1_panzer_bloodtooth_cf
+	}
+
+	anbi_ab1_reconstruction_the_cas = {
+		icon = mission_magisterium_fold_zero
+		position = 2
+		required_missions = { anbi_ab1_the_start_of_blood } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			NOT = { has_country_modifier = anbi_AB1_reconstruction_work } 
+			castonath_area = {
+				type = all
+				development = 15
+				has_tax_building_trigger = yes
+			}
+		}
+
+		effect = {
+			largest_decrease_of_orcish_tolerance_effect = yes
+			castonath_area = {
+				remove_orcish_minority_size_effect = yes
+				remove_orcish_minority_size_effect = yes
+				remove_goblin_minority_size_effect = yes
+				remove_goblin_minority_size_effect = yes
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			country_event = { id = bloody_castanor.7 } 
+		}
+	}
+
+	anbi_ab1_into_the_country = {
+		icon = mission_green_village
+		position = 4
+		required_missions = { anbi_ab1_tight_the_dog_chain } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			NOT = { corruption = 1 } 
+			num_of_states = 5
+			estate_influence = {
+				estate = estate_castonath_patricians
+				influence = 30
+			}
+		}
+
+		effect = {
+			set_country_flag = patrician_castanor
+			add_government_reform = anbi_castanor_state_reform
+		}
+	}
+}
+bloody_canstanor_second_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		has_country_flag = AB1_panzer_bloodtooth_cf
+		has_country_flag = bloody_canstanor_second_cf
+	}
+
+	anbi_ab1_same_in_the_differece = {
+		icon = mission_divine_legion
+		position = 6
+		required_missions = { anbi_ab1_the_chosen_state } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_accepted_cultures = 3
+			dip_power = 200
+			num_of_owned_provinces_with = {
+				value = 10
+				has_courthouse_building_trigger = yes
+			}
+		}
+
+		effect = {
+			anbi_ab1_the_doubt_down = yes
+			add_dip_power = -200
+			custom_tooltip = anbi_ab1_same_in_the_differece_ct
+			set_country_flag = anbi_ab1_same_in_the_differece_cf
+			country_event = { id = bloody_castanor.6 } 
+		}
+	}
+
+	anbi_ab1_the_question_of_corin = {
+		icon = mission_corin
+		position = 7
+		required_missions = { anbi_ab1_same_in_the_differece } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				is_religion_enabled = corinite
+				num_of_owned_provinces_with = {
+					value = 100
+					OR = {
+						region = inner_castanor_region
+						region = south_castanor_region
+						region = west_castanor_region
+					}
+				}
+			}
+			adm_power = 200
+			mil_power = 100
+			years_of_income = 0.8
+		}
+
+		effect = {
+			anbi_ab1_the_doubt_down = yes
+			add_adm_power = -200
+			add_mil_power = -100
+			add_years_of_income = -0.8
+			custom_tooltip = anbi_ab1_the_question_of_corin_ct
+			add_country_modifier = {
+				name = "anbi_ab1_corinite_cooperator"
+				duration = -1
+			}
+		}
+	}
+
+	anbi_ab1_the_last_hidding = {
+		icon = mission_writing_book
+		position = 8
+		required_missions = { anbi_ab1_the_question_of_corin } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_government_power = {
+				mechanic_type = anbi_has_doubt_count_mechanics
+				power_type = anbi_AB1_doubt_count
+				value = 1
+			}
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+			NOT = { 
+				average_unrest = 1
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+			} 
+			is_at_war = no
+			stability = 2
+		}
+
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_government_power = {
+				mechanic_type = anbi_has_doubt_count_mechanics
+				power_type = anbi_AB1_doubt_count
+				value = -35
+			}
+			anbi_ab1_the_doubt_down = yes
+		}
+	}
+}
+bloody_canstanor_second_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		has_country_flag = AB1_panzer_bloodtooth_cf
+		has_country_flag = bloody_canstanor_second_cf
+	}
+
+	anbi_ab1_defense_the_white_city = {
+		icon = mission_tianlou
+		position = 6
+		required_missions = { anbi_ab1_the_chosen_state } 
+		provinces_to_highlight = {
+			AND = {
+				OR = {
+					area = northyl_area
+					area = westgate_area
+					area = lower_nath_area
+					area = nortmere_area
+					area = trialmount_area
+					area = bradescker_area
+					area = upper_nath_area
+					area = southgate_area
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			840 = {
+				NOT = { has_province_modifier = ruined_castanorian_citadel } 
+				has_great_project = {
+					type = the_north_citadel
+					tier = 1
+				}
+			}
+			northyl_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			westgate_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_nath_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			nortmere_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			trialmount_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bradescker_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_nath_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			southgate_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					840 = {
+						OR = {
+							has_great_project = {
+								type = the_north_citadel
+								tier = 0
+							}
+							has_great_project = {
+								type = the_north_citadel
+								tier = 1
+							}
+							has_great_project = {
+								type = the_north_citadel
+								tier = 2
+							}
+						}
+					}
+				}
+				840 = {
+					add_great_project_tier = {
+						type = the_north_citadel
+						tier = 1
+					}
+				}
+			}
+			else = { add_treasury = 5000 } 
+			add_prestige_excess_to_splendour_effect = { VAL = 20 } 
+			add_church_power = 100
+			add_or_extend_country_modifier = {
+				name = anbi_AB1_doubt_fight
+				duration = 5475
+			}
+			custom_tooltip = anbi_AB1_doubt_count_max_ct
+		}
+	}
+
+	anbi_ab1_look_at_the_wood = {
+		icon = mission_alone_in_the_forest
+		position = 7
+		required_missions = {
+			anbi_ab1_the_coast_of_silver_lake
+			anbi_ab1_defense_the_white_city
+		}
+		provinces_to_highlight = {
+			AND = {
+				OR = {
+					area = escerfork_area
+					area = blademarch_area
+					area = banesfork_area
+					area = humacvord_area
+					area = banesfork_area
+					area = beastgrave_area
+					area = clovenwood_area
+					area = dostans_way_area
+					area = vernham_area
+					area = devaced_area
+					area = catelsvord_area
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			escerfork_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			blademarch_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			banesfork_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			humacvord_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			banesfork_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			beastgrave_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			clovenwood_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			dostans_way_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			vernham_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			devaced_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			catelsvord_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			803 = {
+				add_building_construction = {
+					building = fort_15th
+					cost = 0.5
+					speed = 0.5
+				}
+			}
+			add_country_modifier = {
+				name = "anbi_ab1_the_south_resting"
+				duration = 18250
+			}
+			falsemire_area = { add_permanent_claim = ROOT } 
+			westwall_approach_area = { add_permanent_claim = ROOT } 
+			cannwood_area = { add_permanent_claim = ROOT } 
+			balmire_area = { add_permanent_claim = ROOT } 
+			athfork_area = { add_permanent_claim = ROOT } 
+			ebonmarck_area = { add_permanent_claim = ROOT } 
+			westwall_approach_area = { add_permanent_claim = ROOT } 
+			add_or_extend_country_modifier = {
+				name = anbi_AB1_doubt_fight
+				duration = 5475
+			}
+			custom_tooltip = anbi_AB1_doubt_count_max_ct
+		}
+	}
+
+	anbi_ab1_the_marsh_of_ailun = {
+		icon = mission_se_along_the_river
+		position = 8
+		required_missions = {
+			anbi_ab1_look_at_the_wood
+			anbi_ab1_into_the_snake_mountain_foot
+		}
+		provinces_to_highlight = {
+			AND = {
+				OR = {
+					area = falsemire_area
+					area = westwall_approach_area
+					area = cannwood_area
+					area = balmire_area
+					area = athfork_area
+					area = ebonmarck_area
+					area = middle_alen_area
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			229 = { NOT = { has_province_modifier = ruined_castanorian_citadel }  } 
+			falsemire_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			westwall_approach_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cannwood_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			balmire_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			athfork_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ebonmarck_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			middle_alen_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			229 = {
+				add_great_project_tier = {
+					type = bal_mire
+					tier = 1
+				}
+				add_center_of_trade_level = 1
+			}
+			729 = { add_center_of_trade_level = 1 } 
+			761 = { add_center_of_trade_level = 1 } 
+			add_or_extend_country_modifier = {
+				name = anbi_AB1_doubt_fight
+				duration = 5475
+			}
+			custom_tooltip = anbi_AB1_doubt_count_max_ct
+		}
+	}
+
+	anbi_ab1_the_court_of_eating = {
+		icon = mission_empire
+		position = 10
+		required_missions = { anbi_ab1_unite_the_escanni } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			estate_influence = {
+				estate = estate_castonath_patricians
+				influence = 100
+			}
+			estate_loyalty = {
+				estate = estate_castonath_patricians
+				loyalty = 100
+			}
+			adm_power = 300
+			num_of_owned_provinces_with = {
+				value = 50
+				has_courthouse_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 50
+				has_production_or_gold_building_trigger = yes
+			}
+		}
+
+		effect = {
+			add_adm_power = -300
+			add_government_reform = anbi_castanor_bureaucracy_reform
+			anbi_ab1_the_doubt_growing = yes
+		}
+	}
+}
+bloody_canstanor_second_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		has_country_flag = AB1_panzer_bloodtooth_cf
+		has_country_flag = bloody_canstanor_second_cf
+	}
+
+	anbi_ab1_the_coast_of_silver_lake = {
+		icon = mission_white_tower
+		position = 6
+		required_missions = { anbi_ab1_the_chosen_state } 
+		provinces_to_highlight = {
+			AND = {
+				OR = {
+					area = burnoll_area
+					area = themin_area
+					area = oudeben_area
+					area = oudmerewood_area
+					area = nortmerewood_area
+					area = silvervord_area
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			burnoll_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			themin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			oudeben_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			oudmerewood_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			nortmerewood_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			silvervord_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			834 = {
+				add_province_modifier = {
+					name = "castanor_rebuilding_flavour"
+					duration = 365
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = bloody_castanor.8
+					days = 365
+				}
+			}
+			add_country_modifier = {
+				name = "anbi_ab1_the_coast_of_silver_lake_modifier"
+				duration = 7300
+			}
+			escerfork_area = { add_permanent_claim = ROOT } 
+			blademarch_area = { add_permanent_claim = ROOT } 
+			banesfork_area = { add_permanent_claim = ROOT } 
+			humacvord_area = { add_permanent_claim = ROOT } 
+			banesfork_area = { add_permanent_claim = ROOT } 
+			beastgrave_area = { add_permanent_claim = ROOT } 
+			clovenwood_area = { add_permanent_claim = ROOT } 
+			dostans_way_area = { add_permanent_claim = ROOT } 
+			vernham_area = { add_permanent_claim = ROOT } 
+			devaced_area = { add_permanent_claim = ROOT } 
+			catelsvord_area = { add_permanent_claim = ROOT } 
+			add_or_extend_country_modifier = {
+				name = anbi_AB1_doubt_fight
+				duration = 5475
+			}
+			custom_tooltip = anbi_AB1_doubt_count_max_ct
+		}
+	}
+
+	anbi_ab1_fried_chicken_but_fake = {
+		icon = mission_globlin
+		position = 7
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				any_owned_province = { has_any_goblin_pop_trigger = yes } 
+				treasury = 200
+			}
+			custom_trigger_tooltip = {
+				tooltip = AB1_food_research_decision_reverse_ctt
+				check_variable = {
+					FoodResearchV > 0.5
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = { NOT = { any_owned_province = { has_any_goblin_pop_trigger = yes }  }  } 
+				add_treasury = -200
+			}
+			custom_tooltip = anbi_ab1_fried_chicken_but_fake_ct
+			set_global_flag = eat_goblin_a
+			anbi_ab1_the_food_research_subtract = yes
+		}
+	}
+
+	anbi_ab1_unite_the_escanni = {
+		icon = mission_shining_jewel_animated
+		position = 9
+		required_missions = {
+			anbi_ab1_the_last_hidding
+			anbi_ab1_the_marsh_of_ailun
+			anbi_ab1_fried_chicken_but_fake
+			anbi_ab1_eat_and_eat_stronger
+			anbi_ab1_the_old_country_of_knight
+		}
+		provinces_to_highlight = {
+			AND = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				OR = {
+					region = south_castanor_region
+					region = inner_castanor_region
+					region = west_castanor_region
+					area = rohibon_area
+					area = cursewood_area
+				}
+			}
+		}
+
+		trigger = {
+			is_at_war = no
+			NOT = {
+				average_unrest = 1
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+			}
+			south_castanor_region = {
+				type = all
+				is_core = ROOT
+				owned_by = ROOT
+			}
+			inner_castanor_region = {
+				type = all
+				is_core = ROOT
+				owned_by = ROOT
+			}
+			west_castanor_region = {
+				type = all
+				is_core = ROOT
+				owned_by = ROOT
+			}
+			whistlevale_area = {
+				type = all
+				is_core = ROOT
+				owned_by = ROOT
+			}
+			cursewood_area = {
+				type = all
+				is_core = ROOT
+				owned_by = ROOT
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_ab1_unite_the_escanni_ct
+			random_owned_province = {
+				limit = { culture_group = orcish } 
+				change_culture = ROOT
+				add_unrest = 10
+				spawn_rebels = { size = 1 } 
+				add_base_manpower = -1
+				add_base_production = -1
+				add_base_tax = -1
+				remove_orcish_minority_size_effect = yes
+				add_province_modifier = {
+					name = "anbi_ab1_the_forest_of_east_modifier"
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = { 
+						OR = {
+							culture_group = orcish 
+							culture_group = goblin
+						}
+						OR = {
+							region = south_castanor_region
+						region = inner_castanor_region
+						region = west_castanor_region
+						area = whistlevale_area
+						area = cursewood_area
+						}
+					} 
+					change_culture = ROOT
+					change_religion = regent_court
+					add_unrest = 10
+					spawn_rebels = { size = 1 } 
+					add_base_manpower = -1
+					add_base_production = -1
+					add_base_tax = -1
+					remove_orcish_minority_size_effect = yes
+					add_province_modifier = {
+						name = "anbi_ab1_the_forest_of_east_modifier"
+						duration = 7300
+					}
+				}
+			}
+			custom_tooltip = anbi_ab1_unite_the_escanni_ct2
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = escanni_wars_bypass
+						has_global_flag = escanni_wars_end_global_flag
+					}
+				}
+				set_country_flag = bypassed_escanni_wars
+				country_event = { id = escanni_wars.3 } 
+			}
+			custom_tooltip = anbi_ab1_unite_the_escanni_ct3
+			add_government_power = {
+				mechanic_type = anbi_has_doubt_count_mechanics
+				power_type = anbi_AB1_doubt_count
+				value = -100
+			}
+			anbi_ab1_the_doubt_growing = yes
+		}
+	}
+
+	anbi_ab1_castan_test_is_evil = {
+		icon = mission_empowerment
+		position = 11
+		required_missions = {
+			anbi_ab1_feeding_the_monster
+			anbi_ab1_the_court_of_eating
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_at_war = no
+			840 = {
+				owned_by = ROOT
+				development = 20
+				province_has_current_tech_fort_trigger = yes
+			}
+		}
+
+		effect = { country_event = { id = bloody_castanor.10 }  } 
+	}
+}
+bloody_canstanor_second_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		has_country_flag = AB1_panzer_bloodtooth_cf
+		has_country_flag = bloody_canstanor_second_cf
+	}
+
+	anbi_ab1_the_forest_of_east = {
+		icon = mission_verdant_secret
+		position = 6
+		required_missions = { anbi_ab1_the_chosen_state } 
+		provinces_to_highlight = {
+			AND = {
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				OR = {
+					area = serpentsmarck_area
+					area = coalwoud_area
+					area = oldhaven_area
+					area = ardent_glade_area
+					area = steelhyl_area
+					area = clouded_wood_area
+					area = sarwood_area
+					area = nortessord_area
+					area = esshyl_area
+				}
+			}
+		}
+
+		trigger = {
+			serpentsmarck_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			coalwoud_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			oldhaven_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ardent_glade_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			steelhyl_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			clouded_wood_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sarwood_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			nortessord_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			esshyl_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_ab1_the_forest_of_east_ct
+			serpentsmarck_area = {
+				if = {
+					limit = { culture_group = orcish } 
+					change_culture = ROOT
+					add_unrest = 10
+					spawn_rebels = { size = 1 } 
+					add_base_manpower = -1
+					add_base_production = -1
+					add_base_tax = -1
+				}
+				remove_orcish_minority_size_effect = yes
+				add_province_modifier = {
+					name = "anbi_ab1_the_forest_of_east_modifier"
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				coalwoud_area = {
+					if = {
+						limit = { culture_group = orcish } 
+						change_culture = ROOT
+						add_unrest = 10
+						spawn_rebels = { size = 1 } 
+						add_base_manpower = -1
+						add_base_production = -1
+						add_base_tax = -1
+					}
+					remove_orcish_minority_size_effect = yes
+					add_province_modifier = {
+						name = "anbi_ab1_the_forest_of_east_modifier"
+						duration = 7300
+					}
+				}
+				oldhaven_area = {
+					if = {
+						limit = { culture_group = orcish } 
+						change_culture = ROOT
+						add_unrest = 10
+						spawn_rebels = { size = 1 } 
+						add_base_manpower = -1
+						add_base_production = -1
+						add_base_tax = -1
+					}
+					remove_orcish_minority_size_effect = yes
+					add_province_modifier = {
+						name = "anbi_ab1_the_forest_of_east_modifier"
+						duration = 7300
+					}
+				}
+				ardent_glade_area = {
+					if = {
+						limit = { culture_group = orcish } 
+						change_culture = ROOT
+						add_unrest = 10
+						spawn_rebels = { size = 1 } 
+						add_base_manpower = -1
+						add_base_production = -1
+						add_base_tax = -1
+					}
+					remove_orcish_minority_size_effect = yes
+					add_province_modifier = {
+						name = "anbi_ab1_the_forest_of_east_modifier"
+						duration = 7300
+					}
+				}
+				steelhyl_area = {
+					if = {
+						limit = { culture_group = orcish } 
+						change_culture = ROOT
+						add_unrest = 10
+						spawn_rebels = { size = 1 } 
+						add_base_manpower = -1
+						add_base_production = -1
+						add_base_tax = -1
+					}
+					remove_orcish_minority_size_effect = yes
+					add_province_modifier = {
+						name = "anbi_ab1_the_forest_of_east_modifier"
+						duration = 7300
+					}
+				}
+				clouded_wood_area = {
+					if = {
+						limit = { culture_group = orcish } 
+						change_culture = ROOT
+						add_unrest = 10
+						spawn_rebels = { size = 1 } 
+						add_base_manpower = -1
+						add_base_production = -1
+						add_base_tax = -1
+					}
+					remove_orcish_minority_size_effect = yes
+					add_province_modifier = {
+						name = "anbi_ab1_the_forest_of_east_modifier"
+						duration = 7300
+					}
+				}
+				sarwood_area = {
+					if = {
+						limit = { culture_group = orcish } 
+						change_culture = ROOT
+						add_unrest = 10
+						spawn_rebels = { size = 1 } 
+						add_base_manpower = -1
+						add_base_production = -1
+						add_base_tax = -1
+					}
+					remove_orcish_minority_size_effect = yes
+					add_province_modifier = {
+						name = "anbi_ab1_the_forest_of_east_modifier"
+						duration = 7300
+					}
+				}
+				nortessord_area = {
+					if = {
+						limit = { culture_group = orcish } 
+						change_culture = ROOT
+						add_unrest = 10
+						spawn_rebels = { size = 1 } 
+						add_base_manpower = -1
+						add_base_production = -1
+						add_base_tax = -1
+					}
+					remove_orcish_minority_size_effect = yes
+					add_province_modifier = {
+						name = "anbi_ab1_the_forest_of_east_modifier"
+						duration = 7300
+					}
+				}
+				esshyl_area = {
+					if = {
+						limit = { culture_group = orcish } 
+						change_culture = ROOT
+						add_unrest = 10
+						spawn_rebels = { size = 1 } 
+						add_base_manpower = -1
+						add_base_production = -1
+						add_base_tax = -1
+					}
+					remove_orcish_minority_size_effect = yes
+					add_province_modifier = {
+						name = "anbi_ab1_the_forest_of_east_modifier"
+						duration = 7300
+					}
+				}
+			}
+			swapstoke_area = { add_permanent_claim = ROOT } 
+			medirleigh_area = { add_permanent_claim = ROOT } 
+			esshyl_area = { add_permanent_claim = ROOT } 
+			dryadsdale_area = { add_permanent_claim = ROOT } 
+			hornwood_area = { add_permanent_claim = ROOT } 
+			marrhold_area = { add_permanent_claim = ROOT } 
+			doewood_area = { add_permanent_claim = ROOT } 
+			add_or_extend_country_modifier = {
+				name = anbi_AB1_doubt_fight
+				duration = 5475
+			}
+			custom_tooltip = anbi_AB1_doubt_count_max_ct
+		}
+	}
+
+	anbi_ab1_into_the_snake_mountain_foot = {
+		icon = mission_new_dawn
+		position = 7
+		required_missions = {
+			anbi_ab1_the_forest_of_east
+			anbi_ab1_the_coast_of_silver_lake
+		}
+		provinces_to_highlight = {
+			AND = {
+				OR = {
+					area = swapstoke_area
+					area = medirleigh_area
+					area = esshyl_area
+					area = dryadsdale_area
+					area = hornwood_area
+					area = marrhold_area
+					area = doewood_area
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			swapstoke_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			medirleigh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			esshyl_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			dryadsdale_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hornwood_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			marrhold_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			doewood_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_ab1_into_the_snake_mountain_foot_ct
+			large_increase_of_dwarven_tolerance_effect = yes
+			hidden_effect = {
+				every_owned_province = {
+					limit = { culture_group = dwarven } 
+					change_culture = ROOT
+				}
+			}
+			4097 = {
+				change_culture = stone_dwarf
+				add_base_manpower = 1
+				add_base_production = 1
+				add_base_tax = 1
+			}
+			castonath_area = { add_dwarven_minority_size_effect = yes } 
+			upcreek_area = { add_permanent_claim = ROOT } 
+			adenica_area = { add_permanent_claim = ROOT } 
+			taran_plains_area = { add_permanent_claim = ROOT } 
+			merescker_area = { add_permanent_claim = ROOT } 
+			valefort_area = { add_permanent_claim = ROOT } 
+			verteben_area = { add_permanent_claim = ROOT } 
+			taran_plains_area = { add_permanent_claim = ROOT } 
+			whistlevale_area = { add_permanent_claim = ROOT } 
+			rohibon_area = { add_permanent_claim = ROOT } 
+			cursewood_area = { add_permanent_claim = ROOT } 
+			add_or_extend_country_modifier = {
+				name = anbi_AB1_doubt_fight
+				duration = 5475
+			}
+			custom_tooltip = anbi_AB1_doubt_count_max_ct
+		}
+	}
+
+	anbi_ab1_the_old_country_of_knight = {
+		icon = mission_big_house
+		position = 8
+		required_missions = {
+			anbi_ab1_look_at_the_wood
+			anbi_ab1_into_the_snake_mountain_foot
+		}
+		provinces_to_highlight = {
+			AND = {
+				OR = {
+					area = upcreek_area
+					area = adenica_area
+					area = taran_plains_area
+					area = merescker_area
+					area = valefort_area
+					area = verteben_area
+					area = taran_plains_area
+					area = whistlevale_area
+					area = rohibon_area
+					area = cursewood_area
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+		}
+
+		trigger = {
+			upcreek_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			adenica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			taran_plains_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			merescker_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			valefort_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			verteben_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			taran_plains_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			whistlevale_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			rohibon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cursewood_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = anbi_ab1_the_old_country_of_knight_modifier
+				duration = 9125
+			}
+			custom_tooltip = anbi_ab1_the_old_country_of_knight_ct
+			small_decrease_of_halfling_tolerance_effect = yes
+			add_church_power = 50
+			hidden_effect = {
+				west_castanor_region = {
+					limit = { culture_group = halfling } 
+					change_culture = ROOT
+				}
+			}
+			castonath_area = {
+				add_base_production = 1
+				add_halfling_minority_size_effect = yes
+			}
+			custom_tooltip = anbi_ab1_the_old_country_of_knight_ct2
+			hidden_effect = {
+				country_event = {
+					id = bloody_castanor.6
+					days = 30
+				}
+			}
+			add_or_extend_country_modifier = {
+				name = anbi_AB1_doubt_fight
+				duration = 5475
+			}
+			custom_tooltip = anbi_AB1_doubt_count_max_ct
+		}
+	}
+
+	anbi_ab1_feeding_the_monster = {
+		icon = mission_orc_chillin
+		position = 10
+		required_missions = { anbi_ab1_unite_the_escanni } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			years_of_income = 1
+			castonath_area = { development = 40 } 
+			832 = { province_has_center_of_trade_of_level = 3 } 
+			custom_trigger_tooltip = {
+				tooltip = AB1_food_research_decision_reverse_ctt
+				check_variable = {
+					FoodResearchV > 0.5
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				owned_by = ROOT
+				superregion = escann_superregion
+				province_has_center_of_trade_of_level = 2
+			}
+		}
+
+		effect = {
+			add_years_of_income = -1
+			anbi_ab1_the_food_research_subtract = yes
+			inner_castanor_region = {
+				limit = { owned_by = ROOT } 
+				add_province_modifier = {
+					name = "anbi_ab1_eat_green_meat_happy"
+					duration = -1
+				}
+			}
+			west_castanor_region = {
+				limit = { owned_by = ROOT } 
+				add_province_modifier = {
+					name = "anbi_ab1_eat_green_meat_happy"
+					duration = -1
+				}
+			}
+			south_castanor_region = {
+				limit = { owned_by = ROOT } 
+				add_province_modifier = {
+					name = "anbi_ab1_eat_green_meat_happy"
+					duration = -1
+				}
+			}
+			add_government_power = {
+				mechanic_type = anbi_has_doubt_count_mechanics
+				power_type = anbi_AB1_doubt_count
+				value = 10
+			}
+			anbi_ab1_the_doubt_growing = yes
+		}
+	}
+}
+bloody_canstanor_second_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		has_country_flag = AB1_panzer_bloodtooth_cf
+		has_country_flag = bloody_canstanor_second_cf
+	}
+
+	anbi_ab1_eat_the_left = {
+		icon = mission_feast
+		position = 6
+		required_missions = { anbi_ab1_the_chosen_state } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_country_modifier = racial_pop_goblin_purge
+			has_country_modifier = racial_pop_orcish_purge
+			stability = 1
+		}
+
+		effect = {
+			add_stability = -1
+			custom_tooltip = anbi_ab1_eat_the_left_ct
+			tooltip = {
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_orcish_minority_trigger = yes
+							has_goblin_minority_trigger = yes
+						}
+					}
+					remove_goblin_minority_size_effect = yes
+					remove_orcish_minority_size_effect = yes
+					add_unrest = 10
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							has_any_orcish_pop_trigger = yes
+							has_any_goblin_pop_trigger = yes
+						}
+					}
+					remove_goblin_minority_size_effect = yes
+					remove_orcish_minority_size_effect = yes
+					add_unrest = 10
+				}
+			}
+			add_church_power = 200
+			anbi_ab1_the_food_research_add = yes
+			anbi_ab1_the_doubt_growing = yes
+		}
+	}
+
+	anbi_ab1_take_the_bone = {
+		icon = mission_precursor_relics
+		position = 7
+		required_missions = { anbi_ab1_eat_the_left } 
+		provinces_to_highlight = {
+			AND = {
+				OR = {
+					province_id = 839
+					province_id = 841
+				}
+				NOT = { base_production = 10 } 
+			}
+		}
+
+		trigger = {
+			treasury = 1000
+			adm_power = 200
+			num_of_cities = 100
+			839 = { base_production = 10 } 
+			841 = { base_production = 10 } 
+		}
+
+		effect = {
+			custom_tooltip = anbi_ab1_take_the_bone_ct
+			if = {
+				limit = { has_country_modifier = racial_pop_goblin_purge } 
+				generic_end_purge = { race = goblin } 
+				hidden_effect = {
+					if = {
+						limit = { ai = no } 
+						set_country_flag = just_stopped_purging 
+					}
+					else = { clr_country_flag = racial_pop_menu_opened } 
+				}
+			}
+			if = {
+				limit = { has_country_modifier = racial_pop_orcish_purge } 
+				generic_end_purge = { race = orcish } 
+				hidden_effect = {
+					if = {
+						limit = { ai = no } 
+						set_country_flag = just_stopped_purging
+					}
+					else = { clr_country_flag = racial_pop_menu_opened } 
+				}
+			}
+			add_church_power = 200
+			anbi_ab1_the_doubt_growing = yes
+			anbi_ab1_the_food_research_add = yes
+			839 = {
+				change_trade_goods = livestock
+				add_province_modifier = {
+					name = "anbi_ab1_take_the_bone_modifier"
+					duration = -1
+				}
+				add_base_production = 2
+				add_orcish_minority_size_effect = yes
+			}
+			841 = {
+				change_trade_goods = livestock
+				add_province_modifier = {
+					name = "anbi_ab1_take_the_bone_modifier"
+					duration = -1
+				}
+				add_base_production = 2
+				add_orcish_minority_size_effect = yes
+			}
+		}
+	}
+
+	anbi_ab1_eat_and_eat_stronger = {
+		icon = mission_impaled_soldies
+		position = 8
+		required_missions = { anbi_ab1_take_the_bone } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_ab1_eat_and_eat_stronger_ctt
+				has_global_flag = eat_orcs_a_upup
+				has_global_flag = eat_orcs_b_upup
+				has_global_flag = eat_orcs_c_upup
+			}
+			church_power = 100
+		}
+
+		effect = {
+			add_church_power = -100
+			custom_tooltip = anbi_ab1_eat_and_eat_stronger_ct
+			set_global_flag = eat_orcs_abc_cf
+			hidden_effect = {
+				remove_estate_privilege = estate_eat_orcs_a
+				remove_estate_privilege = estate_eat_orcs_b
+				remove_estate_privilege = estate_eat_orcs_c
+			}
+			anbi_ab1_the_food_research_add = yes
+			set_estate_privilege = estate_eat_orcs_abc_upup
+			anbi_ab1_the_doubt_growing = yes
+		}
+	}
+}
+bloody_canstanor_development_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB2
+		has_country_flag = AB1_panzer_bloodtooth_cf
+		has_country_flag = bloody_canstanor_second_cf
+	}
+
+	anbi_ab1_the_white_great_wall = {
+		icon = mission_great_wall
+		position = 11
+		provinces_to_highlight = {
+			province_group = white_walls
+			OR = {
+				NOT = { has_fort_building_trigger = yes } 
+				AND = {
+					NOT = { has_building = ramparts } 
+					NOT = { has_building = soldier_households } 
+				}
+				NOT = { development = 15 }
+			}
+		}
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_ab1_the_great_war_ctt
+				NOT = { has_country_flag = anbi_ab1_the_great_war } 
+			}
+			white_walls = {
+				type = all
+				development = 15
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 8
+				province_group = white_walls
+				OR = {
+					has_building = ramparts
+					has_building = soldier_households
+				}
+				province_has_current_tech_fort_trigger = yes
+			}
+		}
+
+		effect = {
+			custom_tooltip = castanor_modernizing_the_walls_effect_tt
+			white_walls = {
+				limit = {
+					has_fort_building_trigger = yes
+					owned_by = ROOT
+					OR = {
+						has_building = ramparts
+						has_building = soldier_households
+					}
+				}
+				add_base_manpower = 2
+			}
+			custom_tooltip = castanor_defense_in_depth_effect_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						white_walls = {
+							OR = {
+								has_building = ramparts
+								has_building = soldier_households
+							}
+							province_has_current_tech_fort_trigger = yes
+						}
+					}
+					inner_castanor_region = {
+						limit = { owned_by = ROOT } 
+						add_province_modifier = {
+							name = "castanor_very_well_defended_core"
+							duration = 7300
+						}
+					}
+				}
+				else = {
+					inner_castanor_region = {
+						limit = { owned_by = ROOT } 
+						add_province_modifier = {
+							name = "castanor_well_defended_core"
+							duration = 7300
+						}
+					}
+				}
+			}
+			custom_tooltip = castanor_wonder_of_the_ancient_world_effect_tt
+			hidden_effect = {
+				white_walls = {
+					limit = { owned_by = ROOT } 
+					remove_province_modifier = white_walls_of_castanor
+					add_permanent_province_modifier = {
+						name = "castanor_wondrous_walls"
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = { has_dlc = "Mandate of Heaven" } 
+				add_country_modifier = {
+					name = "castanor_walls_wonder_of_the_world"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	anbi_ab1_the_fire_of_dragonstove = {
+		icon = mission_anvil
+		position = 12
+		required_missions = { anbi_ab1_the_white_great_wall } 
+		provinces_to_highlight = { province_id = 831 } 
+
+		trigger = {
+			831 = {
+				base_production = 20
+				has_manufactory_trigger = yes
+				has_production_or_gold_building_trigger = yes
+				has_tax_building_trigger = yes
+			}
+		}
+
+		effect = {
+			custom_tooltip = castanor_empower_balgarsmiths_effect_tt
+			tooltip = {
+				831 = { 
+					add_base_production = 3 
+					add_building = training_fields
+				} 
+				add_country_modifier = {
+					name = "castanor_dragonforge_built_already"
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { 831 = { has_province_modifier = castonath_dragonforge }  } 
+					831 = { 
+						add_base_production = 3 
+						add_building = training_fields
+					} 
+					add_country_modifier = {
+						name = "castanor_dragonforge_built_already"
+						duration = 7300
+					}					
+				}
+				else = { set_country_flag = castanor_unlock_dragonforge_early } 
+			}
+		}
+	}
+}
+bloody_canstanor_development_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB2
+		has_country_flag = AB1_panzer_bloodtooth_cf
+		has_country_flag = bloody_canstanor_second_cf
+	}
+
+	anbi_ab1_the_noble_cowtow = {
+		icon = mission_kowtow
+		position = 12
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_ab1_the_great_war_ctt
+				NOT = { has_country_flag = anbi_ab1_the_great_war } 
+			}
+			OR = {
+				crown_land_share = 50
+				current_age = age_of_absolutism
+			}
+			is_at_war = no
+			legitimacy_equivalent = 100
+			stability = 3
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 60
+				}
+				estate_influence = {
+					estate = estate_church
+					influence = 60
+				}
+				estate_influence = {
+					estate = estate_adventurers
+					influence = 60
+				}
+				estate_influence = {
+					estate = estate_mages
+					influence = 80
+				}
+			}
+		}
+
+		effect = {
+			add_stability = -1
+			add_government_reform = anbi_castanor_estate_cowtow_reform
+			if = {
+				limit = { 
+					has_estate = estate_vampires
+				}
+				custom_tooltip = anbi_ab1_the_noble_cowtow_ct
+				country_event = {
+					id = bloody_castanor.34
+				}
+			}
+		}
+	}
+
+	anbi_ab1_the_neon_city = {
+		icon = mission_magisterium_fold_eight
+		position = 14
+		required_missions = { anbi_ab1_seek_the_future } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = {
+				has_estate = estate_artificers
+				AND = {
+					monthly_income = 1000
+					OR = {
+						innovativeness = 50
+						university = 5
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			complex_dynamic_effect = {
+				first_custom_tooltip = anbi_ab1_the_neon_city_ct2
+				first_limit = "
+					NOT = {
+						has_estate = estate_artificers
+					}
+				"
+				first_effect = "
+					custom_tooltip = anbi_ab1_the_neon_city_ct
+					country_event = {
+						id = magic_artificery_setup.1
+					}	
+				"
+
+				second_custom_tooltip = anbi_ab1_the_neon_city_ct3
+				second_limit = "
+					has_estate = estate_artificers
+				"
+				second_effect = "
+					add_estate_loyalty = {
+						estate = estate_artificers
+						loyalty = 10
+					}
+					add_estate_influence_modifier = {
+						estate = estate_artificers
+						influence = 50
+						duration = -1
+						desc = anbi_ab1_the_neon_city_ct2
+					}				
+				"
+			}
+		} 
+	}
+
+	anbi_ab1_food_delicious_and_spicy = {
+		icon = mission_greentide
+		position = 15
+		required_missions = { anbi_ab1_the_neon_city } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			NOT = {
+				estate_territory = {
+					estate = estate_nobles
+					territory = 5
+				}
+			}
+			stability = 3
+			mil_power = 100
+			army_professionalism = 0.5
+		} 
+
+		effect = {  
+			add_stability = -1
+			custom_tooltip = anbi_disabled_the_noble_tt
+			set_country_flag = disables_estate_nobles_flag
+			add_country_modifier = {
+				name = anbi_ab1_food_delicious_and_spicy_modifier
+				duration = -1
+			}
+		} 
+	}
+
+	anbi_ab1_the_center_of_world = {
+		icon = standardize_relazioni
+		position = 16
+		required_missions = { anbi_ab1_food_delicious_and_spicy } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = {
+				has_first_revolution_started = yes
+				AND = {
+					absolutism = 100
+					legitimacy = 100
+					prestige = 100
+					crown_land_share = 80
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = anbi_ab1_the_center_of_world_ct
+			add_country_modifier = {
+				name = anbi_ab1_the_center_of_world_modifier
+				duration = -1
+			}
+			set_country_flag = anbi_ab1_anti_revolution
+			if = {
+				limit = { 
+					has_first_revolution_started = yes
+				}
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							has_revolution_in_province = yes
+						}
+						add_unrest = 10
+					}
+				}
+			}
+			
+		} 
+	}
+}
+bloody_canstanor_development_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB2
+		has_country_flag = AB1_panzer_bloodtooth_cf
+		has_country_flag = bloody_canstanor_second_cf
+	}
+
+	anbi_ab1_seek_the_future = {
+		icon = mission_assemble_an_army_and_factory_smoke
+		position = 13
+		required_missions = {
+			anbi_ab1_the_fire_of_dragonstove
+			anbi_ab1_the_noble_cowtow
+			anbi_ab1_destory_the_fake_gods
+			anbi_ab1_renew_the_dragon_roads
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = inner_castanor_region
+				region = west_castanor_region
+				region = south_castanor_region
+			}
+		}
+
+		trigger = {
+			831 = { #South Castonath
+				has_province_modifier = castonath_dragonforge 
+			}
+			development_in_provinces = {
+				value = 1500
+				OR = {
+					region = inner_castanor_region
+					region = west_castanor_region
+					region = south_castanor_region
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 100
+				has_tax_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 100
+				has_production_or_gold_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 100
+				has_manpower_building_trigger = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 100
+				has_forcelimit_building_trigger = yes
+			}
+			innovativeness = 25
+		}
+
+		effect = {
+			add_adm_tech = 1
+			add_stability_or_adm_power = yes
+			add_country_modifier = {
+				name = "anbi_ab1_seek_the_future_modifier"
+				duration = -1
+			}
+			custom_tooltip = anbi_ab1_seek_the_future_ct
+			if = {
+				limit = { 
+					NOT = {
+						833 = {
+							has_province_flag = castonath_building_splendid_court
+						}
+					}
+				}
+				add_treasury = -2500
+				833 = {
+					province_event = {
+						id = castonath_wonders.2
+					}
+				}
+			}
+			if = {
+				limit = { 
+					NOT = {
+						832 = {
+							has_province_flag = castonath_building_grand_bazaar
+						}
+					}
+				}
+				add_treasury = -2500
+				832 = {
+					province_event = {
+						id = castonath_wonders.4
+					}
+				}
+			}
+		}
+	}
+
+	anbi_ab1_the_capital_development = {
+		icon = mission_magic_tower
+		position = 14
+		required_missions = { anbi_ab1_seek_the_future } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+			treasury = 10000
+		} 
+
+		effect = {  
+			add_treasury = -10000
+			custom_tooltip = anbi_ab1_the_capital_development_ct
+			set_country_flag = anbi_ab1_the_capital_development_cf
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			829 = {
+				add_province_modifier = {
+					name = anbi_ab2_the_dream_city
+					duration = 3650
+				}
+			}
+			830 = {
+				add_province_modifier = {
+					name = anbi_ab2_the_dream_city
+					duration = 3650
+				}
+			}
+			841 = {
+				add_province_modifier = {
+					name = anbi_ab2_the_dream_city
+					duration = 3650
+				}
+			}
+			839 = {
+				add_province_modifier = {
+					name = anbi_ab2_the_dream_city
+					duration = 3650
+				}
+			}
+			834 = {
+				add_province_modifier = {
+					name = anbi_ab2_the_dream_city
+					duration = 3650
+				}
+			}
+			840 = {
+				add_province_modifier = {
+					name = anbi_ab2_the_dream_city
+					duration = 3650
+				}
+			}
+			843 = {
+				add_province_modifier = {
+					name = anbi_ab2_the_dream_city
+					duration = 3650
+				}
+			}
+			castonath_area = {
+				add_province_modifier = {
+					name = anbi_ab2_the_dream_city
+					duration = 3650
+				}
+			}
+		} 
+	}
+
+	anbi_ab1_the_rivers_and_dams = {
+		icon = mission_elf_smiling
+		position = 15
+		required_missions = { anbi_ab1_the_capital_development } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			NOT = {
+				has_courthouse_building_trigger = yes
+			}
+		} 
+
+		trigger = {  
+			833 = {
+				has_province_modifier = anbi_escanni_great_city_modifier
+			}
+			num_of_owned_provinces_with = {
+				value = 100
+				has_courthouse_building_trigger = yes
+			}
+			OR = {
+				university = 20
+				innovativeness = 75
+			}
+			inner_castanor_region = {
+				religion = giantkin_regent_court
+			}
+			west_castanor_region = {
+				religion = giantkin_regent_court
+			}
+			south_castanor_region = {
+				religion = giantkin_regent_court
+			}
+		} 
+
+		effect = {  
+			castonath_area = {
+				add_province_modifier = {
+					name = anbi_ab2_the_dream_city
+					duration = 3650
+				}
+			}
+			southgate_area = {
+				add_province_modifier = {
+					name = anbi_ab2_the_dream_city
+					duration = 3650
+				}
+			}
+			nortmere_area = {
+				add_province_modifier = {
+					name = anbi_ab2_the_dream_city
+					duration = 3650
+				}
+			}
+			lower_nath_area = {
+				add_province_modifier = {
+					name = anbi_ab2_the_dream_city
+					duration = 3650
+				}
+			}
+			upper_nath_area = {
+				add_province_modifier = {
+					name = anbi_ab2_the_dream_city
+					duration = 3650
+				}
+			}
+			trialmount_area = {
+				add_province_modifier = {
+					name = anbi_ab2_the_dream_city
+					duration = 3650
+				}
+			}
+			829 = {
+				if = {
+					limit = { 
+						NOT = {
+							has_building = university
+						}
+					}
+					add_building = university
+				}
+				else = {
+					ROOT = {
+						add_adm_power = 50
+					}
+				}
+			}
+			830 = {
+				if = {
+					limit = { 
+						NOT = {
+							has_building = university
+						}
+					}
+					add_building = university
+				}
+				else = {
+					ROOT = {
+						add_adm_power = 50
+					}
+				}
+			}
+			841 = {
+				if = {
+					limit = { 
+						NOT = {
+							has_building = university
+						}
+					}
+					add_building = university
+				}
+				else = {
+					ROOT = {
+						add_adm_power = 50
+					}
+				}
+			}
+			839 = {
+				if = {
+					limit = { 
+						NOT = {
+							has_building = university
+						}
+					}
+					add_building = university
+				}
+				else = {
+					ROOT = {
+						add_adm_power = 50
+					}
+				}
+			}
+			834 = {
+				if = {
+					limit = { 
+						NOT = {
+							has_building = university
+						}
+					}
+					add_building = university
+				}
+				else = {
+					ROOT = {
+						add_adm_power = 50
+					}
+				}
+			}
+			840 = {
+				if = {
+					limit = { 
+						NOT = {
+							has_building = university
+						}
+					}
+					add_building = university
+				}
+				else = {
+					ROOT = {
+						add_adm_power = 50
+					}
+				}
+			}
+			843 = {
+				if = {
+					limit = { 
+						NOT = {
+							has_building = university
+						}
+					}
+					add_building = university
+				}
+				else = {
+					ROOT = {
+						add_adm_power = 50
+					}
+				}
+			}
+			castonath_area = {
+				if = {
+					limit = { 
+						NOT = {
+							has_building = university
+						}
+					}
+					add_building = university
+				}
+				else = {
+					ROOT = {
+						add_adm_power = 50
+					}
+				}
+			}
+			add_country_modifier = {
+				name = anbi_ab1_the_rivers_and_dams_modifier
+				duration = -1
+			}
+			set_country_flag = anbi_ab1_the_rivers_and_dams_cf
+			custom_tooltip = anbi_ab1_the_rivers_and_dams_ct
+		} 
+	}
+
+	anbi_ab1_the_smoke_is_rising = {
+		icon = mission_rb_build_furnaces
+		position = 16
+		required_missions = { anbi_ab1_the_rivers_and_dams } 
+		provinces_to_highlight = {  
+			owned_by = ROOT
+			NOT = {
+				has_production_or_gold_building_trigger = yes
+			}
+		} 
+
+		trigger = {  
+			OR = {
+				any_owned_province = {
+					trade_goods = coal
+				}
+				AND = {
+					innovativeness = 100
+					adm_power = 600
+				}
+			}
+			833 = {
+				has_province_modifier = anbi_escanni_great_city_2_modifier
+			}
+			num_of_owned_provinces_with = {
+				value = 200
+				has_production_or_gold_building_trigger = yes
+			}
+		} 
+
+		effect = {  
+			if = {
+				limit = { 
+					NOT = {
+						any_owned_province = {
+							trade_goods = coal
+						}
+					}
+				}
+				add_adm_power = -600
+			}
+			coalwoud_area = {
+				change_trade_goods = coal
+			}
+			serpentsmarck_area = {
+				change_trade_goods = coal
+			}
+			inner_castanor_region = {
+				add_province_modifier = {
+					name = anbi_ab1_the_smoke_is_rising_modifier
+					duration = -1
+				}
+			}
+			west_castanor_region = {
+				add_province_modifier = {
+					name = anbi_ab1_the_smoke_is_rising_modifier
+					duration = -1
+				}
+			}
+			south_castanor_region = {
+				add_province_modifier = {
+					name = anbi_ab1_the_smoke_is_rising_modifier
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	anbi_ab1_unity_and_great = {
+		icon = mission_taychend_nanru_nakar_city
+		position = 17
+		required_missions = {
+			anbi_ab1_the_project_of_space
+			anbi_ab1_the_smoke_is_rising
+			anbi_ab1_the_center_of_world
+		}
+		provinces_to_highlight = {  
+			OR = {
+				region = west_castanor_region
+				region = south_castanor_region
+				region = inner_castanor_region
+			}
+			NOT = {
+				development = 10
+			}
+		} 
+
+		trigger = {  
+			inner_castanor_region = {
+				type = all
+				development = 10
+			}
+			west_castanor_region = {
+				type = all
+				development = 10
+			}
+			south_castanor_region = {
+				type = all
+				development = 10
+			}
+			development_in_provinces = {
+				value = 5000
+				OR = {
+					region = inner_castanor_region
+					region = west_castanor_region
+					region = south_castanor_region
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = anbi_ab1_unity_and_great_ct
+			set_country_flag = anbi_ab1_unity_and_great_cf
+			add_country_modifier = {
+				name = anbi_ab1_unity_and_great_modifier
+				duration = -1
+			}
+		} 
+	}
+}
+bloody_canstanor_development_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB2
+		has_country_flag = AB1_panzer_bloodtooth_cf
+		has_country_flag = bloody_canstanor_second_cf
+	}
+
+	anbi_ab1_destory_the_fake_gods = {
+		icon = mission_burning_man
+		position = 12
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_ab1_the_great_war_ctt
+				NOT = { has_country_flag = anbi_ab1_the_great_war } 
+			}
+			religious_unity = 0.5
+			stability = 1
+			custom_trigger_tooltip = {
+				tooltip = AB1_food_research_decision_reverse_ctt
+				check_variable = {
+					FoodResearchV > 0.5
+				}
+			}
+			NOT = { average_unrest = 3 } 
+		}
+
+		effect = {
+			anbi_ab1_the_food_research_subtract = yes
+			add_stability = -1
+			add_country_modifier = {
+				name = "anbi_ab1_destory_the_fake_gods_modifier"
+				duration = 3650
+			}
+			add_government_reform = anbi_castanor_the_true_cult_reform
+			custom_tooltip = anbi_ab1_destory_the_fake_gods_ct
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						NOT = { religion = ROOT } 
+						province_group = escann_proper
+					}
+					add_province_modifier = {
+						name = "anbi_ab1_destory_the_fake_gods_modifier2"
+						duration = 3650
+					}
+				}
+			}
+		}
+	}
+
+	anbi_ab1_the_field_of_castanor = {
+		icon = mission_pol_breadbasket_europe
+		position = 14
+		required_missions = { anbi_ab1_seek_the_future } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			development_in_provinces = {
+				value = 1000
+				OR = {
+					region = south_castanor_region
+					region = west_castanor_region
+				}
+			}
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+		} 
+
+		effect = {  
+			custom_tooltip = anbi_ab1_the_field_of_castanor_ct
+			set_country_flag = anbi_ab1_the_field_of_castanor_cf
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+		} 
+	}
+
+	anbi_ab1_the_sight_is_farthest = {
+		icon = mission_tech_stuff
+		position = 15
+		required_missions = { anbi_ab1_the_field_of_castanor } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			any_country = {
+				NOT = {
+					tech_difference = 1
+				}
+			}
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+		} 
+
+		effect = {  
+			custom_tooltip = anbi_ab1_the_sight_is_farthest_ct
+			set_country_flag = anbi_ab1_the_sight_is_farthest_cf
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+		} 
+	}
+
+	anbi_ab1_the_project_of_space = {
+		icon = mission_goblin_rocket
+		position = 16
+		required_missions = { anbi_ab1_the_sight_is_farthest } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = {
+				trading_bonus = {
+					trade_goods = damestear
+					value = yes
+				}
+				trading_bonus = {
+					trade_goods = precursor_relics
+					value = yes
+				}
+				trading_bonus = {
+					trade_goods = coal
+					value = yes
+				}
+			}
+			4097 = {
+				has_province_modifier = anbi_escanni_research_modifier
+			}
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+		} 
+
+		effect = {  
+			custom_tooltip = anbi_ab1_the_project_of_space_ct
+			set_country_flag = anbi_ab1_the_project_of_space_cf
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+		} 
+	}
+}
+bloody_canstanor_development_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB2
+		has_country_flag = AB1_panzer_bloodtooth_cf
+		has_country_flag = bloody_canstanor_second_cf
+	}
+
+	anbi_ab1_the_great_roads = {
+		icon = mission_se_medicine_wheel
+		position = 11
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_ab1_the_great_war_ctt
+				NOT = { has_country_flag = anbi_ab1_the_great_war } 
+			}
+			manpower = 100
+			treasury = 2500
+			adm_power = 200
+			south_castanor_region = {
+				type = all
+				is_core = ROOT
+				owned_by = ROOT
+			}
+			inner_castanor_region = {
+				type = all
+				is_core = ROOT
+				owned_by = ROOT
+			}
+			west_castanor_region = {
+				type = all
+				is_core = ROOT
+				owned_by = ROOT
+			}
+			NOT = {
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_ab1_the_great_roads_ct
+			add_treasury = -2500
+			add_manpower = -100
+			add_adm_power = -200
+			add_country_modifier = {
+				name = "anbi_ab1_the_production_and_construction_army"
+				duration = -1
+			}
+		}
+	}
+
+	anbi_ab1_renew_the_dragon_roads = {
+		icon = mission_bedouins
+		position = 12
+		required_missions = { anbi_ab1_the_great_roads } 
+		provinces_to_highlight = {
+			province_group = dragon_road
+			NOT = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+
+		trigger = {
+			dragon_road = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			adm_power = 100
+			dip_power = 100
+		}
+
+		effect = {
+			custom_tooltip = anbi_ab1_renew_the_dragon_roads_ct
+			set_country_flag = castanor_rebuild_dragon_road_unlocked
+			add_adm_power = -100
+			add_dip_power = -100
+		}
+	}
+}
+bloody_canstanor_eating_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB2
+		has_country_flag = AB1_panzer_bloodtooth_cf
+		has_country_flag = bloody_canstanor_second_cf
+	}
+
+	anbi_ab1_kill_the_mosquito = {
+		icon = mission_destroyed_city
+		position = 16
+		provinces_to_highlight = {
+			OR = {
+				region = dostanor_region
+				region = daravans_folly_region
+				AND = {
+					continent = europe
+					OR = {
+						culture = ourdi
+						culture = corvurian
+					}
+				}
+			}
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_ab1_the_great_war_ctt
+				NOT = { has_country_flag = anbi_ab1_the_great_war } 
+			}
+			dostanor_region = {
+				type = all
+				owned_by = ROOT
+			}
+			daravans_folly_region = {
+				type = all
+				owned_by = ROOT
+			}
+			europe = {
+				type = all
+				OR = {
+					AND = {
+						OR = {
+							culture = ourdi
+							culture = corvurian
+						}
+						owned_by = ROOT
+					}
+					NOT = {
+						culture = ourdi
+						culture = corvurian
+					}
+				}
+			}
+		}
+
+		effect = {
+			deepwoods_superregion = { add_permanent_claim = ROOT } 
+			forlorn_vale_region = { add_permanent_claim = ROOT}
+			add_country_modifier = {
+				name = "anbi_ab1_kill_the_mosquito_modifier"
+				duration = -1
+			}
+			custom_tooltip = anbi_ab1_kill_the_mosquito_ct
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture = ourdi
+							culture = corvurian
+						}
+					}
+					change_culture = dostanorian
+				}
+			}
+			add_accepted_culture_or_dip_power = { culture = dostanorian } 
+		}
+	}
+
+	anbi_ab1_the_spice_of_vampire = {
+		icon = mission_ramsteel_gunpowder
+		position = 17
+		required_missions = { anbi_ab1_kill_the_mosquito } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			441 = {
+				owned_by = ROOT
+				is_core = ROOT
+				base_production = 10
+				has_production_or_gold_building_trigger = yes
+				province_has_current_tech_fort_trigger = yes
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_ab1_the_spice_of_vampire_ct
+			largest_decrease_of_goblin_tolerance_effect = yes
+			largest_decrease_of_gnollish_tolerance_effect = yes
+			anbi_ab1_the_food_research_add = yes
+			hidden_effect = {
+				dostanor_region = {
+					limit = { monstrous_culture = yes } 
+					change_religion = ROOT
+					change_culture = dostanorian
+					add_unrest = 10
+				}
+				daravans_folly_region = {
+					limit = { monstrous_culture = yes } 
+					change_religion = ROOT
+					change_culture = dostanorian
+					add_unrest = 10
+				}
+				ourdia_region = {
+					limit = { monstrous_culture = yes } 
+					change_religion = ROOT
+					change_culture = dostanorian
+					add_unrest = 10
+				}
+			}
+			add_church_power = 100
+			441 = {
+				change_religion = ROOT
+				change_culture = ROOT
+				change_trade_goods = cloves
+				add_permanent_province_modifier = {
+					name = "anbi_ab1_the_spice_of_vampire_modifier"
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = bloody_castanor.3000
+					days = 365
+				}
+			}
+		}
+	}
+
+	anbi_ab1_the_roast_xianling = {
+		icon = mission_fire_acolyte
+		position = 19
+		required_missions = { anbi_ab1_the_war_against_deepwood } 
+		provinces_to_highlight = {
+			superregion = deepwoods_superregion
+			NOT = { has_province_modifier = castanor_third_great_cleansing_prov } 
+		}
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_ab1_the_roast_xianling_ctt
+				has_country_flag = castanor_third_great_cleansing_concluded
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				superregion = deepwoods_superregion
+				religion = ROOT
+				culture = ROOT
+				development = 15
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_ab1_the_roast_xianling_ct
+			set_global_flag = eat_xianling
+			hidden_effect = {
+				country_event = {
+					id = bloody_castanor.3002
+					days = 365
+					random = 400
+				}
+			}
+		}
+	}
+
+	anbi_ab1_kfc_of_goblins = {
+		icon = mission_dapper_goblin
+		position = 20
+		required_missions = { anbi_ab1_the_low_friend } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = AB1_food_research_decision_reverse_ctt
+				check_variable = {
+					FoodResearchV > 0.5
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = anbi_ab1_kfc_of_goblins_ctt
+				has_global_flag = eat_goblin_a_upup
+			}
+		}
+
+		effect = {
+			anbi_ab1_the_food_research_subtract = yes
+			custom_tooltip = anbi_ab1_kfc_of_goblins_ct
+			clr_global_flag = eat_goblin_a_upup
+			set_global_flag = eat_goblin_a_upupup
+			hidden_effect = {
+				country_event = {
+					id = bloody_castanor.3003
+					days = 365
+					random = 400
+				}
+			}
+		}
+	}
+
+	anbi_ab1_allun_over = {
+		icon = mission_mountain_castle
+		position = 22
+		required_missions = { anbi_ab1_beat_the_anbennar } 
+		provinces_to_highlight = {
+			OR = {
+				region = alenic_frontier_region
+				AND = {
+					continent = europe
+					culture_group = alenic
+				}
+			}
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			alenic_frontier_region = {
+				type = all
+				owned_by = ROOT
+			}
+			europe = {
+				type = all
+				OR = {
+					AND = {
+						culture_group = alenic
+						owned_by = ROOT
+					}
+					NOT = { culture_group = alenic } 
+				}
+			}
+		}
+
+		effect = {
+			add_accepted_culture = gawedi
+			add_accepted_culture = old_alenic
+			add_accepted_culture = blue_reachman
+			add_accepted_culture = vertesker
+			add_accepted_culture = moorman
+			add_accepted_culture = wexonard
+			add_accepted_culture = marrodic
+			add_country_modifier = {
+				name = "castanor_folding_in_alenic"
+				duration = -1
+			}
+			dragon_coast_region = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	anbi_ab1_braise_fake_dragons = {
+		icon = mission_redscales
+		position = 23
+		required_missions = { anbi_ab1_allun_over } 
+		provinces_to_highlight = {
+			OR = {
+				region = dragon_coast_region
+				AND = {
+					continent = europe
+					culture_group = kobold
+				}
+			}
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			europe = {
+				type = all
+				OR = {
+					AND = {
+						owned_by = ROOT
+						culture_group = kobold
+					}
+					NOT = { culture_group = kobold } 
+				}
+			}
+			dragon_coast_region = {
+				type = all
+				owned_by = ROOT
+			}
+			has_gnomish_accepted_culture = yes
+		}
+
+		effect = {
+			custom_tooltip = anbi_ab1_braise_fake_dragons_ct
+			set_global_flag = eat_kobold
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = kobold
+						continent = europe
+					}
+					change_culture = moorman
+					change_religion = ROOT
+					remove_kobold_minority_size_effect = yes
+				}
+			}
+			large_increase_of_gnomish_tolerance_effect = yes
+			largest_decrease_of_kobold_tolerance_effect = yes
+			small_country_region = { add_permanent_claim = ROOT } 
+			dragon_coast_region = {
+				limit = {
+					has_terrain = cavern
+				}
+				add_permanent_province_modifier = {
+					name = anbi_ab1_braise_fake_dragons_modifier
+					duration = -1
+				}
+				add_kobold_minority_size_effect = yes
+				change_trade_goods = livestock
+			}
+		}
+	}
+}
+bloody_canstanor_eating_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB2
+		has_country_flag = AB1_panzer_bloodtooth_cf
+		has_country_flag = bloody_canstanor_second_cf
+	}
+
+	anbi_ab1_the_war_against_deepwood = {
+		icon = mission_fire_judgement
+		position = 18
+		required_missions = { anbi_ab1_the_spice_of_vampire } 
+		provinces_to_highlight = {
+			superregion = deepwoods_superregion
+			NOT = { is_core = ROOT } 
+			NOT = { owned_by = ROOT } 
+			is_city = yes
+		}
+
+		trigger = {
+			mil_power = 200
+			manpower = 100
+			deepwoods_superregion = {
+				type = all
+				custom_trigger_tooltip = {
+					tooltip = castanor_third_great_cleansing_trigger_tt
+					if = {
+						limit = { is_city = yes } 
+						is_core = ROOT
+						owned_by = ROOT
+					}
+				}
+			}
+		}
+
+		effect = {
+			add_mil_power = -200
+			add_manpower = -100
+			country_event = { id = flavor_castanor.30 } 
+		}
+	}
+
+	anbi_ab1_the_low_friend = {
+		icon = mission_dwarf
+		position = 19
+		required_missions = { anbi_ab1_the_war_against_deepwood } 
+		provinces_to_highlight = {
+			region = west_dwarovar_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 50
+				region = west_dwarovar_region
+			}
+			years_of_income = 1.5
+			any_subject_country = {
+				capital_scope = { region = west_dwarovar_region } 
+				culture_group = dwarven
+			}
+			all_subject_country = {
+				OR = {
+					AND = {
+						capital_scope = { region = west_dwarovar_region } 
+						has_opinion = {
+							who = ROOT
+							value = 190
+						}
+					}
+					NOT = { capital_scope = { region = west_dwarovar_region }  } 
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_ab1_the_low_friend_ct
+			tooltip = {
+				4097 = {
+					add_base_production = 10
+					upgrade_hold = yes
+				}
+			}
+			add_years_of_income = -1.5
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = marrhold_tunnel_opened } 
+					4097 = {
+						add_base_production = 10
+						upgrade_hold = yes
+					}
+				}
+				else = {
+					4097 = {
+						add_great_project_tier = {
+							type = marrhold_dwarovar_tunnel
+							tier = 1
+						}
+						add_canal = marrhold_dwarovar_tunnel
+						set_global_flag = marrhold_tunnel_opened
+						owner = { country_event = { id = diggy.401 }  } 
+					}
+				}
+				random_subject_country = {
+					limit = { capital_scope = { region = west_dwarovar_region }  } 
+					save_event_target_as = anbi_ab1_the_low_friend_target1
+				}
+				every_owned_province = {
+					limit = { region = west_dwarovar_region } 
+					add_core = event_target:anbi_ab1_the_low_friend_target1
+					cede_province = event_target:anbi_ab1_the_low_friend_target1
+				}
+				while = {
+					limit = {
+						any_subject_country = {
+							capital_scope = { region = west_dwarovar_region } 
+							NOT = { tag = event_target:anbi_ab1_the_low_friend_target1 } 
+						}
+					}
+					random_subject_country = {
+						limit = {
+							capital_scope = { region = west_dwarovar_region } 
+							NOT = { tag = event_target:anbi_ab1_the_low_friend_target1 } 
+						}
+						save_event_target_as = anbi_ab1_the_low_friend_target2
+					}
+					event_target:anbi_ab1_the_low_friend_target1 = { inherit = event_target:anbi_ab1_the_low_friend_target2 } 
+				}
+			}
+			add_country_modifier = {
+				name = "anbi_ab1_the_low_friend_modifier_cas"
+				duration = -1
+			}
+			custom_tooltip = anbi_ab1_the_low_friend_ct2
+			event_target:anbi_ab1_the_low_friend_target1 = {
+				change_religion = giantkin_regent_court
+				add_country_modifier = {
+					name = "anbi_ab1_the_low_friend_modifier_low"
+					duration = -1
+				}
+				override_country_name = "AB2_greenmeat_company"
+				change_country_color = {
+					country = AB2
+				}
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								culture_is_goblin = yes
+								culture_is_orcish = yes
+							}
+						}
+						change_culture = PREV
+						add_unrest = 10
+					}
+					serpentspine = {
+						add_permanent_claim = PREV
+					}
+				}		
+			}
+			anbi_ab1_the_food_research_add = yes
+			anbi_ab1_the_food_research_add = yes
+		}
+	}
+
+	anbi_ab1_purify_extravagantness = {
+		icon = show_piety
+		position = 22
+		required_missions = { anbi_ab1_beat_the_anbennar } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			dip_power = 300
+			OR = {
+				AND = {
+					total_development = 4000
+					army_size = 750
+				}
+				has_institution = manufactories
+			}
+		}
+
+		effect = {
+			add_dip_power = -300
+			custom_tooltip = anbi_ab1_purify_extravagantness_ct
+			hidden_effect = {
+				every_country = {
+					limit = {
+						capital_scope = {
+							OR = {
+								region = west_dameshead_region
+								region = east_dameshead_region
+								region = damescrown_region
+								region = the_borders_region
+							}
+						}
+						is_subject = no
+						NOT = { total_development = 200 } 
+					}
+					country_event = { id = bloody_castanor.22 } 
+				}
+			}
+		}
+	}
+
+	anbi_ab1_crush_the_fake_emperor = {
+		icon = mission_beheading
+		position = 23
+		required_missions = { anbi_ab1_purify_extravagantness } 
+		provinces_to_highlight = {
+			OR = {
+				region = west_dameshead_region
+				region = east_dameshead_region
+				region = damescrown_region
+				region = the_borders_region
+				region = businor_region
+				all_province = { owned_by = A85 } 
+			}
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			west_dameshead_region = {
+				type = all
+				owned_by = ROOT
+			}
+			east_dameshead_region = {
+				type = all
+				owned_by = ROOT
+			}
+			damescrown_region = {
+				type = all
+				owned_by = ROOT
+			}
+			the_borders_region = {
+				type = all
+				owned_by = ROOT
+			}
+			businor_region = {
+				type = all
+				owned_by = ROOT
+			}
+			A85 = { exists = no } 
+			calc_true_if = {
+				amount = 3
+				accepted_culture = anbenncoster
+				accepted_culture = west_damerian
+				accepted_culture = east_damerian
+				accepted_culture = pearlsedger
+				accepted_culture = crownsman
+				accepted_culture = vernman
+				accepted_culture = exwesser
+				accepted_culture = arbarani
+				accepted_culture = uelairey
+				accepted_culture = esmari
+				accepted_culture = nathalairey
+				accepted_culture = arannese
+				accepted_culture = aldresian
+				accepted_culture = telgeiran
+				accepted_culture = pashainey
+			}
+		}
+
+		effect = {
+			small_decrease_of_half_elven_tolerance_effect = yes
+			lencenor_region = { add_permanent_claim = ROOT } 
+			add_accepted_culture = anbenncoster
+			add_accepted_culture = west_damerian
+			add_accepted_culture = east_damerian
+			add_accepted_culture = pearlsedger
+			add_accepted_culture = crownsman
+			add_accepted_culture = vernman
+			add_accepted_culture = exwesser
+			add_accepted_culture = arbarani
+			add_accepted_culture = esmari
+			add_accepted_culture = arannese
+			add_accepted_culture = nathalairey
+			add_accepted_culture = uelairey
+			add_accepted_culture = aldresian
+			add_accepted_culture = telgeiran
+			add_accepted_culture = pashainey
+			add_country_modifier = {
+				name = "castanor_folding_in_anbennarian"
+				duration = -1
+			}
+		}
+	}
+
+	anbi_ab1_boiled_wine = {
+		icon = mission_potion
+		position = 24
+		required_missions = {
+			anbi_ab1_crush_the_fake_emperor
+			anbi_ab1_braise_fake_dragons
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = small_country_region
+				region = lencenor_region
+			}
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			has_halfling_accepted_culture = yes
+			small_country_region = {
+				type = all
+				owned_by = ROOT
+			}
+			lencenor_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+
+		effect = {  
+			large_increase_of_halfling_tolerance_effect = yes
+			large_increase_of_half_elven_tolerance_effect = yes
+			add_accepted_culture = high_lorentish
+			add_accepted_culture = low_lorentish
+			add_accepted_culture = derannic
+			add_accepted_culture = sorncosti
+			add_accepted_culture = roilsardi
+			add_accepted_culture = iochander
+			add_country_modifier = { name = castanor_folding_in_lencori duration = -1 }
+		} 
+	}
+
+	anbi_ab1_the_hobgoblin = {
+		icon = mission_beautiful_hobgoblin_stache
+		position = 26
+		required_missions = { anbi_ab1_the_halann_delicious_food } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = anbi_delete_haless
+					has_global_flag = delete_haless_region
+				}
+				AND = {
+					NOT = {
+						exists = R62
+					}
+					num_of_owned_provinces_with = {
+						value = 5
+						has_any_hobgoblin_pop_trigger = yes
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = anbi_ab1_the_hobgoblin_modifier
+				duration = -1
+			}
+		} 
+	}
+}
+bloody_canstanor_eating_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB2
+		has_country_flag = AB1_panzer_bloodtooth_cf
+		has_country_flag = bloody_canstanor_second_cf
+	}
+
+	anbi_ab1_conquer_again = {
+		icon = mission_mithril_cannons
+		position = 18
+		required_missions = { anbi_ab1_the_spice_of_vampire } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = forlorn_vale_region
+					NOT = { owned_by = ROOT } 
+				}
+				AND = {
+					OR = {
+						area = north_ibevar_area
+						area = south_ibevar_area
+					}
+					NOT = { has_production_or_gold_building_trigger = yes } 
+				}
+			}
+		}
+
+		trigger = {
+			forlorn_vale_region = {
+				type = all
+				owned_by = ROOT
+			}
+			if = {
+				limit = {
+					esmaria_region = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			else = {
+				mil_power = 50
+				north_ibevar_area = {
+					type = all
+					has_production_or_gold_building_trigger = yes
+				}
+				south_ibevar_area = {
+					type = all
+					has_production_or_gold_building_trigger = yes
+				}
+			}
+			accepted_culture = moon_elf
+		}
+
+		effect = {
+			add_mil_power = -50
+			add_mil_power = -50
+			add_country_modifier = {
+				name = "castanor_esmar_flotilla"
+				duration = 7300
+			}
+			north_ibevar_area = {
+				add_province_modifier = {
+					name = "castanor_depleted_woods"
+					duration = 7300
+				}
+			}
+			south_ibevar_area = {
+				add_province_modifier = {
+					name = "castanor_depleted_woods"
+					duration = 7300
+				}
+			}
+			custom_tooltip = castanor_crashing_river_parties_effect_tt
+			hidden_effect = {
+				bennonhill_area = { add_province_triggered_modifier = castanor_river_support } 
+				high_esmar_area = { add_province_triggered_modifier = castanor_river_support } 
+				ashfields_area = {
+					limit = { NOT = { province_id = 320 }  } 
+					add_province_triggered_modifier = castanor_river_support
+				}
+				cann_esmar_area = {
+					limit = { NOT = { province_id = 259 }  } 
+					add_province_triggered_modifier = castanor_river_support
+				}
+				heartland_borders_area = {
+					limit = { NOT = { province_id = 255 }  } 
+					add_province_triggered_modifier = castanor_river_support
+				}
+				234 = { add_province_triggered_modifier = castanor_river_support } 
+				low_esmar_area = { add_province_triggered_modifier = castanor_river_support } 
+				songbarges_area = { add_province_triggered_modifier = castanor_river_support } 
+			}
+			esmaria_region = { add_permanent_claim = ROOT } 
+			the_borders_region = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	anbi_ab1_beat_the_anbennar = {
+		icon = mission_build_up_to_force_limit
+		position = 21
+		required_missions = { anbi_ab1_conquer_again } 
+		provinces_to_highlight = {
+			OR = {
+				region = the_borders_region
+				region = esmaria_region
+			}
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			OR = {
+				AND = {
+					esmaria_region = {
+						type = all
+						owned_by = ROOT
+					}
+					num_of_owned_provinces_with = {
+						value = 30
+						region = the_borders_region
+						is_core = ROOT
+					}
+				}
+				all_country = {
+					is_emperor = no
+				}
+			}
+		}
+
+		effect = {
+			damescrown_region = { add_permanent_claim = ROOT } 
+			west_dameshead_region = { add_permanent_claim = ROOT } 
+			east_dameshead_region = { add_permanent_claim = ROOT } 
+			businor_region = { add_permanent_claim = ROOT } 
+			if = {
+				limit = { 
+					any_country = {
+						is_emperor = yes
+					}
+				}
+				country_event = { id = bloody_castanor.21 } 
+			}
+			else = {
+				bahar_region = {
+					add_permanent_claim = ROOT
+				}
+				harpy_hills_region = {
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	anbi_ab1_amazing_animal = {
+		icon = mission_aelantir
+		position = 22
+		required_missions = { anbi_ab1_beat_the_anbennar } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				num_of_colonists = 1
+			}
+			dip_power = 300
+		}
+
+		effect = {
+			custom_tooltip = anbi_ab1_amazing_animal_ct
+			hidden_effect = {
+				every_country = {
+					limit = {
+						capital_scope = { continent = europe } 
+						is_great_power = yes
+					}
+					every_owned_province = {
+						limit = {
+							OR = {
+								continent = north_america
+								continent = south_america
+							}
+						}
+						add_claim = ROOT
+					}
+					every_subject_country = {
+						every_owned_province = {
+							limit = {
+								OR = {
+									continent = north_america
+									continent = south_america
+								}
+							}
+							add_claim = ROOT
+						}
+					}
+				}
+			}
+			add_country_modifier = {
+				name = "anbi_ab1_amazing_animal_modifier"
+				duration = 36500
+			}
+		}
+	}
+
+	anbi_ab1_braise_the_evil_elven = {
+		icon = mission_kwineh
+		position = 23
+		required_missions = { anbi_ab1_amazing_animal } 
+		provinces_to_highlight = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			is_city = yes
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 50
+				OR = {
+					continent = north_america
+					continent = south_america
+				}
+			}
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					superregion = taychend_superregion
+				}
+				any_known_country = {
+					capital_scope = { superregion = taychend_superregion } 
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = anbi_ab1_braise_the_evil_elven_ctt
+				dragon_road = {
+					type = all
+					has_province_modifier = castanor_dragon_road
+				}
+			}
+		}
+
+		effect = {  
+			largest_decrease_of_ruinborn_tolerance_effect = yes
+			anbi_ab1_the_food_research_add = yes
+			custom_tooltip = anbi_ab1_braise_the_evil_elven_ct
+			set_global_flag = eat_evil_elven
+			447 = {
+				add_permanent_province_modifier = {
+					name = anbi_ab1_braise_the_evil_elven_modifier
+					duration = -1
+				}
+				change_trade_goods = livestock
+			}
+		} 
+	}
+
+	anbi_ab1_kill_the_left = {
+		icon = mission_tianlou
+		position = 24
+		required_missions = { anbi_ab1_braise_the_evil_elven } 
+		provinces_to_highlight = { province_id = 4837 } 
+
+		trigger = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = anbi_delete_haless
+					has_global_flag = delete_haless_region
+				}
+				4837 = {
+					OR = {
+						owner = {
+							has_opinion = {
+								who = ROOT
+								value = 180
+							}
+						}
+						owned_by = ROOT
+					}
+				}
+			}	
+		}
+
+		effect = {  
+			custom_tooltip = anbi_ab1_kill_the_left_ct
+			if = {
+				limit = { 
+					has_global_flag = delete_haless_region
+				}
+				add_adm_power = 1
+			}
+			else_if = {
+				limit = { 
+					4837 = {
+						owned_by = ROOT
+					}
+				}
+				yanshen_superregion = {
+					add_permanent_claim = ROOT
+				}
+			}
+			else = {
+				country_event = {
+					id = bloody_castanor.27
+				}
+			}
+		} 
+	}
+
+	anbi_ab1_the_halann_delicious_food = {
+		icon = mission_well_of_majesty
+		position = 25
+		required_missions = {
+			anbi_ab1_the_dogs_festival
+			anbi_ab1_the_raw_khet
+			anbi_ab1_kill_the_left
+			anbi_ab1_boiled_wine
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = anbi_ab1_all_perfect_food
+				has_global_flag = eat_centaur_upup
+				has_global_flag = eat_khet_upup
+				has_global_flag = eat_ogre_upup
+				has_global_flag = eat_harpy_upup
+				has_global_flag = eat_troll_upup
+				has_global_flag = eat_kobold_upup
+				has_global_flag = eat_goblin_a_upupup
+				has_global_flag = eat_gnollish_upup
+				has_global_flag = eat_xianling_upup
+				has_global_flag = eat_orcs_abc_cf
+				has_global_flag = eat_evil_elven_upup
+				has_global_flag = eat_greenskin_liver_upup
+			}
+			custom_trigger_tooltip = {
+				tooltip = anbi_ab1_perfect_castanor
+				has_country_flag = anbi_escanni_field_complete
+				has_country_flag = anbi_escanni_great_city_complete
+				has_country_flag = anbi_escanni_great_city_2_complete
+				has_country_flag = anbi_escanni_great_city_3_complete
+				has_country_flag = anbi_escanni_launch_prepare_complete
+				has_country_flag = anbi_escanni_research_complete
+				has_country_flag = anbi_escanni_rocket_complete
+				has_country_flag = anbi_escanni_one_culture_complete
+				has_country_flag = anbi_escanni_one_lang_complete
+				has_country_flag = anbi_escanni_river_transport_complete
+			}
+			833 = {
+				has_great_project = {
+					type = anbi_ab2_anbennar_palace
+					tier = 3
+				}
+			}
+			is_hegemon = yes
+		} 
+
+		effect = {  
+			country_event = {
+				id = bloody_castanor.35
+			}
+		} 
+	}
+
+}
+bloody_canstanor_eating_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB2
+		has_country_flag = AB1_panzer_bloodtooth_cf
+		has_country_flag = bloody_canstanor_second_cf
+	}
+
+	anbi_ab1_the_beauty_of_north = {
+		icon = mission_the_surge
+		position = 18
+		required_missions = { anbi_ab1_the_liver_mousse } 
+		provinces_to_highlight = {
+			superregion = gerudia_superregion
+			NOT = {
+				has_troll_majority_trigger = yes
+				is_empty = yes
+				owned_by = ROOT
+			}
+		}
+
+		trigger = {
+			gerudia_superregion = {
+				type = all
+				OR = {
+					has_troll_majority_trigger = yes
+					is_empty = yes
+					owned_by = ROOT
+				}
+			}
+			manpower = 50
+			years_of_income = 1
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+		}
+
+		effect = {
+			add_manpower = -50
+			add_years_of_income = -1
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			anbi_ab1_the_food_research_add = yes
+			add_accepted_culture_or_dip_power = { culture = east_dalr } 
+			add_accepted_culture_or_dip_power = { culture = west_dalr } 
+			add_accepted_culture_or_dip_power = { culture = olavish } 
+			add_country_modifier = {
+				name = "anbi_ab1_accept_gerudia_culture"
+				duration = -1
+			}
+			add_country_modifier = {
+				name = "anbi_ab1_the_beauty_of_north_modifier"
+				duration = 18250
+			}
+			northern_pass_region = {
+				add_permanent_claim = ROOT
+			}
+			country_event = { id = bloody_castanor.24 } 
+		}
+	}
+
+	anbi_ab1_the_cook_of_troll = {
+		icon = mission_frost_troll
+		position = 19
+		required_missions = { anbi_ab1_the_beauty_of_north } 
+		provinces_to_highlight = {
+			superregion = gerudia_superregion
+			has_any_troll_pop_trigger = yes
+			NOT = {
+				development = 30
+				has_production_or_gold_building_trigger = yes
+			}
+		}
+
+		trigger = {
+			if = {
+				limit = { 
+					any_province = {
+						superregion = gerudia_superregion
+						has_any_troll_pop_trigger = yes
+					}
+				}
+				any_owned_province = {
+					superregion = gerudia_superregion
+					has_any_troll_pop_trigger = yes
+					development = 20
+					has_production_or_gold_building_trigger = yes
+				}
+			}
+			else = {
+				treasury = 2500
+			}		
+		}
+
+		effect = {
+			largest_decrease_of_troll_tolerance_effect = yes
+			custom_tooltip = anbi_ab1_the_cook_of_troll_ct		
+			anbi_ab1_the_food_research_add = yes
+			tooltip = {
+				996 = {
+					change_trade_goods = livestock
+					add_province_modifier = {
+						name = "anbi_ab1_the_cook_of_troll_modifier"
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						superregion = gerudia_superregion
+						culture_group = giantkind
+					}
+					change_culture = west_dalr
+					change_religion = ROOT
+				}
+				every_owned_province = {
+					limit = {
+						superregion = gerudia_superregion
+						has_any_troll_pop_trigger = yes
+						development = 20
+						has_production_or_gold_building_trigger = yes
+					}
+					change_trade_goods = livestock
+					add_province_modifier = {
+						name = "anbi_ab1_the_cook_of_troll_modifier"
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = { 
+					NOT = {
+						any_province = {
+							superregion = gerudia_superregion
+							has_any_troll_pop_trigger = yes
+						}
+					}
+				}
+				add_treasury = -2500
+			}
+			custom_tooltip = anbi_ab1_the_cook_of_troll_ct2
+			set_global_flag = eat_troll
+		}
+	}
+
+	anbi_ab1_the_raw_khet = {
+		icon = mission_invade_kheterata
+		position = 24
+		required_missions = { anbi_ab1_the_suncult_down } 
+		provinces_to_highlight = {
+			region = kheterata_region
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			kheterata_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+
+		effect = {  
+			custom_tooltip = anbi_ab1_the_raw_khet_ct
+			set_global_flag = eat_khet
+			country_event = {
+				id = bloody_castanor.37
+			}
+		} 
+	}
+
+	anbi_ab1_666_meat = {
+		icon = mission_transmutation
+		position = 26
+		required_missions = { anbi_ab1_the_halann_delicious_food } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = anbi_delete_south_sarhal
+					has_global_flag = delete_south_sarhal_region
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					has_any_lizardfolk_pop_trigger = yes
+				}
+			}	
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = anbi_ab1_666_meat_modifier
+				duration = -1
+			}
+		} 
+	}
+}
+bloody_canstanor_eating_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB2
+		has_country_flag = AB1_panzer_bloodtooth_cf
+		has_country_flag = bloody_canstanor_second_cf
+	}
+
+	anbi_ab1_castle_of_marsh = {
+		icon = mission_mounted_battle
+		position = 16
+		provinces_to_highlight = {
+			OR = {
+				area = east_chillsbay_area
+				area = sondaar_area
+				area = wudhal_area
+				area = gulletpeak_area
+				area = cedesck_area
+				area = vrorenmarch_area
+				area = vrorenwall_area
+				area = southern_giants_tears_area
+				area = northern_giants_tears_area
+			}
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_ab1_the_great_war_ctt
+				NOT = { has_country_flag = anbi_ab1_the_great_war } 
+			}
+			229 = {
+				has_great_project = {
+					type = bal_mire
+					tier = 2
+				}
+			}
+			east_chillsbay_area = {
+				type = all
+				owned_by = ROOT
+			}
+			sondaar_area = {
+				type = all
+				owned_by = ROOT
+			}
+			wudhal_area = {
+				type = all
+				owned_by = ROOT
+			}
+			gulletpeak_area = {
+				type = all
+				owned_by = ROOT
+			}
+			cedesck_area = {
+				type = all
+				owned_by = ROOT
+			}
+			vrorenmarch_area = {
+				type = all
+				owned_by = ROOT
+			}
+			vrorenwall_area = {
+				type = all
+				owned_by = ROOT
+			}
+			southern_giants_tears_area = {
+				type = all
+				owned_by = ROOT
+			}
+			northern_giants_tears_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+
+		effect = {
+			gerudia_superregion = { add_permanent_claim = ROOT } 
+			add_country_modifier = {
+				name = "anbi_ab1_castle_of_marsh_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	anbi_ab1_the_liver_mousse = {
+		icon = bohemian_crystal
+		position = 17
+		required_missions = { anbi_ab1_castle_of_marsh } 
+		provinces_to_highlight = {
+			superregion = gerudia_superregion
+			has_any_half_orcish_pop_trigger = yes
+			has_any_orcish_pop_trigger = yes
+			NOT = {
+				development = 30
+				has_production_or_gold_building_trigger = yes
+			}
+		}
+
+		trigger = {
+			if = {
+				limit = { 
+					any_province = {
+						superregion = gerudia_superregion
+						has_any_half_orcish_pop_trigger = yes
+						has_any_orcish_pop_trigger = yes
+					}
+				}
+				any_owned_province = {
+					superregion = gerudia_superregion
+					has_any_half_orcish_pop_trigger = yes
+					has_any_orcish_pop_trigger = yes
+					development = 30
+					has_production_or_gold_building_trigger = yes
+				}
+			}
+			else = {
+				treasury = 2000
+			}
+			custom_trigger_tooltip = {
+				tooltip = AB1_food_research_decision_reverse_ctt
+				check_variable = {
+					FoodResearchV > 0.5
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_ab1_the_liver_mousse_ct2
+			tooltip = {
+				740 = {
+					remove_orcish_minority_size_effect = yes
+					change_trade_goods = livestock
+					add_permanent_province_modifier = {
+						name = "anbi_ab1_the_liver_mousse_modifier"
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				gerudia_superregion = {
+					limit = {
+						culture_group = orcish
+						owned_by = ROOT
+					}
+					change_culture = white_reachman
+					change_religion = ROOT
+					add_unrest = 10
+				}
+				gerudia_superregion = {
+					limit = {
+						owned_by = ROOT
+						has_any_half_orcish_pop_trigger = yes
+						has_any_orcish_pop_trigger = yes
+						development = 30
+						has_production_or_gold_building_trigger = yes
+					}
+					remove_orcish_minority_size_effect = yes
+					change_trade_goods = livestock
+					add_permanent_province_modifier = {
+						name = "anbi_ab1_the_liver_mousse_modifier"
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = { 
+					NOT = {
+						any_province = {
+							superregion = gerudia_superregion
+							has_any_half_orcish_pop_trigger = yes
+							has_any_orcish_pop_trigger = yes
+						}
+					}
+				}
+				add_treasury = -2000
+			}
+			large_increase_of_half_orcish_tolerance_effect = yes
+			largest_decrease_of_orcish_tolerance_effect = yes
+			anbi_ab1_the_food_research_add = yes
+			custom_tooltip = anbi_ab1_the_liver_mousse_ct
+			set_global_flag = eat_greenskin_liver
+			hidden_effect = {
+				country_event = {
+					id = bloody_castanor.3001
+					days = 300
+					random = 500
+				}
+			}
+		}
+	}
+
+	anbi_ab1_the_labs_of_orcs_food = {
+		icon = mission_erectors
+		position = 18
+		required_missions = { anbi_ab1_the_liver_mousse } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = anbi_ab1_the_labs_of_orcs_food_ctt
+				check_variable = {
+					FoodResearchV > 3.5
+				}
+			}
+			OR = {
+				university = 5
+				innovativeness = 50
+			}
+		} 
+
+		effect = {  
+			anbi_ab1_the_food_research_subtract = yes
+			anbi_ab1_the_food_research_subtract = yes
+			anbi_ab1_the_food_research_subtract = yes
+			anbi_ab1_the_food_research_subtract = yes
+			custom_tooltip = anbi_ab1_the_labs_of_orcs_food_ct
+			set_country_flag = anbi_ab1_the_labs_of_orcs_food_cf
+			tooltip = {
+				random_owned_province = {
+					limit = {
+						trade_goods = livestock
+					}
+					add_province_modifier = {
+						name = anbi_ab1_cross_food
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						trade_goods = livestock
+					}
+					add_province_modifier = {
+						name = anbi_ab1_cross_food
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+
+	anbi_ab1_eat_ogre = {
+		icon = mission_steppe_warriors
+		position = 19
+		required_missions = { anbi_ab1_the_beauty_of_north } 
+		provinces_to_highlight = {
+			region = ogre_valley_region
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			ogre_valley_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+
+		effect = {
+			set_global_flag = eat_ogre
+			custom_tooltip = anbi_ab1_eat_ogre_ct2
+			anbi_ab1_the_food_research_add = yes
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = ogre
+					}
+					change_culture = ROOT
+					change_religion = ROOT
+					add_unrest = 10
+				}
+			}
+			custom_tooltip = anbi_ab1_eat_ogre_ct
+			yyl_moista_region = {
+				limit = { owner = { monstrous_culture = yes }  } 
+				add_permanent_claim = ROOT
+			}
+			west_forbidden_plains_region = {
+				limit = { owner = { monstrous_culture = yes }  } 
+				add_permanent_claim = ROOT
+			}
+			serpent_gift_region = { add_permanent_claim = ROOT } 
+			ogre_valley_region = {
+				change_trade_goods = livestock
+				add_permanent_province_modifier = {
+					name = anbi_ab1_eat_ogre_modifier
+					duration = -1
+				}
+				add_ogre_minority_size_effect = yes
+			}
+		}
+	}
+
+	anbi_ab1_eat_centaur = {
+		icon = mission_centaur_shooting
+		position = 20
+		required_missions = { anbi_ab1_eat_ogre } 
+		provinces_to_highlight = {
+			superregion = forbidden_lands_superregion
+			has_any_centaur_pop_trigger = yes
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 50
+					superregion = forbidden_lands_superregion
+					has_any_centaur_pop_trigger = yes
+				}
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = anbi_ab1_eat_centaur_ctt
+						NOT = {
+							calc_true_if = {
+								amount = 50
+								all_province = {
+									superregion = forbidden_lands_superregion
+									has_any_centaur_pop_trigger = yes
+								}
+							}
+						}
+					}
+					any_owned_province = {
+						has_any_centaur_pop_trigger = yes
+						development = 40
+						has_production_or_gold_building_trigger = yes
+					}
+				}
+			}
+		}
+
+		effect = {  
+			custom_tooltip = anbi_ab1_eat_centaur_ct
+			set_global_flag = eat_centaur
+			custom_tooltip = anbi_ab1_eat_centaur_ct2
+			anbi_ab1_the_food_research_add = yes
+			every_owned_province = {
+				limit = {
+					culture_group = centaur
+				}
+				change_culture = ROOT
+				change_religion = ROOT
+				add_unrest = 10
+			}
+		} 
+	}
+
+	anbi_ab1_the_eggs_factory = {
+		icon = mission_harpy_diplomats
+		position = 22
+		required_missions = { anbi_ab1_beat_the_anbennar } 
+		provinces_to_highlight = {
+			OR = {
+				region = bahar_region
+				region = harpy_hills_region
+			}
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			bahar_region = {
+				type = all
+				owned_by = ROOT
+			}
+			harpy_hills_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_ab1_the_eggs_factory_ct
+			set_global_flag = eat_harpy
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						continent = africa
+						culture_group = harpy
+					}
+					add_unrest = 10
+					change_culture = gelkar
+					change_religion = ROOT
+				}
+			}
+			far_bulwar_region = { add_permanent_claim = ROOT } 
+			bulwar_proper_region = { add_permanent_claim = ROOT } 
+			619 = {
+				add_permanent_province_modifier = {
+					name = anbi_ab1_the_eggs_factory_modifier
+					duration = -1
+				}
+				change_trade_goods = livestock
+			}
+			666 = {
+				add_permanent_province_modifier = {
+					name = anbi_ab1_the_eggs_factory_modifier
+					duration = -1
+				}
+				change_trade_goods = livestock
+			}
+			676 = {
+				add_permanent_province_modifier = {
+					name = anbi_ab1_the_eggs_factory_modifier
+					duration = -1
+				}
+				change_trade_goods = livestock
+			}
+			4117 = {
+				add_permanent_province_modifier = {
+					name = anbi_ab1_the_eggs_factory_modifier
+					duration = -1
+				}
+				change_trade_goods = livestock
+			}
+			anbi_ab1_the_food_research_add = yes
+		}
+	}
+
+	anbi_ab1_the_suncult_down = {
+		icon = mission_sun_temple
+		position = 23
+		required_missions = { anbi_ab1_the_eggs_factory } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 601
+				province_id = 1309
+			}
+		}
+
+		trigger = {
+			treasury = 2000
+			1309 = { has_merchant = ROOT } 
+			601 = { has_merchant = ROOT } 
+		}
+
+		effect = {
+			add_treasury = -2000
+			custom_tooltip = anbi_ab1_the_suncult_down_ct
+			hidden_effect = {
+				every_known_country = {
+					limit = {
+						capital_scope = {
+							OR = {
+								region = bulwar_proper_region
+								region = far_bulwar_region
+							}
+						}
+						NOT = { is_subject_of = ROOT } 
+					}
+					add_country_modifier = {
+						name = "castanor_patrician_unrest"
+						duration = 7300
+					}
+					if = {
+						limit = {
+							has_spy_network_from = {
+								who = ROOT
+								value = 20
+							}
+						}
+						every_owned_province = {
+							limit = {
+								culture_is_human = yes
+								province_trade_power = 5
+							}
+							add_unrest = 2
+						}
+						remove_fow = 12
+					}
+					else_if = {
+						limit = {
+							has_spy_network_from = {
+								who = ROOT
+								value = 40
+							}
+						}
+						every_owned_province = {
+							limit = {
+								culture_is_human = yes
+								province_trade_power = 5
+							}
+							add_unrest = 4
+						}
+						remove_fow = 18
+					}
+					else_if = {
+						limit = {
+							has_spy_network_from = {
+								who = ROOT
+								value = 60
+							}
+						}
+						every_owned_province = {
+							limit = {
+								culture_is_human = yes
+								province_trade_power = 5
+							}
+							add_unrest = 6
+						}
+						remove_fow = 24
+					}
+					else_if = {
+						limit = {
+							has_spy_network_from = {
+								who = ROOT
+								value = 80
+							}
+						}
+						every_owned_province = {
+							limit = {
+								culture_is_human = yes
+								province_trade_power = 5
+							}
+							add_unrest = 8
+						}
+						remove_fow = 30
+					}
+					else_if = {
+						limit = {
+							has_spy_network_from = {
+								who = ROOT
+								value = 100
+							}
+						}
+						every_owned_province = {
+							limit = {
+								culture_is_human = yes
+								province_trade_power = 5
+							}
+							add_unrest = 10
+						}
+						remove_fow = 36
+					}
+					else = {
+						remove_fow = 6
+						every_owned_province = {
+							limit = {
+								culture_is_human = yes
+								province_trade_power = 5
+							}
+							add_unrest = 1
+						}
+					}
+				}
+				while = {
+					limit = {
+						any_known_country = {
+							capital_scope = {
+								OR = {
+									region = bulwar_proper_region
+									region = far_bulwar_region
+								}
+							}
+							NOT = {
+								is_subject_of = ROOT
+								war_with = ROOT
+							}
+						}
+					}
+					random_known_country = {
+						limit = {
+							capital_scope = {
+								OR = {
+									region = bulwar_proper_region
+									region = far_bulwar_region
+								}
+							}
+							NOT = {
+								is_subject_of = ROOT
+								war_with = ROOT
+							}
+						}
+						save_event_target_as = anbi_ab1_the_suncult_down_target
+					}
+					declare_war_with_cb = {
+						casus_belli = cb_anbi_canstanor_annex_world
+						who = event_target:anbi_ab1_the_suncult_down_target
+					}
+				}
+			}
+		}
+	}
+
+	anbi_ab1_the_dogs_festival = {
+		icon = mission_sunset
+		position = 24
+		required_missions = { anbi_ab1_the_suncult_down } 
+		provinces_to_highlight = {
+			continent = africa
+			culture_group = gnollish
+			NOT = { owned_by = ROOT } 
+			is_city = yes
+		}
+
+		trigger = {
+			years_of_income = 1
+			manpower = 500
+			africa = {
+				type = all
+				OR = {
+					AND = {
+						culture_group = gnollish
+						owned_by = ROOT
+					}
+					is_city = no
+					NOT = { 
+						culture_group = gnollish 
+					} 
+				}
+			}
+		}
+
+		effect = {  
+			add_years_of_income = -1
+			add_manpower = -500
+			custom_tooltip = anbi_ab1_the_dogs_festival_ct
+			set_global_flag = eat_gnollish
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						continent = africa
+						culture_group = gnollish
+					}
+					add_unrest = 10
+					change_culture = ROOT
+					change_religion = ROOT
+				}
+			}
+			601 = {
+				add_base_production = 10
+				add_permanent_province_modifier = {
+					name = anbi_ab1_the_dogs_festival_modifier
+					duration = -1
+				}
+			}
+			anbi_ab1_the_food_research_add = yes
+			anbi_ab1_the_food_research_add = yes
+		} 
+	}
+}

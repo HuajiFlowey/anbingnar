@@ -1,0 +1,189 @@
+AB1_ideas_1 = {
+	start = {
+		discipline = 0.05
+		prestige_decay = -0.015
+	}
+	bonus = {
+		global_unrest = -2
+	}
+	trigger = {
+		tag = AB1
+		NOT = {
+			has_country_flag = AB1_panzer_bloodtooth_cf
+		}
+	}
+	free = yes
+
+	B32_battle_of_the_burning_hills = {
+		land_morale = 0.15
+	}
+	B32_the_great_restoration = {
+		core_creation = -0.1
+		governing_capacity_modifier = 0.15
+	}
+	B32_castonath_is_escann = {
+		caravan_power = 0.25
+	}
+	B32_balgars_wonders = {
+		defensiveness = 0.2
+		fort_maintenance_modifier = -0.1
+	}
+	B32_castanorian_legions = {
+		land_forcelimit_modifier = 0.2
+		global_regiment_cost = -0.05
+	}
+	B32_the_silver_dragon_of_castanor = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		horde_unity = 1
+		stability_cost_modifier = -0.2
+	}
+	B32_the_imperial_crown = {
+		max_absolutism = 15
+	}
+}
+
+AB1_ideas_2 = {
+	start = {
+		defensiveness = 0.2
+		land_attrition = -0.25
+	}
+	bonus = {
+		global_unrest = -2
+	}
+	trigger = {
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		has_country_flag = AB1_panzer_bloodtooth_cf
+	}
+	free = yes
+
+	AB1_eat_to_progress = {
+		institution_spread_from_true_faith = 0.5
+	}
+	AB1_the_army_rebirth = {
+		shock_damage = 0.1
+		morale_damage = 0.1
+	}
+	AB1_castonath_is_escann = {
+		caravan_power = 0.25
+	}
+	AB1_the_great_dream = {
+		num_accepted_cultures = 5
+		manpower_in_true_faith_provinces = 0.33
+		global_missionary_strength = 0.03
+	}
+	AB1_evolution = {
+		innovativeness_gain = 0.5
+		free_policy = 1
+		possible_policy = 1
+	}
+	AB1_silver_dragon_civilization = {
+		governing_capacity_modifier = 0.2
+	}
+	AB1_halann_food = {
+		core_creation = -0.25
+	}
+}
+
+Y27_new_ideas = {
+	trigger = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+	}
+	free = yes
+
+	start = {
+		yearly_corruption = -0.05
+		infantry_power = 0.15
+	}
+	bonus = {
+		republican_tradition = 1
+	}
+
+	anbi_Y27_the_revolution_start = {
+		candidate_random_bonus = 2
+		harsh_treatment_cost = 0.5
+	}
+
+	anbi_Y27_the_dream_of_yanshen = {
+		manpower_in_culture_group_provinces = 0.25
+		manpower_in_own_culture_provinces = 0.25
+	}
+
+	anbi_Y27_unity_makes_us_strong = {
+		diplomats = 1
+		ae_impact = -0.05
+	}
+
+	anbi_Y27_the_teaching_of_huangke = {
+		reform_progress_growth = 0.5
+		loot_amount = -0.5
+		available_province_loot = -0.5
+	}
+
+	anbi_Y27_cooperation_producting = {
+		development_cost_modifier = -0.15
+		global_trade_goods_size_modifier = 0.1
+	}
+
+	anbi_Y27_the_liberation_army = {
+		fire_damage = 0.15
+		shock_damage = 0.15
+	}
+
+	anbi_Y27_the_greatest_yanshen = {
+		max_absolutism = -100
+		max_revolutionary_zeal = 40
+		yearly_revolutionary_zeal = 5
+	}
+}
+
+AB3_ideas = {
+	trigger = {
+		tag = AB3
+	}
+	free = yes
+	start = {
+		max_admiral_maneuver = 6
+		leader_naval_manuever = 3
+		idea_cost = -0.1
+	}
+	bonus = {
+		max_admiral_fire = 6
+		max_admiral_shock = 6
+	}
+	AB3_recalling_the_homeland = {
+		war_exhaustion = -0.05
+		recover_army_morale_speed = 0.25
+	}
+	AB3_dance_of_the_oceans = {
+		improve_relation_modifier = 0.3
+	}
+	AB3_city_underwater = {
+		build_cost = -0.1
+		defensiveness = 0.2
+	}
+	AB3_fishing_catches_and_spices = {
+		production_efficiency = 0.2
+		trade_efficiency = 0.1
+	}
+	AB3_master_of_waves = {
+		leader_naval_shock = 3
+		ship_trade_power_modifier = 1
+		global_naval_barrage_cost = -0.5
+	}
+	AB3_looking_back_the_deep_blue = {
+		province_warscore_cost = -0.15
+		unjustified_demands = -0.5
+	}
+	AB3_hold_hands = {
+		global_unrest = -2
+	}
+}

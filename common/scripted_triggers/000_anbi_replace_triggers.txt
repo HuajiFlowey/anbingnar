@@ -1,0 +1,178 @@
+is_not_free_merc_company = {
+	ROOT = {
+		# NOT = { mercenary_company = merc_hakkapeliita_cavalry }
+		# NOT = { mercenary_company = merc_prussian_volunteer_army }
+		# NOT = { mercenary_company = merc_knights_templar }
+		# NOT = { mercenary_company = merc_swiss_guard }
+		# NOT = { mercenary_company = merc_large_hakkapeliita_cavalry }
+		# NOT = { mercenary_company = merc_guerilla_hakkapeliita_cavalry }
+		# NOT = { mercenary_company = merc_elite_hakkapeliita_cavalry }
+		# NOT = { mercenary_company = merc_mongol_banner }
+		# NOT = { mercenary_company = merc_swiss_canton_mercenaries }
+		# NOT = { mercenary_company = merc_japanese_volunteers }
+		# NOT = { mercenary_company = merc_militant_order_of_saint_joan }
+		# NOT = { mercenary_company = merc_black_army }
+		# NOT = { mercenary_company = merc_black_army_2 }
+		# NOT = { mercenary_company = merc_tatar_vanguard }
+		# NOT = { mercenary_company = merc_righteous_army }
+		# NOT = { mercenary_company = merc_scouting_almogavars }
+		# NOT = { mercenary_company = merc_skirmishing_almogavars }
+		# NOT = { mercenary_company = merc_veteran_almogavars }
+		# NOT = { mercenary_company = merc_gavras_house_guards }
+		# NOT = { mercenary_company = merc_tatar_vanguard }
+		# NOT = { mercenary_company = merc_inc_big_ears }
+		# NOT = { mercenary_company = merc_may_chontals }
+		# NOT = { mercenary_company = merc_mug_elite_gurkhas }
+		# NOT = { mercenary_company = merc_lisowczyk }
+		#Anbennar
+		NOT = { mercenary_company = merc_442nd }
+		NOT = { mercenary_company = merc_aelnar_first_corps }
+		NOT = { mercenary_company = merc_aelnar_second_corps }
+		NOT = { mercenary_company = merc_aelnar_third_corps }
+		NOT = { mercenary_company = merc_aelnar_fourth_corps }
+		NOT = { mercenary_company = merc_aelnar_precursor_legions }
+		NOT = { mercenary_company = merc_amldahvad_guard }
+		NOT = { mercenary_company = merc_corvurian_dark_legion }
+		NOT = { mercenary_company = merc_domandrod_lightbringers }
+		NOT = { mercenary_company = merc_grim_legion }
+		NOT = { mercenary_company = merc_iron_company }
+		NOT = { mercenary_company = merc_marrhold_griffon_bombardiers }
+		NOT = { mercenary_company = merc_marrhold_griffon_grenadiers }
+		NOT = { mercenary_company = merc_marrhold_griffon_knight }
+		NOT = { mercenary_company = merc_marrhold_griffon_sky_lancers }
+		NOT = { mercenary_company = merc_marrhold_griffon_survey }
+		NOT = { mercenary_company = merc_marrhold_steel_griffon }
+		NOT = { mercenary_company = merc_ogrillons }
+		NOT = { mercenary_company = merc_sarisung_city_guard }
+		NOT = { mercenary_company = merc_seinathil_warsingers }
+		NOT = { mercenary_company = merc_serpent_knights }
+		NOT = { mercenary_company = merc_jaddaresas_chosen }
+		NOT = { mercenary_company = merc_suraelic_guard }
+		NOT = { mercenary_company = merc_wolves_of_crovis }
+		NOT = { mercenary_company = merc_order_of_keepers }
+		NOT = { mercenary_company = merc_cannorian_veterans }
+		NOT = { mercenary_company = merc_convocationary_guard }
+		NOT = { mercenary_company = merc_blue_viziers }
+		NOT = { mercenary_company = merc_shuvuush_auxillaries }
+		NOT = { mercenary_company = merc_kenmanshir }
+		NOT = { mercenary_company = merc_dhenijanraj_sramaya_pearlglaives }
+		NOT = { mercenary_company = merc_dhenijanraj_tiger_command }
+		NOT = { mercenary_company = merc_feiten_jellyfish_scouts }
+		NOT = { mercenary_company = merc_feiten_lightning_jellyfish }
+		NOT = { mercenary_company = merc_feiten_stasis }
+		NOT = { mercenary_company = merc_feiten_firestorm }
+		NOT = { mercenary_company = merc_feiten_sky_factory }
+		NOT = { mercenary_company = merc_jiantsiang_blazing_claws }
+		NOT = { mercenary_company = merc_jiantsiang_shuvuush_auxilaries }
+		NOT = { mercenary_company = merc_northern_legion }
+		NOT = { mercenary_company = merc_novice_slayers }
+		NOT = { mercenary_company = merc_bloodied_slayers }
+		NOT = { mercenary_company = merc_doomed_slayers }
+		NOT = { mercenary_company = veykodan_guard_elite_merc }
+		NOT = { mercenary_company = merc_vault_guard }
+		NOT = { mercenary_company = merc_tluukt_harpy_janissaries }
+		NOT = { mercenary_company = merc_tluukt_masnsih_janissaries }
+		NOT = { mercenary_company = merc_tluukt_bulwar_janissaries }
+		NOT = { mercenary_company = merc_bianfang_hobgoblin_army }
+		NOT = { mercenary_company = merc_freemarches_the_gray_guard }
+		NOT = { mercenary_company = merc_dartax_sebhuliam }
+		NOT = { mercenary_company = merc_dartax_mage_sebhuliam }
+		NOT = { mercenary_company = merc_amacimst_the_amethyst_order }
+		NOT = { mercenary_company = merc_shazstundihr_marbleblood }
+		NOT = { mercenary_company = merc_newshire_peapods }
+		NOT = { mercenary_company = merc_newshire_wallnuts }
+		NOT = { mercenary_company = merc_newshire_squashkin }
+		NOT = { mercenary_company = merc_newshire_sunwatchers }
+		NOT = { mercenary_company = merc_terror_knights }
+		NOT = { mercenary_company = merc_crimson_executioners }
+		NOT = { mercenary_company = merc_fjarforska }
+		NOT = { mercenary_company = merc_siadan_stormtalon_guard }
+		NOT = { mercenary_company = merc_surani_exemplars }
+		NOT = { mercenary_company = merc_jaherian_exemplars }
+		NOT = { mercenary_company = merc_command_wolf_army }
+		NOT = { mercenary_company = merc_command_boar_army }
+		NOT = { mercenary_company = merc_command_lion_army }
+		NOT = { mercenary_company = merc_command_dragon_army }
+		NOT = { mercenary_company = merc_command_elephant_army }
+		NOT = { mercenary_company = merc_command_tiger_army }
+		NOT = { mercenary_company = merc_mountainshark_giantsharks }
+		NOT = { mercenary_company = merc_mountainshark_dragonsharks }
+		NOT = { mercenary_company = merc_chien_boarsofdinh }
+		NOT = { mercenary_company = merc_shrine_guard}
+		NOT = { mercenary_company = merc_raggedy_gun_knights }
+		NOT = { mercenary_company = merc_lords_of_platinum }
+		NOT = { mercenary_company = merc_lords_of_platinum_improved }
+		NOT = { mercenary_company = merc_yidabs_vanguard }
+		NOT = { mercenary_company = merc_steam_baron_engineering_corps }
+		NOT = { mercenary_company = merc_mboala_war_dogs }
+		NOT = { mercenary_company = merc_verkalgulan_the_golden_shield_company }
+		NOT = { mercenary_company = merc_verkalgulan_the_citadel_cannonneers }
+		NOT = { mercenary_company = merc_verkalgulan_the_kings_gate_banners }
+		NOT = { mercenary_company = merc_paddleboard_knights }
+		NOT = { mercenary_company = merc_haebiszyae_guard_cavalry }
+		NOT = { mercenary_company = merc_royakottar_kattyva_elite_vangaurd }
+		NOT = { mercenary_company = merc_volisi_vara_redeemed_swordsmen }
+		NOT = { mercenary_company = merc_the_silverspite_company }
+		NOT = { mercenary_company = merc_sarraka }
+		NOT = { mercenary_company = merc_sarraka_two }
+		NOT = { mercenary_company = merc_sarraka_three }
+		NOT = { mercenary_company = merc_R61_pasindesh_scouts }
+		NOT = { mercenary_company = merc_daughters_of_akasik_elite }
+		NOT = { mercenary_company = merc_larankarha_household_cavalry }
+		NOT = { mercenary_company = merc_wolfguard }
+		NOT = { mercenary_company = merc_wyvernheart_burnblood_company_1 }
+		NOT = { mercenary_company = merc_wyvernheart_burnblood_company_2_1 }
+		NOT = { mercenary_company = merc_wyvernheart_burnblood_company_2_2 }
+		NOT = { mercenary_company = merc_wyvernheart_burnblood_company_3_1 }
+		NOT = { mercenary_company = merc_wyvernheart_burnblood_company_3_2 }
+		NOT = { mercenary_company = merc_wyvernheart_burnblood_company_4_1 }
+		NOT = { mercenary_company = merc_wyvernheart_burnblood_company_4_2 }
+		NOT = { mercenary_company = merc_wyvernheart_burnblood_company_4_3 }
+		NOT = { mercenary_company = merc_wyvernheart_burnblood_company_5_1 }
+		NOT = { mercenary_company = merc_wyvernheart_burnblood_company_5_2 }
+		NOT = { mercenary_company = merc_wyvernheart_burnblood_company_5_3 }
+		NOT = { mercenary_company = merc_wyvernheart_burnblood_company_6_1 }
+		NOT = { mercenary_company = merc_wyvernheart_burnblood_company_6_2 }
+		NOT = { mercenary_company = merc_wyvernheart_burnblood_company_6_3 }
+		NOT = { mercenary_company = merc_wyvernheart_burnblood_company_6_4 }
+		NOT = { mercenary_company = merc_stone_army_tier_2 }
+		NOT = { mercenary_company = merc_rock_raiders }
+		NOT = { mercenary_company = merc_rock_raiders_tier_2 }
+		NOT = { mercenary_company = merc_chrome_claws }
+		NOT = { mercenary_company = merc_chrome_claws_tier_2 }
+		NOT = { mercenary_company = merc_dacite_dragons }
+		NOT = { mercenary_company = merc_dacite_dragons_tier_2 }
+		NOT = { mercenary_company = merc_whetstones }
+		NOT = { mercenary_company = merc_whetstones_tier_2 }
+		NOT = { mercenary_company = merc_marble_mounts }
+		NOT = { mercenary_company = merc_marble_mounts_tier_2 }
+		NOT = { mercenary_company = merc_flying_pebbles }
+		NOT = { mercenary_company = merc_flying_pebbles_tier_2 }
+		NOT = { mercenary_company = merc_the_orcish_company }
+		NOT = { mercenary_company = merc_shadowbound_ashama }
+		NOT = { mercenary_company = merc_ameion_kattyam_auxiliary }
+		NOT = { mercenary_company = merc_rhada_lifters }
+		NOT = { mercenary_company = merc_gnoll_buffalo_jumpers }
+		NOT = { mercenary_company = merc_izenwez_league_players }
+		NOT = { mercenary_company = merc_G53_lawarund }
+		NOT = { mercenary_company = merc_G53_hsamaz }
+		NOT = { mercenary_company = merc_mojobaa_warrior_monks }
+		NOT = { mercenary_company = merc_lrm_city_guard }
+		NOT = { mercenary_company = merc_lrm_city_guard_upgraded }
+		NOT = { mercenary_company = merc_ashhana_royal_guard}
+		NOT = { mercenary_company = merc_patrician_guard }
+		NOT = { mercenary_company = merc_uesrennu_armoured_kotakompus }
+		NOT = { mercenary_company = merc_children_of_the_thorns }
+		NOT = { mercenary_company = merc_wineport_seven_chalices }
+		NOT = { mercenary_company = merc_wineport_watchers }
+		NOT = { mercenary_company = merc_foxalley_foxes }
+		NOT = { mercenary_company = merc_raj_foreign_legion }
+		NOT = { mercenary_company = merc_ironwall }
+		NOT = { mercenary_company = merc_chaqway_flamingoes }
+		NOT = { mercenary_company = merc_zokka_rakshasa_devotees }
+		NOT = { mercenary_company = merc_anbi_foxarmy }
+		NOT = { mercenary_company = merc_anbi_foxarmy_2 }
+		NOT = { mercenary_company = merc_anbi_foxarmy_3 }
+		NOT = { mercenary_company = merc_anbi_foxarmy_4 }
+	}
+}

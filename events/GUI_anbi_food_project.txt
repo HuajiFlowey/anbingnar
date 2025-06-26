@@ -1,0 +1,270 @@
+namespace = GUI_anbi_food
+country_event = {
+	id = GUI_anbi_food.1
+	title = GUI_anbi_food.1.t
+	desc = GUI_anbi_food.1.d
+	picture = SPELL_MENU_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = GUI_anbi_food.1.zzz
+		clr_country_flag = food_menu_GUI_not_close
+	}
+	#byd下次一定要用参数
+	#0.43版本更新改用参数
+	option = {
+		name = GUI_anbi_food.1.orcs.a
+		anbi_ab1_the_food_cook = {
+			food = orcs_a
+		}
+		hidden_effect = {
+			country_event = {
+				id = GUI_anbi_food.2
+			}
+		}
+	}
+	option = {
+		name = GUI_anbi_food.1.orcs.b
+		anbi_ab1_the_food_cook = {
+			food = orcs_b
+		}
+		hidden_effect = {
+			country_event = {
+				id = GUI_anbi_food.2
+			}
+		}
+	}
+	option = {
+		name = GUI_anbi_food.1.orcs.c
+		anbi_ab1_the_food_cook = {
+			food = orcs_c
+		}
+		hidden_effect = {
+			country_event = {
+				id = GUI_anbi_food.2
+			}
+		}
+	}
+	option = {
+		name = GUI_anbi_food.1.goblin
+		trigger = {
+			OR = {
+				has_global_flag = eat_goblin_a
+				has_global_flag = eat_goblin_a_up
+				has_global_flag = eat_goblin_a_upup
+			}
+		}
+		anbi_ab1_the_food_cook = {
+			food = goblin_a
+		}
+		hidden_effect = {
+			country_event = {
+				id = GUI_anbi_food.2
+			}
+		}
+		
+	}
+	option = {
+		name = GUI_anbi_food.1.liver
+		trigger = {
+			OR = {
+				has_global_flag = eat_greenskin_liver
+				has_global_flag = eat_greenskin_liver_up
+				has_global_flag = eat_greenskin_liver_upup
+			}
+		}
+		anbi_ab1_the_food_cook = {
+			food = greenskin_liver
+		}
+		hidden_effect = {
+			country_event = {
+				id = GUI_anbi_food.2
+			}
+		}
+	}
+	option = {
+		name = GUI_anbi_food.1.troll
+		trigger = {
+			OR = {
+				has_global_flag = eat_troll
+				has_global_flag = eat_troll_up
+				has_global_flag = eat_troll_upup
+			}
+		}
+		anbi_ab1_the_food_cook = {
+			food = troll
+		}
+		hidden_effect = {
+			country_event = {
+				id = GUI_anbi_food.2
+			}
+		}
+	}
+	option = {
+		name = GUI_anbi_food.1.ogre
+		trigger = {
+			OR = {
+				has_global_flag = eat_ogre
+				has_global_flag = eat_ogre_up
+				has_global_flag = eat_ogre_upup
+			}
+		}
+		anbi_ab1_the_food_cook = {
+			food = ogre
+		}
+		hidden_effect = {
+			country_event = {
+				id = GUI_anbi_food.2
+			}
+		}
+	}
+	option = {
+		name = GUI_anbi_food.1.centaur
+		trigger = {
+			OR = {
+				has_global_flag = eat_centaur
+				has_global_flag = eat_centaur_up
+				has_global_flag = eat_centaur_upup
+			}
+		}
+		anbi_ab1_the_food_cook = {
+			food = centaur
+		}
+		hidden_effect = {
+			country_event = {
+				id = GUI_anbi_food.2
+			}
+		}
+	}
+	option = {
+		name = GUI_anbi_food.1.xianling
+		trigger = {
+			OR = {
+				has_global_flag = eat_xianling
+				has_global_flag = eat_xianling_up
+				has_global_flag = eat_xianling_upup
+			}
+		}
+		anbi_ab1_the_food_cook = {
+			food = xianling
+		}
+		hidden_effect = {
+			country_event = {
+				id = GUI_anbi_food.2
+			}
+		}
+	}
+	option = {
+		name = GUI_anbi_food.1.khet
+		trigger = {
+			OR = {
+				has_global_flag = eat_khet
+				has_global_flag = eat_khet_up
+				has_global_flag = eat_khet_upup
+			}
+		}
+		anbi_ab1_the_food_cook = {
+			food = khet
+		}
+		hidden_effect = {
+			country_event = {
+				id = GUI_anbi_food.2
+			}
+		}
+	}
+	option = {
+		name = GUI_anbi_food.1.evil_elven
+		trigger = {
+			OR = {
+				has_global_flag = eat_evil_elven
+				has_global_flag = eat_evil_elven_up
+				has_global_flag = eat_evil_elven_upup
+			}
+		}
+		anbi_ab1_the_food_cook = {
+			food = evil_elven
+		}
+		hidden_effect = {
+			country_event = {
+				id = GUI_anbi_food.2
+			}
+		}
+	}
+	option = {
+		name = GUI_anbi_food.1.kobold
+		trigger = {
+			OR = {
+				has_global_flag = eat_kobold
+				has_global_flag = eat_kobold_up
+				has_global_flag = eat_kobold_upup
+			}
+		}
+		anbi_ab1_the_food_cook = {
+			food = kobold
+		}
+		hidden_effect = {
+			country_event = {
+				id = GUI_anbi_food.2
+			}
+		}
+	}
+	option = {
+		name = GUI_anbi_food.1.harpy
+		trigger = {
+			OR = {
+				has_global_flag = eat_harpy
+				has_global_flag = eat_harpy_up
+				has_global_flag = eat_harpy_upup
+			}
+		}
+		anbi_ab1_the_food_cook = {
+			food = harpy
+		}
+		hidden_effect = {
+			country_event = {
+				id = GUI_anbi_food.2
+			}
+		}
+	}
+	option = {
+		name = GUI_anbi_food.1.gnollish
+		trigger = {
+			OR = {
+				has_global_flag = eat_gnollish
+				has_global_flag = eat_gnollish_up
+				has_global_flag = eat_gnollish_upup
+			}
+		}
+		anbi_ab1_the_food_cook = {
+			food = gnollish
+		}
+		hidden_effect = {
+			country_event = {
+				id = GUI_anbi_food.2
+			}
+		}
+	}
+
+	option = {
+		name = GUI_anbi_food.1.zzz
+		clr_country_flag = food_menu_GUI_not_close
+	}
+}
+
+country_event = {
+	id = GUI_anbi_food.2
+	title = GUI_anbi_food.2.t
+	desc = GUI_anbi_food.2.d
+	picture = SPELL_MENU_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {
+		name = GUI_anbi_food.1.zzz
+		country_event = {
+			id = GUI_anbi_food.1
+		}
+	}
+}

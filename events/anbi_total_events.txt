@@ -1,0 +1,113 @@
+namespace = anbitotal
+country_event = {
+	id = anbitotal.1
+	title = anbitotal.1.t
+	desc = anbitotal.1.d
+	picture = anbingnar_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = no
+		NOT = {
+			OR = {
+				tag = Y91
+				tag = B30
+				tag = Y27
+				tag = S21
+			}
+		}
+		NOT = {
+			is_year = 1445
+		}
+	}
+
+	option = {
+		name = anbitotal.1.a
+	}
+}
+#苦海报错补丁
+country_event = {
+	id = anbitotal.2
+	title = anbitotal.2.t
+	desc = anbitotal.2.d
+	picture = anbingnar_eventPicture
+
+	fire_only_once = yes
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = Y27
+	}
+
+	option = {
+		save_global_event_target_as = kuhai_or_was_kuhai_target
+	}
+}
+#妈了个巴子的,给我用测试版！
+country_event = {
+	id = anbitotal.3
+	title = anbitotal.3.t
+	desc = anbitotal.3.d
+	picture = ANBI_TONGSINI_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		all_province = {
+			NOT = {
+				region = gowon_region
+			}
+		}
+	}
+
+	option = {
+		name = anbitotal.3.a
+		hidden_effect = {
+			country_event = {
+				id = anbitotal.4
+			}
+		}
+	}
+}
+country_event = {
+	id = anbitotal.4
+	title = anbitotal.4.t
+	desc = anbitotal.4.d
+	picture = ANBI_TONGSINI_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		country_event = {
+			id = anbitotal.3
+		}
+	}
+}
+#统治者种族补丁
+country_event = {
+	id = anbitotal.5
+	title = anbitotal.5.t
+	desc = anbitotal.5.d
+	picture = anbingnar_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+	trigger = {
+		
+	}
+	option = {
+		name = anbitotal.5.a
+		trigger_switch = {
+			on_trigger = ruler_culture
+			anbi_castanor_elven = { set_ruler_flag = elven_ruler }
+			anbi_castanor_gnomish = { set_ruler_flag = gnomish_ruler }
+			anbi_castanor_harimari = { set_ruler_flag = harimari_ruler }
+			anbi_castanor_dwarven = { set_ruler_flag = dwarven_ruler }
+			anbi_castanor_ruinborn = { set_ruler_flag = ruinborn_ruler }
+			republic_yanshen = { set_ruler_flag = human_ruler }
+			baashidi_merfolk = { set_ruler_flag = ruinborn_ruler }
+		}
+	}
+}

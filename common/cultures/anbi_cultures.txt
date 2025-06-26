@@ -1,0 +1,126 @@
+elven = {
+	anbi_castanor_elven = {
+		dynasty_names = {
+			"'Castan'"
+		}
+		male_names = {
+		Adelar Adran Adrion Adrioc Alfons Alfred Alos Alain Alver Ardac Ardor Aril Arcturian Arctur Austin Awen Borian Brandoc Brien Braydoc Calas Castan Castian Dalyon Delan Delian Edmund Elrac Erel Eren Erlac Evin Galin Gelmac 
+		Lawrens Maron Marcan Ollor Ottran Rian Rycan Ricain Ricon Robyn Rogiec Sandor Taelar Thal Thiren Tomar Tryan Trystan Varian Varion Varian Varian Vencan Welyam Dostan Alfred Lan Dominic Venall Arnold Celgal Trystan Teacan 
+		Ancrel Frederic Valeran Valen Corin Alcres Emil Caylen Carleon Lottrac Acromar Camir Camor Canrec Celgal Ciramod Clarimond Clothar Colyn Coreg Crovag Crovis Corac Corric Devac Devan Dustyn Elecast Gracos Humac Humban 
+		Humbar Lan Madalac Ottrac Petran Peyter Rabac Rabard Rican Rycan Ricard Stovac Stovan Tomac Toman Tormac Ulric Venac 
+		Walter Wystan Bellac Robyn Wynstan Henric Ad�nn Nicolas Lucan Osric Clotaire Arnulf Martin Eduard Armos Carlan Teagan Venac Andres Crovan Aldio Godeo Dalac Agros Artan Bardal Caero Biren Audac Serdil Otomar Otrar Adaen
+		}
+		female_names = {
+		Adela Allara Cressia Alice Acara Aminna Amariel Marila Marilda Mariel Marilna Arya Auci Arabella Calassa Castanna Castianna Cela Celadora Clarimonde Alice Lisbet Erela Galinda Alina Lorinne Lisban Magda Re�nne Calia Varina Margaery Cecilia Isebel Isebella Bella Wyllamina Sofina Cibilla
+		Constance Elenor Valenca Emma Gicela Cora Corina Coralinde Lisolene Nara Rienn�n Auci Bella Clarimonde Clarya Clothilde Constance Dalya Etta Humba Madala Matilda Adela Emma Anna Anne Catherine Edith Alanna Adanna Ida Lantsida
+		}
+	}
+}
+gnomish = {
+	anbi_castanor_gnomish = {
+		dynasty_names = {
+			"'Castan'"
+		}
+		male_names = {
+		Adelar Adran Adrion Adrioc Alfons Alfred Alos Alain Alver Ardac Ardor Aril Arcturian Arctur Austin Awen Borian Brandoc Brien Braydoc Calas Castan Castian Dalyon Delan Delian Edmund Elrac Erel Eren Erlac Evin Galin Gelmac 
+		Lawrens Maron Marcan Ollor Ottran Rian Rycan Ricain Ricon Robyn Rogiec Sandor Taelar Thal Thiren Tomar Tryan Trystan Varian Varion Varian Varian Vencan Welyam Dostan Alfred Lan Dominic Venall Arnold Celgal Trystan Teacan 
+		Ancrel Frederic Valeran Valen Corin Alcres Emil Caylen Carleon Lottrac Acromar Camir Camor Canrec Celgal Ciramod Clarimond Clothar Colyn Coreg Crovag Crovis Corac Corric Devac Devan Dustyn Elecast Gracos Humac Humban 
+		Humbar Lan Madalac Ottrac Petran Peyter Rabac Rabard Rican Rycan Ricard Stovac Stovan Tomac Toman Tormac Ulric Venac 
+		Walter Wystan Bellac Robyn Wynstan Henric Ad�nn Nicolas Lucan Osric Clotaire Arnulf Martin Eduard Armos Carlan Teagan Venac Andres Crovan Aldio Godeo Dalac Agros Artan Bardal Caero Biren Audac Serdil Otomar Otrar Adaen
+		}
+		female_names = {
+		Adela Allara Cressia Alice Acara Aminna Amariel Marila Marilda Mariel Marilna Arya Auci Arabella Calassa Castanna Castianna Cela Celadora Clarimonde Alice Lisbet Erela Galinda Alina Lorinne Lisban Magda Re�nne Calia Varina Margaery Cecilia Isebel Isebella Bella Wyllamina Sofina Cibilla
+		Constance Elenor Valenca Emma Gicela Cora Corina Coralinde Lisolene Nara Rienn�n Auci Bella Clarimonde Clarya Clothilde Constance Dalya Etta Humba Madala Matilda Adela Emma Anna Anne Catherine Edith Alanna Adanna Ida Lantsida
+		}
+	}
+}
+halfling = {
+	anbi_castanor_halfling = {
+		dynasty_names = {
+			"'Castan'"
+		}
+		male_names = {
+		Adelar Adran Adrion Adrioc Alfons Alfred Alos Alain Alver Ardac Ardor Aril Arcturian Arctur Austin Awen Borian Brandoc Brien Braydoc Calas Castan Castian Dalyon Delan Delian Edmund Elrac Erel Eren Erlac Evin Galin Gelmac 
+		Lawrens Maron Marcan Ollor Ottran Rian Rycan Ricain Ricon Robyn Rogiec Sandor Taelar Thal Thiren Tomar Tryan Trystan Varian Varion Varian Varian Vencan Welyam Dostan Alfred Lan Dominic Venall Arnold Celgal Trystan Teacan 
+		Ancrel Frederic Valeran Valen Corin Alcres Emil Caylen Carleon Lottrac Acromar Camir Camor Canrec Celgal Ciramod Clarimond Clothar Colyn Coreg Crovag Crovis Corac Corric Devac Devan Dustyn Elecast Gracos Humac Humban 
+		Humbar Lan Madalac Ottrac Petran Peyter Rabac Rabard Rican Rycan Ricard Stovac Stovan Tomac Toman Tormac Ulric Venac 
+		Walter Wystan Bellac Robyn Wynstan Henric Ad�nn Nicolas Lucan Osric Clotaire Arnulf Martin Eduard Armos Carlan Teagan Venac Andres Crovan Aldio Godeo Dalac Agros Artan Bardal Caero Biren Audac Serdil Otomar Otrar Adaen
+		}
+		female_names = {
+		Adela Allara Cressia Alice Acara Aminna Amariel Marila Marilda Mariel Marilna Arya Auci Arabella Calassa Castanna Castianna Cela Celadora Clarimonde Alice Lisbet Erela Galinda Alina Lorinne Lisban Magda Re�nne Calia Varina Margaery Cecilia Isebel Isebella Bella Wyllamina Sofina Cibilla
+		Constance Elenor Valenca Emma Gicela Cora Corina Coralinde Lisolene Nara Rienn�n Auci Bella Clarimonde Clarya Clothilde Constance Dalya Etta Humba Madala Matilda Adela Emma Anna Anne Catherine Edith Alanna Adanna Ida Lantsida
+		}
+	}
+}
+dwarven = {
+	anbi_castanor_dwarven = {
+		dynasty_names = {
+			"'Castan'"
+		}
+		male_names = {
+		Adelar Adran Adrion Adrioc Alfons Alfred Alos Alain Alver Ardac Ardor Aril Arcturian Arctur Austin Awen Borian Brandoc Brien Braydoc Calas Castan Castian Dalyon Delan Delian Edmund Elrac Erel Eren Erlac Evin Galin Gelmac 
+		Lawrens Maron Marcan Ollor Ottran Rian Rycan Ricain Ricon Robyn Rogiec Sandor Taelar Thal Thiren Tomar Tryan Trystan Varian Varion Varian Varian Vencan Welyam Dostan Alfred Lan Dominic Venall Arnold Celgal Trystan Teacan 
+		Ancrel Frederic Valeran Valen Corin Alcres Emil Caylen Carleon Lottrac Acromar Camir Camor Canrec Celgal Ciramod Clarimond Clothar Colyn Coreg Crovag Crovis Corac Corric Devac Devan Dustyn Elecast Gracos Humac Humban 
+		Humbar Lan Madalac Ottrac Petran Peyter Rabac Rabard Rican Rycan Ricard Stovac Stovan Tomac Toman Tormac Ulric Venac 
+		Walter Wystan Bellac Robyn Wynstan Henric Ad�nn Nicolas Lucan Osric Clotaire Arnulf Martin Eduard Armos Carlan Teagan Venac Andres Crovan Aldio Godeo Dalac Agros Artan Bardal Caero Biren Audac Serdil Otomar Otrar Adaen
+		}
+		female_names = {
+		Adela Allara Cressia Alice Acara Aminna Amariel Marila Marilda Mariel Marilna Arya Auci Arabella Calassa Castanna Castianna Cela Celadora Clarimonde Alice Lisbet Erela Galinda Alina Lorinne Lisban Magda Re�nne Calia Varina Margaery Cecilia Isebel Isebella Bella Wyllamina Sofina Cibilla
+		Constance Elenor Valenca Emma Gicela Cora Corina Coralinde Lisolene Nara Rienn�n Auci Bella Clarimonde Clarya Clothilde Constance Dalya Etta Humba Madala Matilda Adela Emma Anna Anne Catherine Edith Alanna Adanna Ida Lantsida
+		}
+	}
+}
+harimari = {
+	anbi_castanor_harimari = {
+		dynasty_names = {
+			"'Castan'"
+		}
+		male_names = {
+		Adelar Adran Adrion Adrioc Alfons Alfred Alos Alain Alver Ardac Ardor Aril Arcturian Arctur Austin Awen Borian Brandoc Brien Braydoc Calas Castan Castian Dalyon Delan Delian Edmund Elrac Erel Eren Erlac Evin Galin Gelmac 
+		Lawrens Maron Marcan Ollor Ottran Rian Rycan Ricain Ricon Robyn Rogiec Sandor Taelar Thal Thiren Tomar Tryan Trystan Varian Varion Varian Varian Vencan Welyam Dostan Alfred Lan Dominic Venall Arnold Celgal Trystan Teacan 
+		Ancrel Frederic Valeran Valen Corin Alcres Emil Caylen Carleon Lottrac Acromar Camir Camor Canrec Celgal Ciramod Clarimond Clothar Colyn Coreg Crovag Crovis Corac Corric Devac Devan Dustyn Elecast Gracos Humac Humban 
+		Humbar Lan Madalac Ottrac Petran Peyter Rabac Rabard Rican Rycan Ricard Stovac Stovan Tomac Toman Tormac Ulric Venac 
+		Walter Wystan Bellac Robyn Wynstan Henric Ad�nn Nicolas Lucan Osric Clotaire Arnulf Martin Eduard Armos Carlan Teagan Venac Andres Crovan Aldio Godeo Dalac Agros Artan Bardal Caero Biren Audac Serdil Otomar Otrar Adaen
+		}
+		female_names = {
+		Adela Allara Cressia Alice Acara Aminna Amariel Marila Marilda Mariel Marilna Arya Auci Arabella Calassa Castanna Castianna Cela Celadora Clarimonde Alice Lisbet Erela Galinda Alina Lorinne Lisban Magda Re�nne Calia Varina Margaery Cecilia Isebel Isebella Bella Wyllamina Sofina Cibilla
+		Constance Elenor Valenca Emma Gicela Cora Corina Coralinde Lisolene Nara Rienn�n Auci Bella Clarimonde Clarya Clothilde Constance Dalya Etta Humba Madala Matilda Adela Emma Anna Anne Catherine Edith Alanna Adanna Ida Lantsida
+		}
+	}
+}
+taychendi_ruinborn_elf = {
+	anbi_castanor_ruinborn = {
+		dynasty_names = {
+			"'Castan'"
+		}
+		male_names = {
+		Adelar Adran Adrion Adrioc Alfons Alfred Alos Alain Alver Ardac Ardor Aril Arcturian Arctur Austin Awen Borian Brandoc Brien Braydoc Calas Castan Castian Dalyon Delan Delian Edmund Elrac Erel Eren Erlac Evin Galin Gelmac 
+		Lawrens Maron Marcan Ollor Ottran Rian Rycan Ricain Ricon Robyn Rogiec Sandor Taelar Thal Thiren Tomar Tryan Trystan Varian Varion Varian Varian Vencan Welyam Dostan Alfred Lan Dominic Venall Arnold Celgal Trystan Teacan 
+		Ancrel Frederic Valeran Valen Corin Alcres Emil Caylen Carleon Lottrac Acromar Camir Camor Canrec Celgal Ciramod Clarimond Clothar Colyn Coreg Crovag Crovis Corac Corric Devac Devan Dustyn Elecast Gracos Humac Humban 
+		Humbar Lan Madalac Ottrac Petran Peyter Rabac Rabard Rican Rycan Ricard Stovac Stovan Tomac Toman Tormac Ulric Venac 
+		Walter Wystan Bellac Robyn Wynstan Henric Ad�nn Nicolas Lucan Osric Clotaire Arnulf Martin Eduard Armos Carlan Teagan Venac Andres Crovan Aldio Godeo Dalac Agros Artan Bardal Caero Biren Audac Serdil Otomar Otrar Adaen
+		}
+		female_names = {
+		Adela Allara Cressia Alice Acara Aminna Amariel Marila Marilda Mariel Marilna Arya Auci Arabella Calassa Castanna Castianna Cela Celadora Clarimonde Alice Lisbet Erela Galinda Alina Lorinne Lisban Magda Re�nne Calia Varina Margaery Cecilia Isebel Isebella Bella Wyllamina Sofina Cibilla
+		Constance Elenor Valenca Emma Gicela Cora Corina Coralinde Lisolene Nara Rienn�n Auci Bella Clarimonde Clarya Clothilde Constance Dalya Etta Humba Madala Matilda Adela Emma Anna Anne Catherine Edith Alanna Adanna Ida Lantsida
+		}
+	}
+}
+yan = {
+	republic_yanshen = {
+		primary = Z65
+		province = {
+			culture_conversion_cost = 0.01
+			land_morale = 0.001
+		}
+		country = {
+			manpower_in_own_culture_provinces = 0.25
+			manpower_in_culture_group_provinces = 0.1
+		}
+	}
+}
+baashidi = {
+	baashidi_merfolk = {
+		primary = AB3
+	}
+}

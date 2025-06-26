@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_bookmark_anbi_bloody_canstannor"
+		texturefile = "gfx/interface/bookmarks/bookmark_anbi_bloody_canstannor.dds"
+	}
+	spriteType = {
+		name = "GFX_bookmark_anbi_yanshen"
+		texturefile = "gfx/interface/bookmarks/bookmark_anbi_yanshen.dds"
+	}
+	spriteType = {
+		name = "GFX_bookmark_anbi_daxugo"
+		texturefile = "gfx/interface/bookmarks/bookmark_anbi_daxugo.dds"
+	}
+	spriteType = {
+		name = "GFX_bookmark_anbi_merfolk"
+		texturefile = "gfx/interface/bookmarks/bookmark_anbi_merfolk.dds"
+	}
+}

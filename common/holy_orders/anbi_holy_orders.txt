@@ -1,0 +1,80 @@
+lanjinhui_order = {
+	icon = GFX_holy_order_anbi_lanjin_holy
+	trigger = {
+		religion = zhengdao_path
+		has_country_flag = anbi_kuhai_the_earth_is_lanjinhui_and_jingou_cf
+	}
+	color = { 0 102 204 }
+	cost = 50
+	cost_type = adm_power
+	per_province_effect = {
+		add_base_tax = 2
+	}
+	per_province_abandon_effect = {
+		add_base_tax = -2
+	}
+	modifier = {
+        local_tax_modifier = -0.5
+		trade_goods_size_modifier = 0.25
+		trade_goods_size = 0.1
+    }
+	ai_priority = {
+        factor = 10
+    }
+
+	localization = holy_order
+}
+yinquan_order = {
+	icon = GFX_holy_order_anbi_yinquan_holy
+	trigger = {
+		religion = zhengdao_path
+		has_estate_privilege = anbi_kuhai_mages_education_privilege
+	}
+	color = { 102 0 102 }
+	cost = 50
+	cost_type = dip_power
+	per_province_effect = {
+		add_base_production = 1
+	}
+	per_province_abandon_effect = {
+		add_base_production = -1
+	}
+	modifier = {
+        local_tax_modifier = -0.5
+		local_development_cost = -0.25
+		local_institution_spread = 0.5
+		technology_cost = -0.001
+    }
+	ai_priority = {
+        factor = 10
+    }
+
+	localization = holy_order
+}
+kuhai_order = {
+	icon = GFX_holy_order_anbi_kuhai_holy
+
+	trigger = {
+		religion = zhengdao_path
+	}
+	color = { 224 224 0 }
+	cost = 50
+	cost_type = mil_power
+	per_province_effect = {
+		add_base_manpower = 1
+	}
+	per_province_abandon_effect = {
+		add_base_manpower = -1
+	}
+	modifier = {
+        local_tax_modifier = -0.5
+		local_manpower = 0.5
+		local_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.005
+    }
+	ai_priority = {
+        factor = 10
+    }
+
+	localization = holy_order
+}

@@ -1,0 +1,33 @@
+daxugo_feiten_copy = {
+	potential = {
+		always = yes
+	}
+	
+	hidden = yes
+
+	trigger = {
+		NOT = { has_province_flag = daxugo_feiten_copy_flag }
+	}
+
+	on_activation = {
+		set_province_flag = daxugo_feiten_copy_flag 
+		Y98 = {
+			if = {
+				limit = { NOT = { ai = yes } }
+				daxugo_update_jellyfish_scouts = yes
+			}
+		}
+	}
+
+
+	on_deactivation = {
+		clr_province_flag = daxugo_feiten_copy_flag
+		Y98 = {
+			if = {
+				limit = { NOT = { ai = yes } }
+				daxugo_update_jellyfish_scouts = yes
+			}
+		}
+	}
+	
+}

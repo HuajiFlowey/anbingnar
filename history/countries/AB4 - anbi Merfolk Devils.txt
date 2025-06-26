@@ -1,0 +1,9 @@
+
+setup_vision = yes
+government = tribal
+add_government_reform = settled_horde
+government_rank = 1
+primary_culture = baashidi_merfolk
+religion = merfolk_religion
+technology_group = tech_baashidi
+capital = 6061

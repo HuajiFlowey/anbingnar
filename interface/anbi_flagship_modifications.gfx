@@ -1,0 +1,67 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_flagship_anbi_merfolk_flagship_trader"
+		texturefile = "gfx//interface//trade_route_map.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_flagship_anbi_merfolk_flagship_sieger"
+		texturefile = "gfx//interface//mortars.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_flagship_anbi_merfolk_flagship_fighter"
+		texturefile = "gfx//interface//mass_load_cannons.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_flagship_anbi_merfolk_flagship_shipgirls"
+		texturefile = "gfx//interface//merfolk.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_flagship_anbi_merfolk_flagship_greatgirl"
+		texturefile = "gfx//interface//merfolk.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_flagship_anbi_merfolk_flagship_corin"
+		texturefile = "gfx//interface//merfolk.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_flagship_anbi_merfolk_flagship_jaher"
+		texturefile = "gfx//interface//merfolk.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_flagship_anbi_merfolk_flagship_gertyene"
+		texturefile = "gfx//interface//merfolk.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_flagship_anbi_merfolk_flagship_pingshuang"
+		texturefile = "gfx//interface//merfolk.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_flagship_anbi_merfolk_flagship_suhan"
+		texturefile = "gfx//interface//merfolk.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_flagship_anbi_merfolk_flagship_calasadur"
+		texturefile = "gfx//interface//merfolk.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_flagship_anbi_merfolk_flagship_huxian"
+		texturefile = "gfx//interface//merfolk.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_flagship_anbi_merfolk_flagship_dragon"
+		texturefile = "gfx//interface//merfolk.dds"
+		loadType = "INGAME"
+	}
+}

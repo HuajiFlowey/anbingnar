@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType= {
+		name = "mission_four_color_flag_of_yanshen"
+		texturefile = "gfx//interface//mission//mission_four_color_flag_of_yanshen.dds"
+	}
+	spriteType= {
+		name = "mission_anbi_merfolk_city"
+		texturefile = "gfx//interface//mission//mission_anbi_merfolk_city.dds"
+	}
+	spriteType= {
+		name = "mission_anbi_merfolk_ship_girls"
+		texturefile = "gfx//interface//mission//mission_anbi_merfolk_ship_girls.dds"
+	}
+}

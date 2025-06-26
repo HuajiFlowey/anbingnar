@@ -1,0 +1,78 @@
+anbi_daxugo_new_consort = {
+	AND = {
+		has_consort = yes
+		consort_age = 20
+		NOT = {
+			consort_age = 21
+		}
+	}
+}
+
+Y98_independence_random = {
+	OR = {
+		is_variable_equal = {
+			which = anbi_daxugo_harem_independence_random1
+			value = $count$
+		}
+		is_variable_equal = {
+			which = anbi_daxugo_harem_independence_random2
+			value = $count$
+		}
+		is_variable_equal = {
+			which = anbi_daxugo_harem_independence_random3
+			value = $count$
+		}
+		is_variable_equal = {
+			which = anbi_daxugo_harem_independence_random4
+			value = $count$
+		}
+		is_variable_equal = {
+			which = anbi_daxugo_harem_independence_random5
+			value = $count$
+		}
+		is_variable_equal = {
+			which = anbi_daxugo_harem_independence_random6
+			value = $count$
+		}
+		is_variable_equal = {
+			which = anbi_daxugo_harem_independence_random7
+			value = $count$
+		}
+		is_variable_equal = {
+			which = anbi_daxugo_harem_independence_random8
+			value = $count$
+		}
+		is_variable_equal = {
+			which = anbi_daxugo_harem_independence_random9
+			value = $count$
+		}
+		is_variable_equal = {
+			which = anbi_daxugo_harem_independence_random10
+			value = $count$
+		}
+		is_variable_equal = {
+			which = anbi_daxugo_harem_independence_random11
+			value = $count$
+		}
+		is_variable_equal = {
+			which = anbi_daxugo_harem_independence_random12
+			value = $count$
+		}
+		is_variable_equal = {
+			which = anbi_daxugo_harem_independence_random13
+			value = $count$
+		}
+		is_variable_equal = {
+			which = anbi_daxugo_harem_independence_random14
+			value = $count$
+		}
+		is_variable_equal = {
+			which = anbi_daxugo_harem_independence_random15
+			value = $count$
+		}
+		is_variable_equal = {
+			which = anbi_daxugo_harem_independence_random16
+			value = $count$
+		}
+	}
+}

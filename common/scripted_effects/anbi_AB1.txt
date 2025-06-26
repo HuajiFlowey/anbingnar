@@ -1,0 +1,259 @@
+anbi_ab1_the_doubt_growing = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_modifier = anbi_AB1_doubt_1
+				has_country_modifier = anbi_AB1_doubt_2
+				has_country_modifier = anbi_AB1_doubt_3
+				has_country_modifier = anbi_AB1_doubt_4
+				has_country_modifier = anbi_AB1_doubt_5
+			}
+		}
+		add_country_modifier = {
+			name = anbi_AB1_doubt_1
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = anbi_AB1_doubt_1
+		}
+		remove_country_modifier = anbi_AB1_doubt_1
+		add_country_modifier = {
+			name = anbi_AB1_doubt_2
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = anbi_AB1_doubt_2
+		}
+		remove_country_modifier = anbi_AB1_doubt_2
+		add_country_modifier = {
+			name = anbi_AB1_doubt_3
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = anbi_AB1_doubt_3
+		}
+		remove_country_modifier = anbi_AB1_doubt_3
+		add_country_modifier = {
+			name = anbi_AB1_doubt_4
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = anbi_AB1_doubt_4
+		}
+		remove_country_modifier = anbi_AB1_doubt_4
+		add_country_modifier = {
+			name = anbi_AB1_doubt_5
+			duration = -1
+		}
+	}
+}
+anbi_ab1_the_doubt_down = {
+	if = {
+		limit = {
+			has_country_modifier = anbi_AB1_doubt_5
+		}
+		remove_country_modifier = anbi_AB1_doubt_5
+		add_country_modifier = {
+			name = anbi_AB1_doubt_4
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = anbi_AB1_doubt_4
+		}
+		remove_country_modifier = anbi_AB1_doubt_4
+		add_country_modifier = {
+			name = anbi_AB1_doubt_3
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = anbi_AB1_doubt_3
+		}
+		remove_country_modifier = anbi_AB1_doubt_3
+		add_country_modifier = {
+			name = anbi_AB1_doubt_2
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_modifier = anbi_AB1_doubt_2
+		}
+		remove_country_modifier = anbi_AB1_doubt_2
+		add_country_modifier = {
+			name = anbi_AB1_doubt_1
+			duration = -1
+		}
+	}
+}
+anbi_ab1_the_food_research_add = {
+	custom_tooltip = FoodResearchV_ct1
+	hidden_effect = {
+		change_variable = {
+			which = FoodResearchV
+			value = 1
+		}
+	}
+}
+anbi_ab1_the_food_research_subtract = {
+	custom_tooltip = FoodResearchV_cts1
+	hidden_effect = {
+		subtract_variable = {
+			which = FoodResearchV
+			value = 1
+		}
+	}
+}
+anbi_abi_the_great_war_death_event_effect = {
+	if = {
+		limit = {
+			tag = AB2
+			has_country_flag = anbi_ab1_the_great_war
+		}
+		change_variable = {
+			which = land_unit_casualties_bloodycanstanor_var
+			which = land_units_killed
+		}
+		change_variable = {
+			which = land_unit_casualties_bloodycanstanor_var
+			which = land_units_lost
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = land_unit_casualties_bloodycanstanor_var
+				value = 10000
+			}
+		}
+		while = {
+			limit = { 
+				check_variable = {
+					which = land_unit_casualties_bloodycanstanor_var
+					value = 10000
+				}
+			}
+			subtract_variable = {
+				which = land_unit_casualties_bloodycanstanor_var
+				value = 10000
+			}
+			change_variable = {
+				which = land_unit_casualties_bloodycanstanor_10kvar
+				value = 1
+			}
+		}
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				which = land_unit_casualties_bloodycanstanor_10kvar
+				value = 10
+			}
+			has_country_flag = anbi_ab1_the_great_war
+			NOT = {
+				has_country_flag = anbi_ab1_the_great_war_first_death
+			}
+		}
+		country_event = {
+			id = bloody_castanor.3004
+		}
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				which = land_unit_casualties_bloodycanstanor_10kvar
+				value = 50
+			}
+			has_country_flag = anbi_ab1_the_great_war
+			NOT = {
+				has_country_flag = anbi_ab1_the_great_war_second_death
+			}
+		}
+		country_event = {
+			id = bloody_castanor.3005
+		}
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				which = land_unit_casualties_bloodycanstanor_10kvar
+				value = 100
+			}
+			has_country_flag = anbi_ab1_the_great_war
+			NOT = {
+				has_country_flag = anbi_ab1_the_great_war_third_death
+			}
+		}
+		country_event = {
+			id = bloody_castanor.3006
+		}
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				which = land_unit_casualties_bloodycanstanor_10kvar
+				value = 200
+			}
+			has_country_flag = anbi_ab1_the_great_war
+			NOT = {
+				has_country_flag = anbi_ab1_the_great_war_last_death
+			}
+		}
+		country_event = {
+			id = bloody_castanor.3007
+		}
+	}
+}
+anbi_ab1_the_food_cook = {
+	if = {
+		limit = { 
+			check_variable = {
+				FoodResearchV > 0.5
+			}
+			NOT = {
+				has_estate_privilege = estate_eat_all_monster
+				has_global_flag = eat_$food$_upup
+			}
+		}
+		if = {
+			limit = { 
+				NOT = {
+					has_estate_privilege = estate_eat_$food$
+				}
+			}
+			anbi_ab1_the_food_research_subtract = yes
+			set_estate_privilege = estate_eat_$food$
+		}
+		else_if = {
+			limit = { 
+				NOT = {
+					OR = {
+						has_global_flag = eat_$food$_up
+						has_global_flag = eat_$food$_upup
+					}
+				}
+			}
+			set_global_flag = eat_$food$_up
+			anbi_ab1_the_food_research_subtract = yes
+		}
+		else_if = {
+			limit = { 
+				has_global_flag = eat_$food$_up
+			}
+			clr_global_flag = eat_$food$_up
+			set_global_flag = eat_$food$_upup
+			anbi_ab1_the_food_research_subtract = yes
+		}
+	}
+}

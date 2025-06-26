@@ -1,0 +1,29 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_faction_anbi_lanjin_0"	
+		texturefile = "gfx//interface//anbi_lanjin_0.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_anbi_lanjin_0"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_anbi_feiten_0"	
+		texturefile = "gfx//interface//anbi_feiten_0.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_anbi_feiten_0"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_anbi_yinquan_0"	
+		texturefile = "gfx//interface//anbi_yinquan_0.dds"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_anbi_yinquan_0"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}
+}

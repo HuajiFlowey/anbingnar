@@ -1,0 +1,37 @@
+anbi_has_doubt_count_mechanics = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 17
+	available = {
+		always = yes
+	}
+
+	powers = {
+		anbi_AB1_doubt_count = {
+			gui = doubt_count_bar
+			max = 100
+			reset_on_new_ruler = no
+			base_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					shock_damage = 0.2
+					shock_damage_received = -0.2
+					ae_impact = 0.5
+					diplomatic_reputation = -1
+					improve_relation_modifier = -0.5
+					reform_progress_growth = -0.5
+					reverse_relation_with_heathen_religion = -50
+					relation_with_heathens = -50
+				}
+			}
+			development_scaled_monthly_growth = 0.1
+			is_good = no
+			on_max_reached = {
+				custom_tooltip = anbi_AB1_doubt_count_max_ct
+				country_event = {
+					id = bloody_castanor.1004
+				}
+			}
+		}
+	}
+
+}

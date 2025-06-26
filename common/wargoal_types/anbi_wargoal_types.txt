@@ -1,0 +1,155 @@
+superiority_laker_is_ours = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.25
+		prestige_factor = 1
+		peace_cost_factor = 0.5
+		
+		allowed_provinces = {
+			always = no
+		}
+
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_Y98_laker_is_ours
+		}
+	
+		deny_annex = yes
+		prov_desc = Y98_all_laker
+	}
+	
+	defender = {
+		badboy_factor = 0.25
+		prestige_factor = 1
+		peace_cost_factor = 0.5
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_humiliate_rival
+			po_gold
+			po_revoke_cores
+			po_return_cores
+			po_release_vassals
+			po_release_annexed
+			po_concede_defeat
+			po_annul_treaties
+			po_nsc_investigation
+			po_trade_power
+			po_steer_trade
+			po_demand_provinces
+		}
+	
+		deny_annex = yes
+	}
+	
+	war_name = THE_LAKER_IS_OURS
+}
+
+superiority_anbi_canstanor_vs_monster = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 0.25
+		prestige_factor = 1
+		peace_cost_factor = 0.5
+		
+		allowed_provinces = {
+			always = no
+		}
+
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_anbi_canstanor_vs_monster
+		}
+	
+		deny_annex = yes
+		prov_desc = ALL_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 0.25
+		prestige_factor = 1
+		peace_cost_factor = 0.5
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_humiliate_rival
+			po_gold
+			po_revoke_cores
+			po_return_cores
+			po_release_vassals
+			po_release_annexed
+			po_concede_defeat
+			po_annul_treaties
+			po_nsc_investigation
+			po_trade_power
+			po_steer_trade
+			po_demand_provinces
+		}
+	
+		deny_annex = yes
+	}
+	
+	war_name = CANSTANOR_VS_MONSTER
+}
+
+superiority_anbi_canstanor_annex_world = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 0.5
+		
+		allowed_provinces = {
+			always = no
+		}
+
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_anbi_canstanor_annex_world
+		}
+	
+		deny_annex = yes
+		prov_desc = ALL_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 0.25
+		prestige_factor = 1
+		peace_cost_factor = 0.5
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_humiliate_rival
+			po_gold
+			po_revoke_cores
+			po_return_cores
+			po_release_vassals
+			po_release_annexed
+			po_concede_defeat
+			po_annul_treaties
+			po_nsc_investigation
+			po_trade_power
+			po_steer_trade
+			po_demand_provinces
+		}
+	
+		deny_annex = yes
+	}
+	
+	war_name = CANSTANOR_ANNEX_WORLD
+}

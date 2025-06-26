@@ -1,0 +1,79 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_zhengdao_beidugang"
+		texturefile = "gfx/interface/anbi_church_aspects/zhengdao_beidugang.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_zhengdao_feiten"
+		texturefile = "gfx/interface/anbi_church_aspects/zhengdao_feiten.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_zhengdao_yinquan"
+		texturefile = "gfx/interface/anbi_church_aspects/zhengdao_yinquan.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_zhengdao_kuhai"
+		texturefile = "gfx/interface/anbi_church_aspects/zhengdao_kuhai.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_zhengdao_lanjinhui"
+		texturefile = "gfx/interface/anbi_church_aspects/zhengdao_lanjinhui.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_zhengdao_bianfang"
+		texturefile = "gfx/interface/anbi_church_aspects/zhengdao_bianfang.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_zhengdao_zhuyue"
+		texturefile = "gfx/interface/anbi_church_aspects/zhengdao_zhuyue.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_zhengdao_tianlou"
+		texturefile = "gfx/interface/anbi_church_aspects/zhengdao_tianlou.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_zhengdao_gushuoguan"
+		texturefile = "gfx/interface/anbi_church_aspects/zhengdao_gushuoguan.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_zhengdao_yanzhong"
+		texturefile = "gfx/interface/anbi_church_aspects/zhengdao_yanzhong.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_zhengdao_xiangnv"
+		texturefile = "gfx/interface/anbi_church_aspects/zhengdao_xiangnv.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_zhengdao_jianqiang"
+		texturefile = "gfx/interface/anbi_church_aspects/zhengdao_jianqiang.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_zhengdao_yangcheng"
+		texturefile = "gfx/interface/anbi_church_aspects/zhengdao_yangcheng.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_zhengdao_jiangdu"
+		texturefile = "gfx/interface/anbi_church_aspects/zhengdao_jiangdu.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_zhengdao_yingzhen"
+		texturefile = "gfx/interface/anbi_church_aspects/zhengdao_yingzhen.dds"
+		legacy_lazy_load = no
+	}
+}

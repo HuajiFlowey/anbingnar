@@ -1,0 +1,214 @@
+#共和国元勋
+anbi_zhengdao_feiten = {
+	sprite = "GFX_zhengdao_feiten"
+	cost = 100
+	potential = {
+		owns_core_province = 4879
+	}
+	monarch_power = adm
+	modifier = {
+		trade_efficiency = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_zhengdao_kuhai = {
+	sprite = "GFX_zhengdao_kuhai"
+	cost = 100
+	potential = {
+		owns_core_province = 4896
+	}
+	monarch_power = adm
+	modifier = {
+		land_morale = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_zhengdao_beidugang = {
+	sprite = "GFX_zhengdao_beidugang"
+	cost = 100
+	potential = {
+		owns_core_province = 4907
+	}
+	monarch_power = adm
+	modifier = {
+		global_sailors_modifier = 0.25
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_zhengdao_lanjinhui = {
+	sprite = "GFX_zhengdao_lanjinhui"
+	cost = 100
+	potential = {
+		owns_core_province = 4930
+	}
+	monarch_power = adm
+	modifier = {
+		global_manpower_modifier = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_zhengdao_yinquan = {
+	sprite = "GFX_zhengdao_yinquan"
+	cost = 100
+	potential = {
+		owns_core_province = 4931
+	}
+	monarch_power = adm
+	modifier = {
+		all_power_cost = -0.025
+		technology_cost = 0.05
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+#共和国边疆
+anbi_zhengdao_bianfang = {
+	sprite = "GFX_zhengdao_bianfang"
+	cost = 100
+	potential = {
+		owns_core_province = 4826
+	}
+	monarch_power = dip
+	modifier = {
+		drill_gain_modifier = 0.5
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_zhengdao_zhuyue = {
+	sprite = "GFX_zhengdao_zhuyue"
+	cost = 100
+	potential = {
+		owns_core_province = 4839
+	}
+	monarch_power = dip
+	modifier = {
+		land_attrition = -0.5
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_zhengdao_tianlou = {
+	sprite = "GFX_zhengdao_tianlou"
+	cost = 100
+	potential = {
+		owns_core_province = 4871
+	}
+	monarch_power = dip
+	modifier = {
+		manpower_in_true_faith_provinces = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_zhengdao_gushuoguan = {
+	sprite = "GFX_zhengdao_gushuoguan"
+	cost = 100
+	potential = {
+		owns_core_province = 4914
+	}
+	monarch_power = dip
+	modifier = {
+		mercenary_discipline = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_zhengdao_jiangdu = {
+	sprite = "GFX_zhengdao_jiangdu"
+	cost = 100
+	potential = {
+		owns_core_province = 4868
+	}
+	monarch_power = dip
+	modifier = {
+		discipline = 0.05
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+#共和国代表
+anbi_zhengdao_jianqiang = {
+	sprite = "GFX_zhengdao_jianqiang"
+	cost = 100
+	potential = {
+		owns_core_province = 4925
+	}
+	monarch_power = mil
+	modifier = {
+		war_exhaustion = -0.03
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_zhengdao_yangcheng = {
+	sprite = "GFX_zhengdao_yangcheng"
+	cost = 100
+	potential = {
+		owns_core_province = 4861
+	}
+	monarch_power = mil
+	modifier = {
+		institution_spread_from_true_faith = 0.5
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_zhengdao_yanzhong = {
+	sprite = "GFX_zhengdao_yanzhong"
+	cost = 100
+	potential = {
+		owns_core_province = 4859
+	}
+	monarch_power = mil
+	modifier = {
+		global_tax_modifier = 0.2
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_zhengdao_yingzhen = {
+	sprite = "GFX_zhengdao_yingzhen"
+	cost = 100
+	potential = {
+		owns_core_province = 4849
+	}
+	monarch_power = mil
+	modifier = {
+		spy_offence = 0.5
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+anbi_zhengdao_xiangnv = {
+	sprite = "GFX_zhengdao_xiangnv"
+	cost = 100
+	potential = {
+		owns_core_province = 4869
+	}
+	monarch_power = mil
+	modifier = {
+		missionaries = 1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}

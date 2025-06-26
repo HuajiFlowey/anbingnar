@@ -1,0 +1,7639 @@
+#混乱的序号是因为作者最开始写mod时脑瘫了，把他当做积重难返的屎山吧
+#0.50版本被迫调整序号，因为eu4为每一个事件命名空间分配的位置只有100000个，序号太大会导致溢出
+
+namespace = flavour_anbingnar_daxugo
+#无面女王伟大征服事件链
+country_event = {
+	id = flavour_anbingnar_daxugo.1
+	title = flavour_anbingnar_daxugo_1_t
+	picture = GOOD_WITH_MONARCH_eventPicture
+	desc = flavour_anbingnar_daxugo_1_d
+
+	fire_only_once = yes
+	
+	trigger = {
+		has_ruler_modifier = faceless_queen_modifier
+		tag = Y91
+		num_of_owned_provinces_with = {
+			value = 20
+			superregion = yanshen_superregion
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo_1_a
+		ai_chance = { factor = 0 }
+		custom_tooltip = faceless_queen_great_conquer_tooltip
+		set_country_flag = faceless_queen_great_conquer
+		add_ruler_modifier = {
+			name = faceless_queen_great_conquer
+			duration = -1
+		}
+		hidden_effect = {
+			if = {
+				limit = { 
+					NOT = {
+						ruler_age = 75
+					}				
+				}
+				make_ruler_immortal = yes
+			}		
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo_1_b
+		ai_chance = {
+			factor = 100
+		}
+		custom_tooltip = faceless_queen_be_standard_tooltip
+		add_prestige = 10
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.2
+	title = flavour_anbingnar_daxugo_2_t
+	picture = TOURNAMENT_eventPicture
+	desc = flavour_anbingnar_daxugo_2_d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = faceless_queen_great_conquer_good
+		set_country_flag = formed_daxugo_flag
+		set_ruler_flag = daxugo_former
+		hidden_effect = {
+			add_country_modifier = {
+				name = anbi_Y91_horde_heritage_1
+				duration = -1
+			}
+			country_event = { id = flavour_anbingnar_daxugo.5 days = 10 }
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = { 
+					OR = { 
+						culture = shuvuush
+						culture = kuuldaar
+					}
+				}
+				change_culture = daxug
+			}
+			if = {
+				limit = { 
+						Y90 = { 
+							is_subject_of = ROOT
+						}
+				}
+				Y90 = {
+					change_primary_culture = daxug
+					set_ruler_culture = daxug
+					set_heir_culture = daxug
+					every_owned_province = {
+					limit = { culture = shuvuush }
+					change_culture = daxug
+						}
+				}
+			}
+			if = {
+					limit = { 
+						Y92 = { 
+							is_subject_of = ROOT
+						}
+					}
+					Y92 = {
+						change_primary_culture = daxug
+						set_ruler_culture = daxug
+						set_heir_culture = daxug
+						every_owned_province = {
+							limit = { culture = shuvuush }
+							change_culture = daxug
+						}
+					}
+			}
+		}
+		country_event = {
+			id = flavor_nuugdan_tsarai.103
+			days = 365
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo_2_a
+		add_prestige = 50
+		change_tag = Y98
+		custom_tooltip = Y91_horde_heritage_tt
+		add_country_modifier = {
+			name = you_cant_lose_anbingnar
+			duration = -1
+		}
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		swap_non_generic_missions = yes
+		change_government = anbingnar_monarchy
+		add_government_reform = anbingnar_daxugo_harem_reform
+		remove_estate_privilege = estate_nomadic_tribes_leadership_of_yomod_rush
+		if = {
+			limit = {
+				NOT = { government_rank = 3 }
+			}
+			set_government_rank = 3
+		}
+		swap_free_idea_group = yes	
+		primary_and_ruler_culture_change = { race = human new_culture = daxug }
+		jaddempire_move_court_minorities_from_to = {
+			from = capital_scope
+			province_id = 4871
+		}
+		4871 = {
+			move_capital_effect = yes 
+			if = {
+				limit = {
+					4871 = {
+						NOT = { culture = shuvuush }
+					}
+				}
+				change_culture = daxug
+			}
+			change_province_name = "Duzhekho"
+			change_religion = ROOT
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo_2_b
+		add_prestige = 50
+		change_tag = Y98
+		custom_tooltip = Y91_horde_heritage_tt
+		add_country_modifier = {
+			name = happy_in_battle_anbingnar
+			duration = -1
+		}
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		swap_non_generic_missions = yes
+		change_government = anbingnar_monarchy
+		add_government_reform = anbingnar_daxugo_harem_reform
+		if = {
+			limit = {
+				NOT = { government_rank = 3 }
+			}
+			set_government_rank = 3
+		}
+		swap_free_idea_group = yes	
+		primary_and_ruler_culture_change = { race = human new_culture = daxug }
+		jaddempire_move_court_minorities_from_to = {
+			from = capital_scope
+			province_id = 4871
+		}
+		4871 = {
+			move_capital_effect = yes 
+			if = {
+				limit = {
+					4871 = {
+						NOT = { culture = shuvuush }
+					}
+				}
+				change_culture = daxug
+			}
+			change_province_name = "Duzhekho"
+			change_religion = ROOT
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo_2_c
+		add_prestige = 50
+		change_tag = Y98
+		custom_tooltip = Y91_horde_heritage_tt
+		add_country_modifier = {
+			name = great_jushen_anbingnar
+			duration = -1
+		}
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		swap_non_generic_missions = yes
+		change_government = anbingnar_monarchy
+		add_government_reform = anbingnar_daxugo_harem_reform
+		if = {
+			limit = {
+				NOT = { government_rank = 3 }
+			}
+			set_government_rank = 3
+		}
+		swap_free_idea_group = yes	
+		primary_and_ruler_culture_change = { race = human new_culture = daxug }
+		jaddempire_move_court_minorities_from_to = {
+			from = capital_scope
+			province_id = 4871
+		}
+		4871 = {
+			move_capital_effect = yes 
+			if = {
+				limit = {
+					4871 = {
+						NOT = { culture = shuvuush }
+					}
+				}
+				change_culture = daxug
+			}
+			change_province_name = "Duzhekho"
+			change_religion = ROOT
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo_2_e
+		add_prestige = 50
+		change_tag = Y98
+		custom_tooltip = Y91_horde_heritage_tt
+		add_country_modifier = {
+			name = song_in_grass_anbingnar
+			duration = -1
+		}
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		swap_non_generic_missions = yes
+		change_government = anbingnar_monarchy
+		add_government_reform = anbingnar_daxugo_harem_reform
+		if = {
+			limit = {
+				NOT = { government_rank = 3 }
+			}
+			set_government_rank = 3
+		}
+		swap_free_idea_group = yes	
+		primary_and_ruler_culture_change = { race = human new_culture = daxug }
+		jaddempire_move_court_minorities_from_to = {
+			from = capital_scope
+			province_id = 4871
+		}
+		4871 = {
+			move_capital_effect = yes 
+			if = {
+				limit = {
+					4871 = {
+						NOT = { culture = shuvuush }
+					}
+				}
+				change_culture = daxug
+			}
+			change_province_name = "Duzhekho"
+			change_religion = ROOT
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.3
+	title = flavour_anbingnar_daxugo.3.t
+	picture = KING_SICK_IN_BED_eventPicture
+	desc = flavour_anbingnar_daxugo.3.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = faceless_queen_great_conquer
+		NOT = {
+			OR = {
+				has_country_flag = faceless_queen_great_conquer_good
+				has_ruler_modifier = faceless_queen_great_conquer
+			}
+		}
+	}
+
+	immediate = {
+		for = {
+			amount = 5
+			effect = "
+			random_owned_province = {
+			limit = {
+				superregion = yanshen_superregion
+				NOT = { culture = ROOT }
+			}
+			spawn_rebels = {
+				size = 3
+				type = nationalist_rebels
+			}
+			}
+			"
+		}
+		set_global_flag = saanorgegh_faceless_queen_death
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.3.a
+		add_country_modifier = {
+			name = tired_shuwushi
+			duration = 7200
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.4
+	title = flavour_anbingnar_daxugo.4.t
+	picture = DEATH_OF_HEIR_eventPicture
+	desc = flavour_anbingnar_daxugo.4.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = faceless_queen_great_conquer
+		has_country_flag = faceless_queen_great_conquer_good
+		NOT = {
+			has_ruler_modifier = faceless_queen_great_conquer
+		}
+	}
+
+	immediate = {
+		set_global_flag = faceless_emperor_win
+	}
+
+	option = {
+		swap_non_generic_missions = yes
+		name = flavour_anbingnar_daxugo.4.a
+		add_prestige = 10
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.5
+	title = flavour_anbingnar_daxugo.5.t
+	desc = flavour_anbingnar_daxugo.5.d
+	picture = KINGS_CHOICE_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.5.a
+		custom_tooltip = faceless_queen_rebellions_work_ctt
+		set_country_flag = faceless_queen_rebellions_work
+		set_country_flag = daxugo_rebellions_started
+		swap_non_generic_missions = yes
+	}
+}
+
+#盗脸灵事件链
+country_event = {
+	id = flavour_anbingnar_daxugo.6
+	title = flavour_anbingnar_daxugo.6.t
+	desc = flavour_anbingnar_daxugo.6.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1460
+		OR = {
+			tag = Y91
+			tag = Y96
+			tag = Y98
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.6.a
+		set_country_flag = runsuhei_face_stealer_1
+		add_years_of_income = -0.05
+		swap_non_generic_missions = yes
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.7
+	title = flavour_anbingnar_daxugo.7.t
+	desc = flavour_anbingnar_daxugo.7.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.7.a
+		set_country_flag = search_ghost_hunter_1
+		swap_non_generic_missions = yes
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.8
+	title = flavour_anbingnar_daxugo.8.t
+	desc = flavour_anbingnar_daxugo.8.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.8.a
+		set_country_flag = ghost_hunter_is_ready
+		if = {
+			limit = { exists = V02 }
+			vassalize = V02
+		}
+		else = {
+			6802 = { add_permanent_claim = ROOT }
+			5204 = { add_permanent_claim = ROOT }
+			5377 = { add_permanent_claim = ROOT }
+		}
+		swap_non_generic_missions = yes
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.9
+	title = flavour_anbingnar_daxugo.9.t
+	desc = flavour_anbingnar_daxugo.9.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = Y91_battle_in_desert
+		NOT = {
+			has_country_flag = Y91_battle_in_desert_lose
+		}
+		6802 = {
+			unit_in_siege = no
+			unit_in_battle = no
+			NOT = {has_rebel_faction = face_stealers_rebels}
+		}
+		5204 = {
+			unit_in_siege = no
+			unit_in_battle = no
+			NOT = {has_rebel_faction = face_stealers_rebels}
+		}
+		5377 = {
+			unit_in_siege = no
+			unit_in_battle = no
+			NOT = {has_rebel_faction = face_stealers_rebels}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.9.a
+		set_country_flag = Y91_battle_in_desert_win
+		khaashalg_region = {
+			add_permanent_claim = ROOT
+			add_permanent_claim = V02
+			discover_country = ROOT
+		}
+		swap_non_generic_missions = yes
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.10
+	title = flavour_anbingnar_daxugo.10.t
+	desc = flavour_anbingnar_daxugo.10.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = Y91_battle_in_desert
+		NOT = {
+			has_country_flag = Y91_battle_in_desert_win
+		}
+		OR = {
+			6802 = {
+				OR = {
+					unit_in_siege = yes
+					unit_in_battle = yes
+					has_rebel_faction = face_stealers_rebels
+				}
+			}
+			5204 = {
+				OR = {
+					unit_in_siege = yes
+					unit_in_battle = yes
+					has_rebel_faction = face_stealers_rebels
+				}
+			}
+			5377 = {
+				OR = {
+					unit_in_siege = yes
+					unit_in_battle = yes
+					has_rebel_faction = face_stealers_rebels
+				}
+			}
+		}
+		had_country_flag = {
+			flag = Y91_battle_in_desert
+			days = 365
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			V02 = { 
+				grant_independence = yes
+				disband_rebels = face_stealers_rebels
+				add_opinion = {
+					who = ROOT
+					modifier = scornfully_insulted
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = vassal_abandoned
+				}
+			}
+			disband_rebels = face_stealers_rebels
+			clr_country_flag = Y91_battle_in_desert
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.10.a
+		add_prestige = -25
+		add_stability = -1
+		add_adm_power = -100
+		add_mil_power = -100
+		add_dip_power = -100
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.11
+	title = flavour_anbingnar_daxugo.11.t
+	desc = flavour_anbingnar_daxugo.11.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.11.a
+		set_country_flag = Y91_the_last_battle
+		add_manpower = 20
+		swap_non_generic_missions = yes
+	}
+}
+
+#东洲天命，换线
+country_event = {
+	id = flavour_anbingnar_daxugo.12
+	title = flavour_anbingnar_daxugo.12.t
+	desc = flavour_anbingnar_daxugo.12.d
+	picture = AIRSHIP_SKYPORT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.12.a
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.13 days = 30
+			}
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.13
+	title = flavour_anbingnar_daxugo.13.t
+	desc = flavour_anbingnar_daxugo.13.d
+	picture = failed_revolution_eventpicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_stability = -3
+			kill_ruler = yes
+			kill_consort = yes
+			remove_heir = {}
+			define_ruler = {
+				max_random_adm = 0
+				max_random_dip = 0
+				max_random_mil = 0
+				name = "nobody"
+			}
+		}
+		for = {
+			amount = 20
+			effect = "
+			random_owned_province = {
+			limit = {
+				NOT = { culture = ROOT }
+			}
+			spawn_rebels = {
+				size = 4
+				type = nationalist_rebels
+			}
+			}
+			"
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.13.a
+		set_country_flag = daxugo_conquer_never_end
+		swap_non_generic_missions = yes
+		country_event = {
+			id = flavour_anbingnar_daxugo.14
+		}
+	}
+
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.14
+	title = flavour_anbingnar_daxugo.14.t
+	desc = flavour_anbingnar_daxugo.14.d
+	picture = ANB_GLOBAL_TRADE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.14.a
+		custom_tooltip = faceless_emperor_only
+		set_global_flag = faceless_emperor_win
+		set_country_flag = faceless_emperor_only_1
+		add_country_modifier = {
+			name = A_hawk_screaming_for_a_bloody_war
+			duration = -1
+		}
+		nuzurbokh_region = {
+			add_permanent_claim = ROOT
+		}
+		moduk_region = {
+			add_permanent_claim = ROOT
+		}
+		bulwar_superregion = {
+			add_permanent_claim = ROOT
+		}
+		define_ruler = {
+			adm = 4
+			dip = 5
+			mil = 6
+			age = 20
+			female = yes
+		}
+	}
+}
+#15是共和走向的事件，已被移除
+
+#湖人，完蛋了！
+country_event = {
+	id = flavour_anbingnar_daxugo.16
+	title = flavour_anbingnar_daxugo.16.t
+	desc = flavour_anbingnar_daxugo.16.d
+	picture = BIG_STAR_IN_SKY_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.16.a
+		every_owned_province = {
+			limit = {
+				OR = {
+					region = north_yarikhoi_region
+					region = south_yarikhoi_region
+				}
+			}
+			cede_province = J33
+			add_core = J33
+		}
+		J33 = {
+			override_country_name = daxugo_army_country
+		}
+		if = {
+			limit = { 
+				J33 = {
+					NOT ={
+						is_subject_of = Y98
+					}
+				}
+			}
+			Y98 = {
+				vassalize = J33				
+			}
+			J33 = {
+				add_liberty_desire = -100
+			}
+		}
+	}
+}
+
+country_event = {
+	id = flavour_anbingnar_daxugo.17
+	title = flavour_anbingnar_daxugo.17.t
+	desc = flavour_anbingnar_daxugo.17.d
+	picture = BIG_STAR_IN_SKY_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		tag = Y98
+		J33 = {
+			is_subject_of = Y98
+			NOT = {
+				num_of_rebel_controlled_provinces = 1
+				num_of_rebel_armies = 1
+			}
+			
+		}
+		south_yarikhoi_region = {
+			type = all
+			OR = {
+				owner = {
+					capital_scope = {
+						NOT = {
+							OR = {
+								region = south_yarikhoi_region
+								region = north_yarikhoi_region
+							}
+						}
+					}
+				}
+				AND = {
+					owned_by = J33
+					is_core = J33					
+				}
+			}
+		}
+		north_yarikhoi_region = {
+			type = all
+			OR = {
+				owner = {
+					capital_scope = {
+						NOT = {
+							OR = {
+								region = south_yarikhoi_region
+								region = north_yarikhoi_region
+							}
+						}
+					}
+				}
+				AND = {
+					owned_by = J33
+					is_core = J33					
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.17.a
+		J33 = {
+			override_country_name = daxugo_laker_country
+			change_government = republic
+			add_government_reform = oligarchy_reform
+			add_historical_friend = ROOT
+			add_liberty_desire = -100
+			add_trust = {
+				who = ROOT
+				value = 100
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = released_vassal
+			}
+			add_country_modifier = {
+				name = anbi_Y98_daxugo_vassalize
+				duration = -1
+			}
+		}
+		vassalize = J33
+		Y98_laker_is_over = yes
+		add_country_modifier = {
+			name = anbi_laker_is_ours_modifier
+			duration = -1
+		}
+	}
+}
+#为古瓦神做的补丁
+country_event = {
+	id = flavour_anbingnar_daxugo.18
+	title = flavour_anbingnar_daxugo.18.t
+	desc = flavour_anbingnar_daxugo.18.d
+	picture = BIG_STAR_IN_SKY_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.18.a
+		set_global_flag = Y98_bhengudakhnar_is_back
+	}
+}
+#命令，完蛋了！
+country_event = {
+	id = flavour_anbingnar_daxugo.19
+	title = flavour_anbingnar_daxugo.19.t
+	desc = flavour_anbingnar_daxugo.19.d
+	picture = BIG_STAR_IN_SKY_eventPicture
+
+	trigger = {
+		has_country_flag = Y98_command_is_being_over
+		war_score_against = {
+			who = R62
+			value = 90
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			R62 = {
+				release_all_possible_countries = yes
+				release_all_subjects = yes
+				every_owned_province = {
+					random_list = {
+						1 = {
+							cede_province = R94
+							add_territorial_core = R94 
+						}
+						1 = {
+							cede_province = R95
+							add_territorial_core = R95
+						}
+						1 = {
+							cede_province = R96
+							add_territorial_core = R96
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.19.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_prestige = 25
+	}
+}
+#降低难度，苟利国家生死以
+country_event = {
+	id = flavour_anbingnar_daxugo.20
+	title = flavour_anbingnar_daxugo.20.t
+	desc = flavour_anbingnar_daxugo.20.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	trigger = {
+		has_ruler_modifier = faceless_queen_modifier
+		ruler_age = 75
+		has_ruler_modifier = faceless_queen_great_conquer
+	}
+
+	fire_only_once = yes
+	hidden = yes
+
+	option = {
+		clr_ruler_flag = immortal_ruler
+	}
+}
+
+
+
+
+
+
+#建宫殿事件链(1000开头)
+country_event = {
+	id = flavour_anbingnar_daxugo.1000
+	title = flavour_anbingnar_daxugo.1000.t
+	picture = FORT_eventPicture
+	desc = flavour_anbingnar_daxugo.1000.d
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_treasury = -2000
+		add_adm_power = -100
+		add_manpower = -10
+		4871 = {
+			add_province_modifier = {
+				name = palace_is_building_Y98
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.1000.anbi
+	}
+
+	after = {
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = Y98_rahen_palace_building }
+				country_event = {
+					id = flavour_anbingnar_daxugo.1003 days = 1825
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = Y98_huagai_palace_building }
+				country_event = {
+					id = flavour_anbingnar_daxugo.1001 days = 1825
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = Y98_southest_palace_building }
+				country_event = {
+					id = flavour_anbingnar_daxugo.1005 days = 1825
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = Y98_tanxiang_palace_building }
+				country_event = {
+					id = flavour_anbingnar_daxugo.1002 days = 1825
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = Y98_harimari_palace_building }
+				country_event = {
+					id = flavour_anbingnar_daxugo.1004 days = 1825
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = Y98_bulwar_palace_building }
+				country_event = {
+					id = flavour_anbingnar_daxugo.114414 days = 1825
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = Y98_anben_palace_building }
+				country_event = {
+					id = flavour_anbingnar_daxugo.114415 days = 1825
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = Y98_canstanuo_palace_building }
+				country_event = {
+					id = flavour_anbingnar_daxugo.114416 days = 1825
+				}
+			}
+			else = {
+				add_adm_power = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.1001
+	title = flavour_anbingnar_daxugo.1001.t
+	picture = FORT_eventPicture
+	desc = flavour_anbingnar_daxugo.1001.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.1001.a
+		clr_country_flag = Y98_huagai_palace_building
+		4871 = {
+			add_province_modifier = {
+				name = Y98_huagai_palace
+				duration = -1
+			}
+			remove_province_modifier = palace_is_building_Y98
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.1002
+	title = flavour_anbingnar_daxugo.1002.t
+	picture = FORT_eventPicture
+	desc = flavour_anbingnar_daxugo.1002.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.1002.a
+		clr_country_flag = Y98_tanxiang_palace_building
+		4871 = {
+			add_province_modifier = {
+				name = Y98_tanxiang_palace
+				duration = -1
+			}
+			remove_province_modifier = palace_is_building_Y98
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.1003
+	title = flavour_anbingnar_daxugo.1003.t
+	picture = FORT_eventPicture
+	desc = flavour_anbingnar_daxugo.1003.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.1003.a
+		clr_country_flag = Y98_rahen_palace_building
+		4871 = {
+			add_province_modifier = {
+				name = Y98_rahen_palace
+				duration = -1
+			}
+			remove_province_modifier = palace_is_building_Y98
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.1004
+	title = flavour_anbingnar_daxugo.1004.t
+	picture = FORT_eventPicture
+	desc = flavour_anbingnar_daxugo.1004.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.1004.a
+		clr_country_flag = Y98_harimari_palace_building
+		4871 = {
+			add_province_modifier = {
+				name = Y98_harimari_palace
+				duration = -1
+			}
+			remove_province_modifier = palace_is_building_Y98
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.1005
+	title = flavour_anbingnar_daxugo.1005.t
+	picture = FORT_eventPicture
+	desc = flavour_anbingnar_daxugo.1005.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.1005.a
+		clr_country_flag = Y98_southest_palace_building
+		4871 = {
+			add_province_modifier = {
+				name = Y98_southest_palace
+				duration = -1
+			}
+			remove_province_modifier = palace_is_building_Y98
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.114414
+	title = flavour_anbingnar_daxugo.114414.t
+	picture = FORT_eventPicture
+	desc = flavour_anbingnar_daxugo.114414.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.114414.a
+		clr_country_flag = Y98_bulwar_palace_building
+		4871 = {
+			add_province_modifier = {
+				name = Y98_bulwar_palace
+				duration = -1
+			}
+			remove_province_modifier = palace_is_building_Y98
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.114415
+	title = flavour_anbingnar_daxugo.114415.t
+	picture = FORT_eventPicture
+	desc = flavour_anbingnar_daxugo.114415.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.114415.a
+		clr_country_flag = Y98_anben_palace_building
+		4871 = {
+			add_province_modifier = {
+				name = Y98_anben_palace
+				duration = -1
+			}
+			remove_province_modifier = palace_is_building_Y98
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.114416
+	title = flavour_anbingnar_daxugo.114416.t
+	picture = FORT_eventPicture
+	desc = flavour_anbingnar_daxugo.114416.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.114416.a
+		clr_country_flag = Y98_canstanuo_palace_building
+		4871 = {
+			add_province_modifier = {
+				name = Y98_canstanuo_palace
+				duration = -1
+			}
+			remove_province_modifier = palace_is_building_Y98
+		}
+	}
+}
+
+#爱猫爱仙灵TV
+country_event = { 
+	id = flavour_anbingnar_daxugo.1006
+	title = flavour_anbingnar_daxugo.1006.t
+	picture = HOUSE_OF_TRADE_eventPicture
+	desc = flavour_anbingnar_daxugo.1006.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.1006.a
+		country_event = {
+			id = flavour_anbingnar_daxugo.1007 days = 180
+		}
+	}
+}
+country_event = { 
+	id = flavour_anbingnar_daxugo.1007
+	title = flavour_anbingnar_daxugo.1007.t
+	picture = JANISSARIES_IN_FORMATION_eventPicture
+	desc = flavour_anbingnar_daxugo.1007.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.1007.a
+		country_event = {
+			id = flavour_anbingnar_daxugo.1008 days = 180
+		}
+		475 = {
+			add_base_tax = -2
+			add_base_manpower = -2
+			add_base_production = -2
+		}
+	}
+}
+country_event = { 
+	id = flavour_anbingnar_daxugo.1008
+	title = flavour_anbingnar_daxugo.1008.t
+	picture = HOUSE_OF_TRADE_eventPicture
+	desc = flavour_anbingnar_daxugo.1008.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.1008.a
+		475 = {
+			add_province_modifier = {
+				name = Y98_great_palace_building
+				duration = -1
+			}
+		}
+		4871 = {
+			add_province_modifier = {
+				name = Y98_great_palace_building
+				duration = -1
+			}
+		}
+		every_owned_province = {
+			limit = {
+				superregion = deepwoods_superregion
+			}
+			add_devastation = 50
+		}
+	}
+
+	after = {
+		country_event = {
+			id = flavour_anbingnar_daxugo.1009 days = 3650
+		}
+	}
+}
+country_event = { 
+	id = flavour_anbingnar_daxugo.1009
+	title = flavour_anbingnar_daxugo.1009.t
+	picture = HOUSE_OF_TRADE_eventPicture
+	desc = flavour_anbingnar_daxugo.1009.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.1009.a
+		475 = {
+			add_province_modifier = {
+				name = Y98_great_mage_palace
+				duration = -1
+			}
+			remove_province_modifier = Y98_great_palace_building
+		}
+		4871 = {
+			add_province_modifier = {
+				name = Y98_great_mage_palace
+				duration = -1
+			}
+			remove_province_modifier = Y98_great_palace_building
+		}
+		custom_tooltip = Y98_angry_ctt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion_group = khetist
+				}
+				add_province_modifier = {
+					name = Y98_angry
+					duration = 7300
+				}
+			}
+		}
+		set_country_flag = Y98_harem_khet
+	}
+
+}
+
+
+
+#后宫管理事件(1900)
+country_event = {
+	id = flavour_anbingnar_daxugo.1900
+	title = flavour_anbingnar_daxugo.1900.t 
+	picture = SPELL_MENU_eventPicture
+	desc = flavour_anbingnar_daxugo.1900.d
+
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 180
+	}
+	trigger = {
+		tag = Y98
+		has_reform = anbingnar_daxugo_harem_reform
+		4871 = {
+			OR = {
+				has_province_modifier = Y98_huagai_palace
+				has_province_modifier = Y98_tanxiang_palace
+				has_province_modifier = Y98_rahen_palace
+				has_province_modifier = Y98_southest_palace
+				has_province_modifier = Y98_harimari_palace
+			}
+		}
+		OR = {
+			has_consort = no
+			consort_age = 28
+		}
+		has_consort_regency = no
+		has_regency = no
+		NOT = {
+			has_ruler_flag = Y98_I_love_holi_cflag
+			has_ruler_flag = anbi_wumou_consort_r
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.1900.a
+		country_event = {
+			id = flavour_anbingnar_daxugo.2000
+		}
+	}
+}
+
+#后！宫！事！件！链！(游玩一分钟，穷举三小时)
+#在0.42版本更新
+#（2000开头）
+country_event = {
+	id = flavour_anbingnar_daxugo.2000
+	title = flavour_anbingnar_daxugo.2000.t 
+	picture = SPELL_MENU_eventPicture
+	desc = flavour_anbingnar_daxugo.2000.d
+
+	is_triggered_only = yes	
+
+	immediate = {
+		Y98_queen_death = yes
+		Y98_clr_harem_flag = yes
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = anbi_daxugo_harem_palace_initialization
+				}
+			}
+			hidden_effect = {
+				set_country_flag = anbi_daxugo_harem_palace_initialization
+				set_variable = {
+					which = daxugo_harem_palace_choice
+					value = 0
+				}
+			}
+		}
+	}
+	
+	option = {
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = daxugo_harem_palace_choice
+					value = 1
+				}	
+			}
+		}
+		ai_chance = { factor = 60 }
+		name = flavour_anbingnar_daxugo.2000.godcall_palace
+		hidden_effect = {
+			set_variable = {
+				which = daxugo_harem_palace_choice
+				value = 1
+			}
+			country_event = {
+				id = flavour_anbingnar_daxugo.3000
+			}
+		}
+	}
+	option = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 1
+			}	
+		}
+		ai_chance = { factor = 60 }
+		name = flavour_anbingnar_daxugo.2000.godcall_palace2
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.2001
+			}
+			clr_country_flag = anbi_daxugo_harem_palace_initialization
+		}
+	}
+
+	option = {
+		trigger = {
+			4871 = {
+				has_province_modifier = Y98_huagai_palace
+			}	
+			NOT = {
+				is_variable_equal = {
+					which = daxugo_harem_palace_choice
+					value = 2
+				}	
+			}
+		}
+		name = flavour_anbingnar_daxugo.2000.Y98_huagai_palace
+		hidden_effect = {
+			set_variable = {
+				which = daxugo_harem_palace_choice
+				value = 2
+			}
+			country_event = {
+				id = flavour_anbingnar_daxugo.3000
+			}
+		}
+	}
+	option = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 2
+			}	
+		}
+		name = flavour_anbingnar_daxugo.2000.Y98_huagai_palace2
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.2002
+			}
+			clr_country_flag = anbi_daxugo_harem_palace_initialization
+		}
+	}
+
+	option = {
+		trigger = {
+			4871 = {
+				has_province_modifier = Y98_tanxiang_palace
+			}	
+			NOT = {
+				is_variable_equal = {
+					which = daxugo_harem_palace_choice
+					value = 3
+				}	
+			}
+		}
+		name = flavour_anbingnar_daxugo.2000.Y98_tanxiang_palace
+		hidden_effect = {
+			set_variable = {
+				which = daxugo_harem_palace_choice
+				value = 3
+			}
+			country_event = {
+				id = flavour_anbingnar_daxugo.3000
+			}
+		}
+	}
+	option = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 3
+			}	
+		}
+		name = flavour_anbingnar_daxugo.2000.Y98_tanxiang_palace2
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.2003
+			}
+			clr_country_flag = anbi_daxugo_harem_palace_initialization
+		}
+	}
+
+	option = {
+		trigger = {
+			4871 = {
+				has_province_modifier = Y98_southest_palace
+			}	
+			NOT = {
+				is_variable_equal = {
+					which = daxugo_harem_palace_choice
+					value = 4
+				}	
+			}
+		}
+		name = flavour_anbingnar_daxugo.2000.Y98_southest_palace
+		hidden_effect = {
+			set_variable = {
+				which = daxugo_harem_palace_choice
+				value = 4
+			}
+			country_event = {
+				id = flavour_anbingnar_daxugo.3000
+			}
+		}
+	}
+	option = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 4
+			}	
+		}
+		name = flavour_anbingnar_daxugo.2000.Y98_southest_palace2
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.2004
+			}
+			clr_country_flag = anbi_daxugo_harem_palace_initialization
+		}
+	}
+
+	option = {
+		trigger = {
+			4871 = {
+				has_province_modifier = Y98_rahen_palace
+			}	
+			NOT = {
+				is_variable_equal = {
+					which = daxugo_harem_palace_choice
+					value = 5
+				}	
+			}
+		}
+		name = flavour_anbingnar_daxugo.2000.Y98_rahen_palace
+		hidden_effect = {
+			set_variable = {
+				which = daxugo_harem_palace_choice
+				value = 5
+			}
+			country_event = {
+				id = flavour_anbingnar_daxugo.3000
+			}
+		}
+	}
+	option = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 5
+			}	
+		}
+		name = flavour_anbingnar_daxugo.2000.Y98_rahen_palace2
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.2005
+			}
+			clr_country_flag = anbi_daxugo_harem_palace_initialization
+		}
+	}
+
+	option = {
+		trigger = {
+			4871 = {
+				has_province_modifier = Y98_harimari_palace
+			}	
+			NOT = {
+				is_variable_equal = {
+					which = daxugo_harem_palace_choice
+					value = 6
+				}	
+			}
+		}
+		name = flavour_anbingnar_daxugo.2000.Y98_harimari_palace
+		hidden_effect = {
+			set_variable = {
+				which = daxugo_harem_palace_choice
+				value = 6
+			}
+			country_event = {
+				id = flavour_anbingnar_daxugo.3000
+			}
+		}
+	}
+	option = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 6
+			}	
+		}
+		name = flavour_anbingnar_daxugo.2000.Y98_harimari_palace2
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.2006
+			}
+			clr_country_flag = anbi_daxugo_harem_palace_initialization
+		}
+	}
+
+	option = {
+		trigger = {
+			4871 = {
+				has_province_modifier = Y98_great_mage_palace
+			}	
+			NOT = {
+				is_variable_equal = {
+					which = daxugo_harem_palace_choice
+					value = 8
+				}	
+			}
+		}
+		name = flavour_anbingnar_daxugo.2000.kheti
+		hidden_effect = {
+			set_variable = {
+				which = daxugo_harem_palace_choice
+				value = 8
+			}
+			country_event = {
+				id = flavour_anbingnar_daxugo.3000
+			}
+		}
+	}
+	option = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 8
+			}	
+		}
+		name = flavour_anbingnar_daxugo.2000.kheti2
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.2007
+			}
+			clr_country_flag = anbi_daxugo_harem_palace_initialization
+		}
+	}
+
+	option = {
+		trigger = {
+			4871 = {
+				has_province_modifier = Y98_bulwar_palace
+			}
+			NOT = {
+				is_variable_equal = {
+					which = daxugo_harem_palace_choice
+					value = 7
+				}	
+			}
+		}
+		name = flavour_anbingnar_daxugo.2000.Y98_bulwar_palace
+		hidden_effect = {
+			set_variable = {
+				which = daxugo_harem_palace_choice
+				value = 7
+			}
+			country_event = {
+				id = flavour_anbingnar_daxugo.3000
+			}
+		}
+	}
+	option = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 7
+			}	
+		}
+		name = flavour_anbingnar_daxugo.2000.Y98_bulwar_palace2
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.2008
+			}
+			clr_country_flag = anbi_daxugo_harem_palace_initialization
+		}
+	}
+
+	option = {
+		trigger = {
+			4871 = {
+				has_province_modifier = Y98_anben_palace
+			}
+			NOT = {
+				is_variable_equal = {
+					which = daxugo_harem_palace_choice
+					value = 9
+				}	
+			}
+		}
+		name = flavour_anbingnar_daxugo.2000.Y98_anben_palace
+		hidden_effect = {
+			set_variable = {
+				which = daxugo_harem_palace_choice
+				value = 9
+			}
+			country_event = {
+				id = flavour_anbingnar_daxugo.3000
+			}
+		}
+	}
+	option = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 9
+			}	
+		}
+		name = flavour_anbingnar_daxugo.2000.Y98_anben_palace2
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.2009
+			}
+			clr_country_flag = anbi_daxugo_harem_palace_initialization
+		}
+	}
+}
+#神召
+country_event = {
+	id = flavour_anbingnar_daxugo.2001
+	picture = EMPTY_eventPicture
+	title = flavour_anbingnar_daxugo.2001.t
+	desc = flavour_anbingnar_daxugo.inpalacedesc
+
+	is_triggered_only = yes
+	#修复在修宫殿之前完成holi或乌眸事件导致的bug
+	trigger = {
+		NOT = {
+			has_ruler_flag = Y98_I_love_holi_cflag
+			has_ruler_flag = anbi_wumou_consort_r
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { 
+				NOT = {
+					has_country_flag = anbi_daxugo_harem_kai_initialization
+				}
+			}
+			set_country_flag = anbi_daxugo_harem_kai_initialization
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+			if = {
+				limit = { 
+					is_female = yes
+				}
+				Y98_yanshen_male_queen_random_list = yes
+			}
+			else = {
+				Y98_yanshen_queen_random_list = yes
+			}
+		}
+	}
+
+	#prominent nobles daughter
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.c
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_yanshen_1
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3001
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_yanshen_1
+			}
+		}
+	}
+	option = {
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_yanshen_1
+				}
+			}
+		}
+		name = flavor_nuugdan_tsarai.18.anbingnar.c
+		highlight = yes
+		ai_chance = { factor = 60 }
+		define_consort = {
+			culture = ROOT
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = Y98_noble_consort
+			duration = 3650
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = yan
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	#a northern yanshen girl
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.g
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_yanshen_2
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3001
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_yanshen_2
+			}
+		}
+	}
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.g
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_yanshen_2
+				}
+			}
+		}
+		ai_chance = { factor = 60 }
+		define_consort = {
+			culture = jiangyang
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = yan
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	#a river yanshen girl
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.h
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_yanshen_3
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3001
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_yanshen_3
+			}
+		}
+	}
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.h
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_yanshen_3
+				}
+			}
+		}
+		define_consort = {
+			culture = jiangszun
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+ 		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = yan
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	#a hill yanshen girl
+	option = {
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_yanshen_4
+					}
+				}
+			}
+		}
+		name = flavor_nuugdan_tsarai.18.anbingnar.i
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3001
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_yanshen_4
+			}
+		}
+	}
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.i
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_yanshen_4
+				}
+			}
+		}
+		define_consort = {
+			culture = beikling
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = yan
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	#a coastal yanshen girl
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.j
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_yanshen_5
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3001
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_yanshen_5
+			}
+		}
+	}
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.j
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_yanshen_5
+				}
+			}
+		}
+		define_consort = {
+			culture = gangim
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = yan
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	#a forest yanshen girl
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.k
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_yanshen_6
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3001
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_yanshen_6
+			}
+		}
+	}
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.k
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_yanshen_6
+				}
+			}
+		}
+		define_consort = {
+			culture = naamjyut
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = yan
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	#a western yanshen girl
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.l
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_yanshen_7
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3001
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_yanshen_7
+			}
+		}
+	}
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.l
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_yanshen_7
+				}
+			}
+		}
+		define_consort = {
+			culture = szitu
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = yan
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	#a gowon girl
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.n
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_yanshen_8
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3001
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_yanshen_8
+			}
+		}
+	}
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.n
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_yanshen_8
+				}
+			}
+		}
+		define_consort = {
+			culture = guwaadun
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = gowon
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	#a goldscale kobold girl
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.m
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_kobold
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3001
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_kobold
+			}
+		}
+	}
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.m
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_kobold
+				}
+			}
+		}
+		define_consort = {
+			culture = goldscale_kobold
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = Y98_goldscale_consort
+			duration = 3650
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = goldscale_kobold
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}	
+
+	#harimari wife
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.f
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_yanshen_harimari
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3001
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_yanshen_harimari
+			}
+		}
+	}
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.f
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_yanshen_harimari
+				}
+			}
+		}
+		define_consort = {
+			culture = serene_harimari
+			religion = ROOT
+			adm = 3
+			age = 20
+		}
+		add_country_modifier = {
+				name = Y98_harimari_consort
+				duration = 3650
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture = serene_harimari
+							culture = royal_harimari
+							culture = roaming_harimari
+							culture = primal_harimari
+							culture = worthy_harimari
+						}
+					}
+					add_province_modifier = {
+						name = Y91_represented_by_consort
+						duration = 3650
+					}
+				}
+		}
+	}
+
+
+	#大地精
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.ze
+		ai_chance = { factor = 60 }
+		trigger = {
+			has_country_flag = Y98_hobgoblin_harem
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_yanshen_hobgoblin
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3001
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_yanshen_hobgoblin
+			}
+		}
+	}
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.ze
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_yanshen_hobgoblin
+				}
+			}
+		}
+		random_list = {
+			1 = {
+				define_consort = {
+					culture = lion_command
+					religion = ROOT
+					age = 20
+				}
+				add_country_modifier = {
+					name = lion_command_consort
+					duration = -1
+				}
+			}
+			1 = {
+				define_consort = {
+					culture = wolf_command
+					religion = ROOT
+					age = 20
+				}
+				add_country_modifier = {
+					name = wolf_command_consort
+					duration = -1
+				}
+			}
+			1 = {
+				define_consort = {
+					culture = boar_command
+					religion = ROOT
+					age = 20
+				}
+				add_country_modifier = {
+					name = boar_command_consort
+					duration = -1
+				}
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = { 
+				anbi_daxugo_new_consort = yes
+			}
+			clr_country_flag = anbi_daxugo_harem_kai_initialization
+			set_country_flag = anbi_daxugo_harem_from_yanshen
+		}
+	}
+}
+#华盖
+country_event = {
+	id = flavour_anbingnar_daxugo.2002
+	picture = EMPTY_eventPicture
+	title = flavour_anbingnar_daxugo.2002.t
+	desc = flavour_anbingnar_daxugo.inpalacedesc
+
+	immediate = {
+		if = {
+			limit = { 
+				NOT = {
+					has_country_flag = anbi_daxugo_harem_kai_initialization
+				}
+			}
+			set_country_flag = anbi_daxugo_harem_kai_initialization
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+			Y98_kai_queen_random_list = yes
+		}
+	}
+	is_triggered_only = yes
+	#倥与蒲兰
+	option = {
+		name = flavour_anbingnar_daxugo.2002.a
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_kai_1
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3002
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_kai_1
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2002.a
+		ai_chance = { factor = 60 }
+		define_consort = {
+			culture = khom
+			religion = ROOT
+			age = 20
+		}
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_kai_1
+				}
+			}
+		}
+		custom_tooltip = Y98_harem_tt
+		custom_tooltip = Y98_harem_khom
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = khom
+						culture = phonan
+					}
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = naamzau
+			}
+		}
+	}
+	
+	#蒲盖
+	option = {
+		name = flavour_anbingnar_daxugo.2002.b
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_kai_2
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3002
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_kai_2
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2002.b
+		ai_chance = { factor = 60 }
+		define_consort = {
+			culture = bokai
+			religion = ROOT
+			age = 20
+		}
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_kai_2
+				}
+			}
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = bokai
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = naamzau
+			}
+		}
+	}
+
+	#明龙
+	option = {
+		name = flavour_anbingnar_daxugo.2002.c
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_kai_3
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3002
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_kai_3
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2002.c
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_kai_3
+				}
+			}
+		}
+		define_consort = {
+			culture = binhrung
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = binhrung
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = naamzau
+			}
+		}
+	}
+
+	#一个日升精灵
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.a
+		trigger = {
+			has_country_flag = Y91_sigai_subject_to_flag
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_kai_elf
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3002
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_kai_elf
+			}
+		}
+	}
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.a
+		ai_chance = {
+			factor = 0
+		}
+		define_consort ={ 
+			culture = sunrise_elf
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = elf_consort_Y98
+			duration = 3650
+		}
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_kai_elf
+				}
+			}
+		}
+		custom_tooltip = Y98_harem_tt
+		custom_tooltip = Y98_harem_elf
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = sikai
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = naamzau
+			}
+		}
+	}
+	
+	#一个软玉矮人
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.b
+		trigger = {
+			has_country_flag = Y91_east_dwarf_agreement_flag
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_dwarf
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3002
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_dwarf
+			}
+		}
+	}
+	option = {
+		name = flavor_nuugdan_tsarai.18.anbingnar.b
+		ai_chance = {
+			factor = 0
+		}
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_dwarf
+				}
+			}
+		}
+		define_consort ={ 
+			culture = nephrite_dwarf
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = diggy_diggy_hole_consort
+			duration = 3650
+		}
+		custom_tooltip = Y98_harem_tt
+		custom_tooltip = Y98_harem_digger
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = nephrite_dwarf
+						culture = hinphat
+					}
+
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = naamzau
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = { 
+				anbi_daxugo_new_consort = yes
+			}
+			clr_country_flag = anbi_daxugo_harem_kai_initialization
+			set_country_flag = anbi_daxugo_harem_from_huagai
+			every_owned_province = {
+				limit = {
+					culture = naamzau
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+#檀香
+country_event = {
+	id = flavour_anbingnar_daxugo.2003
+	picture = EMPTY_eventPicture
+	title = flavour_anbingnar_daxugo.2003.t
+	desc = flavour_anbingnar_daxugo.inpalacedesc
+
+	immediate = {
+		if = {
+			limit = { 
+				NOT = {
+					has_country_flag = anbi_daxugo_harem_kai_initialization
+				}
+			}
+			set_country_flag = anbi_daxugo_harem_kai_initialization
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+			Y98_kai_queen_random_list = yes
+		}
+	}
+
+	is_triggered_only = yes
+
+	#絮里流
+	option = {
+		name = flavour_anbingnar_daxugo.2003.a
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_kai_1
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.200003
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_kai_1
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2003.a
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_kai_1
+				}
+			}
+		}
+		define_consort = {
+			culture = ranilau
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = ranilau
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = naamzau
+			}
+		}
+	}
+
+	#湄黄底
+	option = {
+		name = flavour_anbingnar_daxugo.2003.b
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_kai_2
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.200003
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_kai_2
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2003.b
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_kai_2
+				}
+			}
+		}
+		define_consort = {
+			culture = biengdi
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = biengdi
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = naamzau
+			}
+		}
+	}
+
+	#琢麟
+	option = {
+		name = flavour_anbingnar_daxugo.2003.c
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_kai_3
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.200003
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_kai_3
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2003.c
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_kai_3
+				}
+			}
+		}
+		define_consort = {
+			culture = teplin
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = teplin
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = naamzau
+			}
+		}
+	}
+
+	#贡
+	option = {
+		name = flavour_anbingnar_daxugo.2003.e
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_kai_4
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.200003
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_kai_4
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2003.e
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_kai_4
+				}
+			}
+		}
+		define_consort = {
+			culture = gon
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = gon
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = naamzau
+			}
+		}
+	}
+
+	#力墨
+	option = {
+		name = flavour_anbingnar_daxugo.2003.f
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_kai_5
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.200003
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_kai_5
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2003.f
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_kai_5
+				}
+			}
+		}
+		define_consort = {
+			culture = risbeko
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = risbeko
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = naamzau
+			}
+		}
+	}
+	
+	after = {
+		if = {
+			limit = { 
+				anbi_daxugo_new_consort = yes
+			}
+			clr_country_flag = anbi_daxugo_harem_kai_initialization
+			set_country_flag = anbi_daxugo_harem_from_tanxiang
+		}
+		every_owned_province = {
+			limit = {
+				culture = naamzau
+			}
+			add_province_modifier = {
+				name = Y91_represented_by_consort
+				duration = 3650
+			}
+		}
+	}
+}
+#极南
+country_event = {
+	id = flavour_anbingnar_daxugo.2004
+	picture = EMPTY_eventPicture
+	title = flavour_anbingnar_daxugo.2004.t
+	desc = flavour_anbingnar_daxugo.inpalacedesc
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { 
+				NOT = {
+					has_country_flag = anbi_daxugo_harem_kai_initialization
+				}
+			}
+			set_country_flag = anbi_daxugo_harem_kai_initialization
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+			Y98_kai_queen_random_list = yes
+		}
+	}
+	#薛丹
+	option = {
+		name = flavour_anbingnar_daxugo.2004.a
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_kai_1
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3004
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_kai_1
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2004.a
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_kai_1
+				}
+			}
+		}
+		define_consort = {
+			culture = sirtana
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = sirtana
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = pinghoi
+			}
+		}
+	}
+
+	#巴吕
+	option = {
+		name = flavour_anbingnar_daxugo.2004.b
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_kai_2
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3004
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_kai_2
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2004.b
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_kai_2
+				}
+			}
+		}
+		define_consort = {
+			culture = paru
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = paru
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = pinghoi
+			}
+		}
+	}
+
+	#扶赞
+	option = {
+		name = flavour_anbingnar_daxugo.2004.c
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_kai_3
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3004
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_kai_3
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2004.c
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_kai_3
+				}
+			}
+		}
+		define_consort = {
+			culture = hujan
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = hujan
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = pinghoi
+			}
+		}
+	}
+
+	#曼蝶
+	option = {
+		name = flavour_anbingnar_daxugo.2004.e
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_kai_4
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3004
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_kai_4
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2004.e
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_kai_4
+				}
+			}
+		}
+		define_consort = {
+			culture = banyak
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = banyak
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = pinghoi
+			}
+		}
+	}
+
+	#克林
+	option = {
+		name = flavour_anbingnar_daxugo.2004.g
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_kai_5
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3004
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_kai_5
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2004.g
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_kai_5
+				}
+			}
+		}
+		define_consort = {
+			culture = kelino
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = kelino
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = pinghoi
+			}
+			
+		}
+	}
+
+	#嘉斗
+	option = {
+		name = flavour_anbingnar_daxugo.2004.f
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_kai_6
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3004
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_kai_6
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2004.f
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_kai_6
+				}
+			}
+		}
+		define_consort = {
+			culture = gataw
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = gataw
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = pinghoi
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = { 
+				anbi_daxugo_new_consort = yes
+			}
+			clr_country_flag = anbi_daxugo_harem_kai_initialization
+			set_country_flag = anbi_daxugo_harem_from_jinan
+			every_owned_province = {
+				limit = {
+					culture = pinghoi
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+#罗祆
+country_event = {
+	id = flavour_anbingnar_daxugo.2005
+	picture = EMPTY_eventPicture
+	title = flavour_anbingnar_daxugo.2005.t
+	desc = flavour_anbingnar_daxugo.inpalacedesc
+
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { 
+				NOT = {
+					has_country_flag = anbi_daxugo_harem_kai_initialization
+				}
+			}
+			set_country_flag = anbi_daxugo_harem_kai_initialization
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+			Y98_rahen_queen_random_list = yes
+		}
+	}
+	#犍计阗
+	option = {
+		name = flavour_anbingnar_daxugo.2005.a
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_rahen_1
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3005
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_rahen_1
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2005.a
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_rahen_1
+				}
+			}
+		}
+		define_consort = {
+			culture = ghankedhen
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = ghankedhen
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = luoxian
+			}
+		}
+	}
+	#萨涅耶婆撒
+	option = {
+		name = flavour_anbingnar_daxugo.2005.b
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_rahen_2
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3005
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_rahen_2
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2005.b
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_rahen_2
+				}
+			}
+		}
+		define_consort = {
+			culture = sarniryabsad
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = sarniryabsad
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = luoxian
+			}
+		}
+	}
+	#度佉楼吠陀
+	option = {
+		name = flavour_anbingnar_daxugo.2005.c
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_rahen_3
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3005
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_rahen_3
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2005.c
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_rahen_3
+				}
+			}
+		}
+		define_consort = {
+			culture = dhukharuved
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = dhukharuved
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = luoxian
+			}
+		}
+	}
+	#罗毗陀楼婆撒
+	option = {
+		name = flavour_anbingnar_daxugo.2005.d
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_rahen_4
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3005
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_rahen_4
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2005.d
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_rahen_4
+				}
+			}
+		}
+		define_consort = {
+			culture = rabhidarubsad
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = rabhidarubsad
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = luoxian
+			}
+		}
+	}
+	#波信提湿
+	option = {
+		name = flavour_anbingnar_daxugo.2005.e
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_rahen_5
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3005
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_rahen_5
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2005.e
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_rahen_5
+				}
+			}
+		}
+		define_consort = {
+			culture = pasindesh
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = pasindesh
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = luoxian
+			}
+		}
+	}
+	#罗迦弥提湿
+	option = {
+		name = flavour_anbingnar_daxugo.2005.f
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_rahen_6
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3005
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_rahen_6
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2005.f
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_rahen_6
+				}
+			}
+		}
+		define_consort = {
+			culture = raghamidesh
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = raghamidesh
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = luoxian
+			}
+		}
+	}
+	#剑怛希陀
+	option = {
+		name = flavour_anbingnar_daxugo.2005.g
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_rahen_7
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3005
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_rahen_7
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2005.g
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_rahen_7
+				}
+			}
+		}
+		define_consort = {
+				culture = kamtarhid
+				religion = ROOT
+				age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = kamtarhid
+					}
+					add_province_modifier = {
+						name = Y91_represented_by_consort
+						duration = 3650
+					}
+					change_culture = luoxian
+				}
+		}
+	}
+	#契陀利驮
+	option = {
+		name = flavour_anbingnar_daxugo.2005.h
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_rahen_8
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3005
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_rahen_8
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2005.h
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_rahen_8
+				}
+			}
+		}
+		define_consort = {
+				culture = khedarid
+				religion = ROOT
+				age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = khedarid
+					}
+					add_province_modifier = {
+						name = Y91_represented_by_consort
+						duration = 3650
+					}
+					change_culture = luoxian
+				}
+		}
+	}
+	#沙摩朅
+	option = {
+		name = flavour_anbingnar_daxugo.2005.i
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_rahen_9
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3005
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_rahen_9
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2005.i
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_rahen_9
+				}
+			}
+		}
+		define_consort = {
+				culture = shamadhan
+				religion = ROOT
+				age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = shamadhan
+					}
+					add_province_modifier = {
+						name = Y91_represented_by_consort
+						duration = 3650
+					}
+					change_culture = luoxian
+				}
+		}
+	}
+	#删持跋
+	option = {
+		name = flavour_anbingnar_daxugo.2005.j
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_rahen_10
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3005
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_rahen_10
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2005.j
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_rahen_10
+				}
+			}
+		}
+		define_consort = {
+				culture = shandibad
+				religion = ROOT
+				age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = shandibad
+					}
+					add_province_modifier = {
+						name = Y91_represented_by_consort
+						duration = 3650
+					}
+					change_culture = luoxian
+				}
+		}
+	}
+	#罗阇那迭
+	option = {
+		name = flavour_anbingnar_daxugo.2005.k
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_rahen_11
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3005
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_rahen_11
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2005.k
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_rahen_11
+				}
+			}
+		}
+		define_consort = {
+				culture = rajnadhid
+				religion = ROOT
+				age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = rajnadhid
+					}
+					add_province_modifier = {
+						name = Y91_represented_by_consort
+						duration = 3650
+					}
+					change_culture = luoxian
+				}
+		}
+	}
+	#苏婆健陀
+	option = {
+		name = flavour_anbingnar_daxugo.2005.l
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_rahen_12
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3005
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_rahen_12
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2005.l
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_rahen_12
+				}
+			}
+		}
+		define_consort = {
+				culture = sobhagand
+				religion = ROOT
+				age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = sobhagand
+					}
+					add_province_modifier = {
+						name = Y91_represented_by_consort
+						duration = 3650
+					}
+					change_culture = luoxian
+				}
+		}
+	}
+	#伽缚那阇
+	option = {
+		name = flavour_anbingnar_daxugo.2005.m
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_rahen_13
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3005
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_rahen_13
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2005.m
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_rahen_13
+				}
+			}
+		}
+		define_consort = {
+				culture = ghavaanaj
+				religion = ROOT
+				age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = ghavaanaj
+					}
+					add_province_modifier = {
+						name = Y91_represented_by_consort
+						duration = 3650
+					}
+					change_culture = luoxian
+				}
+
+		}
+	}
+	#觥榔
+	option = {
+		name = flavour_anbingnar_daxugo.2005.n
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_rahen_14
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3005
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_rahen_14
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2005.n
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_rahen_14
+				}
+			}
+		}
+		define_consort = {
+				culture = chengrong
+				religion = ROOT
+				age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = chengrong
+					}
+					add_province_modifier = {
+						name = Y91_represented_by_consort
+						duration = 3650
+					}
+					change_culture = luoxian
+				}
+		}
+	}
+	#罗萨希陀
+	option = {
+		name = flavour_anbingnar_daxugo.2005.o
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_rahen_15
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3005
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_rahen_15
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2005.o
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_rahen_15
+				}
+			}
+		}
+		define_consort = {
+				culture = rasarhid
+				religion = ROOT
+				age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = rasarhid
+					}
+					add_province_modifier = {
+						name = Y91_represented_by_consort
+						duration = 3650
+					}
+					change_culture = luoxian
+				}
+		}
+	}
+	#牟他陀耶
+	option = {
+		name = flavour_anbingnar_daxugo.2005.p
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_rahen_16
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3005
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_rahen_16
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2005.p
+		ai_chance = { factor = 60 }
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_rahen_16
+				}
+			}
+		}
+		define_consort = {
+				culture = muthadhaya
+				religion = ROOT
+				age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = muthadhaya
+					}
+					add_province_modifier = {
+						name = Y91_represented_by_consort
+						duration = 3650
+					}
+					change_culture = luoxian
+				}
+		}
+	}
+	after = {
+		if = {
+			limit = { 
+				anbi_daxugo_new_consort = yes
+			}
+			clr_country_flag = anbi_daxugo_harem_kai_initialization
+			set_country_flag = anbi_daxugo_harem_from_rahen
+			every_owned_province = {
+				limit = {
+					culture = luoxian
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}	
+	}
+}
+#虎人
+country_event = {
+	id = flavour_anbingnar_daxugo.2006
+	picture = EMPTY_eventPicture
+	title = flavour_anbingnar_daxugo.2006.t
+	desc = flavour_anbingnar_daxugo.inpalacedesc
+
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { 
+				NOT = {
+					has_country_flag = anbi_daxugo_harem_kai_initialization
+				}
+			}
+			set_country_flag = anbi_daxugo_harem_kai_initialization
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+			Y98_solo_harimari_random_list = yes
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2006.a
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_yanshen_harimari
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3006
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_yanshen_harimari
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2006.a
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_yanshen_harimari
+				}
+			}
+		}
+		random_list = {
+			1 = {
+				define_consort = {
+					culture = serene_harimari
+					religion = ROOT
+					age = 20
+				}
+			}
+			1 = {
+				define_consort = {
+					culture = royal_harimari
+					religion = ROOT
+					age = 20
+				}
+			}
+			1 = {
+				define_consort = {
+					culture = roaming_harimari
+					religion = ROOT
+					age = 20
+				}
+			}
+			1 = {
+				define_consort = {
+					culture = primal_harimari
+					religion = ROOT
+					age = 20
+				}
+			}
+		}
+		add_country_modifier = {
+			name = Y98_harimari_consort
+			duration = 3650
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = harimari
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+				change_culture = serene_harimari
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = { 
+				anbi_daxugo_new_consort = yes
+			}
+			clr_country_flag = anbi_daxugo_harem_kai_initialization
+			set_country_flag = anbi_daxugo_harem_from_harimari
+		}
+	}
+}
+#赫特
+country_event = {
+	id = flavour_anbingnar_daxugo.2007
+	picture = EMPTY_eventPicture
+	title = flavour_anbingnar_daxugo.2007.t
+	desc = flavour_anbingnar_daxugo.inpalacedesc
+
+	immediate = {
+		if = {
+			limit = { 
+				NOT = {
+					has_country_flag = anbi_daxugo_harem_kai_initialization
+				}
+			}
+			set_country_flag = anbi_daxugo_harem_kai_initialization
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+			Y98_khet_random_list = yes
+		}
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.2007.a
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_khet
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3007
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_khet
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2007.a
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_khet
+				}
+			}
+		}
+		define_consort = {
+			culture = hapremiti
+			religion = elikhetist
+			age = 20
+		}
+		add_country_modifier = {
+			name = khet_consort
+			duration = -1
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = kheteratan
+					NOT = { has_province_modifier = Y98_angry }
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = { 
+				anbi_daxugo_new_consort = yes
+			}
+			clr_country_flag = anbi_daxugo_harem_kai_initialization
+			set_country_flag = anbi_daxugo_harem_from_khet
+		}
+	}
+}
+#布勒
+country_event = {
+	id = flavour_anbingnar_daxugo.2008
+	picture = EMPTY_eventPicture
+	title = flavour_anbingnar_daxugo.2008.t
+	desc = flavour_anbingnar_daxugo.inpalacedesc
+
+	immediate = {
+		if = {
+			limit = { 
+				NOT = {
+					has_country_flag = anbi_daxugo_harem_kai_initialization
+				}
+			}
+			set_country_flag = anbi_daxugo_harem_kai_initialization
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+			Y98_bulwar_random_list = yes
+		}
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.2008.a
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_bulwar_sun_elf
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3008
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_bulwar_sun_elf
+			}
+		}
+	}
+	option = {
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_bulwar_sun_elf
+				}
+			}
+		}
+		name = flavour_anbingnar_daxugo.2008.a
+		custom_tooltip = Y98_sun_elf_cults
+		define_consort = {
+			culture = sun_elf
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = elf_consort_Y98
+			duration = -1
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion = bulwari_sun_cult
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.2008.b
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_bulwar_desert_elf
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3008
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_bulwar_desert_elf
+			}
+		}
+	}
+	option = {
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_bulwar_desert_elf
+				}
+			}
+		}
+		custom_tooltip = Y98_desert_elf_cults
+		name = flavour_anbingnar_daxugo.2008.b
+		define_consort = {
+			culture = desert_elf
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = elf_consort_Y98
+			duration = -1
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion = the_jadd
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.2008.c
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_gnoll
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3008
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_gnoll
+			}
+		}
+	}
+	option = {
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_gnoll
+				}
+			}
+		}
+		name = flavour_anbingnar_daxugo.2008.c
+		custom_tooltip = Y98_harem_tt
+		define_consort = {
+			culture = sandfang_gnoll
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = gnoll_consort_Y98
+			duration = -1
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = gnollish
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.2008.e
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_harpy
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3008
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_harpy
+			}
+		}
+	}
+	option = {
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_harpy
+				}
+			}
+		}
+		name = flavour_anbingnar_daxugo.2008.e
+		custom_tooltip = Y98_harem_tt
+		random_list = {
+			1 = {
+				define_consort = {
+					culture = siadunan_harpy
+					religion = ROOT
+					age = 20
+				}
+			}
+			1 = {
+				define_consort = {
+					culture = firanyan_harpy
+					religion = ROOT
+					age = 20
+				}
+			}
+		}
+		add_country_modifier = {
+			name = harpy_consort_Y98
+			duration = -1
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = harpy
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = { 
+				anbi_daxugo_new_consort = yes
+			}
+			clr_country_flag = anbi_daxugo_harem_kai_initialization
+			set_country_flag = anbi_daxugo_harem_from_bulwar
+		}
+	}
+}
+#坎诺
+country_event = {
+	id = flavour_anbingnar_daxugo.2009
+	picture = EMPTY_eventPicture
+	title = flavour_anbingnar_daxugo.2009.t
+	desc = flavour_anbingnar_daxugo.inpalacedesc
+
+	immediate = {
+		if = {
+			limit = { 
+				NOT = {
+					has_country_flag = anbi_daxugo_harem_kai_initialization
+				}
+			}
+			set_country_flag = anbi_daxugo_harem_kai_initialization
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+			Y98_cannor_random_list = yes
+		}
+	}
+	is_triggered_only = yes
+
+
+	option = {
+		name = flavour_anbingnar_daxugo.2009.a
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_cannor_1
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3009
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_cannor_1
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2009.a
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_cannor_1
+				}
+			}
+		}
+		
+		define_consort = {
+			culture = half_elf
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = Y98_half_elf_consort
+			duration = -1
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = anbennarian
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.2009.b
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_cannor_2
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3009
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_cannor_2
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2009.b
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_cannor_2
+				}
+			}
+		}
+		
+		define_consort = {
+			culture = lencori_half_elf
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = Y98_half_elf_consort
+			duration = -1
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = lencori
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.2009.c
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_cannor_3
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3009
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_cannor_3
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2009.c
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_cannor_3
+				}
+			}
+		}
+		
+		define_consort = {
+			culture = businori_half_elf
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = Y98_half_elf_consort
+			duration = -1
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = businori
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.2009.d
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_cannor_4
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3009
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_cannor_4
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2009.d
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_cannor_4
+				}
+			}
+		}
+		
+		define_consort = {
+			culture = dostanorian_half_elf
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = Y98_half_elf_consort
+			duration = -1
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = dostanorian_g
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.2009.e
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_cannor_5
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3009
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_cannor_5
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2009.e
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_cannor_5
+				}
+			}
+		}
+
+		custom_tooltip = Y98_alenic_hate_elf
+		define_consort = {
+			culture = gawedi
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = Y98_alenic_consort
+			duration = -1
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = alenic
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.2009.f
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_cannor_6
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3009
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_cannor_6
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2009.f
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_cannor_6
+				}
+			}
+		}
+
+		define_consort = {
+			culture = imperial_halfling
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = Y98_halfling_consort
+			duration = -1
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = halfling
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.2009.g
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_cannor_7
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3009
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_cannor_7
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2009.g
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_cannor_7
+				}
+			}
+		}
+
+		define_consort = {
+			culture = imperial_gnome
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = Y98_gnome_consort
+			duration = -1
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = gnomish
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.2009.h
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_cannor_8
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3009
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_cannor_8
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2009.h
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_cannor_8
+				}
+			}
+		}
+
+		define_consort = {
+			culture = moon_elf
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = elf_consort_Y98
+			duration = -1
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = elven
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.2009.i
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_cannor_9
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3009
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_cannor_9
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2009.i
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_cannor_9
+				}
+			}
+		}
+
+		custom_tooltip = Y98_harem_tt
+		add_country_modifier = {
+			name = Y98_castanorian_consort
+			duration = -1
+		}
+		define_consort = {
+			culture = castanorian
+			religion = ROOT
+			age = 20
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = escanni
+					NOT = {
+						OR = {
+							culture = grombar_half_orc
+							culture = half_orc
+						}
+					}
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.2009.j
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_cannor_10
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3009
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_cannor_10
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2009.j
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_cannor_10
+				}
+			}
+		}
+
+		custom_tooltip = Y98_harem_tt
+		add_country_modifier = {
+			name = Y98_half_orc_consort
+			duration = -1
+		}
+		define_consort = {
+			culture = half_orc
+			religion = ROOT
+			age = 20
+		}
+
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture_group = orcish
+						culture = grombar_half_orc
+						culture = half_orc
+					}
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.2009.k
+		trigger = {
+			hidden_trigger = {
+				NOT = {
+					is_variable_equal = {
+						which = anbi_daxugo_harem_title
+						which = anbi_daxugo_harem_cannor_11
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.3009
+			}
+			set_variable = {
+				which = anbi_daxugo_harem_title
+				which = anbi_daxugo_harem_cannor_11
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.2009.k
+		highlight = yes
+		trigger = {
+			hidden_trigger = {
+				is_variable_equal = {
+					which = anbi_daxugo_harem_title
+					which = anbi_daxugo_harem_cannor_11
+				}
+			}
+		}
+		custom_tooltip = Y98_harem_tt
+		add_country_modifier = {
+			name = Y98_orc_consort
+			duration = -1
+		}
+		define_consort = {
+			culture = redtusk_orc
+			religion = ROOT
+			age = 20
+		}
+
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture_group = orcish
+						culture = grombar_half_orc
+						culture = half_orc
+					}
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = { 
+				anbi_daxugo_new_consort = yes
+			}
+			clr_country_flag = anbi_daxugo_harem_kai_initialization
+			set_country_flag = anbi_daxugo_harem_from_cannor
+		}
+	}
+}
+
+
+#看看你的宠妃
+country_event = {
+	id = flavour_anbingnar_daxugo.2010
+	picture = EMPTY_eventPicture
+	title = flavour_anbingnar_daxugo.2010.t
+	desc = flavour_anbingnar_daxugo.inpalacedesc
+
+	is_triggered_only = yes
+
+	option = {
+		highlight = yes
+		clr_country_flag = anbi_Y98_havealook_cf
+		name = flavour_anbingnar_daxugo.2010.a
+	}
+	option = {
+		trigger = {
+			NOT = {
+				has_ruler_flag = Y98_holi_consort_r
+				has_ruler_flag = anbi_wumou_consort_r
+			}
+		}
+		name = flavour_anbingnar_daxugo.2010.b
+		clr_country_flag = anbi_Y98_havealook_cf
+		add_country_modifier = {
+			name = Y98_havealook_1
+			duration = 365
+		}
+	}
+	option = {
+		trigger = {
+			NOT = {
+				has_ruler_flag = Y98_holi_consort_r
+				has_ruler_flag = anbi_wumou_consort_r
+			}
+		}
+		name = flavour_anbingnar_daxugo.2010.c
+		clr_country_flag = anbi_Y98_havealook_cf
+		add_country_modifier = {
+			name = Y98_havealook_2
+			duration = 365
+		}
+	}
+	option = {
+		trigger = {
+			has_ruler_flag = Y98_holi_consort_r
+		}
+		clr_country_flag = anbi_Y98_havealook_cf
+		name = flavour_anbingnar_daxugo.2010.d
+	}
+	option = {
+		trigger = {
+			has_ruler_flag = Y98_holi_consort_r
+		}
+		clr_country_flag = anbi_Y98_havealook_cf
+		name = flavour_anbingnar_daxugo.2010.e
+	}
+	option = {
+		trigger = {
+			has_ruler_flag = anbi_wumou_consort_r
+			NOT = {
+				has_consort_flag = anbi_y98_wumou_love_1
+			}
+			NOT = {
+				AND = {
+					NOT = { corruption = 0.01 }
+					legitimacy = 100
+					NOT = { num_of_rebel_armies = 1 }
+					NOT = { num_of_rebel_controlled_provinces = 1 }
+				}
+			}
+		}
+		clr_country_flag = anbi_Y98_havealook_cf
+		custom_tooltip = flavour_anbingnar_daxugo.2010.fct
+		custom_tooltip = flavour_anbingnar_daxugo.2010.fct1
+		name = flavour_anbingnar_daxugo.2010.f
+	}
+	option = {
+		trigger = {
+			hidden_trigger = {
+				has_ruler_flag = anbi_wumou_consort_r
+				NOT = {
+					has_consort_flag = anbi_y98_wumou_love_1
+				}
+				AND = {
+					NOT = { corruption = 0.01 }
+					legitimacy = 100
+					NOT = { num_of_rebel_armies = 1 }
+					NOT = { num_of_rebel_controlled_provinces = 1 }
+				}
+			}
+		}
+		highlight = yes
+		clr_country_flag = anbi_Y98_havealook_cf
+		hidden_effect = {
+			change_variable = {
+				which = anbi_y98_wumou_love
+				value = 1
+			}
+		}
+		set_consort_flag = anbi_y98_wumou_love_1
+		custom_tooltip = flavour_anbingnar_daxugo.2010.fct
+		custom_tooltip = flavour_anbingnar_daxugo.2010.fct2
+		name = flavour_anbingnar_daxugo.2010.f
+	}
+	option = {
+		trigger = {
+			has_ruler_flag = anbi_wumou_consort_r
+			NOT = {
+				has_consort_flag = anbi_y98_wumou_love_2
+			}
+			NOT = {
+				army_size = 200
+			}
+		}
+		clr_country_flag = anbi_Y98_havealook_cf
+		custom_tooltip = flavour_anbingnar_daxugo.2010.gct
+		custom_tooltip = flavour_anbingnar_daxugo.2010.gct1
+		name = flavour_anbingnar_daxugo.2010.g
+	}
+	option = {
+		trigger = {
+			hidden_trigger = {
+				has_ruler_flag = anbi_wumou_consort_r
+				NOT = {
+					has_consort_flag = anbi_y98_wumou_love_2
+				}
+				army_size = 200
+			}
+		}
+		highlight = yes
+		clr_country_flag = anbi_Y98_havealook_cf
+		hidden_effect = {
+			change_variable = {
+				which = anbi_y98_wumou_love
+				value = 1
+			}
+		}
+		set_consort_flag = anbi_y98_wumou_love_2
+		custom_tooltip = flavour_anbingnar_daxugo.2010.gct
+		custom_tooltip = flavour_anbingnar_daxugo.2010.gct2
+		name = flavour_anbingnar_daxugo.2010.g
+	}
+	option = {
+		trigger = {
+			hidden_trigger = {
+				has_ruler_flag = anbi_wumou_consort_r
+				NOT = {
+					has_consort_flag = anbi_y98_wumou_love_3
+				}
+			}
+		}
+		highlight = yes
+		clr_country_flag = anbi_Y98_havealook_cf
+		hidden_effect = {
+			change_variable = {
+				which = anbi_y98_wumou_love
+				value = 1
+			}
+		}
+		set_consort_flag = anbi_y98_wumou_love_3
+		custom_tooltip = flavour_anbingnar_daxugo.2010.hct
+		add_country_modifier = {
+			name = anbi_y98_play_with_wumou
+			duration = 365
+		}
+		name = flavour_anbingnar_daxugo.2010.h
+	}
+}
+
+
+
+#事件自触发(3000)
+country_event = {
+	id = flavour_anbingnar_daxugo.3000
+	title = flavour_anbingnar_daxugo.3000.t 
+	picture = SPELL_MENU_eventPicture
+	desc = flavour_anbingnar_daxugo.3000.d
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		country_event = {
+			id = flavour_anbingnar_daxugo.2000
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.3001
+	title = flavour_anbingnar_daxugo.3000.t 
+	picture = SPELL_MENU_eventPicture
+	desc = flavour_anbingnar_daxugo.3000.d
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		country_event = {
+			id = flavour_anbingnar_daxugo.2001
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.3002
+	title = flavour_anbingnar_daxugo.3000.t 
+	picture = SPELL_MENU_eventPicture
+	desc = flavour_anbingnar_daxugo.3000.d
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		country_event = {
+			id = flavour_anbingnar_daxugo.2002
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.200003
+	title = flavour_anbingnar_daxugo.3000.t 
+	picture = SPELL_MENU_eventPicture
+	desc = flavour_anbingnar_daxugo.3000.d
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		country_event = {
+			id = flavour_anbingnar_daxugo.2003
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.3004
+	title = flavour_anbingnar_daxugo.3000.t 
+	picture = SPELL_MENU_eventPicture
+	desc = flavour_anbingnar_daxugo.3000.d
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		country_event = {
+			id = flavour_anbingnar_daxugo.2004
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.3005
+	title = flavour_anbingnar_daxugo.3000.t 
+	picture = SPELL_MENU_eventPicture
+	desc = flavour_anbingnar_daxugo.3000.d
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		country_event = {
+			id = flavour_anbingnar_daxugo.2005
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.3006
+	title = flavour_anbingnar_daxugo.3000.t 
+	picture = SPELL_MENU_eventPicture
+	desc = flavour_anbingnar_daxugo.3000.d
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		country_event = {
+			id = flavour_anbingnar_daxugo.2006
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.3007
+	title = flavour_anbingnar_daxugo.3000.t 
+	picture = SPELL_MENU_eventPicture
+	desc = flavour_anbingnar_daxugo.3000.d
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		country_event = {
+			id = flavour_anbingnar_daxugo.2007
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.3008
+	title = flavour_anbingnar_daxugo.3000.t 
+	picture = SPELL_MENU_eventPicture
+	desc = flavour_anbingnar_daxugo.3000.d
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		country_event = {
+			id = flavour_anbingnar_daxugo.2008
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.3009
+	title = flavour_anbingnar_daxugo.3000.t 
+	picture = SPELL_MENU_eventPicture
+	desc = flavour_anbingnar_daxugo.3000.d
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		country_event = {
+			id = flavour_anbingnar_daxugo.2009
+		}
+	}
+}
+
+
+
+
+#接纳大地精（31415开头）
+country_event = {
+	id = flavour_anbingnar_daxugo.31415
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	title = flavour_anbingnar_daxugo.31415.t
+	desc = flavour_anbingnar_daxugo.31415.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.31415.a
+		custom_tooltip = flavour_anbingnar_daxugo.31415.a_ctt
+		set_country_flag = Y98_hobgoblin_harem
+		add_country_modifier = {
+			name = Y98_hobgoblin_military
+			duration = -1
+		}
+		largest_increase_of_hobgoblin_tolerance_effect = yes
+		largest_increase_of_hobgoblin_tolerance_effect = yes
+		largest_increase_of_hobgoblin_tolerance_effect = yes
+		capital_scope = {
+			add_hobgoblin_minority_size_effect = yes
+		}
+		add_stability = -1
+		add_prestige = -10
+		add_legitimacy = -10
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31415.b
+		largest_increase_of_hobgoblin_tolerance_effect = yes
+		add_country_modifier = {
+			name = Y98_hobgoblin_military
+			duration = -1
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31415.c
+		largest_decrease_of_hobgoblin_tolerance_effect = yes
+		custom_tooltip = flavour_anbingnar_daxugo.31415.c_ctt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = hobgoblin
+				}
+				create_revolt = 2
+				change_culture = ROOT
+				change_religion = ROOT
+				add_unrest = 10
+			}
+			every_subject_country = {
+				every_owned_province = {
+					limit = {
+						culture_group = hobgoblin
+					}
+					create_revolt = 2
+					change_culture = ROOT
+					change_religion = ROOT
+					add_unrest = 10
+				}
+			}
+		}
+	}
+}
+#后宫式烟化
+country_event = {
+	id = flavour_anbingnar_daxugo.31416
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	title = flavour_anbingnar_daxugo.31416.t
+	desc = flavour_anbingnar_daxugo.31416.d
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		4871 = {
+			OR = {
+				has_province_modifier = Y98_huagai_palace
+				has_province_modifier = Y98_tanxiang_palace
+				has_province_modifier = Y98_rahen_palace
+				has_province_modifier = Y98_southest_palace
+				has_province_modifier = Y98_harimari_palace
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.31416.a
+		set_country_flag = Y98_marry_with_yan
+		country_event = {
+			id = flavour_anbingnar_daxugo.44446
+		}
+	}
+}
+#继承人
+country_event = {
+	id = flavour_anbingnar_daxugo.31417
+	picture = 3_SONS_eventPicture
+	title = flavour_anbingnar_daxugo.31417.t
+	desc = {
+		trigger = {
+			NOT = { has_ruler_modifier = Y98_holi_consort_modifier }
+		}
+		desc = flavour_anbingnar_daxugo.31417.d
+	}
+	desc = {
+		trigger = {
+			has_ruler_flag = Y98_holi_consort_r 
+		}
+		desc = flavour_anbingnar_daxugo.31417.d.2
+	}
+	desc = {
+		trigger = {
+			has_ruler_flag = anbi_wumou_consort_r 
+		}
+		desc = flavour_anbingnar_daxugo.31417.d.3
+	}
+
+	trigger = {
+		OR = {
+			has_ruler_flag = Y98_holi_consort_r
+			has_ruler_flag = anbi_wumou_consort_r
+			ruler_age = 30
+		}
+		has_heir = no
+		has_reform = anbingnar_daxugo_harem_reform
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				33 = {
+					set_country_flag = harem_fairest_heir #Completely Random
+				}
+				33 = {
+					set_country_flag = harem_strong_heir #Atleast 1 MIl
+				}
+				33 = {
+					set_country_flag = harem_leadership_heir #Atleast 1 MIL
+				}
+				1 = {
+					set_country_flag = harem_genious_heir #Atleast 1 in every stat.
+				}
+			}
+			random_list = {
+				33 = {
+					set_country_flag = harem_studious_heir #Atleast 1 ADM
+				}
+				33 = {
+					set_country_flag = harem_pious_heir #Atleast 1 ADM
+				}
+				33 = {
+					set_country_flag = harem_inquisitive_heir #Completely Random
+				}
+			}
+			random_list = {
+				33 = {
+					set_country_flag = harem_gregarious_heir #Atleast 1 DIP
+				}
+				33 = {
+					set_country_flag = harem_entrepreneurial_heir #Atleast 1 DIP
+				}
+				33 = {
+					set_country_flag = harem_generous_heir #Completely Random
+				}
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31417.a #Pious
+		trigger = {
+			ai = no
+			has_country_flag = harem_pious_heir
+		}
+		define_heir = {
+			dynasty = original_dynasty
+			change_adm = 1
+			max_random_dip = 5
+			age = 10
+		}
+	}
+	option = {	 
+		name = flavour_anbingnar_daxugo.31417.b #Strong
+		trigger = {
+			ai = no
+			has_country_flag = harem_strong_heir
+		}
+		if = {
+			limit = { has_country_modifier = tur_weakened_the_harem }
+			define_heir = {
+				dynasty = original_dynasty
+				male = yes
+				change_mil = 1
+				max_random_dip = 3
+				age = 10
+			}
+		}
+		else = {
+			define_heir = {
+				dynasty = original_dynasty
+				change_mil = 1
+				max_random_dip = 5
+				age = 10
+			}
+		}
+	}
+	option = {	 
+		name = flavour_anbingnar_daxugo.31417.c #Studious
+		trigger = {
+			ai = no
+			has_country_flag = harem_studious_heir
+		}
+		if = {
+			limit = { has_country_modifier = tur_weakened_the_harem }
+			define_heir = {
+				dynasty = original_dynasty
+				male = yes
+				change_adm = 1
+				max_random_mil = 3
+				age = 10
+			}
+		}
+		else = {
+			define_heir = {
+				dynasty = original_dynasty
+				change_adm = 1
+				max_random_mil = 5
+				age = 10
+			}
+		}
+	}
+	option = {	 
+		name = flavour_anbingnar_daxugo.31417.e #leadership
+		trigger = {
+			ai = no
+			has_country_flag = harem_leadership_heir
+		}
+		if = {
+			limit = { has_country_modifier = tur_weakened_the_harem }
+			define_heir = {
+				dynasty = original_dynasty
+				male = yes
+				change_mil = 1
+				max_random_adm = 3
+				age = 10
+			}
+		}
+		else = {
+			define_heir = {
+				dynasty = original_dynasty
+				change_mil = 1
+				max_random_adm = 5
+				age = 10
+			}
+		}
+	}
+	option = {	 
+		name = flavour_anbingnar_daxugo.31417.f
+		trigger = {
+			ai = no
+			has_country_flag = harem_gregarious_heir
+		}
+		if = {
+			limit = { has_country_modifier = tur_weakened_the_harem }
+			define_heir = {
+				dynasty = original_dynasty
+				male = yes
+				change_dip = 1
+				max_random_mil = 3
+				age = 10
+			}
+		}
+		else = {
+			define_heir = {
+				dynasty = original_dynasty
+				change_dip = 1
+				max_random_mil = 5
+				age = 10
+			}
+		}
+	}
+	option = {	 
+		name = flavour_anbingnar_daxugo.31417.g
+		trigger = {
+			ai = no
+			has_country_flag = harem_fairest_heir
+		}
+		define_heir = {
+			dynasty = original_dynasty
+			age = 10
+		}
+	}
+	option = {	 
+		name = flavour_anbingnar_daxugo.31417.h
+		trigger = {
+			ai = no
+			has_country_flag = harem_entrepreneurial_heir
+		}
+		if = {
+			limit = { has_country_modifier = tur_weakened_the_harem }
+			define_heir = {
+				dynasty = original_dynasty
+				male = yes
+				change_dip = 1
+				max_random_adm = 3
+				age = 10
+			}
+		}
+		else = {
+			define_heir = {
+				dynasty = original_dynasty
+				change_dip = 1
+				max_random_adm = 5
+				age = 10
+			}
+		}
+	}
+	option = {	 
+		name = flavour_anbingnar_daxugo.31417.i
+		trigger = { has_country_flag = harem_inquisitive_heir }
+		define_heir = {
+			dynasty = original_dynasty
+			age = 10
+		}
+	}
+	option = {	 
+		name = flavour_anbingnar_daxugo.31417.j
+		trigger = {
+			ai = no
+			has_country_flag = harem_genious_heir
+		}
+		define_heir = {
+			dynasty = original_dynasty
+			change_dip = 1
+			change_mil = 1
+			change_adm = 1
+			age = 10
+		}
+	}
+
+	option = {	 
+		name = flavour_anbingnar_daxugo.31417.k
+		trigger = {
+			ai = no
+			has_country_flag = harem_generous_heir
+		}
+		define_heir = {
+			dynasty = original_dynasty
+			age = 10
+		}
+	}
+
+	after = {
+		clr_country_flag = harem_pious_heir
+		clr_country_flag = harem_strong_heir
+		clr_country_flag = harem_leadership_heir
+		clr_country_flag = harem_genious_heir
+		clr_country_flag = harem_studious_heir
+		clr_country_flag = harem_inquisitive_heir
+		clr_country_flag = harem_gregarious_heir
+		clr_country_flag = harem_entrepreneurial_heir
+		clr_country_flag = harem_generous_heir
+		clr_country_flag = harem_fairest_heir
+	}
+}
+#大巡游与holi
+country_event = {
+	id = flavour_anbingnar_daxugo.31418
+	picture = DISCIPLINED_SOLDIERS_eventPicture
+	title = flavour_anbingnar_daxugo.31418.t
+	desc = flavour_anbingnar_daxugo.31418.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavour_anbingnar_daxugo.31418.a
+		country_event = {
+			id = flavour_anbingnar_daxugo.31419 days = 60
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.31419
+	picture = DISCIPLINED_SOLDIERS_eventPicture
+	title = flavour_anbingnar_daxugo.31419.t
+	desc = flavour_anbingnar_daxugo.31419.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavour_anbingnar_daxugo.31419.a
+		country_event = {
+			id = flavour_anbingnar_daxugo.31420 days = 90
+		}
+		add_country_modifier = {
+			name = Y98_paper_is_recycle
+			duration = 3650
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31419.b
+		country_event = {
+			id = flavour_anbingnar_daxugo.31420 days = 90
+		}
+		add_adm_power = -50
+		add_country_modifier = {
+			name = Y98_paper_is_recycle_2
+			duration = 3650
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.31420
+	picture = AIRSHIP_SKYPORT_eventPicture
+	title = flavour_anbingnar_daxugo.31420.t
+	desc = flavour_anbingnar_daxugo.31420.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavour_anbingnar_daxugo.31420.a
+		unlock_merc_company = {
+			merc_company = merc_feiten_jellyfish_scouts
+			free_merc = yes
+		}
+		hidden_effect = { 1371 = { add_province_triggered_modifier = daxugo_feiten_copy } }
+		set_country_flag = feiten_jellyfish_scouts_unlocked
+		country_event = {
+			id = flavour_anbingnar_daxugo.31421 days = 90
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.31421
+	picture = DISCIPLINED_SOLDIERS_eventPicture
+	title = flavour_anbingnar_daxugo.31421.t
+	desc = flavour_anbingnar_daxugo.31421.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavour_anbingnar_daxugo.31421.a
+		change_government_reform_progress = 10
+		country_event = {
+			id = flavour_anbingnar_daxugo.31422 days = 90
+		}
+	}
+}
+#holi来了
+country_event = {
+	id = flavour_anbingnar_daxugo.31422
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31422.t
+	desc = flavour_anbingnar_daxugo.31422.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavour_anbingnar_daxugo.31422.a
+		country_event = {
+			id = flavour_anbingnar_daxugo.31423
+		}
+	}
+
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.31423
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31423.t
+	desc = flavour_anbingnar_daxugo.31423.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavour_anbingnar_daxugo.31423.a
+		country_event = {
+			id = flavour_anbingnar_daxugo.31425 days = 90
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31423.b
+		highlight = yes
+		custom_tooltip = flavour_anbingnar_daxugo.31424_ct
+		country_event = {
+			id = flavour_anbingnar_daxugo.31424
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.31424
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31424.t
+	desc = flavour_anbingnar_daxugo.31424.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavour_anbingnar_daxugo.31424.a
+		country_event = {
+			id = flavour_anbingnar_daxugo.31425 days = 90 
+		}
+		set_country_flag = Y98_holi_is_watching_you
+	}
+}
+#巡游完了
+country_event = {
+	id = flavour_anbingnar_daxugo.31425
+	picture = DISCIPLINED_SOLDIERS_eventPicture
+	title = flavour_anbingnar_daxugo.31425.t
+	desc = flavour_anbingnar_daxugo.31425.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavour_anbingnar_daxugo.31425.a
+		add_prestige = 25
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+		set_country_flag = Y98_parade_is_over
+		if = {
+			limit = { 
+				has_country_flag = Y98_holi_is_watching_you
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavour_anbingnar_daxugo.31426 days = 365
+				}
+			}
+		}
+		clr_country_flag = y98_is_parading
+	}
+}
+#开始和holi谈恋爱
+country_event = {
+	id = flavour_anbingnar_daxugo.31426
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31426.t
+	desc = flavour_anbingnar_daxugo.31426.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = Y98_holi_is_watching_you
+	}
+	
+	option = {
+		name = flavour_anbingnar_daxugo.31426.a
+		clr_country_flag = Y98_holi_is_watching_you
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31426.b
+		highlight = yes
+		custom_tooltip = flavour_anbingnar_daxugo.holi_ct
+		custom_tooltip = flavour_anbingnar_daxugo.31426_ct
+		add_legitimacy = -25
+		add_prestige = -25
+		kill_consort = yes
+		Y98_clr_harem_flag = yes
+		add_ruler_modifier = {
+			name = Y98_I_love_holi
+			duration = -1
+		}
+		set_ruler_flag = Y98_I_love_holi_cflag
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.31427 days = 365
+			}
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.31427
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31427.t
+	desc = flavour_anbingnar_daxugo.31427.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = Y98_holi_is_watching_you
+	}
+	
+	option = {
+		highlight = yes
+		name = flavour_anbingnar_daxugo.31427.a
+		custom_tooltip = flavour_anbingnar_daxugo.holi_ct
+		add_years_of_income = -0.5
+		4931 = {
+			add_base_tax = 2
+			add_base_manpower = 2
+			add_base_production = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.31428 days = 365
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31427.b
+		clr_ruler_flag = Y98_I_love_holi_cflag
+		clr_country_flag = Y98_holi_is_watching_you
+		remove_country_modifier = Y98_I_love_holi
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.31428
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31428.t
+	desc = flavour_anbingnar_daxugo.31428.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = Y98_holi_is_watching_you
+	}
+	
+	option = {
+		highlight = yes
+		name = flavour_anbingnar_daxugo.31428.a
+		custom_tooltip = flavour_anbingnar_daxugo.holi_ct
+		add_years_of_income = -0.5
+		5348 = {
+			add_base_tax = 2
+			add_base_manpower = 2
+			add_base_production = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.31429 days = 365
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31428.b
+		clr_ruler_flag = Y98_I_love_holi_cflag		
+		clr_country_flag = Y98_holi_is_watching_you
+		remove_country_modifier = Y98_I_love_holi
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.31429
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31429.t
+	desc = flavour_anbingnar_daxugo.31429.d
+	trigger = {
+		has_country_flag = Y98_holi_is_watching_you
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavour_anbingnar_daxugo.31429.a
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.31430 days = 30
+			}
+		}
+	}
+}
+#吉列的交沛
+country_event = {
+	id = flavour_anbingnar_daxugo.31430
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31430.t
+	desc = flavour_anbingnar_daxugo.31430.d
+	trigger = {
+		has_country_flag = Y98_holi_is_watching_you
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavour_anbingnar_daxugo.31430.a
+		define_consort = {
+			name = "Holi"
+			dynasty = "Leng"
+			adm = 3
+			dip = 6
+			mil = 0
+			female = yes
+			age = 16
+			culture = gangim
+			religion = accretive_path
+		}
+		hidden_effect = {
+			add_queen_personality = mage_personality
+		}
+		set_country_flag = Y98_holi_consort
+		clr_country_flag = Y98_holi_is_watching_you
+		custom_tooltip = flavour_anbingnar_daxugo.31430_ct
+		set_ruler_flag = Y98_holi_consort_r
+		set_consort_flag = daxugo_is_holi
+		make_consort_immortal = yes
+		country_event = {
+			id = flavour_anbingnar_daxugo.31431 days = 30
+		}
+	}
+}
+#结婚
+country_event = {
+	id = flavour_anbingnar_daxugo.31431
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31431.t
+	desc = flavour_anbingnar_daxugo.31431.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = flavour_anbingnar_daxugo.31431.a
+		add_ruler_modifier = {
+			name = Y98_holi_consort_modifier
+		}
+		if = {
+			limit = {
+				has_heir = no
+			}
+			custom_tooltip = flavour_anbingnar_daxugo.31431_ct
+			country_event = {
+				id = flavour_anbingnar_daxugo.31417
+			}
+		}
+		remove_country_modifier = Y98_I_love_holi
+		swap_non_generic_missions = yes
+	}
+}
+#复活屑狐狸
+country_event = {
+	id = flavour_anbingnar_daxugo.31432
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31432.t
+	desc = flavour_anbingnar_daxugo.31432.d
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		has_ruler_flag = Y98_holi_consort_r
+		OR = {
+			has_consort = no
+			NOT = {
+				has_consort_flag = daxugo_is_holi
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31432.a
+		define_consort = {
+			name = "Holi"
+			dynasty = "Leng"
+			adm = 3
+			dip = 6
+			mil = 0
+			female = yes
+			age = 16
+			culture = gangim
+			religion = accretive_path
+		}
+		set_consort_flag = daxugo_is_holi
+		add_queen_personality = mage_personality
+		make_consort_immortal = yes
+	}
+}
+#你没追上holi就死了
+country_event = {
+	id = flavour_anbingnar_daxugo.31433
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31433.t
+	desc = flavour_anbingnar_daxugo.31433.d
+
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = Y98_holi_is_watching_you
+	}
+	
+	immediate = {
+		clr_country_flag = Y98_holi_is_watching_you
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31433.a
+	}
+}
+#完成了holi的任务死了
+country_event = {
+	id = flavour_anbingnar_daxugo.31434
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31434.t
+	desc = flavour_anbingnar_daxugo.31434.d
+
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = Y98_holi_mission_cf
+		NOT = {
+			has_country_flag = Y98_holi_mission_cf.1
+		}
+	}
+	
+	immediate = {
+		set_country_flag = Y98_holi_mission_cf.1
+	}
+
+	option = {
+		add_prestige = 5
+		name = flavour_anbingnar_daxugo.31434.a
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.31435 days = 3650 random = 4000
+			}
+		}
+		if = {
+			limit = { 
+				has_consort_regency = yes
+			}
+			hidden_effect = {
+				kill_ruler = yes
+				add_stability = 1
+			}
+		}
+	}
+}
+#和holi去旅游
+country_event = {
+	id = flavour_anbingnar_daxugo.31435
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31435.t
+	desc = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 1
+			}
+		}
+		desc = flavour_anbingnar_daxugo.31435.d.1
+	}
+	desc = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 2
+			}
+		}
+		desc = flavour_anbingnar_daxugo.31435.d.2
+	}
+	desc = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 3
+			}
+		}
+		desc = flavour_anbingnar_daxugo.31435.d.3
+	}
+	desc = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 4
+			}
+		}
+		desc = flavour_anbingnar_daxugo.31435.d.4
+	}
+	desc = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 5
+			}
+		}
+		desc = flavour_anbingnar_daxugo.31435.d.5
+	}
+	desc = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 6
+			}
+		}
+		desc = flavour_anbingnar_daxugo.31435.d.6
+	}
+	desc = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 7
+			}
+		}
+		desc = flavour_anbingnar_daxugo.31435.d.7
+	}
+	desc = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 8
+			}
+		}
+		desc = flavour_anbingnar_daxugo.31435.d.8
+	}
+	desc = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 9
+			}
+		}
+		desc = flavour_anbingnar_daxugo.31435.d.9
+	}
+	desc = {
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 10
+			}
+		}
+		desc = flavour_anbingnar_daxugo.31435.d.10
+	}
+
+
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = Y98_holi_mission_cf.1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			change_variable = {
+				which = daxugo_holi_trip
+				value = 1
+			}
+		}
+	}
+
+	option = {
+		add_prestige = 5
+		name = flavour_anbingnar_daxugo.31435.a
+		if = {
+			limit = { 
+				NOT = {
+					is_variable_equal = {
+						which = daxugo_holi_trip
+						value = 10
+					}
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavour_anbingnar_daxugo.31435 days = 3650 random = 4000
+				}
+			}
+		}
+		else = {
+			custom_tooltip = daxugo_holi_trip_end
+		}
+	}
+}
+#安抚大灵
+country_event = {
+	id = flavour_anbingnar_daxugo.31436
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31436.t
+	desc = flavour_anbingnar_daxugo.31436.d
+
+	mean_time_to_happen = {
+		days = 50
+	}
+	trigger = {
+		tag = Y98
+		has_country_flag = rending_ward_flag
+		has_country_flag = daxugo_marry_with_yanshen_god_cf
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31436.a
+		if = {
+			limit = { 
+				has_country_flag = anbi_wumou_consort
+			}
+			custom_tooltip = flavour_anbingnar_daxugo.31436.wumou
+			hidden_effect = {
+				country_event = {
+					id = flavour_anbingnar_daxugo.31454 days = 180
+				}
+			}
+		}
+		remove_country_modifier = rending_severe_global
+		add_country_modifier = {
+			name = rending_medium_global
+			duration = -1
+		}
+		clr_country_flag = rending_ward_flag
+		set_country_flag = rending_appease_flag
+		hidden_effect = { 		
+			country_event = { 
+				id = rending.300 
+				days = 1
+			} 
+		}
+	}
+	option = {
+		add_prestige = 10
+		name = flavour_anbingnar_daxugo.31436.b
+	}
+}
+#没完成holi的任务死了
+country_event = {
+	id = flavour_anbingnar_daxugo.31437
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31437.t
+	desc = flavour_anbingnar_daxugo.31437.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = Y98_holi_consort
+		NOT = {
+			has_country_flag = Y98_holi_mission_cf
+		}
+	}
+	
+	option = {
+		name = flavour_anbingnar_daxugo.31437.a
+		if = {
+			limit = { 
+				has_consort_regency = yes
+			}
+			hidden_effect = {
+				kill_ruler = yes
+				add_stability = 1
+			}
+		}
+		custom_tooltip = holi_regency
+	}
+}
+
+##约会事件链（31438开头）
+#约会管理事件
+country_event = {
+	id = flavour_anbingnar_daxugo.31438
+	picture = BIG_STAR_IN_SKY_eventPicture
+	title = flavour_anbingnar_daxugo.31438.t
+	desc = flavour_anbingnar_daxugo.31438.d
+	
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 2920 #8 years
+	}
+
+	trigger = {
+		has_ruler_flag = Y98_holi_consort_r
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31438.a
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 0
+					has_ruler_flag = Y98_holi_consort_r_tianlou
+				}
+				country_event = {
+					id = flavour_anbingnar_daxugo.31439
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_ruler_flag = Y98_holi_consort_r_wenquan
+				}
+				country_event = {
+					id = flavour_anbingnar_daxugo.31440
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_ruler_flag = Y98_holi_consort_r_daniao
+				}
+				country_event = {
+					id = flavour_anbingnar_daxugo.31441
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_ruler_flag = Y98_holi_consort_r_zuochuan
+				}
+				country_event = {
+					id = flavour_anbingnar_daxugo.31442
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_ruler_flag = Y98_holi_consort_r_nanzhuang
+						is_female = no
+					}
+				}
+				country_event = {
+					id = flavour_anbingnar_daxugo.31443
+				}
+			}
+		}
+	}
+}
+#天楼逛街
+country_event = {
+	id = flavour_anbingnar_daxugo.31439
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31439.t
+	desc = flavour_anbingnar_daxugo.31439.d
+	
+	is_triggered_only = yes
+	immediate = {
+		set_ruler_flag = Y98_holi_consort_r_tianlou
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31439.a
+		add_country_modifier = {
+			name = Y98_sex_with_holi_1
+			duration = 365
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.31439.b
+		add_country_modifier = {
+			name = Y98_sex_with_holi_2
+			duration = 365
+		}
+	}
+}
+#神召宫泡温泉
+country_event = {
+	id = flavour_anbingnar_daxugo.31440
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31440.t
+	desc = flavour_anbingnar_daxugo.31440.d
+	
+	is_triggered_only = yes
+	immediate = {
+		set_ruler_flag = Y98_holi_consort_r_wenquan
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31440.a
+		add_country_modifier = {
+			name = Y98_sex_with_holi_1
+			duration = 365
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.31440.b
+		add_country_modifier = {
+			name = Y98_sex_with_holi_2
+			duration = 365
+		}
+	}
+}
+#大鸟转转转
+country_event = {
+	id = flavour_anbingnar_daxugo.31441
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31441.t
+	desc = flavour_anbingnar_daxugo.31441.d
+	
+	is_triggered_only = yes
+	immediate = {
+		set_ruler_flag = Y98_holi_consort_r_daniao
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31441.a
+		add_country_modifier = {
+			name = Y98_sex_with_holi_1
+			duration = 365
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.31441.b
+		add_country_modifier = {
+			name = Y98_sex_with_holi_2
+			duration = 365
+		}
+	}
+}
+#船，启动
+country_event = {
+	id = flavour_anbingnar_daxugo.31442
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31442.t
+	desc = flavour_anbingnar_daxugo.31442.d
+	
+	is_triggered_only = yes
+	immediate = {
+		set_ruler_flag = Y98_holi_consort_r_zuochuan
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31442.a
+		add_country_modifier = {
+			name = Y98_sex_with_holi_1
+			duration = 365
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.31442.b
+		add_country_modifier = {
+			name = Y98_sex_with_holi_2
+			duration = 365
+		}
+	}
+}
+#还是男装大佬
+country_event = {
+	id = flavour_anbingnar_daxugo.31443
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31443.t
+	desc = flavour_anbingnar_daxugo.31443.d
+	
+	is_triggered_only = yes
+	immediate = {
+		set_ruler_flag = Y98_holi_consort_r_nanzhuang
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31443.a
+		add_country_modifier = {
+			name = Y98_sex_with_holi_1
+			duration = 365
+		}
+		define_advisor = {
+			type = army_reformer
+			culture = naamjyut
+			female = yes
+			skill = 3
+			age = 20
+			discount = yes
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.31443.b
+		add_country_modifier = {
+			name = Y98_sex_with_holi_2
+			duration = 365
+		}
+		define_advisor = {
+			type = army_reformer
+			culture = naamjyut
+			female = yes
+			skill = 3
+			age = 20
+			discount = yes
+		}
+	}
+}
+
+##乌眸事件链（31444开头）
+country_event = {
+	id = flavour_anbingnar_daxugo.31444
+	picture = GREAT_SPIRIT_TUGHAYASA_EVIL_eventPicture
+	title = flavour_anbingnar_daxugo.31444.t
+	desc = flavour_anbingnar_daxugo.31444.d
+	
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = gowon_is_daxugo
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		hidden_effect = {
+			for = {
+				amount = 5
+				effect = "
+					random_owned_province = {
+						limit = {
+							region = odheongu_region
+						}
+						spirit_swarms = 1
+					}
+				"
+			}
+		}
+		
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31444.a
+		hidden_effect = {
+			country_event = {
+				id = flavour_anbingnar_daxugo.31445
+				days = 10
+			}
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.31445
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31445.t
+	desc = flavour_anbingnar_daxugo.31445.d
+	
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = gowon_region
+				}
+				clear_rebels = yes
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31445.a
+		highlight = yes
+		country_event = {
+			id = flavour_anbingnar_daxugo.31446 days = 30
+		}
+		set_country_flag = anbi_y98_foxarmy
+		custom_tooltip = flavour_anbingnar_daxugo.31445_ct
+		unlock_merc_company = {
+			merc_company = merc_anbi_foxarmy
+			free_merc = yes
+		}
+		hidden_effect = {
+			set_variable = {
+				which = anbi_y98_wumou_love
+				value = 0
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.31445.b
+		add_stability = 1
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.31446
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31446.t
+	desc = flavour_anbingnar_daxugo.31446.d
+	
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.31446.a
+		custom_tooltip = flavour_anbingnar_daxugo.31446_ct
+		set_country_flag = anbi_y98_can_love_wumou
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.31446.b
+		custom_tooltip = flavour_anbingnar_daxugo.31446_ct
+		set_country_flag = anbi_y98_can_love_wumou
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.31447
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31447.t
+	desc = flavour_anbingnar_daxugo.31447.d
+	
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.31447.a
+		custom_tooltip = flavour_anbingnar_daxugo.31447_ct
+		set_country_flag = anbi_y98_I_love_wumou
+		hidden_effect = {
+			set_variable = {
+				which = anbi_y98_wumou_test_battle
+				value = 0
+			}
+		}
+	}
+}
+#交沛
+country_event = {
+	id = flavour_anbingnar_daxugo.31448
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31448.t
+	desc = flavour_anbingnar_daxugo.31448.d
+	
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = anbi_y98_I_love_wumou
+		Y98_queen_death = yes
+		Y98_clr_harem_flag = yes
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31448.a
+		define_consort = {
+			name = "Mou"
+			dynasty = "Wu"
+			adm = 2
+			dip = 3
+			mil = 6
+			female = yes
+			culture = guwaadun
+			religion = ROOT
+		}
+		set_ruler_flag = anbi_wumou_consort_r
+		set_country_flag = anbi_wumou_consort
+		set_consort_flag = daxugo_is_wumou
+		define_general = {
+			name = "Mou Wu"
+			female = yes
+			fire = 3
+			shock = 11
+			manuever = 4
+			siege = 7
+			trait = war_wizard_personality
+		}
+		custom_tooltip = anbi_wumou_consort_ct
+		country_event = {
+			id = flavour_anbingnar_daxugo.31449
+			days = 30
+		}
+	}
+	after = {
+		add_queen_personality = mage_personality
+		make_consort_immortal = yes
+	}
+}
+#结婚
+country_event = {
+	id = flavour_anbingnar_daxugo.31449
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31449.t
+	desc = flavour_anbingnar_daxugo.31449.d
+	
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.31449.a
+		add_ruler_modifier = {
+			name = y98_wumou_consort_modifier
+			duration = -1
+		}
+		country_event = {
+			id = flavour_anbingnar_daxugo.31417
+		}
+	}
+}
+#在追求中死亡
+country_event = {
+	id = flavour_anbingnar_daxugo.31450
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31450.t
+	desc = flavour_anbingnar_daxugo.31450.d
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = anbi_y98_I_love_wumou
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31450.a
+		hidden_effect = {
+			set_variable = {
+				which = anbi_y98_wumou_test_battle
+				value = 0
+			}
+		}
+	}
+	option = {
+		name = flavour_anbingnar_daxugo.31450.b
+		custom_tooltip = flavour_anbingnar_daxugo.31450_ct
+		clr_country_flag = anbi_y98_I_love_wumou
+		hidden_effect = {
+			set_variable = {
+				which = anbi_y98_wumou_test_battle
+				value = 0
+			}
+		}
+	}
+}
+#结婚了死了
+country_event = {
+	id = flavour_anbingnar_daxugo.31451
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31451.t
+	desc = flavour_anbingnar_daxugo.31451.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = anbi_wumou_consort
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31451.a
+		country_event = {
+			id = flavour_anbingnar_daxugo.31452
+		}
+		if = {
+			limit = { 
+				general_with_name = "Mou Wu"
+			}
+			kill_leader = {
+				type = "Mou Wu"
+			}
+		}
+		if = {
+			limit = { 
+				has_consort_regency = yes
+			}
+			hidden_effect = {
+				kill_ruler = yes
+				add_stability = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.31452
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31452.t
+	desc = flavour_anbingnar_daxugo.31452.d
+	
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.31452.a
+		custom_tooltip = flavour_anbingnar_daxugo.31452_ct
+	}
+}
+#尝试复活
+country_event = {
+	id = flavour_anbingnar_daxugo.31453
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31453.t
+	desc = flavour_anbingnar_daxugo.31453.d
+	
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	trigger = {
+		NOT = {
+			has_global_flag = rending_startup_complete
+			has_global_flag = rending_active
+			has_global_flag = rending_happened
+			has_ruler_flag = anbi_wumou_consort_r
+		}
+		has_country_flag = anbi_wumou_consort
+		has_country_flag = daxugo_marry_with_yanshen_god_cf
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31453.a
+		custom_tooltip = flavour_anbingnar_daxugo.31453_ct
+		4871 = {
+			add_base_tax = -3
+			add_base_production = -3
+			add_base_manpower = -3
+			add_devastation = 75
+			remove_loot = { who = ROOT amount = 100 }
+			ruin_temple = yes
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = rending_startup_complete }
+				}
+				set_global_flag = rending_active
+				every_country = {
+					if = {
+						limit = {
+							any_owned_province = {
+								OR = {
+									has_province_modifier = damaged_temple_complex
+									has_province_modifier = derelict_temple_complex
+									has_province_modifier = corrupted_temple_complex
+									has_province_modifier = corrupted_temple_complex_inactive
+								}
+							}
+						}
+						country_event = { id = spirits.701 }
+					}
+					else_if = {
+						limit = { any_owned_province = { continent = asia NOT = { superregion = forbidden_lands_superregion } } }
+						country_event = { id = spirits.702 days = 180 }
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = flavour_anbingnar_daxugo.31454
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31454.t
+	desc = flavour_anbingnar_daxugo.31454.d
+	
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.31454.a
+		add_country_modifier = {
+			name = anbi_wumou_and_emperor_teaching
+			duration = -1
+		}
+		define_general = {
+			name = "Wu Mou"
+			female = yes
+			fire = 3
+			shock = 11
+			manuever = 4
+			siege = 7
+			trait = war_wizard_personality
+		}
+	}
+}
+#复活鉴狐狸
+country_event = {
+	id = flavour_anbingnar_daxugo.31455
+	picture = anbi_foxgirl_eventPicture
+	title = flavour_anbingnar_daxugo.31455.t
+	desc = flavour_anbingnar_daxugo.31455.d
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		has_ruler_flag = anbi_wumou_consort_r
+		OR = {
+			has_consort = no
+			NOT = {
+				has_consort_flag = daxugo_is_wumou
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.31455.a
+		define_consort = {
+			name = "Mou"
+			dynasty = "Wu"
+			adm = 2
+			dip = 3
+			mil = 6
+			female = yes
+			culture = guwaadun
+			religion = ROOT
+		}
+		set_consort_flag = daxugo_is_wumou
+		define_general = {
+			name = "Mou Wu"
+			female = yes
+			fire = 3
+			shock = 11
+			manuever = 4
+			siege = 7
+			trait = war_wizard_personality
+		}
+	}
+
+	after = {
+		add_queen_personality = mage_personality
+		make_consort_immortal = yes
+	}
+}
+
+
+#开头介绍（44444开头）
+country_event = {
+	id = flavour_anbingnar_daxugo.44444
+	title = flavour_anbingnar_daxugo.44444.t
+	desc = flavour_anbingnar_daxugo.44444.d
+	picture = anbingnar_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = no
+		tag = Y91
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.44444.a
+	}
+}
+
+country_event = {
+	id = flavour_anbingnar_daxugo.44445
+	title = flavour_anbingnar_daxugo.44445.t
+	desc = flavour_anbingnar_daxugo.44445.d
+	picture = AIRSHIP_SKYPORT_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		ai = no
+		is_playing_custom_nation = yes
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.44444.a
+	}
+}
+#解释与鸣谢
+country_event = {
+	id = flavour_anbingnar_daxugo.44446
+	title = flavour_anbingnar_daxugo.44446.t
+	desc = flavour_anbingnar_daxugo.44446.d
+	picture = AIRSHIP_SKYPORT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavour_anbingnar_daxugo.44446.a
+		country_event = {
+			id = flavour_anbingnar_daxugo.2000
+		}
+	}
+}
+
+#我觉得本人在无面女皇在位时做不到，所以给了这个buff（66666开头）
+#sub发布第二天便被打脸
+country_event = {
+	id = flavour_anbingnar_daxugo.66666
+	title = flavour_anbingnar_daxugo.66666.t
+	desc = flavour_anbingnar_daxugo.66666.d
+	picture = AIRSHIP_SKYPORT_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = daxugo_jiangyang_happy
+		has_country_flag = daxugo_beikling_happy
+		has_country_flag = daxugo_jiangszun_happy
+		has_country_flag = daxugo_gangim_happy
+		has_country_flag = daxugo_naamjyut_happy
+		has_ruler_flag = daxugo_former
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.66666.a
+		add_country_modifier = {
+			name = peace_of_daxugo_empire
+			duration = -1
+		}
+		custom_tooltip = flavour_anbingnar_daxugo.66666_ctt
+		set_country_flag = Y98_peace_rebellions
+		set_country_flag = daxugo_rebellions_finished
+		swap_non_generic_missions = yes
+	}
+}
+
+#徐化（70000开头）
+country_event = {
+	id = flavour_anbingnar_daxugo.70000
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+	title = flavour_anbingnar_daxugo.44445.t
+	desc = flavour_anbingnar_daxugo.44445.d
+
+	hidden = yes
+
+	trigger = {
+		has_country_flag = Y91_daxug_culture_standard_flag
+		any_owned_province = {
+			NOT = {
+				culture = daxug
+			}
+			culture_group = yan
+			NOT = {
+				has_province_modifier =  Y91_daxug_culture_standard_modifier
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.44444.a
+		every_owned_province = {
+			limit = {
+				NOT = {
+					culture = daxug
+				}
+				culture_group = yan
+				NOT = {
+					has_province_modifier = Y91_daxug_culture_standard_modifier
+				}
+			}
+			add_province_modifier = {
+				name = Y91_daxug_culture_standard_modifier
+				duration = -1
+			}
+		}
+	}
+}
+#统治东坎
+country_event = {
+	id = flavour_anbingnar_daxugo.70001
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+
+	title = flavour_anbingnar_daxugo.44445.t
+	desc = flavour_anbingnar_daxugo.44445.d
+	hidden = yes
+
+	trigger = {
+		tag = Y98
+		has_country_flag = Y98_escann_rule
+		any_owned_province = {
+			superregion = escann_superregion
+			NOT = {
+				has_province_modifier = Y98_escann_rule_modifier
+			}
+		}
+	}
+
+	option = {
+		name = flavour_anbingnar_daxugo.44444.a
+		every_owned_province = {
+			limit = {
+				superregion = escann_superregion
+				NOT = {
+					has_province_modifier = Y98_escann_rule_modifier
+				}
+			}
+			add_province_modifier = {
+				name = Y98_escann_rule_modifier
+				duration = -1
+			}
+		}
+	}
+}

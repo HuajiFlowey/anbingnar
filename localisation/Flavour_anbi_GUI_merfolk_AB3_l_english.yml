@@ -1,0 +1,20 @@
+﻿l_english:
+ GUI_merfolk_shipgirls.1.t:0 "£anbi_merfolk_shipgirls_gui_bg£\n\n\n§Z[Root.anbi_merfolk_shipgirls_tech_investment.GetValue]                      [Root.anbi_merfolk_shipgirls_cash_investment.GetValue]                       [Root.anbi_merfolk_shipgirls_sailors_investment.GetValue]                     [Root.anbi_merfolk_shipgirls_power_investment.GetValue]\n§!\n\n\n\n                                                              §T[Root.anbi_merfolk_shipgirls_speed.GetValue]§!\n\n                                                              §r[Root.anbi_merfolk_shipgirls_progress.GetValue]§!"
+ GUI_merfolk_shipgirls.1.d:0 "                                                       [Root.ShipGirlsTheory]\n\n                                                       [Root.ShipGirlsHull]\n\n                                                       [Root.ShipGirlsBrain]\n\n                                                       [Root.ShipGirlsIntoWater]\n\n\n\n\n\n\n"
+ anbi_merfolk_shipgirls_1:0 "§ZòTŒRb§!"
+ anbi_merfolk_shipgirls_2:0 "§RS*gŒRb§!"
+ anbi_merfolk_shipgirls_3:0 "§YÛLˆ-N§!"
+ GUI_merfolk_shipgirls.1.a:0 "ÔÞV"
+ GUI_merfolk_shipgirls.1.b:0 " R'YxÑS•beQ"
+ GUI_merfolk_shipgirls.1.c:0 " R'YirD•beQ"
+ GUI_merfolk_shipgirls.1.e:0 " R'YºN›R•beQ"
+ GUI_merfolk_shipgirls.1.f:0 " R'Y¹ppe•beQ"
+ GUI_merfolk_shipgirls.1.g:0 "xÑSû|ßuô‹f"
+ anbi_merfolk_shipgirls_tt:0 "§TxÑS‡sSÇgT7R°eÿ§!"
+ anbi_merfolk_shipgirls_cash_investment_tt:0 "§RSVýV“^Ñ‘±”:Nbåb	g10r7>köeÿå‹	y˜àeHe0§!"
+ anbi_merfolk_shipgirls_tech_investmen_tt:0 "§RSVòTåb	g0xÑS•beQ0bufföeÿå‹	y˜àeHe0§!"
+ anbi_merfolk_shipgirls_sailors_investment_tt:0 "§RSVºN›Rb4lKbpeÏ‘SŽN10000öeÿå‹	y˜àeHe0§!"
+ anbi_merfolk_shipgirls_power_investment_tt:0 "§RSVûNa¹ppe:Nöeÿå‹	y˜àeHe0§!"
+ anbi_merfolk_shipgirls_tt2:0 "§OxÑS‡s:NNb	gxÑS•beQpe<PI`ŒT„v5%ÿNP–:N500\n\nÏkgÓu—röeÿxÑS‡spe<PSôv¥cžX R(W6–µkxÑSÛ¦^N0ÛV*N6–µkŒRbTÿSÎN0‚Z`l-N–:gËbÖSNT0‚ZúQ°s(WbìN„v–™ýÿÙMO0‚ZSùR[Root.GetRulerTitleAndNameOrRegencyCap]±R“ŠHeàV0§!"
+ anbi_merfolk_shipgirls_tt3:0 "§O0‚9‚SsY¡‹RÛeQ0RNN6–µkÿ§!"
+ anbi_merfolk_shipgirls_tt4:0 "§Y–Nw°e0‚Z„vÞ‹uÿbìN—‰:NNN!k0‚Z¡‹RyrYDn&&§!"

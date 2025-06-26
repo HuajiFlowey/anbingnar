@@ -1,0 +1,256 @@
+bloody_canstanor = {
+	defender_of_faith = yes
+	flags_with_emblem_percentage = 33 # default == 0
+	flag_emblem_index_range = { 1 57 }
+
+	ai_will_propagate_through_trade = yes # This must also be placed in trade nodes for it to work
+
+	center_of_religion = 840
+
+
+	giantkin_regent_court = {
+		color = { 235 101 101 }
+		icon = 66
+		date = 2000.01.01
+
+		country = {
+			core_creation = -0.05
+			yearly_corruption = 0.1
+		}
+		country_as_secondary = {
+			improve_relation_modifier = 0.2
+			free_adm_policy = 1
+		}
+
+		uses_judaism_power = yes
+		aspects = {
+			anbi_AB1_food_orcs
+			anbi_AB1_food_goblin
+			anbi_AB1_food_troll
+			anbi_AB1_food_centaur
+			anbi_AB1_food_xianling
+			anbi_AB1_food_ogre
+			anbi_AB1_food_harpy
+			anbi_AB1_food_khet
+			anbi_AB1_food_evil_elven
+			anbi_AB1_food_kobold
+			anbi_AB1_food_gnollish
+			anbi_AB1_cook_kao
+			anbi_AB1_cook_dun
+			anbi_AB1_cook_jian
+			anbi_AB1_cook_chao
+			anbi_AB1_cook_zha
+			anbi_AB1_cook_zheng
+			anbi_AB1_cook_yan
+			anbi_AB1_cook_lu
+			anbi_AB1_spice_bread
+			anbi_AB1_spice_vegetable
+			anbi_AB1_spice_mushroom
+			anbi_AB1_spice_meat
+			anbi_AB1_spice_tear
+			anbi_AB1_spice_wine
+		}
+
+		celebrate = {
+			cost = 200
+			potential = {
+			}
+			allow = {
+				custom_trigger_tooltip = {
+					tooltip = giantkin_regent_court_celebrate_ctt
+					OR = {
+						has_church_aspect = anbi_AB1_food_orcs
+						has_church_aspect =	anbi_AB1_food_goblin
+						has_church_aspect =	anbi_AB1_food_troll
+						has_church_aspect =	anbi_AB1_food_centaur
+						has_church_aspect =	anbi_AB1_food_xianling
+						has_church_aspect =	anbi_AB1_food_ogre
+						has_church_aspect =	anbi_AB1_food_harpy
+						has_church_aspect =	anbi_AB1_food_khet
+						has_church_aspect =	anbi_AB1_food_evil_elven
+						has_church_aspect =	anbi_AB1_food_kobold
+						has_church_aspect =	anbi_AB1_food_gnollish
+					}
+					OR = {
+						has_church_aspect = anbi_AB1_cook_kao
+						has_church_aspect = anbi_AB1_cook_dun
+						has_church_aspect = anbi_AB1_cook_jian
+						has_church_aspect = anbi_AB1_cook_chao
+						has_church_aspect = anbi_AB1_cook_zha
+						has_church_aspect = anbi_AB1_cook_zheng
+						has_church_aspect = anbi_AB1_cook_yan
+						has_church_aspect = anbi_AB1_cook_lu
+					}
+					OR = {
+						has_church_aspect = anbi_AB1_spice_bread
+						has_church_aspect = anbi_AB1_spice_vegetable
+						has_church_aspect = anbi_AB1_spice_mushroom
+						has_church_aspect = anbi_AB1_spice_meat
+						has_church_aspect = anbi_AB1_spice_tear
+						has_church_aspect = anbi_AB1_spice_wine
+					}
+				}
+			}
+			effect = {
+				custom_tooltip = giantkin_regent_court_celebrate_ct
+				country_event = { id = bloody_castanor.20000 }
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+
+		heretic = { OLD_PANTHEON }
+		aspects_name = giantkin_regent_court_aspects
+	}
+	crusade_name = CRUSADE
+	harmonized_modifier = harmonized_cannorian
+}
+faithless = {
+	flags_with_emblem_percentage = 0 # default == 0
+	flag_emblem_index_range = { 1 57 }
+	center_of_religion = 16
+
+	zhengdao_path = {
+		color = { 0 0 153 }
+		icon = 81
+		allowed_conversion = {
+			
+		}
+
+		country = {
+			governing_capacity_modifier = 0.2
+			tolerance_heathen = 3
+			yearly_absolutism = -1
+			reelection_cost = 0.5
+		}
+		country_as_secondary = {
+			governing_capacity_modifier = 0.05
+			yearly_absolutism = -1
+		}
+		heretic = { 
+			FORBIDDEN_PATH 
+			MATERIALISTS
+			CHICOLLECTIVIST
+		}
+		aspects_name = zhengdao_path_aspects
+		uses_judaism_power = yes
+		aspects = {
+			anbi_zhengdao_feiten
+			anbi_zhengdao_kuhai
+			anbi_zhengdao_beidugang
+			anbi_zhengdao_lanjinhui
+			anbi_zhengdao_yinquan
+			anbi_zhengdao_bianfang
+			anbi_zhengdao_zhuyue
+			anbi_zhengdao_tianlou
+			anbi_zhengdao_gushuoguan
+			anbi_zhengdao_jiangdu
+			anbi_zhengdao_jianqiang
+			anbi_zhengdao_yangcheng
+			anbi_zhengdao_yanzhong
+			anbi_zhengdao_yingzhen
+			anbi_zhengdao_xiangnv
+		}
+
+
+		on_convert = {
+			change_religion = zhengdao_path
+
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+		}
+
+		celebrate = {
+			cost = 200
+			potential = { }
+			allow = { 
+				custom_trigger_tooltip = {
+					tooltip = anbi_zhengdao_path_ctt
+					OR = {
+						has_church_aspect = anbi_zhengdao_feiten
+						has_church_aspect = anbi_zhengdao_kuhai
+						has_church_aspect = anbi_zhengdao_beidugang
+						has_church_aspect = anbi_zhengdao_lanjinhui
+						has_church_aspect = anbi_zhengdao_yinquan
+					}
+					OR = {
+						has_church_aspect = anbi_zhengdao_bianfang
+						has_church_aspect = anbi_zhengdao_zhuyue
+						has_church_aspect = anbi_zhengdao_tianlou
+						has_church_aspect = anbi_zhengdao_gushuoguan
+						has_church_aspect = anbi_zhengdao_jiangdu
+					}
+					OR = {
+						has_church_aspect = anbi_zhengdao_jianqiang
+						has_church_aspect = anbi_zhengdao_yangcheng
+						has_church_aspect = anbi_zhengdao_yanzhong
+						has_church_aspect = anbi_zhengdao_yingzhen
+						has_church_aspect = anbi_zhengdao_xiangnv
+					}
+				}
+			}
+			effect = { 
+				custom_tooltip = anbi_zhengdao_path_tt
+				country_event = {
+					id = anbi_kuhai.1008
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+
+
+	harmonized_modifier = harmonized_faithless
+	crusade_name = CRUSADE
+}
+east_sarhal_religion = {
+	crusade_name = HOLY_WAR
+
+	merfolk_religion = {
+		icon = 141
+		color = { 0 128 255 }
+		country = {
+			navy_tradition_decay = -0.025
+			naval_morale_damage = 0.1
+		}
+		heretic = {  
+			SKYCHILDCULT
+			DENOUNCEDTEMPLEDEVOTEES
+			NIGHTDOMAIN
+			THUNDERCULT
+			EXALTEDAMILAK
+			SENIDIST
+			NEBRESETISTS
+			PEKAISM 
+		}
+		on_convert = {
+			change_religion = merfolk_religion
+			add_prestige = -100
+			
+			if = {
+				limit = { 
+					NOT = {
+						tag = AB3
+					}
+					AB3 = {
+						OR = {
+							has_estate_privilege = anbi_merfolk_mahalaya_regilion_temporary_privilege
+							has_estate_privilege = anbi_merfolk_mahalaya_regilion_lonely_privilege
+						}
+					}
+				}
+				add_country_modifier = {
+					name = merfolk_religion_convertion
+					duration = -1
+				}
+			}			
+		}
+		fervor = yes
+	}
+}

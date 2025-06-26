@@ -1,0 +1,144 @@
+cb_anbi_cannor_war = {
+	valid_for_subject = no 
+
+	prerequisites = {
+		tag = Y98
+		has_country_flag = Y98_cannor_war
+		FROM = {
+			capital_scope = {
+				continent = europe
+			}
+		}
+	}
+
+
+	war_goal = superiority_annex_revolution
+}
+
+cb_anbi_laker_is_ours = {
+	valid_for_subject = no
+	is_triggered_only = yes
+
+	war_goal = superiority_laker_is_ours
+}
+
+cb_anbi_canstanor_rebellion = {
+	valid_for_subject = no
+	ai_peace_desire = -9999
+	is_triggered_only = yes
+	
+	attacker_disabled_po = {
+		po_demand_provinces
+		po_become_vassal
+		po_subjugate_vassal
+		po_pillage_capital_state
+		po_concede_defeat
+		po_steer_trade
+		po_trade_power
+		po_war_reparations
+		po_enforce_military_access
+		po_humiliate
+		po_humiliate_rival
+		po_gold
+	}
+	
+	war_goal = superiority_anti_monster
+}
+
+cb_anbi_canstanor_vs_monster = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		tag = AB1
+		has_country_flag = anbi_canstanor_vs_monster_cf
+	}
+
+	prerequisites = {
+		is_neighbor_of = FROM
+		FROM = {
+			has_country_modifier = monstrous_nation
+			capital_scope = {
+				superregion = escann_superregion
+			}
+		}
+	}
+	
+	attacker_disabled_po = {
+		po_demand_provinces
+		po_become_vassal
+		po_subjugate_vassal
+		po_pillage_capital_state
+		po_concede_defeat
+		po_steer_trade
+		po_trade_power
+		po_war_reparations
+		po_enforce_military_access
+		po_humiliate
+		po_humiliate_rival
+		po_gold
+	}
+	
+	war_goal = superiority_anbi_canstanor_vs_monster
+}
+
+cb_anbi_canstanor_annex_world = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		tag = AB2
+		has_country_flag = anbi_canstanor_annex_world_cf
+	}
+	prerequisites = {
+		FROM = {
+			total_development = 200
+		}
+	}
+	
+	war_goal = superiority_anbi_canstanor_annex_world
+}
+
+cb_anbi_kuhai_anti_imperialism = {
+	valid_for_subject = no
+	ai_peace_desire = -10000
+	is_triggered_only = yes
+	
+	attacker_disabled_po = {
+		po_demand_provinces
+		po_become_vassal
+		po_subjugate_vassal
+		po_pillage_capital_state
+		po_concede_defeat
+		po_steer_trade
+		po_trade_power
+		po_war_reparations
+		po_enforce_military_access
+		po_humiliate
+		po_humiliate_rival
+		po_gold
+	}
+	
+	war_goal = take_capital_revolution
+}
+
+cb_anbi_merfolk_great_war = {
+	valid_for_subject = no
+	ai_peace_desire = -10000
+	is_triggered_only = yes
+	
+	attacker_disabled_po = {
+		po_demand_provinces
+		po_become_vassal
+		po_subjugate_vassal
+		po_pillage_capital_state
+		po_concede_defeat
+		po_steer_trade
+		po_trade_power
+		po_war_reparations
+		po_enforce_military_access
+		po_humiliate
+		po_humiliate_rival
+		po_gold
+	}
+	
+	war_goal = take_capital_conquest
+}

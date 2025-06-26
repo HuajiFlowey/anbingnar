@@ -1,0 +1,4362 @@
+anbi_merfolk_the_story_beginning = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = AB3 } 
+
+	anbi_merfolk_from_the_deepest_despair = {
+		icon = mission_destroyed_city
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_merfolk_from_the_deepest_despair_ctt
+				owns_core_province = 6502
+			}
+		}
+
+		effect = { add_stability = -3 } 
+	}
+}
+anbi_merfolk_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB3
+		has_country_flag = anbi_merfolk_start
+	}
+
+	anbi_merfolk_handling_urban_refugees = {
+		icon = mission_rb_weather_the_reformation
+		position = 2
+		required_missions = { anbi_merfolk_the_authority_of_mers } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					is_capital_of = S18
+					NOT = {
+						S18 = {
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+						}
+					}
+				}
+				AND = {
+					is_capital_of = S19
+					NOT = {
+						S19 = {
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+						}
+					}
+				}
+				AND = {
+					is_capital_of = S20
+					NOT = {
+						S20 = {
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+						}
+					}
+				}
+				AND = {
+					is_capital_of = S21
+					NOT = {
+						S21 = {
+							has_opinion = {
+								who = ROOT
+								value = 100
+							}
+						}
+					}
+				}
+			}
+		}
+
+		trigger = {
+			calc_true_if = {
+				amount = 2
+				S18 = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				S19 = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				S20 = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				S21 = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+			OR = {
+				6052 = { province_has_center_of_trade_of_level = 2 } 
+				dip_power = 100
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_merfolk_handling_urban_refugees_tt
+			if = {
+				limit = { NOT = { 6052 = { province_has_center_of_trade_of_level = 2 }  }  } 
+				add_dip_power = -100
+				6052 = { center_of_trade = 2 } 
+			}
+			else = { add_treasury = 100 } 
+			6677 = { center_of_trade = 1 } 
+			hidden_effect = { country_event = { id = anbi_merfolk.14 }  } 
+		}
+	}
+
+	anbi_merfolk_the_baashidi_friend = {
+		icon = mission_religious
+		position = 3
+		required_missions = { anbi_merfolk_handling_urban_refugees } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					is_capital_of = S18
+					NOT = { S18 = { alliance_with = ROOT }  } 
+				}
+				AND = {
+					is_capital_of = S19
+					NOT = { S19 = { alliance_with = ROOT }  } 
+				}
+				AND = {
+					is_capital_of = S20
+					NOT = { S20 = { alliance_with = ROOT }  } 
+				}
+				AND = {
+					is_capital_of = S21
+					NOT = { S21 = { alliance_with = ROOT }  } 
+				}
+			}
+		}
+
+		trigger = {
+			calc_true_if = {
+				amount = 2
+				OR = {
+					S18 = {
+						has_opinion = {
+							who = ROOT
+							value = 140
+						}
+					}
+					alliance_with = S18
+				}
+				OR = {
+					S19 = {
+						has_opinion = {
+							who = ROOT
+							value = 140
+						}
+					}
+					alliance_with = S19
+				}
+				OR = {
+					S20 = {
+						has_opinion = {
+							who = ROOT
+							value = 140
+						}
+					}
+					alliance_with = S20
+				}
+				OR = {
+					S21 = {
+						has_opinion = {
+							who = ROOT
+							value = 140
+						}
+					}
+					alliance_with = S21
+				}												
+			}
+			OR = {
+				dip_power = 100
+				diplomat = 1
+				statesman = 1
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_merfolk_the_baashidi_friend_tt
+			if = {
+				limit = {
+					NOT = {
+						diplomat = 1
+						statesman = 1
+					}
+				}
+				add_dip_power = -100
+			}
+			add_country_modifier = {
+				name = "anbi_merfolk_the_baashidi_friend_buff"
+				duration = -1
+			}
+			S18 = {
+				add_trust = {
+					who = ROOT
+					value = 10
+				}
+			}
+			add_favors = {
+				who = S18
+				amount = 10
+			}
+			S19 = {
+				add_trust = {
+					who = ROOT
+					value = 10
+				}
+			}
+			add_favors = {
+				who = S19
+				amount = 10
+			}
+			S20 = {
+				add_trust = {
+					who = ROOT
+					value = 10
+				}
+			}
+			add_favors = {
+				who = S20
+				amount = 10
+			}
+			S21 = {
+				add_trust = {
+					who = ROOT
+					value = 10
+				}
+			}
+			add_favors = {
+				who = S21
+				amount = 10
+			}
+			suhratba_yaj_area = {
+				add_permanent_claim = ROOT
+				add_province_modifier = {
+					name = "anbi_AB3_easy_to_conquer"
+					duration = -1
+				}
+			}
+			baashi_badda_area = {
+				limit = {
+					NOT = {
+						province_id = 6052
+						province_id = 6677
+					}
+				}
+				add_permanent_claim = ROOT
+				add_province_modifier = {
+					name = "anbi_AB3_easy_to_conquer"
+					duration = -1
+				}
+			}
+			suhratba_yahin_area = {
+				add_permanent_claim = ROOT
+				add_province_modifier = {
+					name = "anbi_AB3_easy_to_conquer"
+					duration = -1
+				}
+			}
+			6047 = {
+				add_permanent_claim = ROOT
+				add_province_modifier = {
+					name = "anbi_AB3_easy_to_conquer"
+					duration = -1
+				}
+			}
+			6048 = {
+				add_permanent_claim = ROOT
+				add_province_modifier = {
+					name = "anbi_AB3_easy_to_conquer"
+					duration = -1
+				}
+			}
+			6049 = {
+				add_permanent_claim = ROOT
+				add_province_modifier = {
+					name = "anbi_AB3_easy_to_conquer"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	anbi_merfolk_crush_the_baddabi = {
+		icon = mission_non-western_soldiers
+		position = 4
+		required_missions = { anbi_merfolk_the_baashidi_friend } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = suhratba_yahin_area
+						area = suhratba_yaj_area
+						area = baashi_badda_area
+						province_id = 6047
+						province_id = 6048
+						province_id = 6049
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				}
+				AND = {
+					S17 = { NOT = { is_subject_of = ROOT }  } 
+					owned_by = S17
+				}
+			}
+		}
+
+		trigger = {
+			OR = {
+				S17 = { is_subject_of = ROOT } 
+				NOT = { exists = S17 }
+				AND = { 
+					suhratba_yahin_area = {
+						type = all
+						OR = {
+							country_or_subject_holds = ROOT
+							owner = { alliance_with = ROOT } 
+						}
+					}
+					suhratba_yaj_area = {
+						type = all
+						OR = {
+							country_or_subject_holds = ROOT
+							owner = { alliance_with = ROOT } 
+						}
+					}
+					baashi_badda_area = {
+						type = all
+						OR = {
+							country_or_subject_holds = ROOT
+							owner = { alliance_with = ROOT } 
+						}
+					}
+					6047 = {
+						OR = {
+							country_or_subject_holds = ROOT
+							owner = { alliance_with = ROOT } 
+						}
+					}
+					6048 = {
+						OR = {
+							country_or_subject_holds = ROOT
+							owner = { alliance_with = ROOT } 
+						}
+					}
+					6049 = {
+						OR = {
+							country_or_subject_holds = ROOT
+							owner = { alliance_with = ROOT } 
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_merfolk_crush_the_baddabi_ctt1
+			tooltip = {
+				S17 = {
+					remove_opinion = {
+						who = ROOT
+						modifier = anbi_merfolk_wants_to_conquer
+					}
+					remove_opinion = {
+						who = S18
+						modifier = anbi_merfolk_wants_to_conquer
+					}
+					remove_opinion = {
+						who = S20
+						modifier = anbi_merfolk_wants_to_conquer
+					}
+					remove_opinion = {
+						who = S21
+						modifier = anbi_merfolk_wants_to_conquer
+					}
+					reverse_remove_opinion = {
+						who = ROOT
+						modifier = anbi_merfolk_wants_to_conquer
+					}
+					reverse_remove_opinion = {
+						who = S18
+						modifier = anbi_merfolk_wants_to_conquer
+					}
+					reverse_remove_opinion = {
+						who = S20
+						modifier = anbi_merfolk_wants_to_conquer
+					}
+					reverse_remove_opinion = {
+						who = S21
+						modifier = anbi_merfolk_wants_to_conquer
+					}
+					add_historical_friend = ROOT
+					add_opinion = {
+						who = ROOT
+						modifier = released_vassal
+					}
+				}
+				add_historical_friend = S17
+				add_country_modifier = {
+					name = "anbi_merfolk_crush_the_baddabi_buff"
+					duration = 7300
+				}
+			}
+			custom_tooltip = anbi_merfolk_crush_the_baddabi_ctt2
+			tooltip = {
+				add_prestige_or_monarch_power = { amount = 50 } 
+				suhratba_yahin_area = {
+					limit = { NOT = { is_core = ROOT }  } 
+					add_nationalism = -10
+					add_territorial_core = ROOT
+				}
+				suhratba_yaj_area = {
+					limit = { NOT = { is_core = ROOT }  } 
+					add_nationalism = -10
+					add_territorial_core = ROOT
+				}
+				baashi_badda_area = {
+					limit = { NOT = { is_core = ROOT }  } 
+					add_nationalism = -10
+					add_territorial_core = ROOT
+				}
+				if = {
+					limit = { 6047 = { NOT = { is_core = ROOT }  }  } 
+					6047 = {
+						add_nationalism = -10
+						add_territorial_core = ROOT
+					}
+				}
+				if = {
+					limit = { 6048 = { NOT = { is_core = ROOT }  }  } 
+					6048 = {
+						add_nationalism = -10
+						add_territorial_core = ROOT
+					}
+				}
+				if = {
+					limit = { 6049 = { NOT = { is_core = ROOT }  }  } 
+					6049 = {
+						add_nationalism = -10
+						add_territorial_core = ROOT
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { S17 = { is_subject_of = ROOT }  }  
+					S17 = {
+						add_opinion = {
+							who = ROOT
+							modifier = released_vassal
+						}
+						remove_opinion = {
+						who = ROOT
+						modifier = anbi_merfolk_wants_to_conquer
+						}
+						remove_opinion = {
+							who = S18
+							modifier = anbi_merfolk_wants_to_conquer
+						}
+						remove_opinion = {
+							who = S20
+							modifier = anbi_merfolk_wants_to_conquer
+						}
+						remove_opinion = {
+							who = S21
+							modifier = anbi_merfolk_wants_to_conquer
+						}
+						reverse_remove_opinion = {
+							who = ROOT
+							modifier = anbi_merfolk_wants_to_conquer
+						}
+						reverse_remove_opinion = {
+							who = S18
+							modifier = anbi_merfolk_wants_to_conquer
+						}
+						reverse_remove_opinion = {
+							who = S20
+							modifier = anbi_merfolk_wants_to_conquer
+						}
+						reverse_remove_opinion = {
+							who = S21
+							modifier = anbi_merfolk_wants_to_conquer
+						}
+						add_historical_friend_mutual = { tag = ROOT }
+					}					
+					add_country_modifier = {
+						name = "anbi_merfolk_crush_the_baddabi_buff"
+						duration = 7300
+					}
+				}
+				else_if = {
+					limit = {
+						AND = { 
+							suhratba_yahin_area = {
+								type = all
+								OR = {
+									country_or_subject_holds = ROOT
+									owner = { alliance_with = ROOT } 
+								}
+							}
+							suhratba_yaj_area = {
+								type = all
+								OR = {
+									country_or_subject_holds = ROOT
+									owner = { alliance_with = ROOT } 
+								}
+							}
+							baashi_badda_area = {
+								type = all
+								OR = {
+									country_or_subject_holds = ROOT
+									owner = { alliance_with = ROOT } 
+								}
+							}
+							6047 = {
+								OR = {
+									country_or_subject_holds = ROOT
+									owner = { alliance_with = ROOT } 
+								}
+							}
+							6048 = {
+								OR = {
+									country_or_subject_holds = ROOT
+									owner = { alliance_with = ROOT } 
+								}
+							}
+							6049 = {
+								OR = {
+									country_or_subject_holds = ROOT
+									owner = { alliance_with = ROOT } 
+								}
+							}
+						}
+					}
+					add_prestige_or_monarch_power = { amount = 50 } 
+					suhratba_yahin_area = {
+						add_nationalism = -10
+						add_territorial_core = ROOT
+					}
+					suhratba_yaj_area = {
+						add_nationalism = -10
+						add_territorial_core = ROOT
+					}
+					baashi_badda_area = {
+						limit = {
+							NOT = {
+								province_id = 6052
+								province_id = 6677
+							}
+						}
+						add_nationalism = -10
+						add_territorial_core = ROOT
+					}
+					6047 = {
+						add_nationalism = -10
+						add_territorial_core = ROOT
+					}
+					6048 = {
+						add_nationalism = -10
+						add_territorial_core = ROOT
+					}
+					6049 = {
+						add_nationalism = -10
+						add_territorial_core = ROOT
+					}
+				}
+				country_event = { id = anbi_merfolk.13 } 
+			}
+		}
+	}
+
+	anbi_merfolk_clove_wine_and_food = {
+		icon = mission_dominate_persian_gulf
+		position = 6
+		required_missions = { anbi_merfolk_the_hope_light } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					has_any_halfling_pop_trigger = yes
+					province_group = dynamic_merfolk_region
+				}
+				province_id = 3082
+			}
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 3
+				has_any_halfling_pop_trigger = yes
+				province_group = dynamic_merfolk_region
+			}
+			num_of_light_ship = 20
+			3082 = {
+				trade_share = {
+					country = ROOT
+					share = 5
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "anbi_merfolk_clove_wine_and_food_buff"
+				duration = 7300
+			}
+			hidden_effect = { country_event = { id = anbi_merfolk.19 }  } 
+		}
+	}
+
+	anbi_merfolk_small_trader = {
+		icon = mission_zambezi_gold
+		position = 7
+		required_missions = { anbi_merfolk_clove_wine_and_food } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3082
+				has_any_halfling_pop_trigger = yes
+			}
+		}
+
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 10
+					has_any_halfling_pop_trigger = yes
+				}
+				any_ally = {
+					capital_scope = { region = fahvanosy_region } 
+					culture_group = halfling
+					has_opinion = {
+						who = ROOT
+						value = 120
+					}
+				}
+			}
+			3082 = {
+				trade_share = {
+					country = ROOT
+					share = 25
+				}
+			}
+			num_of_light_ship = 40
+		}
+
+		effect = {
+			fahvanosy_region = { add_permanent_claim = ROOT } 
+			custom_tooltip = anbi_merfolk_small_trader_tt
+			if = {
+				limit = {
+					any_ally = {
+						capital_scope = { region = fahvanosy_region } 
+						culture_group = halfling
+						has_opinion = {
+							who = ROOT
+							value = 120
+						}
+					}
+				}
+				random_ally = {
+					limit = {
+						capital_scope = { region = fahvanosy_region } 
+						culture_group = halfling
+					}
+					ROOT = { vassalize = PREV } 
+					capital_scope = { merfolk_spawn_modifier = yes } 
+				}
+			}
+			large_increase_of_halfling_tolerance_effect = yes
+			6632 = { merfolk_spawn_modifier = yes } 
+			5829 = { merfolk_spawn_modifier = yes } 
+			6626 = { merfolk_spawn_modifier = yes } 
+			add_country_modifier = {
+				name = "anbi_merfolk_small_trader_buff"
+				duration = 10950
+			}
+		}
+	}
+
+	anbi_merfolk_naga_small_mers = {
+		icon = mission_reliable_allies
+		position = 8
+		required_missions = {
+			anbi_merfolk_small_trader
+			anbi_merfolk_amphibious_city
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_province_flag = merfolk_settlement } 
+			OR = {
+				culture_group = lizardfolk
+				culture_group = halfling
+			}
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				culture_group = halfling
+				OR = {
+					has_province_modifier = offcoast_merfolk_ab3_2_level
+					has_province_modifier = offcoast_merfolk_ab3_3_level
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				culture_group = lizardfolk
+				OR = {
+					has_province_modifier = offcoast_merfolk_ab3_2_level
+					has_province_modifier = offcoast_merfolk_ab3_3_level
+				}
+			}
+			5898 = {
+				has_owner_accepted_culture = yes
+				owned_by = ROOT
+				has_province_flag = merfolk_settlement
+			}
+			5941 = {
+				has_owner_accepted_culture = yes
+				owned_by = ROOT
+				has_province_flag = merfolk_settlement
+			}
+			6599 = {
+				has_owner_accepted_culture = yes
+				owned_by = ROOT
+				has_province_flag = merfolk_settlement
+			}
+			OR = {
+				medium_tolerance_halfling_race_trigger = yes
+				high_tolerance_halfling_race_trigger = yes
+			}
+			OR = {
+				medium_tolerance_lizardfolk_race_trigger = yes
+				high_tolerance_lizardfolk_race_trigger = yes
+			}						
+			dip_power = 100
+		}
+
+		effect = {
+			add_dip_power = -100
+			large_increase_of_halfling_tolerance_effect = yes
+			large_increase_of_lizardfolk_tolerance_effect = yes
+			set_estate_privilege = anbi_merfolk_halfling_trader_and_cook
+			set_estate_privilege = anbi_merfolk_naga_mages
+		}
+	}
+
+	anbi_merfolk_monopoly_of_tropical_trade = {
+		icon = mission_conquer_andhra_bah
+		position = 10
+		required_missions = { anbi_merfolk_naga_small_mers } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1449
+				province_id = 1458
+				province_id = 3082
+				province_id = 3084
+			}
+		}
+
+		trigger = {
+			1449 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1458 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			3082 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			3084 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			OR = {
+				trader = 5
+				mercantilism = 35
+			}
+			num_of_voc_indiamen = 100
+		}
+
+		effect = {
+			add_mercantilism_excess_to_diplo_power_effect = { VAL = 15 } 
+			1449 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 50
+					key = anbi_merfolk_monopoly_of_tropical_trade_title
+				}
+				add_trade_node_income = 3
+			}
+			1458 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 50
+					key = anbi_merfolk_monopoly_of_tropical_trade_title
+				}
+				add_trade_node_income = 3
+			}
+			3082 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 50
+					key = anbi_merfolk_monopoly_of_tropical_trade_title
+				}
+				add_trade_node_income = 3
+			}
+			3084 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 50
+					key = anbi_merfolk_monopoly_of_tropical_trade_title
+				}
+				add_trade_node_income = 3
+			}
+			add_dip_power = 150
+		}
+	}
+}
+anbi_merfolk_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB3
+		has_country_flag = anbi_merfolk_start
+	}
+
+	anbi_merfolk_the_authority_of_mers = {
+		icon = mission_swear_fealty_knight
+		position = 1
+		provinces_to_highlight = { province_id = 6677 } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_merfolk_the_authority_of_mers_ctt
+				6677 = { has_province_modifier = offcoast_merfolk_ab3_1_level } 
+			}
+			stability = 1
+			army_size = 3
+		}
+
+		effect = {
+			country_event = { id = anbi_merfolk.11 } 
+			add_stability = 1
+		}
+	}
+
+	anbi_merfolk_human_friendship = {
+		icon = mission_alliances
+		position = 2
+		required_missions = { anbi_merfolk_the_authority_of_mers } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 6677
+				province_id = 6052
+			}
+		}
+
+		trigger = {
+			development_in_provinces = {
+				value = 50
+				OR = {
+					province_id = 6677
+					province_id = 6052
+				}
+			}
+			6677 = { NOT = { devastation = 1 }  } 
+			6052 = { NOT = { devastation = 1 }  } 
+		}
+
+		effect = {
+			6677 = { remove_province_modifier = anbi_AB3_the_exile_human } 
+			6052 = { remove_province_modifier = anbi_AB3_the_exile_human } 
+			add_ruler_modifier = {
+				name = "anbi_AB3_the_merfolk_queen"
+				duration = -1
+			}
+			change_estate_land_share = {
+				estate = all
+				share = 20
+			}
+			add_estate_loyalty = {
+				estate = all
+				loyalty = 20
+			}
+		}
+	}
+
+	anbi_merfolk_the_new_capital_city = {
+		icon = mission_eastern_european_city
+		position = 4
+		required_missions = { anbi_merfolk_human_friendship } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 6677
+				province_id = 6052
+			}
+		}
+
+		trigger = {
+			is_institution_enabled = renaissance
+			6677 = {
+				num_of_times_expanded_infrastructure = 1
+				has_tax_building_trigger = yes
+			}
+			6052 = {
+				num_of_times_expanded_infrastructure = 1
+				has_tax_building_trigger = yes
+			}
+			num_of_cities = 5
+			treasury = 100
+		}
+
+		effect = {
+			custom_tooltip = anbi_merfolk_the_new_capital_city_tt
+			set_country_flag = anbi_merfolk_settlement_skill_2
+			add_treasury = -100
+			6677 = {
+				remove_province_modifier = offcoast_merfolk_ab3_1_level
+				add_base_manpower = -1
+				add_base_production = 2
+				add_base_tax = -1
+				add_institution_embracement = {
+					which = renaissance
+					value = 50
+				}
+				add_province_modifier = {
+					name = "offcoast_merfolk_ab3_2_level"
+					duration = -1
+				}
+			}
+			6052 = {
+				remove_province_modifier = offcoast_merfolk_ab3_1_level
+				add_base_manpower = -1
+				add_base_production = 2
+				add_base_tax = -1
+				add_institution_embracement = {
+					which = renaissance
+					value = 50
+				}
+				add_province_modifier = {
+					name = "offcoast_merfolk_ab3_2_level"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	anbi_merfolk_the_tower_and_lizardfolk = {
+		icon = mission_sykar_riverclaw
+		position = 6
+		required_missions = { anbi_merfolk_the_hope_light } 
+		provinces_to_highlight = {
+			has_any_lizardfolk_pop_trigger = yes
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				has_any_lizardfolk_pop_trigger = yes
+			}
+			num_of_voc_indiamen = 30
+			num_of_marines = 10
+		}
+
+		effect = {
+			custom_tooltip = anbi_merfolk_the_tower_and_lizardfolk_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						province_group = dynamic_merfolk_region
+						superregion = taneyas_superregion
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			large_increase_of_lizardfolk_tolerance_effect = yes
+			add_country_modifier = {
+				name = "anbi_merfolk_the_tower_and_lizardfolk_buff"
+				duration = 10950
+			}
+		}
+	}
+
+	anbi_merfolk_amphibious_city = {
+		icon = mission_unite_coromandel
+		position = 7
+		required_missions = { anbi_merfolk_the_tower_and_lizardfolk } 
+		provinces_to_highlight = {
+			province_group = dynamic_merfolk_region
+			superregion = taneyas_superregion
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				province_group = dynamic_merfolk_region
+				superregion = taneyas_superregion
+			}
+			num_of_owned_provinces_with = {
+				value = 2
+				province_group = dynamic_merfolk_region
+				superregion = taneyas_superregion
+				province_has_center_of_trade_of_level = 2
+				has_province_flag = merfolk_settlement
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				has_province_modifier = offcoast_merfolk_ab3_2_level
+			}
+			treasury = 1000
+			OR = {
+				medium_tolerance_lizardfolk_race_trigger = yes
+				high_tolerance_lizardfolk_race_trigger = yes
+			}
+		}
+
+		effect = {
+			add_treasury = -1000
+			add_prestige_or_monarch_power = { amount = 50 } 
+			custom_tooltip = anbi_merfolk_amphibious_city_tt
+			set_country_flag = anbi_merfolk_settlement_skill_1
+			large_increase_of_lizardfolk_tolerance_effect = yes
+			6052 = {
+				add_lizardfolk_minority_size_effect = yes
+				add_lizardfolk_minority_size_effect = yes
+			}
+			6677 = { add_lizardfolk_minority_size_effect = yes } 
+			random_owned_province = {
+				limit = { has_province_modifier = anbi_merfolk_the_island_and_desert_buff } 
+				add_lizardfolk_minority_size_effect = yes
+			}
+		}
+	}
+
+	anbi_merfolk_great_construction = {
+		icon = mission_anbi_merfolk_city
+		position = 8
+		required_missions = { anbi_merfolk_amphibious_city } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 6052
+				province_id = 6677
+			}
+		}
+
+		trigger = {
+			6052 = {
+				development = 40
+				num_of_times_expanded_infrastructure = 2
+				province_has_center_of_trade_of_level = 3
+			}
+			6677 = {
+				development = 40
+				num_of_times_expanded_infrastructure = 2
+				province_has_center_of_trade_of_level = 2
+			}
+			sailors = 10000
+			max_sailors = 30000
+		}
+
+		effect = {
+			add_sailors = -10000
+			custom_tooltip = anbi_merfolk_great_construction_tt
+			set_country_flag = anbi_merfolk_settlement_skill_3
+			6052 = {
+				remove_province_modifier = offcoast_merfolk_ab3_2_level
+				add_province_modifier = {
+					name = "offcoast_merfolk_ab3_3_level"
+					duration = -1
+				}
+			}
+			6677 = {
+				remove_province_modifier = offcoast_merfolk_ab3_2_level
+				add_province_modifier = {
+					name = "offcoast_merfolk_ab3_3_level"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	anbi_merfolk_logistical_preparations = {
+		icon = mission_african_gold
+		position = 11
+		required_missions = {
+			anbi_merfolk_monopoly_of_tropical_trade
+			anbi_merfolk_great_construction
+			anbi_merfolk_the_empire_of_land_and_sea
+		}
+		provinces_to_highlight = {
+			NOT = {
+				owned_by = ROOT
+				has_province_flag = merfolk_settlement
+			}
+			OR = {
+				province_group = dynamic_merfolk_region
+				anbi_merfolk_settlement_expand_first = yes
+			}
+		}
+
+		trigger = {
+			monthly_income = 300
+			num_of_owned_provinces_with = {
+				value = 100
+				has_province_flag = merfolk_settlement
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				OR = {
+					has_province_modifier = offcoast_merfolk_ab3_2_level
+					has_province_modifier = offcoast_merfolk_ab3_3_level
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				has_province_modifier = offcoast_merfolk_ab3_3_level
+			}
+			stability = 3
+			NOT = { average_autonomy = 60 } 
+			religious_unity = 0.75
+			has_adm_advisor_3 = yes
+			has_dip_advisor_3 = yes
+			has_mil_advisor_3 = yes
+			NOT = { overextension_percentage = 0.01 } 
+		}
+
+		effect = {
+			hidden_effect = {
+				every_owned_province = {
+					add_local_autonomy = -25
+					add_nationalism = -10
+				}
+			}
+			add_country_modifier = {
+				name = "anbi_merfolk_logistical_preparations_buff"
+				duration = -1
+			}
+		}
+	}
+}
+anbi_merfolk_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB3
+		has_country_flag = anbi_merfolk_start
+	}
+
+	anbi_merfolk_the_hope_light = {
+		icon = mission_new_dawn
+		position = 5
+		required_missions = {
+			anbi_merfolk_crush_the_baddabi
+			anbi_merfolk_the_new_capital_city
+			anbi_merfolk_from_the_deepest_despair
+			anbi_merfolk_guryadagga_kingdom
+			anbi_merfolk_our_brothers_and_sisters
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = jasiir_jadid_region
+					NOT = {
+						has_province_modifier = offcoast_merfolk_ab3_1_level
+						has_province_modifier = offcoast_merfolk_ab3_2_level
+					}
+				}
+				AND = {
+					region = ardimya_region
+					NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				}
+			}
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				superregion = djinnakah_superregion
+				has_province_modifier = offcoast_merfolk_ab3_2_level
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 18
+				region = ardimya_region
+				is_city = yes
+			}
+			num_of_light_ship = 30
+			num_of_voc_indiamen = 15
+			num_of_marines = 8
+		}
+
+		effect = {
+			override_country_name = "AB3_renaissance"
+			set_government_rank = 2
+			djinnakah_superregion = { add_permanent_claim = ROOT } 
+			ringlet_isles_region = { add_permanent_claim = ROOT } 
+			custom_tooltip = anbi_merfolk_the_hope_light_tt2
+			hidden_effect = {
+				every_province = {
+					limit = { has_province_flag = merfolk_settlement } 
+					add_permanent_claim = ROOT
+				}
+			}
+			custom_tooltip = anbi_merfolk_the_hope_light_tt3
+			hidden_effect = {
+				S92 = {
+					every_owned_province = {
+						limit = { province_group = dynamic_merfolk_region } 
+						merfolk_spawn_modifier = yes
+					}
+				}
+			}
+			add_country_modifier = {
+				name = "anbi_merfolk_the_hope_light_buff"
+				duration = 10950
+			}
+			if = {
+				limit = { has_ruler_flag = anbi_is_gertyene } 
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+			}
+			custom_tooltip = anbi_merfolk_the_hope_light_tt
+			hidden_effect = {
+				country_event = {
+					id = anbi_merfolk.18
+					days = 30
+				}
+			}
+		}
+	}
+
+	anbi_merfolk_unify_baashidi = {
+		icon = mission_conquer_kannauj
+		position = 6
+		required_missions = { anbi_merfolk_the_hope_light } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					is_capital_of = S18
+					S18 = {
+						alliance_with = ROOT
+						NOT = {
+							has_opinion = {
+								who = ROOT
+								value = 180
+							}
+						}
+					}
+				}
+				AND = {
+					is_capital_of = S19
+					S19 = {
+						alliance_with = ROOT
+						NOT = {
+							has_opinion = {
+								who = ROOT
+								value = 180
+							}
+						}
+					}
+				}
+				AND = {
+					is_capital_of = S20
+					S20 = {
+						alliance_with = ROOT
+						NOT = {
+							has_opinion = {
+								who = ROOT
+								value = 180
+							}
+						}
+					}
+				}
+				AND = {
+					is_capital_of = S21
+					S21 = {
+						alliance_with = ROOT
+						NOT = {
+							has_opinion = {
+								who = ROOT
+								value = 180
+							}
+						}
+					}
+				}
+			}
+		}
+
+		trigger = {
+			army_size = 20
+			manpower_percentage = 0.5
+			OR = {
+				NOT = { alliance_with = S18 } 
+				AND = {
+					alliance_with = S18
+					S18 = {
+						has_opinion = {
+							who = ROOT
+							value = 140
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { alliance_with = S19 } 
+				AND = {
+					alliance_with = S19
+					S19 = {
+						has_opinion = {
+							who = ROOT
+							value = 140
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { alliance_with = S20 } 
+				AND = {
+					alliance_with = S20
+					S20 = {
+						has_opinion = {
+							who = ROOT
+							value = 140
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { alliance_with = S21 } 
+				AND = {
+					alliance_with = S21
+					S21 = {
+						has_opinion = {
+							who = ROOT
+							value = 140
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_merfolk_unify_baashidi_tt
+			hidden_effect = {
+				if = {
+					limit = { alliance_with = S18 } 
+					break_alliance = S18
+					remove_historical_friend = S18
+					S18 = {
+						add_opinion = {
+							who = ROOT
+							modifier = anbi_merfolk_wants_to_conquer
+						}
+						remove_historical_friend = ROOT
+						every_owned_province = {
+							limit = { superregion = djinnakah_superregion } 
+							add_territorial_core = ROOT
+						}
+						every_subject_country = {
+							every_owned_province = {
+								limit = { superregion = djinnakah_superregion } 
+								add_territorial_core = ROOT
+							}
+						}
+					}
+				}
+				if = {
+					limit = { alliance_with = S19 } 
+					break_alliance = S19
+					remove_historical_friend = S19
+					S19 = {
+						add_opinion = {
+							who = ROOT
+							modifier = anbi_merfolk_wants_to_conquer
+						}
+						remove_historical_friend = ROOT
+						every_owned_province = {
+							limit = { superregion = djinnakah_superregion } 
+							add_territorial_core = ROOT
+						}
+						every_subject_country = {
+							every_owned_province = {
+								limit = { superregion = djinnakah_superregion } 
+								add_territorial_core = ROOT
+							}
+						}
+					}
+				}
+				if = {
+					limit = { alliance_with = S20 } 
+					break_alliance = S20
+					remove_historical_friend = S20
+					S20 = {
+						add_opinion = {
+							who = ROOT
+							modifier = anbi_merfolk_wants_to_conquer
+						}
+						remove_historical_friend = ROOT
+						every_owned_province = {
+							limit = { superregion = djinnakah_superregion } 
+							add_territorial_core = ROOT
+						}
+						every_subject_country = {
+							every_owned_province = {
+								limit = { superregion = djinnakah_superregion } 
+								add_territorial_core = ROOT
+							}
+						}
+					}
+				}
+				if = {
+					limit = { alliance_with = S21 } 
+					break_alliance = S21
+					remove_historical_friend = S21
+					S21 = {
+						add_opinion = {
+							who = ROOT
+							modifier = anbi_merfolk_wants_to_conquer
+						}
+						remove_historical_friend = ROOT
+						every_owned_province = {
+							limit = { superregion = djinnakah_superregion } 
+							add_territorial_core = ROOT
+						}
+						every_subject_country = {
+							every_owned_province = {
+								limit = { superregion = djinnakah_superregion } 
+								add_territorial_core = ROOT
+							}
+						}
+					}
+				}
+			}
+			add_country_modifier = {
+				name = "anbi_merfolk_unify_baashidi_buff"
+				duration = 9125
+			}
+		}
+	}
+
+	anbi_merfolk_djinnakah = {
+		icon = mission_geainne
+		position = 8
+		required_missions = {
+			anbi_merfolk_amphibious_city
+			anbi_merfolk_unify_baashidi
+		}
+		provinces_to_highlight = {
+			superregion = djinnakah_superregion
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			djinnakah_superregion = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				superregion = djinnakah_superregion
+				has_province_modifier = offcoast_merfolk_ab3_2_level
+			}
+			S92 = {
+				is_subject_of = ROOT
+				has_opinion = {
+					who = ROOT
+					value = 190
+				}
+			}
+		}
+
+		effect = {
+			set_government_rank = 3
+			inherit = S92
+			custom_tooltip = anbi_merfolk_djinnakah_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = { superregion = djinnakah_superregion } 
+					remove_province_modifier = anbi_AB3_is_merfolk_state_province_buff
+				}
+			}
+			country_event = { id = anbi_merfolk.21 } 
+			custom_tooltip = EVENT_INSIGHT_INTRO
+			custom_tooltip = anbi_merfolk_djinnakah_tt2
+		}
+	}
+
+	anbi_merfolk_the_empire_of_land_and_sea = {
+		icon = mission_crown_of_sweden
+		position = 10
+		required_missions = { anbi_merfolk_djinnakah } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_merfolk_the_empire_of_land_and_sea_ctt
+				num_accepted_cultures = 10
+			}
+			num_accepted_cultures = 10
+			num_of_cities = 150
+			num_of_owned_provinces_with = {
+				value = 50
+				has_province_flag = merfolk_settlement
+				has_courthouse_building_trigger = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "anbi_merfolk_the_empire_of_land_and_sea_buff"
+				duration = -1
+			}
+			custom_tooltip = anbi_merfolk_the_empire_of_land_and_sea_tt
+			hidden_effect = {
+				taneyas_superregion = { remove_province_modifier = anbi_AB3_is_merfolk_state_province_buff } 
+				fahvanosy_region = { remove_province_modifier = anbi_AB3_is_merfolk_state_province_buff } 
+			}
+		}
+	}
+
+	anbi_merfolk_the_great_war = {
+		icon = mission_kirin
+		position = 12
+		required_missions = {
+			anbi_merfolk_logistical_preparations
+			anbi_merfolk_look_at_homeland
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3139
+				province_id = 1334
+			}
+		}
+
+		trigger = {
+			is_at_war = no
+			3139 = {
+				light_ships_in_province = 200
+			}
+			1334 = {
+				light_ships_in_province = 200
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_merfolk_the_great_war_tt
+			country_event = {
+				id = anbi_merfolk.101
+				days = 1
+			}
+		}
+	}
+}
+anbi_merfolk_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB3
+		has_country_flag = anbi_merfolk_start
+	}
+
+	anbi_merfolk_the_ship_and_fish = {
+		icon = mission_establish_high_seas_navy
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_voc_indiamen = 6
+			sailors = 250
+		}
+
+		effect = {
+			add_sailors = -250
+			add_country_modifier = {
+				name = "anbi_AB3_mers_fisher"
+				duration = 36500
+			}
+		}
+	}
+
+	anbi_merfolk_go_back_the_guryadagga = {
+		icon = mission_desert_rider
+		position = 2
+		required_missions = { anbi_merfolk_the_ship_and_fish } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					is_capital_of = S86
+					NOT = { S86 = { alliance_with = ROOT }  } 
+				}
+				AND = {
+					is_capital_of = S87
+					NOT = { S87 = { alliance_with = ROOT }  } 
+				}
+				AND = {
+					is_capital_of = S88
+					NOT = { S88 = { alliance_with = ROOT }  } 
+				}
+				AND = {
+					region = ardimya_region
+					is_city = no
+				}
+			}
+		}
+
+		trigger = {
+			ardimya_region = {
+				is_city = yes
+				owned_by = ROOT
+			}
+			OR = {
+				S86 = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				S87 = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				S88 = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+		}
+
+		effect = {
+			ardimya_region = {
+				add_permanent_province_modifier = {
+					name = "anbi_merfolk_go_back_the_guryadagga_buff"
+					duration = 18250
+				}
+			}
+		}
+	}
+
+	anbi_merfolk_the_island_and_desert = {
+		icon = mission_sw_against_the_desert
+		position = 3
+		required_missions = { anbi_merfolk_go_back_the_guryadagga } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 6086
+				province_id = 6087
+				province_id = 6068
+				province_id = 3232
+				province_id = 6061
+			}
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 2
+				region = ardimya_region
+				OR = {
+					province_id = 6086
+					province_id = 6087
+					province_id = 6068
+					province_id = 3232
+					province_id = 3233
+					province_id = 6061
+				}
+				is_city = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 3
+				region = ardimya_region
+				is_island = no
+				is_city = yes
+			}
+			ardimya_region = {
+				owned_by = ROOT
+				province_has_center_of_trade_of_level = 1
+			}
+			sailors = 1000
+		}
+
+		effect = {
+			add_sailors = -1000
+			add_mil_power = 100
+			custom_tooltip = anbi_merfolk_the_island_and_desert_tt
+			random_owned_province = {
+				limit = {
+					province_has_center_of_trade_of_level = 1
+					region = ardimya_region
+				}
+				add_colonysize = 1000
+				add_center_of_trade_level = 1
+				change_trade_goods = fish
+				add_province_modifier = {
+					name = "anbi_merfolk_the_island_and_desert_buff"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	anbi_merfolk_our_brothers_and_sisters = {
+		icon = mission_feast
+		position = 4
+		required_missions = { anbi_merfolk_the_island_and_desert } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 3258
+					NOT = {
+						AND = {
+							owned_by = ROOT
+							is_city = no
+						}
+					}
+				}
+				AND = {
+					province_id = 6138
+					NOT = {
+						AND = {
+							owned_by = ROOT
+							is_city = no
+						}
+					}
+				}
+			}
+		}
+
+		trigger = {
+			3258 = {
+				owned_by = ROOT
+				is_city = yes
+			}
+			6138 = {
+				owned_by = ROOT
+				is_city = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "anbi_merfolk_our_brothers_and_sisters_buff"
+				duration = 7300
+			}
+			hidden_effect = { country_event = { id = anbi_merfolk.16 }  } 
+		}
+	}
+
+	anbi_merfolk_defense_the_evil = {
+		icon = mission_corsairs_of_the_north_sea
+		position = 6
+		required_missions = { anbi_merfolk_the_hope_light } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				has_province_modifier = anbi_AB3_the_devils_looking
+				has_dock_building_trigger = yes
+			}
+			num_of_voc_indiamen = 50
+			dip_power = 100
+			years_of_income = 1
+			years_of_sailors = 1
+		}
+
+		effect = {
+			custom_tooltip = anbi_merfolk_defense_the_evil_tt
+			set_country_flag = anbi_merfolk_defense_the_evil_cf
+			add_dip_power = -100
+			add_years_of_income = -1
+			add_yearly_sailors = -1
+			custom_tooltip = anbi_merfolk_defense_the_evil_tt2
+			6052 = { set_province_flag = anbi_merfolk_defense_the_evil_pf } 
+			define_admiral = {
+				shock = 11
+				fire = 3
+				manuever = 7
+				siege = 6
+				trait = anbi_mage_admiral
+			}
+			add_country_modifier = {
+				name = "anbi_merfolk_defense_the_evil_buff"
+				duration = 36500
+			}
+		}
+	}
+
+	anbi_merfolk_island_defense = {
+		icon = mission_conquer_lithuania
+		position = 7
+		required_missions = { anbi_merfolk_defense_the_evil } 
+		provinces_to_highlight = {
+			OR = {
+				superregion = djinnakah_superregion
+				region = ringlet_isles_region
+			}
+			province_group = dynamic_merfolk_region
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					development = 10
+					has_province_modifier = offcoast_merfolk_ab3_1_level
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+				}
+			}
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				OR = {
+					province_id = 6086
+					province_id = 6087
+					province_id = 6068
+					province_id = 3232
+					province_id = 6061
+					province_id = 3233
+					region = ringlet_isles_region
+				}
+				province_group = dynamic_merfolk_region
+				development = 10
+				has_province_flag = merfolk_settlement
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+			}
+			sailors = 5000
+			treasury = 1000
+		}
+
+		effect = { 
+			random_owned_province = {
+				limit = {
+					OR = {
+						superregion = djinnakah_superregion
+						region = ringlet_isles_region
+					}
+					province_group = dynamic_merfolk_region
+					development = 10
+					has_province_flag = merfolk_settlement
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					NOT = {
+						has_province_modifier = anbi_merfolk_island_defense_buff
+					}
+				}
+				owner = {
+					add_sailors = -1000
+					add_treasury = -200
+				}						
+				if = {
+					limit = {
+						has_province_modifier = offcoast_merfolk_ab3_1_level
+					}
+					remove_province_modifier = offcoast_merfolk_ab3_1_level
+					add_province_modifier = {
+						name = offcoast_merfolk_ab3_2_level
+						duration = -1
+					}
+				}
+				else = {
+					owner = {
+						add_sailors = 500
+						add_treasury = 100
+					}							
+				}
+				add_permanent_province_modifier = {
+					name = anbi_merfolk_island_defense_buff
+					duration = -1
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						superregion = djinnakah_superregion
+						region = ringlet_isles_region
+					}
+					province_group = dynamic_merfolk_region
+					development = 10
+					has_province_flag = merfolk_settlement
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					NOT = {
+						has_province_modifier = anbi_merfolk_island_defense_buff
+					}
+				}
+				owner = {
+					add_sailors = -1000
+					add_treasury = -200
+				}						
+				if = {
+					limit = {
+						has_province_modifier = offcoast_merfolk_ab3_1_level
+					}
+					remove_province_modifier = offcoast_merfolk_ab3_1_level
+					add_province_modifier = {
+						name = offcoast_merfolk_ab3_2_level
+						duration = -1
+					}
+				}
+				else = {
+					owner = {
+						add_sailors = 500
+						add_treasury = 100
+					}							
+				}
+				add_permanent_province_modifier = {
+					name = anbi_merfolk_island_defense_buff
+					duration = -1
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						superregion = djinnakah_superregion
+						region = ringlet_isles_region
+					}
+					province_group = dynamic_merfolk_region
+					development = 10
+					has_province_flag = merfolk_settlement
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					NOT = {
+						has_province_modifier = anbi_merfolk_island_defense_buff
+					}
+				}
+				owner = {
+					add_sailors = -1000
+					add_treasury = -200
+				}						
+				if = {
+					limit = {
+						has_province_modifier = offcoast_merfolk_ab3_1_level
+					}
+					remove_province_modifier = offcoast_merfolk_ab3_1_level
+					add_province_modifier = {
+						name = offcoast_merfolk_ab3_2_level
+						duration = -1
+					}
+				}
+				else = {
+					owner = {
+						add_sailors = 500
+						add_treasury = 100
+					}							
+				}
+				add_permanent_province_modifier = {
+					name = anbi_merfolk_island_defense_buff
+					duration = -1
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						superregion = djinnakah_superregion
+						region = ringlet_isles_region
+					}
+					province_group = dynamic_merfolk_region
+					development = 10
+					has_province_flag = merfolk_settlement
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					NOT = {
+						has_province_modifier = anbi_merfolk_island_defense_buff
+					}
+				}
+				owner = {
+					add_sailors = -1000
+					add_treasury = -200
+				}						
+				if = {
+					limit = {
+						has_province_modifier = offcoast_merfolk_ab3_1_level
+					}
+					remove_province_modifier = offcoast_merfolk_ab3_1_level
+					add_province_modifier = {
+						name = offcoast_merfolk_ab3_2_level
+						duration = -1
+					}
+				}
+				else = {
+					owner = {
+						add_sailors = 500
+						add_treasury = 100
+					}							
+				}
+				add_permanent_province_modifier = {
+					name = anbi_merfolk_island_defense_buff
+					duration = -1
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						superregion = djinnakah_superregion
+						region = ringlet_isles_region
+					}
+					province_group = dynamic_merfolk_region
+					development = 10
+					has_province_flag = merfolk_settlement
+					has_dock_building_trigger = yes
+					has_shipyard_building_trigger = yes
+					NOT = {
+						has_province_modifier = anbi_merfolk_island_defense_buff
+					}
+				}
+				owner = {
+					add_sailors = -1000
+					add_treasury = -200
+				}						
+				if = {
+					limit = {
+						has_province_modifier = offcoast_merfolk_ab3_1_level
+					}
+					remove_province_modifier = offcoast_merfolk_ab3_1_level
+					add_province_modifier = {
+						name = offcoast_merfolk_ab3_2_level
+						duration = -1
+					}
+				}
+				else = {
+					owner = {
+						add_sailors = 500
+						add_treasury = 100
+					}							
+				}
+				add_permanent_province_modifier = {
+					name = anbi_merfolk_island_defense_buff
+					duration = -1
+				}
+			}
+			custom_tooltip = anbi_merfolk_island_defense_tt 
+		} 
+	}
+
+	anbi_merfolk_the_farthest_mers = {
+		icon = mission_rhine
+		position = 8
+		required_missions = { anbi_merfolk_island_defense } 
+		provinces_to_highlight = {
+			NOT = { owned_by = ROOT } 
+			region = ringlet_isles_region
+		}
+
+		trigger = {
+			OR = {
+				any_owned_province = {
+					superregion = rahen_superregion
+					has_port = yes
+				}
+				any_ally = {
+					capital_scope = { superregion = rahen_superregion } 
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+					num_of_total_ports = 1
+				}
+			}
+			OR = {
+				any_owned_province = {
+					superregion = vimdatrong_superregion
+					has_port = yes
+					NOT = { region = ringlet_isles_region } 
+				}
+				any_ally = {
+					capital_scope = {
+						superregion = vimdatrong_superregion
+						NOT = { region = ringlet_isles_region } 
+					}
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+					num_of_total_ports = 1
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 25
+				has_province_flag = merfolk_settlement
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				region = ringlet_isles_region
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_merfolk_the_farthest_mers_tt
+			random_province = {
+				limit = {
+					OR = {
+						owned_by = ROOT
+						owner = { alliance_with = ROOT } 
+					}
+					has_port = yes
+					superregion = rahen_superregion
+				}
+				merfolk_spawn_modifier = yes
+			}
+			random_province = {
+				limit = {
+					OR = {
+						owned_by = ROOT
+						owner = { alliance_with = ROOT } 
+					}
+					has_port = yes
+					superregion = vimdatrong_superregion
+					NOT = {
+						region = ringlet_isles_region
+					}
+				}
+				merfolk_spawn_modifier = yes
+			}
+			1343 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 50
+					key = anbi_merfolk_the_farthest_mers_desc2
+				}
+			}
+			1366 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 50
+					key = anbi_merfolk_the_farthest_mers_desc2
+				}
+			}
+			1361 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 50
+					key = anbi_merfolk_the_farthest_mers_desc2
+				}
+			}
+		}
+	}
+
+	anbi_merfolk_surround_the_evil = {
+		icon = mission_konkani_pirates
+		position = 9
+		required_missions = {
+			anbi_merfolk_the_farthest_mers
+			anbi_merfolk_land_army_research
+			anbi_merfolk_djinnakah
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5653
+				province_id = 6671
+				province_id = 6017
+				province_id = 6675
+				province_id = 6018
+				province_id = 6019
+				province_id = 6021
+				province_id = 6672
+				province_id = 6674
+				province_id = 6673
+				province_id = 6036
+				province_id = 6038
+				province_id = 6034
+				province_id = 6039
+				province_id = 6041
+				province_id = 6040
+				province_id = 6042
+				province_id = 6000
+				province_id = 6045
+				province_id = 6047
+				province_id = 6049
+				province_id = 6056
+				province_id = 6127
+				province_id = 6679
+				province_id = 6678
+			}
+			NOT = {
+				AND = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_merfolk_surround_the_evil_ctt
+				5653 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6671 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6017 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6675 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6018 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6019 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6021 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6672 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6674 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6673 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6036 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6038 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6034 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6039 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6041 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6040 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6042 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6000 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6045 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6047 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6049 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6056 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6127 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6679 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				6678 = {
+					infantry_in_province = 1
+					has_fort_building_trigger = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_merfolk_surround_the_evil_tt
+			tooltip = {
+				5653 = {
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				5653 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6671 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6017 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6675 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6018 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6019 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6021 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6672 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6674 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6673 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6036 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6038 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6034 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6039 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6041 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6040 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6042 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6000 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6045 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6047 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6049 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6056 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6127 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6679 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+				6678 = {
+					remove_province_modifier = anbi_AB3_the_devils_looking
+					add_province_modifier = {
+						name = "anbi_merfolk_surround_the_evil_buff"
+						duration = -1
+					}
+					kill_units = {
+						who = owner
+						type = infantry
+						amount = 3
+					}
+				}
+			}
+			djinnakah_superregion = {
+				limit = {
+					has_port = yes
+					NOT = { has_province_modifier = anbi_merfolk_surround_the_evil_buff } 
+				}
+				add_province_modifier = {
+					name = "anbi_merfolk_surround_the_evil_buff2"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	anbi_merfolk_look_at_homeland = {
+		icon = mission_stormy_seas
+		position = 11
+		required_missions = { anbi_merfolk_surround_the_evil } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_marines = 50
+			num_of_voc_indiamen = 200
+			has_flagship = yes
+			has_country_modifier = anbi_merfolk_logistical_preparations_buff
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "anbi_merfolk_look_at_homeland_buff"
+				duration = -1
+			}
+		}
+	}
+}
+anbi_merfolk_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB3
+		has_country_flag = anbi_merfolk_start
+	}
+
+	anbi_merfolk_unify_the_tribe = {
+		icon = mission_forest_pilgrim
+		position = 3
+		required_missions = { anbi_merfolk_go_back_the_guryadagga } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					is_capital_of = S86
+					NOT = { S86 = { alliance_with = ROOT }  } 
+				}
+				AND = {
+					is_capital_of = S87
+					NOT = { S87 = { alliance_with = ROOT }  } 
+				}
+				AND = {
+					is_capital_of = S88
+					NOT = { S88 = { alliance_with = ROOT }  } 
+				}
+			}
+		}
+
+		trigger = {
+			calc_true_if = {
+				amount = 2
+				S86 = {
+					alliance_with = ROOT
+					has_opinion = {
+						who = ROOT
+						value = 160
+					}
+				}
+				S87 = {
+					alliance_with = ROOT
+					has_opinion = {
+						who = ROOT
+						value = 160
+					}
+				}
+				S88 = {
+					alliance_with = ROOT
+					has_opinion = {
+						who = ROOT
+						value = 160
+					}
+				}
+			}
+		}
+
+		effect = {
+			S86 = {
+				create_alliance = S87
+				create_alliance = S88
+				add_historical_friend_mutual = { tag = S87 } 
+				add_historical_friend_mutual = { tag = S88 } 
+			}
+			S87 = {
+				create_alliance = S88
+				add_historical_friend_mutual = { tag = S86 } 
+				add_historical_friend_mutual = { tag = S88 } 
+			}
+			S88 = {
+				add_historical_friend_mutual = { tag = S86 } 
+				add_historical_friend_mutual = { tag = S87 } 
+			}
+			add_country_modifier = {
+				name = "anbi_merfolk_unify_the_tribe_buff"
+				duration = 7300
+			}
+		}
+	}
+
+	anbi_merfolk_guryadagga_kingdom = {
+		icon = mission_empire
+		position = 4
+		required_missions = { anbi_merfolk_unify_the_tribe } 
+		provinces_to_highlight = {
+			region = ardimya_region
+			is_city = no
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				region = ardimya_region
+				is_city = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 3
+				region = ardimya_region
+				has_port = no
+				is_city = yes
+			}
+			OR = {
+				NOT = { exists = S86 } 
+				AND = {
+					S86 = {
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
+						alliance_with = ROOT
+					}
+				}
+			}
+			OR = {
+				NOT = { exists = S87 } 
+				AND = {
+					S87 = {
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
+						alliance_with = ROOT
+					}
+				}
+			}
+			OR = {
+				NOT = { exists = S88 } 
+				AND = {
+					S88 = {
+						has_opinion = {
+							who = ROOT
+							value = 180
+						}
+						alliance_with = ROOT
+					}
+				}
+			}
+		}
+
+		effect = {
+			hidden_effect = {
+				S86 = {
+					every_owned_province = {
+						kill_units = { who = owner } 
+						add_permanent_province_modifier = {
+							name = "anbi_AB3_annex_land_buff"
+							duration = 1
+						}
+					}
+				}
+				S87 = {
+					every_owned_province = {
+						kill_units = { who = owner } 
+						add_permanent_province_modifier = {
+							name = "anbi_AB3_annex_land_buff"
+							duration = 1
+						}
+					}
+				}
+				S88 = {
+					every_owned_province = {
+						kill_units = { who = owner } 
+						add_permanent_province_modifier = {
+							name = "anbi_AB3_annex_land_buff"
+							duration = 1
+						}
+					}
+				}
+			}
+			anb_add_accepted_culture_or_dip_power = {
+				culture = guryadagga
+				free = yes
+			}
+			inherit = S86
+			inherit = S87
+			inherit = S88
+			custom_tooltip = anbi_merfolk_guryadagga_kingdom_ct
+			set_country_flag = anbi_merfolk_guryadagga_kingdom_cf
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = ardimya_region
+						OR = {
+							has_province_modifier = anbi_AB3_annex_land_buff
+							has_port = no
+						}
+					}
+					add_core = S92
+					cede_province = S92
+				}
+				create_subject = {
+					subject_type = twin_empire
+					who = S92
+				}
+				
+				S92 = {
+					6584 = {
+						add_core = S92
+						cede_province = S92
+						move_capital_effect = yes
+					}
+					change_government = monarchy
+					merfolk_discover = yes
+					add_country_modifier = {
+						name = "anbi_AB3_S92_buff"
+						duration = -1
+					}
+					set_country_flag = merfolk_opinion_allied
+					set_variable = {
+						which = merfolkOpinionVar
+						value = 100
+					}
+					set_country_flag = anbi_ab3_is_merfolk_country
+				}
+			}
+		}
+	}
+
+	anbi_merfolk_as_rising_sun = {
+		icon = mission_fleet
+		position = 7
+		required_missions = { anbi_merfolk_defense_the_evil } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_flagship = yes
+			num_of_voc_indiamen = 75
+			naval_forcelimit = 200
+			years_of_sailors = 1
+			max_sailors = 12000
+			treasury = 1000
+			num_of_owned_provinces_with = {
+				value = 50
+				has_dock_building_trigger = yes
+			}
+			has_country_modifier = anbi_merfolk_flagship_modifier
+			has_country_modifier = anbi_merfolk_sunchaser_modifier
+		}
+
+		effect = {
+			add_yearly_sailors = -1
+			add_treasury = -1000
+			add_country_modifier = {
+				name = "anbi_merfolk_as_rising_sun_buff1"
+				duration = -1
+			}
+			add_country_modifier = {
+				name = "anbi_merfolk_as_rising_sun_buff2"
+				duration = -1
+			}
+		}
+	}
+
+	anbi_merfolk_land_army_research = {
+		icon = mission_pf_soldier
+		position = 8
+		required_missions = { anbi_merfolk_as_rising_sun } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			culture_group = baashidi
+			NOT = {
+				AND = {
+					has_manpower_building_trigger = yes
+					has_forcelimit_building_trigger = yes
+				}
+			}
+		}
+
+		trigger = {
+			any_owned_province = { has_any_halfling_pop_trigger = yes } 
+			any_owned_province = { has_any_lizardfolk_pop_trigger = yes } 
+			OR = {
+				medium_tolerance_lizardfolk_race_trigger = yes
+				high_tolerance_lizardfolk_race_trigger = yes
+			}
+			OR = {
+				medium_tolerance_halfling_race_trigger = yes
+				high_tolerance_halfling_race_trigger = yes
+			}
+			num_of_marines = 20
+			num_of_artillery = 20
+			num_of_owned_provinces_with = {
+				value = 25
+				has_manpower_building_trigger = yes
+				culture_group = baashidi
+			}
+			num_of_owned_provinces_with = {
+				value = 25
+				has_forcelimit_building_trigger = yes
+				culture_group = baashidi
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_merfolk_land_army_research_tt
+			clr_country_flag = disables_estate_adeen_flag
+			country_event = { 
+				id = estate_adeen.1 
+				days = 5
+			} 
+			set_estate_privilege = anbi_merfolk_lizardfolk_land_army
+			set_estate_privilege = anbi_merfolk_halfling_land_army
+		}
+	}
+}
+anbi_merfolk_1_win = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB3
+		has_country_flag = anbi_merfolk_start
+		has_country_flag = anbi_merfolk_winwar
+	}
+
+	anbi_merfolk_the_heaven_of_ours = {
+		icon = mission_magisterium_fold_one
+		position = 14
+		required_missions = { anbi_merfolk_the_great_war_win } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				has_province_modifier = offcoast_merfolk_ab3_3_level
+				province_has_center_of_trade_of_level = 3
+				development = 40
+			}
+			sailors = 30000
+			treasury = 25000
+		}
+
+		effect = {
+			random_owned_province = {
+				limit = {
+					has_province_modifier = offcoast_merfolk_ab3_3_level
+					province_has_center_of_trade_of_level = 3
+					development = 40
+				}
+				remove_province_modifier = offcoast_merfolk_ab3_3_level
+				add_province_modifier = {
+					name = offcoast_merfolk_ab3_great_level
+					duration = -1
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_modifier = offcoast_merfolk_ab3_3_level
+					province_has_center_of_trade_of_level = 3
+					development = 40
+				}
+				remove_province_modifier = offcoast_merfolk_ab3_3_level
+				add_province_modifier = {
+					name = offcoast_merfolk_ab3_great_level
+					duration = -1
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_modifier = offcoast_merfolk_ab3_3_level
+					province_has_center_of_trade_of_level = 3
+					development = 40
+				}
+				remove_province_modifier = offcoast_merfolk_ab3_3_level
+				add_province_modifier = {
+					name = offcoast_merfolk_ab3_great_level
+					duration = -1
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_modifier = offcoast_merfolk_ab3_3_level
+					province_has_center_of_trade_of_level = 3
+					development = 40
+				}
+				remove_province_modifier = offcoast_merfolk_ab3_3_level
+				add_province_modifier = {
+					name = offcoast_merfolk_ab3_great_level
+					duration = -1
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_modifier = offcoast_merfolk_ab3_3_level
+					province_has_center_of_trade_of_level = 3
+					development = 40
+				}
+				remove_province_modifier = offcoast_merfolk_ab3_3_level
+				add_province_modifier = {
+					name = offcoast_merfolk_ab3_great_level
+					duration = -1
+				}
+			}
+			set_country_flag = anbi_merfolk_settlement_skill_4
+			custom_tooltip = anbi_merfolk_the_heaven_of_ours_tt
+			add_sailors = -30000
+			add_treasury = -25000
+		}
+	}
+
+	anbi_merfolk_the_dance_of_all = {
+		icon = mission_science
+		position = 15
+		required_missions = { anbi_merfolk_the_heaven_of_ours } 
+		provinces_to_highlight = {  			
+		} 
+
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 5
+				has_province_modifier = offcoast_merfolk_ab3_great_level
+				culture_group = baashidi
+				OR = {
+					has_building = university
+					has_building = mage_tower
+				}
+				has_fort_building_trigger = yes
+				has_production_building_trigger = yes
+			}
+			OR = {
+				innovativeness = 50
+				has_estate = estate_artificers
+			}
+		} 
+
+		effect = {  
+			add_government_reform = anbi_merfolk_artificers_government
+			if = {
+				limit = { 
+					NOT = {
+						has_estate = estate_artificers
+					}
+				}
+				country_event = {
+					id = magic_artificery_setup.1
+				}
+			}
+			else = {
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+			}
+		} 
+	}
+
+	anbi_merfolk_up_and_down = {
+		icon = mission_harem
+		position = 16
+		required_missions = { anbi_merfolk_the_dance_of_all } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			monthly_income = 1000
+			treasury = 20000
+			naval_forcelimit = 1500
+			max_sailors = 250000
+			sailors = 200000
+			num_of_voc_indiamen = 750
+			num_artifice_inventions_discovered = { VAL = 3 }
+		} 
+
+		effect = {  
+			add_sailors = -200000
+			add_treasury = -20000
+			custom_tooltip = anbi_merfolk_up_and_down_tt
+			set_country_flag = anbi_merfolk_shipgirl_reserach_menu_cf
+			hidden_effect = {
+				set_variable = {
+					which = anbi_merfolk_shipgirls_tech_investment
+					value = 0
+				}
+				set_variable = {
+					which = anbi_merfolk_shipgirls_cash_investment
+					value = 0
+				}
+				set_variable = {
+					which = anbi_merfolk_shipgirls_sailors_investment
+					value = 0
+				}
+				set_variable = {
+					which = anbi_merfolk_shipgirls_power_investment
+					value = 0
+				}
+				set_variable = {
+					which = anbi_merfolk_shipgirls_speed
+					value = 0
+				}
+				set_variable = {
+					which = anbi_merfolk_shipgirls_progress
+					value = 0
+				}
+				capital_scope = {
+					add_province_triggered_modifier = anbi_merfolk_shipgirls_research
+				}				
+				set_country_flag = anbi_merfolk_ShipGirlsTheory_doing
+			}			
+		} 
+	}
+
+	anbi_merfolk_the_dreamful_city = {
+		icon = mission_anbi_merfolk_ship_girls
+		position = 17
+		required_missions = { anbi_merfolk_up_and_down } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = anbi_merfolk_the_dreamful_city_ctt
+				OR = {
+					has_country_flag = anbi_merfolk_shipgirl_research_complete
+					mission_completed = anbi_merfolk_the_dreamful_city
+				}				
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = anbi_merfolk_the_dreamful_city_tt
+		} 
+	}
+}
+anbi_merfolk_2_win = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB3
+		has_country_flag = anbi_merfolk_start
+		has_country_flag = anbi_merfolk_winwar
+	}
+
+	anbi_merfolk_the_crown_of_small_and_lizardfolk = {
+		icon = mission_apostolic_kingdom
+		position = 15
+		required_missions = { anbi_merfolk_take_a_look } 
+		provinces_to_highlight = {
+			OR = {
+				superregion = taneyas_superregion
+				region = fahvanosy_region
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				AND = {
+					OR = {
+						province_group = dynamic_merfolk_region
+						custom_trigger_tooltip = {
+							tooltip = anbi_merfolk_settlement_expand_first_tt
+							anbi_merfolk_settlement_expand_first = yes
+						}
+					}
+					NOT = {
+						has_province_flag = merfolk_settlement
+					}					
+				}
+			}			
+		}
+
+		trigger = {
+			taneyas_superregion = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			fahvanosy_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			fahvanosy_region = {
+				type = all
+				OR = {
+					AND = {
+						OR = {
+							province_group = dynamic_merfolk_region
+							custom_trigger_tooltip = {
+								tooltip = anbi_merfolk_settlement_expand_first_tt
+								anbi_merfolk_settlement_expand_first = yes
+							}
+						}
+						has_province_flag = merfolk_settlement
+					}
+					NOT = {
+						province_group = dynamic_merfolk_region
+						custom_trigger_tooltip = {
+							tooltip = anbi_merfolk_settlement_expand_first_tt2
+							anbi_merfolk_settlement_expand_first = yes
+						}
+					}
+				}
+			}
+			taneyas_superregion = {
+				type = all
+				OR = {
+					AND = {
+						OR = {
+							province_group = dynamic_merfolk_region
+							custom_trigger_tooltip = {
+								tooltip = anbi_merfolk_settlement_expand_first_tt
+								anbi_merfolk_settlement_expand_first = yes
+							}
+						}
+						has_province_flag = merfolk_settlement
+					}
+					NOT = {
+						province_group = dynamic_merfolk_region
+						custom_trigger_tooltip = {
+							tooltip = anbi_merfolk_settlement_expand_first_tt2
+							anbi_merfolk_settlement_expand_first = yes
+						}
+					}
+				}
+			}
+			high_tolerance_halfling_race_trigger = yes
+			high_tolerance_lizardfolk_race_trigger = yes
+			num_accepted_cultures = 15
+		}
+
+		effect = {
+			custom_tooltip = anbi_merfolk_the_crown_of_small_and_lizardfolk_tt
+			custom_tooltip = anbi_merfolk_the_crown_of_small_and_lizardfolk_tt2
+			set_country_flag = anbi_merfolk_settlement_skill_2_up
+			add_country_modifier = {
+				name = "anbi_merfolk_the_crown_of_small_and_lizardfolk_buff"
+				duration = -1
+			}
+		}
+	}
+
+	anbi_merfolk_the_coast_of_merfolk = {
+		icon = mission_invade_island
+		position = 16
+		required_missions = { anbi_merfolk_the_crown_of_small_and_lizardfolk } 
+		provinces_to_highlight = {
+			OR = {
+				anbi_merfolk_settlement_expand_first = yes
+				province_group = dynamic_merfolk_region
+			}
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					has_province_flag = merfolk_settlement
+				}
+			}
+		}
+
+		trigger = {
+			all_province = {
+				OR = {
+					AND = {
+						OR = {
+							province_group = dynamic_merfolk_region
+							custom_trigger_tooltip = {
+								tooltip = anbi_merfolk_settlement_expand_first_tt
+								anbi_merfolk_settlement_expand_first = yes
+							}
+						}
+						has_province_flag = merfolk_settlement
+						owned_by = ROOT
+					}
+					NOT = {
+						province_group = dynamic_merfolk_region
+						custom_trigger_tooltip = {
+							tooltip = anbi_merfolk_settlement_expand_first_tt
+							anbi_merfolk_settlement_expand_first = yes
+						}
+					}
+				}
+				
+			}
+			num_of_owned_provinces_with = {
+				value = 100
+				OR = {
+					has_province_modifier = offcoast_merfolk_ab3_2_level
+					has_province_modifier = offcoast_merfolk_ab3_3_level
+					has_province_modifier = offcoast_merfolk_ab3_great_level
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					has_province_modifier = offcoast_merfolk_ab3_3_level
+					has_province_modifier = offcoast_merfolk_ab3_great_level
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_merfolk_the_coast_of_merfolk_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_province_flag = merfolk_settlement
+						has_province_modifier = offcoast_merfolk_ab3_1_level
+					}
+					remove_province_modifier = offcoast_merfolk_ab3_1_level
+					add_province_modifier = {
+						name = "offcoast_merfolk_ab3_2_level"
+						duration = -1
+					}
+				}
+			}
+			add_country_modifier = {
+				name = "anbi_merfolk_the_coast_of_merfolk_buff"
+				duration = -1
+			}
+		}
+	}
+
+	anbi_merfolk_the_mers_in_cannor = {
+		icon = mission_lencenor
+		position = 18
+		required_missions = {
+			anbi_merfolk_the_coast_of_merfolk
+			anbi_merfolk_the_dreamful_city
+		}
+		provinces_to_highlight = {  
+			has_terrain = city_terrain
+			has_port = yes
+			continent = europe
+			NOT = {
+				owned_by = ROOT
+			}
+		} 
+
+		trigger = {  
+			any_owned_province = {
+				has_terrain = city_terrain
+				has_port = yes
+				continent = europe
+				development = 40
+				province_has_center_of_trade_of_level = 3
+			}
+			sailors = 250000
+		} 
+
+		effect = {  
+			custom_tooltip = anbi_merfolk_the_mers_in_cannor_tt
+			add_sailors = -250000
+			random_owned_province = {
+				limit = {
+					has_terrain = city_terrain
+					has_port = yes
+					continent = europe
+					development = 40
+					province_has_center_of_trade_of_level = 3
+				}
+				set_province_flag = merfolk_settlement
+				add_province_modifier = {
+					name = offcoast_merfolk_ab3_3_level
+					duration = -1
+				}
+			}
+		} 
+	}
+}
+anbi_merfolk_3_win = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB3
+		has_country_flag = anbi_merfolk_start
+		has_country_flag = anbi_merfolk_winwar
+	}
+
+	anbi_merfolk_the_great_war_win = {
+		icon = kingdom_of_heaven
+		position = 13
+		required_missions = { anbi_merfolk_the_great_war } 
+		provinces_to_highlight = {  } 
+
+		trigger = { custom_trigger_tooltip = { tooltip = anbi_merfolk_the_great_war_win_ctt }  } 
+
+		effect = { add_prestige_or_monarch_power = { amount = 100 }  } 
+	}
+
+	anbi_merfolk_take_a_look = {
+		icon = mission_gnomish_ship
+		position = 14
+		required_missions = { anbi_merfolk_the_great_war_win } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_voc_indiamen = 300
+			dip_power = 150
+			capital_scope = { light_ships_in_province = 100 } 
+		}
+
+		effect = {
+			capital_scope = {
+				kill_units = {
+					who = owner
+					type = light_ship
+					amount = 100
+				}
+			}
+			add_dip_power = -150
+			add_country_modifier = {
+				name = "anbi_merfolk_take_a_look_buff"
+				duration = 36500
+			}
+		}
+	}
+
+	anbi_merfolk_our_cousin = {
+		icon = mission_kheionai_laskaris
+		position = 15
+		required_missions = { anbi_merfolk_take_a_look } 
+		provinces_to_highlight = {
+			continent = south_america
+			OR = {
+				is_city = yes
+				is_empty = yes
+			}
+			is_sea = no
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				continent = south_america
+			}
+			calc_true_if = {
+				amount = 2
+				all_subject_country = {
+					capital_scope = { continent = south_america } 
+					is_colonial_nation = yes
+				}
+			}
+		}
+
+		effect = {
+			taychend_superregion = { add_permanent_claim = ROOT } 
+			largest_increase_of_ruinborn_tolerance_effect = yes
+			every_subject_country = { largest_increase_of_ruinborn_tolerance_effect = yes } 
+			custom_tooltip = anbi_merfolk_our_cousin_tt
+		}
+	}
+
+	anbi_merfolk_conquer_south_alentir = {
+		icon = mission_taychend_nanru_nakar_city
+		position = 16
+		required_missions = { anbi_merfolk_our_cousin } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					superregion = taychend_superregion
+					owned_by = G52
+				}
+				all_capital_provinces = { owner = { religion_group = taychendi }  } 
+			}
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 100
+				superregion = taychend_superregion
+			}
+			NOT = {
+				G52 = { any_owned_province = { superregion = taychend_superregion }  } 
+				any_known_country = { religion_group = taychendi } 
+			}
+		}
+
+		effect = {
+			largest_increase_of_ruinborn_tolerance_effect = yes
+			custom_tooltip = anbi_merfolk_conquer_south_alentir_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						superregion = taychend_superregion
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					add_core = J84
+					cede_province = J84
+				}
+				create_subject = {
+					subject_type = twin_empire
+					who = J84
+				}
+				J84 = {
+					change_government = monarchy
+					set_country_flag = merfolk_opinion_allied
+					set_variable = {
+						which = merfolkOpinionVar
+						value = 100
+					}
+					set_country_flag = anbi_ab3_is_merfolk_country
+					add_liberty_desire = -100
+				}
+				every_province = {
+					limit = {
+						superregion = taychend_superregion
+						has_port = yes
+					}
+					set_province_flag = merfolk_settlement
+					add_province_modifier = {
+						name = "offcoast_merfolk_allied"
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = anbi_merfolk_conquer_south_alentir_tt2
+		}
+	}
+
+	anbi_merfolk_the_mers_is_greatest_elven = {
+		icon = mission_elf_smiling
+		position = 17
+		required_missions = { anbi_merfolk_conquer_south_alentir } 
+		provinces_to_highlight = {
+			culture_group = elven
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				has_any_ruinborn_pop_trigger = yes
+				has_province_flag = merfolk_settlement
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				culture_group = elven
+			}
+		}
+
+		effect = {
+			largest_increase_of_elven_tolerance_effect = yes
+			capital_scope = {
+				add_elven_minority_size_effect = yes
+				add_elven_minority_size_effect = yes
+			}
+			set_estate_privilege = anbi_merfolk_the_great_elven_is_merfolks
+			custom_tooltip = anbi_merfolk_the_mers_is_greatest_elven_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						OR = {
+							culture_is_elven = yes
+							culture_is_ruinborn = yes
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	anbi_merfolk_the_world_of_mers = {
+		icon = mission_lantern_festival
+		position = 19
+		required_missions = {
+			anbi_merfolk_the_mers_is_greatest_elven
+			anbi_merfolk_the_mers_in_cannor
+			anbi_merfolk_storm_sea
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			naval_forcelimit = 8000
+			sailors = 1000000
+			num_of_owned_provinces_with = {
+				value = 20
+				has_province_modifier = offcoast_merfolk_ab3_great_level
+			}
+		} 
+
+		effect = {  
+			add_sailors = -1000000
+			custom_tooltip = anbi_merfolk_the_world_of_mers_tt
+			hidden_effect = {
+				every_country = {
+					set_country_flag = anbi_ab3_is_merfolk_country
+					set_variable = { which = merfolkOpinionVar value = 100 }
+					set_country_flag = merfolk_opinion_allied
+				}
+				every_province = {
+					limit = {
+						has_port = yes
+					}
+					set_province_flag = merfolk_settlement
+					merfolk_spawn_modifier = yes
+				}
+			}			
+		} 
+	}
+}
+anbi_merfolk_4_win = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB3
+		has_country_flag = anbi_merfolk_start
+		has_country_flag = anbi_merfolk_winwar
+	}
+
+	anbi_merfolk_go_to_the_haless = {
+		icon = mission_tianlou
+		position = 15
+		required_missions = { anbi_merfolk_take_a_look } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			sailors = 100000
+			treasury = 2500
+			dip_power = 100
+			OR = {
+				has_estate = estate_artificers
+				natural_scientist = 5
+			}
+		} 
+
+		effect = {  
+			add_sailors = -100000
+			add_treasury = -2500
+			add_dip_power = -100
+			custom_tooltip = anbi_merfolk_go_to_the_haless_tt
+			set_country_flag = anbi_merfolk_settlement_expand_haless
+			hidden_effect = {
+				4964 = {
+					add_permanent_claim = ROOT
+				}
+				4716 = {
+					add_permanent_claim = ROOT
+				}
+				4962 = {
+					add_permanent_claim = ROOT
+				}
+				4701 = {
+					add_permanent_claim = ROOT
+				}
+				4576 = {
+					add_permanent_claim = ROOT
+				}
+				4570 = {
+					add_permanent_claim = ROOT
+				}
+				4420 = {
+					add_permanent_claim = ROOT
+				}
+				4557 = {
+					add_permanent_claim = ROOT
+				}
+				4380 = {
+					add_permanent_claim = ROOT
+				}
+				4367 = {
+					add_permanent_claim = ROOT
+				}
+				4955 = {
+					add_permanent_claim = ROOT
+				}
+			}
+		} 
+	}
+
+	anbi_merfolk_tianlou_and_shuimu = {
+		icon = mission_duel_snow
+		position = 16
+		required_missions = { anbi_merfolk_go_to_the_haless } 
+		provinces_to_highlight = {  
+			anbi_merfolk_settlement_expand_haless = yes
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					has_province_flag = merfolk_settlement
+				}
+			}
+		} 
+
+		trigger = {  
+			4964 = {
+				owned_by = ROOT
+				has_province_flag = merfolk_settlement
+			}
+			4716 = {
+				owned_by = ROOT
+				has_province_flag = merfolk_settlement
+			}
+			4962 = {
+				owned_by = ROOT
+				has_province_flag = merfolk_settlement
+			}
+			4701 = {
+				owned_by = ROOT
+				has_province_flag = merfolk_settlement
+			}
+			4576 = {
+				owned_by = ROOT
+				has_province_flag = merfolk_settlement
+			}
+			4570 = {
+				owned_by = ROOT
+				has_province_flag = merfolk_settlement
+			}
+			4420 = {
+				owned_by = ROOT
+				has_province_flag = merfolk_settlement
+			}
+			4557 = {
+				owned_by = ROOT
+				has_province_flag = merfolk_settlement
+			}
+			4380 = {
+				owned_by = ROOT
+				has_province_flag = merfolk_settlement
+			}
+			4367 = {
+				owned_by = ROOT
+				has_province_flag = merfolk_settlement
+			}
+			4955 = {
+				owned_by = ROOT
+				has_province_flag = merfolk_settlement
+			}
+			sailors = 250000
+			has_estate = estate_artificers
+			natural_scientist = 5
+			num_of_owned_provinces_with = {
+				value = 200
+				has_province_flag = merfolk_settlement
+			}
+			OR = {
+				has_country_modifier = anbi_AB3_the_water_kingdom_2
+				has_country_modifier = anbi_AB3_the_water_kingdom_3
+				has_country_modifier = anbi_AB3_the_water_kingdom_4
+			}
+		} 
+
+		effect = {  
+			add_sailors = -250000
+			add_country_modifier = {
+				name = anbi_merfolk_tianlou_and_shuimu_buff
+				duration = -1
+			}
+			set_country_flag = anbi_merfolk_settlement_expand_yansheni
+			custom_tooltip = anbi_merfolk_tianlou_and_shuimu_tt
+			hidden_effect = {
+				4839 = {
+					add_permanent_claim = ROOT
+				}
+				4884 = {
+					add_permanent_claim = ROOT
+				}
+				4879 = {
+					add_permanent_claim = ROOT
+				}
+				4871 = {
+					add_permanent_claim = ROOT
+				}
+				4925 = {
+					add_permanent_claim = ROOT
+				}
+				5356 = {
+					add_permanent_claim = ROOT
+				}
+				5354 = {
+					add_permanent_claim = ROOT
+				}
+				5419 = {
+					add_permanent_claim = ROOT
+				}
+				4990 = {
+					add_permanent_claim = ROOT
+				}
+			}
+		} 
+	}
+
+	anbi_merfolk_storm_sea = {
+		icon = mission_haless_map
+		position = 18
+		required_missions = {
+			anbi_merfolk_tianlou_and_shuimu
+			anbi_merfolk_the_haless_port
+		}
+		provinces_to_highlight = {  
+			OR = {
+				anbi_merfolk_settlement_expand_haless = yes
+				anbi_merfolk_settlement_expand_yansheni = yes
+			}
+			OR = {
+				NOT = {
+					has_province_modifier = offcoast_merfolk_ab3_3_level
+					has_province_modifier = offcoast_merfolk_ab3_great_level
+				}
+				NOT = {
+					owned_by = ROOT
+				}
+			}			
+		} 
+
+		trigger = {  
+			num_of_owned_provinces_with = {
+				value = 5
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = anbi_merfolk_settlement_expand_haless_tt
+						anbi_merfolk_settlement_expand_haless = yes
+					}
+					custom_trigger_tooltip = {
+						tooltip = anbi_merfolk_settlement_expand_yansheni_tt
+						anbi_merfolk_settlement_expand_yansheni = yes
+					}
+				}
+				OR = {
+					has_province_modifier = offcoast_merfolk_ab3_3_level
+					has_province_modifier = offcoast_merfolk_ab3_great_level
+				}
+			}
+			sailors = 250000
+		} 
+
+		effect = {  
+			add_sailors = -250000
+			custom_tooltip = anbi_merfolk_storm_sea_tt
+			set_country_flag = anbi_merfolk_settlement_skill_3_up
+			set_country_flag = anbi_merfolk_settlement_skill_4_up
+		} 
+	}
+}
+anbi_merfolk_5_win = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = AB3
+		has_country_flag = anbi_merfolk_start
+		has_country_flag = anbi_merfolk_winwar
+	}
+
+	anbi_merfolk_rebuild_the_kingdom = {
+		icon = mission_anbi_merfolk_city
+		position = 14
+		required_missions = { anbi_merfolk_the_great_war_win } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 6675
+				province_id = 6678
+				province_id = 6679
+			}
+			NOT = { has_province_flag = merfolk_settlement } 
+		}
+
+		trigger = {
+			sailors = 100000
+			treasury = 10000
+			monthly_income = 200
+			6675 = { has_province_flag = merfolk_settlement } 
+			6678 = { has_province_flag = merfolk_settlement } 
+			6679 = { has_province_flag = merfolk_settlement } 
+		}
+
+		effect = {
+			add_sailors = -100000
+			add_treasury = -10000
+			country_event = { id = anbi_merfolk.24 } 
+			custom_tooltip = EVENT_INSIGHT_INTRO
+			custom_tooltip = anbi_merfolk_rebuild_the_kingdom_tt
+		}
+	}
+
+	anbi_merfolk_integration_of_land_and_sea = {
+		icon = mission_star_ascendency
+		position = 15
+		required_missions = { anbi_merfolk_rebuild_the_kingdom } 
+		provinces_to_highlight = {
+			NOT = { religion = merfolk_religion } 
+			owned_by = ROOT
+		}
+
+		trigger = {
+			OR = {
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = anbi_merfolk_integration_of_land_and_sea_ctt1
+						has_country_flag = mahalaya_lonely
+					}
+					num_of_owned_provinces_with = {
+						value = 100
+						religion_group = east_sarhal_religion
+					}
+					num_of_owned_provinces_with = {
+						value = 200
+						NOT = { religion_group = east_sarhal_religion } 
+					}
+				}
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = anbi_merfolk_integration_of_land_and_sea_ctt2
+						has_country_flag = mahalaya_mixed
+					}
+					num_of_owned_provinces_with = {
+						value = 100
+						religion = merfolk_religion
+					}
+					num_of_owned_provinces_with = {
+						value = 100
+						NOT = { religion = merfolk_religion } 
+					}
+				}
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = anbi_merfolk_integration_of_land_and_sea_ctt3
+						has_country_flag = mahalaya_craze
+					}
+					num_of_owned_provinces_with = {
+						value = 200
+						religion = merfolk_religion
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_merfolk_integration_of_land_and_sea_tt
+			set_country_flag = anbi_merfolk_integration_of_land_and_sea_cf
+		}
+	}
+
+	anbi_merfolk_the_harimari = {
+		icon = mission_naval_kingdom
+		position = 16
+		required_missions = { anbi_merfolk_integration_of_land_and_sea } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				absolutism = 50
+				AND = {
+					crown_land_share = 50
+					NOT = { average_autonomy = 35 } 
+					num_of_owned_provinces_with = {
+						value = 200
+						is_state = yes
+						has_courthouse_building_trigger = yes
+					}
+					estate_loyalty = {
+						estate = all
+						loyalty = 40
+					}
+					reform_level = 6
+				}
+			}
+		}
+
+		effect = {
+			country_event = { id = anbi_merfolk.26 } 
+			custom_tooltip = EVENT_INSIGHT_INTRO
+			custom_tooltip = anbi_merfolk_the_harimari_tt
+		}
+	}
+
+	anbi_merfolk_the_haless_port = {
+		icon = mission_lotus_flower
+		position = 17
+		required_missions = { anbi_merfolk_the_harimari } 
+		provinces_to_highlight = {  
+			OR = {
+				province_id = 5653
+				province_id = 6671
+				province_id = 6017
+				province_id = 6675
+				province_id = 6018
+				province_id = 6019
+				province_id = 6021
+				province_id = 6672
+				province_id = 6674
+				province_id = 6673
+				province_id = 6036
+				province_id = 6038
+				province_id = 6034
+				province_id = 6039
+				province_id = 6041
+				province_id = 6040
+				province_id = 6042
+				province_id = 6000
+				province_id = 6045
+				province_id = 6047
+				province_id = 6049
+				province_id = 6056
+				province_id = 6127
+				province_id = 6679
+				province_id = 6678
+			}
+			NOT = {
+				has_province_modifier = offcoast_merfolk_ab3_3_level
+				has_province_modifier = offcoast_merfolk_ab3_great_level
+			}
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = anbi_merfolk_the_haless_port_ctt
+				5653 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6671 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6017 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6675 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6018 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6019 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6021 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6672 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6674 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6673 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6036 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6038 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6034 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6039 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6041 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6040 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6042 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6000 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6045 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6047 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6049 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6056 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6127 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6679 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				6678 = {
+					OR = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+			}
+			has_country_modifier = anbi_AB3_the_water_kingdom_3
+			has_reform = anbi_merfolk_artificers_government
+		} 
+
+		effect = {  
+			custom_tooltip = anbi_merfolk_the_haless_port_tt
+			tooltip = {
+				random_owned_province = {
+					limit = {
+						OR = {
+							province_id = 5653
+							province_id = 6671
+							province_id = 6017
+							province_id = 6675
+							province_id = 6018
+							province_id = 6019
+							province_id = 6021
+							province_id = 6672
+							province_id = 6674
+							province_id = 6673
+							province_id = 6036
+							province_id = 6038
+							province_id = 6034
+							province_id = 6039
+							province_id = 6041
+							province_id = 6040
+							province_id = 6042
+							province_id = 6000
+							province_id = 6045
+							province_id = 6047
+							province_id = 6049
+							province_id = 6056
+							province_id = 6127
+							province_id = 6679
+							province_id = 6678
+						}
+					}
+					add_province_modifier = {
+						name = anbi_merfolk_landpalace_buff2
+						duration = -1
+					}
+				}
+			}			
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 5653
+							province_id = 6671
+							province_id = 6017
+							province_id = 6675
+							province_id = 6018
+							province_id = 6019
+							province_id = 6021
+							province_id = 6672
+							province_id = 6674
+							province_id = 6673
+							province_id = 6036
+							province_id = 6038
+							province_id = 6034
+							province_id = 6039
+							province_id = 6041
+							province_id = 6040
+							province_id = 6042
+							province_id = 6000
+							province_id = 6045
+							province_id = 6047
+							province_id = 6049
+							province_id = 6056
+							province_id = 6127
+							province_id = 6679
+							province_id = 6678
+						}
+					}
+					remove_province_modifier = anbi_merfolk_landpalace_buff
+					add_province_modifier = {
+						name = anbi_merfolk_landpalace_buff2
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = anbi_merfolk_landpalace_tt4
+			hidden_effect = {
+				remove_country_modifier = anbi_AB3_the_water_kingdom_3
+				add_country_modifier = {
+					name = anbi_AB3_the_water_kingdom_4
+					duration = -1
+				}
+			}			
+		} 
+	}
+}

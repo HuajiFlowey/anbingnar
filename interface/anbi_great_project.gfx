@@ -1,0 +1,66 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_great_project_anbi_ab2_anbennar_palace"	
+		texturefile = "gfx//interface//great_projects//great_project_anbennar_palace.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_anbi_beikdugang_arsenal"	
+		texturefile = "gfx//interface//great_projects//great_project_doges_palace.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_anbi_balkhangfa_palace"	
+		texturefile = "gfx//interface//great_projects//great_project_balkhangfa_palace.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_anbi_beikdugang_lights"	
+		texturefile = "gfx//interface//great_projects//great_project_tortuga_island.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_anbi_temple_of_undying_flame"
+		texturefile = "gfx//interface//great_projects//great_project_temple_of_undying_flame.dds"
+	}
+	spriteType = { 
+		name = "GFX_great_project_anbi_oracle_mountain" 
+		texturefile = "gfx//interface//great_projects//great_project_oracle_mountain.dds" 
+	}
+	spriteType = { 
+		name = "GFX_great_project_anbi_jiangliubao" 
+		texturefile = "gfx//interface//great_projects//great_project_imperial_city_hue.dds" 
+	}
+	spriteType = {
+		name = "GFX_great_project_anbi_godswall"	
+		texturefile = "gfx//interface//great_projects//great_project_godswall.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_anbi_bim_lau_necropolis"
+		texturefile = "gfx//interface//great_projects//great_project_bim_lau_necropolis.dds"
+	}
+	spriteType = { 
+		name = "GFX_great_project_anbi_golden_palace" 
+		texturefile = "gfx//interface//great_projects//great_project_golden_palace.dds" 
+	}
+	spriteType = { 
+		name = "GFX_great_project_anbi_hall_of_endless_debate" 
+		texturefile = "gfx//interface//great_projects//great_project_hall_of_endless_debate.dds" 
+	}
+	spriteType = { 
+		name = "GFX_great_project_anbi_the_resurgence_huangke_a" 
+		texturefile = "gfx//interface//great_projects//great_project_eternal_pillar.dds" 
+	}
+	spriteType = { 
+		name = "GFX_great_project_anbi_the_resurgence_huangke_b" 
+		texturefile = "gfx//interface//great_projects//great_project_eternal_pillar.dds" 
+	}
+	spriteType = { 
+		name = "GFX_great_project_anbi_the_resurgence_huangke_c" 
+		texturefile = "gfx//interface//great_projects//great_project_eternal_pillar.dds" 
+	}
+	spriteType = { 
+		name = "GFX_great_project_anbi_merfolk_mage_school" 
+		texturefile = "gfx//interface//great_projects//great_project_doges_palace.dds" 
+	}
+	spriteType = { 
+		name = "GFX_great_project_anbi_merfolk_landpalace" 
+		texturefile = "gfx//interface//great_projects//great_project_merfolk_landpalace.dds" 
+	}
+}

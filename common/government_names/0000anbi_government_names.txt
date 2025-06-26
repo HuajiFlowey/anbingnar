@@ -1,0 +1,178 @@
+anbi_bloody_castanor_1 = {
+	rank = {
+		1 = ANBIXIANGUILING
+	}
+	
+	ruler_male = {
+		1 = ANBIXIANGUI
+	}
+
+	ruler_female = {
+		1 = ANBIXIANGUI
+	}
+	consort_male  = {
+		1 = CONSORT
+	}
+	
+	consort_female = {
+		1 = CONSORT
+	}
+	
+	heir_male = {
+		1 = ANBIXIANGUIHEIR
+	}
+	
+	heir_female = {
+		1 = ANBIXIANGUIHEIR
+	}
+	
+	trigger = {
+		tag = AB1
+		NOT = {
+			has_reform = anbi_castanor_panzer_reform
+		}
+	}
+}
+
+anbi_bloody_castanor_2 = {
+	rank = {
+		1 = ANBIXIANGUILING
+		2 = ANBIXIANGUILING
+		3 = ANBIXIANGUILING
+	}
+	
+	ruler_male = {
+		1 = ANBICOOK
+		2 = ANBICOOK
+		3 = ANBICOOK
+	}
+
+	ruler_female = {
+		1 = ANBICOOK
+		2 = ANBICOOK
+		3 = ANBICOOK
+	}
+	consort_male  = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+	
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+	
+	heir_male = {
+		1 = ANBIXIANGUIHEIR
+		2 = ANBIXIANGUIHEIR
+		3 = ANBIXIANGUIHEIR
+	}
+	
+	heir_female = {
+		1 = ANBIXIANGUIHEIR
+		2 = ANBIXIANGUIHEIR
+		3 = ANBIXIANGUIHEIR
+	}
+	
+	trigger = {
+		tag = AB1
+		has_reform = anbi_castanor_panzer_reform
+	}
+}
+
+anbi_bloody_castanor_3 = {
+	rank = {
+		1 = EMPIRE
+		2 = EMPIRE
+		3 = EMPIRE
+	}
+	
+	ruler_male = {
+		1 = ANBICOOK
+		2 = ANBICOOK
+		3 = ANBICOOK
+	}
+
+	ruler_female = {
+		1 = ANBICOOK
+		2 = ANBICOOK
+		3 = ANBICOOK
+	}
+	consort_male  = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+	
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+	
+	heir_male = {
+		1 = ANBIXIANGUIHEIR
+		2 = ANBIXIANGUIHEIR
+		3 = ANBIXIANGUIHEIR
+	}
+	
+	heir_female = {
+		1 = ANBIXIANGUIHEIR
+		2 = ANBIXIANGUIHEIR
+		3 = ANBIXIANGUIHEIR
+	}
+	
+	trigger = {
+		tag = AB2
+	}
+}
+
+anbi_merfolk = {
+	rank = {
+		1 = ANBI_MERFOLK_STATE
+		2 = ANBI_MERFOLK_KINGDOM
+		3 = ANBI_MERFOLK_EMPIRE
+	}
+	
+	ruler_male = {
+		1 = ANBI_MERFOLK_MALE_RULER
+		2 = ANBI_MERFOLK_MALE_RULER
+		3 = ANBI_MERFOLK_MALE_RULER
+	}
+
+	ruler_female = {
+		1 = ANBI_MERFOLK_FEMALE_RULER
+		2 = ANBI_MERFOLK_FEMALE_RULER
+		3 = ANBI_MERFOLK_FEMALE_RULER
+	}
+
+	consort_male  = {
+		1 = ANBI_MERFOLK_MALE_CONSORT
+		2 = ANBI_MERFOLK_MALE_CONSORT
+		3 = ANBI_MERFOLK_MALE_CONSORT
+	}
+	
+	consort_female = {
+		1 = ANBI_MERFOLK_FEMALE_CONSORT
+		2 = ANBI_MERFOLK_FEMALE_CONSORT
+		3 = ANBI_MERFOLK_FEMALE_CONSORT
+	}
+	
+	heir_male = {
+		1 = ANBI_MERFOLK_MALE_HEIR
+		2 = ANBI_MERFOLK_MALE_HEIR
+		3 = ANBI_MERFOLK_MALE_HEIR
+	}
+	
+	heir_female = {
+		1 = ANBI_MERFOLK_FEMALE_HEIR
+		2 = ANBI_MERFOLK_FEMALE_HEIR
+		3 = ANBI_MERFOLK_FEMALE_HEIR
+	}
+	
+	trigger = {
+		tag = AB3
+	}
+}

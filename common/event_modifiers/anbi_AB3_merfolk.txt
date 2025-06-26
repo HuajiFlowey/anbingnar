@@ -1,0 +1,467 @@
+#人鱼定居点系统
+offcoast_merfolk_ab3_1_level = {
+	picture = "merfolk_ab3_1_level"
+	naval_forcelimit = 3
+	trade_value_modifier = 0.25
+	local_ship_cost = -0.25
+	local_sailors_modifier = 0.1
+	local_development_cost = -0.1
+	local_autonomy = -0.05
+	min_local_autonomy = -25
+	local_governing_cost = -0.1
+}
+offcoast_merfolk_ab3_2_level = {
+	picture = "merfolk_ab3_2_level"
+	naval_forcelimit = 6
+	trade_value_modifier = 0.5
+	province_trade_power_modifier = 0.25
+	local_manpower_modifier = 0.1
+	local_friendly_movement_speed = 0.2
+	ship_recruit_speed = -0.25
+	local_ship_repair = 1
+	local_ship_cost = -0.25
+	local_sailors = 250
+	local_sailors_modifier = 0.25
+	local_development_cost = -0.25
+	local_autonomy = -0.05
+	min_local_autonomy = -25
+}
+offcoast_merfolk_ab3_3_level = {
+	picture = "merfolk_ab3_3_level"
+	naval_forcelimit = 10
+	trade_value_modifier = 0.75
+	province_trade_power_modifier = 0.5
+	local_manpower_modifier = 0.25
+	local_ship_cost = -0.5
+	local_friendly_movement_speed = 0.5
+	ship_recruit_speed = -0.25
+	local_ship_repair = 1
+	local_sailors = 500
+	local_sailors_modifier = 0.25
+	local_development_cost = -0.25
+	local_autonomy = -0.05
+	min_local_autonomy = -25
+	local_governing_cost = 0.15
+}
+offcoast_merfolk_ab3_great_level = {
+	picture = "merfolk_ab3_great_level"
+	naval_forcelimit = 20
+	institution_growth = 6
+	trade_value_modifier = 1
+	province_trade_power_modifier = 1
+	local_manpower_modifier = 0.25
+	local_ship_cost = -0.5
+	local_friendly_movement_speed = 0.5
+	ship_recruit_speed = -0.25
+	local_ship_repair = 1
+	local_sailors = 1000
+	local_sailors_modifier = 0.35
+	local_development_cost = -0.4
+	local_autonomy = -0.05
+	min_local_autonomy = -25
+	local_governing_cost = 0.35
+}
+
+anbi_AB3_exile = {
+	technology_cost = 1
+	idea_cost = 1
+	global_institution_spread = -1
+}
+anbi_AB3_no_production = {
+	global_trade_goods_size_modifier = -1
+	global_tax_income = -12
+	interest = 10
+}
+anbi_AB3_no_manpower = {
+	global_manpower = -10
+	global_sailors = -10000
+	global_regiment_cost = 100
+	global_ship_cost = 100
+	land_forcelimit_modifier = -10
+}
+anbi_AB3_merfolk_military = {
+	#不准升黑旗(•́へ•́╬)
+	privateer_efficiency = -1
+	#下面才是人鱼军事的主要内容
+	has_voc_indiamen = yes
+	allowed_marine_fraction = 0.3
+	allowed_voc_indiamen_fraction = 0.5
+	light_ship_power = 0.5
+}
+anbi_AB3_merfolk_marine = {
+	is_marine_modifier = yes
+	movement_speed_onto_off_boat_modifier = 10
+	transport_attrition = -1
+	shock_damage_received = -0.15
+	infantry_shock = 0.25
+	infantry_cost = 0.25
+	fire_damage = -0.15
+}
+anbi_AB3_the_merfolk_shock = {
+	picture = "attrition"
+	local_monthly_devastation = 0.1
+	local_development_cost = 1
+	local_tax_modifier = -0.5
+	local_production_efficiency = -0.5
+	trade_goods_size_modifier = -0.25
+}
+anbi_AB3_the_exile_human = {
+	local_development_cost = -0.2
+	local_unrest = 5
+	local_missionary_strength = -0.05
+	local_tax_modifier = -0.25
+	local_production_efficiency = -0.25
+	trade_goods_size_modifier = -0.25
+}
+anbi_AB3_the_merfolk_queen = {
+	all_estate_influence_modifier = 0.1
+	all_estate_loyalty_equilibrium = 0.2
+}
+anbi_merfolk_the_baashidi_friend_buff = {
+	diplomatic_upkeep = 2
+	diplomatic_reputation = 2
+	dip_advisor_cost = 0.1
+}
+anbi_AB3_easy_to_conquer = {
+	local_warscore_cost_modifier = -0.2
+}
+anbi_AB3_mers_fisher = {
+	global_sailors = -250
+	colonists = 1
+	global_colonial_growth = 20
+	tax_income = 12
+	colony_cost_modifier = -0.5
+	may_explore = yes
+}
+anbi_merfolk_go_back_the_guryadagga_buff = {
+	local_colonial_growth = 50
+	local_colonist_placement_chance = 0.35
+}
+anbi_merfolk_the_island_and_desert_buff = {
+	trade_goods_size = 2
+	province_trade_power_value = 10
+	range = 0.5
+	trade_range_modifier = 0.5
+}
+anbi_merfolk_our_brothers_and_sisters_buff = {
+	global_sailors = 1000
+	legitimacy = 1
+	monthly_heir_claim_increase = 0.1
+	same_culture_advisor_cost = -0.25
+	range = 0.1
+	fabricate_claims_cost = -0.25
+}
+anbi_AB3_no_marriage = {
+	heir_chance = -2
+}
+anbi_AB3_has_marriage = {
+	heir_chance = 2
+}
+anbi_merfolk_unify_the_tribe_buff = {
+	diplomatic_upkeep = 3
+}
+anbi_AB3_S92_buff = {
+	colonists = 2
+	range = -0.75
+	global_colonial_growth = 100
+	colony_cost_modifier = -1
+}
+anbi_merfolk_crush_the_baddabi_buff = {
+	diplomatic_annexation_cost = -0.5
+}
+anbi_AB3_annex_land_buff = {
+	local_manpower_modifier = 0.01
+}
+anbi_AB3_is_merfolk_state_province_buff = {
+	min_local_autonomy = 25
+}
+anbi_merfolk_the_hope_light_buff = {
+	colonists = 1
+}
+anbi_AB3_mers_colonist = {
+	local_colonist_placement_chance = 0.5
+}
+anbi_AB3_the_devils_looking = {
+	local_unrest = 2
+}
+anbi_merfolk_unify_baashidi_buff = {
+	land_morale = 0.2
+	manpower_in_accepted_culture_provinces = 0.25
+	sailors_recovery_speed = -0.2
+	manpower_recovery_speed = 0.1
+	province_warscore_cost = -0.25
+}
+anbi_merfolk_the_tower_and_lizardfolk_buff = {
+	fabricate_claims_cost = -0.5
+	unjustified_demands = -0.5
+	core_creation = -0.2
+	shock_damage = 0.1
+	fire_damage = -0.1
+	idea_cost = 0.1
+}
+anbi_merfolk_clove_wine_and_food_buff = {
+	trade_efficiency = 0.1
+	global_ship_trade_power = 0.5
+}
+anbi_merfolk_small_trader_buff = {
+	global_trade_power = 0.2
+	trade_steering = 0.1
+	merchants = 1
+}
+anbi_merfolk_defense_the_evil_buff = {
+	global_ship_cost = -0.25
+	naval_forcelimit_modifier = 0.25
+}
+anbi_get_a_mage_admiral_buff = {
+	admiral_cost = 0.5
+	mages_influence_modifier = 0.1
+}
+anbi_merfolk_mahalaya_regilion_temporary_buff = {
+	local_tolerance_of_heretics = 3
+}
+merfolk_religion_convertion = {
+	can_not_build_missionaries = yes
+	religion = yes
+}
+anbi_merfolk_island_defense_buff = {
+	hostile_fleet_attrition = 5
+	blockade_force_required = 1
+	fort_level = 1
+	defensiveness = 0.25
+	local_sailors = 100
+	local_manpower_modifier = -0.5
+}
+anbi_merfolk_as_rising_sun_buff1 = {
+	max_flagships = 15
+	flagship_cost = 5
+	number_of_cannons_flagship = 100
+	flagship_durability = 1
+}
+anbi_merfolk_as_rising_sun_buff2 = {
+	is_voc_indiamen_modifier = yes
+	number_of_cannons_modifier = 1
+	light_ship_hull_size_modifier = 1
+}
+anbi_merfolk_surround_the_evil_buff = {
+	local_fort_maintenance_modifier = -2
+	local_governing_cost = 0.25
+	local_tax_modifier = -10
+	local_defensiveness = 0.5
+	local_manpower_modifier =-0.25
+	local_sailors_modifier = 0.25
+	land_forcelimit = 0.1
+	naval_forcelimit = 0.1
+	allowed_num_of_buildings = 1
+}
+anbi_merfolk_surround_the_evil_buff2 = {
+	local_defensiveness = 0.25
+}
+anbi_merfolk_the_empire_of_land_and_sea_buff = {
+	min_autonomy = -5
+	min_autonomy_in_territories = -0.05
+	governing_capacity_modifier = 0.2
+}
+anbi_merfolk_logistical_preparations_buff = {
+	can_not_declare_war = yes
+	war_taxes_cost_modifier = -1
+	global_tax_modifier = -0.25
+	production_efficiency = 0.25
+	trade_efficiency = -0.25
+	sailors_recovery_speed = 1
+	extra_manpower_at_religious_war = yes
+	naval_forcelimit_modifier = 1
+	global_ship_trade_power = -0.5
+	global_ship_cost = -0.2
+	global_ship_recruit_speed = -0.5
+	war_exhaustion = -1
+}
+anbi_merfolk_look_at_homeland_buff = {
+	can_not_declare_war = yes
+	sunk_ship_morale_hit_recieved = -1
+	naval_morale_damage_received = -1
+	capture_ship_chance = -10
+	global_naval_engagement_modifier = 2
+}
+anbi_merfolk_logistical_preparations_buff2 = {
+	war_taxes_cost_modifier = -1
+	global_tax_modifier = -0.25
+	production_efficiency = 0.25
+	trade_efficiency = -0.25
+	sailors_recovery_speed = 1
+	extra_manpower_at_religious_war = yes
+	naval_forcelimit_modifier = 1
+	global_ship_trade_power = -0.5
+	global_ship_cost = -0.2
+	global_ship_recruit_speed = -0.5
+	war_exhaustion = -1
+}
+anbi_merfolk_look_at_homeland_buff2 = {
+	sunk_ship_morale_hit_recieved = -1
+	naval_morale_damage_received = -1
+	capture_ship_chance = -10
+	global_naval_engagement_modifier = 2
+}
+anbi_merfolk_flagship_modifier = {
+	max_flagships = 5
+	navy_tradition_decay = 0.005
+}
+anbi_merfolk_sunchaser_modifier = {
+	is_voc_indiamen_modifier = yes
+	ship_trade_power_modifier = -0.1
+	number_of_cannons_modifier = 0.25
+	hull_size_modifier = 0.25
+	naval_maintenance_modifier = 0.25
+	light_ship_cost = 0.1
+}
+anbi_AB3_sea_devil_island_buff = {
+	fort_level = 8
+	blockade_force_required = 1
+	local_build_cost = 10
+	local_build_time = 10
+	local_monthly_devastation = 0.5
+	local_defensiveness = 2
+	local_garrison_damage = 10
+	local_garrison_size = 1
+	garrison_growth = 10
+}
+anbi_AB4_buff = {
+	global_tax_income = 1000
+	land_maintenance_modifier = -1
+	naval_maintenance_modifier = -1
+	global_regiment_cost = 10
+	global_regiment_recruit_speed = 10
+	global_manpower = 1000
+	global_sailors = 100000
+	land_forcelimit = 1000
+	naval_forcelimit = 10000
+	land_morale = 1
+	ship_durability = 1
+	naval_morale = 10
+	heavy_ship_power = 1
+	max_flagships = 100
+	flagship_morale = 10
+	flagship_durability = 1
+	number_of_cannons_flagship = 400
+	number_of_cannons_modifier = 1
+	global_ship_trade_power = -1
+	global_ship_cost = 10
+	ship_recruit_speed = 10	
+	shock_damage_received = -0.25
+	sunk_ship_morale_hit_recieved = -1
+	naval_morale_damage_received = -1
+	capture_ship_chance = -10
+	fire_damage_received = -0.25
+	can_not_declare_war = yes
+	can_not_send_merchants = yes
+}
+anbi_AB3_evil_craze_1 = {
+	flagship_durability = 1
+	number_of_cannons_flagship = 200
+}
+anbi_AB3_evil_craze_2 = {
+	flagship_durability = 1
+	number_of_cannons_flagship = 200
+}
+anbi_AB3_evil_craze_3 = {
+	flagship_durability = 1
+	number_of_cannons_flagship = 200
+}
+anbi_is_gertyene_buff = {
+	monarch_lifespan = 2
+}
+anbi_AB3_the_water_kingdom_1 = {
+	global_tax_income = 240
+	global_sailors = 10000
+	global_trade_goods_size = 0.05
+	global_trade_power = 0.1
+	development_cost_modifier = -0.1
+	development_cost = -0.2
+}
+anbi_AB3_the_water_kingdom_2 = {
+	global_tax_income = 480
+	global_sailors = 25000
+	global_trade_goods_size = 0.1
+	global_trade_power = 0.2
+	development_cost_modifier = -0.1
+	development_cost = -0.2
+}
+anbi_AB3_the_water_kingdom_3 = {
+	global_tax_income = 600
+	global_sailors = 50000
+	global_trade_goods_size = 0.15
+	global_trade_power = 0.3
+	development_cost_modifier = -0.1
+	development_cost = -0.2
+}
+anbi_AB3_the_water_kingdom_4 = {
+	global_tax_income = 1200
+	global_sailors = 100000
+	global_trade_goods_size = 0.2
+	global_trade_power = 0.5
+	development_cost_modifier = -0.25
+	development_cost = -0.2
+}
+anbi_merfolk_take_a_look_buff = {
+	idea_claim_colonies = yes
+	cb_on_overseas = yes
+	cb_on_primitives = yes
+	fabricate_claims_cost = -0.9
+	may_explore = yes
+	ignore_coring_distance = yes
+	colonists = 1
+	range = 1
+	colony_cost_modifier = 0.5
+	global_colonial_growth = 50
+}
+anbi_merfolk_the_crown_of_small_and_lizardfolk_buff = {
+	promote_culture_cost = -0.25
+	rival_change_cost = -0.25
+	production_efficiency = 0.125
+	advisor_pool = 1
+	same_religion_advisor_cost = -0.05
+	free_adm_policy = 1
+	improve_relation_modifier = 0.1
+	war_exhaustion = -0.015
+	adventurers_loyalty_modifier = 0.1
+	global_colonial_growth = 20
+}
+anbi_merfolk_the_coast_of_merfolk_buff = {
+	global_sailors_modifier = 1
+	global_manpower_modifier = 0.25
+	global_tax_income = -240
+	global_institution_spread = 0.5
+	global_unrest = -2
+	global_trade_goods_size = 0.05
+	global_allowed_num_of_buildings = 1
+	global_allowed_num_of_manufactories = 1
+}
+anbi_merfolk_shipgirls_tech_investment_buff = {
+	technology_cost = 0.15
+	idea_cost = 0.15
+	global_tax_income = -12
+}
+anbi_merfolk_landpalace_buff = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	local_manpower_modifier = 0.25
+	local_sailors_modifier = 0.25
+	trade_goods_size_modifier = 0.25
+	province_trade_power_value = 10
+}
+anbi_merfolk_landpalace_buff2 = {
+	local_tax_modifier = 0.5
+	local_production_efficiency = 0.5
+	local_manpower_modifier = 0.5
+	local_sailors_modifier = 0.5
+	trade_goods_size = 1
+	local_sailors = 1000
+	trade_goods_size_modifier = 0.5
+	province_trade_power_value = 20
+}
+anbi_merfolk_tianlou_and_shuimu_buff = {
+	artificers_capacity = 25
+	artificers_invention_slots = 1
+	global_tax_income = -240
+	sailors_recovery_speed = 0.1
+	technology_cost = 0.025
+}

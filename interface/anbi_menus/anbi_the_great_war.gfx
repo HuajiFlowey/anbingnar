@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_halann_ww1"
+		texturefile = "gfx//interface//anbi_the_great_war//halann_ww1.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_halann_ww2"
+		texturefile = "gfx//interface//anbi_the_great_war//halann_ww2.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_merfolk_gw"
+		texturefile = "gfx//interface//anbi_the_great_war//merfolk_gw.dds"
+		loadType = "INGAME"
+	}
+}

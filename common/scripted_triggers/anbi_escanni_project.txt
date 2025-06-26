@@ -1,0 +1,39 @@
+anbi_ab1_the_escanni_button_e = {
+	AND = {
+		OR = {
+			has_country_flag = anbi_escanni_field
+			has_country_flag = anbi_escanni_great_city
+			has_country_flag = anbi_escanni_great_city_2
+			has_country_flag = anbi_escanni_great_city_3
+			has_country_flag = anbi_escanni_launch_prepare
+			has_country_flag = anbi_escanni_one_culture
+			has_country_flag = anbi_escanni_one_lang
+			has_country_flag = anbi_escanni_research
+			has_country_flag = anbi_escanni_river_transport
+			has_country_flag = anbi_escanni_rocket
+		}
+		NOT = {
+			has_country_flag = anbi_$project$
+		}
+	}
+}
+anbi_ab1_the_escanni_button_d = {
+	has_country_flag = anbi_$project$
+}
+anbi_ab1_the_escanni_button_g = {
+	NOT = {
+		has_country_flag = anbi_escanni_field
+		has_country_flag = anbi_escanni_great_city
+		has_country_flag = anbi_escanni_great_city_2
+		has_country_flag = anbi_escanni_great_city_3
+		has_country_flag = anbi_escanni_launch_prepare
+		has_country_flag = anbi_escanni_one_culture
+		has_country_flag = anbi_escanni_one_lang
+		has_country_flag = anbi_escanni_research
+		has_country_flag = anbi_escanni_river_transport
+		has_country_flag = anbi_escanni_rocket
+	}
+}
+anbi_ab1_the_escanni_button_t = {
+	has_country_flag = anbi_$project$_complete
+}

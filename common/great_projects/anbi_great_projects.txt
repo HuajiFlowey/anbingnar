@@ -1,0 +1,2895 @@
+anbi_ab2_anbennar_palace = {
+
+	# province it starts in
+	start = 833
+
+	# date built in real life (so anything built during game time will be there if you start a game after that date)
+	date = 6666.06.06
+
+	#time to build
+	time = { months = 1 }
+
+	#how much to build one
+	build_cost = 100000
+
+	#can we move it?
+	can_be_moved = no
+
+	#tier that the project starts at when first placed in the game (be that at game start or when built by a country as the game progresses)
+	starting_tier = 0
+
+	#project type
+	type = monument
+
+	#can we build it?
+	build_trigger = {
+		FROM = {
+			tag = AB2
+			has_country_flag = anbi_ab1_unity_and_great_cf
+		}
+	}
+
+	#what to do when it's built
+	on_built = {
+		
+	}
+
+	#what to do when it's destroyed
+	on_destroyed = {
+	}
+
+	#can our country use it?
+	can_use_modifiers_trigger = {
+		FROM = {
+			tag = AB2
+		}
+	}
+
+	#can our country upgrade it?
+	can_upgrade_trigger = {
+		FROM = {
+			tag = AB2
+			has_country_flag = anbi_ab1_unity_and_great_cf
+		}
+	}
+
+	#can our country keep it or is it destroyed when we get hold of it?
+	keep_trigger = {}
+
+	#tier data
+	tier_0 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = { months = 0 }
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = { factor = 0 }
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {}
+	}
+
+	tier_1 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = { months = 120 }
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = { factor = 200000 }
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = { 
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = { 
+			num_accepted_cultures = 3 
+			culture_conversion_time = -0.05
+			culture_conversion_cost = -0.05
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+			FROM = {
+				custom_tooltip = anbi_ab2_anbennar_palace_1_ct
+				add_accepted_culture = anbi_castanor_elven
+				add_accepted_culture = anbi_castanor_gnomish
+				add_accepted_culture = anbi_castanor_halfling
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							culture_group = elven
+						}
+						change_culture = anbi_castanor_elven
+					}
+					every_owned_province = {
+						limit = {
+							culture_group = halfling
+						}
+						change_culture = anbi_castanor_halfling
+					}
+					every_owned_province = {
+						limit = {
+							culture_group = gnomish
+						}
+						change_culture = anbi_castanor_gnomish
+					}
+				}
+			}
+		}
+	}
+
+	tier_2 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = { months = 600 }
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = { factor = 500000 }
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+			province_trade_power_value = 100
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			num_accepted_cultures = 5 
+			culture_conversion_time = -0.1
+			culture_conversion_cost = -0.1
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+			FROM = {
+				custom_tooltip = anbi_ab2_anbennar_palace_2_ct
+				add_accepted_culture = anbi_castanor_dwarven
+				add_accepted_culture = anbi_castanor_harimari
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							culture_group = dwarven
+						}
+						change_culture = anbi_castanor_dwarven
+					}
+					every_owned_province = {
+						limit = {
+							culture_group = harimari
+						}
+						change_culture = anbi_castanor_harimari
+					}
+				}
+			}
+		}
+	}
+
+	tier_3 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = { months = 1200 }
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = { factor = 750000 }
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+			province_trade_power_value = 10000
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			num_accepted_cultures = 6 
+			culture_conversion_time = -0.15
+			culture_conversion_cost = -0.15
+			global_colonial_growth = 500
+			colonists = 10
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+			FROM = {
+				custom_tooltip = anbi_ab2_anbennar_palace_3_ct
+				add_accepted_culture = anbi_castanor_ruinborn
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							culture_is_ruinborn = yes
+						}
+						change_culture = anbi_castanor_ruinborn
+					}
+				}
+			}
+		}
+	}
+}
+
+anbi_beikdugang_arsenal = {
+
+	start = 4908		#Mingyuangang
+		
+	date = 1869.03.09
+
+	time = {
+		months = 180
+	}
+
+	build_cost = 250
+
+	can_be_moved = no
+
+	starting_tier = 0
+
+	type = monument
+
+	build_trigger = {
+		FROM = {
+			mission_completed = anbi_kuhai_the_sailor_songs
+		}
+		province_id = 4908
+	}
+
+	on_built = {
+	}
+
+	on_destroyed = {
+	}
+	
+	keep_trigger = {
+	}
+
+	can_use_modifiers_trigger = {
+		FROM = { 
+			culture_group = yan
+		}
+		is_core = ROOT
+	}
+
+	can_upgrade_trigger = {
+		FROM = { 
+			culture_group = yan
+		}
+		is_core = ROOT
+	}
+
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			local_ship_cost = -0.05
+			local_ship_repair = 0.1
+			local_sailors_modifier = 0.1
+		}
+
+		country_modifiers = {
+			naval_forcelimit = 10
+			allowed_marine_fraction = 0.05
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 180
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			local_ship_cost = -0.1
+			local_ship_repair = 0.25
+			local_sailors_modifier = 0.25
+			allowed_num_of_buildings = 1
+		}
+
+		country_modifiers = {
+			naval_forcelimit = 20
+			allowed_marine_fraction = 0.1
+			naval_maintenance_modifier = -0.05
+			navy_tradition = 0.25
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			local_ship_cost = -0.2
+			local_ship_repair = 0.5
+			local_sailors_modifier = 0.5
+			allowed_num_of_buildings = 1
+			allowed_num_of_manufactories = 1
+		}
+
+		country_modifiers = {
+			naval_forcelimit = 30
+			allowed_marine_fraction = 0.15
+			naval_maintenance_modifier = -0.1
+			navy_tradition = 0.5
+			own_coast_naval_combat_bonus = 1.0
+		}
+
+		on_upgraded = {
+		}
+	}
+}
+anbi_beikdugang_lights = {
+
+	start = 4907		#Hebatabuh
+		
+	date = 1869.03.09
+
+	time = {
+		months = 180
+	}
+
+	build_cost = 250
+
+	can_be_moved = no
+
+	starting_tier = 0
+
+	type = monument
+
+	build_trigger = {
+		FROM = {
+			mission_completed = anbi_kuhai_the_sailor_songs
+		}
+		province_id = 4907
+	}
+
+	on_built = {
+		change_trade_goods = precursor_relics
+	}
+
+	on_destroyed = {
+	}
+	
+	keep_trigger = {
+	}
+
+	can_use_modifiers_trigger = {
+		FROM = {
+			culture_group = yan
+		}
+		is_core = ROOT
+	}
+
+	can_upgrade_trigger = {
+		FROM = {
+			culture_group = yan
+		}
+		is_core = ROOT
+	}
+
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+		}
+
+		country_modifiers = {
+
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			local_institution_spread = 0.5
+			trade_value_modifier = 0.5
+		}
+
+		country_modifiers = {
+			merchants = 1
+			placed_merchant_power = 2
+		}
+
+		on_upgraded = {
+			owner = { add_estate_loyalty = { estate = estate_adventurers loyalty = 5 } }
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 180
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			local_institution_spread = 1
+			trade_value_modifier = 1
+		}
+
+		country_modifiers = {
+			merchants = 1
+			placed_merchant_power = 5
+			adventurers_loyalty_modifier = 0.05
+			trade_company_governing_cost = -0.1
+		}
+
+		on_upgraded = {
+			owner = { add_estate_loyalty = { estate = estate_adventurers loyalty = 10 } }
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			local_institution_spread = 1.5
+			trade_value_modifier = 1.5
+		}
+
+		country_modifiers = {
+			merchants = 2
+			placed_merchant_power = 10
+			adventurers_loyalty_modifier = 0.1
+			trade_company_governing_cost = -0.2
+		}
+
+		on_upgraded = {
+			owner = { add_estate_loyalty = { estate = estate_adventurers loyalty = 10 } }
+		}
+	}
+}
+
+anbi_balkhangfa_palace = {
+	start = 4859	#Balriza
+
+	date = 2000.01.01
+
+	time = {
+		months = 1
+	}
+
+	build_cost = 1000
+
+	can_be_moved = no
+
+	starting_tier = 0
+
+	#project type
+	type = monument
+
+	build_trigger = {
+		FROM = {
+			has_country_modifier = anbi_kuhai_rigntous_path_great_buliding_buff
+		}
+	}
+
+	on_built = {
+	}
+
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			local_prosperity_growth = 0.1
+		}
+
+		country_modifiers = {
+
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			local_prosperity_growth = 0.2
+		}
+
+		country_modifiers = {
+			prestige = 0.1
+			diplomatic_reputation = 0.5
+		}
+
+		on_upgraded = {
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 5
+				}
+			}
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		
+		province_modifiers = {
+			
+		}
+
+		
+		area_modifier = {
+			local_prosperity_growth = 0.3
+		}
+
+
+		country_modifiers = {
+			prestige = 0.2
+			governing_capacity_modifier = 0.05
+			diplomatic_reputation = 1
+		}
+
+		
+		on_upgraded = {
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 10
+				}
+			}
+		}
+	}
+
+	tier_3 = {
+		
+		upgrade_time = {
+			months = 480
+		}
+
+		
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		
+		province_modifiers = {
+			
+		}
+
+		
+		area_modifier = {
+			local_prosperity_growth = 0.4
+		}
+
+		
+		country_modifiers = {
+			prestige = 0.3
+			country_diplomatic_power = 1
+			governing_capacity_modifier = 0.1
+			diplomatic_reputation = 1.5
+		}
+		
+		on_upgraded = {
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 15
+				}
+			}
+		}
+	}
+}
+anbi_temple_of_undying_flame = {
+	start = 4859	#Jiantsiang
+
+	date = 2000.01.01
+
+	time = {
+		months = 1
+	}
+
+	build_trigger = {
+		FROM = {
+			has_country_modifier = anbi_kuhai_rigntous_path_great_buliding_buff
+		}
+	}
+
+	build_cost = 1500
+
+	can_be_moved = no
+
+	starting_tier = 0
+
+	type = monument
+
+	can_use_modifiers_trigger = {
+		has_province_modifier = temple_complex
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+		custom_trigger_tooltip = {
+			tooltip = has_owner_religion_tt
+			OR = {
+				has_owner_religion = yes
+				owner = {
+					secondary_religion = ROOT
+				}
+			}
+		}
+	}
+
+	can_upgrade_trigger = {
+		hidden_trigger = { owner = { ai = no } }
+		has_province_modifier = temple_complex
+		NOT = { has_province_modifier = temple_restoration_efforts }
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+		custom_trigger_tooltip = {
+			tooltip = has_owner_religion_tt
+			OR = {
+				has_owner_religion = yes
+				owner = {
+					secondary_religion = ROOT
+				}
+			}
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+
+		}
+
+		area_modifier = {
+
+		}
+
+		country_modifiers = {
+
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			trade_goods_size_modifier = 0.10
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			land_morale = 0.05
+			global_missionary_strength = 0.005
+		}
+
+		on_upgraded = {
+			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			trade_goods_size_modifier = 0.15
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			land_morale = 0.075
+			global_missionary_strength = 0.01
+		}
+
+		on_upgraded = {
+			custom_tooltip = monument_undying_flame_wards_1
+			hidden_effect = {
+				province_event = { id = spirits.1001 }
+			}
+			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+		}
+	}
+
+	tier_3 = {
+		
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			trade_goods_size_modifier = 0.25
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			land_morale = 0.1
+			global_missionary_strength = 0.015
+		}
+
+		on_upgraded = {
+			custom_tooltip = monument_undying_flame_wards_2
+			hidden_effect = {
+				province_event = { id = spirits.1001 }
+			}
+			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+		}
+	}
+}
+anbi_oracle_mountain = {
+	start = 4859	#Tughayasa
+
+	date = 2000.01.01
+
+	time = {
+		months = 1
+	}
+
+	build_trigger = {
+		FROM = {
+			has_country_modifier = anbi_kuhai_rigntous_path_great_buliding_buff
+		}
+	}
+
+	build_cost = 1500
+
+	can_be_moved = no
+
+	starting_tier = 0
+
+	type = monument
+
+	can_use_modifiers_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+
+		}
+
+		area_modifier = {
+
+		}
+
+		country_modifiers = {
+
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			local_defensiveness = 0.25
+		}
+
+		area_modifier = {
+			local_tax_modifier = 0.1
+		}
+
+		country_modifiers = {
+			spy_offence = 0.1
+		}
+
+		on_upgraded = {
+			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }				
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			local_defensiveness = 0.25
+		}
+
+		area_modifier = {
+			local_tax_modifier = 0.15
+			local_defensiveness = 0.10
+		}
+
+		country_modifiers = {
+			spy_offence = 0.2
+		}
+
+		on_upgraded = {
+			custom_tooltip = tughayasa_better_divination_1_tt
+			hidden_effect = {
+				set_province_flag = tughayasa_better_divination_1
+			}
+			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }				
+		}
+	}
+
+	tier_3 = {
+		
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			local_defensiveness = 0.25
+		}
+
+		area_modifier = {
+			local_tax_modifier = 0.25
+			local_defensiveness = 0.20
+		}
+
+		country_modifiers = {
+			spy_offence = 0.25
+			manpower_in_true_faith_provinces = 0.1
+		}
+
+		on_upgraded = {
+			custom_tooltip = tughayasa_better_divination_2_tt
+			hidden_effect = {
+				clr_province_flag = tughayasa_better_divination_1
+				set_province_flag = tughayasa_better_divination_2
+			}
+			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }				
+		}
+	}
+}
+anbi_jiangliubao = {
+	start = 4859	#Xiadao
+
+	date = 2000.01.01
+
+	time = {
+		months = 1
+	}
+
+	build_trigger = {
+		FROM = {
+			has_country_modifier = anbi_kuhai_rigntous_path_great_buliding_buff
+		}
+	}
+
+	build_cost = 1500
+
+	can_be_moved = no
+
+	starting_tier = 0
+
+	type = monument
+
+	can_use_modifiers_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+
+		}
+
+		area_modifier = {
+
+		}
+
+		country_modifiers = {
+
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			local_development_cost = -0.25
+			local_tax_modifier = 0.1
+			local_defensiveness = 0.25
+			local_fort_maintenance_modifier = -0.5
+		}
+
+		area_modifier = {
+			
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			church_power_modifier = 0.05
+		}
+
+		on_upgraded = {
+			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			local_development_cost = -0.3
+		}
+
+		area_modifier = {
+			local_tax_modifier = 0.1
+			local_defensiveness = 0.25
+			local_fort_maintenance_modifier = -0.5
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			global_missionary_strength = 0.01
+			church_power_modifier = 0.075
+		}
+
+		on_upgraded = {
+			if = {
+				limit = { owner = { NOT = { has_government_attribute = is_in_xia } } }
+				custom_tooltip = jiangliubao_t2_tt
+				hidden_effect = { owner = { choose_new_xia_path = { path = 4559 } } }
+			}
+			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+		}
+	}
+
+	tier_3 = {
+		
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			local_development_cost = -0.35
+		}
+
+		area_modifier = {
+		}
+
+		region_modifier = {
+			local_tax_modifier = 0.1
+			local_defensiveness = 0.25
+			local_fort_maintenance_modifier = -0.5
+		}
+
+		country_modifiers = {
+			global_missionary_strength = 0.02
+			church_power_modifier = 0.1
+		}
+
+		on_upgraded = {
+			if = {
+				limit = { owner = { NOT = { has_government_attribute = is_in_xia } } }
+				custom_tooltip = jiangliubao_t3_tt
+			}
+			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+		}
+	}
+}
+anbi_godswall = {
+	start = 4859	# Maruvad
+
+	date = 2000.01.01
+
+	time = {
+		months = 1
+	}
+
+	build_trigger = {
+		FROM = {
+			has_country_modifier = anbi_kuhai_rigntous_path_great_buliding_buff
+		}
+	}
+
+	build_cost = 1500
+
+	can_be_moved = no
+
+	starting_tier = 0
+
+	type = monument
+
+	can_use_modifiers_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+
+		}
+
+		area_modifier = {
+
+		}
+
+		country_modifiers = {
+
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			local_development_cost = -0.15
+		}
+
+		area_modifier = {
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			global_missionary_strength = 0.01
+		}
+
+		on_upgraded = {
+			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			local_development_cost = -0.15
+			allowed_num_of_manufactories = 1
+		}
+
+		area_modifier = {
+		}
+
+		region_modifier = {
+		}
+
+		country_modifiers = {
+			global_missionary_strength = 0.01
+			missionaries = 1
+			church_loyalty_modifier = 0.1
+		}
+
+		on_upgraded = {
+			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+		}
+
+		conditional_modifier = {
+			tooltip_potential = { owner = { is_or_was_tag = { tag = R11 } } }
+			trigger = { owner = { mission_completed = R11_see_west } }
+			modifier = { leader_land_manuever = 1 }
+		}
+	}
+
+	tier_3 = {
+		
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			local_development_cost = -0.25
+			allowed_num_of_manufactories = 1
+		}
+
+		area_modifier = {
+		}
+
+		region_modifier = {
+			local_prosperity_growth = 0.25
+		}
+
+		country_modifiers = {
+			global_missionary_strength = 0.02
+			missionaries = 1
+			church_loyalty_modifier = 0.1
+		}
+
+		on_upgraded = {
+			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }				
+		}
+		
+		conditional_modifier = {
+			tooltip_potential = { owner = { is_or_was_tag = { tag = R11 } } }
+			trigger = { owner = { mission_completed = R11_see_west } }
+			modifier = { leader_land_manuever = 2 }
+		}
+	}
+}
+anbi_bim_lau_necropolis = {
+	start = 4859	#Bim Lau
+
+	date = 2000.01.01
+
+	time = {
+		months = 1
+	}
+
+	build_trigger = {
+		FROM = {
+			has_country_modifier = anbi_kuhai_rigntous_path_great_buliding_buff
+		}
+	}
+
+	build_cost = 1500
+
+	can_be_moved = no
+
+	starting_tier = 0
+
+	type = monument
+
+	can_use_modifiers_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+
+		}
+
+		area_modifier = {
+
+		}
+
+		country_modifiers = {
+
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			local_defensiveness = 0.25
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			prestige_decay = -0.005
+		}
+
+		on_upgraded = {
+			custom_tooltip = bim_lau_spirit_update_monument_tt
+			hidden_effect = {
+				4565 = {
+					change_variable = {
+						which = BimLauTombPower
+						value = 25
+					}
+					change_variable = {
+						which = BimLauTombOpulence
+						value = 25
+					}
+				}
+				bim_lau_spirit_power = yes
+			}
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			local_defensiveness = 0.25
+		}
+
+		region_modifier = {
+			local_hostile_movement_speed = -0.1
+		}
+
+		country_modifiers = {
+			prestige_decay = -0.01
+		}
+
+		on_upgraded = {
+			custom_tooltip = bim_lau_spirit_update_monument_tt
+			hidden_effect = {
+				4565 = {
+					change_variable = {
+						which = BimLauTombPower
+						value = 25
+					}
+					change_variable = {
+						which = BimLauTombOpulence
+						value = 25
+					}
+				}
+				bim_lau_spirit_power = yes
+			}
+		}
+	}
+
+	tier_3 = {
+		
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			local_defender_dice_roll_bonus = 1
+		}
+
+		area_modifier = {
+			local_defensiveness = 0.25
+		}
+
+		region_modifier = {
+			local_garrison_size = 0.20
+			local_hostile_movement_speed = -0.2
+		}
+
+		country_modifiers = {
+			prestige_decay = -0.015
+		}
+
+		on_upgraded = {
+			custom_tooltip = bim_lau_spirit_update_monument_tt
+			hidden_effect = {
+				4565 = {
+					change_variable = {
+						which = BimLauTombPower
+						value = 25
+					}
+					change_variable = {
+						which = BimLauTombOpulence
+						value = 25
+					}
+				}
+				bim_lau_spirit_power = yes
+			}
+		}
+	}
+}
+anbi_golden_palace = {
+	start = 4859	#Dhenijansar
+
+	date = 2000.01.01
+
+	time = {
+		months = 1
+	}
+
+	build_cost = 1500
+
+	can_be_moved = no
+
+	starting_tier = 0
+
+	type = monument
+
+	build_trigger = {
+		FROM = {
+			has_country_modifier = anbi_kuhai_rigntous_path_great_buliding_buff
+		}
+	}
+
+	can_use_modifiers_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+
+		}
+
+		area_modifier = {
+
+		}
+
+		country_modifiers = {
+
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			local_unrest = -1
+		}
+
+		area_modifier = {
+			local_tax_modifier = 0.1
+			local_autonomy = -0.025
+		}
+
+		country_modifiers = {
+			governing_capacity_modifier = 0.05
+		}
+
+		on_upgraded = {
+			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }				
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			local_unrest = -3
+			local_tax_modifier = 0.25
+			local_autonomy = -0.05
+		}
+
+		region_modifier = {
+			min_local_autonomy = -25
+		}
+
+		country_modifiers = {
+			governing_capacity_modifier = 0.10
+		}
+
+		on_upgraded = {
+			custom_tooltip = golden_palace_upgrade_tt
+			hidden_effect = {
+				owner = {
+					every_known_country = {
+						limit = {
+							OR = {
+								primary_culture = royal_harimari
+								primary_culture = primal_harimari
+								culture_group = south_raheni
+								culture_group = middle_raheni
+								culture_group = upper_raheni
+							}
+						}
+						add_opinion = {
+							who = PREV
+							modifier = raj_upgraded_golden_palace_opinion
+						}
+					}
+				}
+			}
+			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+		}
+	}
+
+	tier_3 = {
+		
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			local_tax_modifier = 0.25
+			local_autonomy = -0.05
+		}
+
+		region_modifier = {
+			min_local_autonomy = -50
+			local_unrest = -3
+		}
+		
+		country_modifiers = {
+			governing_capacity_modifier = 0.10
+		}
+
+		on_upgraded = {
+			custom_tooltip = golden_palace_upgrade_tt
+			hidden_effect = {
+				owner = {
+					every_known_country = {
+						limit = {
+							OR = {
+								primary_culture = royal_harimari
+								primary_culture = primal_harimari
+								culture_group = south_raheni
+								culture_group = middle_raheni
+								culture_group = upper_raheni
+							}
+						}
+						add_opinion = {
+							who = PREV
+							modifier = raj_upgraded_golden_palace_opinion
+						}
+					}
+				}
+			}
+			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }				
+		}
+	}
+}
+anbi_hall_of_endless_debate = {
+	start = 4859	#Rayavhashapal
+
+	date = 2000.01.01
+
+	time = {
+		months = 1
+	}
+
+	build_cost = 1500
+
+	can_be_moved = no
+
+	starting_tier = 0
+
+	type = monument
+
+	build_trigger = {
+		FROM = {
+			has_country_modifier = anbi_kuhai_rigntous_path_great_buliding_buff
+		}
+	}
+
+	can_use_modifiers_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+
+		}
+
+		area_modifier = {
+
+		}
+
+		country_modifiers = {
+
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			local_institution_spread = 0.25
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			tolerance_heretic = 0.5
+			tolerance_heathen = 0.5
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			local_institution_spread = 0.50
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			tolerance_heretic = 0.5
+			tolerance_heathen = 0.5
+			free_adm_policy = 1
+		}
+
+		on_upgraded = {
+			owner = { change_government_reform_progress = 50 }
+		}
+	}
+
+	tier_3 = {
+		
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			
+		}
+
+		region_modifier = {
+			local_institution_spread = 0.50
+		}
+
+		country_modifiers = {
+			tolerance_heretic = 1
+			tolerance_heathen = 1
+			possible_adm_policy = 1
+			free_adm_policy = 1
+		}
+
+		on_upgraded = {
+			owner = { change_government_reform_progress = 50 }
+		}
+		area_modifier = {
+			
+		}
+	}
+}
+anbi_the_resurgence_huangke_a = {
+	start = 5406	#Rayavhashapal
+
+	date = 2000.01.01
+
+	time = {
+		months = 12
+	}
+
+	build_cost = 1500
+
+	can_be_moved = no
+
+	starting_tier = 0
+
+	type = monument
+
+	build_trigger = {
+		FROM = {
+			NOT = {
+				has_country_modifier = anbi_kuhai_huangke_great
+			}
+		}
+		has_province_flag = anbi_the_resurgence_huangke_a_flag
+	}
+
+	can_use_modifiers_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+
+		}
+
+		area_modifier = {
+
+		}
+
+		country_modifiers = {
+			global_tax_income = -120
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			local_institution_spread = 0.25
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			global_tax_income = -240
+			tolerance_own = 0.25
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			local_institution_spread = 0.50
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			global_tax_income = -360
+			tolerance_own = 0.5
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+
+		region_modifier = {
+			local_institution_spread = 0.50
+		}
+
+		country_modifiers = {
+			global_tax_income = -480
+			tolerance_own = 1
+		}
+
+		on_upgraded = {
+			FROM = {
+				if = {
+					limit = { 
+						NOT = {
+							has_country_flag = anbi_kuhai_resurgence_huangke_1
+							has_country_flag = anbi_kuhai_resurgence_huangke_2
+							has_country_flag = anbi_kuhai_resurgence_huangke_3
+						}
+					}
+					country_event = {
+						id = anbi_kuhai.210
+					}
+				}
+				else_if = {
+					limit = { 
+						has_country_flag = anbi_kuhai_resurgence_huangke_1
+					}
+					country_event = {
+						id = anbi_kuhai.211
+					}
+				}
+				else_if = {
+					limit = { 
+						has_country_flag = anbi_kuhai_resurgence_huangke_2
+					}
+					country_event = {
+						id = anbi_kuhai.212
+					}
+				}
+			}
+		}
+	}
+}
+anbi_the_resurgence_huangke_b = {
+	start = 4925	#Rayavhashapal
+
+	date = 2000.01.01
+
+	time = {
+		months = 12
+	}
+
+	build_cost = 1500
+
+	can_be_moved = no
+
+	starting_tier = 0
+
+	type = monument
+
+	build_trigger = {
+		FROM = {
+			NOT = {
+				has_country_modifier = anbi_kuhai_huangke_great
+			}
+		}
+		has_province_flag = anbi_the_resurgence_huangke_b_flag
+	}
+
+	can_use_modifiers_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+		
+	}
+
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+
+		}
+
+		area_modifier = {
+
+		}
+
+		country_modifiers = {
+			global_tax_income = -120
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			local_institution_spread = 0.25
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			global_tax_income = -240
+			tolerance_own = 0.25
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			local_institution_spread = 0.50
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			global_tax_income = -360
+			tolerance_own = 0.5
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+
+		region_modifier = {
+			local_institution_spread = 0.50
+		}
+
+		country_modifiers = {
+			global_tax_income = -480
+			tolerance_own = 1
+		}
+
+		on_upgraded = {
+			FROM = {
+				if = {
+					limit = { 
+						NOT = {
+							has_country_flag = anbi_kuhai_resurgence_huangke_1
+							has_country_flag = anbi_kuhai_resurgence_huangke_2
+							has_country_flag = anbi_kuhai_resurgence_huangke_3
+						}
+					}
+					country_event = {
+						id = anbi_kuhai.210
+					}
+				}
+				else_if = {
+					limit = { 
+						has_country_flag = anbi_kuhai_resurgence_huangke_1
+					}
+					country_event = {
+						id = anbi_kuhai.211
+					}
+				}
+				else_if = {
+					limit = { 
+						has_country_flag = anbi_kuhai_resurgence_huangke_2
+					}
+					country_event = {
+						id = anbi_kuhai.212
+					}
+				}
+			}
+		}
+	}
+}
+anbi_the_resurgence_huangke_c = {
+	start = 5356	#Rayavhashapal
+
+	date = 2000.01.01
+
+	time = {
+		months = 12
+	}
+
+	build_cost = 1500
+
+	can_be_moved = no
+
+	starting_tier = 0
+
+	type = monument
+
+	build_trigger = {
+		FROM = {
+			NOT = {
+				has_country_modifier = anbi_kuhai_huangke_great
+			}
+		}
+		has_province_flag = anbi_the_resurgence_huangke_c_flag
+	}
+
+	can_use_modifiers_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			religion = zhengdao_path
+			tag = Z65
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+
+		}
+
+		area_modifier = {
+
+		}
+
+		country_modifiers = {
+			global_tax_income = -120
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			local_institution_spread = 0.25
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			global_tax_income = -240
+			tolerance_own = 0.25
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			
+		}
+
+		area_modifier = {
+			local_institution_spread = 0.50
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			global_tax_income = -360
+			tolerance_own = 0.5
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
+
+		region_modifier = {
+			local_institution_spread = 0.50
+		}
+
+		country_modifiers = {
+			global_tax_income = -480
+			tolerance_own = 1
+		}
+
+		on_upgraded = {
+			FROM = {
+				if = {
+					limit = { 
+						NOT = {
+							has_country_flag = anbi_kuhai_resurgence_huangke_1
+							has_country_flag = anbi_kuhai_resurgence_huangke_2
+							has_country_flag = anbi_kuhai_resurgence_huangke_3
+						}
+					}
+					country_event = {
+						id = anbi_kuhai.210
+					}
+				}
+				else_if = {
+					limit = { 
+						has_country_flag = anbi_kuhai_resurgence_huangke_1
+					}
+					country_event = {
+						id = anbi_kuhai.211
+					}
+				}
+				else_if = {
+					limit = { 
+						has_country_flag = anbi_kuhai_resurgence_huangke_2
+					}
+					country_event = {
+						id = anbi_kuhai.212
+					}
+				}
+			}
+		}
+	}
+}
+
+anbi_merfolk_mage_school = {
+	start = 6052	#Rayavhashapal
+
+	date = 2000.01.01
+
+	time = {
+		months = 12
+	}
+
+	build_cost = 1000
+
+	can_be_moved = no
+
+	starting_tier = 0
+
+	type = monument
+
+	build_trigger = {
+		has_province_flag = anbi_merfolk_defense_the_evil_pf
+	}
+
+	can_use_modifiers_trigger = {
+		owner = {
+			tag = AB3
+		}
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			tag = AB3
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+
+		}
+
+		area_modifier = {
+
+		}
+
+		country_modifiers = {
+
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		province_modifiers = {
+			local_sailors_modifier = 0.25
+			local_development_cost = -0.1
+		}
+
+		area_modifier = {
+			local_institution_spread = 0.25
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			admiral_cost = -0.1
+			admiral_skill_gain_modifier = 0.5
+		}
+
+		on_upgraded = {
+			custom_tooltip = anbi_merfolk_mage_school_tt
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		province_modifiers = {
+			local_sailors_modifier = 0.5
+			local_development_cost = -0.25
+			blockade_force_required = 1
+		}
+
+		area_modifier = {
+			local_institution_spread = 0.50
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+			admiral_cost = -0.2
+			admiral_skill_gain_modifier = 0.5
+			naval_tradition_from_battle = 0.5
+			navy_tradition = 1
+			capture_ship_chance = 0.1
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			local_sailors_modifier = 1
+			local_development_cost = -0.25
+			blockade_force_required = 5
+		}
+		area_modifier = {
+			
+		}
+
+		region_modifier = {
+			local_institution_spread = 0.50
+		}
+
+		country_modifiers = {
+			admiral_cost = -0.4
+			admiral_skill_gain_modifier = 0.5
+			naval_tradition_from_battle = 1
+			navy_tradition = 1
+			ship_durability = 0.1
+			navy_tradition_decay = -0.015
+			capture_ship_chance = 0.33
+		}
+
+		on_upgraded = {
+			custom_tooltip = anbi_merfolk_mage_school_tt2
+			owner = {
+				set_country_flag = anbi_merfolk_mage_school_cf
+			}			
+		}
+	}
+}
+anbi_merfolk_landpalace = {
+	start = 6052	#Rayavhashapal
+
+	date = 2000.01.01
+
+	time = {
+		months = 1
+	}
+
+	build_cost = 1000
+
+	can_be_moved = no
+
+	starting_tier = 0
+
+	type = monument
+
+	build_trigger = {
+		has_province_flag = anbi_merfolk_landpalace_pf
+	}
+
+	can_use_modifiers_trigger = {
+		owner = {
+			tag = AB3
+		}
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			tag = AB3
+			years_of_sailors = 3
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		province_modifiers = {
+
+		}
+
+		area_modifier = {
+
+		}
+
+		country_modifiers = {
+
+		}
+
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+
+		cost_to_upgrade = {
+			factor = 10000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			local_institution_spread = 0.25
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+			owner = {
+				add_yearly_sailors = -1
+				custom_tooltip = anbi_merfolk_landpalace_tt
+				tooltip = {
+					capital_scope = {
+						add_province_modifier = {
+							name = anbi_merfolk_landpalace_buff
+							duration = -1
+						}
+					}
+				}
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							superregion = djinnakah_superregion
+						}
+						add_province_modifier = {
+							name = anbi_merfolk_landpalace_buff
+							duration = -1
+						}
+					}
+				}
+			}
+			
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+
+		cost_to_upgrade = {
+			factor = 25000
+		}
+
+		province_modifiers = {
+		}
+
+		area_modifier = {
+			local_institution_spread = 0.50
+		}
+
+		region_modifier = {
+			
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+			owner = {
+				add_yearly_sailors = -2
+				custom_tooltip = anbi_merfolk_landpalace_tt2
+				hidden_effect = {
+					remove_country_modifier = anbi_AB3_the_water_kingdom_1
+					add_country_modifier = {
+						name = anbi_AB3_the_water_kingdom_2
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+
+	tier_3 = {
+		
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 50000
+		}
+
+		province_modifiers = {
+		}
+		area_modifier = {
+			
+		}
+
+		region_modifier = {
+			local_institution_spread = 0.50
+		}
+
+		country_modifiers = {
+		}
+
+		on_upgraded = {
+			owner = {
+				add_yearly_sailors = -3
+				custom_tooltip = anbi_merfolk_landpalace_tt3
+				hidden_effect = {
+					remove_country_modifier = anbi_AB3_the_water_kingdom_2
+					add_country_modifier = {
+						name = anbi_AB3_the_water_kingdom_3
+						duration = -1
+					}
+				}
+			}			
+		}
+	}
+}

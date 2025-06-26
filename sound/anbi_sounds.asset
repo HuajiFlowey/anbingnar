@@ -1,0 +1,20 @@
+sound = {
+	name = religion_zhengdao_path
+	file = "tab_religion_righteous_paths.wav"
+}
+sound = {
+	name = religion_giantkin_regent_court
+	file = "tab_religion_christian.wav"
+}
+sound = {
+	name = anbi_hebeimoqiling
+	file = "anbi_hebeimoqiling.wav"
+}
+sound = {
+	name = anbi_geshengyuweixiao
+	file = "anbi_geshengyuweixiao.wav"
+}
+sound = {
+	name = anbi_santiano
+	file = "anbi_santiano.wav"
+}

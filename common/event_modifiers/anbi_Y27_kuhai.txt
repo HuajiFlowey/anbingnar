@@ -1,0 +1,349 @@
+anbi_no_agree_with_me = {
+	land_morale = -1
+	discipline = -1
+}
+anbi_kuhai_B05_buff = {
+	land_forcelimit_modifier = 1
+	land_morale = 0.5
+	discipline = 0.1
+	core_creation = -0.5
+	ae_impact = -0.9
+	max_absolutism = 100
+	administrative_efficiency = 0.25
+	global_unrest = -10
+	reform_progress_growth = 1
+	land_maintenance_modifier = -0.5
+	global_regiment_cost = -0.5
+	global_tax_income = 240
+}
+anbi_kuhai_F51_buff = {
+	land_forcelimit_modifier = 1
+	land_morale = 0.5
+	discipline = 0.1
+	manpower_recovery_speed = 0.5
+	extra_manpower_at_religious_war = yes
+	core_creation = -0.5
+	ae_impact = -0.9
+	administrative_efficiency = 0.25
+	global_unrest = -10
+	reform_progress_growth = 1
+	land_maintenance_modifier = -0.5
+	global_regiment_cost = -0.5
+	global_tax_income = 240
+}
+anbi_kuhai_G52_buff = {
+	colonists = 2
+	global_colonial_growth = 100
+	land_forcelimit_modifier = 1
+	republican_tradition = 10
+	land_morale = 0.5
+	discipline = 0.1
+	core_creation = -0.5
+	ae_impact = -0.9
+	administrative_efficiency = 0.25
+	global_unrest = -10
+	reform_progress_growth = 1
+	land_maintenance_modifier = -0.5
+	global_regiment_cost = -0.5
+	global_tax_income = 240
+}
+anbi_kuhai_R74_buff = {
+	fabricate_claims_cost = 100
+}
+anbi_kuhai_R62_command_sir_revolt_started = {
+	#使命令战斗力爆表以一定打赢北方起义
+	land_morale = 1
+	discipline = 0.25
+	manpower_recovery_speed = 10
+}
+anbi_kuhai_R62_no_mage = {
+	monthly_korashi_reserves = 100
+}
+anbi_kuhai_Y05_war_buff = {
+	land_morale = 0.15
+	manpower_recovery_speed = 0.2
+	recover_army_morale_speed = 0.25
+}
+anbi_kuhai_Y24_no_ally_buff = {
+	diplomatic_reputation = -10
+}
+anbi_kuhai_Y26_argeement = {
+	diplomatic_upkeep = 2
+	diplomatic_reputation = 1
+	reduced_liberty_desire = 10
+}
+anbi_kuhai_admin_cooldown = {
+	min_autonomy = 10
+	global_autonomy = -0.05
+	global_unrest = 2
+}
+anbi_kuhai_yanshen_parliament_buff = {
+	picture = "federation_museum"
+	local_governing_cost = -0.25
+	local_unrest = -2
+	max_possible_parliament_seats = 1
+}
+anbi_kuhai_purple_whaling_buff = {
+	colonists = 1
+	range = 1
+	auto_explore_adjacent_to_colony = yes
+	may_explore = yes
+	global_colonial_growth = 1
+	global_colonial_growth = 50
+	global_tariffs = -0.5
+}
+anbi_kuhai_yanshen_nationalism = {
+	local_core_creation = -0.5
+}
+anbi_kuhai_no_devouring = {
+	local_unrest = 5
+	local_missionary_strength = 0.2
+}
+anbi_kuhai_no_devouring_country = {
+	technology_cost = -0.025
+	idea_cost = -0.025
+}
+anbi_the_greatest_xia = {
+	discipline = 0.3
+	morale_damage = 0.8
+	land_morale = 0.3
+	reinforce_speed = -0.5
+	fire_damage_received = -0.425
+	fire_damage = 0.7
+	shock_damage = 0.8
+	infantry_cost = 20
+	land_attrition = -0.8
+	shock_damage_received = -0.675
+	morale_damage_received = -0.45
+	infantry_power = 0.55
+	reinforce_cost_modifier = 10
+	drill_decay_modifier = -1
+	drill_gain_modifier = 1.5
+	land_maintenance_modifier = 0.4
+
+	is_samurai_modifier = yes
+}
+anbi_kuhai_city_festival = {
+	local_development_cost_modifier = -0.5
+	tax_income = -240
+	local_production_efficiency = 1
+}
+anbi_kuhai_defend_hobgoblin_buff = {
+	local_defensiveness = 0.5
+	local_manpower_modifier = 1
+	local_development_cost = 0.5
+	local_fort_maintenance_modifier = -1
+}
+anbi_kuhai_defend_hobgoblin_buff2 = {
+	local_manpower_modifier = 0.5
+	local_development_cost = 0.25
+}
+anbi_kuhai_defend_hobgoblin_buff_country = {
+	land_forcelimit_modifier = 0.5
+	land_morale = 0.2
+	extra_manpower_at_religious_war = yes
+	administrative_efficiency = -0.1
+}
+anbi_kuhai_destory_palace_of_divine_call = {
+	trade_goods_size = 0.01
+	institution_growth = 12
+	local_tax_modifier = -0.1
+}
+anbi_kuhai_yangchang_university = {
+	trade_goods_size = 0.01
+	advisor_cost = -0.1
+	idea_cost = -0.1 
+}
+anbi_kuhai_the_world_is_ours_buff = {
+	colony_cost_modifier = -1
+	colonists = 2
+	colony_development_boost = 2
+	colonist_placement_chance = 0.25
+	global_colonial_growth = 100
+}
+anbi_kuhai_yanshen_is_haless_buff = {
+	core_creation = -0.25
+	ae_impact = 0.25
+	core_decay_on_your_own = -0.5
+}
+anbi_kuhai_crush_the_high_raheni = {
+	local_missionary_maintenance_cost = -0.5
+	local_missionary_strength = 0.1
+}
+anbi_kuhai_the_quetion_of_temple_buff = {
+	missionaries = 1
+	global_heathen_missionary_strength = 0.02
+	religion = yes
+}
+anbi_kuhai_make_a_great_law = {
+	administrative_efficiency = -0.05
+}
+anbi_kuhai_huangke_alive = {
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+}
+anbi_annex_the_yanshen_republic_state_cooldown = {
+	administrative_efficiency = -0.025
+}
+anbi_kuhai_the_everyone_has_theirs_buff = {
+	development_cost = -0.25
+	global_unrest = -2
+	global_tax_modifier = -0.25
+}
+anbi_kuhai_all_men_join_army_buff = {
+	manpower_recovery_speed = 0.1
+	land_forcelimit_modifier = 0.1
+}
+anbi_kuhai_good_men_join_army_buff = {
+	discipline = 0.05
+	fire_damage = 0.05
+	yearly_army_professionalism = 0.005
+}
+anbi_kuhai_bianfang_mil = {
+	drill_decay_modifier = -0.25
+	drill_gain_modifier = 0.25
+}
+anbi_kuhai_jiangdu_mil = {
+	free_leader_pool = 1
+	leader_cost = -0.1
+	leader_land_shock = 1
+}
+anbi_kuhai_bianfang_mil2 = {
+	drill_decay_modifier = -0.35
+	drill_gain_modifier = 0.5
+	army_tradition_decay = -0.02
+	yearly_army_professionalism = 0.01
+}
+anbi_kuhai_jiangdu_mil2 = {
+	free_leader_pool = 2
+	leader_cost = -0.25
+	leader_land_shock = 1
+	leader_land_fire = 1
+	leader_land_manuever = 1
+	leader_siege = 1
+}
+anbi_kuhai_the_workers_have_food_buff = {
+	production_efficiency = -0.25
+	trade_efficiency = -0.25
+	state_maintenance_modifier = 0.5
+	global_unrest = -2
+	global_trade_goods_size = 0.1
+	global_tax_income = -120
+}
+anbi_kuhai_the_problem_of_adventurer_buff = {
+	allow_mercenary_drill = yes
+	merc_independent_from_trade_range = yes
+	mercenary_manpower = -0.25
+	mercenary_discipline = 0.05
+}
+anbi_kuhai_the_laker_state_of_yanshen_buff = {
+	administrative_efficiency = -0.1
+	diplomatic_upkeep = -2
+	diplomatic_reputation = -2
+	dip_advisor_cost = 1
+	dip_tech_cost_modifier = 0.25
+}
+anbi_kuhai_yanshenized_laker_buff = {
+	liberty_desire = -1000
+	relation_with_same_culture_group = 1000
+	republican_tradition = 2
+	land_morale = 0.25
+}
+anbi_kuhai_the_yanshen_river_up_and_down_buff = {
+	local_prosperity_growth = 0.1
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	local_governing_cost = -0.25
+}
+anbi_kuhai_rigntous_path_great_buliding_buff = {
+	great_project_upgrade_time = -0.25
+	great_project_upgrade_cost = -0.25
+}
+anbi_the_north_and_south_of_mountains_buff = {
+	cavalry_shock = 0.1
+	cavalry_power = 0.15
+}
+anbi_kuhai_the_yanshen_unity_and_great_buff = {
+	trade_goods_size_modifier = 0.25
+	tax_income = 12
+	local_prosperity_growth = 1
+	local_monthly_devastation = -0.1
+}
+anbi_kuhai_the_light_seas = {
+	allowed_marine_fraction = 0.5
+	shock_damage_received = -0.10
+	sailor_maintenance_modifer = -0.2
+	navy_tradition = 0.5
+	global_manpower_modifier = -0.1
+	global_naval_engagement_modifier = 0.1
+	transfer_trade_power_reasons = 30
+}
+anbi_kuhai_yanshen_sky_buff = {
+	artificers_capacity = 50
+	trade_efficiency = 0.1
+	global_trade_power = 0.25
+	trade_range_modifier = 1
+	range = 1
+	envoy_travel_time = -0.33
+}
+anbi_kuhai_the_fail_country = {
+	liberty_desire = -1000
+	republican_tradition = 2
+}
+anbi_kuhai_the_blue_liberty_law = {
+	trade_goods_size_modifier = 0.25
+}
+anbi_kuhai_the_gold_fair_law = {
+	local_development_cost = -0.5
+}
+anbi_kuhai_the_end_of_command = {
+	trade_goods_size = 0.01
+}
+anbi_the_rending_is_over_buff = {
+	build_cost = 0.25
+	build_time = 0.25
+}
+anbi_kuhai_huangke_great = {
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+	tolerance_own = 5
+	tolerance_heathen = 3
+	liberty_desire_from_subject_development = -0.5
+	stability_cost_modifier = -0.5
+	unjustified_demands = -0.5
+	morale_damage_received = -0.15
+	morale_damage = 0.1
+	enable_forced_march = yes
+	force_march_free = yes
+}
+anbi_kuhai_arawkelin_trade_buff = {
+	local_governing_cost = 0.5
+	global_trade_power = 0.1
+	trade_steering = 0.25
+	privateer_efficiency = -0.5
+}
+anbi_kuhai_jinshanjun_issue_buff = {
+	parliament_backing_chance = -0.2
+}
+anbi_kuhai_250_miles = {
+	global_tax_income = -120
+	administrative_efficiency = -0.1
+	governing_capacity_modifier = -0.1
+}
+anbi_kuhai_the_jinshanjun = {
+	republican_tradition = 0.5
+	governing_capacity_modifier = 0.1
+	tolerance_own = 2
+	missionaries = 1
+	prestige = 1
+}
+anbi_kuhai_the_light_of_brain_buff = {
+	max_revolutionary_zeal = 50
+}
+anbi_kuhai_the_world_war_buff = {
+	global_supply_limit_modifier = 1000
+	war_exhaustion = -1
+	global_tax_income = 240
+}

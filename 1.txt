@@ -1,0 +1,32 @@
+# ROOT = {
+# 	set_variable = {
+# 		which = anbi_merfolk_shipgirls_tech_investment
+# 		value = 0
+# 	}
+# 	set_variable = {
+# 		which = anbi_merfolk_shipgirls_cash_investment
+# 		value = 0
+# 	}
+# 	set_variable = {
+# 		which = anbi_merfolk_shipgirls_sailors_investment
+# 		value = 0
+# 	}
+# 	set_variable = {
+# 		which = anbi_merfolk_shipgirls_power_investment
+# 		value = 0
+# 	}
+# 	set_variable = {
+# 		which = anbi_merfolk_shipgirls_speed
+# 		value = 0
+# 	}
+# 	set_variable = {
+# 		which = anbi_merfolk_shipgirls_progress
+# 		value = 0
+# 	}
+# 	capital_scope = {
+# 		add_province_triggered_modifier = anbi_merfolk_shipgirls_research
+# 	}
+# }
+ROOT = {
+	set_estate_privilege = anbi_merfolk_naga_mages
+}

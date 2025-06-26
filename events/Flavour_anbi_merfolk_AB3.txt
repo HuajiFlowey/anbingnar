@@ -1,0 +1,2985 @@
+namespace = anbi_merfolk
+##流程事件（1）
+#人鱼逃亡
+country_event = {
+	id = anbi_merfolk.1
+	title = anbi_merfolk.1.t
+	desc = anbi_merfolk.1.d
+	picture = anbi_merfolk_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+		tag = S21
+	}
+
+	option = {
+		name = anbi_merfolk.1.a
+		add_adm_power = -1
+		custom_tooltip = anbi_merfolk.1_tt1
+	}
+	option = {
+		name = anbi_merfolk.1.b
+		highlight = yes
+		custom_tooltip = anbi_merfolk.1_tt2
+		hidden_effect = {
+			6061 = {
+				add_core = AB3
+				cede_province = AB3
+				kill_units = {
+					who = owner
+					type = infantry
+				}	
+				kill_units = {
+					who = owner
+					type = cavalry
+				}
+			}
+			switch_tag = AB3
+			AB3 = {
+				merfolk_discover = yes
+				add_manpower = -20
+				add_sailors = 500
+				add_treasury = 120
+				define_ruler = {
+					name = "Gertyene"
+					dynasty = "Mpiya"
+					female = yes
+					adm = 0
+					dip = 1
+					mil = 0
+					age = 16
+				}
+				set_country_flag = anbi_ab3_is_merfolk_country
+				set_variable = { which = merfolkOpinionVar value = 100 }
+				set_country_flag = merfolk_opinion_allied
+				set_country_flag = disables_estate_adeen_flag
+				set_country_flag = necromancy_disallowed
+				set_country_flag = disabled_heir_events
+				set_ruler_flag = anbi_is_gertyene
+				set_ruler_flag = ruinborn_ruler
+				set_ruler_flag = mage_ruler_general
+				set_ruler_flag = enchantment_1
+				set_ruler_flag = illusion_1
+				set_ruler_flag = initialized_magic_flags
+				set_ruler_flag = immortal_ruler
+				add_ruler_personality = mage_personality
+				add_ruler_personality = naive_personality
+				add_ruler_personality = craven_personality
+				add_ruler_modifier = {
+					name = anbi_is_gertyene_buff
+					duration = -1
+				}
+				country_event = {
+					id = anbi_merfolk.1000
+					days = 1
+				}
+				country_event = {
+					id = anbi_merfolk.2
+					days = 2
+				}
+				add_country_modifier = {
+					name = anbi_AB3_exile
+					duration = -1
+				}
+				add_country_modifier = {
+					name = anbi_AB3_no_production
+					duration = -1
+				}
+				add_country_modifier = {
+					name = anbi_AB3_no_manpower
+					duration = -1
+				}
+				add_country_modifier = {
+					name = anbi_AB3_merfolk_marine
+					duration = -1
+				}
+				add_country_modifier = {
+					name = anbi_AB3_merfolk_military
+					duration = -1
+				}
+			}
+			S17 = {
+				country_event = {
+					id = anbi_merfolk.200
+					days = 1
+				}
+			}
+			S18 = {
+				country_event = {
+					id = anbi_merfolk.200
+					days = 1
+				}
+			}
+			S20 = {
+				country_event = {
+					id = anbi_merfolk.200
+					days = 1
+				}
+			}
+			S21 = {
+				country_event = {
+					id = anbi_merfolk.200
+					days = 1
+				}
+			}
+		}
+	}
+}
+#回忆
+country_event = {
+	id = anbi_merfolk.2
+	title = anbi_merfolk.2.t
+	desc = anbi_merfolk.2.d
+	picture = anbi_the_sea_monster_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			every_province = {
+				undiscover_country = ROOT
+			}
+			merfolk_undiscover = yes
+			1332 = {
+				discover_country = ROOT
+			}
+			6061 = {
+				discover_country = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = anbi_merfolk.2.a
+		custom_tooltip = anbi_merfolk.2_tt
+		country_event = {
+			id = anbi_merfolk.4
+			days = 5
+		}
+		set_ruler_flag = ruinborn_ruler
+	}
+}
+#序号3因为奇怪的冲突被空置
+#现实
+country_event = {
+	id = anbi_merfolk.4
+	title = anbi_merfolk.4.t
+	desc = anbi_merfolk.4.d
+	picture = anbi_the_sea_monster2_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.4.a
+		change_adm = 1
+		remove_ruler_personality = craven_personality
+		add_ruler_personality = inspiring_leader_personality
+		country_event = {
+			id = anbi_merfolk.5
+			days = 30
+		}
+		set_ruler_flag = ruinborn_ruler
+	}
+}
+#开始迁移
+country_event = {
+	id = anbi_merfolk.5
+	title = anbi_merfolk.5.t
+	desc = anbi_merfolk.5.d
+	picture = anbi_the_sea_monster3_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			1329 = {
+				discover_country = ROOT
+			}
+			6577 = {
+				discover_country = ROOT
+				add_core = ROOT
+				cede_province = ROOT
+				move_capital_effect = yes
+				clr_province_flag = merfolk_settlement
+				remove_province_modifier = offcoast_merfolk_ab3_1_level
+				6678 = {
+					subtract_variable = {
+						which = ardimyaMerfolkCap
+						value = 1
+					}
+				}		
+			}
+			1332 = {
+				undiscover_country = ROOT
+			}
+			6061 = {
+				undiscover_country = ROOT
+				remove_core = ROOT
+				cede_province = ---
+			}
+		}
+	}
+
+	option = {
+		name = anbi_merfolk.5.a
+		change_dip = 1
+		country_event = {
+			id = anbi_merfolk.6
+			days = 30
+		}
+	}
+}
+#捕鱼
+country_event = {
+	id = anbi_merfolk.6
+	title = anbi_merfolk.6.t
+	desc = anbi_merfolk.6.d
+	picture = SHIP_SAILING_eventPicture
+
+	immediate = {
+		hidden_effect = {
+			1330 = {
+				discover_country = ROOT
+			}
+			3141 = {
+				discover_country = ROOT
+			}
+			6573 = {
+				discover_country = ROOT
+				add_core = ROOT
+				cede_province = ROOT
+				move_capital_effect = yes
+			}
+			1329 = {
+				undiscover_country = ROOT
+			}
+			6577 = {
+				undiscover_country = ROOT
+				remove_core = ROOT
+				cede_province = ---
+			}
+			S88 = {
+				capital_scope = {
+					discover_country = ROOT
+				}
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.6.a
+		
+		change_mil = 1
+		country_event = {
+			id = anbi_merfolk.27
+			days = 10
+		}
+	}
+}
+#同人类的接触
+country_event = {
+	id = anbi_merfolk.27
+	title = anbi_merfolk.27.t
+	desc = anbi_merfolk.27.d
+	picture = anbi_merfolk2_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.27.a
+		add_historical_friend = S88
+		S88 = {
+			add_historical_friend = ROOT
+		}
+		add_dip_power = -10
+		add_treasury = 25
+		country_event = {
+			id = anbi_merfolk.7
+			days = 10
+		}
+	}
+}
+#人类交流2
+country_event = {
+	id = anbi_merfolk.7
+	title = anbi_merfolk.7.t
+	desc = anbi_merfolk.7.d
+	picture = anbi_merfolk2_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			1446 = {
+				discover_country = ROOT
+			}
+			6076 = {
+				discover_country = ROOT
+				add_core = ROOT
+				cede_province = ROOT
+				move_capital_effect = yes
+				clr_province_flag = merfolk_settlement
+				remove_province_modifier = offcoast_merfolk_ab3_1_level
+				6678 = {
+					subtract_variable = {
+						which = ardimyaMerfolkCap
+						value = 1
+					}
+				}
+			}
+			1330 = {
+				undiscover_country = ROOT
+			}
+			3141 = {
+				undiscover_country = ROOT
+			}
+			6573 = {
+				undiscover_country = ROOT
+				remove_core = ROOT
+				cede_province = ---
+			}
+			S88 = {
+				capital_scope = {
+					undiscover_country = ROOT
+				}
+				every_tribal_land_province = {
+					undiscover_country = ROOT
+				}
+			}
+		}		
+	}
+
+	option = {
+		name = anbi_merfolk.7.a
+		S87 = {
+			add_historical_friend = ROOT
+		}
+		S86 = {
+			add_historical_friend = ROOT
+		}
+		add_historical_friend = S86
+		add_historical_friend = S87
+		remove_ruler_personality = naive_personality
+		add_ruler_personality = charismatic_negotiator_personality
+		change_dip = 1
+		country_event = {
+			id = anbi_merfolk.8
+			days = 30
+		}
+	}
+}
+#到小岛旁边了
+country_event = {
+	id = anbi_merfolk.8
+	title = anbi_merfolk.8.t
+	desc = anbi_merfolk.8.d
+	picture = anbi_RUIN_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			1448 = {
+				discover_country = ROOT
+			}
+			6677 = {
+				discover_country = ROOT
+			}
+			6052 = {
+				discover_country = ROOT
+			}
+			6568 = {
+				discover_country = ROOT
+				add_core = ROOT
+				cede_province = ROOT
+				move_capital_effect = yes
+			}
+			6076 = {
+				undiscover_country = ROOT
+				remove_core = ROOT
+				cede_province = ---
+			}
+			1446 = {
+				undiscover_country = ROOT
+			}
+		}		
+	}
+
+	option = {
+		name = anbi_merfolk.8.a
+		country_event = {
+			id = anbi_merfolk.9
+		}
+	}
+}
+#登陆
+country_event = {
+	id = anbi_merfolk.9
+	title = anbi_merfolk.9.t
+	desc = anbi_merfolk.9.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.9.a
+		set_country_flag = anbi_merfolk_start
+		custom_tooltip = anbi_merfolk.9_tt
+		remove_country_modifier = anbi_AB3_exile
+		remove_country_modifier = anbi_AB3_no_production
+		remove_country_modifier = anbi_AB3_no_manpower
+		add_government_reform = anbi_merfolk_the_land_merfolk_kingdom
+		add_accepted_culture = suhratbi
+		swap_non_generic_missions = yes
+		hidden_effect = {
+			complete_mission = anbi_merfolk_from_the_deepest_despair
+			country_event = {
+				id = anbi_merfolk.12
+				days = 10
+			}
+			country_event = {
+				id = anbi_merfolk.22
+				days = 20
+			}
+			country_event = {
+				id = anbi_merfolk.10
+				days = 30
+			}
+			country_event = {
+				id = anbi_merfolk.15
+				days = 5425
+			}
+			6052 = {
+				add_core = ROOT
+				cede_province = ROOT
+				move_capital_effect = yes
+			}
+			6677 = {
+				add_core = ROOT
+				cede_province = ROOT
+			}
+			6568 = {
+				remove_core = ROOT
+				cede_province = ---
+			}
+		}
+	}
+
+	after = {
+		country_event = {
+			id = anbi_merfolk.202
+		}
+	}
+}
+#巴达比的僭主
+country_event = {
+	id = anbi_merfolk.10
+	title = anbi_merfolk.10.t
+	desc = anbi_merfolk.10.d
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			merfolk_discover = yes
+			S17 = {
+				add_historical_rival = AB3
+				define_ruler = {
+					change_adm = -1
+					change_dip = -1
+					change_mil = 6
+					dynasty = "Warscore"
+					male = yes
+					claim = 50
+				}
+				add_ruler_personality = sinner_personality
+				add_ruler_personality = drunkard_personality
+				add_ruler_personality = embezzler_personality
+				add_truce_with = ROOT
+				set_ai_personality = {
+					personality = ai_militarist
+					locked = no
+				}
+				add_country_modifier = {
+					name = anbi_kuhai_Y24_no_ally_buff
+					duration = -1
+				}
+			}
+			S18 = {
+				add_historical_friend_mutual = {
+					tag = ROOT
+				}
+			}
+			S19 = {
+				add_historical_friend_mutual = {
+					tag = ROOT
+				}
+			}
+			S20 = {
+				add_historical_friend_mutual = {
+					tag = ROOT
+				}
+			}
+			S21 = {
+				add_historical_friend_mutual = {
+					tag = ROOT
+				}
+			}
+		}
+	}
+
+	option = {
+		name = anbi_merfolk.10.a
+		S17 = {
+			add_claim = 6502
+			add_claim = 6677
+			add_opinion = {
+				who = ROOT
+				modifier = anbi_merfolk_wants_to_conquer
+			}
+			add_opinion = {
+				who = S18
+				modifier = anbi_merfolk_wants_to_conquer
+			}
+			add_opinion = {
+				who = S20
+				modifier = anbi_merfolk_wants_to_conquer
+			}
+			add_opinion = {
+				who = S21
+				modifier = anbi_merfolk_wants_to_conquer
+			}
+		}
+		add_opinion = {
+			who = S17
+			modifier = anbi_merfolk_wants_to_conquer
+		}
+		S18 = {
+			add_opinion = {
+				who = S17
+				modifier = anbi_merfolk_wants_to_conquer
+			}
+		}
+		S20 = {
+			add_opinion = {
+				who = S17
+				modifier = anbi_merfolk_wants_to_conquer
+			}
+		}
+		S21 = {
+			add_opinion = {
+				who = S17
+				modifier = anbi_merfolk_wants_to_conquer
+			}
+		}
+		custom_tooltip = anbi_merfolk.10_tt
+	}
+}
+#初步的成长
+country_event = {
+	id = anbi_merfolk.11
+	title = anbi_merfolk.11.t
+	desc = anbi_merfolk.11.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.11.a
+		add_war_exhaustion = 2.5
+		change_adm = 1
+		change_dip = 1
+		change_mil = 1
+	}
+}
+#难民问题
+country_event = {
+	id = anbi_merfolk.12
+	title = anbi_merfolk.12.t
+	desc = anbi_merfolk.12.d
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			6677 = {
+				add_devastation = 25
+				add_province_modifier = {
+					name = anbi_AB3_the_exile_human
+					duration = -1
+				}
+			}
+			6052 = {
+				add_devastation = 25
+				add_province_modifier = {
+					name = anbi_AB3_the_exile_human
+					duration = -1
+				}
+			}
+			add_ruler_modifier = {
+				name = anbi_AB3_no_marriage
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = anbi_merfolk.12.a	
+		tooltip = {
+			add_ruler_modifier = {
+				name = anbi_AB3_no_marriage
+				duration = -1
+			}
+			6677 = {
+				add_devastation = 25
+				add_province_modifier = {
+					name = anbi_AB3_the_exile_human
+					duration = -1
+				}
+			}
+			6052 = {
+				add_devastation = 25
+				add_province_modifier = {
+					name = anbi_AB3_the_exile_human
+					duration = -1
+				}
+			}
+		}
+	}
+}
+#僭主的逃亡
+country_event = {
+	id = anbi_merfolk.13
+	title = anbi_merfolk.13.t
+	desc = anbi_merfolk.13.d
+	picture = REVOLUTION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.13.a
+		change_mil = 1
+		add_war_exhaustion = 1
+		if = {
+			limit = { 
+				exists = S17
+			}
+			S17 = {
+				kill_ruler = yes
+			}
+		}
+	}
+}
+#同商人扯皮
+country_event = {
+	id = anbi_merfolk.14
+	title = anbi_merfolk.14.t
+	desc = anbi_merfolk.14.d
+	picture = REVOLUTION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.14.a
+		change_dip = 1
+		add_war_exhaustion = 0.5
+	}
+}
+#结婚
+country_event = {
+	id = anbi_merfolk.15
+	title = anbi_merfolk.15.t
+	desc = anbi_merfolk.15.d
+	picture = MALI_RULER_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_country_modifier = anbi_AB3_no_marriage
+		}
+	}
+
+	option = {
+		name = anbi_merfolk.15.a
+		define_consort = {
+			culture = ROOT
+			religion = ROOT
+			mil = 6
+		}
+		add_ruler_modifier = {
+			name = anbi_AB3_has_marriage
+			duration = 730
+		}
+	}
+	option = {
+		name = anbi_merfolk.15.b
+		define_consort = {
+			culture = ROOT
+			religion = ROOT
+			dip = 6
+		}
+		add_ruler_modifier = {
+			name = anbi_AB3_has_marriage
+			duration = 730
+		}
+	}
+	option = {
+		name = anbi_merfolk.15.c
+		define_consort = {
+			culture = ROOT
+			religion = ROOT
+			adm = 6
+		}
+		add_ruler_modifier = {
+			name = anbi_AB3_has_marriage
+			duration = 730
+		}
+	}
+	option = {
+		name = anbi_merfolk.15.e
+		trigger = {
+			any_owned_province = {
+				region = ringlet_isles_region
+			}
+		}
+		highlight = yes
+		custom_tooltip = anbi_merfolk.15_tt
+		define_consort = {
+			culture = ROOT
+			religion = ROOT
+			adm = 6
+			dip = 6
+			mil = 6
+		}
+		add_queen_personality = mage_personality
+		add_ruler_modifier = {
+			name = anbi_AB3_has_marriage
+			duration = 730
+		}
+	}
+}
+#会见氏族
+country_event = {
+	id = anbi_merfolk.16
+	title = anbi_merfolk.16.t
+	desc = anbi_merfolk.16.d
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.16.a
+		add_legitimacy_or_monarch_power = {
+			VAL = 25
+		}
+		3254 = {
+			add_permanent_province_modifier = {
+				name = anbi_AB3_mers_colonist
+				duration = 7300
+			}
+		}
+		3255 = {
+			add_permanent_province_modifier = {
+				name = anbi_AB3_mers_colonist
+				duration = 7300
+			}
+		}
+		3256 = {
+			add_permanent_province_modifier = {
+				name = anbi_AB3_mers_colonist
+				duration = 7300
+			}
+		}
+		3257 = {
+			add_permanent_province_modifier = {
+				name = anbi_AB3_mers_colonist
+				duration = 7300
+			}
+		}
+		3258 = {
+			add_permanent_province_modifier = {
+				name = anbi_AB3_mers_colonist
+				duration = 7300
+			}
+		}
+		3259 = {
+			add_permanent_province_modifier = {
+				name = anbi_AB3_mers_colonist
+				duration = 7300
+			}
+		}
+		ringlet_isles_region = {
+			add_permanent_province_modifier = {
+				name = anbi_AB3_mers_colonist
+				duration = 7300
+			}
+		}
+	}
+}
+#海魔眼线
+country_event = {
+	id = anbi_merfolk.17
+	title = anbi_merfolk.17.t
+	desc = anbi_merfolk.17.d
+	picture = REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	trigger = {
+		tag = AB3
+		anbi_AB3_merfolk_devils_area_owns = yes
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			5653 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6671 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6017 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6675 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6018 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6019 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6021 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6672 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6674 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6673 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6036 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6038 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6034 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6039 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6041 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6040 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6042 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6000 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6045 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6047 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6049 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6056 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6127 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6679 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+			6678 = {
+				add_permanent_province_modifier = {
+					name = anbi_AB3_the_devils_looking
+					duration = -1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = anbi_merfolk.17.a
+		custom_tooltip = anbi_merfolk.17_tt
+	}
+}
+#海魔侵扰海岸-开始
+country_event = {
+	id = anbi_merfolk.18
+	title = anbi_merfolk.18.t
+	desc = anbi_merfolk.18.d
+	picture = REVOLUTION_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			for = {
+				amount = 3
+				effect = "
+					random_owned_province = {
+						limit = {
+							province_group = dynamic_merfolk_region
+							superregion = djinnakah_superregion
+						}
+						spawn_onslaught_rebels_stack = { type = anbi_onslaught_rebels }
+					}
+				"
+			}
+		}
+	}
+
+	option = {
+		name = anbi_merfolk.18.a
+		custom_tooltip = anbi_merfolk.18_tt
+		add_stability = -1
+		add_manpower = 10
+		add_sailors = 500
+		hidden_effect = {
+			set_country_flag = anbi_merfolk_devils_start
+			country_event = {
+				id = anbi_merfolk.204
+				days = 730
+				random = 1825
+			}
+		}
+	}
+}
+#喝醉的人鱼
+country_event = {
+	id = anbi_merfolk.19
+	title = anbi_merfolk.19.t
+	desc = anbi_merfolk.19.d
+	picture = anbi_merfolk_drinking_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.19.a
+		add_prestige = -10
+		add_dip_power = 50
+		random_known_country = {
+			limit = {
+				capital_scope = {
+					region = fahvanosy_region
+				}
+			}
+			add_historical_friend_mutual = {
+				tag = ROOT
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = anbi_merfolk_drinking
+			}
+		}
+	}
+}
+#你失败！
+country_event = {
+	id = anbi_merfolk.20
+	title = anbi_merfolk.20.t
+	desc = anbi_merfolk.20.d
+	picture = anbi_merfolk_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.20.a
+		kill_ruler = yes
+		kill_heir = {
+			allow_new_heir = no
+		}
+		kill_consort = yes
+		add_stability = -6
+		clr_country_flag = anbi_merfolk_start
+		swap_non_generic_missions = yes
+	}
+}
+#宗教大会
+country_event = {
+	id = anbi_merfolk.21
+	title = anbi_merfolk.21.t
+	desc = anbi_merfolk.21.d
+	picture = COURT_INTRIGUE_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		clr_country_flag = mahalaya_temporary
+	}
+
+	option = {
+		name = anbi_merfolk.21.a
+		custom_tooltip = anbi_merfolk.21_tt1
+		set_country_flag = mahalaya_lonely
+		set_estate_privilege = anbi_merfolk_mahalaya_regilion_lonely_privilege
+	}
+	option = {
+		name = anbi_merfolk.21.b
+		custom_tooltip = anbi_merfolk.21_tt2
+		set_country_flag = mahalaya_mixed
+		set_estate_privilege = anbi_merfolk_mahalaya_regilion_mixed_privilege
+	}
+	option = {
+		name = anbi_merfolk.21.c
+		custom_tooltip = anbi_merfolk.21_tt3
+		set_country_flag = mahalaya_craze
+		set_estate_privilege = anbi_merfolk_mahalaya_regilion_craze_privilege
+	}
+}
+#因为有宗教大会，所以前面应该有一个临时宗教妥协
+country_event = {
+	id = anbi_merfolk.22
+	title = anbi_merfolk.22.t
+	desc = anbi_merfolk.22.d
+	picture = RELIGION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		custom_tooltip = anbi_merfolk.22_tt
+		set_country_flag = mahalaya_temporary
+		set_estate_privilege = anbi_merfolk_mahalaya_regilion_temporary_privilege
+		name = anbi_merfolk.22.a
+	}
+}
+#古特蕾妮之死
+country_event = {
+	id = anbi_merfolk.23
+	title = anbi_merfolk.23.t
+	desc = anbi_merfolk.23.d
+	picture = DEATH_OF_HEIR_eventPicture
+
+	trigger = {
+		tag = AB3
+		has_ruler_flag = anbi_is_gertyene
+		ruler_age = 60
+	}
+
+	immediate = {
+		hidden_effect = {
+			kill_ruler = yes
+		}		
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = anbi_merfolk.23.a
+		add_war_exhaustion = -10
+	}
+}
+#人鱼王国重建
+country_event = {
+	id = anbi_merfolk.24
+	title = anbi_merfolk.24.t
+	desc = anbi_merfolk.24.d
+	picture = anbi_port_city_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.24.a
+		custom_tooltip = anbi_merfolk.24_tt
+		set_country_flag = anbi_merfolk_settlement_skill_1_up
+		add_country_modifier = {
+			name = anbi_AB3_the_water_kingdom_1
+			duration = -1
+		}
+		hidden_effect = {
+			country_event = {
+				id = anbi_merfolk.25
+				days = 10
+			}
+		}
+	}
+}
+#首都问题
+country_event = {
+	id = anbi_merfolk.25
+	title = anbi_merfolk.25.t
+	desc = anbi_merfolk.25.d
+	picture = anbi_port_city_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		goto = 6675
+		name = anbi_merfolk.25.a
+		override_country_name = AB3_back
+		6052 = {
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+		6675 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_production = 2
+			move_capital_effect = yes
+			custom_tooltip = anbi_merfolk.25_tt
+			if = {
+				limit = { 
+					NOT = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				add_province_modifier = {
+					name = offcoast_merfolk_ab3_3_level
+					duration = -1
+				}
+				remove_province_modifier = offcoast_merfolk_ab3_1_level
+				remove_province_modifier = offcoast_merfolk_ab3_2_level
+			}
+			set_province_flag = anbi_merfolk_landpalace_pf
+		}
+		custom_tooltip = anbi_merfolk.25_tt2
+	}
+	option = {
+		goto = 6678
+		name = anbi_merfolk.25.b
+		override_country_name = AB3_back
+		6052 = {
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+		6678 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_production = 2
+			move_capital_effect = yes
+			custom_tooltip = anbi_merfolk.25_tt
+			if = {
+				limit = { 
+					NOT = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				add_province_modifier = {
+					name = offcoast_merfolk_ab3_3_level
+					duration = -1
+				}
+				remove_province_modifier = offcoast_merfolk_ab3_1_level
+				remove_province_modifier = offcoast_merfolk_ab3_2_level
+			}
+			set_province_flag = anbi_merfolk_landpalace_pf
+		}
+		custom_tooltip = anbi_merfolk.25_tt2
+	}
+	option = {
+		goto = 6679
+		name = anbi_merfolk.25.c
+		override_country_name = AB3_back
+		6052 = {
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+		6679 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_production = 2
+			move_capital_effect = yes
+			custom_tooltip = anbi_merfolk.25_tt
+			if = {
+				limit = { 
+					NOT = {
+						has_province_modifier = offcoast_merfolk_ab3_3_level
+						has_province_modifier = offcoast_merfolk_ab3_great_level
+					}
+				}
+				add_province_modifier = {
+					name = offcoast_merfolk_ab3_3_level
+					duration = -1
+				}
+				remove_province_modifier = offcoast_merfolk_ab3_1_level
+				remove_province_modifier = offcoast_merfolk_ab3_2_level
+			}
+			set_province_flag = anbi_merfolk_landpalace_pf
+		}
+		custom_tooltip = anbi_merfolk.25_tt2
+	}
+	option = {
+		name = anbi_merfolk.25.e
+		override_country_name = AB3_back
+		add_stability_or_adm_power = yes
+		capital_scope = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			set_province_flag = anbi_merfolk_landpalace_pf
+		}
+		custom_tooltip = anbi_merfolk.25_tt2
+	}
+}
+#海陆二元
+country_event = {
+	id = anbi_merfolk.26
+	title = anbi_merfolk.26.t
+	desc = anbi_merfolk.26.d
+	picture = anbi_port_city_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.26.a
+		add_government_reform = anbi_merfolk_binary_empire
+		change_government_reform_progress = -100
+	}
+	option = {
+		name = anbi_merfolk.26.b
+		add_government_reform = anbi_merfolk_absolutism_empire
+		change_government_reform_progress = -100		
+	}
+}
+#deepseek的进步提供了极其优秀的文本，迁移27至上方。
+
+##光复战争（100）
+#超事件
+country_event = {
+	id = anbi_merfolk.100
+	title = anbi_merfolk.100.t
+	desc = anbi_merfolk.100.d
+	picture = EMPTY_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		play_sound = "anbi_santiano"
+	}
+
+	option = {
+		name = anbi_merfolk.100.a
+		custom_tooltip = anbi_merfolk.100_tt
+	}
+}
+#遭遇战
+country_event = {
+	id = anbi_merfolk.101
+	title = anbi_merfolk.101.t
+	desc = anbi_merfolk.101.d
+	picture = anbi_merfolk_great_war_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_country_modifier = anbi_merfolk_logistical_preparations_buff
+			add_country_modifier = {
+				name = anbi_merfolk_logistical_preparations_buff2
+				duration = -1
+			}
+			remove_country_modifier = anbi_merfolk_look_at_homeland_buff
+			add_country_modifier = {
+				name = anbi_merfolk_look_at_homeland_buff2
+				duration = -1
+			}
+			6674 = {
+				add_core = AB4
+				cede_province = AB4
+				add_province_modifier = {
+					name = anbi_AB3_sea_devil_island_buff
+					duration = -1
+				}
+				remove_building = fort_15th
+				remove_building = fort_16th
+				remove_building = fort_17th
+				remove_building = fort_18th
+				set_province_flag = anbi_merfolk_sea_devil_island
+				create_flagship = {
+					type = heavy_ship									
+				}
+				create_flagship = {
+					type = heavy_ship									
+				}
+				create_flagship = {
+					type = heavy_ship									
+				}
+			}
+			6672 = {
+				add_core = AB4
+				cede_province = AB4
+				add_province_modifier = {
+					name = anbi_AB3_sea_devil_island_buff
+					duration = -1
+				}
+				remove_building = fort_15th
+				remove_building = fort_16th
+				remove_building = fort_17th
+				remove_building = fort_18th
+				set_province_flag = anbi_merfolk_sea_devil_island
+				create_flagship = {
+					type = heavy_ship									
+				}
+				create_flagship = {
+					type = heavy_ship									
+				}
+				create_flagship = {
+					type = heavy_ship									
+				}
+			}
+			6040 = {
+				add_core = AB4
+				cede_province = AB4
+				add_province_modifier = {
+					name = anbi_AB3_sea_devil_island_buff
+					duration = -1
+				}
+				remove_building = fort_15th
+				remove_building = fort_16th
+				remove_building = fort_17th
+				remove_building = fort_18th
+				set_province_flag = anbi_merfolk_sea_devil_island
+				create_flagship = {
+					type = heavy_ship									
+				}
+				create_flagship = {
+					type = heavy_ship									
+				}
+				create_flagship = {
+					type = heavy_ship									
+				}
+			}
+			6061 = {
+				add_core = AB4
+				cede_province = AB4
+				add_province_modifier = {
+					name = anbi_AB3_sea_devil_island_buff
+					duration = -1
+				}
+				remove_building = fort_15th
+				remove_building = fort_16th
+				remove_building = fort_17th
+				remove_building = fort_18th
+				set_province_flag = anbi_merfolk_sea_devil_island
+				create_flagship = {
+					type = heavy_ship									
+				}
+				create_flagship = {
+					type = heavy_ship									
+				}
+				create_flagship = {
+					type = heavy_ship									
+				}
+			}
+			for = {
+				amount = 100
+				effect = "
+					AB4 = {
+						heavy_ship = 3139
+						heavy_ship = 1334
+						heavy_ship = 6674
+						heavy_ship = 6672
+						heavy_ship = 6040
+						heavy_ship = 6061
+						infantry = 6674
+						infantry = 6672
+						infantry = 6040
+						infantry = 6061					
+					}				
+				"
+			}
+			AB4 = {
+				add_country_modifier = {
+					name = anbi_AB4_buff
+					duration = -1
+				}
+			}
+			declare_war_with_cb = {
+				casus_belli = cb_anbi_merfolk_great_war
+				who = AB4
+			}
+		}
+		
+		set_global_flag = anbi_merfolk_great_war
+	}
+
+	option = {
+		name = anbi_merfolk.101.a
+		hidden_effect = {
+			country_event = {
+				id = anbi_merfolk.100
+			}
+		}
+	}
+}
+#管理事件
+country_event = {
+	id = anbi_merfolk.102
+	title = anbi_merfolk.102.t
+	desc = anbi_merfolk.102.d
+	picture = anbingnar_eventPicture
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	trigger = {
+		has_global_flag = anbi_merfolk_great_war
+		tag = AB3
+	}
+
+	hidden = yes
+
+	option = {
+		name = anbi_merfolk.102.a
+		random_list = {
+			6 = {
+
+			}
+			1 = {#海魔侵扰海岸
+				country_event = {
+					id = anbi_merfolk.103
+				}
+			}
+			1 = {#海魔增援陆军
+				country_event = {
+					id = anbi_merfolk.104
+				}
+			}
+			1 = {#海魔增援舰队
+				country_event = {
+					id = anbi_merfolk.105
+				}
+			}
+			1 = {#海魔增援领主
+				country_event = {
+					id = anbi_merfolk.106
+				}
+			}
+		}
+	}
+}
+#海魔侵扰海岸-光复战争
+country_event = {
+	id = anbi_merfolk.103
+	title = anbi_merfolk.103.t
+	desc = anbi_merfolk.103.d
+	picture = anbi_merfolk_great_war_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			for = {
+				amount = 6
+				effect = "
+					random_owned_province = {
+						limit = {
+							province_group = dynamic_merfolk_region
+							superregion = djinnakah_superregion
+						}
+						spawn_onslaught_rebels_stack = { type = anbi_onslaught_rebels }
+					}
+				"
+			}
+		}
+	}
+
+	option = {
+		name = anbi_merfolk.103.a
+		add_yearly_sailors = -0.02
+	}
+}
+#海魔增援陆军
+country_event = {
+	id = anbi_merfolk.104
+	title = anbi_merfolk.104.t
+	desc = anbi_merfolk.104.d
+	picture = anbi_merfolk_great_war_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { 
+					6674 = {
+						controlled_by = AB4
+					}
+				}
+				AB4 = {
+					for = {
+						amount = 25
+						effect = "
+							infantry = 6674
+						"
+					}
+				}
+			}
+			if = {
+				limit = { 
+					6672 = {
+						controlled_by = AB4
+					}
+				}
+				AB4 = {
+					for = {
+						amount = 25
+						effect = "
+							infantry = 6672
+						"
+					}
+				}
+			}
+			if = {
+				limit = { 
+					6040 = {
+						controlled_by = AB4
+					}
+				}
+				AB4 = {
+					for = {
+						amount = 25
+						effect = "
+							infantry = 6040
+						"
+					}
+				}
+			}
+			if = {
+				limit = { 
+					6061 = {
+						controlled_by = AB4
+					}
+				}
+				AB4 = {
+					for = {
+						amount = 25
+						effect = "
+							infantry = 6061
+						"
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = anbi_merfolk.104.a
+	}
+}
+#海魔增援舰队
+country_event = {
+	id = anbi_merfolk.105
+	title = anbi_merfolk.105.t
+	desc = anbi_merfolk.105.d
+	picture = anbi_merfolk_great_war_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			AB4 = {
+				for = {
+					amount = 25
+					effect = "
+						heavy_ship = 3139
+						heavy_ship = 1334
+						heavy_ship = 1335
+						heavy_ship = 3135
+						heavy_ship = 1332
+					"
+				}
+			}	
+		}		
+	}
+
+	option = {
+		name = anbi_merfolk.105.a
+	}
+}
+#海魔增援领主
+country_event = {
+	id = anbi_merfolk.106
+	title = anbi_merfolk.106.t
+	desc = anbi_merfolk.106.d
+	picture = anbi_merfolk_great_war_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { 
+					6674 = {
+						controlled_by = AB4
+					}
+				}
+				AB4 = {
+					6674 = {
+						create_flagship = {
+							type = heavy_ship									
+						}
+						create_flagship = {
+							type = heavy_ship									
+						}
+						create_flagship = {
+							type = heavy_ship									
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					6672 = {
+						controlled_by = AB4
+					}
+				}
+				AB4 = {
+					6672 = {
+						create_flagship = {
+							type = heavy_ship									
+						}
+						create_flagship = {
+							type = heavy_ship									
+						}
+						create_flagship = {
+							type = heavy_ship									
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					6040 = {
+						controlled_by = AB4
+					}
+				}
+				AB4 = {
+					6040 = {
+						create_flagship = {
+							type = heavy_ship									
+						}
+						create_flagship = {
+							type = heavy_ship									
+						}
+						create_flagship = {
+							type = heavy_ship									
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					6061 = {
+						controlled_by = AB4
+					}
+				}
+				AB4 = {
+					6061 = {
+						create_flagship = {
+							type = heavy_ship									
+						}
+						create_flagship = {
+							type = heavy_ship									
+						}
+						create_flagship = {
+							type = heavy_ship									
+						}
+					}
+				}
+			}
+		}		
+	}
+	
+
+	option = {
+		name = anbi_merfolk.106.a
+	}
+}
+#107「嘲笑中死去」
+country_event = {
+	id = anbi_merfolk.107
+	title = anbi_merfolk.107.t
+	desc = anbi_merfolk.107.d
+	picture = anbi_merfolk_great_war_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.107.a
+		AB4 = {
+			add_country_modifier = {
+				name = anbi_AB3_evil_craze_1
+				duration = -1
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						controlled_by = AB4
+					}
+					create_flagship = {
+						type = heavy_ship
+					}
+				}
+			}
+		}
+				
+	}
+}
+#108「父王与母后」
+country_event = {
+	id = anbi_merfolk.108
+	title = anbi_merfolk.108.t
+	desc = anbi_merfolk.108.d
+	picture = anbi_merfolk_great_war_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.108.a
+		AB4 = {
+			add_country_modifier = {
+				name = anbi_AB3_evil_craze_2
+				duration = -1
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						controlled_by = AB4
+					}
+					create_flagship = {
+						type = heavy_ship
+					}
+				}
+			}
+		}
+		
+	}
+}
+#109「蛊惑与长子」
+country_event = {
+	id = anbi_merfolk.109
+	title = anbi_merfolk.109.t
+	desc = anbi_merfolk.109.d
+	picture = anbi_merfolk_great_war_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.109.a
+		AB4 = {
+			add_country_modifier = {
+				name = anbi_AB3_evil_craze_3
+				duration = -1
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						controlled_by = AB4
+					}
+					create_flagship = {
+						type = heavy_ship
+					}
+				}
+			}
+		}
+		
+	}
+}
+#110「罪魁祸首之死」
+country_event = {
+	id = anbi_merfolk.110
+	title = anbi_merfolk.110.t
+	desc = anbi_merfolk.110.d
+	picture = anbi_merfolk_great_war_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.110.a
+		white_peace = AB4
+		6674 = {
+			add_core = ROOT
+			cede_province = ROOT
+		}
+		6672 = {
+			add_core = ROOT
+			cede_province = ROOT
+		}
+		6040 = {
+			add_core = ROOT
+			cede_province = ROOT
+		}
+		6061 = {
+			add_core = ROOT
+			cede_province = ROOT
+		}
+		clr_global_flag = anbi_merfolk_great_war
+		clr_country_flag = anbi_merfolk_devils_start
+		set_country_flag = anbi_merfolk_winwar
+		remove_country_modifier = anbi_merfolk_logistical_preparations_buff2
+		remove_country_modifier = anbi_merfolk_look_at_homeland_buff2
+		swap_non_generic_missions = yes
+		hidden_effect = {
+			complete_mission = anbi_merfolk_the_great_war_win
+			6674 = {
+				remove_core = AB4
+			}
+			6672 = {
+				remove_core = AB4
+			}
+			6040 = {
+				remove_core = AB4
+			}
+			6061 = {
+				remove_core = AB4
+			}
+		}
+	}
+}
+#111剧情事件管理事件
+province_event = {
+	id = anbi_merfolk.111
+	title = anbi_merfolk.111.t
+	desc = anbi_merfolk.111.d
+	picture = anbi_merfolk_great_war_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		has_global_flag = anbi_merfolk_great_war
+		OR = {
+			province_id = 6674
+			province_id = 6672
+			province_id = 6040
+			province_id = 6061
+		}
+		controller = {
+			tag = AB3
+		}
+	}
+
+	option = {
+		name = anbi_merfolk.111.a
+		if = {
+			limit = { 
+				NOT = {
+					has_global_flag = anbi_merfolk_great_war_1
+				}
+			}
+			set_global_flag = anbi_merfolk_great_war_1
+			AB3 = {
+				country_event = {
+					id = anbi_merfolk.107
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				NOT = {
+					has_global_flag = anbi_merfolk_great_war_2
+				}
+			}
+			set_global_flag = anbi_merfolk_great_war_2
+			AB3 = {
+				country_event = {
+					id = anbi_merfolk.108
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				NOT = {
+					has_global_flag = anbi_merfolk_great_war_3
+				}
+			}
+			set_global_flag = anbi_merfolk_great_war_3
+			AB3 = {
+				country_event = {
+					id = anbi_merfolk.109
+				}
+			}
+		}
+		else = {
+			AB3 = {
+				country_event = {
+					id = anbi_merfolk.110
+				}
+			}
+			clr_global_flag = anbi_merfolk_great_war
+			clr_global_flag = anbi_merfolk_great_war_1
+			clr_global_flag = anbi_merfolk_great_war_2
+			clr_global_flag = anbi_merfolk_great_war_3
+		}
+	}
+}
+
+##机制（200）
+#开局海魔入侵
+country_event = {
+	id = anbi_merfolk.200
+	title = anbi_merfolk.200.t
+	desc = anbi_merfolk.200.d
+	picture = anbi_the_sea_monster_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = anbi_merfolk.200.a
+		custom_tooltip = anbi_merfolk.200_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = anbi_the_merfolk_shock_flag
+					}
+				}
+				anbi_the_merfolk_shock = yes
+				set_global_flag = anbi_the_merfolk_shock_flag
+			}
+			if = {
+				limit = { 
+					tag = S17
+				}
+				6051 = {
+					move_capital_effect = yes
+				}
+			}
+			else_if = {
+				limit = { 
+					tag = S18
+				}
+				6037 = {
+					move_capital_effect = yes
+				}
+			}
+			else_if = {
+				limit = { 
+					tag = S20 
+				}
+				6013 = {
+					move_capital_effect = yes
+				}
+			}
+			else_if = {
+				limit = { 
+					tag = S21 
+				}
+				6016 = {
+					move_capital_effect = yes
+				}
+			}
+		}
+		add_stability = -3
+	}
+}
+#人鱼文化转换
+province_event = {
+	id = anbi_merfolk.201
+	title = anbi_merfolk.201.t
+	desc = anbi_merfolk.201.d
+	picture = anbingnar_eventPicture
+
+	hidden = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		has_global_flag = anbi_the_merfolk_shock_flag
+		is_city = yes
+		culture = baashidi_merfolk
+	}
+
+	option = {
+		name = anbi_merfolk.201.a
+		if = {
+			limit = { 
+				region = ardimya_region
+			}
+			change_culture = guryadagga
+			if = {
+				limit = { 
+					OR = {
+						province_group = dynamic_merfolk_region
+						anbi_merfolk_settlement_expand_first = yes
+						anbi_merfolk_settlement_expand_haless = yes
+						anbi_merfolk_settlement_expand_yansheni = yes
+					}					
+				}
+				merfolk_spawn_modifier = yes
+			}			
+		}
+		else_if = {
+			limit = { 
+				region = ringlet_isles_region
+			}
+			change_culture = gataw
+			if = {
+				limit = { 
+					OR = {
+						province_group = dynamic_merfolk_region
+						anbi_merfolk_settlement_expand_first = yes
+						anbi_merfolk_settlement_expand_haless = yes
+						anbi_merfolk_settlement_expand_yansheni = yes
+					}					
+				}
+				merfolk_spawn_modifier = yes
+			}
+		}
+		else = {
+			change_culture = suhratbi
+			if = {
+				limit = { 
+					OR = {
+						province_group = dynamic_merfolk_region
+						anbi_merfolk_settlement_expand_first = yes
+						anbi_merfolk_settlement_expand_haless = yes
+						anbi_merfolk_settlement_expand_yansheni = yes
+					}					
+				}
+				merfolk_spawn_modifier = yes
+			}
+		}
+	}
+}
+#设置特权
+country_event = {
+	id = anbi_merfolk.202
+	title = anbi_merfolk.202.t
+	desc = anbi_merfolk.202.d
+	picture = anbingnar_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = anbi_merfolk.202.a
+		set_estate_privilege = estate_adventurers_organization_land_of_adventure
+		set_estate_privilege = estate_mages_organization_guilds
+	}
+}
+#遗迹精灵移民事件
+province_event = {
+	id = anbi_merfolk.203
+	title = anbi_merfolk.203.t
+	desc = anbi_merfolk.203.d
+	picture = COLONIZATION_eventPicture
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	is_mtth_scaled_to_size = 1
+
+	trigger = {
+		owner = {
+			tag = AB3
+			mission_completed = anbi_merfolk_conquer_south_alentir
+		}
+		OR = {
+			province_group = dynamic_merfolk_region
+			anbi_merfolk_settlement_expand_first = yes
+		}
+		has_any_ruinborn_pop_trigger = no
+		has_province_flag = merfolk_settlement
+	}
+
+	option = {
+		name = anbi_merfolk.203.a
+		owner = {
+			small_increase_of_ruinborn_tolerance_effect = yes
+		}
+		random_list = {
+			1 = {
+				add_ruinborn_minority_size_effect = yes
+			}
+			1 = {
+				add_ruinborn_minority_size_effect = yes
+				add_ruinborn_minority_size_effect = yes
+			}
+		}
+	}
+}
+#海魔侵扰海岸-循环事件
+country_event = {
+	id = anbi_merfolk.204
+	title = anbi_merfolk.204.t
+	desc = anbi_merfolk.204.d
+	picture = REVOLUTION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = anbi_merfolk_devils_start
+		NOT = {
+			has_global_flag = anbi_merfolk_great_war
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			for = {
+				amount = 3
+				effect = "
+					random_owned_province = {
+						limit = {
+							province_group = dynamic_merfolk_region
+							superregion = djinnakah_superregion
+						}
+						spawn_onslaught_rebels_stack = { type = anbi_onslaught_rebels }
+					}
+				"
+			}
+			country_event = {
+				id = anbi_merfolk.205
+				days = 1825
+				random = 3600
+			}
+		}
+	}
+
+	option = {
+		name = anbi_merfolk.204.a
+		add_war_exhaustion = 0.1
+	}
+}
+country_event = {
+	id = anbi_merfolk.205
+	title = anbi_merfolk.205.t
+	desc = anbi_merfolk.205.d
+	picture = REVOLUTION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = anbi_merfolk_devils_start
+		NOT = {
+			has_global_flag = anbi_merfolk_great_war
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			for = {
+				amount = 3
+				effect = "
+					random_owned_province = {
+						limit = {
+							province_group = dynamic_merfolk_region
+							superregion = djinnakah_superregion
+						}
+						spawn_onslaught_rebels_stack = { type = anbi_onslaught_rebels }
+					}
+				"
+			}
+			country_event = {
+				id = anbi_merfolk.204
+				days = 1825
+				random = 3600
+			}
+		}
+	}
+
+	option = {
+		name = anbi_merfolk.205.a
+		add_war_exhaustion = 0.1
+	}
+}
+#人鱼孤立主义实现
+province_event = {
+	id = anbi_merfolk.206
+	title = anbi_merfolk.206.t
+	desc = anbi_merfolk.206.d
+	picture = anbingnar_eventPicture
+
+	hidden = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		owner = {
+			tag = AB3
+			has_estate_privilege = anbi_merfolk_mahalaya_regilion_temporary_privilege
+		}
+		OR = {
+			religion = rinta_seekers
+			religion = genie_cult
+		}
+	}
+	option = {
+		name = anbi_merfolk.206
+		add_province_modifier = {
+			name = anbi_merfolk_mahalaya_regilion_temporary_buff
+			duration = -1
+		}
+	}
+}
+
+##舰娘（300）
+#理论建构完成
+country_event = {
+	id = anbi_merfolk.300
+	title = anbi_merfolk.300.t
+	desc = anbi_merfolk.300.d
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.300.a
+		custom_tooltip = anbi_merfolk_shipgirls_tt3
+	}
+}
+#船体构建
+country_event = {
+	id = anbi_merfolk.301
+	title = anbi_merfolk.301.t
+	desc = anbi_merfolk.301.d
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.301.a
+		custom_tooltip = anbi_merfolk_shipgirls_tt3
+	}
+}
+#能源核心
+country_event = {
+	id = anbi_merfolk.302
+	title = anbi_merfolk.302.t
+	desc = anbi_merfolk.302.d
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.302.a
+		custom_tooltip = anbi_merfolk_shipgirls_tt3
+	}
+}
+#意识注入
+country_event = {
+	id = anbi_merfolk.303
+	title = anbi_merfolk.303.t
+	desc = anbi_merfolk.303.d
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			subtract_variable = {
+				anbi_merfolk_shipgirls_tech_investment = 10
+			}
+			subtract_variable = {
+				anbi_merfolk_shipgirls_cash_investment = 10
+			}
+			subtract_variable = {
+				anbi_merfolk_shipgirls_sailors_investment = 10
+			}
+			subtract_variable = {
+				anbi_merfolk_shipgirls_power_investment = 10
+			}
+			clr_country_flag = anbi_merfolk_ShipGirlsTheory_complete
+			clr_country_flag = anbi_merfolk_ShipGirlsHull_complete
+			clr_country_flag = anbi_merfolk_ShipGirlsBrain_complete
+			clr_country_flag = anbi_merfolk_ShipGirlsIntoWater_complete
+		}	
+	}
+
+	option = {
+		name = anbi_merfolk.303.a
+		custom_tooltip = anbi_merfolk_shipgirls_tt4
+		tooltip = {
+			subtract_variable = {
+				anbi_merfolk_shipgirls_tech_investment = 10
+			}
+			subtract_variable = {
+				anbi_merfolk_shipgirls_cash_investment = 10
+			}
+			subtract_variable = {
+				anbi_merfolk_shipgirls_sailors_investment = 10
+			}
+			subtract_variable = {
+				anbi_merfolk_shipgirls_power_investment = 10
+			}
+			clr_country_flag = anbi_merfolk_ShipGirlsTheory_complete
+			clr_country_flag = anbi_merfolk_ShipGirlsHull_complete
+			clr_country_flag = anbi_merfolk_ShipGirlsBrain_complete
+			clr_country_flag = anbi_merfolk_ShipGirlsIntoWater_complete
+		}		
+		random_list = {
+			1 = {
+				trigger = {
+					NOT = {
+						has_country_flag = anbi_merfolk_shipgirl_who_1
+					}
+				}
+				set_country_flag = anbi_merfolk_shipgirl_who_1
+			}
+			1 = {
+				trigger = {
+					NOT = {
+						has_country_flag = anbi_merfolk_shipgirl_who_2
+					}
+				}
+				set_country_flag = anbi_merfolk_shipgirl_who_2
+			}
+			1 = {
+				trigger = {
+					NOT = {
+						has_country_flag = anbi_merfolk_shipgirl_who_3
+					}
+				}
+				set_country_flag = anbi_merfolk_shipgirl_who_3
+			}
+			1 = {
+				trigger = {
+					NOT = {
+						has_country_flag = anbi_merfolk_shipgirl_who_4
+					}
+				}
+				set_country_flag = anbi_merfolk_shipgirl_who_4
+			}
+			1 = {
+				trigger = {
+					NOT = {
+						has_country_flag = anbi_merfolk_shipgirl_who_5
+					}
+				}
+				set_country_flag = anbi_merfolk_shipgirl_who_5
+			}
+			1 = {
+				trigger = {
+					NOT = {
+						has_country_flag = anbi_merfolk_shipgirl_who_6
+					}
+				}
+				set_country_flag = anbi_merfolk_shipgirl_who_6
+			}
+			1 = {
+				trigger = {
+					NOT = {
+						has_country_flag = anbi_merfolk_shipgirl_who_7
+					}
+				}
+				set_country_flag = anbi_merfolk_shipgirl_who_7
+			}
+			1 = {
+				trigger = {
+					NOT = {
+						has_country_flag = anbi_merfolk_shipgirl_who_8
+					}
+				}
+				set_country_flag = anbi_merfolk_shipgirl_who_8
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = { 
+				has_country_flag = anbi_merfolk_shipgirl_who_1
+			}
+			country_event = {
+				id = anbi_merfolk.304
+			}
+		}
+		else_if = {
+			limit = { 
+				has_country_flag = anbi_merfolk_shipgirl_who_2
+			}
+			country_event = {
+				id = anbi_merfolk.305
+			}
+		}
+		else_if = {
+			limit = { 
+				has_country_flag = anbi_merfolk_shipgirl_who_3
+			}
+			country_event = {
+				id = anbi_merfolk.306
+			}
+		}
+		else_if = {
+			limit = { 
+				has_country_flag = anbi_merfolk_shipgirl_who_4
+			}
+			country_event = {
+				id = anbi_merfolk.307
+			}
+		}
+		else_if = {
+			limit = { 
+				has_country_flag = anbi_merfolk_shipgirl_who_5
+			}
+			country_event = {
+				id = anbi_merfolk.308
+			}
+		}
+		else_if = {
+			limit = { 
+				has_country_flag = anbi_merfolk_shipgirl_who_6
+			}
+			country_event = {
+				id = anbi_merfolk.309
+			}
+		}
+		else_if = {
+			limit = { 
+				has_country_flag = anbi_merfolk_shipgirl_who_7
+			}
+			country_event = {
+				id = anbi_merfolk.310
+			}
+		}
+		else_if = {
+			limit = { 
+				has_country_flag = anbi_merfolk_shipgirl_who_8
+			}
+			country_event = {
+				id = anbi_merfolk.311
+			}
+		}
+	}
+}
+#科林号宣誓效忠(304)
+country_event = {
+	id = anbi_merfolk.304
+	title = anbi_merfolk.304.t
+	desc = anbi_merfolk.304.d
+	picture = anbi_merfolk_shipgirls_corin_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.304.a
+		every_country = {
+			limit = {
+				OR = {
+					religion = regent_court
+					religion = corinite
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = scornfully_insulted
+			}
+		}
+		set_country_flag = anbi_merfolk_creating_ship_girls
+		set_country_flag = anbi_merfolk_shipgirl_flag
+		set_country_flag = anbi_merfolk_flagship_corin_flag
+		capital_scope = {
+			create_flagship_with_modifications = {
+				name = Corin
+				type = heavy_ship
+			}
+		}
+		clr_country_flag = anbi_merfolk_creating_ship_girls
+		clr_country_flag = anbi_merfolk_shipgirl_flag
+		clr_country_flag = anbi_merfolk_flagship_corin_flag
+	}
+}
+#贾赫号宣誓效忠
+country_event = {
+	id = anbi_merfolk.305
+	title = anbi_merfolk.305.t
+	desc = anbi_merfolk.305.d
+	picture = anbi_merfolk_shipgirls_jaher_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.305.a
+		set_country_flag = anbi_merfolk_creating_ship_girls
+		set_country_flag = anbi_merfolk_shipgirl_flag
+		set_country_flag = anbi_merfolk_flagship_jaher_flag
+		capital_scope = {
+			create_flagship_with_modifications = {
+				name = Jaher
+				type = heavy_ship
+			}
+		}
+		clr_country_flag = anbi_merfolk_creating_ship_girls
+		clr_country_flag = anbi_merfolk_shipgirl_flag
+		clr_country_flag = anbi_merfolk_flagship_jaher_flag
+	}
+}
+#古特蕾妮号宣誓效忠
+country_event = {
+	id = anbi_merfolk.306
+	title = anbi_merfolk.306.t
+	desc = anbi_merfolk.306.d
+	picture = anbi_merfolk_shipgirls_gertyene_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.306.a
+		set_country_flag = anbi_merfolk_creating_ship_girls
+		set_country_flag = anbi_merfolk_shipgirl_flag
+		set_country_flag = anbi_merfolk_flagship_gertyene_flag
+		capital_scope = {
+			create_flagship_with_modifications = {
+				name = Gertyene
+				type = heavy_ship
+			}
+		}
+		clr_country_flag = anbi_merfolk_creating_ship_girls
+		clr_country_flag = anbi_merfolk_shipgirl_flag
+		clr_country_flag = anbi_merfolk_flagship_gertyene_flag
+	}
+}
+#平双号宣誓效忠
+country_event = {
+	id = anbi_merfolk.307
+	title = anbi_merfolk.307.t
+	desc = anbi_merfolk.307.d
+	picture = anbi_merfolk_shipgirls_pingshuang_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.307.a
+		set_country_flag = anbi_merfolk_creating_ship_girls
+		set_country_flag = anbi_merfolk_shipgirl_flag
+		set_country_flag = anbi_merfolk_flagship_pingshuang_flag
+		capital_scope = {
+			create_flagship_with_modifications = {
+				name = Pingshuang
+				type = heavy_ship
+			}
+		}
+		clr_country_flag = anbi_merfolk_creating_ship_girls
+		clr_country_flag = anbi_merfolk_shipgirl_flag
+		clr_country_flag = anbi_merfolk_flagship_pingshuang_flag
+	}
+}
+#苏汉号宣誓效忠
+country_event = {
+	id = anbi_merfolk.308
+	title = anbi_merfolk.308.t
+	desc = anbi_merfolk.308.d
+	picture = anbi_merfolk_shipgirls_suhan_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.308.a
+		every_country = {
+			limit = {
+				religion = suhans_praxis
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = scornfully_insulted
+			}
+		}
+		set_country_flag = anbi_merfolk_creating_ship_girls
+		set_country_flag = anbi_merfolk_shipgirl_flag
+		set_country_flag = anbi_merfolk_flagship_suhan_flag
+		capital_scope = {
+			create_flagship_with_modifications = {
+				name = Suhan
+				type = heavy_ship
+			}
+		}
+		clr_country_flag = anbi_merfolk_creating_ship_girls
+		clr_country_flag = anbi_merfolk_shipgirl_flag
+		clr_country_flag = anbi_merfolk_flagship_suhan_flag
+	}
+}
+#卡拉桑杜尔号宣誓效忠
+country_event = {
+	id = anbi_merfolk.309
+	title = anbi_merfolk.309.t
+	desc = anbi_merfolk.309.d
+	picture = anbi_merfolk_shipgirls_calasadur_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.309.a
+		set_country_flag = anbi_merfolk_creating_ship_girls
+		set_country_flag = anbi_merfolk_shipgirl_flag
+		set_country_flag = anbi_merfolk_flagship_calasadur_flag
+		capital_scope = {
+			create_flagship_with_modifications = {
+				name = Calasadur
+				type = heavy_ship
+			}
+		}
+		clr_country_flag = anbi_merfolk_creating_ship_girls
+		clr_country_flag = anbi_merfolk_shipgirl_flag
+		clr_country_flag = anbi_merfolk_flagship_calasadur_flag
+	}
+}
+#狐仙号宣誓效忠
+country_event = {
+	id = anbi_merfolk.310
+	title = anbi_merfolk.310.t
+	desc = anbi_merfolk.310.d
+	picture = anbi_merfolk_shipgirl_huxian_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.310.a
+		set_country_flag = anbi_merfolk_creating_ship_girls
+		set_country_flag = anbi_merfolk_shipgirl_flag
+		set_country_flag = anbi_merfolk_flagship_huxian_flag
+		capital_scope = {
+			create_flagship_with_modifications = {
+				name = Huxian
+				type = light_ship
+			}
+		}
+		clr_country_flag = anbi_merfolk_creating_ship_girls
+		clr_country_flag = anbi_merfolk_shipgirl_flag
+		clr_country_flag = anbi_merfolk_flagship_huxian_flag
+	}
+}
+#龙号宣誓效忠
+country_event = {
+	id = anbi_merfolk.311
+	title = anbi_merfolk.311.t
+	desc = anbi_merfolk.311.d
+	picture = anbi_merfolk_shipgirls_dragon_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.311.a
+		set_country_flag = anbi_merfolk_creating_ship_girls
+		set_country_flag = anbi_merfolk_shipgirl_flag
+		set_country_flag = anbi_merfolk_flagship_dragon_flag
+		capital_scope = {
+			create_flagship_with_modifications = {
+				name = Dragon
+				type = heavy_ship
+			}
+		}
+		clr_country_flag = anbi_merfolk_creating_ship_girls
+		clr_country_flag = anbi_merfolk_shipgirl_flag
+		clr_country_flag = anbi_merfolk_flagship_dragon_flag
+	}
+}
+
+#科林号互动(312)
+country_event = {
+	id = anbi_merfolk.312
+	title = anbi_merfolk.312.t
+	desc = anbi_merfolk.312.d
+	picture = EMPTY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.312.a
+	}
+	option = {
+		name = anbi_merfolk.312.a
+	}
+	option = {
+		name = anbi_merfolk.312.a
+	}
+	option = {
+		name = anbi_merfolk.312.a
+	}
+	option = {
+		name = anbi_merfolk.312.a
+	}
+}
+#贾赫号互动
+country_event = {
+	id = anbi_merfolk.313
+	title = anbi_merfolk.313.t
+	desc = anbi_merfolk.313.d
+	picture = EMPTY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.313.a
+	}
+	option = {
+		name = anbi_merfolk.313.a
+	}
+	option = {
+		name = anbi_merfolk.313.a
+	}
+	option = {
+		name = anbi_merfolk.313.a
+	}
+	option = {
+		name = anbi_merfolk.313.a
+	}
+}
+#古特蕾妮号互动
+country_event = {
+	id = anbi_merfolk.314
+	title = anbi_merfolk.314.t
+	desc = anbi_merfolk.314.d
+	picture = EMPTY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.314.a
+	}
+	option = {
+		name = anbi_merfolk.314.a
+	}
+	option = {
+		name = anbi_merfolk.314.a
+	}
+	option = {
+		name = anbi_merfolk.314.a
+	}
+	option = {
+		name = anbi_merfolk.314.a
+	}
+}
+#平双号互动
+country_event = {
+	id = anbi_merfolk.315
+	title = anbi_merfolk.315.t
+	desc = anbi_merfolk.315.d
+	picture = EMPTY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.315.a
+	}
+	option = {
+		name = anbi_merfolk.315.a
+	}
+	option = {
+		name = anbi_merfolk.315.a
+	}
+	option = {
+		name = anbi_merfolk.315.a
+	}
+	option = {
+		name = anbi_merfolk.315.a
+	}
+}
+#苏汉号互动
+country_event = {
+	id = anbi_merfolk.316
+	title = anbi_merfolk.316.t
+	desc = anbi_merfolk.316.d
+	picture = EMPTY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.316.a
+	}
+	option = {
+		name = anbi_merfolk.316.a
+	}
+	option = {
+		name = anbi_merfolk.316.a
+	}
+	option = {
+		name = anbi_merfolk.316.a
+	}
+	option = {
+		name = anbi_merfolk.316.a
+	}
+}
+#卡拉桑杜尔号互动
+country_event = {
+	id = anbi_merfolk.317
+	title = anbi_merfolk.317.t
+	desc = anbi_merfolk.317.d
+	picture = EMPTY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.317.a
+	}
+	option = {
+		name = anbi_merfolk.317.a
+	}
+	option = {
+		name = anbi_merfolk.317.a
+	}
+	option = {
+		name = anbi_merfolk.317.a
+	}
+	option = {
+		name = anbi_merfolk.317.a
+	}
+}
+#狐仙号互动
+country_event = {
+	id = anbi_merfolk.318
+	title = anbi_merfolk.318.t
+	desc = anbi_merfolk.318.d
+	picture = EMPTY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.318.a
+	}
+	option = {
+		name = anbi_merfolk.318.a
+	}
+	option = {
+		name = anbi_merfolk.318.a
+	}
+	option = {
+		name = anbi_merfolk.318.a
+	}
+	option = {
+		name = anbi_merfolk.318.a
+	}
+}
+#龙号互动
+country_event = {
+	id = anbi_merfolk.319
+	title = anbi_merfolk.319.t
+	desc = anbi_merfolk.319.d
+	picture = EMPTY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.319.a
+	}
+	option = {
+		name = anbi_merfolk.319.a
+	}
+	option = {
+		name = anbi_merfolk.319.a
+	}
+	option = {
+		name = anbi_merfolk.319.a
+	}
+	option = {
+		name = anbi_merfolk.319.a
+	}
+}
+
+#开局介绍（1000）
+country_event = {
+	id = anbi_merfolk.1000
+	title = anbi_merfolk.1000.t
+	desc = anbi_merfolk.1000.d
+	picture = anbingnar_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_merfolk.1000.a
+		highlight = yes
+		tooltip = {
+			add_country_modifier = {
+				name = anbi_AB3_exile
+				duration = -1
+			}
+			add_country_modifier = {
+				name = anbi_AB3_no_production
+				duration = -1
+			}
+			add_country_modifier = {
+				name = anbi_AB3_no_manpower
+				duration = -1
+			}
+		}
+	}
+}

@@ -1,0 +1,70 @@
+estate_mages = {
+	trigger = {
+		NOT = { has_reform = anbi_merfolk_the_refugee }
+	}
+	privileges = {
+		anbi_kuhai_mages_education_privilege
+	}
+}
+estate_castonath_patricians = {
+	privileges = {
+		estate_eat_orcs_a
+		estate_eat_orcs_b
+		estate_eat_orcs_c
+		estate_eat_orcs_abc_upup
+		estate_eat_goblin_a
+		estate_eat_greenskin_liver
+		estate_eat_harpy
+		estate_eat_troll
+		estate_eat_ogre
+		estate_eat_centaur
+		estate_eat_xianling
+		estate_eat_khet
+		estate_eat_evil_elven
+		estate_eat_kobold
+		estate_eat_gnollish
+		estate_eat_all_monster
+	}
+}
+estate_eunuchs_anb = {
+	trigger = {
+		NOT = { has_government_attribute = anbi_disables_estate_eunuchs }
+	}
+}
+estate_nobles = {
+	privileges = {
+		anbi_kuhai_kill_the_eunuch1_p
+		anbi_kuhai_kill_the_eunuch2_p
+		anbi_merfolk_lizardfolk_land_army
+		anbi_merfolk_halfling_land_army
+	}
+}
+estate_adventurers = {
+	trigger = {
+		NOT = { has_reform = anbi_merfolk_the_refugee }
+	}
+	privileges = {
+		anbi_kuhai_xia_bro_privilege
+	}
+}
+estate_church = {
+	privileges = {
+		anbi_kuhai_the_yanshen_enligntenment_privilege
+		anbi_merfolk_mahalaya_regilion_temporary_privilege
+		anbi_merfolk_mahalaya_regilion_lonely_privilege
+		anbi_merfolk_mahalaya_regilion_mixed_privilege
+		anbi_merfolk_mahalaya_regilion_craze_privilege
+		anbi_merfolk_the_great_elven_is_merfolks
+		anbi_merfolk_naga_mages
+	}
+}
+estate_artificers = {
+	privileges = {
+		anbi_kuhai_the_shuimu_engineer_up
+	}
+}
+estate_burghers = {
+	privileges = {
+		anbi_merfolk_halfling_trader_and_cook
+	}
+}

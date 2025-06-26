@@ -1,0 +1,411 @@
+anbi_AB1_the_human_rebellion_army = {
+	infantry_shock = 0.1
+	infantry_fire = 0.1
+	land_morale = 0.2
+	land_maintenance_modifier = -0.5
+	war_exhaustion = -0.1
+}
+anbi_AB1_reconstruction_work = {
+	development_cost_modifier = 1
+	build_time = 1
+	build_cost = 1
+}
+anbi_AB1_ban_colonies = {
+	colonists = -10
+	native_uprising_chance = -10
+}
+anbi_AB1_doubt_1 = {
+	picture = "attrition"
+	monthly_anbi_AB1_doubt_count = 0.05
+}
+anbi_AB1_doubt_2 = {
+	picture = "attrition"
+	monthly_anbi_AB1_doubt_count = 0.1
+}
+anbi_AB1_doubt_3 = {
+	picture = "attrition"
+	monthly_anbi_AB1_doubt_count = 0.2
+}
+anbi_AB1_doubt_4 = {
+	picture = "attrition"
+	monthly_anbi_AB1_doubt_count = 0.25
+}
+anbi_AB1_doubt_5 = {
+	picture = "attrition"
+	monthly_anbi_AB1_doubt_count = 0.5
+}
+anbi_AB1_doubt_fight = {
+	picture = "attrition"
+	monthly_anbi_AB1_doubt_count = -0.2
+}
+anbi_ab1_put_on_the_ring_modifier = {
+	adventurers_loyalty_modifier = 0.2
+	adventurers_influence_modifier = 0.1
+	mercenary_cost = 0.25
+	merc_maintenance_modifier = 0.1
+	mercenary_discipline = 0.05
+	mercenary_manpower = 0.5
+}
+anbi_ab1_tight_the_dog_chain_modifier = {
+	mages_influence_modifier = 0.1
+	mages_loyalty_modifier = 0.1
+	all_power_cost = -0.025
+	global_spy_defence = 0.5
+	spy_offence = 0.2
+}
+anbi_ab1_the_coast_of_silver_lake_modifier = {
+	production_efficiency = 0.1
+	development_cost = -0.1
+}
+anbi_ab1_the_forest_of_east_modifier = {
+	local_unrest = 5
+	trade_goods_size = 0.5
+}
+anbi_ab1_take_the_bone_modifier = {
+	trade_goods_size_modifier = 1
+	tax_income = -12
+	local_state_maintenance_modifier = 5
+}
+anbi_ab1_the_legecy_of_colonies = {
+	colonists = 1
+	global_colonial_growth = 40
+	range = -0.5
+}
+anbi_ab1_corinite_cooperator = {
+	tolerance_heathen = 1
+	tolerance_of_heathens_capacity = 1
+	stability_cost_modifier = -0.1
+}
+anbi_ab1_the_south_resting = {
+	global_tax_modifier = 0.1
+	development_cost = -0.1
+}
+anbi_ab1_the_old_country_of_knight_modifier = {
+	cavalry_power = 0.1
+	cavalry_cost = -0.1
+}
+anbi_ab1_eat_green_meat_happy = {
+	local_manpower_modifier = 0.1
+	local_prosperity_growth = 0.1
+	local_tax_modifier = 0.1
+	local_production_efficiency = 0.1
+}
+anbi_AB1_stasi_cooldown = {
+	administrative_efficiency = -0.025
+}
+anbi_ab1_keep_the_great_dream = {
+	extra_manpower_at_religious_war = yes
+	land_morale = 0.25
+	discipline = 0.1
+	land_forcelimit_modifier = 1
+	war_exhaustion = -0.05
+	war_taxes_cost_modifier = -1
+	global_regiment_cost = -0.5
+}
+anbi_ab1_the_big_failure = {
+	land_morale = -0.2
+	global_manpower_modifier = -0.25
+	enemy_core_creation = -0.25
+}
+anbi_ab1_the_peace_of_bloody = {
+	global_monthly_devastation = -0.25
+	war_exhaustion_cost = 10
+}
+anbi_ab1_the_production_and_construction_army = {
+	garrison_size = 0.25
+	global_supply_limit_modifier = 0.33
+	movement_speed = 0.1
+	global_manpower_modifier = -0.2
+	build_time = -0.1
+	build_cost = -0.1
+}
+anbi_ab1_destory_the_fake_gods_modifier = {
+	global_missionary_strength = 0.03
+	global_unrest = 2
+}
+anbi_ab1_destory_the_fake_gods_modifier2 = {
+	local_unrest = 5
+	local_missionary_strength = 0.1
+}
+anbi_ab1_seek_the_future_modifier = {
+	technology_cost = -0.1
+	idea_cost = -0.1
+	institution_spread_from_true_faith = 0.25
+}
+anbi_ab1_castle_of_marsh_modifier = {
+	army_tradition_decay = -0.02
+	drill_gain_modifier = 0.4
+}
+anbi_ab1_kill_the_mosquito_modifier = {
+	global_tax_modifier = 0.1
+	global_autonomy = -0.05
+	num_accepted_cultures = 1
+}
+anbi_ab1_the_spice_of_vampire_modifier = {
+	trade_goods_size_modifier = 1
+	global_unrest = -1
+	local_unrest = -10
+	fort_level = 1
+	global_missionary_strength = 0.01
+}
+anbi_ab1_the_liver_mousse_modifier = {
+	trade_goods_size_modifier = 1
+	local_production_efficiency = 2
+	tax_income = -12
+	local_state_maintenance_modifier = 5
+	global_missionary_strength = 0.001
+}
+anbi_ab1_grill_xianling = {
+	trade_goods_size = 0.5
+	trade_goods_size_modifier = 0.5
+}
+anbi_ab1_the_low_friend_modifier_cas = {
+	global_tax_income = -240
+	missionaries = 1
+	legitimacy = 1
+	global_missionary_strength = 0.01
+	missionary_maintenance_cost = -0.25
+}
+anbi_ab1_the_low_friend_modifier_low = {
+	global_tax_income = 120
+	trade_goods_size_modifier = 0.5
+	global_own_trade_power = 1
+	trade_efficiency = 0.25
+	colonists = 1
+	global_colonial_growth = 40
+	land_morale = 0.1
+	defensiveness = 0.25
+	liberty_desire = -1000
+}
+anbi_abi_kfc_is_delicious = {
+	manpower_in_own_culture_provinces = 0.1
+}
+anbi_ab1_the_beauty_of_north_modifier = {
+	colonists = 2
+	colonist_placement_chance = 0.25
+	global_colonial_growth = 40
+	may_explore = yes
+	auto_explore_adjacent_to_colony = yes
+	range = -0.5
+}
+anbi_ab1_accept_gerudia_culture = {
+	num_accepted_cultures = 3
+}
+anbi_ab1_the_automony_state = {
+	min_local_autonomy = 5
+	local_autonomy = 0.25
+	local_missionary_strength = -0.03
+}
+anbi_ab1_the_great_war_monument = {
+	picture = "escanni_center_of_learning"
+	local_unrest = -1
+	local_tax_modifier = 0.05
+}
+anbi_ab1_amazing_animal_modifier = {
+	range = 1
+	may_explore = yes
+}
+anbi_ab1_the_cook_of_troll_modifier = {
+	trade_goods_size_modifier = 0.5
+	local_production_efficiency = 1
+	global_missionary_strength = 0.001
+}
+anbi_ab1_northeast_colonies = {
+	colonist_placement_chance = 0.15
+	global_colonial_growth = 20
+	colonists = 1
+	range = -0.4
+}
+anbi_ab1_the_trade_down = {
+	global_foreign_trade_power = -0.9
+	global_own_trade_power = 1
+	trade_efficiency = -0.2
+}
+anbi_ab1_the_adventurer_down = {
+	mercenary_manpower = -0.5
+	mercenary_cost = 0.25
+	merc_maintenance_modifier = 0.5
+}
+anbi_ab1_the_rebel_is_coming = {
+	global_unrest = 2
+}
+anbi_ab1_ban_war = {
+	land_morale = -0.9
+	discipline = -0.5
+	war_exhaustion = 1
+	war_exhaustion_cost = 10
+	all_power_cost = 1
+}
+anbi_ab1_against_the_great_war = {
+	can_not_declare_war = yes
+}
+anbi_ab1_666_meat_modifier = {
+	allowed_marine_fraction = 0.5
+}
+anbi_ab1_the_hobgoblin_modifier ={
+	drill_decay_modifier = -0.5
+	drill_gain_modifier = 1
+}
+anbi_escanni_one_culture_modifier = {
+	local_culture_conversion_cost = -0.25
+	local_culture_conversion_time = -0.25
+	local_missionary_strength = 0.05
+}
+anbi_escanni_one_culture_modifier_country = {
+	monthly_splendor = 1
+	culture_conversion_time = -0.1
+	culture_conversion_cost = -0.1
+}
+anbi_escanni_great_city_modifier = {
+	local_development_cost_modifier = -0.1
+	local_development_cost = -5
+	trade_goods_size = 0.01
+	local_governing_cost = -0.5
+}
+anbi_escanni_great_city_2_modifier = {
+	local_development_cost_modifier = -0.2
+	local_development_cost = -70
+	trade_goods_size = 0.01
+	local_governing_cost = -0.5
+}
+anbi_escanni_great_city_3_modifier = {
+	local_great_project_upgrade_time = 1
+	trade_goods_size = 0.01
+	local_development_cost_modifier = -0.3
+	local_development_cost = -70
+	local_unrest = -10
+	local_manpower_modifier = 1
+	local_tax_modifier = 1
+	local_production_efficiency = 1
+	trade_goods_size_modifier = 1
+	local_governing_cost = -1
+}
+anbi_escanni_launch_prepare_modifier = {
+	fort_level = 2
+	local_development_cost_modifier = -0.5
+	tax_income = -12
+	local_state_maintenance_modifier = 5
+	technology_cost = -0.05
+	idea_cost = -0.05
+	institution_growth = 1
+}
+anbi_escanni_research_modifier = {
+	yearly_innovativeness = 0.5
+	technology_cost = -0.025
+	local_unrest = 10
+}
+anbi_escanni_one_lang_modifier = {
+	monthly_splendor = 2
+	culture_conversion_time = -0.25
+	culture_conversion_cost = -0.25
+}
+anbi_ab1_the_center_of_world_modifier = {
+	max_absolutism_effect = 0.25
+	max_absolutism = 25
+	yearly_absolutism = 2
+	max_revolutionary_zeal = -1000
+	yearly_revolutionary_zeal = -10
+}
+anbi_ab1_anti_revolution_modifier = {
+	extra_manpower_at_religious_war = yes
+	land_morale = 0.25
+	discipline = 0.05
+	land_forcelimit_modifier = 0.5
+}
+anbi_ab2_the_dream_city = {
+	local_development_cost_modifier = -0.25
+	development_cost_modifier = -0.005
+}
+anbi_ab1_the_rivers_and_dams_modifier = {
+	global_tax_modifier = -0.5
+	innovativeness_gain = 0.5
+	yearly_innovativeness = 0.1
+	technology_cost = -0.025
+	development_cost_modifier = -0.1
+}
+anbi_ab1_unity_and_great_modifier = {
+	administrative_efficiency = 0.1
+	core_creation = -0.25
+}
+anbi_ab1_food_delicious_and_spicy_modifier = {
+	drill_decay_modifier = -0.5
+	drill_gain_modifier = 1
+	yearly_army_professionalism = 0.01
+	global_manpower_modifier = -0.25
+	land_forcelimit_modifier = 0.25
+	backrow_artillery_damage = 0.25
+	artillery_levels_available_vs_fort = 2
+}
+anbi_ab1_the_labs_of_orcs_food_modifier_1 = {
+	global_missionary_strength = 0.005
+}
+anbi_ab1_the_labs_of_orcs_food_modifier_2 = {
+	global_missionary_strength = 0.01
+}
+anbi_ab1_the_labs_of_orcs_food_modifier_3 = {
+	global_missionary_strength = 0.02
+}
+anbi_ab1_the_labs_of_orcs_food_modifier_4 = {
+	tolerance_own = 1
+	global_missionary_strength = 0.03
+	missionaries = 1
+}
+anbi_ab1_the_labs_of_orcs_food_modifier_5 = {
+	global_missionary_strength = 0.05
+	missionaries = 1
+	tolerance_own = 2
+}
+anbi_ab1_crimson_deluge = {
+	global_monthly_devastation = -0.35
+	global_unrest = -2
+}
+anbi_ab1_the_smoke_is_rising_modifier = {
+	local_development_cost = -1
+}
+anbi_escanni_rocket_modifier = {
+	trade_goods_size = 10
+}
+anbi_ab1_braise_the_evil_elven_modifier = {
+	tax_income = -12
+	local_state_maintenance_modifier = 5
+	trade_efficiency = 0.05
+	province_trade_power_value = 10
+	trade_goods_size = 2
+	trade_goods_size_modifier = 1
+}
+anbi_ab1_the_eggs_factory_modifier = {
+	tax_income = -12
+	local_state_maintenance_modifier = 5
+	trade_goods_size = 1
+	trade_goods_size_modifier = 0.5
+}
+anbi_ab1_the_dogs_festival_modifier = {
+	tax_income = -24
+	local_state_maintenance_modifier = 5
+	trade_goods_size = 2
+	trade_goods_size_modifier = 1
+}
+anbi_ab1_braise_fake_dragons_modifier = {
+	tax_income = -6
+	local_state_maintenance_modifier = 1
+	trade_goods_size = 0.5
+	trade_goods_size_modifier = 0.25
+}
+anbi_khet_is_delicious = {
+	tax_income = -6
+	local_state_maintenance_modifier = 1
+	trade_goods_size = 0.5
+	trade_goods_size_modifier = 0.25
+	local_unrest = 5
+}
+anbi_ab1_eat_ogre_modifier = {
+	tax_income = -6
+	local_state_maintenance_modifier = 1
+	trade_goods_size = 0.5
+	trade_goods_size_modifier = 0.25
+}
+anbi_ab1_cross_food = {
+	trade_goods_size_modifier = 0.25
+	church_power_modifier = 0.01
+	global_missionary_strength = 0.001
+}

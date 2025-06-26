@@ -1,0 +1,346 @@
+defined_text = {
+	random = no
+	name = AnbiEscanniField
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_t = {
+				project = escanni_field
+			}
+		}
+		localisation_key = anbi_escanni_field.t
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_d = {
+				project = escanni_field
+			}
+		}
+		localisation_key = anbi_escanni_field.d
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_e = {
+				project = escanni_field
+			}
+		}
+		localisation_key = anbi_escanni_field.e
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_g = yes
+		}
+		localisation_key = anbi_escanni_field.g
+	}
+}
+defined_text = {
+	random = no
+	name = AnbiEscanniGreatCity
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_t = {
+				project = escanni_great_city
+			}
+		}
+		localisation_key = anbi_escanni_great_city.t
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_d = {
+				project = escanni_great_city
+			}
+		}
+		localisation_key = anbi_escanni_great_city.d
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_e = {
+				project = escanni_great_city
+			}
+		}
+		localisation_key = anbi_escanni_great_city.e
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_g = yes
+		}
+		localisation_key = anbi_escanni_great_city.g
+	}
+}
+defined_text = {
+	random = no
+	name = AnbiEscanniGreatCity2
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_t = {
+				project = escanni_great_city_2
+			}
+		}
+		localisation_key = anbi_escanni_great_city_2.t
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_d = {
+				project = escanni_great_city_2
+			}
+		}
+		localisation_key = anbi_escanni_great_city_2.d
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_e = {
+				project = escanni_great_city_2
+			}
+		}
+		localisation_key = anbi_escanni_great_city_2.e
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_g = yes
+		}
+		localisation_key = anbi_escanni_great_city_2.g
+	}
+}
+defined_text = {
+	random = no
+	name = AnbiEscanniGreatCity3
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_t = {
+				project = escanni_great_city_3
+			}
+		}
+		localisation_key = anbi_escanni_great_city_3.t
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_d = {
+				project = escanni_great_city_3
+			}
+		}
+		localisation_key = anbi_escanni_great_city_3.d
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_e = {
+				project = escanni_great_city_3
+			}
+		}
+		localisation_key = anbi_escanni_great_city_3.e
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_g = yes
+		}
+		localisation_key = anbi_escanni_great_city_3.g
+	}
+}
+defined_text = {
+	random = no
+	name = AnbiEscanniLaunchPrepare
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_t = {
+				project = escanni_launch_prepare
+			}
+		}
+		localisation_key = anbi_escanni_launch_prepare.t
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_d = {
+				project = escanni_launch_prepare
+			}
+		}
+		localisation_key = anbi_escanni_launch_prepare.d
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_e = {
+				project = escanni_launch_prepare
+			}
+		}
+		localisation_key = anbi_escanni_launch_prepare.e
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_g = yes
+		}
+		localisation_key = anbi_escanni_launch_prepare.g
+	}
+	
+}
+defined_text = {
+	random = no
+	name = AnbiEscanniOneCulture
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_t = {
+				project = escanni_one_culture
+			}
+		}
+		localisation_key = anbi_escanni_one_culture.t
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_d = {
+				project = escanni_one_culture
+			}
+		}
+		localisation_key = anbi_escanni_one_culture.d
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_e = {
+				project = escanni_one_culture
+			}
+		}
+		localisation_key = anbi_escanni_one_culture.e
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_g = yes
+		}
+		localisation_key = anbi_escanni_one_culture.g
+	}
+	
+}
+defined_text = {
+	random = no
+	name = AnbiEscanniOneLang
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_t = {
+				project = escanni_one_lang
+			}
+		}
+		localisation_key = anbi_escanni_one_lang.t
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_d = {
+				project = escanni_one_lang
+			}
+		}
+		localisation_key = anbi_escanni_one_lang.d
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_e = {
+				project = escanni_one_lang
+			}
+		}
+		localisation_key = anbi_escanni_one_lang.e
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_g = yes
+		}
+		localisation_key = anbi_escanni_one_lang.g
+	}
+	
+}
+defined_text = {
+	random = no
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_t = {
+				project = escanni_research
+			}
+		}
+		localisation_key = anbi_escanni_research.t
+	}
+	name = AnbiEscanniResearch
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_d = {
+				project = escanni_research
+			}
+		}
+		localisation_key = anbi_escanni_research.d
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_e = {
+				project = escanni_research
+			}
+		}
+		localisation_key = anbi_escanni_research.e
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_g = yes
+		}
+		localisation_key = anbi_escanni_research.g
+	}
+	
+}
+defined_text = {
+	random = no
+	name = AnbiEscanniRiverTransport
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_t = {
+				project = escanni_river_transport
+			}
+		}
+		localisation_key = anbi_escanni_river_transport.t
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_d = {
+				project = escanni_river_transport
+			}
+		}
+		localisation_key = anbi_escanni_river_transport.d
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_e = {
+				project = escanni_river_transport
+			}
+		}
+		localisation_key = anbi_escanni_river_transport.e
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_g = yes
+		}
+		localisation_key = anbi_escanni_river_transport.g
+	}
+	
+}
+defined_text = {
+	random = no
+	name = AnbiEscanniRocket
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_t = {
+				project = escanni_rocket
+			}
+		}
+		localisation_key = anbi_escanni_rocket.t
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_d = {
+				project = escanni_rocket
+			}
+		}
+		localisation_key = anbi_escanni_rocket.d
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_e = {
+				project = escanni_rocket
+			}
+		}
+		localisation_key = anbi_escanni_rocket.e
+	}
+	text = { 
+		trigger = {
+			anbi_ab1_the_escanni_button_g = yes
+		}
+		localisation_key = anbi_escanni_rocket.g
+	}
+	
+}

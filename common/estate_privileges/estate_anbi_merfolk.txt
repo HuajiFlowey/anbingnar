@@ -1,0 +1,607 @@
+anbi_merfolk_mahalaya_regilion_temporary_privilege = {
+	icon = privilege_devotion_blue
+	max_absolutism = -10
+	loyalty = -0.05
+	influence = -0.05
+	is_valid = {
+		tag = AB3
+		religion = merfolk_religion
+		has_country_flag = mahalaya_temporary
+	}
+	can_select = { 	
+	} 					 					
+	can_revoke = { 
+		always = no
+	}
+	on_granted = {
+		custom_tooltip = anbi_merfolk_mahalaya_regilion_temporary_privilege_tt
+	}
+	on_invalid = {
+		every_owned_province = {
+			remove_province_modifier = anbi_merfolk_mahalaya_regilion_temporary_buff
+		}
+	}
+	benefits = {
+		religious_unity = 0.75
+		global_missionary_strength = -0.1
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+anbi_merfolk_mahalaya_regilion_lonely_privilege = {
+	icon = privilege_devotion_yellow
+	max_absolutism = -10
+	loyalty = 0.2
+	influence = 0.05
+	is_valid = {
+		tag = AB3
+		religion = merfolk_religion
+		has_country_flag = mahalaya_lonely
+	}
+	can_select = { 	
+	} 					 					
+	can_revoke = { 
+		always = no
+	}
+	on_granted = {
+	}
+	benefits = {
+		religious_unity = 0.25
+		tolerance_heretic = 3
+		tolerance_of_heretics_capacity = 3
+		tolerance_of_heathens_capacity = 2
+		tolerance_heathen = 2
+		can_not_build_missionaries = yes
+	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = anbi_merfolk_integration_of_land_and_sea_cf
+		}
+		modifier = {
+			governing_cost = -0.35
+			stability_cost_modifier = -0.3
+			global_autonomy = 0.05
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+anbi_merfolk_mahalaya_regilion_mixed_privilege = {
+	icon = privilege_devotion_green
+	max_absolutism = -10
+	loyalty = 0.1
+	influence = -0.05
+	is_valid = {
+		tag = AB3
+		religion = merfolk_religion
+		has_country_flag = mahalaya_mixed
+	}
+	can_select = { 	
+	} 					 					
+	can_revoke = { 
+		always = no
+	}
+	on_granted = {
+		custom_tooltip = anbi_merfolk_mahalaya_regilion_mixed_privilege_tt
+	}
+	benefits = {
+		religious_unity = 0.25
+		global_unrest = -1
+		global_institution_spread = 0.1
+		idea_cost = -0.05
+		global_heretic_missionary_strength = 0.03
+	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = anbi_merfolk_integration_of_land_and_sea_cf
+		}
+		modifier = {
+			technology_cost = -0.1
+			all_power_cost = -0.05
+			tolerance_own = -1
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+anbi_merfolk_mahalaya_regilion_craze_privilege = {
+	icon = privilege_devotion_red
+	max_absolutism = -10
+	loyalty = 0.25
+	influence = 0.15
+	is_valid = {
+		tag = AB3
+		religion = merfolk_religion
+		has_country_flag = mahalaya_craze
+	}
+	can_select = { 	
+	} 					 					
+	can_revoke = { 
+		always = no
+	}
+	on_granted = {		
+		custom_tooltip = anbi_merfolk_mahalaya_regilion_craze_privilege_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						religion = genie_cult
+						religion = rinta_seekers
+					}
+				}
+				random = {
+					chance = 50
+					change_religion = merfolk_religion
+				}
+			}
+		}
+	}
+	benefits = {
+		tolerance_own = 2
+		global_missionary_strength = 0.025
+		monthly_fervor_increase = 2
+		missionary_maintenance_cost = -0.5
+		missionaries = 1
+		manpower_in_true_faith_provinces = 0.25
+	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = anbi_merfolk_integration_of_land_and_sea_cf
+		}
+		modifier = {
+			global_missionary_strength = 0.05
+			tolerance_own = 3
+			missionary_maintenance_cost = 0.5
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+anbi_merfolk_lizardfolk_land_army = {
+	icon = privilege_force_limit
+	max_absolutism = 0
+	loyalty = 0.05
+	influence = 0
+	is_valid = {
+		tag = AB3
+		mission_completed = anbi_merfolk_land_army_research
+		OR = {
+			NOT = {
+				has_estate_privilege = anbi_merfolk_lizardfolk_land_army
+			}
+			medium_tolerance_lizardfolk_race_trigger = yes 
+			high_tolerance_lizardfolk_race_trigger = yes
+		}
+	}
+	can_select = {
+		medium_tolerance_lizardfolk_race_trigger = yes 
+		high_tolerance_lizardfolk_race_trigger = yes 	
+	} 					 					
+	can_revoke = { 
+		always = no
+	}
+	on_granted = {
+		custom_tooltip = anbi_merfolk_lizardfolk_land_army_tt
+	}
+	benefits = {
+		global_ship_cost = -0.05
+		allowed_marine_fraction = 0.05
+		shock_damage_received = -0.05
+		nobles_privilege_slots = 1
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_lizardfolk_race_trigger = yes
+		}
+		modifier = {
+			naval_morale = 0.05
+			core_creation = -0.05
+			infantry_shock = 0.1
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+anbi_merfolk_halfling_land_army = {
+	icon = privilege_force_limit
+	max_absolutism = 0
+	loyalty = 0.05
+	influence = 0
+	is_valid = {
+		tag = AB3
+		mission_completed = anbi_merfolk_land_army_research
+		OR = {
+			NOT = {
+				has_estate_privilege = anbi_merfolk_halfling_land_army
+			}
+			medium_tolerance_halfling_race_trigger = yes 
+			high_tolerance_halfling_race_trigger = yes
+		}
+	}
+	can_select = {
+		medium_tolerance_halfling_race_trigger = yes 
+		high_tolerance_halfling_race_trigger = yes	
+	} 					 					
+	can_revoke = { 
+		always = no
+	}
+	on_granted = {
+		custom_tooltip = anbi_merfolk_halfling_land_army_tt
+	}
+	benefits = {
+		global_supply_limit_modifier = 0.25
+		land_attrition = -0.1
+		nobles_privilege_slots = 1
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_halfling_race_trigger = yes
+		}
+		modifier = {
+			global_manpower_modifier = 0.1
+			land_forcelimit_modifier = 0.1
+			morale_damage_received = -0.05
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+anbi_merfolk_naga_mages = {
+	icon = privilege_lizardfolk_mutation
+	max_absolutism = 0
+	loyalty = 0.05
+	influence = 0.05
+	is_valid = {
+		tag = AB3
+		mission_completed = anbi_merfolk_naga_small_mers
+		OR = {
+			NOT = {
+				has_estate_privilege = anbi_merfolk_naga_mages
+			}
+			medium_tolerance_lizardfolk_race_trigger = yes
+			high_tolerance_lizardfolk_race_trigger = yes 
+		}
+	}
+	can_select = {
+		medium_tolerance_lizardfolk_race_trigger = yes
+		high_tolerance_lizardfolk_race_trigger = yes 	
+	} 					 					
+	can_revoke = { 
+		always = no
+	}
+	on_granted = {
+		custom_tooltip = anbi_merfolk_naga_mages_tt
+	}
+	benefits = {
+		promote_culture_cost = -0.1
+		all_power_cost = -0.025
+		technology_cost = 0.05
+		church_privilege_slots = 1
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_lizardfolk_race_trigger = yes
+			accepted_culture = rhada_lizardfolk
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_lizardfolk_race_trigger = yes
+			accepted_culture = irikin_lizardfolk
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_lizardfolk_race_trigger = yes
+			accepted_culture = ashhana_lizardfolk
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_lizardfolk_race_trigger = yes
+			accepted_culture = mashkay_lizardfolk
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_lizardfolk_race_trigger = yes
+			accepted_culture = arraskay_lizardfolk
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_lizardfolk_race_trigger = yes
+			accepted_culture = ichiadza_lizardfolk
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_lizardfolk_race_trigger = yes
+			accepted_culture = shagatyn_lizardfolk
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_lizardfolk_race_trigger = yes
+			accepted_culture = adzalanas_lizardfolk
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_lizardfolk_race_trigger = yes
+			accepted_culture = cyazizeta_lizardfolk
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_lizardfolk_race_trigger = yes
+			accepted_culture = itayzemby_lizardfolk
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_lizardfolk_race_trigger = yes
+			accepted_culture = karshyray_lizardfolk
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_lizardfolk_race_trigger = yes
+			accepted_culture = shagashay_lizardfolk
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_lizardfolk_race_trigger = yes
+			accepted_culture = skarakara_lizardfolk
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+anbi_merfolk_halfling_trader_and_cook = {
+	icon = privilege_great_cook
+	max_absolutism = 0
+	loyalty = 0.05
+	influence = 0
+	is_valid = {
+		tag = AB3
+		mission_completed = anbi_merfolk_naga_small_mers
+		OR = {
+			NOT = {
+				has_estate_privilege = anbi_merfolk_halfling_trader_and_cook
+			}
+			medium_tolerance_halfling_race_trigger = yes 
+			high_tolerance_halfling_race_trigger = yes
+		}
+	}
+	can_select = {
+		medium_tolerance_halfling_race_trigger = yes 
+		high_tolerance_halfling_race_trigger = yes	
+	} 					 					
+	can_revoke = { 
+		always = no
+	}
+	on_granted = {
+		custom_tooltip = anbi_merfolk_halfling_trader_and_cook_tt
+	}
+	benefits = {
+		trade_company_governing_cost = -0.1
+		promote_culture_cost = -0.1
+		global_trade_goods_size_modifier = 0.1 
+		burghers_privilege_slots = 1
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_halfling_race_trigger = yes
+			accepted_culture = newfoot_halfling
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_halfling_race_trigger = yes
+			accepted_culture = redfoot_halfling
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_halfling_race_trigger = yes
+			accepted_culture = visfoot_halfling
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_halfling_race_trigger = yes
+			accepted_culture = bluefoot_halfling
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_halfling_race_trigger = yes
+			accepted_culture = imperial_halfling
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_halfling_race_trigger = yes
+			accepted_culture = pipefoot_halfling
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_halfling_race_trigger = yes
+			accepted_culture = creekfoot_halfling
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_halfling_race_trigger = yes
+			accepted_culture = towerfoot_halfling
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_halfling_race_trigger = yes
+			accepted_culture = amezatany
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_halfling_race_trigger = yes
+			accepted_culture = zohebidi
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_halfling_race_trigger = yes
+			accepted_culture = fomarati
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_halfling_race_trigger = yes
+			accepted_culture = mazava
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_halfling_race_trigger = yes
+			accepted_culture = mboala
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			high_tolerance_halfling_race_trigger = yes
+			accepted_culture = vyoronsi
+		}
+		modifier = {
+			num_accepted_cultures = 1
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+anbi_merfolk_the_great_elven_is_merfolks = {
+	icon = privilege_wyvernheart_culture_of_the_heart
+	max_absolutism = 0
+	loyalty = 0.05
+	influence = 0
+	is_valid = {
+		tag = AB3
+		mission_completed = anbi_merfolk_the_mers_is_greatest_elven
+		OR = {
+			NOT = {
+				has_estate_privilege = anbi_merfolk_the_great_elven_is_merfolks
+			}
+			AND = {
+				has_estate_privilege = anbi_merfolk_the_great_elven_is_merfolks
+				medium_tolerance_elven_race_trigger = yes
+				medium_tolerance_ruinborn_race_trigger = yes
+			}						
+		}
+	}
+	can_select = {
+		medium_tolerance_elven_race_trigger = yes
+		medium_tolerance_ruinborn_race_trigger = yes	
+	} 					 					
+	can_revoke = { 
+		always = no
+	}
+	on_granted = {
+	}
+	benefits = {
+		discipline = 0.05
+		administrative_efficiency = 0.1
+		province_warscore_cost = -0.15
+		church_privilege_slots = 1
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

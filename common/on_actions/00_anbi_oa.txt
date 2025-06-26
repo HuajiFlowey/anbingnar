@@ -1,0 +1,94 @@
+on_startup = {
+	country_event = { id = flavour_anbingnar_daxugo.44444 }
+	country_event = { id = flavour_anbingnar_daxugo.44445 }
+	country_event = { id = bloody_castanor.1  days = 1 }
+	country_event = { id = anbi_merfolk.1 days = 1 }
+	country_event = { id = anbi_kuhai.10001 }
+	country_event = { id = anbitotal.1 }
+	country_event = { id = anbitotal.2 }
+	country_event = { id = anbitotal.3 }
+}
+
+on_queen_death = {
+	Y98_queen_death = yes
+	Y98_clr_harem_flag = yes
+}
+
+on_new_monarch = {
+	country_event = { id = anbitotal.5 }
+}
+
+on_monarch_death = {
+	country_event = { id = bloody_castanor.30 }
+
+	country_event = { id = flavour_anbingnar_daxugo.3 }
+	country_event = { id = flavour_anbingnar_daxugo.4 }
+	country_event = { id = flavour_anbingnar_daxugo.31433 }
+	country_event = { id = flavour_anbingnar_daxugo.31434 }
+	country_event = { id = flavour_anbingnar_daxugo.31437 }
+	country_event = { id = flavour_anbingnar_daxugo.31450 }
+	country_event = { id = flavour_anbingnar_daxugo.31451 }
+	Y98_queen_death = yes
+	Y98_clr_harem_flag = yes
+	
+}
+
+on_siege_won_country = {
+	country_event = { id = bloody_castanor.3 }
+	country_event = { id = anbi_kuhai.1018 }
+	country_event = { id = anbi_kuhai.1019 }
+}
+
+on_siege_won_province = {
+	province_event = { id = anbi_merfolk.111 }
+}
+
+on_war_lost = {
+	country_event = { id = bloody_castanor.15 }
+	country_event = { id = anbi_kuhai.1004 } 
+}
+
+on_war_won = {
+	country_event = { id = bloody_castanor.18 }
+	country_event = { id = anbi_kuhai.1004 } 
+}
+
+on_battle_won_country = {
+	anbi_abi_the_great_war_death_event_effect = yes
+}
+
+on_battle_lost_country = {
+	anbi_abi_the_great_war_death_event_effect = yes
+}
+
+on_battle_won_unit = {
+	anbi_y98_wumou_test_effect = yes
+}
+
+on_new_term_election = {
+	country_event = { id = anbi_kuhai.3 }
+	country_event = { id = anbi_kuhai.1010 }
+}
+
+on_death_election = {
+	country_event = { id = anbi_kuhai.1011 }
+}
+
+on_five_year_pulse = {
+	country_event = { id = anbi_kuhai.1005 }
+}
+
+on_province_owner_change = {
+	anbi_is_merfolk_state_effect = yes
+	province_event = { id = anbi_merfolk.206 }
+}
+
+on_country_creation = {
+	if = { #Makes Beikdugang created subjects (mainly colonies) tolerate ruinborn more.
+		limit = {
+			is_subject_of = AB3
+			AB3 = { mission_completed = anbi_merfolk_our_cousin }
+		}
+		largest_increase_of_ruinborn_tolerance_effect = yes
+	}
+}

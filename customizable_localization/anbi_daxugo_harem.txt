@@ -1,0 +1,3444 @@
+#将本地化和图片硬绑定不是什么好主意……但做都做了。
+
+defined_text = {
+	name = DaxugoHaremPalaceDesc
+	random = no
+
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2000.d1
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 0
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2000.d2
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2000.d3
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2000.d4
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 3
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2000.d5
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 4
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2000.d6
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 5
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2000.d7
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 6
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2000.d8
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 7
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2000.d9
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 8
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2000.d10
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_harem_palace_choice
+				value = 9
+			}
+		}
+	}
+}
+defined_text = {
+	name = DaxugoHaremPalaceYanshenTitle
+	random = no
+
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t2
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t3
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 3
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t4
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 4
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t5
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 5
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t6
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 6
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t7
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 7
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t8
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 8
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t9
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 9
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t10
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 10
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t11
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 11
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t12
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 12
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t13
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 13
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t14
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 14
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t15
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 15
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t16
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 16
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t17
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 17
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t18
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 18
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t19
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 19
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t20
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 20
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t21
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 21
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t22
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 23
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t23
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 22
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t24
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 24
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t25
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 25
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t26
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 26
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t27
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 27
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t28
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 28
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t29
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 29
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t30
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 30
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t31
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 31
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t32
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 32
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t33
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 33
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t34
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 34
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t35
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 35
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t36
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 36
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t37
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 37
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t38
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 38
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t39
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 39
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t40
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 40
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t41
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 42
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t42
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 41
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t43
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 43
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t44
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 44
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t45
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 45
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t46
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 46
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t47
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 47
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t48
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 48
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2001.t49
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 49
+			}
+		}
+	}
+}
+defined_text = {
+	name = DaxugoHaremPalaceKaiTitle
+	random = no
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t2
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t3
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 3
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t4
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 4
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t5
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 5
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t6
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 6
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t7
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 7
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t8
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 8
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t9
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 9
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t10
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 10
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t11
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 11
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t12
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 12
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t13
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 13
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t14
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 14
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t15
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 15
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t16
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 16
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t17
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 17
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t18
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 18
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t19
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 19
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t20
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 20
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t21
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 21
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t22
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 22
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t23
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 23
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t24
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 24
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t25
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 25
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t26
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 26
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t27
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 27
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t28
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 28
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t29
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 29
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t30
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 30
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t31
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 31
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t32
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 32
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t33
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 33
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t34
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 34
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t35
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 35
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t36
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 36
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t37
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 37
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t38
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 38
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t39
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 39
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t40
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 40
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t41
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 41
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t42
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 42
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t43
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 43
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t44
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 44
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t45
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 45
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t46
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 46
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t47
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 47
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t48
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 48
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t49
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 49
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t50
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 50
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t51
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 51
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t52
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 52
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t53
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 53
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t54
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 54
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t55
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 55
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t56
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 56
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t57
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 57
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t58
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 58
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t59
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 59
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t60
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 60
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t61
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 61
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t62
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 62
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t63
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 63
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t64
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 64
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t65
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 65
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t66
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 66
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t67
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 67
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t68
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 68
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t69
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 69
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t70
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 70
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t71
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 71
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t72
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 72
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t73
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 73
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t74
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 74
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t75
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 75
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t76
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 76
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t77
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 77
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t78
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 78
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t79
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 79
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t80
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 80
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t81
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 81
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t82
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 82
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t83
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 83
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t84
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 84
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t85
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 85
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t86
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 86
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t87
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 87
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2002.t88
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 88
+			}
+		}
+	}
+}
+defined_text = {
+	name = DaxugoHaremPalaceTanxiangTitle
+	random = no
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t2
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t3
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 3
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t4
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 4
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t5
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 5
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t6
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 6
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t7
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 7
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t8
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 8
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t9
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 9
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t10
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 10
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t11
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 11
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t12
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 12
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t13
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 13
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t14
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 14
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t15
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 15
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t16
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 16
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t17
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 17
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t18
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 18
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t19
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 19
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t20
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 20
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t21
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 21
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t22
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 22
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t23
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 23
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t24
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 24
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t25
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 25
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t26
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 26
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t27
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 27
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t28
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 28
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2003.t29
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 29
+			}
+		}
+	}
+}
+defined_text = {
+	name = DaxugoHaremPalaceJinanTitle
+	random = no
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t2
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t3
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 3
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t4
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 4
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t5
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 5
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t6
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 6
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t7
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 7
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t8
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 8
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t9
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 9
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t10
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 10
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t11
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 11
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t12
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 12
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t13
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 13
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t14
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 14
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t15
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 15
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t16
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 16
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t17
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 17
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t18
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 18
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t19
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 19
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t20
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 20
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t21
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 21
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t22
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 22
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t23
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 23
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t24
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 24
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t25
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 25
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t26
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 26
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t27
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 27
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2004.t28
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 28
+			}
+		}
+	}
+}
+defined_text = {
+	name = DaxugoHaremPalaceRahenTitle
+	random = no
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t2
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t3
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 3
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t4
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 4
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t5
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 5
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t6
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 6
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t7
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 7
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t8
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 8
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t9
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 9
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t10
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 10
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t11
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 11
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t12
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 12
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t13
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 13
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t14
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 14
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t15
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 15
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t16
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 16
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2005.t17
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 17
+			}
+		}
+	}
+}
+defined_text = {
+	name = DaxugoHaremPalaceHarimariTitle
+	random = no
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2006.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2006.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2006.t2
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2006.t3
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 3
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2006.t4
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 4
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2006.t5
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 5
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2006.t6
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 6
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2006.t7
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 7
+			}
+		}
+	}
+}
+defined_text = {
+	name = DaxugoHaremPalaceKhetTitle
+	random = no
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2007.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2007.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2007.t2
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2007.t3
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 3
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2007.t4
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 4
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2007.t5
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 5
+			}
+		}
+	}
+}
+defined_text = {
+	name = DaxugoHaremPalaceBulwarTitle
+	random = no
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t2
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t3
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 3
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t4
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 4
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t5
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 5
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t6
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 6
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t7
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 7
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t8
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 8
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t9
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 9
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t10
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 10
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t11
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 11
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t12
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 12
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t13
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 13
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t14
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 14
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t15
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 15
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t16
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 16
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t17
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 17
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t18
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 18
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t19
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 19
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t20
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 20
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t21
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 21
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t22
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 22
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t23
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 23
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t24
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 24
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t25
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 25
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t26
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 26
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t27
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 27
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t28
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 28
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t29
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 29
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t30
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 30
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t31
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 31
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t32
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 32
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t33
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 33
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t34
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 34
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t35
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 35
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t36
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 36
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t37
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 37
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t38
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 38
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t39
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 39
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t40
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 40
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t41
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 41
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t42
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 42
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t43
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 43
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t44
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 44
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t45
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 45
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t46
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 46
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t47
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 47
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t48
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 48
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t49
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 49
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t50
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 50
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t51
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 51
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t52
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 52
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t53
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 53
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t54
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 54
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t55
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 55
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t56
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 56
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t57
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 57
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t58
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 58
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t59
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 59
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t60
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 60
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t61
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 61
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t62
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 62
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t63
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 63
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t64
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 64
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t65
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 65
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t66
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 66
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t67
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 67
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t68
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 68
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t69
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 69
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t70
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 70
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t71
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 71
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t72
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 72
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t73
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 73
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t74
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 74
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t75
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 75
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t76
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 76
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t77
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 77
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t78
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 78
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t79
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 79
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t80
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 80
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t81
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 81
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t82
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 82
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t83
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 83
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t84
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 84
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t85
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 85
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t86
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 86
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t87
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 87
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2008.t88
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 88
+			}
+		}
+	}
+}
+defined_text = {
+	name = DaxugoHaremPalaceCannorTitle
+	random = no
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = -1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t1
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t2
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t3
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 3
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t4
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 4
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t5
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 5
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t6
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 6
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t7
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 7
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t8
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 8
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t9
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 9
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t10
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 10
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t11
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 11
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t12
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 12
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t13
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 13
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t14
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 14
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t15
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 15
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t16
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 16
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t17
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 17
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t18
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 18
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t19
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 19
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t20
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 20
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t21
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 21
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t22
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 22
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t23
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 23
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t24
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 24
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t25
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 25
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t26
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 26
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t27
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 27
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t28
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 28
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t29
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 29
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t30
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 30
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t31
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 31
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t32
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 32
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t33
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 33
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t34
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 34
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t35
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 35
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t36
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 36
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t37
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 37
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t38
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 38
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t39
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 39
+			}
+		}
+	}
+	text = {
+		localisation_key = flavour_anbingnar_daxugo.2009.t40
+		trigger = {
+			is_variable_equal = {
+				which = anbi_daxugo_harem_title
+				value = 40
+			}
+		}
+	}
+}
+defined_text = {
+	name = DaxugoHaremPalaceLookLookPiTitle
+	random = no
+	text = { 
+		trigger = {
+			has_country_flag = anbi_daxugo_harem_from_yanshen
+		}
+		localisation_key = flavour_anbingnar_daxugo.2001.t
+	}
+	text = { 
+		trigger = {
+			has_country_flag = anbi_daxugo_harem_from_huagai
+		}
+		localisation_key = flavour_anbingnar_daxugo.2002.t
+	}
+	text = { 
+		trigger = {
+			has_country_flag = anbi_daxugo_harem_from_tanxiang
+		}
+		localisation_key = flavour_anbingnar_daxugo.2003.t
+	}
+	text = { 
+		trigger = {
+			has_country_flag = anbi_daxugo_harem_from_jinan
+		}
+		localisation_key = flavour_anbingnar_daxugo.2004.t
+	}
+	text = { 
+		trigger = {
+			has_country_flag = anbi_daxugo_harem_from_rahen
+		}
+		localisation_key = flavour_anbingnar_daxugo.2005.t
+	}
+	text = { 
+		trigger = {
+			has_country_flag = anbi_daxugo_harem_from_harimari
+		}
+		localisation_key = flavour_anbingnar_daxugo.2006.t
+	}
+	text = { 
+		trigger = {
+			has_country_flag = anbi_daxugo_harem_from_khet
+		}
+		localisation_key = flavour_anbingnar_daxugo.2007.t
+	}
+	text = { 
+		trigger = {
+			has_country_flag = anbi_daxugo_harem_from_bulwar
+		}
+		localisation_key = flavour_anbingnar_daxugo.2008.t
+	}
+	text = { 
+		trigger = {
+			has_country_flag = anbi_daxugo_harem_from_cannor
+		}
+		localisation_key = flavour_anbingnar_daxugo.2009.t
+	}
+	text = {
+		trigger = {
+			has_ruler_flag = Y98_holi_consort_r
+		}
+		localisation_key = flavour_anbingnar_daxugo.holi.t
+	}
+	text = {
+		trigger = {
+			has_ruler_flag = anbi_wumou_consort_r
+		}
+		localisation_key = flavour_anbingnar_daxugo.wumou.t
+	}
+}

@@ -1,0 +1,2037 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_anbi_harem_d_bulwar"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/d_bulwar.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_d_cannor"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/d_cannor.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_d_harimari"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/d_harimari.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_d_kai"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/d_kai.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_d_khet"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/d_khet.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_d_rahen"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/d_rahen.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_d_southest"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/d_southest.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_d_tanxiang"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/d_tanxiang.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_d_yanshen"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/d_yanshen.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_g_bulwar"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/g_bulwar.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_g_cannor"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/g_cannor.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_g_harimari"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/g_harimari.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_g_kai"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/g_kai.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_g_khet"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/g_khet.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_g_rahen"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/g_rahen.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_g_tanxiang"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/g_tanxiang.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_g_southest"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/g_southest.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_harem_g_yanshen"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_option/g_yanshen.dds"
+		loadType = "INGAME"
+	}
+
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_desc1"
+		texturefile = "gfx/interface/anbi_harem_menus/desc/daxugo_harem_desc1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_desc2"
+		texturefile = "gfx/interface/anbi_harem_menus/desc/daxugo_harem_desc2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_desc3"
+		texturefile = "gfx/interface/anbi_harem_menus/desc/daxugo_harem_desc3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_desc4"
+		texturefile = "gfx/interface/anbi_harem_menus/desc/daxugo_harem_desc4.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_desc5"
+		texturefile = "gfx/interface/anbi_harem_menus/desc/daxugo_harem_desc5.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_desc6"
+		texturefile = "gfx/interface/anbi_harem_menus/desc/daxugo_harem_desc6.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_desc7"
+		texturefile = "gfx/interface/anbi_harem_menus/desc/daxugo_harem_desc7.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_desc8"
+		texturefile = "gfx/interface/anbi_harem_menus/desc/daxugo_harem_desc8.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_desc9"
+		texturefile = "gfx/interface/anbi_harem_menus/desc/daxugo_harem_desc9.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_total_desc"
+		texturefile = "gfx/interface/anbi_harem_menus/desc/daxugo_harem_total_desc.dds"
+		loadType = "INGAME"
+	}
+	
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_palace_choice_bg"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_bg/daxugo_harem_palace_choice_bg.dds"
+		loadType = "INGAME"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_10"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_10.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_11"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_11.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_12"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_12.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_13"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_13.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_14"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_14.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_15"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_15.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_16"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_16.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_17"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_17.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_18"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_18.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_19"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_19.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_20"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_20.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_21"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_21.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_22"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_22.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_23"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_23.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_24"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_24.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_25"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_25.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_26"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_26.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_27"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_27.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_28"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_28.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_29"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_29.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_30"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_30.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_31"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_31.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_32"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_32.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_33"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_33.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_34"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_34.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_35"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_35.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_36"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_36.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_37"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_37.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_38"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_38.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_39"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_39.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_4.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_40"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_40.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_5.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_6"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_6.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_7"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_7.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_8"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_8.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_9"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_9.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_drawf_1000"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_drawf_1000.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_dwarf_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_dwarf_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_dwarf_10"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_dwarf_10.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_dwarf_11"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_dwarf_11.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_dwarf_12"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_dwarf_12.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_dwarf_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_dwarf_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_dwarf_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_dwarf_3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_dwarf_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_dwarf_4.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_dwarf_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_dwarf_5.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_dwarf_6"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_dwarf_6.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_dwarf_7"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_dwarf_7.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_dwarf_8"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_dwarf_8.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_dwarf_9"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_dwarf_9.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_10"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_10.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_11"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_11.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_12"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_12.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_13"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_13.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_14"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_14.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_15"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_15.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_16"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_16.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_17"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_17.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_18"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_18.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_19"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_19.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_20"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_20.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_21"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_21.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_22"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_22.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_23"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_23.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_24"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_24.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_25"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_25.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_26"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_26.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_27"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_27.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_28"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_28.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_29"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_29.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_30"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_30.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_31"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_31.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_32"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_32.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_33"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_33.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_34"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_34.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_35"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_35.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_36"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_36.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_37"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_37.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_38"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_38.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_39"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_39.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_4.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_40"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_40.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_41"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_41.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_42"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_42.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_43"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_43.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_44"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_44.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_45"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_45.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_46"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_46.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_47"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_47.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_5.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_6"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_6.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_7"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_7.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_8"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_8.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_elf_9"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_elf_9.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_harimari_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_harimari_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_harimari_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_harimari_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_harimari_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_harimari_3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_harimari_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_harimari_4.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_harimari_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_harimari_5.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_harimari_6"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_harimari_6.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_harimari_7"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_harimari_7.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_10"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_10.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_11"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_11.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_12"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_12.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_13"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_13.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_14"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_14.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_15"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_15.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_16"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_16.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_17"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_17.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_18"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_18.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_19"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_19.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_20"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_20.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_21"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_21.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_22"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_22.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_23"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_23.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_24"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_24.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_25"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_25.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_26"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_26.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_27"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_27.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_28"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_28.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_29"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_29.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_4.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_5.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_6"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_6.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_7"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_7.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_8"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_8.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_kai_9"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_kai_9.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_10"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_10.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_1000"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_1000.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_1001"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_1001.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_1002"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_1002.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_1003"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_1003.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_1004"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_1004.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_1005"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_1005.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_11"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_11.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_12"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_12.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_13"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_13.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_14"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_14.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_15"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_15.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_16"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_16.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_17"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_17.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_18"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_18.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_19"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_19.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_20"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_20.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_21"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_21.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_4.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_5.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_6"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_6.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_7"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_7.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_8"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_8.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_yanshen_9"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_yanshen_9.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_10"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_10.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_11"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_11.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_12"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_12.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_13"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_13.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_14"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_14.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_15"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_15.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_16"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_16.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_17"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_17.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_18"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_18.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_19"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_19.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_20"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_20.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_4.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_5.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_6"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_6.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_7"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_7.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_8"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_8.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_cannor_9"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_cannor_9.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_dwarf_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_dwarf_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_dwarf_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_dwarf_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_dwarf_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_dwarf_3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_dwarf_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_dwarf_4.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_dwarf_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_dwarf_5.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_elf_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_elf_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_elf_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_elf_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_elf_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_elf_3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_harimari_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_harimari_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_harimari_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_harimari_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_harimari_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_harimari_3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_harimari_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_harimari_4.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_harimari_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_harimari_5.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_kai_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_kai_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_kai_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_kai_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_yanshen_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_yanshen_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_yanshen_1000"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_yanshen_1000.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_yanshen_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_yanshen_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_yanshen_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_yanshen_3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_yanshen_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_yanshen_4.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_yanshen_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_yanshen_5.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_male_daxugo_harem_yanshen_6"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/male_daxugo_harem_yanshen_6.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_10"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_10.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_11"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_11.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_12"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_12.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_13"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_13.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_14"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_14.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_15"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_15.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_16"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_16.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_17"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_17.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_18"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_18.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_19"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_19.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_20"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_20.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_21"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_21.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_22"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_22.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_23"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_23.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_24"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_24.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_25"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_25.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_26"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_26.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_27"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_27.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_28"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_28.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_4.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_5.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_6"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_6.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_7"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_7.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_8"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_8.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_jinan_9"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_jinan_9.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_10"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_10.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_11"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_11.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_12"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_12.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_13"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_13.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_14"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_14.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_15"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_15.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_16"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_16.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_17"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_17.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_18"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_18.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_19"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_19.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_20"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_20.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_21"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_21.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_22"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_22.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_23"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_23.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_24"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_24.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_25"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_25.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_26"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_26.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_27"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_27.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_28"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_28.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_29"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_29.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_4.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_5.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_6"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_6.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_7"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_7.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_8"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_8.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_tanxiang_9"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_tanxiang_9.dds"
+		loadType = "INGAME"
+	}
+
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_rahen_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_rahen_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_rahen_10"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_rahen_10.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_rahen_11"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_rahen_11.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_rahen_12"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_rahen_12.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_rahen_13"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_rahen_13.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_rahen_14"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_rahen_14.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_rahen_15"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_rahen_15.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_rahen_16"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_rahen_16.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_rahen_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_rahen_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_rahen_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_rahen_3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_rahen_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_rahen_4.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_rahen_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_rahen_5.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_rahen_6"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_rahen_6.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_rahen_7"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_rahen_7.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_rahen_8"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_rahen_8.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_rahen_9"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_rahen_9.dds"
+		loadType = "INGAME"
+	}
+
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_solo_harimari_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_solo_harimari_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_solo_harimari_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_solo_harimari_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_solo_harimari_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_solo_harimari_3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_solo_harimari_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_solo_harimari_4.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_solo_harimari_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_solo_harimari_5.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_solo_harimari_6"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_solo_harimari_6.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_solo_harimari_7"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_solo_harimari_7.dds"
+		loadType = "INGAME"
+	}
+
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_khet_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_khet_1.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_khet_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_khet_2.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_khet_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_khet_3.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_khet_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_khet_4.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_khet_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_khet_5.dds"
+		loadType = "INGAME"
+	}
+	
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_10"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_10.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_11"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_11.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_12"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_12.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_13"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_13.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_14"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_14.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_15"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_15.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_16"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_16.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_17"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_17.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_18"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_18.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_19"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_19.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_20"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_20.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_21"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_21.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_22"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_22.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_23"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_23.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_24"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_24.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_25"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_25.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_26"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_26.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_27"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_27.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_28"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_28.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_29"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_29.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_30"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_30.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_31"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_31.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_32"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_32.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_33"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_33.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_34"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_34.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_35"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_35.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_36"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_36.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_37"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_37.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_38"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_38.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_39"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_39.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_40"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_40.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_41"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_41.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_42"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_42.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_43"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_43.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_44"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_44.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_45"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_46"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_46.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_6"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_7"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_7.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_8"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_8.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_bulwar_elf_9"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_bulwar_elf_9.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_gnoll_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_gnoll_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_gnoll_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_gnoll_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_gnoll_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_gnoll_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_gnoll_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_gnoll_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_gnoll_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_gnoll_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_gnoll_6"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_gnoll_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_gnoll_7"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_gnoll_7.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_harpy_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_harpy_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_harpy_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_harpy_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_harpy_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_harpy_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_harpy_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_harpy_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_harpy_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_harpy_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_harpy_6"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_harpy_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_harpy_7"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_harpy_7.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_harpy_8"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_harpy_8.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_10"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_10.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_11"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_11.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_12"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_12.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_13"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_13.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_14"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_14.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_15"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_15.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_16"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_16.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_17"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_17.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_18"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_18.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_19"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_19.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_20"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_20.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_21"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_21.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_22"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_22.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_23"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_23.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_24"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_24.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_25"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_25.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_26"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_26.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_27"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_27.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_28"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_28.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_29"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_29.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_30"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_30.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_31"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_31.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_32"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_32.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_33"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_33.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_34"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_34.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_35"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_35.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_36"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_36.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_37"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_37.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_38"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_38.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_39"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_39.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_40"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_40.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_5"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_6"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_7"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_7.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_8"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_8.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_cannor_9"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_cannor_9.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_hobgoblin_1"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_hobgoblin_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_hobgoblin_2"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_hobgoblin_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_hobgoblin_3"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_hobgoblin_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_hobgoblin_4"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/daxugo_harem_hobgoblin_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_holi"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/holi.dds"
+	}
+	SpriteType = {
+		name = "GFX_anbi_daxugo_harem_wumou"
+		texturefile = "gfx/interface/anbi_harem_menus/palace_title/wumou.dds"
+	}
+}

@@ -1,0 +1,76 @@
+defined_text = {
+	name = ShipGirlsTheory
+	random = no
+	text = { 
+		trigger = {
+			has_country_flag = anbi_merfolk_ShipGirlsTheory_complete
+		}
+		localisation_key = anbi_merfolk_shipgirls_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = anbi_merfolk_ShipGirlsTheory_doing
+		}
+		localisation_key = anbi_merfolk_shipgirls_3
+	}
+	text = { 
+		localisation_key = anbi_merfolk_shipgirls_2
+	}
+}
+defined_text = {
+	name = ShipGirlsHull
+	random = no
+	text = { 
+		trigger = {
+			has_country_flag = anbi_merfolk_ShipGirlsHull_complete
+		}
+		localisation_key = anbi_merfolk_shipgirls_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = anbi_merfolk_ShipGirlsHull_doing
+		}
+		localisation_key = anbi_merfolk_shipgirls_3
+	}
+	text = { 
+		localisation_key = anbi_merfolk_shipgirls_2
+	}
+}
+defined_text = {
+	name = ShipGirlsBrain
+	random = no
+	text = { 
+		trigger = {
+			has_country_flag = anbi_merfolk_ShipGirlsBrain_complete
+		}
+		localisation_key = anbi_merfolk_shipgirls_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = anbi_merfolk_ShipGirlsBrain_doing
+		}
+		localisation_key = anbi_merfolk_shipgirls_3
+	}
+	text = { 
+		localisation_key = anbi_merfolk_shipgirls_2
+	}
+}
+defined_text = {
+	name = ShipGirlsIntoWater
+	random = no
+	text = { 
+		trigger = {
+			has_country_flag = anbi_merfolk_ShipGirlsIntoWater_complete
+		}
+		localisation_key = anbi_merfolk_shipgirls_1
+	}
+	text = {
+		trigger = {
+			has_country_flag = anbi_merfolk_ShipGirlsIntoWater_doing
+		}
+		localisation_key = anbi_merfolk_shipgirls_3
+	}
+	text = { 
+		localisation_key = anbi_merfolk_shipgirls_2
+	}
+}

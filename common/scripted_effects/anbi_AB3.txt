@@ -1,0 +1,1017 @@
+merfolk_discover = {
+	throden_gokad_region = {
+		discover_country = PREV
+	}
+	katala_raz_region = {
+		discover_country = PREV
+	}
+	odu_kherass_region = {
+		discover_country = PREV
+	}
+	jasiir_jadid_region = {
+		discover_country = PREV
+	}
+	ardimya_region = {
+		discover_country = PREV
+	}
+	fahvanosy_region = {
+		discover_country = PREV
+	}
+	horashesh_region = {
+		discover_country = PREV
+	}
+	khetapera_region = {
+		discover_country = PREV
+	}
+	south_sarhal_coast_region = {
+		discover_country = PREV
+	}
+	ringlet_isles_region = {
+		discover_country = PREV
+	}
+	bamaliwuni_region = {
+		discover_country = PREV
+	}
+	ishyamtumu_region = {
+		discover_country = PREV
+	}
+	mabeedi_sea_area = {
+		discover_country = PREV
+	}
+	kedwali_gulf_region = {
+		discover_country = PREV
+	}
+	ringlet_sea_area = {
+		discover_country = PREV
+	}
+	lembiahar_area = {
+		discover_country = PREV
+	}
+	arawkelin_area = {
+		discover_country = PREV
+	}
+	dhenbasana_estuary_area = {
+		discover_country = PREV
+	}
+	amkamsek_area = {
+		discover_country = PREV
+	}
+	yetmesira_area = {
+		discover_country = PREV
+	}
+	berihrica_area = {
+		discover_country = PREV
+	}
+	irkan_eparta_area = {
+		discover_country = PREV
+	}
+	bedaphire_area = {
+		discover_country = PREV
+	}
+	4714 = {
+		discover_country = PREV
+	}
+	4715 = {
+		discover_country = PREV
+	}
+	4962 = {
+		discover_country = PREV
+	}
+	4709= {
+		discover_country = PREV
+	}
+	4711 = {
+		discover_country = PREV
+	}
+	4769 = {
+		discover_country = PREV
+	}
+	4699 = {
+		discover_country = PREV
+	}
+	4701 = {
+		discover_country = PREV
+	}
+	4958 = {
+		discover_country = PREV
+	}
+	4697 = {
+		discover_country = PREV
+	}
+	4771 = {
+		discover_country = PREV
+	}
+	4576 = {
+		discover_country = PREV
+	}
+	4575 = {
+		discover_country = PREV
+	}
+	4574 = {
+		discover_country = PREV
+	}
+	4573 = {
+		discover_country = PREV
+	}
+	4769 = {
+		discover_country = PREV
+	}
+	4570 = {
+		discover_country = PREV
+	}
+	4569 = {
+		discover_country = PREV
+	}
+	4568 = {
+		discover_country = PREV
+	}
+	4567 = {
+		discover_country = PREV
+	}
+	4557 = {
+		discover_country = PREV
+	}
+	4556 = {
+		discover_country = PREV
+	}
+	4554 = {
+		discover_country = PREV
+	}
+	4420 = {
+		discover_country = PREV
+	}
+	4387 = {
+		discover_country = PREV
+	}
+	4389 = {
+		discover_country = PREV
+	}
+	4377 = {
+		discover_country = PREV
+	}
+	4383 = {
+		discover_country = PREV
+	}
+	1910 = {
+		discover_country = PREV
+	}
+	1651 = {
+		discover_country = PREV
+	}
+	1653 = {
+		discover_country = PREV
+	}
+	1656 = {
+		discover_country = PREV
+	}
+	6117 = {
+		discover_country = PREV
+	}
+	6116 = {
+		discover_country = PREV
+	}
+	5850 = {
+		discover_country = PREV
+	}
+	6605 = {
+		discover_country = PREV
+	}
+	1650 = {
+		discover_country = PREV
+	}
+	6111 = {
+		discover_country = PREV
+	}
+	5717 = {
+		discover_country = PREV
+	}
+	6120 = {
+		discover_country = PREV
+	}
+	6112 = {
+		discover_country = PREV
+	}
+	6113 = {
+		discover_country = PREV
+	}
+	6114 = {
+		discover_country = PREV
+	}
+	1649 = {
+		discover_country = PREV
+	}
+	1908 = {
+		discover_country = PREV
+	}
+	1790 = {
+		discover_country = PREV
+	}
+	6589 = {
+		discover_country = PREV
+	}
+	1904 = {
+		discover_country = PREV
+	}
+	1344 = {
+		discover_country = PREV
+	}
+	1611 = {
+		discover_country = PREV
+	}
+	1360 = {
+		discover_country = PREV
+	}
+	1361 = {
+		discover_country = PREV
+	}
+	1362 = {
+		discover_country = PREV
+	}
+	1364 = {
+		discover_country = PREV
+	}
+	1328 = {
+		discover_country = PREV
+	}
+	1329 = {
+		discover_country = PREV
+	}
+	1330 = {
+		discover_country = PREV
+	}
+	1331 = {
+		discover_country = PREV
+	}
+	3141 = {
+		discover_country = PREV
+	}
+	1446 = {
+		discover_country = PREV
+	}
+	1447 = {
+		discover_country = PREV
+	}
+	1651 = {
+		discover_country = PREV
+	}
+	3119 = {
+		discover_country = PREV
+	}
+	3118 = {
+		discover_country = PREV
+	}
+	3117 = {
+		discover_country = PREV
+	}
+	3116 = {
+		discover_country = PREV
+	}
+	1346 = {
+		discover_country = PREV
+	}
+	6592 = {
+		discover_country = PREV
+	}
+	4547 = {
+		discover_country = PREV
+	}
+	1640 = {
+		undiscover_country = PREV
+	}
+	1352 = {
+		undiscover_country = PREV
+	}
+	1643 = {
+		undiscover_country = PREV
+	}
+	1634 = {
+		undiscover_country = PREV
+	}
+	1433 = {
+		undiscover_country = PREV
+	}
+	1431 = {
+		undiscover_country = PREV
+	}
+	1353 = {
+		undiscover_country = PREV
+	}
+	3223 = {
+		undiscover_country = PREV
+	}
+	6654 = {
+		undiscover_country = PREV
+	}
+	3233 = {
+		undiscover_country = PREV
+	}
+	3571 = {
+		undiscover_country = PREV
+	}
+	3579 = {
+		undiscover_country = PREV
+	}
+	3580 = {
+		undiscover_country = PREV
+	}
+	sil_berkhens_land_area = {	#these are those islands southwest of fahvanosy in the middle of uelos lament
+		undiscover_country = PREV
+	}
+	far_uelos_isles_area = {
+		undiscover_country = PREV
+	}
+}
+merfolk_undiscover = {
+	throden_gokad_region = {
+		undiscover_country = ROOT
+	}
+	katala_raz_region = {
+		undiscover_country = ROOT
+	}
+	odu_kherass_region = {
+		undiscover_country = ROOT
+	}
+	jasiir_jadid_region = {
+		undiscover_country = ROOT
+	}
+	ardimya_region = {
+		undiscover_country = ROOT
+	}
+	fahvanosy_region = {
+		undiscover_country = ROOT
+	}
+	horashesh_region = {
+		undiscover_country = ROOT
+	}
+	khetapera_region = {
+		undiscover_country = ROOT
+	}
+	south_sarhal_coast_region = {
+		undiscover_country = ROOT
+	}
+	ringlet_isles_region = {
+		undiscover_country = ROOT
+	}
+	bamaliwuni_region = {
+		undiscover_country = ROOT
+	}
+	ishyamtumu_region = {
+		undiscover_country = ROOT
+	}
+	mabeedi_sea_area = {
+		undiscover_country = ROOT
+	}
+	kedwali_gulf_region = {
+		undiscover_country = ROOT
+	}
+	ringlet_sea_area = {
+		undiscover_country = ROOT
+	}
+	lembiahar_area = {
+		undiscover_country = ROOT
+	}
+	arawkelin_area = {
+		undiscover_country = ROOT
+	}
+	dhenbasana_estuary_area = {
+		undiscover_country = ROOT
+	}
+	amkamsek_area = {
+		undiscover_country = ROOT
+	}
+	yetmesira_area = {
+		undiscover_country = ROOT
+	}
+	berihrica_area = {
+		undiscover_country = ROOT
+	}
+	irkan_eparta_area = {
+		undiscover_country = ROOT
+	}
+	bedaphire_area = {
+		undiscover_country = ROOT
+	}
+	4714 = {
+		undiscover_country = ROOT
+	}
+	4715 = {
+		undiscover_country = ROOT
+	}
+	4962 = {
+		undiscover_country = ROOT
+	}
+	4709= {
+		undiscover_country = ROOT
+	}
+	4711 = {
+		undiscover_country = ROOT
+	}
+	4769 = {
+		undiscover_country = ROOT
+	}
+	4699 = {
+		undiscover_country = ROOT
+	}
+	4701 = {
+		undiscover_country = ROOT
+	}
+	4958 = {
+		undiscover_country = ROOT
+	}
+	4697 = {
+		undiscover_country = ROOT
+	}
+	4771 = {
+		undiscover_country = ROOT
+	}
+	4576 = {
+		undiscover_country = ROOT
+	}
+	4575 = {
+		undiscover_country = ROOT
+	}
+	4574 = {
+		undiscover_country = ROOT
+	}
+	4573 = {
+		undiscover_country = ROOT
+	}
+	4769 = {
+		undiscover_country = ROOT
+	}
+	4570 = {
+		undiscover_country = ROOT
+	}
+	4569 = {
+		undiscover_country = ROOT
+	}
+	4568 = {
+		undiscover_country = ROOT
+	}
+	4567 = {
+		undiscover_country = ROOT
+	}
+	4557 = {
+		undiscover_country = ROOT
+	}
+	4556 = {
+		undiscover_country = ROOT
+	}
+	4554 = {
+		undiscover_country = ROOT
+	}
+	4420 = {
+		undiscover_country = ROOT
+	}
+	4387 = {
+		undiscover_country = ROOT
+	}
+	4389 = {
+		undiscover_country = ROOT
+	}
+	4377 = {
+		undiscover_country = ROOT
+	}
+	4383 = {
+		undiscover_country = ROOT
+	}
+	1910 = {
+		undiscover_country = ROOT
+	}
+	1651 = {
+		undiscover_country = ROOT
+	}
+	1653 = {
+		undiscover_country = ROOT
+	}
+	1656 = {
+		undiscover_country = ROOT
+	}
+	6117 = {
+		undiscover_country = ROOT
+	}
+	6116 = {
+		undiscover_country = ROOT
+	}
+	5850 = {
+		undiscover_country = ROOT
+	}
+	6605 = {
+		undiscover_country = ROOT
+	}
+	1650 = {
+		undiscover_country = ROOT
+	}
+	6111 = {
+		undiscover_country = ROOT
+	}
+	5717 = {
+		undiscover_country = ROOT
+	}
+	6120 = {
+		undiscover_country = ROOT
+	}
+	6112 = {
+		undiscover_country = ROOT
+	}
+	6113 = {
+		undiscover_country = ROOT
+	}
+	6114 = {
+		undiscover_country = ROOT
+	}
+	1649 = {
+		undiscover_country = ROOT
+	}
+	1908 = {
+		undiscover_country = ROOT
+	}
+	1790 = {
+		undiscover_country = ROOT
+	}
+	6589 = {
+		undiscover_country = ROOT
+	}
+	1904 = {
+		undiscover_country = ROOT
+	}
+	1344 = {
+		undiscover_country = ROOT
+	}
+	1611 = {
+		undiscover_country = ROOT
+	}
+	1360 = {
+		undiscover_country = ROOT
+	}
+	1361 = {
+		undiscover_country = ROOT
+	}
+	1362 = {
+		undiscover_country = ROOT
+	}
+	1364 = {
+		undiscover_country = ROOT
+	}
+	1328 = {
+		undiscover_country = ROOT
+	}
+	1329 = {
+		undiscover_country = ROOT
+	}
+	1330 = {
+		undiscover_country = ROOT
+	}
+	1331 = {
+		undiscover_country = ROOT
+	}
+	3141 = {
+		undiscover_country = ROOT
+	}
+	1446 = {
+		undiscover_country = ROOT
+	}
+	1447 = {
+		undiscover_country = ROOT
+	}
+	1651 = {
+		undiscover_country = ROOT
+	}
+	3119 = {
+		undiscover_country = ROOT
+	}
+	3118 = {
+		undiscover_country = ROOT
+	}
+	3117 = {
+		undiscover_country = ROOT
+	}
+	3116 = {
+		undiscover_country = ROOT
+	}
+	1346 = {
+		undiscover_country = ROOT
+	}
+	6592 = {
+		undiscover_country = ROOT
+	}
+	4547 = {
+		undiscover_country = ROOT
+	}
+}
+anbi_the_merfolk_shock = {
+	5653 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6671 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6017 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6675 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		clr_province_flag = merfolk_settlement
+		remove_province_modifier = offcoast_merfolk_allied
+		6678 = {
+			subtract_variable = {
+				which = jasiirJadidMerfolkCap
+				value = 1
+			}
+		}
+		add_local_autonomy = 80
+	}
+	6018 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6019 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		
+		add_local_autonomy = 80
+	}
+	6021 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6672 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6674 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6673 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6036 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6038 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6034 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6039 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6041 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6040 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6042 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6000 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6045 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6047 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6049 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6056 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6127 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6679 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+	6678 = {
+		add_devastation = 75
+		add_base_production = -3
+		add_base_manpower = -3
+		add_base_tax = -3
+		add_permanent_province_modifier = {
+			name = anbi_AB3_the_merfolk_shock
+			duration = 3650
+		}
+		add_local_autonomy = 80
+	}
+}
+anbi_is_merfolk_state_effect = {
+	if = {
+		limit = { 
+			owner = {
+				has_government_attribute = anbi_is_merfolk_state
+			}
+			OR = {
+				AND = {
+					NOT = {
+						owner = {
+							mission_completed = anbi_merfolk_djinnakah
+						}
+					}
+					superregion = djinnakah_superregion
+				}
+				AND = {
+					NOT = {
+						owner = {
+							mission_completed = anbi_merfolk_the_empire_of_land_and_sea
+						}
+					}
+					OR = {
+						superregion = taneyas_superregion
+						region = fahvanosy_region
+					}					
+				}
+				NOT = {
+					superregion = djinnakah_superregion
+					superregion = taneyas_superregion
+					region = fahvanosy_region
+				}
+			}			
+		}
+		add_province_modifier = {
+			name = anbi_AB3_is_merfolk_state_province_buff
+			duration = -1
+		}
+	}
+}
+anbi_merfolk_research_effect = {
+	set_variable = {
+		anbi_merfolk_shipgirls_speed = 0
+	}
+	change_variable = {
+		which = anbi_merfolk_shipgirls_speed
+		which = anbi_merfolk_shipgirls_tech_investment
+	}
+	change_variable = {
+		which = anbi_merfolk_shipgirls_speed
+		which = anbi_merfolk_shipgirls_cash_investment
+	}
+	change_variable = {
+		which = anbi_merfolk_shipgirls_speed
+		which = anbi_merfolk_shipgirls_sailors_investment
+	}
+	change_variable = {
+		which = anbi_merfolk_shipgirls_speed
+		which = anbi_merfolk_shipgirls_power_investment
+	}
+	multiply_variable = {
+		anbi_merfolk_shipgirls_speed = 0.05
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				anbi_merfolk_shipgirls_speed = 50
+			}
+		}
+		set_variable = {
+			anbi_merfolk_shipgirls_speed = 50
+		}
+	}
+	change_variable = {
+		which = anbi_merfolk_shipgirls_progress
+		which = anbi_merfolk_shipgirls_speed
+	}
+	if = {
+		limit = { 
+			check_variable = {
+				anbi_merfolk_shipgirls_progress = 100
+			}
+		}
+		subtract_variable = {
+			anbi_merfolk_shipgirls_progress = 100
+		}
+		if = {
+			limit = { 
+				has_country_flag = anbi_merfolk_ShipGirlsTheory_doing
+			}
+			set_country_flag = anbi_merfolk_ShipGirlsTheory_complete
+			set_country_flag = anbi_merfolk_ShipGirlsHull_doing
+			clr_country_flag = anbi_merfolk_ShipGirlsTheory_doing
+			country_event = {
+				id = anbi_merfolk.300
+			}
+		}
+		else_if = {
+			limit = { 
+				has_country_flag = anbi_merfolk_ShipGirlsHull_doing
+			}
+			set_country_flag = anbi_merfolk_ShipGirlsHull_complete
+			set_country_flag = anbi_merfolk_ShipGirlsBrain_doing
+			clr_country_flag = anbi_merfolk_ShipGirlsHull_doing
+			country_event = {
+				id = anbi_merfolk.301
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = anbi_merfolk_ShipGirlsBrain_doing
+			}
+			set_country_flag = anbi_merfolk_ShipGirlsBrain_complete
+			set_country_flag = anbi_merfolk_ShipGirlsIntoWater_doing
+			clr_country_flag = anbi_merfolk_ShipGirlsBrain_doing
+			country_event = {
+				id = anbi_merfolk.302
+			}
+		}
+		else_if = {
+			limit = { 
+				has_country_flag = anbi_merfolk_ShipGirlsIntoWater_doing
+			}
+			set_country_flag = anbi_merfolk_ShipGirlsIntoWater_complete
+			clr_country_flag = anbi_merfolk_ShipGirlsIntoWater_doing
+			country_event = {
+				id = anbi_merfolk.303
+			}
+		}
+	}
+}

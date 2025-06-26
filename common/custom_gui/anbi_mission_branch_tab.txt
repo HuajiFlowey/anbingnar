@@ -1,0 +1,92 @@
+#未选中
+custom_button = {
+	name = anbi_mission_branch_tab_1
+	tooltip = anbi_mission_branch_tab_1_tt
+	potential = {
+		AND = {
+			has_country_flag = the_greatest_yanshen_founded
+			has_country_flag = the_greatest_yanshen_development
+		}
+	}
+	trigger = {
+	}
+	effect = { 
+		hidden_effect = {
+			clr_country_flag = the_greatest_yanshen_development
+		}
+
+		swap_non_generic_missions = yes
+		
+		FROM = {
+			hidden_effect = {
+				play_sound = "decision"
+			}
+		}
+	}
+}
+custom_button = {
+	name = anbi_mission_branch_tab_2
+	tooltip = anbi_mission_branch_tab_2_tt
+	potential = {
+		AND = {
+			has_country_flag = the_greatest_yanshen_founded
+			NOT = { has_country_flag = the_greatest_yanshen_development }
+		}
+	}
+	trigger = {
+	}
+	effect = { 
+		hidden_effect = {
+			set_country_flag = the_greatest_yanshen_development
+		}
+		
+		swap_non_generic_missions = yes
+		
+		FROM = {
+			hidden_effect = {
+				play_sound = "decision"
+			}
+		}
+	}
+}
+#选中
+custom_button = {
+	name = anbi_mission_branch_tab_1_glow
+	tooltip = anbi_mission_branch_tab_1_glow_tt
+	potential = {
+		AND = {
+			has_country_flag = the_greatest_yanshen_founded
+			NOT = { has_country_flag = the_greatest_yanshen_development }
+		}
+	}
+	trigger = {
+	}
+	effect = { 
+		
+		FROM = {
+			hidden_effect = {
+				play_sound = "decision"
+			}
+		}
+	}
+}
+custom_button = {
+	name = anbi_mission_branch_tab_2_glow
+	tooltip = anbi_mission_branch_tab_2_glow_tt
+	potential = {
+		AND = {
+			has_country_flag = the_greatest_yanshen_founded
+			has_country_flag = the_greatest_yanshen_development
+		}
+	}
+	trigger = {
+	}
+	effect = { 
+		
+		FROM = {
+			hidden_effect = {
+				play_sound = "decision"
+			}
+		}
+	}
+}

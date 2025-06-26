@@ -1,0 +1,81 @@
+
+anbi_kuhai_revolution = {
+	ended_by_country_breaking_to_rebels = no
+	potential = {
+		tag = Y27
+		ai = no
+		NOT = {
+			is_year = 1446
+			has_country_flag = the_greatest_yanshen
+		}
+	}
+
+	
+	
+	can_start = {
+		custom_trigger_tooltip = {
+			tooltip = anbi_kuhai_revolution_always_no
+			NOT = {
+				has_country_flag = the_greatest_yanshen
+			}
+		}
+	}
+	
+	
+	can_stop = {
+        custom_trigger_tooltip = {
+			tooltip = anbi_kuhai_revolution_always_no
+			always = no
+		}
+	}
+		
+	
+	
+	progress = {
+		modifier = {
+			factor = 100
+			custom_trigger_tooltip = {
+				tooltip = anbi_kuhai_revolution_always_yes
+				always = yes
+			}
+		}
+	}
+	
+	
+	
+	can_end = {
+		custom_trigger_tooltip = {
+			tooltip = anbi_kuhai_revolution_stop_tt
+			had_country_flag = {
+				flag = the_greatest_yanshen
+				days = 30
+			}
+		}
+	}
+	
+
+	modifier = {
+		global_unrest = 2
+		global_tax_modifier = -0.25
+		trade_efficiency = -0.25
+		production_efficiency = -0.25
+	}
+	
+	
+	on_start = anbi_kuhai.1
+	on_end = anbi_kuhai.2
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = { 
+			1020 = 0
+			150 = aelnar.16 #Peasant revolt
+			110 = aelnar.19 #Noble revolt
+			50 = aelnar.86 #Aelthanas followers
+			50 = aelnar.87 #Dahvar followers
+		
+		}
+	}
+}
+

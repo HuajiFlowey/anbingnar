@@ -1,0 +1,24 @@
+anbi_lanjin_0 = { #lanjin
+	monarch_power = mil
+	always = yes
+
+	modifier = {
+		shock_damage = 0.05
+	}
+}
+anbi_yinquan_0 = { #yinquan
+	monarch_power = adm
+	always = yes
+
+	modifier = {
+		ae_impact = -0.05
+	}
+}
+anbi_feiten_0 = { #feiten
+	monarch_power = dip
+	always = yes
+
+	modifier = {
+		trade_efficiency = 0.1
+	}
+}

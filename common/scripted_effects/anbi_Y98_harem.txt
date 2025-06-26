@@ -1,0 +1,1786 @@
+Y98_yanshen_queen_random = {
+	random_list = {
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 1  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 1
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 2  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 2
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 3  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 3
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 4  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 4
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 5  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 5
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 6  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 6
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 7  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 7
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 8  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 8
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 9  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 9
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 10 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 10
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 11 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 11
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 12 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 12
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 13 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 13
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 14 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 14
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 15 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 15
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 16 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 16
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 17 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 17
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 18 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 18
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 19 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 19
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 20 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 20
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 21 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 21
+				}
+			}
+		}
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random$order$
+		which = anbi_daxugo_harem_yanshen_$order$
+	}
+}
+Y98_yanshen_male_queen_random = {
+	random_list = {
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 1  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 1
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 2  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 2
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 3  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 3
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 4  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 4
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 5  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 5
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 6  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 6
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 7  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 7
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 8  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 8
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 9  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 9
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 10 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 10
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 11 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 11
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 12 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 12
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 13 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 13
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 14 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 14
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 15 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 15
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 16 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 16
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 17 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 17
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 18 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 18
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 19 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 19
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 20 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 20
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 21 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 21
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 22 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 22
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 23 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 23
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 24 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 24
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 25 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 25
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 26 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 26
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_yanshen_$order$ value = 27 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 27
+				}
+			}
+		}
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random$order$
+		which = anbi_daxugo_harem_yanshen_$order$
+	}
+}
+Y98_yanshen_queen_random_list = {
+	Y98_yanshen_queen_random = {
+		order = 1
+	}
+	Y98_yanshen_queen_random = {
+		order = 2
+	}
+	Y98_yanshen_queen_random = {
+		order = 3
+	}
+	Y98_yanshen_queen_random = {
+		order = 4
+	}
+	Y98_yanshen_queen_random = {
+		order = 5
+	}
+	Y98_yanshen_queen_random = {
+		order = 6
+	}
+	Y98_yanshen_queen_random = {
+		order = 7
+	}
+	Y98_yanshen_queen_random = {
+		order = 8
+	}
+	Y98_yanshen_queen_random = {
+		order = 9
+	}
+	Y98_kobold_random = yes
+	Y98_yanshen_harimari_random = yes
+	Y98_yanshen_hobgoblin_random = yes
+	Y98_clr_independence_randomvar = yes
+}
+Y98_yanshen_male_queen_random_list = {
+	Y98_yanshen_male_queen_random = {
+		order = 1
+	}
+	Y98_yanshen_male_queen_random = {
+		order = 2
+	}
+	Y98_yanshen_male_queen_random = {
+		order = 3
+	}
+	Y98_yanshen_male_queen_random = {
+		order = 4
+	}
+	Y98_yanshen_male_queen_random = {
+		order = 5
+	}
+	Y98_yanshen_male_queen_random = {
+		order = 6
+	}
+	Y98_yanshen_male_queen_random = {
+		order = 7
+	}
+	Y98_yanshen_male_queen_random = {
+		order = 8
+	}
+	Y98_yanshen_male_queen_random = {
+		order = 9
+	}
+	Y98_kobold_random = yes
+	Y98_yanshen_male_harimari_random = yes
+	Y98_yanshen_hobgoblin_random = yes
+	Y98_clr_independence_randomvar = yes
+}
+Y98_kobold_random = {
+	random_list = {
+		10 = { set_variable = { which = anbi_daxugo_harem_kobold value = 28 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_kobold value = 29 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_kobold value = 30 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_kobold value = 31 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_kobold value = 32 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_kobold value = 33 } }
+	}
+}
+Y98_yanshen_male_harimari_random = {
+	random_list = {
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 34 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 35 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 36 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 37 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 38 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 39 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 40 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 41 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 42 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 43 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 44 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 45 }}
+	}
+}
+Y98_yanshen_harimari_random = {
+	random_list = {
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 34 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 35 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 36 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 37 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 38 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 39 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 40 }}
+	}
+}
+Y98_yanshen_hobgoblin_random = {
+	random_list = {
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_hobgoblin value = 46 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_hobgoblin value = 47 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_hobgoblin value = 48 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_hobgoblin value = 49 }}
+	}
+}
+
+
+Y98_kai_queen_random = {
+	random_list = {
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 1 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 1
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 2 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 2
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 3 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 3
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 4 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 4
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 5 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 5
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 6 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 6
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 7 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 7
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 8 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 8
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 9 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 9
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 10}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 10
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 11}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 11
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 12}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 12
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 13}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 13
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 14}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 14
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 15}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 15
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 16}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 16
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 17}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 17
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 18}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 18
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 19}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 19
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 20}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 20
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 21}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 21
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 22}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 22
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 23}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 23
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 24}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 24
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 25}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 25
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 26}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 26
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 27}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 27
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 28}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 28
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_kai_$order$ value = 29}
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 29
+				}
+			}
+		}
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random$order$
+		which = anbi_daxugo_harem_kai_$order$
+	}
+}
+Y98_kai_elf_queen_random = {
+	random_list = {
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 30 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 31 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 32 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 33 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 34 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 35 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 36 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 37 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 38 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 39 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 40 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 41 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 42 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 43 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 44 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 45 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 46 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 47 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 48 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 49 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 50 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 51 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 52 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 53 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 54 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 55 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 56 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 57 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 58 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 59 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 60 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 61 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 62 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 63 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 64 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 65 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 66 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 67 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 68 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 69 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 70 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 71 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 72 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 73 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 74 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 75 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_kai_elf value = 76 }}
+	}
+}
+Y98_kai_dwarf_queen_random = {
+	random_list = {
+		10 = { set_variable = { which = anbi_daxugo_harem_dwarf value = 77 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_dwarf value = 78 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_dwarf value = 79 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_dwarf value = 80 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_dwarf value = 81 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_dwarf value = 82 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_dwarf value = 83 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_dwarf value = 84 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_dwarf value = 85 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_dwarf value = 86 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_dwarf value = 87 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_dwarf value = 88 }}
+	}
+}
+Y98_kai_queen_random_list = {
+	Y98_kai_queen_random = {
+		order = 1
+	}
+	Y98_kai_queen_random = {
+		order = 2
+	}
+	Y98_kai_queen_random = {
+		order = 3
+	}
+	Y98_kai_queen_random = {
+		order = 4
+	}
+	Y98_kai_queen_random = {
+		order = 5
+	}
+	Y98_kai_queen_random = {
+		order = 6
+	}
+	Y98_kai_queen_random = {
+		order = 7
+	}
+	Y98_kai_queen_random = {
+		order = 8
+	}
+	Y98_kai_queen_random = {
+		order = 9
+	}
+	Y98_kai_elf_queen_random = yes
+	Y98_kai_dwarf_queen_random = yes
+	Y98_clr_independence_randomvar = yes
+}
+
+Y98_rahen_queen_random = {
+	random_list = {
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_rahen_$order$ value = 1  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 1
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_rahen_$order$ value = 2  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 2
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_rahen_$order$ value = 3  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 3
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_rahen_$order$ value = 4  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 4
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_rahen_$order$ value = 5  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 5
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_rahen_$order$ value = 6  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 6
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_rahen_$order$ value = 7  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 7
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_rahen_$order$ value = 8  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 8
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_rahen_$order$ value = 9  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 9
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_rahen_$order$ value = 10 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 10
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_rahen_$order$ value = 11 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 11
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_rahen_$order$ value = 12 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 12
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_rahen_$order$ value = 13 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 13
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_rahen_$order$ value = 14 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 14
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_rahen_$order$ value = 15 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 15
+				}
+			}
+		}
+		10 = { 
+			set_variable = { which = anbi_daxugo_harem_rahen_$order$ value = 16 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 16
+				}
+			}
+		}
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random$order$
+		which = anbi_daxugo_harem_rahen_$order$
+	}
+}
+Y98_rahen_queen_random_list = {
+	Y98_rahen_queen_random = {
+		order = 1
+	}
+	Y98_rahen_queen_random = {
+		order = 2
+	}
+	Y98_rahen_queen_random = {
+		order = 3
+	}
+	Y98_rahen_queen_random = {
+		order = 4
+	}
+	Y98_rahen_queen_random = {
+		order = 5
+	}
+	Y98_rahen_queen_random = {
+		order = 6
+	}
+	Y98_rahen_queen_random = {
+		order = 7
+	}
+	Y98_rahen_queen_random = {
+		order = 8
+	}
+	Y98_rahen_queen_random = {
+		order = 9
+	}
+	Y98_rahen_queen_random = {
+		order = 10
+	}
+	Y98_rahen_queen_random = {
+		order = 11
+	}
+	Y98_rahen_queen_random = {
+		order = 12
+	}
+	Y98_rahen_queen_random = {
+		order = 13
+	}
+	Y98_rahen_queen_random = {
+		order = 14
+	}
+	Y98_rahen_queen_random = {
+		order = 15
+	}
+	Y98_rahen_queen_random = {
+		order = 16
+	}
+	Y98_rahen_queen_random = {
+		order = 17
+	}
+	Y98_clr_independence_randomvar = yes
+}
+
+Y98_solo_harimari_random = {
+	random_list = {
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 1 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 2 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 3 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 4 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 5 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 6 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_yanshen_harimari value = 7 } }
+	}
+}
+Y98_solo_harimari_random_list = {
+	Y98_solo_harimari_random = yes
+}
+
+Y98_khet_random = {
+	random_list = {
+		10 = { set_variable = { which = anbi_daxugo_harem_khet value = 1 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_khet value = 2 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_khet value = 3 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_khet value = 4 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_khet value = 5 } }
+	}
+}
+Y98_khet_random_list = {
+	Y98_khet_random = yes
+}
+
+Y98_bulwar_elf_random = {
+	random_list = {
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 1 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 2 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 3 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 4 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 5 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 6 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 7 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 8 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 9 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 10 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 11 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 12 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 13 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 14 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 15 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 16 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 17 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 18 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 19 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 20 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 21 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 22 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 23 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 24 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 25 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 26 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 27 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 28 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 29 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 30 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 31 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 32 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 33 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 34 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 35 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 36 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 37 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 38 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 39 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 40 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 41 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 42 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 43 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 44 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 45 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 46 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_sun_elf value = 47 }}
+	}
+	random_list = {
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 1 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 2 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 3 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 4 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 5 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 6 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 7 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 8 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 9 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 10 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 11 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 12 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 13 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 14 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 15 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 16 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 17 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 18 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 19 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 20 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 21 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 22 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 23 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 24 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 25 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 26 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 27 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 28 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 29 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 30 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 31 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 32 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 33 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 34 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 35 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 36 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 37 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 38 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 39 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 40 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 41 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 42 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 43 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 44 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 45 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 46 }}
+		10 = { set_variable = { which = anbi_daxugo_harem_bulwar_desert_elf value = 47 }}
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random1
+		which = anbi_daxugo_harem_bulwar_sun_elf
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random2
+		which = anbi_daxugo_harem_bulwar_desert_elf
+	}
+}
+Y98_gnoll_random = {
+	random_list = {
+		10 = { set_variable = { which = anbi_daxugo_harem_gnoll value = 48 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_gnoll value = 49 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_gnoll value = 50 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_gnoll value = 51 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_gnoll value = 52 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_gnoll value = 53 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_gnoll value = 54 } }
+	}
+}
+Y98_harpy_random = {
+	random_list = {
+		10 = { set_variable = { which = anbi_daxugo_harem_harpy value = 55 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_harpy value = 56 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_harpy value = 57 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_harpy value = 58 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_harpy value = 59 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_harpy value = 60 } }
+		10 = { set_variable = { which = anbi_daxugo_harem_harpy value = 61 } }
+	}
+}
+Y98_bulwar_random_list = {
+	Y98_bulwar_elf_random = yes
+	Y98_gnoll_random = yes
+	Y98_harpy_random = yes
+	Y98_clr_independence_randomvar = yes
+}
+
+Y98_cannor_random = {
+	random_list = {
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 1  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 1
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 2  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 2
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 3  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 3
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 4  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 4
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 5  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 5
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 6  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 6
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 7  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 7
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 8  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 8
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 9  }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 9
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 10 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 10
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 11 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 11
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 12 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 12
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 13 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 13
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 14 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 14
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 15 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 15
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 16 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 16
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 17 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 17
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 18 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 18
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 19 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 19
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 20 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 20
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 21 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 21
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 22 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 22
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 23 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 23
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 24 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 24
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 25 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 25
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 26 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 26
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 27 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 27
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 28 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 28
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 29 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 29
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 30 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 30
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 31 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 31
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 32 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 32
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 33 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 33
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 34 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 34
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 35 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 35
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 36 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 36
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 37 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 37
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 38 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 39
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 39 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 38
+				}
+			}
+		}
+		10 = {
+			set_variable = { which = anbi_daxugo_harem_cannor_$order$ value = 40 }
+			modifier = {
+				factor = 0
+				Y98_independence_random = {
+					count = 40
+				}
+			}
+		}
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random$order$
+		which = anbi_daxugo_harem_cannor_$order$
+	}
+}
+Y98_cannor_random_list = {
+	Y98_cannor_random = {
+		order = 1
+	}
+	Y98_cannor_random = {
+		order = 2
+	}
+	Y98_cannor_random = {
+		order = 3
+	}
+	Y98_cannor_random = {
+		order = 4
+	}
+	Y98_cannor_random = {
+		order = 5
+	}
+	Y98_cannor_random = {
+		order = 6
+	}
+	Y98_cannor_random = {
+		order = 7
+	}
+	Y98_cannor_random = {
+		order = 8
+	}
+	Y98_cannor_random = {
+		order = 9
+	}
+	Y98_cannor_random = {
+		order = 10
+	}
+	Y98_cannor_random = {
+		order = 11
+	}
+	Y98_clr_independence_randomvar = yes
+}
+
+Y98_clr_independence_randomvar = {
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random1
+		value = 0
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random2
+		value = 0
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random3
+		value = 0
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random4
+		value = 0
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random5
+		value = 0
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random6
+		value = 0
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random7
+		value = 0
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random8
+		value = 0
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random9
+		value = 0
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random10
+		value = 0
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random11
+		value = 0
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random12
+		value = 0
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random13
+		value = 0
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random14
+		value = 0
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random15
+		value = 0
+	}
+	set_variable = {
+		which = anbi_daxugo_harem_independence_random16
+		value = 0
+	}
+}
+Y98_clr_harem_flag = {
+	clr_country_flag = anbi_daxugo_harem_from_yanshen
+	clr_country_flag = anbi_daxugo_harem_from_huagai
+	clr_country_flag = anbi_daxugo_harem_from_tanxiang
+	clr_country_flag = anbi_daxugo_harem_from_jinan
+	clr_country_flag = anbi_daxugo_harem_from_rahen
+	clr_country_flag = anbi_daxugo_harem_from_harimari
+	clr_country_flag = anbi_daxugo_harem_from_khet
+	clr_country_flag = anbi_daxugo_harem_from_bulwar
+}
+
+
+

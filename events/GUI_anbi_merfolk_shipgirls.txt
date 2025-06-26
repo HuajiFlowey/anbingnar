@@ -1,0 +1,154 @@
+namespace = GUI_merfolk_shipgirls
+country_event = {
+	id = GUI_merfolk_shipgirls.1
+	title = GUI_merfolk_shipgirls.1.t
+	desc = GUI_merfolk_shipgirls.1.d
+	picture = EMPTY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = GUI_merfolk_shipgirls.1.a
+		highlight = yes
+		set_country_flag = anbi_merfolk_shipgirl_reserach_menu_cf
+	}
+	option = {
+		name = GUI_merfolk_shipgirls.1.b
+		custom_tooltip = anbi_merfolk_shipgirls_tt
+		if = {
+			limit = { 
+				NOT = {
+					has_country_modifier = anbi_merfolk_shipgirls_tech_investment_buff
+				}
+			}
+			add_country_modifier = {
+				name = anbi_merfolk_shipgirls_tech_investment_buff
+				duration = 3650
+			}
+			change_variable = {
+				anbi_merfolk_shipgirls_tech_investment = 10
+			}
+		}
+		else = {
+			tooltip = {
+				add_country_modifier = {
+					name = anbi_merfolk_shipgirls_tech_investment_buff
+					duration = -1
+				}
+				change_variable = {
+					anbi_merfolk_shipgirls_tech_investment = 10
+				}
+			}
+		}
+		custom_tooltip = anbi_merfolk_shipgirls_tech_investmen_tt
+	}
+	option = {
+		name = GUI_merfolk_shipgirls.1.c
+		custom_tooltip = anbi_merfolk_shipgirls_tt
+		if = {
+			limit = { 
+				treasury = 0
+				NOT = {
+					num_of_loans = 10
+				}
+			}
+			add_treasury = -1000
+			change_variable = {
+				anbi_merfolk_shipgirls_cash_investment = 1
+			}			
+		}
+		else = {
+			tooltip = {
+				add_treasury = -1000
+				change_variable = {
+					anbi_merfolk_shipgirls_cash_investment = 1
+				}
+			}
+		}		
+		custom_tooltip = anbi_merfolk_shipgirls_cash_investment_tt
+	}
+	option = {
+		name = GUI_merfolk_shipgirls.1.e
+		custom_tooltip = anbi_merfolk_shipgirls_tt
+		if = {
+			limit = { 
+				manpower = 10
+				sailors = 10000
+			}
+			add_sailors = -10000
+			add_manpower = -10
+			change_variable = {
+				anbi_merfolk_shipgirls_sailors_investment = 1
+			}
+		}
+		else = {
+			tooltip = {
+				add_manpower = -10
+				change_variable = {
+					anbi_merfolk_shipgirls_sailors_investment = 1
+				}
+			}
+		}
+		custom_tooltip = anbi_merfolk_shipgirls_sailors_investment_tt
+	}
+	option = {
+		name = GUI_merfolk_shipgirls.1.f
+		custom_tooltip = anbi_merfolk_shipgirls_tt
+		if = {
+			limit = { 
+				adm_power = 0
+				dip_power = 0
+				mil_power = 0
+			}
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			change_variable = {
+				anbi_merfolk_shipgirls_power_investment = 1
+			}
+		}
+		else = {
+			tooltip = {
+				add_adm_power = -100
+				add_dip_power = -100
+				add_mil_power = -100
+				change_variable = {
+					anbi_merfolk_shipgirls_power_investment = 1
+				}
+			}
+		}
+		custom_tooltip = anbi_merfolk_shipgirls_power_investment_tt
+	}
+	option = {
+		highlight = yes
+		name = GUI_merfolk_shipgirls.1.g
+		custom_tooltip = anbi_merfolk_shipgirls_tt2
+	}
+
+	after = {
+		country_event = {
+			id = GUI_merfolk_shipgirls.2
+		}
+	}
+}
+country_event = {
+	id = GUI_merfolk_shipgirls.2
+	title = GUI_merfolk_shipgirls.2.t
+	desc = GUI_merfolk_shipgirls.2.d
+	picture = EMPTY_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_country_flag = anbi_merfolk_shipgirl_reserach_menu_cf
+		}
+	}
+
+	option = {
+		name = GUI_merfolk_shipgirls.2.a
+		country_event = {
+			id = GUI_merfolk_shipgirls.1
+		}
+	}
+}

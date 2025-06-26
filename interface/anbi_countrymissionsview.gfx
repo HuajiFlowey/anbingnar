@@ -1,0 +1,33 @@
+spriteTypes = {
+## 未选中
+	spriteType = {
+		name = "GFX_anbi_branch_button_1"
+		texturefile = "gfx//interface//anbi_mission_tabs//branch_button_1.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_branch_button_2"
+		texturefile = "gfx//interface//anbi_mission_tabs//branch_button_2.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	
+## 选中
+	spriteType = {
+		name = "GFX_anbi_branch_button_1_glow"
+		texturefile = "gfx//interface//anbi_mission_tabs//branch_button_1_glow.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_branch_button_2_glow"
+		texturefile = "gfx//interface//anbi_mission_tabs//branch_button_2_glow.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+}

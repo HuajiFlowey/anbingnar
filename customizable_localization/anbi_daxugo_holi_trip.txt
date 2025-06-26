@@ -1,0 +1,190 @@
+defined_text = {
+	name = DaxugoHoliTripTitle
+	random = no
+
+	text = {
+		localisation_key = daxugo_holi_trip_title.1
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_title.2
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_title.3
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 3
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_title.4
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 4
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_title.5
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 5
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_title.6
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 6
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_title.7
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 7
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_title.8
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 8
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_title.9
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 9
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_title.10
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 10
+			}
+		}
+	}
+}
+defined_text = {
+	name = DaxugoHoliTripOption
+	random = no
+
+	text = {
+		localisation_key = daxugo_holi_trip_option.1
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_option.2
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_option.3
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 3
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_option.4
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 4
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_option.5
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 5
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_option.6
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 6
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_option.7
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 7
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_option.8
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 8
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_option.9
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 9
+			}
+		}
+	}
+	text = {
+		localisation_key = daxugo_holi_trip_option.10
+		trigger = {
+			is_variable_equal = {
+				which = daxugo_holi_trip
+				value = 10
+			}
+		}
+	}
+}

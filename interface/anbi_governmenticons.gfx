@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "government_reform_kuhai_republic"	
+		texturefile = "gfx//interface//anbi_government_icons//kuhai_republic.dds"
+	}
+	spriteType = {
+		name = "government_reform_yanshen_republic"	
+		texturefile = "gfx//interface//anbi_government_icons//yanshen_republic.dds"
+	}
+	spriteType = {
+		name = "government_reform_anbi_merfolk"	
+		texturefile = "gfx//interface//anbi_government_icons//anbi_merfolk.dds"
+	}
+}

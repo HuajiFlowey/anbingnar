@@ -1,0 +1,137 @@
+spriteTypes = {
+	spriteType= {
+		name = "ANBI_TONGSINI_eventPicture"
+		texturefile = "gfx//event_pictures//TONGSINI_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_foxgirl_eventPicture"
+		texturefile = "gfx//event_pictures//foxgirl_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbingnar_eventPicture"
+		texturefile = "gfx//event_pictures//anbingnar_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_speech_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_speech_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_speech2_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_speech2_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_flag_army_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_flag_army_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_RUIN_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_RUIN_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_FAIL_JADD_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_FAIL_JADD_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_SOLDIER_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_SOLDIER_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_STREET_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_STREET_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_guitar_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_guitar_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_merfolk_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_merfolk_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_the_sea_monster_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_the_sea_monster_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_the_sea_monster2_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_the_sea_monster2_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_the_sea_monster3_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_the_sea_monster3_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_merfolk2_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_merfolk2_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_merfolk_drinking_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_merfolk_drinking_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_merfolk_great_war_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_merfolk_great_war_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_port_city_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_port_city_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_merfolk_shipgirls_corin_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_merfolk_shipgirls_corin_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_merfolk_shipgirl_huxian_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_merfolk_shipgirl_huxian_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_merfolk_shipgirls_calasadur_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_merfolk_shipgirls_calasadur_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_merfolk_shipgirls_dragon_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_merfolk_shipgirls_dragon_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_merfolk_shipgirls_gertyene_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_merfolk_shipgirls_gertyene_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_merfolk_shipgirls_jaher_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_merfolk_shipgirls_jaher_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_merfolk_shipgirls_pingshuang_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_merfolk_shipgirls_pingshuang_eventPicture.dds"
+		transparencecheck = yes
+	}
+	spriteType= {
+		name = "anbi_merfolk_shipgirls_suhan_eventPicture"
+		texturefile = "gfx//event_pictures//anbi_merfolk_shipgirls_suhan_eventPicture.dds"
+		transparencecheck = yes
+	}
+}

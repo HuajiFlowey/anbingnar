@@ -1,0 +1,897 @@
+#大徐
+anbingnar_daxugo_harem_reform = {
+	icon = "chinese_palace"
+	allow_normal_conversion = no
+	valid_for_nation_designer = no
+
+	allow_convert = no
+	lock_level_when_selected =yes
+
+	royal_marriage = no
+	maintain_dynasty = yes
+	potential = {
+		OR = {
+			have_had_reform = anbingnar_daxugo_harem_reform
+			has_reform = anbingnar_daxugo_harem_reform
+		}
+	}
+
+	trigger = {
+		OR = {
+			tag = Y96
+			tag = Y98
+		}
+	}
+
+	modifiers = {
+		nobles_loyalty_modifier = 0.1
+		global_unrest = -1
+		global_spy_defence = 0.2
+		monthly_heir_claim_increase = -0.1
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+		has_daxugo_harem = yes
+		can_change_primary_culture = no
+	}
+}
+anbingnar_daxugo_constitutional_government = {
+	icon = "ballot_box"
+	allow_normal_conversion = no
+	valid_for_nation_designer = no
+
+	lock_level_when_selected = yes
+
+	potential = {
+		OR = {
+			have_had_reform = anbingnar_daxugo_constitutional_government
+			has_reform = anbingnar_daxugo_constitutional_government
+		}
+	}
+
+	trigger = {
+		tag = Y98
+	}
+
+	modifiers = {
+		legitimacy = -0.5
+		max_absolutism = -40
+		global_unrest = -2
+		years_of_nationalism = -5
+		min_autonomy_in_territories = -0.1
+		advisor_pool = 2
+	}
+
+	custom_attributes = {
+		has_parliament = yes
+		disables_estate_nobles = yes
+		blocked_call_diet = yes
+	}
+
+	post_removed_effect = {
+		give_estate_land_share_init = { estate = estate_nobles }
+	}
+}
+
+#血卡
+anbi_castanor_adventurer_reform = {
+	potential = {
+		has_reform = anbi_castanor_adventurer_reform	#aka you cant see it unless you're already one
+		tag = AB1
+	}
+	modifiers = {
+		manpower_recovery_speed = 10
+		diplomats = -1
+		diplomatic_upkeep = -2
+		land_forcelimit = 10
+		
+		#Taken from natives
+		province_warscore_cost = 5
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "soldiers_2"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	royal_marriage = no
+	
+	custom_attributes = {
+		can_change_primary_culture = no
+		locked_government_type = yes
+		disables_regular_estates = yes
+	}
+}
+anbi_castanor_panzer_reform = {
+	potential = {
+		has_reform = anbi_castanor_panzer_reform	#aka you cant see it unless you're already one
+		tag = AB1
+	}
+
+	icon = "generic_people"
+	lock_level_when_selected = yes
+
+	rulers_can_be_generals = no
+	heir = no
+	queen = no
+	royal_marriage = no
+	modifiers = {
+		castonath_patricians_loyalty_modifier = 10
+		max_absolutism = 20
+		max_absolutism_effect = 0.2
+		can_not_build_missionaries = yes
+		tolerance_heathen = 5
+		church_power_modifier = 0.25
+		reverse_relation_with_heathen_religion = 40
+		relation_with_heathens = 40
+		ae_impact = -0.35
+	}
+
+	government_abilities = {
+		anbi_has_doubt_count_mechanics
+	}
+}
+anbi_castanor_state_reform = {
+	potential = {
+		has_reform = anbi_castanor_state_reform	#aka you cant see it unless you're already one
+		tag = AB1
+	}
+	modifiers = {
+		max_absolutism = 10
+		global_autonomy = -0.025
+		administrative_efficiency = 0.025
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "parliament"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+
+	custom_attributes = {
+		disables_estate_church = yes
+		patrician_castanor_mechanic = yes
+		can_change_primary_culture = no
+		locked_government_type = yes
+	}
+}
+anbi_castanor_empire_reform = {
+	potential = {
+		has_reform = anbi_castanor_empire_reform
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+		
+	}
+	modifiers = {
+		max_absolutism = 25
+		warscore_cost_vs_other_religion = -0.1
+		state_maintenance_modifier = 0.5
+		administrative_efficiency = 0.05
+		max_absolutism_effect = 0.2
+		missionaries = 1
+		tolerance_heretic = -2
+		tolerance_heathen = -2
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "parliament"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	heir = no
+	queen = no
+	royal_marriage = no
+
+	custom_attributes = {
+		patrician_castanor_mechanic = yes
+		can_change_primary_culture = no
+		locked_government_type = yes
+	}
+}
+anbi_castanor_panzer_reform2 = {
+	potential = {
+		has_reform = anbi_castanor_panzer_reform2	#aka you cant see it unless you're already one
+		OR = {
+			tag = AB1
+			tag = AB2
+		}
+	}
+
+	icon = "generic_people"
+	lock_level_when_selected = yes
+
+	modifiers = {
+		castonath_patricians_loyalty_modifier = 10
+		ae_impact = 0.1
+		improve_relation_modifier = -0.25
+		tolerance_own = 2
+	}
+
+}
+anbi_castanor_bureaucracy_reform = {
+	potential = {
+		has_reform = anbi_castanor_bureaucracy_reform
+		OR = {
+			tag = AB1
+			tag = AB2
+		}	
+	}
+	modifiers = {
+		castonath_patricians_influence_modifier = 0.2
+		church_power_modifier = 0.25
+		state_maintenance_modifier = 0.5
+		min_autonomy_in_territories = -0.15
+		culture_conversion_cost = -0.1
+		global_autonomy = -0.05
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "constitution"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+
+	custom_attributes = {
+		patrician_council_mt_mechanic = yes
+	}
+}
+anbi_castanor_the_true_cult_reform = {
+	potential = {
+		has_reform = anbi_castanor_the_true_cult_reform
+		OR = {
+			tag = AB1
+			tag = AB2
+		}	
+	}
+	modifiers = {
+		missionaries = 1
+		tolerance_own = 2
+		church_power_modifier = 0.25
+		global_missionary_strength = 0.02
+		tolerance_of_heretics_capacity = -3
+		tolerance_of_heathens_capacity = -3
+		improve_relation_modifier = -0.2	
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "soldiers_5"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+
+	custom_attributes = {
+	}
+}
+anbi_castanor_estate_cowtow_reform = {
+	potential = {
+		has_reform = anbi_castanor_estate_cowtow_reform
+		OR = {
+			tag = AB1
+			tag = AB2
+		}	
+	}
+	modifiers = {
+		max_absolutism_effect = 0.1
+		all_estate_influence_modifier = -0.25
+		mages_influence_modifier = 0.25
+		all_estate_loyalty_equilibrium = 0.5
+		allow_free_estate_privilege_revocation = yes
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "states_general"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+
+	custom_attributes = {
+		diet_increases_not_influence = yes
+	}
+}
+
+##苦海
+anbi_kuhai_salter_republic = {
+	potential = {
+		has_reform = anbi_kuhai_salter_republic
+		OR = {
+			tag = Y27
+			tag = Y20
+		}
+	}
+	modifiers = {
+		production_efficiency = 0.1
+		land_morale = 0.05
+		min_autonomy = 5
+	}
+
+	republican_name = no
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "kuhai_republic"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	has_term_election = yes
+	duration = 5
+
+	factions = {
+		anbi_feiten_0
+		anbi_lanjin_0
+		anbi_yinquan_0
+	}
+	
+	custom_attributes = {
+		anbi_disables_estate_eunuchs = yes
+		anb_special_elections = yes
+		cannot_become_dictatorship = yes
+		locked_government_type = yes
+	}
+}
+anbi_kuhai_new_republic = {
+	potential = {
+		has_reform = anbi_kuhai_new_republic
+		OR = {
+			tag = Y27
+			tag = Y20
+		}
+	}
+	modifiers = {
+		production_efficiency = 0.1
+		land_morale = 0.05
+		improve_relation_modifier = 0.25
+		diplomatic_upkeep = 1
+	}
+
+	republican_name = no
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "kuhai_republic"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	has_term_election = yes
+	duration = 5
+
+	factions = {
+		anbi_feiten_0
+		anbi_lanjin_0
+		anbi_yinquan_0
+	}
+	
+	custom_attributes = {
+		anbi_disables_estate_eunuchs = yes
+		anb_special_elections = yes
+		cannot_become_dictatorship = yes
+		locked_government_type = yes
+	}
+}
+anbi_kuhai_united_yanshen = {
+	potential = {
+		has_reform = anbi_kuhai_united_yanshen
+		OR = {
+			tag = Y27
+			tag = Z65
+		}
+	}
+	modifiers = {
+		production_efficiency = 0.1
+		land_morale = 0.05
+		global_unrest = -2
+		reform_progress_growth = 0.25
+	}
+
+	republican_name = no
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "yanshen_republic"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	has_term_election = yes
+	duration = 5
+	
+	custom_attributes = {
+		anbi_disables_estate_eunuchs = yes
+		anb_special_elections = yes
+		cannot_become_dictatorship = yes
+		locked_government_type = yes
+		can_change_primary_culture = no
+	}
+}
+anbi_kuhai_twin_republic = {
+	potential = {
+		has_reform = anbi_kuhai_twin_republic
+	}
+	
+	republican_name = no
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "ballot_box"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	has_term_election = no
+	modifiers = {
+		diplomatic_upkeep = -2
+		land_morale = 0.1
+		global_autonomy = 0.025
+	}
+
+	custom_attributes = {
+		anbi_disables_estate_eunuchs = yes
+		cannot_become_dictatorship = yes
+		locked_government_type = yes
+		anb_special_elections = yes
+	}
+}
+anbi_kuhai_yanshen_parliament = {
+	potential = {
+		has_reform = anbi_kuhai_yanshen_parliament
+		tag = Z65
+	}
+
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "parliament"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	
+
+	modifiers = {
+		state_maintenance_modifier = -0.25
+		parliament_effect_duration = -5
+		num_of_parliament_issues = 3
+	}
+
+	custom_attributes = {
+		has_parliament = yes
+		anbi_kuhai_parliament = yes
+		blocked_call_diet = yes
+	}
+}
+anbi_kuhai_zhengdao_path_department = {
+	potential = {
+		has_reform = anbi_kuhai_zhengdao_path_department
+		tag = Z65
+	}
+
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "united_cantons_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	
+
+	modifiers = {
+		religious_unity = 0.25
+		tolerance_own = 2
+	}
+
+	custom_attributes = {
+		anbi_zhengdao_path_department = yes
+	}
+}
+#颜色start
+anbi_kuhai_blue_flag = {
+	potential = {
+		has_reform = anbi_kuhai_blue_flag
+		OR = {
+			has_reform = anbi_kuhai_new_republic
+			has_reform = anbi_kuhai_salter_republic
+			has_reform = anbi_kuhai_united_yanshen
+		}
+	}
+
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "parliament_hall"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	
+
+	modifiers = {
+		allow_free_estate_privilege_revocation = yes
+		min_autonomy_in_territories = -0.15
+	}
+
+	custom_attributes = {
+		anbi_kuhai_is_blue = yes
+	}
+}
+anbi_kuhai_gold_flag = {
+	potential = {
+		has_reform = anbi_kuhai_gold_flag
+		OR = {
+			has_reform = anbi_kuhai_new_republic
+			has_reform = anbi_kuhai_salter_republic
+			has_reform = anbi_kuhai_united_yanshen
+		}
+	}
+
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "parliament_hall"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	
+
+	modifiers = {
+		allow_free_estate_privilege_revocation = yes
+		min_autonomy_in_territories = -0.15
+	}
+
+	custom_attributes = {
+		anbi_kuhai_is_gold = yes
+	}
+}
+anbi_kuhai_purple_flag = {
+	potential = {
+		has_reform = anbi_kuhai_purple_flag
+		OR = {
+			has_reform = anbi_kuhai_new_republic
+			has_reform = anbi_kuhai_salter_republic
+			has_reform = anbi_kuhai_united_yanshen
+		}
+	}
+
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "parliament_hall"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	
+
+	modifiers = {
+		allow_free_estate_privilege_revocation = yes
+		min_autonomy_in_territories = -0.15
+	}
+
+	custom_attributes = {
+		anbi_kuhai_is_purple = yes
+	}
+}
+anbi_kuhai_blue_and_purple_flag = {
+	potential = {
+		has_reform = anbi_kuhai_blue_and_purple_flag
+		OR = {
+			has_reform = anbi_kuhai_new_republic
+			has_reform = anbi_kuhai_salter_republic
+			has_reform = anbi_kuhai_united_yanshen
+		}
+	}
+
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "parliament_hall"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	
+
+	modifiers = {
+		allow_free_estate_privilege_revocation = yes
+		min_autonomy_in_territories = -0.15
+	}
+
+	custom_attributes = {
+		anbi_kuhai_is_purple = yes
+		anbi_kuhai_is_blue = yes
+	}
+}
+anbi_kuhai_blue_and_gold_flag = {
+	potential = {
+		has_reform = anbi_kuhai_blue_and_gold_flag
+		OR = {
+			has_reform = anbi_kuhai_new_republic
+			has_reform = anbi_kuhai_salter_republic
+			has_reform = anbi_kuhai_united_yanshen
+		}
+	}
+
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "parliament_hall"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	
+
+	modifiers = {
+		allow_free_estate_privilege_revocation = yes
+		min_autonomy_in_territories = -0.15
+	}
+
+	custom_attributes = {
+		anbi_kuhai_is_purple = yes
+		anbi_kuhai_is_gold = yes
+	}
+}
+anbi_kuhai_gold_and_purple_flag = {
+	potential = {
+		has_reform = anbi_kuhai_gold_and_purple_flag
+		OR = {
+			has_reform = anbi_kuhai_new_republic
+			has_reform = anbi_kuhai_salter_republic
+			has_reform = anbi_kuhai_united_yanshen
+		}
+	}
+
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "parliament_hall"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	
+
+	modifiers = {
+		allow_free_estate_privilege_revocation = yes
+		min_autonomy_in_territories = -0.15
+	}
+
+	custom_attributes = {
+		anbi_kuhai_is_purple = yes
+		anbi_kuhai_is_gold = yes
+	}
+}
+anbi_kuhai_blue_gold_and_purple_flag = {
+	potential = {
+		has_reform = anbi_kuhai_blue_gold_and_purple_flag
+		OR = {
+			has_reform = anbi_kuhai_new_republic
+			has_reform = anbi_kuhai_salter_republic
+			has_reform = anbi_kuhai_united_yanshen
+		}
+	}
+
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "parliament_hall"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	
+
+	modifiers = {
+		allow_free_estate_privilege_revocation = yes
+		min_autonomy_in_territories = -0.2
+	}
+
+	custom_attributes = {
+		anbi_kuhai_is_blue = yes
+		anbi_kuhai_is_purple = yes
+		anbi_kuhai_is_gold = yes
+	}
+}
+#颜色end
+anbi_kuhai_the_republican_beacon = {
+	potential = {
+		has_reform = anbi_kuhai_the_republican_beacon
+		OR = {
+			has_reform = anbi_kuhai_new_republic
+			has_reform = anbi_kuhai_salter_republic
+			has_reform = anbi_kuhai_united_yanshen
+		}
+	}
+
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "become_rev_republic_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	
+
+	modifiers = {
+		diplomatic_reputation = 2
+		diplomats = 1
+		warscore_cost_vs_other_religion = -0.1
+	}
+
+	custom_attributes = {
+		anbi_kuhai_is_republican_beacon = yes
+	}
+}
+anbi_kuhai_the_light_from_east = {
+	potential = {
+		tag = Z65
+		has_reform = anbi_kuhai_the_light_from_east
+	}
+
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "godhood"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	uses_revolutionary_zeal = yes
+
+	modifiers = {
+		tolerance_heretic = 2
+		land_morale = 0.1
+		global_autonomy = -0.2
+		can_recruit_revolutionary_guards = yes
+		allowed_rev_guard_fraction = 1
+		max_revolutionary_zeal = 40
+	}
+
+	custom_attributes = {
+		cannot_ally_non_republics_or_non_rev = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+}
+anbi_kuhai_revolution_twin_republic = {
+	potential = {
+		has_reform = anbi_kuhai_revolution_twin_republic
+	}
+	
+	republican_name = no
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	revolutionary = yes
+	uses_revolutionary_zeal = yes
+	icon = "ballot_box"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	has_term_election = no
+
+	modifiers = {
+		max_revolutionary_zeal = 50
+		yearly_revolutionary_zeal = 4
+		land_morale = 0.25
+	}
+
+	custom_attributes = {
+		anbi_disables_estate_eunuchs = yes
+		cannot_become_dictatorship = yes
+		locked_government_type = yes
+		anb_special_elections = yes
+	}
+}
+
+##人鱼
+anbi_merfolk_the_refugee = {
+	potential = {
+		has_reform = anbi_merfolk_the_refugee	
+		tag = AB3
+	}
+	modifiers = {
+		can_not_build_missionaries = yes
+		can_not_declare_war = yes
+		can_not_build_buildings = yes
+		can_not_build_colonies = yes
+		can_not_send_merchants = yes
+		capped_by_forcelimit = yes
+		diplomats = -10
+		development_cost = 10
+		culture_conversion_cost = 10
+		monthly_fervor_increase = -100
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "soldiers_2"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	
+	rulers_can_be_generals = no
+	heir = no
+	queen = no
+	royal_marriage = no
+
+	custom_attributes = {
+		can_change_primary_culture = no
+		disables_regular_estates = yes
+		locked_government_type = yes
+		disabled_expelling = yes
+		disabled_purging = yes
+	}
+}
+anbi_merfolk_the_land_merfolk_kingdom = {
+	potential = {
+		has_reform = anbi_merfolk_the_land_merfolk_kingdom	
+		tag = AB3
+	}
+	modifiers = {
+		culture_conversion_cost = 50
+		global_sailors_modifier = 0.25
+		num_accepted_cultures = 3
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "anbi_merfolk"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	
+	maintain_dynasty = yes
+	heirs_can_be_generals = no
+	rulers_can_be_generals = no
+	royal_marriage = no
+
+	custom_attributes = {
+		can_change_primary_culture = no
+		locked_government_type = yes
+		anbi_is_merfolk_state = yes
+		disabled_expelling = yes
+		disabled_purging = yes
+	}
+}
+anbi_merfolk_binary_empire = {
+	potential = {
+		has_reform = anbi_merfolk_binary_empire
+	}
+	modifiers = {
+		culture_conversion_cost = 50
+		global_sailors_modifier = 0.25
+		min_autonomy = -0.05
+		max_absolutism = -25
+		all_estate_loyalty_equilibrium = 0.1
+		num_accepted_cultures = 10
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "anbi_merfolk"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	
+	maintain_dynasty = yes
+	heirs_can_be_generals = no
+	rulers_can_be_generals = no
+	royal_marriage = no
+
+	custom_attributes = {
+		can_change_primary_culture = no
+		locked_government_type = yes
+		anbi_is_merfolk_state = yes
+		disabled_expelling = yes
+		disabled_purging = yes
+		has_parliament = yes
+		parliament_seat_bonus = yes
+	}
+}
+anbi_merfolk_absolutism_empire = {
+	potential = {
+		has_reform = anbi_merfolk_absolutism_empire
+	}
+	modifiers = {
+		culture_conversion_cost = 50
+		global_sailors_modifier = 0.25
+		administrative_efficiency = 0.05
+		max_absolutism = 25
+		max_absolutism_effect = 0.1
+		yearly_absolutism = 1
+		num_accepted_cultures = 3
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "anbi_merfolk"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	
+	maintain_dynasty = yes
+	heirs_can_be_generals = no
+	rulers_can_be_generals = no
+	royal_marriage = no
+
+	custom_attributes = {
+		can_change_primary_culture = no
+		locked_government_type = yes
+		anbi_is_merfolk_state = yes
+		disabled_expelling = yes
+		disabled_purging = yes
+	}
+}
+anbi_merfolk_artificers_government = {
+	potential = {
+		has_reform = anbi_merfolk_artificers_government
+	}
+	modifiers = {
+		artificers_loyalty_modifier = 0.1
+		artificers_influence_modifier = 0.1
+		all_power_cost = -0.05
+		artificers_capacity = 50
+		state_maintenance_modifier = 0.5
+		yearly_innovativeness = 0.5
+		advisor_cost = -0.1
+		artificers_research_time = -0.2
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	icon = "giberd_technocracy"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+
+	custom_attributes = {
+		is_technocracy = yes		
+	}
+	effect = {
+		artifice_magic_switch_to_artificery_only_mode = yes
+	}
+}

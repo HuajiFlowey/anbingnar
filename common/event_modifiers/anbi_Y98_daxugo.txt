@@ -1,0 +1,448 @@
+faceless_queen_great_conquer = {
+    cavalry_power = 0.2
+	siege_ability = 0.2
+	reinforce_cost_modifier = -0.25
+	province_warscore_cost = -0.2
+	core_creation = -0.25
+	monarch_lifespan = 0.25
+}
+
+you_cant_lose_anbingnar = {
+	prestige = 0.5
+}
+
+happy_in_battle_anbingnar = {
+	prestige_from_land = 0.25
+	army_tradition_from_battle = 0.25 
+}
+
+great_jushen_anbingnar = {
+	legitimacy = 0.2
+	devotion = 0.2
+	horde_unity = 0.2
+	republican_tradition = 0.1
+}
+
+song_in_grass_anbingnar = {
+	cavalry_power = 0.025
+}
+
+tired_shuwushi = {
+	global_unrest = 2
+	stability_cost_modifier = 0.5
+	global_manpower_modifier = -0.2
+	cavalry_power = -0.1
+	cavalry_cost = 0.2
+}
+
+diggy_diggy_hole_consort = {
+	production_efficiency = 0.1
+	heir_chance = -100
+}
+
+elf_consort_Y98 = {
+	diplomatic_reputation = 1
+}
+
+palace_is_building_Y98 = {
+	local_build_time = 1
+	local_build_cost = 1
+	local_great_project_upgrade_time = 1
+}
+
+Y98_huagai_palace = {
+	num_accepted_cultures = 1
+}
+
+Y98_harimari_palace = {
+	infantry_shock = 0.05
+}
+
+Y98_rahen_palace = {
+	reduced_liberty_desire = 5
+}
+
+Y98_tanxiang_palace = {
+	defensiveness = 0.05
+}
+
+Y98_southest_palace = {
+	build_cost = -0.05
+}
+
+Y98_bulwar_palace = {
+	discipline = 0.025
+}
+
+Y98_anben_palace = {
+	development_cost = -0.05	
+}
+
+Y98_canstanuo_palace = {
+	global_trade_power = 0.1
+}
+
+facestealer_war = {
+	global_unrest = -100
+}
+
+mangtan_subject_to = {
+	defensiveness = 0.1
+	siege_ability = 0.1
+}
+
+Y98_elephants = {
+	cavalry_power = 0.1
+	prestige = 1
+}
+
+monopoly_rahen_bay = {
+	trade_efficiency = 0.2
+}
+
+Y98_drill = {
+	global_trade_goods_size_modifier = 0.05
+}
+
+Y98_kai_subject_to = {
+	global_unrest = -1
+}
+
+Y98_hobgoblin_military = {
+	discipline = 0.025
+}
+
+Y91_daxug_culture_standard_modifier = {
+	local_culture_conversion_time = -0.25
+	local_culture_conversion_cost = -0.25
+	local_missionary_strength = 0.025
+}
+
+Y91_yan_change_project_modifier = {
+	culture_conversion_cost = -0.1
+	culture_conversion_time = -0.1
+}
+
+Y98_noble_consort = {
+	nobles_loyalty_modifier = 0.1
+	nobles_influence_modifier = 0.05
+	global_unrest = -1
+}
+
+peace_of_daxugo_empire = {
+	province_warscore_cost = -0.2
+}
+
+A_hawk_screaming_for_a_bloody_war = {
+	ae_impact = 0.25
+	province_warscore_cost = -0.1
+	core_creation = -0.1
+	stability_cost_modifier = 0.25
+	global_unrest = 2
+}
+
+the_owner_of_golden_highway = {
+	trade_goods_size_modifier = 0.1
+	trade_efficiency = 0.2
+	merchants = 2
+	trade_steering = 0.25
+}
+
+Y98_great_palace_building = {
+	local_build_time = 100
+	local_build_cost = 100
+	local_great_project_upgrade_time = 100
+}
+
+Y98_great_mage_palace = {
+	global_tax_income = -120
+	prestige = 1
+	legitimacy = 0.5
+	shock_damage = 0.025
+}
+
+Y98_angry = {
+	local_unrest = 10
+	min_local_autonomy = 30
+}
+
+khet_consort = {
+	tolerance_heathen = 2
+	heir_chance = -100
+}
+
+Y98_goldscale_consort = {
+	improve_relation_modifier = 0.1
+	heir_chance = -100
+}
+
+lion_command_consort = {
+	land_morale = 0.05
+	heir_chance = -100
+}
+
+wolf_command_consort = {
+	discipline = 0.025
+	heir_chance = -100
+}
+
+boar_command_consort = {
+	shock_damage = 0.075
+	heir_chance = -100
+}
+
+Y98_harimari_consort = {
+	administrative_efficiency = 0.02
+	heir_chance = -100
+}
+
+Y98_half_elf_consort = {
+	province_warscore_cost = -0.05
+}
+
+Y98_alenic_consort = {
+	power_projection_from_insults = 2
+}
+
+Y98_halfling_consort = {
+	inflation_reduction = 0.05
+	heir_chance = -100
+}
+
+Y98_gnome_consort = {
+	technology_cost = -0.05
+	heir_chance = -100
+}
+
+gnoll_consort_Y98 = {
+	available_province_loot = 1
+	loot_amount = 1
+	may_perform_slave_raid = yes
+}
+harpy_consort_Y98 = {
+	infantry_power = 0.05
+	heir_chance = -100
+}
+
+Y98_castanorian_consort = {
+	trade_efficiency = 0.1
+}
+
+Y98_half_orc_consort = {
+	global_manpower_modifier = 0.1
+}
+
+Y98_orc_consort = {
+	land_forcelimit_modifier = 0.1
+}
+
+bulwari_cult_is_free = {
+	local_religious_unity_contribution = -1
+	local_tolerance_of_heathens = 3
+	local_missionary_maintenance_cost = 1
+	local_missionary_strength = -0.05
+}
+
+Y98_go_to_lakeland = {
+	movement_speed_onto_off_boat_modifier = 0.5
+	naval_morale = 0.1
+	ship_durability = 0.1
+	heavy_ship_power = 0.1
+}
+
+Y98_paper_is_recycle = {
+	state_maintenance_modifier = -0.1
+}
+
+Y98_paper_is_recycle_2 = {
+	state_maintenance_modifier = -0.15
+}
+
+Y98_I_love_holi = {
+	legitimacy = -0.2
+	heir_chance = -100
+}
+
+Y98_holi_consort_modifier = {
+	all_estate_loyalty_equilibrium = -0.05
+	core_creation = -0.1
+	global_unrest = -1
+	legitimacy = -0.35
+	heir_chance = -100
+}
+
+Y91_palace_standard_modifier = {
+	nobles_loyalty_modifier = 0.1
+	max_absolutism = 5
+}
+
+Y98_a_place_in_the_sun = {
+	sea_repair = yes
+	transport_attrition = -0.5
+	colonists = 1
+	global_colonial_growth = 40
+	range = 0.5
+	may_explore = yes
+}
+
+Y91_yanshen_articles_flourishing_age = {
+	artificers_capacity = 50
+	global_tax_modifier = -0.2
+	innovativeness_gain = 0.5
+	yearly_innovativeness = 0.1
+	technology_cost = -0.1
+}
+
+Y98_escann_rule_modifier = {
+	min_local_autonomy = 10
+	local_governing_cost = -0.25
+	local_tax_modifier = -0.1
+	local_production_efficiency = -0.1
+	local_religious_unity_contribution = -1
+}
+
+Y98_faceless_end = {
+	tolerance_own = 2
+	global_missionary_strength = 0.05
+	missionaries = 2
+	warscore_cost_vs_other_religion = -0.25
+	administrative_efficiency = 0.2	
+	ae_impact = -0.2
+	prestige = 10
+}
+
+Y9888_diguomao_war_conduct = {
+	cav_to_inf_ratio = 0.25
+	cavalry_flanking = 0.5
+	cavalry_cost = 0.25
+	cavalry_power = 0.2
+	army_tradition = 0.5
+}
+
+Y9888_academy_war_conduct = {
+	artillery_levels_available_vs_fort = 1
+	backrow_artillery_damage = 0.1
+	global_manpower_modifier = 0.1
+	global_regiment_cost = -0.1
+	global_regiment_recruit_speed = -0.1
+	land_forcelimit_modifier = 0.1
+	land_maintenance_modifier = -0.1
+	yearly_army_professionalism = 0.005
+	drill_decay_modifier = -0.25
+	drill_gain_modifier = 1
+}
+
+Y9888_diguomao_academy_solidarity = {
+	yearly_army_professionalism = 0.005
+	army_tradition = 0.5
+	cav_to_inf_ratio = 0.2
+	cavalry_power = 0.1
+	backrow_artillery_damage = 0.05
+}
+
+Y9888_economy_reform = {
+	reform_progress_growth = 1
+	production_efficiency = -0.1
+	global_tax_modifier = -0.1
+}
+
+Y9888_central_bank = {
+	interest = -1
+	inflation_reduction = 0.02
+	inflation_action_cost = -0.1
+}
+
+Y9888_issue_daxugo_money = {
+	inflation_reduction = -0.1
+	global_trade_power = 0.1
+	global_tax_income = 300
+}
+
+Y98_sex_with_holi_1 = {
+	country_admin_power = -1
+	country_diplomatic_power = -1
+	country_military_power = -1
+	ae_impact = -0.075
+}
+
+Y98_sex_with_holi_2 = {
+	country_admin_power = -1
+	country_diplomatic_power = -1
+	country_military_power = -1
+	cavalry_shock = 0.35
+}
+
+anbi_Y98_daxugo_vassalize = {
+	liberty_desire = -10000
+	land_morale = 0.1
+	land_forcelimit_modifier = 0.25
+}
+
+anbi_laker_is_ours_modifier = {
+	production_efficiency = 0.1
+	global_tax_modifier = 0.1
+	trade_efficiency = 0.1
+	interest = -1
+	development_cost_in_primary_culture = -0.25
+}
+
+anbi_Y91_horde_heritage_1 = {
+	global_manpower_modifier = 0.1
+	land_forcelimit_modifier = 0.1
+	loot_amount = 0.25
+	reinforce_cost_modifier = -0.25
+	cav_to_inf_ratio = 0.25
+	movement_speed = 0.1
+	years_of_nationalism = -2.5
+	legitimacy = -0.25
+	devotion = -0.10
+	republican_tradition = -0.05
+	adm_tech_cost_modifier = 0.05
+	dip_tech_cost_modifier = 0.05
+	embracement_cost = 1
+	global_institution_spread = -0.5
+	innovativeness_gain = -0.50
+	monthly_reform_progress_modifier = -0.25
+	development_cost = 0.05
+}
+Y98_havealook_1 = {
+	country_admin_power = -1
+	country_diplomatic_power = -1
+	country_military_power = -1
+	cavalry_shock = 0.25
+}
+Y98_havealook_2 = {
+	country_admin_power = -1
+	country_diplomatic_power = -1
+	country_military_power = -1
+	ae_impact = -0.05
+}
+
+y98_wumou_consort_modifier = {
+	all_estate_loyalty_equilibrium = -0.05
+	legitimacy = -0.35
+	heir_chance = -100
+	land_morale = 0.15
+	max_general_fire = 1
+	max_general_shock = 1
+	max_general_maneuver = 1
+	max_general_siege = 1
+}
+anbi_wumou_and_emperor_teaching = {
+	land_morale = 0.05
+	max_general_fire = 1
+	max_general_shock = 1
+	max_general_maneuver = 1
+	max_general_siege = 1
+	country_admin_power = 1
+}
+anbi_y98_play_with_wumou = {
+	country_admin_power = -6
+	country_diplomatic_power = -6
+	country_military_power = -6
+	land_morale = -0.15
+	max_general_fire = -1
+	max_general_shock = -1
+	max_general_maneuver = -1
+	max_general_siege = -1
+}

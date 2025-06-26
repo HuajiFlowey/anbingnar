@@ -1,0 +1,100 @@
+merc_anbi_foxarmy = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	regiments_per_development = 0.05
+	artillery_weight = 0
+	cavalry_weight = 0
+	
+	sprites = { yan_sprite_pack }
+	trigger = {
+		hidden_trigger = { ai = no }
+		has_country_flag = anbi_y98_foxarmy
+		has_unlocked_merc_company = { merc_company = merc_anbi_foxarmy }
+		hidden_trigger = {
+			is_variable_equal = {
+				which = anbi_y98_wumou_love
+				value = 0
+			}
+		}
+	}
+	cost_modifier = 0.05
+	
+	modifier = {
+		infantry_shock = 0.75
+		shock_damage_received = -0.25
+	}
+}
+merc_anbi_foxarmy_2 = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	regiments_per_development = 0.06
+	artillery_weight = 0
+	cavalry_weight = 0
+	
+	sprites = { yan_sprite_pack }
+	trigger = {
+		hidden_trigger = { ai = no }
+		has_country_flag = anbi_y98_foxarmy
+		has_unlocked_merc_company = { merc_company = merc_anbi_foxarmy }
+		hidden_trigger = {
+			is_variable_equal = {
+				which = anbi_y98_wumou_love
+				value = 1
+			}
+		}
+	}
+	cost_modifier = 0.05
+	
+	modifier = {
+		infantry_shock = 1
+		shock_damage_received = -0.25
+	}
+}
+merc_anbi_foxarmy_3 = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	regiments_per_development = 0.08
+	artillery_weight = 0
+	cavalry_weight = 0
+	
+	sprites = { yan_sprite_pack }
+	trigger = {
+		hidden_trigger = { ai = no }
+		has_country_flag = anbi_y98_foxarmy
+		has_unlocked_merc_company = { merc_company = merc_anbi_foxarmy }
+		hidden_trigger = {
+			is_variable_equal = {
+				which = anbi_y98_wumou_love
+				value = 2
+			}
+		}
+	}
+	cost_modifier = 0.05
+	
+	modifier = {
+		infantry_shock = 1.5
+		shock_damage_received = -0.25
+	}
+}
+merc_anbi_foxarmy_4 = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	regiments_per_development = 0.1
+	artillery_weight = 0
+	cavalry_weight = 0
+	
+	sprites = { yan_sprite_pack }
+	trigger = {
+		hidden_trigger = { ai = no }
+		has_country_flag = anbi_y98_foxarmy
+		has_unlocked_merc_company = { merc_company = merc_anbi_foxarmy }
+		hidden_trigger = {
+			is_variable_equal = {
+				which = anbi_y98_wumou_love
+				value = 3
+			}
+		}
+	}
+	cost_modifier = 0.05
+	
+	modifier = {
+		infantry_shock = 2
+		shock_damage_received = -0.25
+	}
+}

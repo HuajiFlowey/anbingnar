@@ -1,0 +1,340 @@
+country_decisions = {
+	anbi_get_a_mage_admiral = {
+		color = { 0 128 255 }
+		potential = {
+			tag = AB3
+			6052 = {
+				has_great_project = {
+					type = anbi_merfolk_mage_school
+					tier = 1
+				}
+			}
+			NOT = {
+				has_country_modifier = anbi_get_a_mage_admiral_buff
+			}
+		}
+		allow = {
+			dip_power = 100
+			NOT = {
+				has_country_modifier = anbi_get_a_mage_admiral_buff
+			}
+		}
+		effect = {
+			custom_tooltip = anbi_get_a_mage_admiral_tt
+			add_dip_power = -100
+			add_country_modifier = {
+				name = anbi_get_a_mage_admiral_buff
+				duration = 3650
+			}
+			random_list = {
+				1 = {
+					define_admiral = {
+						shock = 6
+						fire = 1
+						manuever = 1
+						siege = 1
+						trait = anbi_mage_admiral
+					}
+					trigger = {
+						NOT = {
+							navy_tradition = 50
+						}
+					}
+				}
+				2 = {
+					define_admiral = {
+						shock = 7
+						fire = 1
+						manuever = 2
+						siege = 2
+						trait = anbi_mage_admiral
+					}
+					trigger = {
+						NOT = {
+							navy_tradition = 75
+						}
+					}
+				}
+				3 = {
+					define_admiral = {
+						shock = 8
+						fire = 1
+						manuever = 3
+						siege = 3
+						trait = anbi_mage_admiral
+					}
+					trigger = {
+						NOT = {
+							navy_tradition = 100
+						}
+					}
+				}
+				3 = {
+					define_admiral = {
+						shock = 9
+						fire = 2
+						manuever = 4
+						siege = 4
+						trait = anbi_mage_admiral
+					}
+				}
+				2 = {
+					define_admiral = {
+						shock = 10
+						fire = 3
+						manuever = 5
+						siege = 5
+						trait = anbi_mage_admiral
+					}
+				}
+				1 = {
+					define_admiral = {
+						shock = 11
+						fire = 4
+						manuever = 6
+						siege = 6
+						trait = anbi_mage_admiral
+					}
+				}
+			}
+		}
+	}
+	anbi_merfolk_flagship_modifier_decision = {
+		color = { 0 128 255 }
+		potential = {
+			mission_completed = anbi_merfolk_defense_the_evil
+			NOT = {
+				has_country_modifier = anbi_merfolk_flagship_modifier
+			}
+		}
+		allow = {
+			treasury = 1000
+			navy_tradition = 50
+			has_flagship = yes
+			monthly_income = 50
+		}
+		effect = {
+			add_treasury = -1000
+			add_navy_tradition = -25
+			custom_tooltip = anbi_merfolk_flagship_trade_tt
+			add_country_modifier = {
+				name = anbi_merfolk_flagship_modifier
+				duration = -1
+			}
+		}
+	}
+	anbi_merfolk_sunchaser_modifier_decision = {
+		color = { 0 128 255 }
+		potential = {
+			mission_completed = anbi_merfolk_defense_the_evil
+			NOT = {
+				has_country_modifier = anbi_merfolk_sunchaser_modifier
+			}
+		}
+		allow = {
+			treasury = 1000
+			navy_tradition = 50
+			num_of_voc_indiamen = 25
+			dip_power = 100
+			monthly_income = 50
+		}
+		effect = {
+			add_treasury = -1000
+			add_navy_tradition = -25
+			add_dip_power = -100
+			add_country_modifier = {
+				name = anbi_merfolk_sunchaser_modifier
+				duration = -1
+			}
+		}
+	}
+	#舰娘少女计划
+	anbi_merfolk_shipgirl_reserach_menu = {
+		color = { 0 128 255 }
+		potential = {
+			has_country_flag = anbi_merfolk_shipgirl_reserach_menu_cf
+		}
+		allow = {
+		}
+		effect = {
+			clr_country_flag = anbi_merfolk_shipgirl_reserach_menu_cf
+			hidden_effect = {
+				country_event = {
+					id = GUI_merfolk_shipgirls.1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	#舰娘互动
+	anbi_merfolk_shipgirl_corin = {
+		color = {
+			255 192 203
+		}
+		potential = {
+			has_country_flag = anbi_merfolk_shipgirl_who_1
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_merfolk_shipgirl_action_ctt
+				always = yes
+			}
+		}
+		effect = {
+			hidden_effect = {
+				country_event = {
+					id = anbi_merfolk.312
+				}
+			}			
+		}
+	}
+	anbi_merfolk_shipgirl_jaher = {
+		color = {
+			255 192 203
+		}
+		potential = {
+			has_country_flag = anbi_merfolk_shipgirl_who_2
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_merfolk_shipgirl_action_ctt
+				always = yes
+			}
+		}
+		effect = {
+			hidden_effect = {
+				country_event = {
+					id = anbi_merfolk.313
+				}
+			}	
+		}
+	}
+	anbi_merfolk_shipgirl_gertyene = {
+		color = {
+			255 192 203
+		}
+		potential = {
+			has_country_flag = anbi_merfolk_shipgirl_who_3
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_merfolk_shipgirl_action_ctt
+				always = yes
+			}
+		}
+		effect = {
+			hidden_effect = {
+				country_event = {
+					id = anbi_merfolk.314
+				}
+			}	
+		}
+	}
+	anbi_merfolk_shipgirl_pingshuang = {
+		color = {
+			255 192 203
+		}
+		potential = {
+			has_country_flag = anbi_merfolk_shipgirl_who_4
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_merfolk_shipgirl_action_ctt
+				always = yes
+			}
+		}
+		effect = {
+			hidden_effect = {
+				country_event = {
+					id = anbi_merfolk.315
+				}
+			}	
+		}
+	}
+	anbi_merfolk_shipgirl_suhan = {
+		color = {
+			255 192 203
+		}
+		potential = {
+			has_country_flag = anbi_merfolk_shipgirl_who_5
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_merfolk_shipgirl_action_ctt
+				always = yes
+			}
+		}
+		effect = {
+			hidden_effect = {
+				country_event = {
+					id = anbi_merfolk.316
+				}
+			}	
+		}
+	}
+	anbi_merfolk_shipgirl_calasadur = {
+		color = {
+			255 192 203
+		}
+		potential = {
+			has_country_flag = anbi_merfolk_shipgirl_who_6
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_merfolk_shipgirl_action_ctt
+				always = yes
+			}
+		}
+		effect = {
+			hidden_effect = {
+				country_event = {
+					id = anbi_merfolk.317
+				}
+			}	
+		}
+	}
+	anbi_merfolk_shipgirl_huxian = {
+		color = {
+			255 192 203
+		}
+		potential = {
+			has_country_flag = anbi_merfolk_shipgirl_who_7
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_merfolk_shipgirl_action_ctt
+				always = yes
+			}
+		}
+		effect = {
+			hidden_effect = {
+				country_event = {
+					id = anbi_merfolk.318
+				}
+			}	
+		}
+	}
+	anbi_merfolk_shipgirl_dragon = {
+		color = {
+			255 192 203
+		}
+		potential = {
+			has_country_flag = anbi_merfolk_shipgirl_who_8
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_merfolk_shipgirl_action_ctt
+				always = yes
+			}
+		}
+		effect = {
+			hidden_effect = {
+				country_event = {
+					id = anbi_merfolk.319
+				}
+			}	
+		}
+	}
+}

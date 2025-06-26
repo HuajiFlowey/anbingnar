@@ -1,0 +1,430 @@
+custom_button = { #Merfolk Settlements
+	name = merfolk_settlement_button
+	tooltip = merfolk_settlement_tt
+	potential = {
+		owner = {
+			tag = FROM
+		}
+		if = { #anbi 姆皮亚马哈拉
+			limit = { owner = { tag = AB3 } }
+			OR = {
+				province_group = dynamic_merfolk_region
+				if = {
+					limit = { 
+						owner = {
+							has_country_flag = anbi_merfolk_settlement_skill_3
+						}						
+					}
+					anbi_merfolk_settlement_expand_first = yes
+				}
+				else = {
+					hidden_trigger = {
+						always = no
+					}					
+				}
+				if = {
+					limit = { 
+						owner = {
+							has_country_flag = anbi_merfolk_settlement_expand_haless
+						}						
+					}
+					anbi_merfolk_settlement_expand_haless = yes
+				}
+				else = {
+					hidden_trigger = {
+						always = no
+					}					
+				}	
+				if = {
+					limit = { 
+						owner = {
+							has_country_flag = anbi_merfolk_settlement_expand_yansheni
+						}						
+					}
+					anbi_merfolk_settlement_expand_yansheni = yes
+				}
+				else = {
+					hidden_trigger = {
+						always = no
+					}					
+				}			
+			}			
+		}
+		else_if = { #generate
+			limit = { owner = { has_country_flag = merfolk_opinion_allied } }
+			province_group = dynamic_merfolk_region
+			NOT = { has_province_flag = merfolk_settlement }
+		}
+		else = { #interact
+			has_province_flag = merfolk_settlement
+			owner = { NOT = { has_country_flag = merfolk_opinion_allied } }
+		}
+	}
+	trigger = {
+		if = { #anbi 姆皮亚马哈拉
+			limit = { owner = { tag = AB3 } }
+			if = {
+				limit = { 
+					NOT = {
+						has_province_flag = merfolk_settlement
+					}
+				}
+				if = {
+					limit = { 
+						has_province_modifier = anbi_AB3_the_devils_looking
+					}
+					NOT = {
+						has_province_modifier = anbi_AB3_the_devils_looking
+					}
+				}
+				is_core = FROM
+				if = {
+					limit = { 
+						owner = {
+							NOT = {
+								has_country_flag = anbi_merfolk_settlement_skill_3
+							}
+						}						
+					}
+					province_group = dynamic_merfolk_region
+				}
+				else_if = {
+					limit = { 
+						owner = {
+							has_country_flag = anbi_merfolk_settlement_skill_3
+						}
+					}
+					OR = {
+						province_group = dynamic_merfolk_region
+						custom_trigger_tooltip = {
+							tooltip = anbi_merfolk_settlement_expand_first_tt
+							anbi_merfolk_settlement_expand_first = yes
+						}
+						custom_trigger_tooltip = {
+							tooltip = anbi_merfolk_settlement_expand_haless_tt
+							anbi_merfolk_settlement_expand_haless = yes
+						}
+						custom_trigger_tooltip = {
+							tooltip = anbi_merfolk_settlement_expand_yansheni_tt
+							anbi_merfolk_settlement_expand_yansheni = yes
+						}
+					}					
+				}				
+				NOT = { has_province_flag = merfolk_settlement }
+				development = 6
+				if = {
+					limit = {
+						owner = {
+							has_country_flag = anbi_merfolk_settlement_skill_1_up
+						}	
+					}
+					owner = {
+						sailors = 750
+					}
+				}
+				else_if = {
+					limit = { 
+						owner = {
+							has_country_flag = anbi_merfolk_settlement_skill_1
+						}						
+					}
+					owner = {
+						dip_power = 10
+						sailors = 750
+					}
+				}
+				else = {
+					owner = {
+						dip_power = 50
+						sailors = 500
+					}
+				}				
+			}
+			else_if = {
+				limit = { 
+					has_province_flag = merfolk_settlement
+					has_province_modifier = offcoast_merfolk_ab3_1_level
+				}
+				if = {
+					limit = { 
+						has_province_modifier = anbi_AB3_the_devils_looking
+					}
+					NOT = {
+						has_province_modifier = anbi_AB3_the_devils_looking
+					}
+				}
+				is_core = FROM
+				development = 15
+				owner = {
+					has_country_flag = anbi_merfolk_settlement_skill_2
+					sailors = 1000
+					treasury = 100
+					adm_power = 25
+					dip_power = 25
+				}
+			}
+			else_if = {
+				limit = { 
+					has_province_flag = merfolk_settlement
+					has_province_modifier = offcoast_merfolk_ab3_2_level
+				}
+				if = {
+					limit = { 
+						has_province_modifier = anbi_AB3_the_devils_looking
+					}
+					NOT = {
+						has_province_modifier = anbi_AB3_the_devils_looking
+					}
+				}
+				is_core = FROM
+				development = 25
+				OR = {
+					province_has_center_of_trade_of_level = 2
+					province_trade_power = 20
+				}
+				is_state = yes
+				owner = {
+					has_country_flag = anbi_merfolk_settlement_skill_3
+					sailors = 2500
+					treasury = 1000
+					if = {
+						limit = { 
+							has_country_flag = anbi_merfolk_settlement_skill_3_up
+						}
+						adm_power = 25
+						dip_power = 25
+					}
+					else = {
+						adm_power = 50
+						dip_power = 50
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					has_province_flag = merfolk_settlement
+					has_province_modifier = offcoast_merfolk_ab3_3_level
+				}			
+				if = {
+					limit = { 
+						has_province_modifier = anbi_AB3_the_devils_looking
+					}
+					NOT = {
+						has_province_modifier = anbi_AB3_the_devils_looking
+					}
+				}	
+				is_core = FROM
+				development = 40
+				OR = {
+					province_has_center_of_trade_of_level = 3
+					province_trade_power = 30
+				}
+				is_state = yes
+				owner = {
+					has_country_flag = anbi_merfolk_settlement_skill_4
+					sailors = 5000
+					treasury = 2500
+					if = {
+						limit = { 
+							has_country_flag = anbi_merfolk_settlement_skill_4_up
+						}
+						adm_power = 50
+						dip_power = 50
+					}
+					else = {
+						adm_power = 100
+						dip_power = 100
+					}
+				}
+			}
+			else = { 
+				custom_trigger_tooltip = {
+					tooltip = anbi_merfolk_settlement_max_level
+					always = no
+				}
+			}
+		}
+		else_if = { #generate
+			limit = { owner = { has_country_flag = merfolk_opinion_allied } }
+			province_group = dynamic_merfolk_region
+			NOT = { has_province_flag = merfolk_settlement }
+			owner = { has_country_flag = merfolk_opinion_allied }
+			development = 15
+			has_trade_building_trigger = yes
+			OR = { has_shipyard_building_trigger = yes has_dock_building_trigger = yes }
+			
+			if = {
+				limit = { region = fahvanosy_region }
+				NOT = { 6678 = { check_variable = { which = fahvanosyMerfolkCap value = 2 } } }
+			}
+			else_if = {
+				limit = { region = odu_kherass_region }
+				NOT = { 6678 = { check_variable = { which = oduKherassMerfolkCap value = 2 } } }
+			}
+			else_if = {
+				limit = { region = ishyamtumu_region }
+				NOT = { 6678 = { check_variable = { which = ishyamtumuMerfolkCap value = 1 } } }
+			}
+			else_if = {
+				limit = { region = ringlet_isles_region }
+				NOT = { 6678 = { check_variable = { which = ringletIslesMerfolkCap value = 3 } } }
+			}
+			else_if = {
+				limit = { region = bamaliwuni_region }
+				NOT = { 6678 = { check_variable = { which = bamaliwuniMerfolkCap value = 1 } } }
+			}
+			else_if = {
+				limit = { region = throden_gokad_region }
+				NOT = { 6678 = { check_variable = { which = throdenGokadMerfolkCap value = 4 } } }
+			}
+			else_if = {
+				limit = { region = ardimya_region }
+				NOT = { 6678 = { check_variable = { which = ardimyaMerfolkCap value = 7 } } }
+			}
+			else_if = {
+				limit = { region = jasiir_jadid_region }
+				NOT = { 6678 = { check_variable = { which = jasiirJadidMerfolkCap value = 7 } } }
+			}
+		}
+		else = { #interact
+			custom_trigger_tooltip = {
+				tooltip = improve_merfolk_five_years_tt
+				NOT = { has_province_modifier = merfolk_recently_interacted }
+			}
+		}
+	}
+	effect = {
+		if = { #anbi 姆皮亚马哈拉
+			limit = { owner = { tag = AB3 } }
+			if = {
+				limit = { 
+					NOT = {
+						has_province_flag = merfolk_settlement
+					}
+				}
+				if = {
+					limit = { 
+						owner = {
+							has_country_flag = anbi_merfolk_settlement_skill_1_up
+						}
+					}
+					owner = {
+						add_sailors = -750
+					}
+				}
+				else_if = {
+					limit = { 
+						owner = {
+							has_country_flag = anbi_merfolk_settlement_skill_1
+						}						
+					}
+					owner = {
+						add_dip_power = -10
+						add_sailors = -750
+					}
+				}
+				else = {
+					owner = {
+						add_dip_power = -50
+						add_sailors = -500
+					}
+				}
+				merfolk_spawn_modifier = yes
+			}
+			else_if = {
+				limit = { 
+					has_province_flag = merfolk_settlement
+					has_province_modifier = offcoast_merfolk_ab3_1_level
+				}
+				if = {
+					limit = { 
+						owner = {
+							has_country_flag = anbi_merfolk_settlement_skill_2_up
+						}
+					}
+					FROM = {
+						add_sailors = -1000
+						add_treasury = -100
+					}				
+				}
+				else = {
+					FROM = {
+						add_sailors = -1000
+						add_treasury = -100
+						add_adm_power = -25
+						add_dip_power = -25
+					}
+				}								
+				remove_province_modifier = offcoast_merfolk_ab3_1_level
+				add_province_modifier = {
+					name = offcoast_merfolk_ab3_2_level
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = { 
+					has_province_flag = merfolk_settlement
+					has_province_modifier = offcoast_merfolk_ab3_2_level
+				}
+				FROM = {
+					add_sailors = -2500
+					add_treasury = -1000
+					if = {
+						limit = { 
+							has_country_flag = anbi_merfolk_settlement_skill_3_up
+						}
+						add_adm_power = -25
+						add_dip_power = -25
+					}
+					else = {
+						add_adm_power = -50
+						add_dip_power = -50
+					}
+					
+				}
+				remove_province_modifier = offcoast_merfolk_ab3_2_level
+				add_province_modifier = {
+					name = offcoast_merfolk_ab3_3_level
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = { 
+					has_province_flag = merfolk_settlement
+					has_province_modifier = offcoast_merfolk_ab3_3_level
+				}
+				FROM = {
+					add_sailors = -5000
+					add_treasury = -2500
+					if = {
+						limit = { 
+							has_country_flag = anbi_merfolk_settlement_skill_4_up
+						}
+						add_adm_power = -50
+						add_dip_power = -50
+					}
+					else = {
+						add_adm_power = -100
+						add_dip_power = -100
+					}					
+				}				
+				remove_province_modifier = offcoast_merfolk_ab3_3_level
+				add_province_modifier = {
+					name = offcoast_merfolk_ab3_great_level
+					duration = -1
+				}
+			}
+			else = {
+				
+			}
+		}
+		else_if = { #generate
+			limit = { owner = { has_country_flag = merfolk_opinion_allied } }
+			province_event = { id = merfolk_events.7 } 
+		}
+		else = { #interact
+			hidden_effect = { add_permanent_province_modifier = { name = merfolk_recently_interacted duration = 1825 } }
+			province_event = { id = merfolk_events.0 }
+		}
+	}
+}

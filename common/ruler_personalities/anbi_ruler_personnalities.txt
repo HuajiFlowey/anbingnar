@@ -1,0 +1,196 @@
+huangke_mil_personality = {
+	ruler_allow = {
+		allow = {
+			always = no
+		}
+	
+		chance = {
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			always = no
+		}
+	
+		chance = {
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			always = no
+		}
+	
+		chance = {
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+	}
+	
+	morale_damage_received = -0.15
+	morale_damage = 0.1
+	enable_forced_march = yes
+	force_march_free = yes
+
+	nation_designer_cost = 10000
+
+	#Anbennar
+	immortal = 0
+
+}
+huangke_adm_personality = {
+	ruler_allow = {
+		allow = {
+			always = no
+		}
+	
+		chance = {
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+	}
+
+	heir_allow = {
+		allow = {
+			always = no
+		}
+	
+		chance = {
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+	}
+	
+	consort_allow = {
+		allow = {
+			always = no
+		}
+	
+		chance = {
+			modifier = {
+				factor = 0
+				always = yes
+			}
+		}
+	}
+	
+	liberty_desire_from_subject_development = -0.5
+	stability_cost_modifier = -0.5
+	unjustified_demands = -0.5
+
+	nation_designer_cost = 10000
+
+	#Anbennar
+	immortal = 0
+
+}
+anbi_kuhai_is_blue_party = {
+	ruler_allow = {
+		allow = {
+			always = no
+		}
+	}
+	heir_allow = {
+		allow = {
+			always = no
+		}
+	}
+	consort_allow = {
+		allow = {
+			always = no
+		}
+	}
+
+	colonists = 1
+
+	nation_designer_cost = 10000
+
+	immortal = 0
+}
+anbi_kuhai_is_gold_party = {
+	ruler_allow = {
+		allow = {
+			always = no
+		}
+	}
+	heir_allow = {
+		allow = {
+			always = no
+		}
+	}
+	consort_allow = {
+		allow = {
+			always = no
+		}
+	}
+
+	province_warscore_cost = -0.05
+	manpower_in_culture_group_provinces = 0.1
+	manpower_in_own_culture_provinces = 0.1
+
+	nation_designer_cost = 10000
+
+	immortal = 0
+}
+anbi_kuhai_is_purple_party = {
+	ruler_allow = {
+		allow = {
+			always = no
+		}
+	}
+	heir_allow = {
+		allow = {
+			always = no
+		}
+	}
+	consort_allow = {
+		allow = {
+			always = no
+		}
+	}
+
+	missionaries = 1
+
+	nation_designer_cost = 10000
+
+	immortal = 0
+}
+anbi_kuhai_is_white_party = {
+	ruler_allow = {
+		allow = {
+			always = no
+		}
+	}
+	heir_allow = {
+		allow = {
+			always = no
+		}
+	}
+	consort_allow = {
+		allow = {
+			always = no
+		}
+	}
+
+	diplomatic_reputation = 2
+
+
+	nation_designer_cost = 10000
+
+	immortal = 0
+}

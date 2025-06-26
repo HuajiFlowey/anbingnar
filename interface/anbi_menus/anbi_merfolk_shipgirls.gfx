@@ -1,0 +1,47 @@
+SpriteTypes = {
+	SpriteType = {
+		name = "GFX_anbi_merfolk_shipgirls_gui_bg"
+		texturefile = "gfx/interface/anbi_merfolk_shipgirls/anbi_merfolk_shipgirls_gui_bg.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_merfolk_shipgirls_corin"
+		texturefile = "gfx/interface/anbi_merfolk_shipgirls/anbi_merfolk_shipgirls_corin.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_merfolk_shipgirls_dragon"
+		texturefile = "gfx/interface/anbi_merfolk_shipgirls/anbi_merfolk_shipgirls_dragon.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_merfolk_shipgirls_gertyene"
+		texturefile = "gfx/interface/anbi_merfolk_shipgirls/anbi_merfolk_shipgirls_gertyene.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_merfolk_shipgirls_calasadur"
+		texturefile = "gfx/interface/anbi_merfolk_shipgirls/anbi_merfolk_shipgirls_calasadur.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_merfolk_shipgirls_huxian"
+		texturefile = "gfx/interface/anbi_merfolk_shipgirls/anbi_merfolk_shipgirls_huxian.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_merfolk_shipgirls_jaher"
+		texturefile = "gfx/interface/anbi_merfolk_shipgirls/anbi_merfolk_shipgirls_jaher.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_merfolk_shipgirls_pingshuang"
+		texturefile = "gfx/interface/anbi_merfolk_shipgirls/anbi_merfolk_shipgirls_pingshuang.dds"
+		loadType = "INGAME"
+	}
+	SpriteType = {
+		name = "GFX_anbi_merfolk_shipgirls_suhan"
+		texturefile = "gfx/interface/anbi_merfolk_shipgirls/anbi_merfolk_shipgirls_suhan.dds"
+		loadType = "INGAME"
+	}
+}

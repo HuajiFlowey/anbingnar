@@ -1,0 +1,12 @@
+bookmark = {
+
+	name = "ANBINGNAR3_NAME"
+	desc = "ANBINGNAR3_DESC"
+	date = 1444.11.11
+	
+	center = 4896
+	default = yes
+		
+	country = Y27	
+
+}

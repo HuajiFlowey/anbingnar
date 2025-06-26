@@ -1,0 +1,7 @@
+palace_of_divine_call = {
+    build_trigger = {
+		NOT = {
+			has_province_modifier = anbi_kuhai_destory_palace_of_divine_call
+		}
+	}
+}

@@ -1,0 +1,1183 @@
+country_decisions = {
+	anbi_kuhai_remove_the_bird = {
+		color = { 225 225 225 }
+		potential = {
+			any_province = {
+				OR = {
+					country_or_non_sovereign_subject_holds = Y91
+					country_or_non_sovereign_subject_holds = Y96
+				}
+			}
+			has_country_flag = the_greatest_yanshen
+			tag = Y27
+		}
+		allow = {
+			OR = {
+				Y91 = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						superregion = yanshen_superregion
+						value = 5
+					}
+				}
+				Y96 = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						superregion = yanshen_superregion
+						value = 5
+					}
+				}
+			}
+			is_at_war = no
+			dip_power = 150
+		}
+
+		effect = {
+			add_dip_power = -150
+			if = {
+				limit = { 
+					exists = Y91
+				}
+				declare_war_with_cb = {
+					casus_belli = cb_annex
+					who = Y91
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = Y96
+				}
+				declare_war_with_cb = {
+					casus_belli = cb_annex
+					who = Y96
+				}
+			}
+			custom_tooltip = anbi_kuhai_remove_the_bird_ct
+			hidden_effect = {
+				every_ally = {
+					limit = {
+						capital_scope = {
+							superregion = yanshen_superregion
+						}
+					}
+					join_all_offensive_wars_of = ROOT
+				}
+			}
+			
+		}
+	}
+	#湖人
+	anbi_kuhai_establish_an_embassy = {
+		color = { 225 225 225 }
+		potential = {
+			mission_completed = anbi_kuhai_the_north_laker
+			NOT = {
+				has_global_flag = JY_LF_institution_speed
+			}
+		}
+		allow = {
+			5226 = {
+				owner = {
+					has_opinion = {
+						who = ROOT
+						value = 180
+					}
+				}
+			}
+			treasury = 500
+			dip_power = 100
+		}
+		effect = {
+			add_treasury = -500
+			add_dip_power = -100
+			define_advisor = {
+				type = master_of_mint
+				skill = 2
+				culture = zabatlari
+				religion = yukel_followers
+				cost_multiplier = 0.25
+			}
+			define_advisor = {
+				type = statesman
+				skill = 2
+				culture = khamgunai
+				religion = enuuk_followers
+				cost_multiplier = 0.25
+			}
+			define_advisor = {
+				type = army_reformer
+				skill = 2
+				culture = metsamic
+				religion = kodave_followers
+				cost_multiplier = 0.25
+			}
+			custom_tooltip = Y15_LF_institution_speed
+			set_global_flag = JY_LF_institution_speed
+			custom_tooltip = Y15_LF_refugees
+			set_global_flag = JY_LF_refugees
+		}
+	}
+	anbi_kuhai_funding_military_operations = {
+		color = { 225 225 225 }
+		potential = {
+			mission_completed = anbi_kuhai_the_north_laker
+			has_global_flag = JY_LF_institution_speed
+			NOT = {
+				has_country_flag = anbi_kuhai_funding_military_operations_cf
+			}
+		}
+		allow = {
+			mil = 4
+			manpower = 40
+			mil_power = 100
+		}
+		effect = {
+			add_manpower = -40
+			add_mil_power = -100
+			every_country = {
+				limit = {
+					OR = {
+						has_country_modifier = lake_federation_member
+						tag = J33
+					}
+				}
+				add_country_modifier = {
+					name = Y15_help_abroad
+					duration = 5475
+				}
+				add_historical_friend = ROOT
+			}
+			add_historical_friend = J33
+			J33 = { add_historical_friend = ROOT }
+			set_country_flag = anbi_kuhai_funding_military_operations_cf
+		}
+	}
+	anbi_kuhai_the_trade_with_laker = {
+		color = { 225 225 225 }
+		potential = {
+			has_country_flag = anbi_kuhai_funding_military_operations_cf
+			NOT = {
+				has_global_flag = JY_LF_advisors
+			}
+			mission_completed = anbi_kuhai_the_north_laker
+		}
+		allow = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				trade_goods = precursor_relics
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 20
+				province_has_center_of_trade_of_level = 1
+			}
+			num_of_merchants = 5
+			monthly_income = 150
+		}
+		effect = {
+			1444 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 30
+					key = beikdugang_privileges
+				}
+			}
+			5315 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 30
+					key = beikdugang_privileges
+				}
+			}
+			5202 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 30
+					key = beikdugang_privileges
+				}
+			}
+			4990 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 30
+					key = beikdugang_privileges
+				}
+			}
+			1374 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 30
+					key = beikdugang_privileges
+				}
+			}
+			custom_tooltip = Y15_LF_advisors
+			set_global_flag = JY_LF_advisors
+		}
+	}
+	anbi_kuhai_unify_the_laker = {
+		color = { 225 225 225 }
+		potential = {
+			has_global_flag = JY_LF_advisors
+			mission_completed = anbi_kuhai_the_north_laker
+			NOT = {
+				has_country_flag = anbi_kuhai_the_united_laker
+			}
+		}
+		provinces_to_highlight = {
+			owner = {
+				has_country_modifier = lake_federation_member
+				NOT = {
+					has_opinion = {
+						who = ROOT
+						value = 120
+					}
+				}		
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = Y15_federation_unified
+						exists = J33
+					}
+					alliance_with = J33
+				}
+				AND = {
+					calc_true_if = {
+						amount = 10
+						all_country = {
+							has_country_modifier = lake_federation_member
+							has_opinion = {
+								who = ROOT
+								value = 120
+							}
+						}
+					}
+				}			
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = anbi_kuhai_lake_federation_disbanded
+						has_global_flag = lake_federation_disbanded
+					}
+					any_ally = {
+						culture_group = triunic
+						government = republic
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = anbi_kuhai_the_united_laker
+			if = {
+				limit = { 
+					has_global_flag = lake_federation_disbanded
+					any_ally = {
+						culture_group = triunic
+						government = republic
+					}			
+				}
+				random_ally = {
+					limit = {
+						culture_group = triunic
+						government = republic
+					}
+					ROOT = {
+						vassalize = PREV
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = J33
+				}
+				add_prestige = 10
+			}
+			else = {
+				random_known_country = {
+					limit = {
+						OR = {
+							AND = {
+								has_country_modifier = lake_federation_member
+								has_opinion = {
+									who = ROOT
+									value = 120
+								}
+							}
+							AND = {
+								has_global_flag = lake_federation_disbanded
+								is_subject_of = ROOT
+								culture_group = triunic
+								government = republic
+							}
+						}						
+					}
+					add_country_modifier = {
+						name = guns_of_the_lake
+						duration = -1
+					}
+					add_prestige = 25
+					capital_scope = {
+						add_base_tax = 2
+						add_base_manpower = 2
+						add_base_production = 2
+					}
+					custom_tooltip = unite_the_federation_tooltip
+					hidden_effect = {
+						change_tag = J33
+						hidden_effect = { restore_country_name = yes }
+						remove_country_modifier = lake_federation_member
+						random_known_country = {
+							limit = { 
+								has_country_modifier = lake_federation_member
+								OR = {
+									AND = {
+										is_subject = yes
+										overlord = { has_country_modifier = lake_federation_member }
+									}
+									is_subject = no
+								}
+							}
+							country_event = { id = lake.27 }
+						}
+						remove_non_electors_emperors_from_empire_effect = yes
+						if = {
+							limit = {
+								NOT = { government_rank = 3 }
+							}
+							set_government_rank = 3
+						}
+						add_country_modifier = {
+							name = "centralization_modifier"
+							duration = 7300
+						}
+						country_event = { id = ideagroups.1 } #Swap Ideas
+						forbidden_lands_superregion = {
+							limit = {
+								OR = {
+									region = south_yarikhoi_region
+									region = north_yarikhoi_region
+								}
+							}
+							add_permanent_claim = J33
+						}
+						remove_country_modifier = lake_trade
+						remove_country_modifier = lake_diplomatic_corps
+						remove_country_modifier = federation_linguistic_academy
+						remove_country_modifier = lake_growing_administration
+						remove_country_modifier = lake_mainland_trade_established
+						remove_country_modifier = federation_judiciary_system
+						remove_country_modifier = federation_free_trade
+						remove_country_modifier = federation_fighter
+						remove_country_modifier = federation_subventionner
+						#remove_country_modifier = federation_leecher_mod
+						remove_country_modifier = federation_fighter_conscription
+						remove_country_modifier = federation_conscription
+						remove_country_modifier = federation_military_reform
+						remove_country_modifier = federation_war_mandat
+						remove_country_modifier = federation_cutdown
+						remove_country_modifier = lake_ideas_melting_pot
+						remove_country_modifier = lake_federation_observer
+						remove_country_modifier = lake_cover_piracy
+						remove_country_modifier = lake_anti_piracy_act
+						remove_country_modifier = lake_caravan_act
+						remove_country_modifier = lake_unrestricted_trade_route
+						clear_federation_global_flag = yes
+					
+						if = { limit = { has_country_modifier = guns_of_the_lake } override_country_name = GUNS_LAKE }
+						else_if = { limit = { has_country_modifier = citizens_of_the_lake } override_country_name = CITIZENS_LAKE }
+						else_if = { limit = { has_country_modifier = childrens_of_the_lake } override_country_name = CHILDRENS_LAKE }
+						else_if = { limit = { has_country_modifier = workers_of_the_lake } override_country_name = WORKERS_LAKE }
+						else_if = { limit = { has_country_modifier = soldiers_of_the_lake } override_country_name = SOLDIERS_LAKE }
+						else_if = { limit = { has_country_modifier = traders_of_the_lake } override_country_name = TRADERS_LAKE }
+						swap_non_generic_missions = yes
+						set_global_flag = lake_federation_formed
+					}
+				}
+			}
+		}
+	}
+	anbi_kuhai_expand_the_fleet = {
+		color = { 225 225 225 }
+		potential = {
+			mission_completed = anbi_kuhai_the_north_laker
+			has_country_flag = anbi_kuhai_the_united_laker
+			NOT = {
+				4907 = {
+					has_province_modifier = JY_LF_port_Y15_mono
+				}
+			}
+		}
+		allow = {
+			OR = {
+				1369 = { #Yemakai
+					trade_share = {
+						country = ROOT
+						share = 50
+					}
+				}
+				4955 = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+			OR = {
+				1366 = { #Arawkelin
+					trade_share = {
+						country = ROOT
+						share = 50
+					}
+				}
+				4963 = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+			NOT = {
+				exists = Y64
+				exists = L55
+			}
+			OR = {
+				4955 = { country_or_non_sovereign_subject_holds = ROOT }
+				4963 = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+			dip_power = 100
+		}
+		effect = {
+			custom_tooltip = Y15_LF_monopoly_Y15
+			set_global_flag = JY_LF_monopoly_Y15
+			4907 = { add_permanent_province_modifier = { name = JY_LF_port_Y15_mono duration = -1 } }
+			5356 = { remove_province_modifier = JY_LF_port }
+			4925 = { remove_province_modifier = JY_LF_port }
+			4907 = { remove_province_modifier = JY_LF_port }
+			4871 = { remove_province_modifier = JY_LF_port }
+			4879 = { remove_province_modifier = JY_LF_port }
+			4884 = { remove_province_modifier = JY_LF_port }
+			4839 = { remove_province_modifier = JY_LF_port }
+			4955 = { remove_province_modifier = JY_LF_port }
+			4963 = { remove_province_modifier = JY_LF_port }
+			JY_LF_rahen_expansion = yes
+		}
+	}
+	anbi_kuhai_the_laker_state_of_yanshen = {
+		color = { 225 225 225 }
+		potential = {
+			mission_completed = anbi_kuhai_the_north_laker
+			4907 = {
+				has_province_modifier = JY_LF_port_Y15_mono
+			}
+			NOT = {
+				has_country_modifier = anbi_kuhai_the_laker_state_of_yanshen_buff
+				J33 = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		allow = {
+			J33 = {
+				has_opinion = {
+					who = ROOT
+					value = 190
+				}
+				alliance_with = ROOT
+				custom_trigger_tooltip = {
+					tooltip = anbi_kuhai_sent_20_gift
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = sent_gift
+						value = 20
+					}
+				}
+			}
+			north_yarikhoi_region = {
+				type = all
+				owned_by = J33
+			}
+			south_yarikhoi_region = {
+				type = all
+				owned_by = J33
+			}
+			dip_power = 200
+		}
+		effect = {
+			add_country_modifier = {
+				name = anbi_kuhai_the_laker_state_of_yanshen_buff
+				duration = 730
+			}
+			hidden_effect = {
+				country_event = {
+					id = anbi_kuhai.24
+					days = 730
+				}
+			}
+		}
+	}
+	anbi_kuhai_yanshenized_laker = {
+		color = { 225 225 225 }
+		potential = {
+			J33 = {
+				is_subject_of = ROOT
+				NOT = {
+					culture_group = yan
+				}
+			}
+			mission_completed = anbi_kuhai_the_north_laker
+		}
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 300
+				culture_group = yan
+			}
+			dip_power = 300
+			treasury = 10000
+			J33 = {
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+			}
+		}
+		effect = {
+			add_dip_power = -300
+			add_treasury = -10000
+			J33 = {
+				change_religion = zhengdao_path
+				change_primary_culture = kuldaakin
+				every_owned_province = {
+					limit = {
+						culture_group = triunic
+					}
+					change_culture = kuldaakin
+					change_religion = zhengdao_path
+				}
+				override_country_name = the_greatest_laker
+				add_country_modifier = {
+					name = anbi_kuhai_yanshenized_laker_buff
+					duration = -1
+				}
+			}
+		}
+	}
+	#飞腾海空局
+	anbi_kuhai_feiten_department = {
+		color = { 225 225 225 }
+		potential = {
+			has_country_flag = anbi_kuhai_the_sky_is_feiten_cf
+			tag = Z65
+			NOT = {
+				has_country_flag = anbi_kuhai_feiten_department_open
+			}
+		}
+		allow = {
+		}
+		effect = {
+			set_country_flag = anbi_kuhai_feiten_department_open
+			country_event = {
+				id = anbi_kuhai.2000
+			}
+		}
+	}
+	#邀请移民
+	anbi_kuhai_invite_immigrants = {
+		color = { 225 225 225 }
+		potential = {
+			has_government_attribute = anbi_kuhai_is_purple
+		}
+		allow = {
+			dip_power = 100
+		}
+		effect = {
+			add_dip_power = -100
+			capital_scope = {
+				random_list = {
+					1 = {
+						trigger = {
+							NOT = {
+								has_centaur_minority_trigger = yes
+							}
+						}
+						add_centaur_minority_size_effect = yes
+						large_increase_of_centaur_tolerance_effect = yes
+					}
+					1 = {
+						trigger = {
+							NOT = {
+								has_half_elven_minority_trigger = yes
+							}
+						}
+						add_half_elven_minority_size_effect = yes
+						large_increase_of_half_elven_tolerance_effect = yes
+					}
+					1 = {
+						trigger = {
+							NOT = {
+								has_half_orcish_minority_trigger = yes
+							}
+						}
+						add_half_orcish_minority_size_effect = yes
+						large_increase_of_half_orcish_tolerance_effect = yes
+					}
+					1 = {
+						trigger = {
+							NOT = {
+								has_dwarven_minority_trigger = yes
+							}
+						}
+						add_dwarven_minority_size_effect = yes
+						large_increase_of_dwarven_tolerance_effect = yes
+					}
+					1 = {
+						trigger = {
+							NOT = {
+								has_elven_minority_trigger = yes
+							}
+						}
+						add_elven_minority_size_effect = yes
+						large_increase_of_elven_tolerance_effect = yes
+					}
+					1 = {
+						trigger = {
+							NOT = {
+								has_gnollish_minority_trigger = yes
+							}
+						}
+						add_gnollish_minority_size_effect = yes
+						large_increase_of_gnollish_tolerance_effect = yes
+					}
+					1 = {
+						trigger = {
+							NOT = {
+								has_gnomish_minority_trigger = yes
+							}
+						}
+						add_gnomish_minority_size_effect = yes
+						large_increase_of_gnomish_tolerance_effect = yes
+					}
+					1 = {
+						trigger = {
+							NOT = {
+								has_goblin_minority_trigger = yes
+							}
+						}
+						add_goblin_minority_size_effect = yes
+						large_increase_of_goblin_tolerance_effect = yes
+					}
+					1 = {
+						trigger = {
+							NOT = {
+								has_halfling_minority_trigger = yes
+							}
+						}
+						add_halfling_minority_size_effect = yes
+						large_increase_of_halfling_tolerance_effect = yes
+					}
+					1 = {
+						trigger = {
+							NOT = {
+								has_harimari_minority_trigger = yes
+							}
+						}
+						add_harimari_minority_size_effect = yes
+						large_increase_of_harimari_tolerance_effect = yes
+					}
+					1 = {
+						trigger = {
+							NOT = {
+								has_harpy_minority_trigger = yes
+							}
+						}
+						add_harpy_minority_size_effect = yes
+						large_increase_of_harpy_tolerance_effect = yes
+					}
+					1 = {
+						trigger = {
+							NOT = {
+								has_hobgoblin_minority_trigger = yes
+							}
+						}
+						add_hobgoblin_minority_size_effect = yes
+						large_increase_of_hobgoblin_tolerance_effect = yes
+					}
+					1 = {
+						trigger = {
+							NOT = {
+								has_kobold_minority_trigger = yes
+							}
+						}
+						add_kobold_minority_size_effect = yes
+						large_increase_of_kobold_tolerance_effect = yes
+					}
+					1 = {
+						trigger = {
+							NOT = {
+								has_ogre_minority_trigger = yes
+							}
+						}
+						add_ogre_minority_size_effect = yes
+						large_increase_of_ogre_tolerance_effect = yes
+					}
+					1 = {
+						trigger = {
+							NOT = {
+								has_orcish_minority_trigger = yes
+							}
+						}
+						add_orcish_minority_size_effect = yes
+						large_increase_of_orcish_tolerance_effect = yes
+					}
+					1 = {
+						trigger = {
+							NOT = {
+								has_ruinborn_minority_trigger = yes
+							}
+						}
+						add_ruinborn_minority_size_effect = yes
+						large_increase_of_ruinborn_tolerance_effect = yes
+					}
+					1 = {
+						trigger = {
+							NOT = {
+								has_troll_minority_trigger = yes
+							}
+						}
+						add_troll_minority_size_effect = yes
+						large_increase_of_troll_tolerance_effect = yes
+					}
+				}
+			}
+		}
+	}
+	#接管蛇山
+	anbi_kuhai_the_haless_mountain = {
+		color = { 225 225 225 }
+		potential = {
+			has_country_flag = anbi_kuhai_yanshen_is_haless_cf
+			NOT = {
+				has_country_flag = anbi_kuhai_the_jade_question
+			}
+		}
+
+		allow = {
+			OR = {
+				any_owned_province = {
+					region = jade_mines_region
+				}
+				any_subject_country = {
+					any_owned_province = {
+						region = jade_mines_region
+					}
+				}
+			}
+			
+			adm = 4
+			dip = 4
+		}
+
+		effect = {
+			jade_mines_region = {
+				add_permanent_claim = ROOT
+			}
+			country_event = {
+				id = anbi_kuhai.29
+			}
+		}
+	}
+	anbi_kuhai_the_all_mountain = {
+		color = { 225 225 225 }
+		potential = {
+			OR = {
+				has_country_flag = anbi_kuhai_the_jade_question_dwarven
+				has_country_flag = anbi_kuhai_the_jade_question_goblin
+			}
+		}
+
+		allow = {
+			dip_power = 50
+			any_subject_country = {
+				any_owned_province = {
+					continent = serpentspine
+				}
+				NOT = {
+					tag = I22
+					tag = R81
+				}
+			}
+		}
+
+		effect = {
+			add_dip_power = -50
+			if = {
+				limit = { 
+					has_country_flag = anbi_kuhai_the_jade_question_dwarven
+				}
+				every_subject_country = {
+					limit = {
+						any_owned_province = {
+							continent = serpentspine
+						}
+						NOT = {
+							tag = I22
+							tag = R81
+						}
+					}
+					every_owned_province = {
+						limit = {
+							continent = serpentspine
+						}
+						cede_province = I22
+						add_territorial_core = I22
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					has_country_flag = anbi_kuhai_the_jade_question_goblin
+				}
+				every_subject_country = {
+					limit = {
+						any_owned_province = {
+							continent = serpentspine
+						}
+						NOT = {
+							tag = I22
+							tag = R81
+						}
+					}
+					every_owned_province = {
+						limit = {
+							continent = serpentspine
+						}
+						cede_province = R81
+						add_territorial_core = R81
+					}
+				}
+			}
+			
+		}
+	}
+	#划分殖民地
+	anbi_kuhai_the_colony_brode = {
+		color = { 225 225 225 }
+		potential = {
+			has_country_flag = anbi_kuhai_the_world_is_ours_cf
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						is_colonial_nation = yes
+					}
+					capital_scope = {
+						save_global_event_target_as = colonial_capital
+					}
+					every_owned_province = {
+						limit = {
+							NOT = {
+								colonial_region = event_target:colonial_capital
+							}
+						}
+						add_core = ROOT
+						cede_province = ROOT
+					}
+				}
+			}
+		}
+	}
+	#碳
+	anbi_kuhai_canbon = {
+		color = { 225 225 225 }
+		potential = {
+			is_playing_custom_nation = yes
+			capital_scope = {
+				superregion = yanshen_superregion
+			}
+			NOT = {
+				has_country_flag = anbi_kuhai_is_tanlao
+			}
+		}
+		allow = {
+			all_owned_province = {
+				area = hongnguan_area
+			}
+			NOT = {
+				is_year = 1445
+			}
+		}
+		effect = {
+			set_country_flag = anbi_kuhai_is_tanlao
+			change_tag = Y27
+		}
+	}
+	#东洲合作
+	anbi_kuhai_laoxiangbao_argeement = {
+		color = { 102 0 102 }
+		potential = {
+			has_country_flag = anbi_kuhai_yanshen_is_haless_cf
+			NOT = {
+				has_country_flag = anbi_kuhai_laoxiangbao_argeement_cf
+			}
+		}
+		allow = {
+			OR = {
+				Y63 = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+					custom_trigger_tooltip = {
+						tooltip = anbi_kuhai_sent_20_gift
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = sent_gift
+							value = 20
+						}
+					}
+					
+				}
+				AND = {
+					NOT = {
+						exists = Y63
+					}
+					5424 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = anbi_kuhai_laoxiangbao_argeement_cf
+			country_event = {
+				id = anbi_kuhai.30
+			}
+		}
+	}
+	anbi_kuhai_hiderion = {
+		color = { 102 0 102 }
+		potential = {
+			has_country_flag = anbi_kuhai_yanshen_is_haless_cf
+			NOT = {
+				has_country_flag = anbi_kuhai_hiderion_cf
+			}
+		}
+		allow = {
+			OR = {
+				Y86 = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+					custom_trigger_tooltip = {
+						tooltip = anbi_kuhai_sent_20_gift
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = sent_gift
+							value = 20
+						}
+					}
+				}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					OR = {
+						area = phakphon_area
+						area = thirabnir_area
+						area = ngoen_area
+						area = kaiden_area
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = anbi_kuhai_hiderion_cf
+			country_event = {
+				id = anbi_kuhai.31
+			}
+		}
+	}
+	anbi_kuhai_deal_with_hobgoblin = {
+		color = { 102 0 102 }
+		potential = {
+			has_country_flag = anbi_kuhai_yanshen_is_haless_cf
+			NOT = {
+				has_country_flag = anbi_kuhai_deal_with_hobgoblin_cf
+			}
+		}
+		allow = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				has_any_hobgoblin_pop_trigger = yes
+			}
+		}
+		effect = {
+			set_country_flag = anbi_kuhai_deal_with_hobgoblin_cf
+			country_event = {
+				id = anbi_kuhai.32
+			}
+		}
+	}
+	anbi_kuhai_arawkelin_trade = {
+		color = { 102 0 102 }
+		potential = {
+			has_country_flag = anbi_kuhai_yanshen_is_haless_cf
+			NOT = {
+				has_country_flag = anbi_kuhai_arawkelin_trade_cf
+			}
+		}
+		allow = {
+			4963 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1366 = {
+				trade_share = {
+					country = ROOT
+					share = 25
+				}
+			}
+		}
+		effect = {
+			set_country_flag = anbi_kuhai_arawkelin_trade_cf
+			country_event = {
+				id = anbi_kuhai.33
+			}
+		}
+	}
+	anbi_kuhai_abolish_caste_system = {
+		color = { 102 0 102 }
+		potential = {
+			has_country_flag = anbi_kuhai_yanshen_is_haless_cf
+			NOT = {
+				has_country_flag = anbi_kuhai_abolish_caste_system_cf
+			}
+		}
+		allow = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 50
+				superregion = rahen_superregion
+				NOT = {
+					region = shamakhad_region
+				}
+			}
+		}
+		effect = {
+			set_country_flag = anbi_kuhai_abolish_caste_system_cf
+			country_event = {
+				id = anbi_kuhai.34
+			}
+		}
+	}
+	anbi_kuhai_abolish_slave_system = {
+		color = { 102 0 102 }
+		potential = {
+			has_country_flag = anbi_kuhai_yanshen_is_haless_cf
+			NOT = {
+				has_country_flag = anbi_kuhai_abolish_slave_system_cf
+			}
+		}
+		allow = {
+			4420 = {
+				country_or_subject_holds = ROOT
+			}
+			1361 = {
+				is_strongest_trade_power = ROOT
+			}
+			adm_power = 100
+		}
+		effect = {
+			set_country_flag = anbi_kuhai_abolish_slave_system_cf
+			country_event = {
+				id = anbi_kuhai.35
+			}
+		}
+	}
+	anbi_kuhai_search_jinshanjun = {
+		color = { 255 255 102 }
+		potential = {
+			has_country_flag = anbi_kuhai_jinshanjun_issue_enacted
+			has_country_flag = anbi_kuhai_brass_dragon
+			NOT = {
+				has_country_flag = anbi_kuhai_search_jinshanjun_cf
+			}
+		}
+		allow = {
+			years_of_income = 1
+			adm_power = 100
+		}
+		effect = {
+			set_country_flag = anbi_kuhai_search_jinshanjun_cf
+			add_years_of_income = -1
+			add_adm_power = -100
+			country_event = {
+				id = anbi_kuhai.52
+			}
+		}
+	}
+	#颜色
+	anbi_kuhai_the_color = {
+		color = { 102 0 102 }
+		potential = {
+			has_ruler_flag = is_huangke
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_kuhai_the_color_ctt
+				has_reform = anbi_kuhai_gold_flag
+				has_reform = anbi_kuhai_blue_flag
+				has_reform = anbi_kuhai_purple_flag
+				has_reform = anbi_kuhai_blue_and_gold_flag
+				has_reform = anbi_kuhai_blue_and_purple_flag
+				has_reform = anbi_kuhai_gold_and_purple_flag
+				has_reform = anbi_kuhai_blue_gold_and_purple_flag
+			}
+		}
+		effect = {
+			custom_tooltip = anbi_kuhai_the_color_ct
+		}
+	}
+	#属国染色
+	anbi_kuhai_subject_color = {
+		color = { 102 0 102 }
+		potential = {
+			has_reform = anbi_kuhai_the_republican_beacon
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						is_subject_of_type = anbi_kuhai_republican_subject_state
+					}
+					change_country_color = {
+						country = ROOT
+					}
+				}
+			}
+		}
+	}
+	#任务切换
+	anbi_mission_tree_bug_fix_decision = {
+		color = { 102 0 102 }
+		potential = {
+			has_country_flag = anbi_mission_tree_bug_fix
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			if = {
+				limit = { 
+					has_country_flag = the_greatest_yanshen_development
+				}
+				clr_country_flag = the_greatest_yanshen_development
+				swap_non_generic_missions = yes
+			}
+			else = {
+				set_country_flag = the_greatest_yanshen_development
+				swap_non_generic_missions = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

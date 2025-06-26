@@ -1,0 +1,44 @@
+clr_zhengdao_path_aspects = {
+	remove_church_aspect = anbi_zhengdao_feiten
+	remove_church_aspect = anbi_zhengdao_kuhai
+	remove_church_aspect = anbi_zhengdao_beidugang
+	remove_church_aspect = anbi_zhengdao_lanjinhui
+	remove_church_aspect = anbi_zhengdao_yinquan
+	remove_church_aspect = anbi_zhengdao_bianfang
+	remove_church_aspect = anbi_zhengdao_zhuyue
+	remove_church_aspect = anbi_zhengdao_tianlou
+	remove_church_aspect = anbi_zhengdao_gushuoguan
+	remove_church_aspect = anbi_zhengdao_jiangdu
+	remove_church_aspect = anbi_zhengdao_jianqiang
+	remove_church_aspect = anbi_zhengdao_yangcheng
+	remove_church_aspect = anbi_zhengdao_yanzhong
+	remove_church_aspect = anbi_zhengdao_yingzhen
+	remove_church_aspect = anbi_zhengdao_xiangnv
+}
+anbi_add_kuhai_blue_var = {
+	custom_tooltip = anbi_add_kuhai_blue_var_ct
+	hidden_effect = {
+		change_variable = {
+			which = kuhai_blue_var
+			value = 1
+		}
+	}
+}
+anbi_add_kuhai_purple_var = {
+	custom_tooltip = anbi_add_kuhai_purple_var_ct
+	hidden_effect = {
+		change_variable = {
+			which = kuhai_purple_var
+			value = 1
+		}
+	}
+}
+anbi_add_kuhai_gold_var = {
+	custom_tooltip = anbi_add_kuhai_gold_var_ct
+	hidden_effect = {
+		change_variable = {
+			which = kuhai_gold_var
+			value = 1
+		}
+	}
+}

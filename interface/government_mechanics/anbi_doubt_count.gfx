@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_anbi_doubt_count_bar_frame"
+		texturefile = "gfx/interface/government_mechanics/anbi_doubt_count/anbi_doubt_count_bar_frame.dds"
+		loadType = "INGAME"
+	}
+
+	progressbartype = {
+		name = "GFX_anbi_doubt_count_bar"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/anbi_doubt_count/anbi_doubt_count_bar_full.dds"
+		textureFile2 = "gfx/interface/government_mechanics/anbi_doubt_count/anbi_doubt_count_bar_empty.dds"
+		size = { x = 260 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+}

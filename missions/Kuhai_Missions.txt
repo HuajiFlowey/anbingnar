@@ -1,0 +1,3562 @@
+kuhai_start_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+	}
+
+	anbi_kuhai_the_sisiter_yinquan = {
+		icon = mission_settlers_north_america
+		position = 3
+		required_missions = { anbi_kuhai_our_allies } 
+		provinces_to_highlight = { is_capital_of = Y26 } 
+
+		trigger = {
+			if = {
+				limit = { is_subject = yes } 
+				NOT = { is_subject = yes } 
+			}
+			Y26 = {
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+				NOT = { truce_with = Y25 } 
+			}
+			NOT = { truce_with = Y25 } 
+			alliance_with = Y26
+			army_size_percentage = 0.9
+			is_at_war = no
+		}
+
+		effect = {
+			4872 = { add_permanent_claim = Y26 } 
+			5420 = { add_permanent_claim = Y26 } 
+			4903 = { add_permanent_claim = Y26 } 
+			4875 = { add_permanent_claim = Y26 } 
+			if = {
+				limit = { exists = Y25 } 
+				declare_war_with_cb = {
+					casus_belli = cb_annex
+					who = Y25
+				}
+				Y26 = { join_all_offensive_wars_of = ROOT } 
+				set_global_flag = anbi_kuhai_Y26_giving_lands
+				custom_tooltip = anbi_kuhai_the_sisiter_yinquan_tt
+				custom_tooltip = anbi_kuhai_the_sisiter_yinquan_tt2
+			}
+			else_if = {
+				limit = { 4903 = { owned_by = Y26 }  } 
+				add_dip_power = -100
+			}
+			else = {
+				4903 = {
+					owner = {
+						Y26 = {
+							declare_war_with_cb = {
+								casus_belli = cb_annex
+								who = PREV
+							}
+						}
+					}
+				}
+			}
+			add_faction_influence = {
+				faction = anbi_yinquan_0
+				influence = 5
+			}
+		}
+	}
+
+	anbi_kuhai_the_gold_dragon_faith = {
+		icon = mission_kirin
+		position = 4
+		required_missions = { anbi_kuhai_the_sisiter_yinquan } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			if = {
+				limit = { exists = Y85 } 
+				Y85 = {
+					OR = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+						NOT = {
+							has_opinion = {
+								who = ROOT
+								value = -50
+							}
+						}
+					}
+				}
+			}
+			else = { prestige = 90 } 
+		}
+
+		effect = {
+			country_event = { id = anbi_kuhai.13 } 
+			custom_tooltip = EVENT_INSIGHT_INTRO
+			custom_tooltip = anbi_kuhai_the_gold_dragon_faith_tt
+		}
+	}
+}
+kuhai_start_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+	}
+
+	anbi_kuhai_our_allies = {
+		icon = mission_new_army
+		position = 2
+		required_missions = { anbi_kuhai_the_beginning } 
+		provinces_to_highlight = {
+			OR = {
+				is_capital_of = Y05
+				is_capital_of = Y20
+				is_capital_of = Y26
+			}
+		}
+
+		trigger = {
+			Y05 = {
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+			Y20 = {
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+			Y26 = {
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+			if = {
+				limit = { is_subject = yes } 
+				NOT = { is_subject = yes } 
+			}
+		}
+
+		effect = {
+			Y05 = {
+				add_trust = {
+					who = ROOT
+					value = 10
+				}
+			}
+			Y20 = {
+				add_trust = {
+					who = ROOT
+					value = 10
+				}
+			}
+			Y26 = {
+				add_trust = {
+					who = ROOT
+					value = 10
+				}
+			}
+			add_favors = {
+				who = Y05
+				amount = 10
+			}
+			add_favors = {
+				who = Y20
+				amount = 10
+			}
+			add_favors = {
+				who = Y26
+				amount = 10
+			}
+		}
+	}
+
+	anbi_kuhai_continue_the_blue_war = {
+		icon = mission_manchu_warrior
+		position = 3
+		required_missions = { anbi_kuhai_our_allies } 
+		provinces_to_highlight = { is_capital_of = Y05 } 
+
+		trigger = {
+			Y05 = {
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+				NOT = { truce_with = Y13 } 
+			}
+			if = {
+				limit = { Y13 = { owns = 4868 }  } 
+				army_size_percentage = 0.9
+				manpower = 5
+			}
+			else = { dip_power = 100 } 
+			if = {
+				limit = { is_subject = yes } 
+				NOT = { is_subject = yes } 
+			}
+			NOT = { truce_with = Y13 } 
+			alliance_with = Y05
+			is_at_war = no
+		}
+
+		effect = {
+			if = {
+				limit = { Y13 = { owns = 4868 }  } 
+				add_manpower = -5
+				declare_war_with_cb = {
+					casus_belli = cb_annex
+					who = Y13
+				}
+				Y05 = {
+					add_country_modifier = {
+						name = "anbi_kuhai_Y05_war_buff"
+						duration = 1825
+					}
+					add_manpower = 5
+					join_all_offensive_wars_of = ROOT
+				}
+				set_global_flag = anbi_kuhai_Y05_giving_lands
+			}
+			else = { add_dip_power = -100 } 
+			add_faction_influence = {
+				faction = anbi_lanjin_0
+				influence = 5
+			}
+			set_country_flag = anbi_kuhai_continue_the_blue_war_cf
+			custom_tooltip = anbi_kuhai_continue_the_blue_war_tt
+			custom_tooltip = anbi_kuhai_continue_the_blue_war_tt2
+		}
+	}
+
+	anbi_kuhai_conquer_the_heart_of_yanshen = {
+		icon = mission_develop_nevas_port
+		position = 4
+		required_missions = {
+			anbi_kuhai_continue_the_blue_war
+			anbi_kuhai_the_sisiter_yinquan
+		}
+		provinces_to_highlight = {
+			province_group = original_yanszin
+			NOT = {
+				owned_by = ROOT
+				owned_by = Y05
+			}
+		}
+
+		trigger = {
+			if = {
+				limit = { is_subject = yes } 
+				NOT = { is_subject = yes } 
+			}
+			4868 = { owned_by = Y05 } 
+			original_yanszin = {
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = Y05
+					AND = {
+						owned_by = Y85
+						ROOT = { alliance_with = Y85 } 
+					}
+				}
+			}
+			Y26 = { is_subject_of = ROOT } 
+			alliance_with = Y05
+		}
+
+		effect = {
+			country_event = { id = anbi_kuhai.14 } 
+			custom_tooltip = EVENT_INSIGHT_INTRO
+			custom_tooltip = anbi_kuhai_conquer_the_heart_of_yanshen_tt
+		}
+	}
+
+	anbi_kuhai_the_golden_earth = {
+		icon = mission_wine_monopolies
+		position = 5
+		required_missions = { anbi_kuhai_conquer_the_heart_of_yanshen } 
+		provinces_to_highlight = { is_capital_of = Y05 } 
+
+		trigger = {
+			if = {
+				limit = { is_subject = yes } 
+				NOT = { is_subject = yes } 
+			}
+			has_spy_network_in = {
+				who = Y05
+				value = 30
+			}
+			Y05 = {
+				OR = {
+					has_opinion = {
+						who = ROOT
+						value = 200
+					}
+					trust = {
+						who = ROOT
+						value = 70
+					}
+				}
+			}
+			alliance_with = Y05
+		}
+
+		effect = {
+			add_spy_network_in = {
+				who = Y05
+				value = -30
+			}
+			country_event = {
+				id = anbi_kuhai.10
+				days = 10
+			}
+			custom_tooltip = EVENT_INSIGHT_INTRO
+			custom_tooltip = anbi_kuhai.10_tt
+		}
+	}
+}
+kuhai_start_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+	}
+
+	anbi_kuhai_the_beginning = {
+		icon = mission_che_the_cave_country
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			NOT = { has_disaster = anbi_kuhai_revolution } 
+			stability = 1
+			if = {
+				limit = { is_subject = yes } 
+				NOT = { is_subject = yes } 
+			}
+		}
+
+		effect = {
+			country_event = { id = anbi_kuhai.4 } 
+			custom_tooltip = EVENT_INSIGHT_INTRO
+			custom_tooltip = anbi_kuhai.4_tt
+		}
+	}
+
+	anbi_kuhai_the_shuimu_coast_agreement = {
+		icon = mission_arabian_sea_trade
+		position = 3
+		required_missions = { anbi_kuhai_our_allies } 
+		provinces_to_highlight = { is_capital_of = Y20 } 
+
+		trigger = {
+			Y20 = {
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+			years_of_income = 1
+			if = {
+				limit = { is_subject = yes } 
+				NOT = { is_subject = yes } 
+			}
+			alliance_with = Y20
+			is_at_war = no
+		}
+
+		effect = {
+			add_years_of_income = -1
+			Y20 = {
+				break_alliance = Y24
+				add_trust = {
+					who = Y24
+					value = -100
+				}
+				add_years_of_income = 0.25
+			}
+			Y24 = {
+				add_country_modifier = {
+					name = "anbi_kuhai_Y24_no_ally_buff"
+					duration = 1825
+				}
+			}
+			4882 = { add_permanent_claim = ROOT } 
+			4949 = { add_permanent_claim = ROOT } 
+			4887 = { add_permanent_claim = ROOT } 
+			4890 = { add_permanent_claim = ROOT } 
+			declare_war_with_cb = {
+				casus_belli = cb_annex
+				who = Y24
+			}
+			add_faction_influence = {
+				faction = anbi_feiten_0
+				influence = 5
+			}
+		}
+	}
+
+	anbi_kuhai_the_rich_and_poor = {
+		icon = the_balance_of_power
+		position = 4
+		required_missions = { anbi_kuhai_the_shuimu_coast_agreement } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 4882
+						province_id = 4949
+						province_id = 4887
+						province_id = 4890
+					}
+					NOT = { owned_by = ROOT } 
+				}
+				is_capital_of = Y20
+			}
+		}
+
+		trigger = {
+			if = {
+				limit = { is_subject = yes } 
+				NOT = { is_subject = yes } 
+			}
+			4882 = { owned_by = ROOT } 
+			4949 = { owned_by = ROOT } 
+			4887 = { owned_by = ROOT } 
+			4890 = { owned_by = ROOT } 
+			Y20 = {
+				OR = {
+					has_opinion = {
+						who = ROOT
+						value = 200
+					}
+					trust = {
+						who = ROOT
+						value = 70
+					}
+				}
+				has_spy_network_from = {
+					value = 30
+					who = ROOT
+				}
+			}
+			dip_power = 150
+		}
+
+		effect = {
+			add_dip_power = -150
+			add_spy_network_in = {
+				who = Y20
+				value = -30
+			}
+			country_event = {
+				id = anbi_kuhai.9
+				days = 10
+			}
+			custom_tooltip = EVENT_INSIGHT_INTRO
+			custom_tooltip = anbi_kuhai.9_tt
+		}
+	}
+
+	anbi_kuhai_the_blue_sky = {
+		icon = mission_magic_tower
+		position = 5
+		required_missions = { anbi_kuhai_the_rich_and_poor } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 4879
+					NOT = {
+						AND = {
+							development = 25
+							province_has_center_of_trade_of_level = 2
+						}
+					}
+				}
+				AND = {
+					province_id = 4884
+					NOT = {
+						AND = {
+							development = 15
+							province_has_center_of_trade_of_level = 2
+						}
+					}
+				}
+			}
+		}
+
+		trigger = {
+			if = {
+				limit = { is_subject = yes } 
+				NOT = { is_subject = yes } 
+			}
+			4879 = {
+				development = 20
+				province_has_center_of_trade_of_level = 2
+			}
+			4884 = {
+				development = 15
+				province_has_center_of_trade_of_level = 2
+			}
+			Y20 = {
+				is_subject_of_type_with_overlord = {
+					who = Y27
+					type = twin_empire
+				}
+				has_opinion = {
+					who = ROOT
+					value = 200
+				}
+			}
+		}
+
+		effect = {
+			inherit = Y20
+			tooltip = {
+				change_tag_and_keep_color = { tag = Y20 } 
+				hidden_effect = { save_global_event_target_as = kuhai_or_was_kuhai_target } 
+				override_country_name = "Y27_Y20_united_states"
+				anbi_add_kuhai_blue_var = yes
+			}
+			hidden_effect = { country_event = { id = anbi_kuhai.23 }  } 
+		}
+	}
+
+	anbi_kuhai_found_yanshen_in_yanshen = {
+		icon = mission_tianlou
+		position = 6
+		required_missions = {
+			anbi_kuhai_the_blue_sky
+			anbi_kuhai_the_golden_earth
+			anbi_kuhai_the_purple_ocean
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 4871
+					NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				}
+				AND = {
+					province_id = 4859
+					NOT = {
+						AND = {
+							development = 30
+							province_has_center_of_trade_of_level = 3
+						}
+					}
+				}
+			}
+		}
+
+		trigger = {
+			if = {
+				limit = { is_subject = yes } 
+				NOT = { is_subject = yes } 
+			}
+			NOT = { exists = Y19 } 
+			4871 = { country_or_non_sovereign_subject_holds = ROOT } 
+			capital = 4859
+			capital_scope = {
+				development = 30
+				province_has_center_of_trade_of_level = 3
+			}
+		}
+
+		effect = { country_event = { id = anbi_kuhai.16 }  } 
+	}
+}
+kuhai_start_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+	}
+
+	anbi_kuhai_kill_the_eunuch = {
+		icon = mission_captured
+		position = 2
+		required_missions = { anbi_kuhai_the_beginning } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			NOT = {
+				average_unrest = 1
+				num_of_rebel_armies = 1
+				num_of_rebel_controlled_provinces = 1
+			}
+			stability = 3
+			if = {
+				limit = { is_subject = yes } 
+				NOT = { is_subject = yes } 
+			}
+		}
+
+		effect = {
+			add_stability = -1
+			country_event = { id = anbi_kuhai.6 } 
+			custom_tooltip = EVENT_INSIGHT_INTRO
+			custom_tooltip = anbi_kuhai.6_tt
+		}
+	}
+
+	anbi_kuhai_unity_of_killing_eunuch = {
+		icon = mission_dominate_home_trade_node
+		position = 4
+		required_missions = { anbi_kuhai_found_formal_government } 
+		provinces_to_highlight = { is_capital_of = Y15 } 
+
+		trigger = {
+			if = {
+				limit = { is_subject = yes } 
+				NOT = { is_subject = yes } 
+			}
+			OR = {
+				is_rival = Y15
+				AND = {
+					Y15 = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					alliance_with = Y15
+					dip_power = 50
+				}
+				Y15 = { is_subject_of = ROOT } 
+				Y15 = {
+					is_subject = yes
+					NOT = { is_subject_of = ROOT } 
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				NOT = { exists = Y15 } 
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_kuhai_unity_of_killing_eunuch_ct
+			if = {
+				limit = {
+					OR = {
+						is_rival = Y15
+						Y15 = { is_rival = ROOT } 
+					}
+				}
+				force_remove_rival = Y15
+				add_historical_friend = Y15
+				Y15 = {
+					add_historical_friend = ROOT
+					force_remove_rival = ROOT
+					create_alliance = ROOT
+				}
+			}
+			else_if = {
+				limit = {
+					Y15 = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					alliance_with = Y15
+					dip_power = 50
+				}
+				add_dip_power = -50
+				Y15 = {
+					add_trust = {
+						who = ROOT
+						value = 10
+					}
+				}
+				add_favors = {
+					who = Y15
+					amount = 10
+				}
+			}
+			else_if = {
+				limit = {
+					is_subject = yes
+					NOT = { is_subject_of = ROOT } 
+				}
+				Y15 = {
+					overlord = { save_event_target_as = anbi_kuhai_Y15_independce_target } 
+					declare_war_with_cb = {
+						casus_belli = cb_independence_war
+						who = event_target:anbi_kuhai_Y15_independce_target
+					}
+				}
+				join_all_offensive_wars_of = Y15
+			}
+			else_if = {
+				limit = { Y15 = { is_subject_of = ROOT }  } 
+				Y15 = {
+					add_trust = {
+						who = ROOT
+						value = 10
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = released_vassal
+					}
+				}
+			}
+			else_if = {
+				limit = { NOT = { exists = Y15 }  } 
+				add_dip_power = 100
+				set_country_flag = Y15
+			}
+			Y15 = { set_country_flag = anbi_kuhai_the_action_cooldown } 
+		}
+	}
+
+	anbi_kuhai_the_purple_ocean = {
+		icon = mission_galleys_in_port
+		position = 5
+		required_missions = { anbi_kuhai_unity_of_killing_eunuch } 
+		provinces_to_highlight = { is_capital_of = Y15 } 
+
+		trigger = {
+			if = {
+				limit = { is_subject = yes } 
+				NOT = { is_subject = yes } 
+			}
+			alliance_with = Y15
+			Y15 = {
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+			1372 = {
+				trade_share = {
+					country = ROOT
+					share = 30
+				}
+			}
+			dip_power = 100
+			years_of_income = 0.5
+		}
+
+		effect = {
+			country_event = { id = anbi_kuhai.15 } 
+			custom_tooltip = EVENT_INSIGHT_INTRO
+			custom_tooltip = anbi_kuhai_the_purple_ocean_tt
+		}
+	}
+}
+kuhai_start_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+	}
+
+	anbi_kuhai_found_formal_government = {
+		icon = mission_court_education
+		position = 3
+		required_missions = { anbi_kuhai_kill_the_eunuch } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			reform_level = 3
+			grown_by_development = 30
+			NOT = {
+				faction_influence = {
+					faction = anbi_feiten_0
+					influence = 60
+				}
+				faction_influence = {
+					faction = anbi_lanjin_0
+					influence = 60
+				}
+				faction_influence = {
+					faction = anbi_yinquan_0
+					influence = 60
+				}
+			}
+		}
+
+		effect = {
+			add_government_reform = anbi_kuhai_new_republic
+			every_owned_province = { add_local_autonomy = -25 } 
+		}
+	}
+}
+kuhai_second_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+		has_country_flag = the_greatest_yanshen_founded
+	}
+
+	anbi_kuhai_unite_the_left_way = {
+		icon = mission_dual_diplomacy
+		position = 6
+		required_missions = { anbi_kuhai_the_gold_dragon_faith } 
+		provinces_to_highlight = {
+			OR = {
+				religion = devouring_path
+				province_id = 4842
+			}
+		}
+
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 10
+					religion = devouring_path
+					is_core = ROOT
+				}
+				4842 = {
+					has_seat_in_parliament = yes
+					development = 30
+					NOT = { nationalism = 1 } 
+				}
+			}
+		}
+
+		effect = { country_event = { id = anbi_kuhai.19 }  } 
+	}
+
+	anbi_kuhai_the_quetion_of_temple = {
+		icon = mission_dark_book
+		position = 8
+		required_missions = { anbi_kuhai_unite_the_left_way } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				has_temple_complex = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				religion_group = raheni
+			}
+			num_of_owned_provinces_with = {
+				value = 50
+				religion = zhengdao_path
+			}
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+			custom_trigger_tooltip = {
+				tooltip = anbi_kuhai_has_two_university_ctt
+				university = 2
+			}
+		}
+
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			country_event = { id = anbi_kuhai.22 } 
+		}
+	}
+
+	anbi_kuhai_rending_and_dragon = {
+		icon = mission_lotus_flower
+		position = 10
+		required_missions = { anbi_kuhai_the_quetion_of_temple } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			accepted_culture = goldscale_kobold
+			manpower = 25
+			years_of_income = 1
+			yanshen_superregion = {
+				type = all
+				OR = {
+					is_city = no
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+
+		effect = {
+			add_manpower = -25
+			add_years_of_income = -1
+			demon_hills_region = {
+				limit = { culture_is_human = no } 
+				change_religion = ROOT
+				change_culture = beikling
+			}
+			custom_tooltip = anbi_kuhai_rending_and_dragon_tt
+			hidden_effect = {
+				country_event = {
+					id = anbi_kuhai.50
+					days = 365
+				}
+			}
+		}
+	}
+}
+kuhai_second_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+		has_country_flag = the_greatest_yanshen_founded
+	}
+
+	anbi_kuhai_purple_whaling = {
+		icon = mission_fleet
+		position = 7
+		required_missions = { anbi_kuhai_found_yanshen_in_yanshen } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				AND = {
+					has_idea_group = exploration_ideas
+					exploration_ideas = 2
+				}
+				AND = {
+					has_idea_group = expansion_ideas
+					expansion_ideas = 2
+				}
+				dip_power = 600
+			}
+			4879 = {
+				has_dock_building_trigger = yes
+				development = 25
+			}
+			4907 = {
+				has_dock_building_trigger = yes
+				development = 25
+			}
+			has_institution = renaissance
+		}
+
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						AND = {
+							has_idea_group = exploration_ideas
+							has_idea = colonial_ventures
+						}
+						AND = {
+							has_idea_group = expansion_ideas
+							expansion_ideas = 2
+						}
+					}
+				}
+				add_dip_power = -600
+			}
+			add_country_modifier = {
+				name = "anbi_kuhai_purple_whaling_buff"
+				duration = 18250
+			}
+			country_event = { id = flavor_beikdugang.3 } 
+			tooltip = {
+				define_explorer = {
+					shock = 4
+					fire = 4
+					manuever = 6
+					siege = 3
+					name = "Houzhao Targuun"
+					trait = accomplished_sailor_personality
+				}
+			}
+			6147 = { add_permanent_claim = ROOT } 
+			6512 = { add_permanent_claim = ROOT } 
+			6511 = { add_permanent_claim = ROOT } 
+			4990 = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	anbi_kuhai_conquer_the_plain = {
+		icon = mission_faceless_queen
+		position = 8
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			kheizavho_area = {
+				type = all
+				owned_by = ROOT
+			}
+			choogiaza_area = {
+				type = all
+				owned_by = ROOT
+			}
+			yunghuun_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+
+		effect = {
+			shuvuushudi_region = { add_permanent_claim = ROOT } 
+			gowon_region = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	anbi_kuhai_the_republic_state = {
+		icon = mission_science
+		position = 10
+		required_missions = {
+			anbi_kuhai_conquer_the_plain
+			anbi_kuhai_kill_the_command
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			NOT = { exists = R62 } 
+			republican_tradition = 90
+			reform_level = 6
+			government_reform_progress = 100
+			num_of_owned_provinces_with = {
+				value = 35
+				has_seat_in_parliament = yes
+			}
+			diplomatic_reputation = 5
+		}
+
+		effect = {
+			add_government_reform = anbi_kuhai_the_republican_beacon
+			custom_tooltip = anbi_kuhai_the_republic_state_ct
+			every_country = {
+				limit = { has_country_flag = anbi_kuhai_republican_subject_state_cf } 
+				change_government = republic
+				ROOT = {
+					create_subject = {
+						subject_type = anbi_kuhai_republican_subject_state
+						who = PREV
+					}
+				}
+			}
+			every_subject_country = {
+				limit = {
+					all_owned_province = { has_province_modifier = rightful_xia_territory } 
+					is_subject_of_type_with_overlord = {
+						who = Z65
+						type = anbi_kuhai_republican_subject_state
+					}
+				}
+				ROOT = { inherit = PREV } 
+			}
+			custom_tooltip = anbi_kuhai_the_republic_state_ct2
+		}
+	}
+}
+kuhai_second_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+		has_country_flag = the_greatest_yanshen_founded
+	}
+
+	anbi_kuhai_shuimu_artfice = {
+		icon = mission_balloon
+		position = 7
+		required_missions = { anbi_kuhai_found_yanshen_in_yanshen } 
+		provinces_to_highlight = {
+			NOT = { has_tax_building_trigger = yes } 
+			superregion = yanshen_superregion
+			owned_by = ROOT
+		}
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_kuhai_shuimu_artfice_ctt
+				has_estate = estate_artificers
+			}
+			custom_trigger_tooltip = {
+				tooltip = anbi_kuhai_shuimu_artfice_ctt2
+				mission_completed = anbi_kuhai_the_mage_education
+			}
+			stability = 3
+			estate_loyalty = {
+				estate = estate_artificers
+				loyalty = 50
+			}
+			num_of_owned_provinces_with = {
+				value = 25
+				has_tax_building_trigger = yes
+				superregion = yanshen_superregion
+			}
+		}
+
+		effect = {
+			add_stability = -1
+			add_estate_loyalty = {
+				estate = estate_artificers
+				loyalty = -20
+			}
+			artifice_magic_switch_to_mixed_mode = yes
+			custom_tooltip = anbi_kuhai_shuimu_artfice_ct
+			set_country_flag = orlghelovar_science_mages_privilege
+			hidden_effect = {
+				country_event = {
+					id = anbi_kuhai.1016
+					days = 3
+				}
+			}
+		}
+	}
+
+	anbi_kuhai_the_explore_and_researching = {
+		icon = mission_arabian_ports
+		position = 8
+		required_missions = {
+			anbi_kuhai_shuimu_artfice
+			anbi_kuhai_purple_whaling
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 6147
+						province_id = 4990
+					}
+					NOT = {
+						AND = {
+							has_dock_building_trigger = yes
+							has_production_or_gold_building_trigger = yes
+							development = 10
+						}
+					}
+				}
+				AND = {
+					province_id = 6512
+					NOT = {
+						AND = {
+							has_building = mage_tower
+							has_dock_building_trigger = yes
+							has_shipyard_building_trigger = yes
+							development = 10
+						}
+					}
+				}
+				AND = {
+					province_id = 6511
+					NOT = {
+						AND = {
+							has_dock_building_trigger = yes
+							has_shipyard_building_trigger = yes
+							development = 10
+						}
+					}
+				}
+			}
+		}
+
+		trigger = {
+			6147 = {
+				has_dock_building_trigger = yes
+				has_production_or_gold_building_trigger = yes
+				development = 10
+			}
+			6512 = {
+				has_building = mage_tower
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+				development = 10
+			}
+			6511 = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+				development = 10
+			}
+			4990 = {
+				has_dock_building_trigger = yes
+				has_production_or_gold_building_trigger = yes
+				development = 10
+			}
+			dip_power = 100
+			treasury = 1000
+		}
+
+		effect = {
+			add_dip_power = -100
+			add_treasury = -1000
+			6512 = {
+				add_permanent_province_modifier = {
+					name = "Y15_north_lighthouse"
+					duration = -1
+				}
+				add_permanent_province_modifier = {
+					name = "feiten_whaling_base_bountiful"
+					duration = -1
+				}
+				change_trade_goods = fish
+			}
+			6511 = {
+				add_permanent_province_modifier = {
+					name = "feiten_whaling_base_bountiful"
+					duration = -1
+				}
+				change_trade_goods = fish
+			}
+			4990 = {
+				add_permanent_province_modifier = {
+					name = "feiten_whaling_base_bountiful"
+					duration = -1
+				}
+				change_trade_goods = fish
+			}
+			6147 = {
+				add_permanent_province_modifier = {
+					name = "feiten_whaling_base_bountiful"
+					duration = -1
+				}
+				change_trade_goods = fish
+			}
+			eordand_superregion = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	anbi_kuhai_the_world_is_ours = {
+		icon = mission_holy_star
+		position = 9
+		required_missions = { anbi_kuhai_the_explore_and_researching } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				capital_scope = { colonial_region = colonial_eordand } 
+				total_development = 200
+				has_opinion = {
+					who = ROOT
+					value = 190
+				}
+				NOT = { liberty_desire = 25 } 
+			}
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				capital_scope = { colonial_region = colonial_haraf } 
+				num_of_cities = 10
+				has_opinion = {
+					who = ROOT
+					value = 190
+				}
+				NOT = { liberty_desire = 25 } 
+			}
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				capital_scope = { colonial_region = colonial_broken_sea } 
+				num_of_cities = 10
+				has_opinion = {
+					who = ROOT
+					value = 190
+				}
+				NOT = { liberty_desire = 25 } 
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_kuhai_the_world_is_ours_ct3
+			hidden_effect = {
+				ynn_superregion = { add_permanent_claim = ROOT } 
+				eordand_superregion = { add_permanent_claim = ROOT } 
+				broken_lands_superregion = { add_permanent_claim = ROOT } 
+				haraf_region = { add_permanent_claim = ROOT } 
+				guardian_islands_area = { add_permanent_claim = ROOT } 
+				ruin_proper_superregion = { add_permanent_claim = ROOT } 
+			}
+			set_country_flag = anbi_kuhai_the_world_is_ours_cf
+			custom_tooltip = anbi_kuhai_the_world_is_ours_ct
+			tooltip = {
+				add_country_modifier = {
+					name = "anbi_kuhai_the_world_is_ours_buff"
+					duration = -1
+				}
+			}
+			custom_tooltip = anbi_kuhai_the_world_is_ours_ct2
+		}
+	}
+
+	anbi_kuhai_open_eyes = {
+		icon = mission_star_ascendency
+		position = 11
+		required_missions = {
+			anbi_kuhai_the_republic_state
+			anbi_kuhai_rending_and_dragon
+			anbi_kuhai_yanshen_is_haless
+			anbi_kuhai_the_world_is_ours
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_kuhai_laoxiangbao_argeement_ct
+				has_country_flag = anbi_kuhai_laoxiangbao_argeement_cf
+			}
+			custom_trigger_tooltip = {
+				tooltip = anbi_kuhai_hiderion_ct
+				has_country_flag = anbi_kuhai_hiderion_cf
+			}
+			custom_trigger_tooltip = {
+				tooltip = anbi_kuhai_deal_with_hobgoblin_ct
+				has_country_flag = anbi_kuhai_deal_with_hobgoblin_cf
+			}
+			custom_trigger_tooltip = {
+				tooltip = anbi_kuhai_arawkelin_trade_ct
+				has_country_flag = anbi_kuhai_arawkelin_trade_cf
+			}
+			custom_trigger_tooltip = {
+				tooltip = anbi_kuhai_abolish_caste_system_ct
+				has_country_flag = anbi_kuhai_abolish_caste_system_cf
+			}
+			custom_trigger_tooltip = {
+				tooltip = anbi_kuhai_abolish_slave_system_ct
+				has_country_flag = anbi_kuhai_abolish_slave_system_cf
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 200
+				continent = north_america
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 300
+				culture_group = yan
+			}
+			monthly_mil = 12
+			monthly_adm = 12
+			monthly_dip = 12
+		}
+
+		effect = {
+			custom_tooltip = anbi_kuhai_open_eyes_tt
+			hidden_effect = {
+				africa = { discover_country = ROOT } 
+				europe = { discover_country = ROOT } 
+				north_america = { discover_country = ROOT } 
+				south_america = { discover_country = ROOT } 
+				north_uelos_lament_ocean_region = { discover_country = ROOT } 
+				south_uelos_lament_ocean_region = { discover_country = ROOT } 
+				ruined_sea_region = { discover_country = ROOT } 
+				north_ocean_of_the_lost_region = { discover_country = ROOT } 
+				south_ocean_of_the_lost_region = { discover_country = ROOT } 
+				dameshead_sea_region = { discover_country = ROOT } 
+				giants_grave_sea_region = { discover_country = ROOT } 
+				divenhal_sea_region = { discover_country = ROOT } 
+				westcoast_region = { discover_country = ROOT } 
+				northern_thaw_region = { discover_country = ROOT } 
+				calamity_pass_region = { discover_country = ROOT } 
+				torn_sea_region = { discover_country = ROOT } 
+				outer_torn_sea_region = { discover_country = ROOT } 
+				northeast_haless_coast_region = { discover_country = ROOT } 
+				ringlet_sea_region = { discover_country = ROOT } 
+				gulf_of_rahen_region = { discover_country = ROOT } 
+				punctured_coast_region = { discover_country = ROOT } 
+				south_sarhal_coast_region = { discover_country = ROOT } 
+				west_salahad_coast_region = { discover_country = ROOT } 
+				broken_sea_region = { discover_country = ROOT } 
+				western_broken_sea_region = { discover_country = ROOT } 
+				west_aelantir_coast_region = { discover_country = ROOT } 
+				cleaved_sea_coast_region = { discover_country = ROOT } 
+				southeast_aelantir_coast_region = { discover_country = ROOT } 
+				north_aelantir_coast_region = { discover_country = ROOT } 
+			}
+			hidden_effect = {
+				country_event = {
+					id = anbi_kuhai.25
+					days = 10
+				}
+			}
+		}
+	}
+}
+kuhai_second_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+		has_country_flag = the_greatest_yanshen_founded
+	}
+
+	anbi_kuhai_no_monarch_no_god = {
+		icon = give_him_back_his_legions
+		position = 7
+		required_missions = { anbi_kuhai_found_yanshen_in_yanshen } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			republican_tradition = 90
+			num_of_owned_provinces_with = {
+				value = 50
+				religion_group = halessi
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				religion = high_philosophy
+			}
+			reform_level = 4
+			government_reform_progress = 100
+		}
+
+		effect = {
+			change_religion = zhengdao_path
+			custom_tooltip = anbi_kuhai_no_monarch_no_god_tt
+			change_government_reform_progress = -100
+			add_government_reform = anbi_kuhai_zhengdao_path_department
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							religion = accretive_path
+							religion = transmutative_path
+						}
+					}
+					change_religion = zhengdao_path
+				}
+			}
+		}
+	}
+
+	anbi_kuhai_defend_hobgoblin = {
+		icon = mission_build_up_to_force_limit
+		position = 8
+		required_missions = {
+			anbi_hukai_yanshen_parliament
+			anbi_kuhai_no_monarch_no_god
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			4826 = {
+				owned_by = ROOT
+				has_seat_in_parliament = yes
+				province_has_current_tech_fort_trigger = yes
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = anbi_kuhai_defend_hobgoblin_ctt
+					NOT = {
+						num_of_owned_provinces_with = {
+							value = 3
+							is_neighbor_of = R62
+						}
+					}
+				}
+				num_of_owned_provinces_with = {
+					value = 3
+					is_neighbor_of = R62
+					province_has_current_tech_fort_trigger = yes
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				has_seat_in_parliament = yes
+			}
+			republican_tradition = 80
+		}
+
+		effect = {
+			custom_tooltip = anbi_kuhai_defend_hobgoblin_ct
+			tooltip = {
+				random_owned_province = {
+					limit = { has_terrain = city_terrain } 
+					add_province_modifier = {
+						name = "anbi_kuhai_defend_hobgoblin_buff"
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = anbi_kuhai_defend_hobgoblin_ct2
+			tooltip = {
+				random_owned_province = {
+					limit = { NOT = { has_terrain = city_terrain }  } 
+					add_province_modifier = {
+						name = "anbi_kuhai_defend_hobgoblin_buff2"
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = { has_terrain = city_terrain } 
+					add_province_modifier = {
+						name = "anbi_kuhai_defend_hobgoblin_buff"
+						duration = -1
+					}
+				}
+				every_owned_province = {
+					limit = { NOT = { has_terrain = city_terrain }  } 
+					add_province_modifier = {
+						name = "anbi_kuhai_defend_hobgoblin_buff2"
+						duration = -1
+					}
+				}
+			}
+			custom_tooltip = anbi_kuhai_defend_hobgoblin_ct3
+			add_country_modifier = {
+				name = "anbi_kuhai_defend_hobgoblin_buff_country"
+				duration = -1
+			}
+		}
+	}
+
+	anbi_kuhai_kill_the_command = {
+		icon = mission_beautiful_hobgoblin_stache
+		position = 9
+		required_missions = { anbi_kuhai_defend_hobgoblin } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			years_of_income = 1
+			manpower_percentage = 0.75
+			republican_tradition = 75
+			stability = 3
+		}
+
+		effect = {
+			add_years_of_income = -1
+			custom_tooltip = anbi_kuhai_kill_the_command_ct
+			set_country_flag = anbi_kuhai_kill_the_command_cf
+			enact_issue = anbi_kukai_war_with_hobgoblin
+		}
+	}
+
+	anbi_kuhai_yanshen_is_haless = {
+		icon = mission_haless_map
+		position = 10
+		required_missions = {
+			anbi_kuhai_the_xia_bro
+			anbi_kuhai_kill_the_command
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4879
+				province_id = 4896
+				province_id = 4907
+				province_id = 4930
+				province_id = 4931
+				province_id = 4826
+				province_id = 4839
+				province_id = 4871
+				province_id = 4914
+				province_id = 4868
+				province_id = 4925
+				province_id = 4861
+				province_id = 4859
+				province_id = 4849
+				province_id = 4869
+			}
+			NOT = { development = 30 } 
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 35
+				has_seat_in_parliament = yes
+			}
+			accepted_culture = serene_harimari
+			accepted_culture = goldscale_kobold
+			accepted_culture = pezarangi_harpy
+			custom_trigger_tooltip = {
+				tooltip = anbi_kuhai_yanshen_is_haless_ctt
+				4879 = { development = 30 } 
+				4896 = { development = 30 } 
+				4907 = { development = 30 } 
+				4930 = { development = 30 } 
+				4931 = { development = 30 } 
+				4826 = { development = 30 } 
+				4839 = { development = 30 } 
+				4871 = { development = 30 } 
+				4914 = { development = 30 } 
+				4868 = { development = 30 } 
+				4925 = { development = 30 } 
+				4861 = { development = 30 } 
+				4859 = { development = 30 } 
+				4849 = { development = 30 } 
+				4869 = { development = 30 } 
+			}
+			development_in_provinces = {
+				value = 1000
+				culture_group = yan
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_kuhai_yanshen_is_haless_ct
+			set_country_flag = anbi_kuhai_yanshen_is_haless_cf
+			add_country_modifier = {
+				name = "anbi_kuhai_yanshen_is_haless_buff"
+				duration = 36500
+			}
+		}
+	}
+}
+kuhai_second_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+		has_country_flag = the_greatest_yanshen_founded
+	}
+
+	anbi_hukai_yanshen_parliament = {
+		icon = mission_rb_monopolize_the_channel
+		position = 7
+		required_missions = { anbi_kuhai_found_formal_government } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					superregion = yanshen_superregion
+					has_terrain = city_terrain
+					NOT = { owned_by = ROOT } 
+				}
+				AND = {
+					superregion = yanshen_superregion
+					owned_by = ROOT
+					NOT = {
+						has_terrain = city_terrain
+						development = 20
+					}
+				}
+			}
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				superregion = yanshen_superregion
+				has_terrain = city_terrain
+				is_state = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				superregion = yanshen_superregion
+				development = 20
+				NOT = { has_terrain = city_terrain } 
+				is_state = yes
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_hukai_yanshen_parliament_tt
+			set_country_flag = G54_no_rotten_borough_flag
+			add_government_reform = anbi_kuhai_yanshen_parliament
+			country_event = { id = anbi_kuhai.1005 } 
+		}
+	}
+
+	anbi_kuhai_the_xia_bro = {
+		icon = kingdom_of_heaven
+		position = 9
+		required_missions = { anbi_hukai_yanshen_parliament } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				has_province_modifier = rightful_xia_territory
+			}
+			republican_tradition = 80
+			estate_loyalty = {
+				estate = estate_adventurers
+				loyalty = 60
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_kuhai_the_xia_bro_ct
+			hidden_effect = {
+				every_province = {
+					limit = {
+						culture_is_human = yes
+						has_province_modifier = rightful_xia_territory
+					}
+					change_culture = szitu
+				}
+			}
+			add_estate_loyalty = {
+				estate = estate_adventurers
+				loyalty = -10
+			}
+			set_estate_privilege = anbi_kuhai_xia_bro_privilege
+			custom_tooltip = anbi_kuhai_the_xia_bro_tt
+			add_accepted_culture_or_dip_power = { culture = goldscale_kobold } 
+			add_accepted_culture_or_dip_power = { culture = serene_harimari } 
+			add_accepted_culture_or_dip_power = { culture = pezarangi_harpy } 
+		}
+	}
+}
+kuhai_last_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+		has_country_flag = the_greatest_yanshen_founded
+		has_country_flag = the_greatest_yanshen_prepare
+	}
+
+	anbi_kuhai_the_rending_coming = {
+		icon = mission_mushroom_cloud
+		position = 12
+		required_missions = { anbi_kuhai_open_eyes } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			manpower = 250
+			treasury = 25000
+			stability = 3
+			adm_power = 200
+			dip_power = 200
+			mil_power = 200
+			temple_province_group = {
+				country_or_subject_holds = ROOT
+			}
+		}
+
+		effect = {
+			add_manpower = -250
+			add_treasury = -25000
+			add_stability = -2
+			add_adm_power = -200
+			add_dip_power = -200
+			add_mil_power = -200
+			custom_tooltip = anbi_kuhai_the_rending_coming_tt
+			hidden_effect = {
+				country_event = {
+					id = anbi_kuhai.1012
+					days = 1825
+				}
+			}
+		}
+	}
+
+	anbi_the_rending_is_over = {
+		icon = mission_rebirth_of_our_saviour
+		position = 14
+		required_missions = { anbi_kuhai_the_rending_coming } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5406
+				province_id = 4925
+				province_id = 5356
+			}
+		}
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_kuhai_rending_over
+				has_global_flag = rending_over
+			}
+			5406 = {
+				religion = ROOT
+				culture_group = yan
+				development = 40
+				num_of_times_expanded_infrastructure = 2
+				province_has_center_of_trade_of_level = 3
+			}
+			4925 = {
+				religion = ROOT
+				development = 40
+				num_of_times_expanded_infrastructure = 2
+				province_has_center_of_trade_of_level = 3
+			}
+			5356 = {
+				religion = ROOT
+				development = 40
+				num_of_times_expanded_infrastructure = 2
+				province_has_center_of_trade_of_level = 3
+			}
+			religious_unity = 1
+			monthly_income = 1000
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "anbi_the_rending_is_over_buff"
+				duration = 7300
+			}
+			5406 = { set_province_flag = anbi_the_resurgence_huangke_a_flag } 
+			4925 = { set_province_flag = anbi_the_resurgence_huangke_b_flag } 
+			5356 = { set_province_flag = anbi_the_resurgence_huangke_c_flag } 
+		}
+	}
+}
+kuhai_last_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+		has_country_flag = the_greatest_yanshen_founded
+		has_country_flag = the_greatest_yanshen_prepare
+	}
+
+	anbi_kuhai_the_light_of_laker = {
+		icon = mission_retake_ceuta
+		position = 13
+		required_missions = { anbi_kuhai_the_lignt_from_east } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 250
+				superregion = forbidden_lands_superregion
+			}
+			J33 = {
+				culture_group = yan
+				religion = zhengdao_path
+				is_subject_of = ROOT
+				NOT = { liberty_desire = 1 } 
+			}
+		}
+
+		effect = {
+			add_revolutionary_zeal = 25
+			custom_tooltip = anbi_kuhai_the_light_of_laker_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						superregion = forbidden_lands_superregion
+						NOT = { owned_by = J33 } 
+					}
+					add_core = J33
+					cede_province = J33
+				}
+			}
+		}
+	}
+}
+kuhai_last_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+		has_country_flag = the_greatest_yanshen_founded
+		has_country_flag = the_greatest_yanshen_prepare
+	}
+
+	anbi_kuhai_the_lignt_from_east = {
+		icon = mission_new_dawn
+		position = 12
+		required_missions = { anbi_kuhai_open_eyes } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			reform_level = 10
+			government_reform_progress = 100
+			is_hegemon = yes
+			J33 = { is_subject_of = ROOT } 
+			republican_tradition = 100
+		}
+
+		effect = {
+			change_government_reform_progress = -100
+			add_government_reform = anbi_kuhai_the_light_from_east
+			hidden_effect = {
+				random_country = {
+					limit = {
+						has_country_flag = anbi_kuhai_is_B05
+					}
+					country_event = {
+						id = anbi_kuhai.28
+						days = 180
+					}
+				}
+			}
+		}
+	}
+
+	anbi_kuhai_the_light_of_brain = {
+		icon = mission_writing_book
+		position = 13
+		required_missions = { anbi_kuhai_the_lignt_from_east } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				university = 10
+				innovativeness = 50
+			}
+			revolutionary_zeal = 50
+			J33 = {
+				culture_group = yan
+				religion = zhengdao_path
+				is_subject_of = ROOT
+				NOT = { liberty_desire = 1 } 
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "anbi_kuhai_the_light_of_brain_buff"
+				duration = -1
+			}
+			J33 = {
+				add_government_reform = anbi_kuhai_revolution_twin_republic
+				add_country_modifier = {
+					name = "anbi_kuhai_the_light_of_brain_buff"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	anbi_the_great_war = {
+		icon = mission_heated_battle
+		position = 15
+		required_missions = {
+			anbi_kuhai_the_light_of_revolution
+			anbi_the_rending_is_over
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			mission_completed = anbi_kuhai_the_yanshen_unity_and_great
+			manpower_percentage = 0.9
+			monthly_income = 2000
+			army_size = 1000
+		}
+
+		effect = {
+			custom_tooltip = anbi_the_great_war_tt
+			set_global_flag = anbi_kuhai_the_great_war
+			random_country = {
+				limit = {
+					has_country_flag = anbi_kuhai_is_B05
+				}
+				save_global_event_target_as = anbi_kuhai_is_B05_target
+			}
+			random_country = {
+				limit = {
+					has_country_flag = anbi_kuhai_is_F46
+				}
+				save_global_event_target_as = anbi_kuhai_is_F46_target
+			}
+			random_country = {
+				limit = {
+					has_country_flag = anbi_kuhai_is_G52
+				}
+				save_global_event_target_as = anbi_kuhai_is_G52_target
+			}
+			declare_war_with_cb = {
+				casus_belli = cb_anbi_kuhai_anti_imperialism
+				who = event_target:anbi_kuhai_is_G52_target
+			}
+			declare_war_with_cb = {
+				casus_belli = cb_anbi_kuhai_anti_imperialism
+				who = event_target:anbi_kuhai_is_F46_target
+			}
+			declare_war_with_cb = {
+				casus_belli = cb_anbi_kuhai_anti_imperialism
+				who = event_target:anbi_kuhai_is_B05_target
+			}
+			hidden_effect = {
+				event_target:anbi_kuhai_is_G52_target = { every_ally = { break_alliance = PREV }  } 
+				event_target:anbi_kuhai_is_F46_target = { every_ally = { break_alliance = PREV }  } 
+				event_target:anbi_kuhai_is_B05_target = { every_ally = { break_alliance = PREV }  } 
+				country_event = {
+					id = anbi_kuhai.10006
+					days = 1
+				}
+			}
+		}
+	}
+}
+kuhai_last_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+		has_country_flag = the_greatest_yanshen_founded
+		has_country_flag = the_greatest_yanshen_prepare
+	}
+
+	anbi_kuhai_the_light_of_alentir = {
+		icon = the_glorious_revolution
+		position = 13
+		required_missions = { anbi_kuhai_the_lignt_from_east } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			prestige = 90
+			revolutionary_zeal = 25
+			calc_true_if = {
+				amount = 6
+				all_subject_country = {
+					is_colonial_nation_of = ROOT
+					capital_scope = { continent = north_america } 
+					total_development = 300
+				}
+			}
+		}
+
+		effect = {
+			add_revolutionary_zeal = 25
+			custom_tooltip = anbi_kuhai_the_light_of_alentir_tt
+			every_country = {
+				limit = {
+					capital_scope = { continent = north_america } 
+					is_subject = no
+				}
+				every_subject_country = {
+					grant_independence = yes
+				}
+			}
+			every_country = {
+				limit = {
+					capital_scope = { continent = north_america } 
+					is_subject = no
+				}
+				change_government = republic
+				ROOT = {
+					create_subject = {
+						subject_type = anbi_kuhai_republican_subject_state
+						who = PREV
+					}
+				}
+			}
+		}
+	}
+}
+kuhai_last_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+		has_country_flag = the_greatest_yanshen_founded
+		has_country_flag = the_greatest_yanshen_prepare
+	}
+
+	anbi_kuhai_the_light_of_revolution = {
+		icon = french_revolution
+		position = 14
+		required_missions = {
+			anbi_kuhai_the_light_of_brain
+			anbi_kuhai_the_light_of_alentir
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					continent = asia
+					NOT = { country_or_subject_holds = ROOT } 
+				}
+				AND = {
+					is_capital = yes
+					owner = {
+						is_subject_of = ROOT
+						liberty_desire = 25
+					}
+				}
+			}
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 1000
+				continent = asia
+			}
+			all_subject_country = { NOT = { liberty_desire = 25 }  } 
+			revolutionary_zeal = 80
+			dip_power = 300
+		}
+
+		effect = {
+			add_dip_power = -300
+			custom_tooltip = anbi_kuhai_the_light_of_revolution_tt
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						capital_scope = { continent = north_america } 
+						NOT = { is_colonial_nation_of = ROOT } 
+					}
+					ROOT = { inherit = PREV } 
+				}
+			}
+		}
+	}
+}
+kuhai_the_victory_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+		has_country_flag = the_greatest_yanshen_founded
+		has_country_flag = the_greatest_yanshen_prepare
+		has_country_flag = the_greatest_yanshen_end
+	}
+
+	anbi_kuhai_the_anbennar_cannor = {
+		icon = mission_lencenor
+		position = 17
+		required_missions = { anbi_kuhai_the_yanzhong_treaty } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+		} 
+
+		effect = {  
+			custom_tooltip = anbi_kuhai_the_anbennar_cannor_tt
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			hidden_effect = {
+				the_borders_region = {
+					limit = {
+						NOT = {
+							owned_by = Z01
+						}
+					}
+					add_core = Z01
+					cede_province = Z01
+				}
+				forlorn_vale_region = {
+					limit = {
+						NOT = {
+							owned_by = Z01
+						}
+					}
+					add_core = Z01
+					cede_province = Z01
+				}
+				east_dameshead_region = {
+					limit = {
+						NOT = {
+							owned_by = Z01
+						}
+					}
+					add_core = Z01
+					cede_province = Z01
+				}
+				west_dameshead_region = {
+					limit = {
+						NOT = {
+							owned_by = Z01
+						}
+					}
+					add_core = Z01
+					cede_province = Z01
+				}
+				damescrown_region = {
+					add_core = Z01
+					cede_province = Z01
+				}
+				businor_region = {
+					add_core = Z01
+					cede_province = Z01
+				}
+				country_event = {
+					id = anbi_kuhai.10016
+					days = 30
+				}
+				every_country = {
+					limit = {
+						capital_scope = {
+							continent = europe
+						}
+						NOT = {
+							is_subject_of = ROOT
+						}
+					}
+					ROOT = {
+						create_subject = {
+							subject_type = anbi_kuhai_republican_subject_state
+							who = PREV
+						}
+					}
+				}
+			}
+		} 
+	}
+}
+kuhai_the_victory_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+		has_country_flag = the_greatest_yanshen_founded
+		has_country_flag = the_greatest_yanshen_prepare
+		has_country_flag = the_greatest_yanshen_end
+	}
+
+	anbi_kuhai_the_yanzhong_treaty = {
+		icon = mission_vedic_education
+		position = 16
+		required_missions = { anbi_the_great_war } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+		} 
+
+		effect = {  
+			custom_tooltip = anbi_kuhai_the_yanzhong_treaty_tt
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			hidden_effect = {
+				every_province = {
+					limit = {
+						NOT = {
+							country_or_subject_holds = ROOT
+						}
+						OR = {
+							continent = asia
+							continent = north_america
+						}
+						is_city = yes
+					}
+					add_core = ROOT
+					cede_province = ROOT
+				}
+			}
+		} 
+	}
+
+	anbi_kuhai_the_jadd_empire = {
+		icon = mission_sun_temple
+		position = 17
+		required_missions = { anbi_kuhai_the_yanzhong_treaty } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+		} 
+
+		effect = {  
+			custom_tooltip = anbi_kuhai_the_jadd_empire_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						capital_scope = {
+							continent = africa
+						}
+						NOT = {
+							is_subject_of = ROOT
+						}
+					}
+					change_government = republic
+					ROOT = {
+						create_subject = {
+							subject_type = anbi_kuhai_republican_subject_state
+							who = PREV
+						}
+					}
+				}
+			}
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			country_event = {
+				id = anbi_kuhai.10024
+			}
+		} 
+	}
+
+	anbi_kuhai_the_world_is_yanshen = {
+		icon = mission_four_color_flag_of_yanshen
+		position = 18
+		required_missions = {
+			anbi_kuhai_the_aelantir_states
+			anbi_kuhai_the_jadd_empire
+			anbi_kuhai_the_anbennar_cannor
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			L23 = {
+				is_subject_of = ROOT
+				is_subject_of_type = anbi_kuhai_republican_subject_state
+			}
+			S71 = {
+				is_subject_of = ROOT
+				is_subject_of_type = anbi_kuhai_republican_subject_state
+			}
+			S81 = {
+				is_subject_of = ROOT
+				is_subject_of_type = anbi_kuhai_republican_subject_state
+			}
+			S16 = {
+				is_subject_of = ROOT
+				is_subject_of_type = anbi_kuhai_republican_subject_state
+			}
+			L65 = {
+				is_subject_of = ROOT
+				is_subject_of_type = anbi_kuhai_republican_subject_state
+			}
+			U01 = {
+				is_subject_of = ROOT
+				is_subject_of_type = anbi_kuhai_republican_subject_state
+			}
+			F52 = {
+				is_subject_of = ROOT
+				is_subject_of_type = anbi_kuhai_republican_subject_state
+			}
+			I45 = {
+				is_subject_of = ROOT
+				is_subject_of_type = anbi_kuhai_republican_subject_state
+			}
+			Z45 = {
+				is_subject_of = ROOT
+				is_subject_of_type = anbi_kuhai_republican_subject_state
+			}
+			A13 = {
+				is_subject_of = ROOT
+				is_subject_of_type = anbi_kuhai_republican_subject_state
+			}
+			A79 = {
+				is_subject_of = ROOT
+				is_subject_of_type = anbi_kuhai_republican_subject_state
+			}
+			A97 = {
+				is_subject_of = ROOT
+				is_subject_of_type = anbi_kuhai_republican_subject_state
+			}
+			A01 = {
+				is_subject_of = ROOT
+				is_subject_of_type = anbi_kuhai_republican_subject_state
+			}
+			Z07 = {
+				is_subject_of = ROOT
+				is_subject_of_type = anbi_kuhai_republican_subject_state
+			}
+			Z01 = {
+				is_subject_of = ROOT
+				is_subject_of_type = anbi_kuhai_republican_subject_state
+			}
+			B32 = {
+				is_subject_of = ROOT
+				is_subject_of_type = anbi_kuhai_republican_subject_state
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = anbi_kuhai_the_world_is_yanshen_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							is_subject_of = ROOT
+						}
+					}
+					ROOT = {
+						create_subject = {
+							subject_type = anbi_kuhai_republican_subject_state
+							who = PREV
+						}
+					}
+				}
+			}
+		} 
+	}
+}
+kuhai_the_victory_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		NOT = { has_country_flag = the_greatest_yanshen_development } 
+		has_country_flag = the_greatest_yanshen_founded
+		has_country_flag = the_greatest_yanshen_prepare
+		has_country_flag = the_greatest_yanshen_end
+	}
+
+	anbi_kuhai_the_aelantir_states = {
+		icon = mission_aelantir
+		position = 17
+		required_missions = { anbi_kuhai_the_yanzhong_treaty } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+		} 
+
+		effect = {  
+			custom_tooltip = anbi_kuhai_the_aelantir_states_tt
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			hidden_effect = {
+				every_country = {
+					limit = {
+						capital_scope = {
+							continent = south_america
+						}
+						NOT = {
+							is_colonial_nation_of = ROOT
+						}
+					}
+					ROOT = {
+						inherit = PREV
+					}
+				}
+			}
+			
+		} 
+	}
+}
+kuhai_development_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		has_country_flag = the_greatest_yanshen_development
+	}
+
+	anbi_kuhai_the_sky_is_feiten = {
+		icon = mission_four_color_flag_of_yanshen
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			owns_core_province = 4879
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+		}
+
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			custom_tooltip = anbi_kuhai_the_sky_is_feiten_ct
+			set_country_flag = anbi_kuhai_the_sky_is_feiten_cf
+		}
+	}
+
+	anbi_kuhai_the_artfice = {
+		icon = mission_lotus_flower
+		position = 2
+		required_missions = { anbi_kuhai_the_sky_is_feiten } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 4879
+					NOT = { has_building = mage_tower } 
+				}
+				AND = {
+					superregion = yanshen_superregion
+					has_production_building_trigger = no
+					owned_by = ROOT
+				}
+			}
+		}
+
+		trigger = {
+			treasury = 1000
+			if = {
+				limit = { has_estate = estate_mages } 
+				4879 = { has_building = mage_tower } 
+			}
+			num_of_owned_provinces_with = {
+				value = 25
+				has_production_building_trigger = yes
+			}
+		}
+
+		effect = {
+			add_treasury = -1000
+			custom_tooltip = feiten_shuimu_engineering_cadre_effect_tt
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_country_flag = artificery_unlocked }  } 
+					country_event = {
+						id = magic_artificery_setup.1
+						days = 1
+					}
+				}
+				else = {
+					country_event = {
+						id = magic_artificery_setup.2
+						days = 1
+					}
+					country_event = {
+						id = anbi_kuhai.1016
+						days = 30
+					}
+				}
+				if = {
+					limit = { has_ruler_flag = is_huangke } 
+					set_ruler_flag = rejected_artificery
+				}
+				1371 = { add_province_triggered_modifier = feiten_daily_pulse } 
+			}
+			custom_tooltip = anbi_kuhai_yanshen_sky_and_ocean_tt
+			custom_tooltip = feiten_entrenching_the_artificers_effect_tt
+			set_country_flag = feiten_shuimu_engineering_workshop_unlocked
+			4879 = { add_building = university } 
+		}
+	}
+
+	anbi_kuhai_the_research_of_rending_and_temple = {
+		icon = mission_empowerment
+		position = 4
+		required_missions = { anbi_kuhai_the_artfice } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				has_temple_complex = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 150
+				religion = zhengdao_path
+			}
+			artifice_has_num_inventions_active = { amount = 4 } 
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+		}
+
+		effect = {
+			if = {
+				limit = { has_global_flag = korashi_drill_invented_flag } 
+				add_adm_power = 10
+			}
+			else = {
+				add_adm_power = -100
+				add_dip_power = -100
+				add_mil_power = -100
+				set_global_flag = korashi_drill_invented_flag
+				custom_tooltip = anbi_kuhai_the_research_of_rending_and_temple_tt
+			}
+		}
+	}
+
+	anbi_kuhai_rigntous_path_great_buliding = {
+		icon = mission_magisterium_fold_zero
+		position = 7
+		required_missions = { anbi_kuhai_the_research_of_rending_and_temple } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4976
+				province_id = 4925
+				province_id = 4527
+				province_id = 4559
+				province_id = 4553
+				province_id = 4565
+				province_id = 4411
+				province_id = 4435
+			}
+		}
+
+		trigger = {
+			manpower = 250
+			treasury = 20000
+			calc_true_if = {
+				amount = 5
+				owns_core_province = 4976
+				owns_core_province = 4925
+				owns_core_province = 4527
+				owns_core_province = 4559
+				owns_core_province = 4533
+				owns_core_province = 4565
+				owns_core_province = 4411
+				owns_core_province = 4435
+			}
+			have_cast_aid_construction = yes
+		}
+
+		effect = {
+			add_manpower = -250
+			add_treasury = -20000
+			custom_tooltip = anbi_kuhai_rigntous_path_great_buliding_tt
+			add_country_modifier = {
+				name = "anbi_kuhai_rigntous_path_great_buliding_buff"
+				duration = -1
+			}
+		}
+	}
+}
+kuhai_development_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		has_country_flag = the_greatest_yanshen_development
+	}
+
+	anbi_kuhai_yangchang_university = {
+		icon = mission_science
+		position = 1
+		provinces_to_highlight = {
+			province_id = 4861
+			NOT = {
+				AND = {
+					num_of_times_expanded_infrastructure = 1
+					development = 25
+					has_tax_building_trigger = yes
+				}
+			}
+		}
+
+		trigger = {
+			treasury = 800
+			4861 = {
+				num_of_times_expanded_infrastructure = 1
+				development = 25
+				has_tax_building_trigger = yes
+			}
+			adm_power = 50
+			dip_power = 50
+			mil_power = 50
+		}
+
+		effect = {
+			add_treasury = -800
+			add_adm_power = -50
+			add_dip_power = -50
+			add_mil_power = -50
+			mission_reward_artifice_points_5 = yes
+			4861 = {
+				add_building = university
+				add_permanent_province_modifier = {
+					name = "anbi_kuhai_yangchang_university"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	anbi_kuhai_the_skyport = {
+		icon = mission_dirigible
+		position = 2
+		required_missions = { anbi_kuhai_the_sky_is_feiten } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4884
+				province_id = 4879
+			}
+		}
+
+		trigger = {
+			4879 = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+				province_has_center_of_trade_of_level = 3
+				development = 30
+			}
+			4884 = {
+				has_dock_building_trigger = yes
+				has_shipyard_building_trigger = yes
+				province_has_center_of_trade_of_level = 3
+				development = 30
+			}
+			has_institution = new_world_i
+		}
+
+		effect = {
+			4879 = {
+				set_province_flag = feiten_aerodrome
+				custom_tooltip = feiten_to_house_an_airfleet_effect_tt
+				hidden_effect = { add_great_project = { type = feiten_aerodrome }  } 
+			}
+			set_country_flag = feiten_skyposts_unlocked
+			set_country_flag = feiten_airfleet_captain_unlocked
+			set_country_flag = count_wars_won
+			custom_tooltip = feiten_developing_an_air_doctrine_effect_tt_1
+			define_advisor = {
+				type = naval_reformer
+				female = yes
+				skill = 3
+				cost_multiplier = 0.5
+			}
+			country_event = { id = flavor_feiten.206 } 
+		}
+	}
+
+	anbi_kuhai_hundreds_rivers_into_yan = {
+		icon = mission_se_along_the_river
+		position = 5
+		required_missions = { anbi_kuhai_the_earth_is_lanjinhui_and_jingou } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				NOT = { culture_group = yan } 
+			}
+			manpower = 50
+		}
+
+		effect = {
+			change_primary_culture = republic_yanshen
+			capital_scope = { change_culture = republic_yanshen } 
+			add_manpower = -50
+			add_country_modifier = {
+				name = "bianfang_yanification_campaigns"
+				duration = -1
+			}
+			custom_tooltip = anbi_kuhai_hundreds_rivers_into_yan_tt
+			hidden_effect = {
+				set_country_flag = yanification_activated
+				set_country_flag = yanification_upgrade_3
+			}
+		}
+	}
+
+	anbi_kuhai_the_yanshen_mil = {
+		icon = mission_manchu_warrior
+		position = 6
+		required_missions = { anbi_kuhai_hundreds_rivers_into_yan } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4826
+				province_id = 4868
+			}
+		}
+
+		trigger = {
+			4826 = {
+				has_seat_in_parliament = yes
+				development = 35
+				has_manpower_building_trigger = yes
+				has_forcelimit_building_trigger = yes
+			}
+			4868 = {
+				has_seat_in_parliament = yes
+				development = 35
+				has_manpower_building_trigger = yes
+				has_forcelimit_building_trigger = yes
+			}
+			army_professionalism = 0.25
+		}
+
+		effect = {
+			add_mil_power = 100
+			4826 = {
+				add_province_modifier = {
+					name = "anbi_kuhai_bianfang_mil"
+					duration = -1
+				}
+			}
+			4868 = {
+				add_province_modifier = {
+					name = "anbi_kuhai_jiangdu_mil"
+					duration = -1
+				}
+			}
+			unlock_issue = { issue = anbi_kuhai_bianfang_mil_issue } 
+			unlock_issue = { issue = anbi_kuhai_jiangdu_mil_issue } 
+		}
+	}
+}
+kuhai_development_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		has_country_flag = the_greatest_yanshen_development
+	}
+
+	anbi_kuhai_crush_the_eunuch = {
+		icon = mission_burning_castle
+		position = 1
+		provinces_to_highlight = { province_id = 4871 } 
+
+		trigger = {
+			4871 = {
+				infantry_in_province = 20
+				artillery_in_province = 10
+			}
+			treasury = 500
+		}
+
+		effect = {
+			add_treasury = -500
+			tooltip = { destroy_great_project = { type = palace_of_divine_call }  } 
+			country_event = { id = anbi_kuhai.20 } 
+		}
+	}
+
+	anbi_kuhai_the_yanshen_enligntenment = {
+		icon = mission_arise_ashes
+		position = 2
+		required_missions = {
+			anbi_kuhai_crush_the_eunuch
+			anbi_kuhai_the_mage_education
+			anbi_kuhai_yangchang_university
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = anbi_kuhai_has_two_university_ctt
+				university = 2
+			}
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}
+			calc_true_if = {
+				amount = 120
+				all_owned_province = {
+					superregion = yanshen_superregion
+					religion = zhengdao_path
+				}
+			}
+			innovativeness = 25
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+		}
+
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			set_estate_privilege = anbi_kuhai_the_yanshen_enligntenment_privilege
+			hidden_effect = {
+				country_event = {
+					id = anbi_kuhai.215
+					days = 10
+				}
+			}
+		}
+	}
+
+	anbi_kuhai_yanshen_sky_and_ocean = {
+		icon = mission_gnomish_ship
+		position = 3
+		required_missions = {
+			anbi_kuhai_the_skyport
+			anbi_kuhai_the_sailor_songs
+			anbi_kuhai_the_yanshen_enligntenment
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_heavy_ship = 100
+			num_artifice_inventions_discovered = { VAL = 10 } 
+			feiten_has_armaments_invention = yes
+			feiten_has_envelope_invention = yes
+			feiten_has_gondola_invention = yes
+			feiten_has_propulsion_invention = yes
+			num_of_centers_of_trade = 20
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "anbi_kuhai_the_light_seas"
+				duration = -1
+			}
+			add_country_modifier = {
+				name = "anbi_kuhai_yanshen_sky_buff"
+				duration = -1
+			}
+			if = {
+				limit = { NOT = { has_country_flag = unlocked_artifice_invention_commercial_sky_galleons }  } 
+				country_event = { id = artifice_inventions.808 } 
+				set_country_flag = unlocked_artifice_invention_commercial_sky_galleons
+			}
+			else = { add_dip_power = 200 } 
+			if = {
+				limit = { NOT = { has_country_flag = unlocked_artifice_invention_military_sky_galleons }  } 
+				country_event = { id = artifice_inventions.913 } 
+				set_country_flag = unlocked_artifice_invention_military_sky_galleons
+			}
+			else = { add_mil_power = 200 } 
+		}
+	}
+
+	anbi_kuhai_the_earth_is_lanjinhui_and_jingou = {
+		icon = mission_four_color_flag_of_yanshen
+		position = 4
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			stability = 2
+			OR = {
+				AND = {
+					has_estate = estate_nobles
+					NOT = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 40
+						}
+					}
+				}
+				NOT = { has_estate = estate_nobles } 
+			}
+		}
+
+		effect = {
+			add_adm_power = 100
+			add_stability = -1
+			custom_tooltip = anbi_disabled_the_noble_tt
+			set_country_flag = disables_estate_nobles_flag
+			custom_tooltip = anbi_kuhai_the_earth_is_lanjinhui_and_jingou_ct
+			set_country_flag = anbi_kuhai_the_earth_is_lanjinhui_and_jingou_cf
+		}
+	}
+
+	anbi_kuhai_the_everyone_has_theirs = {
+		icon = mission_iroquois_the_three_sisters
+		position = 5
+		required_missions = { anbi_kuhai_the_earth_is_lanjinhui_and_jingou } 
+		provinces_to_highlight = {
+			has_farm_trade_goods = yes
+			NOT = {
+				AND = {
+					has_production_building_trigger = yes
+					development = 10
+				}
+			}
+			superregion = yanshen_superregion
+		}
+
+		trigger = {
+			num_of_owned_states_with = {
+				value = 5
+				holy_order = lanjinhui_order
+				superregion = yanshen_superregion
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				has_farm_trade_goods = yes
+				has_production_building_trigger = yes
+				development = 10
+				superregion = yanshen_superregion
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_kuhai_the_everyone_has_their_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							has_terrain = farmlands
+							has_terrain = grasslands
+						}
+					}
+					add_base_manpower = 1
+				}
+			}
+			add_country_modifier = {
+				name = "anbi_kuhai_the_everyone_has_theirs_buff"
+				duration = -1
+			}
+		}
+	}
+
+	anbi_kuhai_the_workers_have_food = {
+		icon = mission_smith
+		position = 6
+		required_missions = { anbi_kuhai_the_everyone_has_theirs } 
+		provinces_to_highlight = {
+			NOT = {
+				AND = {
+					has_production_building_trigger = yes
+					base_production = 5
+				}
+			}
+			superregion = yanshen_superregion
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 50
+				has_production_building_trigger = yes
+				base_production = 5
+				superregion = yanshen_superregion
+			}
+			NOT = { num_of_loans = 1 } 
+			years_of_income = 2
+		}
+
+		effect = {
+			add_years_of_income = -2
+			add_country_modifier = {
+				name = "anbi_kuhai_the_workers_have_food_buff"
+				duration = -1
+			}
+		}
+	}
+
+	anbi_kuhai_the_kungfu_perfect = {
+		icon = mission_well_of_majesty
+		position = 7
+		required_missions = {
+			anbi_kuhai_the_yanshen_mil
+			anbi_kuhai_the_problem_of_adventurer
+			anbi_kuhai_the_workers_have_food
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					has_province_modifier = rightful_xia_territory
+					NOT = { owned_by = ROOT } 
+				}
+				AND = {
+					has_province_modifier = rightful_xia_territory
+					owned_by = ROOT
+					has_manpower_building_trigger = no
+				}
+			}
+		}
+
+		trigger = {
+			asia = {
+				type = all
+				OR = {
+					AND = {
+						has_province_modifier = rightful_xia_territory
+						owned_by = ROOT
+					}
+					NOT = { has_province_modifier = rightful_xia_territory } 
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 30
+				has_province_modifier = rightful_xia_territory
+				has_manpower_building_trigger = yes
+			}
+			has_estate_privilege = anbi_kuhai_xia_bro_privilege
+			num_of_samurai = 10
+			monthly_mil = 12
+		}
+
+		effect = {
+			custom_tooltip = anbi_kuhai_xia_bro_privilege_tt
+			add_country_modifier = {
+				name = "anbi_the_greatest_xia"
+				duration = -1
+			}
+		}
+	}
+
+	anbi_kuhai_the_yanshen_unity_and_great = {
+		icon = mng_heavens_will
+		position = 8
+		required_missions = {
+			anbi_the_north_and_south_of_mountains
+			anbi_kuhai_rigntous_path_great_buliding
+			anbi_kuhai_the_kungfu_perfect
+		}
+		provinces_to_highlight = {  
+			superregion = yanshen_superregion
+			NOT = {
+				AND = {
+					has_seat_in_parliament = yes
+					is_state = yes
+					is_prosperous = yes
+					OR = {
+						holy_order = lanjinhui_order
+						holy_order = kuhai_order
+						holy_order = yinquan_order
+					}
+				}
+			}
+		} 
+
+		trigger = {
+			yanshen_superregion = {
+				type = all
+				owned_by = ROOT
+				is_state = yes
+				is_prosperous = yes
+				OR = {
+					holy_order = lanjinhui_order
+					holy_order = kuhai_order
+					holy_order = yinquan_order
+				}
+			}
+			development_in_provinces = {
+				value = 3500
+				culture_group = yan
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_kuhai_the_yanshen_unity_and_great_tt
+			set_country_flag = anbi_kuhai_the_yanshen_unity_and_great_flag
+			yanshen_superregion = {
+				add_permanent_province_modifier = {
+					name = "anbi_kuhai_the_yanshen_unity_and_great_buff"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+kuhai_development_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		has_country_flag = the_greatest_yanshen_development
+	}
+
+	anbi_kuhai_the_mage_education = {
+		icon = mission_writing_book
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4869
+				province_id = 4931
+			}
+		}
+
+		trigger = {
+			4869 = {
+				num_of_times_expanded_infrastructure = 1
+				has_tax_building_trigger = yes
+				has_courthouse_building_trigger = yes
+			}
+			4931 = {
+				num_of_times_expanded_infrastructure = 1
+				has_tax_building_trigger = yes
+				has_courthouse_building_trigger = yes
+			}
+		}
+
+		effect = {
+			custom_tooltip = anbi_kuhai_the_mage_education_tt
+			set_estate_privilege = anbi_kuhai_mages_education_privilege
+			hidden_effect = {
+				country_event = {
+					id = anbi_kuhai.214
+					days = 10
+				}
+			}
+		}
+	}
+
+	anbi_kuhai_the_sailor_songs = {
+		icon = mission_fleet
+		position = 2
+		required_missions = { anbi_kuhai_the_sea_is_beidugang } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			treasury = 2000
+			sailors = 5000
+			num_of_light_ship = 50
+			4907 = {
+				num_of_times_expanded_infrastructure = 1
+				province_has_center_of_trade_of_level = 3
+			}
+			4908 = { num_of_times_expanded_infrastructure = 1 } 
+		}
+
+		effect = {
+			add_treasury = -2000
+			add_sailors = -5000
+			4907 = {
+				add_great_project = {
+					type = anbi_beikdugang_arsenal
+					instant = yes
+				}
+			}
+			4908 = {
+				add_great_project = {
+					type = anbi_beikdugang_lights
+					instant = yes
+				}
+			}
+		}
+	}
+
+	anbi_kuhai_the_men_join_army = {
+		icon = mission_teutonic_knights
+		position = 5
+		required_missions = { anbi_kuhai_the_earth_is_lanjinhui_and_jingou } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				has_manpower_building_trigger = yes
+				superregion = yanshen_superregion
+			}
+			mil_power = 200
+			num_of_owned_states_with = {
+				value = 5
+				holy_order = kuhai_order
+				superregion = yanshen_superregion
+			}
+			has_reform = anbi_kuhai_yanshen_parliament
+		}
+
+		effect = {
+			add_mil_power = -200
+			unlock_issue = { issue = anbi_kuhai_all_men_join_army } 
+			unlock_issue = { issue = anbi_kuhai_good_men_join_army } 
+		}
+	}
+
+	anbi_kuhai_the_problem_of_adventurer = {
+		icon = mission_swiss_mercenaries_flipped
+		position = 6
+		required_missions = { anbi_kuhai_the_men_join_army } 
+		provinces_to_highlight = { province_id = 4914 } 
+
+		trigger = {
+			estate_influence = {
+				estate = estate_adventurers
+				influence = 50
+			}
+			estate_loyalty = {
+				estate = estate_adventurers
+				loyalty = 60
+			}
+			years_of_income = 1
+			4914 = {
+				num_of_times_expanded_infrastructure = 2
+				has_manpower_building_trigger = yes
+				has_forcelimit_building_trigger = yes
+				infantry_in_province = 60
+			}
+		}
+
+		effect = {
+			if = {
+				limit = { NOT = { has_estate_privilege = estate_adventurers_organization_licensed_adventurers }  } 
+				clear_adventurers_organization_effect = yes
+				set_estate_privilege = estate_adventurers_organization_licensed_adventurers
+			}
+			4914 = {
+				kill_units = {
+					who = ROOT
+					type = infantry
+					amount = 60
+				}
+				custom_tooltip = anbi_kuhai_the_problem_of_adventurer_buff_tt
+				add_province_modifier = {
+					name = "anbi_kuhai_the_problem_of_adventurer_buff"
+					duration = -1
+				}
+			}
+			set_country_flag = fra_free_mercs_bargain_sale_flag
+			custom_tooltip = gushuokguan_rock_raiders_tt
+			hidden_effect = { set_country_flag = gushuokguan_rock_raiders } 
+			custom_tooltip = gushuokguan_dacite_dragons_tt
+			hidden_effect = { set_country_flag = gushuokguan_dacite_dragons } 
+			custom_tooltip = gushuokguan_flying_pebbles_tt
+			hidden_effect = { set_country_flag = gushuokguan_flying_pebbles } 
+			custom_tooltip = gushuokguan_marble_mounts_tt
+			hidden_effect = { set_country_flag = gushuokguan_marble_mounts } 
+			custom_tooltip = gushuokguan_whetstones_tt
+			hidden_effect = { set_country_flag = gushuokguan_whetstones } 
+			custom_tooltip = gushuokguan_chrome_claws_tt
+			hidden_effect = { set_country_flag = gushuokguan_chrome_claws } 
+		}
+	}
+}
+kuhai_development_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = Y27
+			was_tag = Y27
+		}
+		has_country_flag = the_greatest_yanshen
+		has_country_flag = the_greatest_yanshen_development
+	}
+
+	anbi_kuhai_the_sea_is_beidugang = {
+		icon = mission_four_color_flag_of_yanshen
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			owns_core_province = 4907
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+		}
+
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			4907 = { set_center_level_2_center_of_trade = yes } 
+			4908 = { set_center_level_2_center_of_trade = yes } 
+		}
+	}
+
+	anbi_kuhai_the_north_laker = {
+		icon = mission_holy_star
+		position = 2
+		required_missions = { anbi_kuhai_the_sea_is_beidugang } 
+		provinces_to_highlight = { province_id = 5226 } 
+
+		trigger = {
+			has_discovered = 5226
+			dip_power = 50
+		}
+
+		effect = {
+			add_dip_power = -50
+			country_event = { id = flavor_beikdugang.1 } 
+			custom_tooltip = anbi_kuhai_the_north_laker_tt
+		}
+	}
+
+	anbi_kuhai_the_yanshen_river_up_and_down = {
+		icon = mission_lantern_festival
+		position = 4
+		required_missions = { anbi_kuhai_the_north_laker } 
+		provinces_to_highlight = {  
+			superregion = yanshen_superregion
+			has_terrain = city_terrain
+			NOT = {
+				AND = {
+					development = 40
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+		} 
+
+		trigger = {
+			all_owned_province = {
+				OR = {
+					AND = {
+						superregion = yanshen_superregion
+						has_terrain = city_terrain
+						development = 40
+						province_has_center_of_trade_of_level = 2
+					}
+					AND = {
+						superregion = yanshen_superregion
+						NOT = { has_terrain = city_terrain } 
+					}
+					NOT = { superregion = yanshen_superregion } 
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = Y91_road_all_jiangszun
+				golden_highway_yanshen_coast = {
+					type = all
+					has_province_modifier = golden_highway
+				}
+				golden_highway_upper_yanshen = {
+					type = all
+					has_province_modifier = golden_highway
+				}
+			}
+		}
+
+		effect = {
+			golden_highway_yanshen_coast = {
+				add_permanent_province_modifier = {
+					name = "anbi_kuhai_the_yanshen_river_up_and_down_buff"
+					duration = -1
+				}
+			}
+			golden_highway_upper_yanshen = {
+				add_permanent_province_modifier = {
+					name = "anbi_kuhai_the_yanshen_river_up_and_down_buff"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	anbi_the_north_and_south_of_mountains = {
+		icon = mission_desert_rider
+		position = 7
+		required_missions = { anbi_kuhai_the_yanshen_river_up_and_down } 
+		provinces_to_highlight = {  
+			OR = {
+				region = gowon_region
+				region = shuvuushudi_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		trigger = {
+			shuvuushudi_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			gowon_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			custom_trigger_tooltip = {
+				tooltip = anbi_the_north_and_south_of_mountains_ctt
+				mission_completed = anbi_kuhai_hundreds_rivers_into_yan
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				culture = shuokyuan
+			}
+			stability = 2
+		}
+
+		effect = {
+			gozengun_superregion = { add_permanent_claim = ROOT } 
+			add_country_modifier = {
+				name = "anbi_the_north_and_south_of_mountains_buff"
+				duration = -1
+			}
+		}
+	}
+}

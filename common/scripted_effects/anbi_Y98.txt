@@ -1,0 +1,120 @@
+Y98_laker_is_over = {
+	5226 = {
+		cede_province = ROOT
+		add_territorial_core = ROOT
+	}
+	5235 = {
+		cede_province = ROOT
+		add_territorial_core = ROOT
+	}
+	5237 = {
+		cede_province = ROOT
+		add_territorial_core = ROOT
+	}
+	5238 = {
+		cede_province = ROOT
+		add_territorial_core = ROOT
+	}
+	5239 = {
+		cede_province = ROOT
+		add_territorial_core = ROOT
+	}
+	5257 = {
+		cede_province = ROOT
+		add_territorial_core = ROOT
+	}
+	5276 = {
+		cede_province = ROOT
+		add_territorial_core = ROOT
+	}
+	5305 = {
+		cede_province = ROOT
+		add_territorial_core = ROOT
+	}
+	5304 = {
+		cede_province = ROOT
+		add_territorial_core = ROOT
+	}
+	5293 = {
+		cede_province = ROOT
+		add_territorial_core = ROOT
+	}
+}
+
+daxugo_update_jellyfish_scouts = {
+	if = {
+		limit = { any_hired_mercenary_company = { template = merc_feiten_jellyfish_scouts location = { country_or_non_sovereign_subject_holds = Y98 } } }
+		random_hired_mercenary_company = {
+			limit = { template = merc_feiten_jellyfish_scouts }
+			location = {
+				add_province_modifier = {
+					name = feiten_jellyfish_scouts_friendly
+					duration = 180
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { any_hired_mercenary_company = { template = merc_feiten_jellyfish_scouts location = { controller = { war_with = Y98 } } } }
+		random_hired_mercenary_company = {
+			limit = { template = merc_feiten_jellyfish_scouts  }
+			location = {
+				add_province_modifier = {
+					name = feiten_jellyfish_scouts_hostile
+					duration = 180
+				}
+			}
+		}
+	}
+}
+
+Y98_queen_death = {
+	hidden_effect = {
+		remove_country_modifier = Y98_noble_consort
+		remove_country_modifier = Y98_harimari_consort
+		remove_country_modifier = Y98_goldscale_consort
+		remove_country_modifier = elf_consort_Y98
+		remove_country_modifier = diggy_diggy_hole_consort
+		remove_country_modifier = khet_consort
+		remove_country_modifier = lion_command_consort
+		remove_country_modifier = wolf_command_consort
+		remove_country_modifier = boar_command_consort
+		remove_country_modifier = gnoll_consort_Y98
+		remove_country_modifier = Y98_gnome_consort
+		remove_country_modifier = Y98_castanorian_consort
+		remove_country_modifier = Y98_alenic_consort
+		remove_country_modifier = Y98_half_elf_consort
+		remove_country_modifier = Y98_half_orc_consort
+		remove_country_modifier = Y98_halfling_consort
+		remove_country_modifier = Y98_orc_consort
+		remove_country_modifier = harpy_consort_Y98
+	}
+}
+anbi_y98_wumou_test_effect = {
+	if = {
+		limit = { 
+			is_ruler_commanding_unit = yes
+			unit_owner = {
+				has_country_flag = anbi_y98_I_love_wumou
+				tag = Y98
+				if = {
+					limit = { 
+						has_country_flag = anbi_y98_wumou_test_battle_cooldown
+					}
+					had_country_flag = {
+						flag = anbi_y98_wumou_test_battle_cooldown
+						days = 1
+					}
+				}
+			}
+		}
+		unit_owner = {
+			change_variable = {
+				which = anbi_y98_wumou_test_battle
+				value = 1
+			}
+			clr_country_flag = anbi_y98_wumou_test_battle_cooldown
+			set_country_flag = anbi_y98_wumou_test_battle_cooldown
+		}
+	}
+}

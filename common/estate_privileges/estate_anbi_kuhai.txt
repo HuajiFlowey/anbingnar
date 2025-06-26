@@ -1,0 +1,415 @@
+anbi_kuhai_mages_education_privilege = {
+	icon = privilege_cast_spell
+	max_absolutism = 0
+	loyalty = 0.1
+	influence = 0.1
+	is_valid = {
+		mission_completed = anbi_kuhai_the_mage_education
+	}
+	can_select = { 	
+	} 					 					
+	can_revoke = { 
+		always = no
+	}
+	on_granted = {
+		custom_tooltip = anbi_kuhai_mages_education_privilege_ct
+	}
+	conditional_modifier = {
+		trigger = {
+			estate_loyalty = {
+				estate = estate_mages
+				loyalty = 60
+			}
+			estate_influence = {
+				estate = estate_mages
+				influence = 0
+			}
+			NOT = {
+				estate_influence = {
+					estate = estate_mages
+					influence = 20
+				}
+			}
+		}
+		modifier = {
+			technology_cost = -0.05
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			estate_loyalty = {
+				estate = estate_mages
+				loyalty = 60
+			}
+			estate_influence = {
+				estate = estate_mages
+				influence = 20
+			}
+			NOT = {
+				estate_influence = {
+					estate = estate_mages
+					influence = 40
+				}
+			}
+		}
+		modifier = {
+			technology_cost = -0.1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			estate_loyalty = {
+				estate = estate_mages
+				loyalty = 60
+			}
+			estate_influence = {
+				estate = estate_mages
+				influence = 40
+			}
+			NOT = {
+				estate_influence = {
+					estate = estate_mages
+					influence = 60
+				}
+			}
+		}
+		modifier = {
+			technology_cost = -0.15
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			estate_loyalty = {
+				estate = estate_mages
+				loyalty = 60
+			}
+			estate_influence = {
+				estate = estate_mages
+				influence = 60
+			}
+		}
+		modifier = {
+			technology_cost = -0.2
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = anbi_kuhai_the_yanshen_unity_and_great_flag
+		}
+		modifier = {
+			republican_tradition = 2
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+anbi_kuhai_kill_the_eunuch1_p = {
+	icon = estate_eunuchs_delegate_provincial_administration_privilege
+	max_absolutism = 0
+	loyalty = -0.1
+	influence = -0.1
+	is_valid = {
+		mission_completed = anbi_kuhai_kill_the_eunuch
+		NOT = {
+			has_estate_privilege = anbi_kuhai_kill_the_eunuch2_p
+		}
+	}
+	can_select = { 
+		always = no	
+	} 					 					
+	can_revoke = { 
+		always = no
+	}
+	on_granted = {
+		custom_tooltip = anbi_kuhai_kill_the_eunuch1_p_ct
+	}
+	benefits = {
+		global_unrest = 1
+		stability_cost_modifier = -0.25
+		global_tax_modifier = 0.05
+		nobles_privilege_slots = -3
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+anbi_kuhai_kill_the_eunuch2_p = {
+	icon = estate_eunuchs_delegate_provincial_administration_privilege
+	max_absolutism = 0
+	loyalty = -0.05
+	influence = -0.05
+	is_valid = {
+		mission_completed = anbi_kuhai_kill_the_eunuch
+		NOT = {
+			has_estate_privilege = anbi_kuhai_kill_the_eunuch1_p
+		}
+	}
+	can_select = { 
+		always = no	
+	} 					 					
+	can_revoke = { 
+		always = no
+	}
+	on_granted = {
+		
+	}
+	benefits = {
+		stability_cost_modifier = -0.05
+		global_tax_modifier = 0.05
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+anbi_kuhai_xia_bro_privilege = {
+	icon = estate_eunuchs_imperial_council_privilege
+	max_absolutism = 0
+	loyalty = 0.1
+	influence = 0.05
+	is_valid = {
+		mission_completed = anbi_kuhai_the_xia_bro
+		OR = {
+			NOT = {
+				has_estate_privilege = anbi_kuhai_xia_bro_privilege
+			}
+			AND = {
+				accepted_culture = goldscale_kobold
+				accepted_culture = serene_harimari
+				accepted_culture = pezarangi_harpy
+			}			
+		}
+	}
+	can_select = { 
+		accepted_culture = goldscale_kobold
+		accepted_culture = serene_harimari
+		accepted_culture = pezarangi_harpy
+	} 					 					
+	can_revoke = { 
+		always = no
+	}
+	on_granted = {
+		
+	}
+	benefits = {
+		has_samurai = yes
+		allowed_samurai_fraction = -0.1
+		num_accepted_cultures = 3
+		garrison_size = 0.5
+		garrison_damage = 1
+	}
+	conditional_modifier = {
+		trigger = {
+			has_country_modifier = anbi_the_greatest_xia
+		}
+		modifier = {
+			allowed_samurai_fraction = 0.01
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = anbi_kuhai_the_yanshen_unity_and_great_flag
+		}
+		modifier = {
+			republican_tradition = 2
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+anbi_kuhai_the_yanshen_enligntenment_privilege = {
+	icon = privilege_freedom_of_religion
+	max_absolutism = 0
+	loyalty = 0.25
+	influence = -0.05
+	is_valid = {
+		mission_completed = anbi_kuhai_the_yanshen_enligntenment
+	}
+	can_select = { 
+	} 					 					
+	can_revoke = { 
+		always = no
+	}
+	on_granted = {
+		
+	}
+	benefits = {
+		global_missionary_strength = 0.03
+		tolerance_of_heathens_capacity = 2
+		tolerance_heretic = -2
+	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = anbi_kuhai_the_yanshen_unity_and_great_flag
+		}
+		modifier = {
+			republican_tradition = 2
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+anbi_kuhai_the_shuimu_engineer_up = {
+	icon = privilege_Artf_Research
+	max_absolutism = 0
+	loyalty = 0.1
+	influence = 0.1
+	is_valid = {
+		has_country_flag = anbi_kuhai_the_shuimu_engineer_up_cf
+	}
+	can_select = { 
+	} 					 					
+	can_revoke = { 
+		always = no
+	}
+	on_granted = {
+		
+	}
+	conditional_modifier = {
+		trigger = {
+			has_estate_privilege = artifice_invention_feiten_nitroglycerin_rockets
+		}
+		modifier = {
+			artificers_invention_slots = 1
+			global_tax_income = -60
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_estate_privilege = artifice_invention_feiten_nitroglycerin_tnt
+		}
+		modifier = {
+			artificers_invention_slots = 1
+			global_tax_income = -60
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_estate_privilege = artifice_invention_feiten_farsight_telescopes
+		}
+		modifier = {
+			artificers_invention_slots = 1
+			global_tax_income = -60
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_estate_privilege = artifice_invention_feiten_porcelain_caged_firebirds
+		}
+		modifier = {
+			artificers_invention_slots = 1
+			global_tax_income = -60
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_estate_privilege = artifice_invention_feiten_specialized_construction_arms
+		}
+		modifier = {
+			artificers_invention_slots = 1
+			global_tax_income = -60
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_estate_privilege = artifice_invention_feiten_expanding_storage_holds
+		}
+		modifier = {
+			artificers_invention_slots = 1
+			global_tax_income = -60
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_estate_privilege = artifice_invention_feiten_skywriting
+		}
+		modifier = {
+			artificers_invention_slots = 1
+			global_tax_income = -60
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_estate_privilege = artifice_invention_feiten_electroplated_armor
+		}
+		modifier = {
+			artificers_invention_slots = 1
+			global_tax_income = -60
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_estate_privilege = artifice_invention_feiten_ivory_conduits
+		}
+		modifier = {
+			artificers_invention_slots = 1
+			global_tax_income = -60
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_estate_privilege = artifice_invention_feiten_silken_cladding
+		}
+		modifier = {
+			artificers_invention_slots = 1
+			global_tax_income = -60
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_estate_privilege = artifice_invention_feiten_damestear_ribbing
+		}
+		modifier = {
+			artificers_invention_slots = 1
+			global_tax_income = -60
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_estate_privilege = artifice_invention_feiten_long_rockets
+		}
+		modifier = {
+			artificers_invention_slots = 1
+			global_tax_income = -60
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_estate_privilege = artifice_invention_feiten_lightning_amplifier
+		}
+		modifier = {
+			artificers_invention_slots = 1
+			global_tax_income = -60
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_estate_privilege = artifice_invention_feiten_steel_rudders
+		}
+		modifier = {
+			artificers_invention_slots = 1
+			global_tax_income = -60
+		}
+	}
+	modifier_by_land_ownership = {
+		yearly_corruption = 0.5
+		state_maintenance_modifier = 1
+		technology_cost = -0.25
+	}
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = anbi_kuhai_the_yanshen_unity_and_great_flag
+		}
+		modifier = {
+			republican_tradition = 2
+		}
+	}
+	benefits = {
+		artificers_research_time = -0.5
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

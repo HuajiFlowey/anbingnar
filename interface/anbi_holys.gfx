@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_holy_order_anbi_lanjin_holy"
+		texturefile = "gfx/interface/anbi_holys/lanjin_holy.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_holy_order_anbi_kuhai_holy"
+		texturefile = "gfx/interface/anbi_holys/kuhai_holy.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_holy_order_anbi_yinquan_holy"
+		texturefile = "gfx/interface/anbi_holys/yinquan_holy.dds"
+		noOfFrames = 4
+	}
+}

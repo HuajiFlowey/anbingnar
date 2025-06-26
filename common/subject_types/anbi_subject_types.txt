@@ -1,0 +1,89 @@
+anbi_kuhai_republican_subject_state = {
+    copy_from = default
+    can_have_great_projects_moved_by_overlord = no
+
+    # Triggers:
+    is_potential_overlord = {
+		has_government_attribute = anbi_kuhai_is_republican_beacon
+    }
+    
+    # Graphics:
+    sprite = GFX_icon_democraticsphere
+	diplomacy_overlord_sprite = GFX_diplomacy_leaddemocraticsphere
+	diplomacy_subject_sprite = GFX_diplomacy_weakdemocraticsphere
+
+    # Properties:
+    can_fight_independence_war = no
+    joins_overlords_wars = yes
+    joins_colonial_wars = yes
+    is_voluntary = no
+    overlord_can_attack = yes
+    takes_diplo_slot = no
+    base_liberty_desire = -10
+    liberty_desire_negative_prestige = 1.0
+    relative_power_class = 1
+    should_quit_wars_on_activation = no
+    can_have_subjects_of_other_types = no
+    uses_military_focus = no
+    overlord_protects_external = yes
+    counts_for_borders = no
+	overlord_enforce_peace_attacking = yes
+
+    can_use_claims = yes
+    share_rebel_popup = yes
+    can_transfer_in_peace = no
+    can_set_mil_focus = yes
+    can_send_missionary_to_subject = yes
+    overlord_can_fabricate_for = yes
+    does_overlord_size_count_for_warscore_cost = no
+    can_concentrate_development = no
+    extend_trading_range = yes
+    
+    liberty_desire_development_ratio = 0.05
+    trust_on_start = 0								 # 1.0 represents the amount payed by vassals
+	liberty_desire_revolution = 0 
+    
+    overlord_opinion_modifier = is_democratic_sphere_of_influence_overlord
+    subject_opinion_modifier = is_democratic_sphere_of_influence_subject
+    
+    can_fight = {
+    }
+    can_rival = {
+    }
+    can_ally = {
+    }
+    can_marry = {
+    }
+	forcelimit_to_overlord = 0				
+    naval_forcelimit_to_overlord = 0  				
+    manpower_to_overlord = 0   						
+    sailors_to_overlord = 0
+
+    # Subject Interactions:
+    # (continuous)
+    embargo_rivals = yes
+    support_loyalists = yes
+    subsidize_armies = yes
+    send_officers = yes
+    divert_trade= yes
+    # (immediate)
+    placate_rulers = no
+    place_relative_on_throne = no
+    grant_province = yes
+    enforce_religion = yes
+    enforce_culture = no
+    grant_core_claim = no
+    takeondebt = yes
+	seize_territory = yes
+    bestow_gifts = yes
+    send_additional_troops = yes
+    demand_artifacts = no
+    demand_additional_tribute = no
+    conscript_general = yes
+    knowledge_sharing = yes
+    block_settlement_growth = no
+    allow_settlement_growth = no
+
+    # Modifiers:
+    modifier_subject = clear
+}

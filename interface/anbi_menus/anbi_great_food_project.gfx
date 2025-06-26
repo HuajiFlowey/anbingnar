@@ -1,0 +1,231 @@
+spriteTypes = {
+	spriteType= {
+		name = "GFX_anbi_food_project_bg"
+		texturefile = "gfx//interface//anbi_food_menus//anbi_food_project_bg.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_anbi_food_project_desc"
+		texturefile = "gfx//interface//anbi_food_menus//anbi_food_project_desc.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_anbi_GUI_button_close"
+		texturefile = "gfx//interface//anbi_food_menus//anbi_GUI_button_close.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_orcs_a_g"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_orcs_a_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_orcs_a_t"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_orcs_a_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_orcs_a_e"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_orcs_a_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_orcs_b_g"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_orcs_b_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_orcs_b_t"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_orcs_b_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_orcs_b_e"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_orcs_b_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_orcs_c_g"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_orcs_c_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_orcs_c_t"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_orcs_c_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_orcs_c_e"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_orcs_c_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_goblin_a_g"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_goblin_a_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_goblin_a_t"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_goblin_a_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_goblin_a_e"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_goblin_a_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_greenskin_liver_g"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_greenskin_liver_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_greenskin_liver_t"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_greenskin_liver_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_greenskin_liver_e"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_greenskin_liver_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_harpy_g"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_harpy_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_harpy_t"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_harpy_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_harpy_e"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_harpy_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_troll_g"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_troll_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_troll_t"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_troll_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_troll_e"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_troll_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_ogre_g"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_ogre_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_ogre_t"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_ogre_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_ogre_e"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_ogre_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_centaur_g"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_centaur_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_centaur_t"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_centaur_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_centaur_e"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_centaur_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_evil_elven_g"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_evil_elven_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_evil_elven_t"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_evil_elven_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_evil_elven_e"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_evil_elven_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_xianling_g"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_xianling_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_xianling_t"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_xianling_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_xianling_e"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_xianling_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_kobold_g"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_kobold_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_kobold_t"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_kobold_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_kobold_e"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_kobold_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_khet_g"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_khet_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_khet_t"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_khet_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_khet_e"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_khet_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_gnollish_g"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_gnollish_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_gnollish_t"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_gnollish_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_option_eat_gnollish_e"
+		texturefile = "gfx//interface//anbi_food_menus//option_eat_gnollish_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "privilege_great_cook"
+		texturefile = "gfx/interface/privilege_great_cook.dds"
+	}
+}

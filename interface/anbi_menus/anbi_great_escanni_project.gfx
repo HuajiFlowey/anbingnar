@@ -1,0 +1,217 @@
+spriteTypes = {
+	spriteType= {
+		name = "GFX_anbi_escan_great_project_bg"
+		texturefile = "gfx//interface//anbi_escan_menus//anbi_great_project_bg.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_anbi_GUI_test"
+		texturefile = "gfx//interface//anbi_escan_menus//anbi_GUI_test.dds"
+		loadType = "INGAME"
+	}
+	spriteType= {
+		name = "GFX_anbi_escan_great_project_desc"
+		texturefile = "gfx//interface//anbi_escan_menus//anbi_great_project_desc.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_field_d"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_field_d.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_field_e"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_field_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_field_g"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_field_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_field_t"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_field_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_great_city_2_t"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_great_city_2_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_great_city_2_d"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_great_city_2_d.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_great_city_2_e"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_great_city_2_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_great_city_2_g"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_great_city_2_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_great_city_3_t"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_great_city_3_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_great_city_3_d"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_great_city_3_d.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_great_city_3_e"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_great_city_3_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_great_city_3_g"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_great_city_3_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_great_city_t"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_great_city_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_great_city_d"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_great_city_d.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_great_city_e"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_great_city_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_great_city_g"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_great_city_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_launch_prepare_t"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_launch_prepare_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_launch_prepare_d"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_launch_prepare_d.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_launch_prepare_e"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_launch_prepare_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_launch_prepare_g"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_launch_prepare_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_one_culture_t"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_one_culture_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_one_culture_d"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_one_culture_d.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_one_culture_e"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_one_culture_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_one_culture_g"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_one_culture_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_one_lang_t"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_one_lang_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_one_lang_d"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_one_lang_d.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_one_lang_e"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_one_lang_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_one_lang_g"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_one_lang_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_research_t"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_research_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_research_d"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_research_d.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_research_e"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_research_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_research_g"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_research_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_river_transport_t"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_river_transport_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_river_transport_d"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_river_transport_d.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_river_transport_e"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_river_transport_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_river_transport_g"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_river_transport_g.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_rocket_t"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_rocket_t.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_rocket_d"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_rocket_d.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_rocket_e"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_rocket_e.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_anbi_escanni_rocket_g"
+		texturefile = "gfx//interface//anbi_escan_menus//escanni_rocket_g.dds"
+		loadType = "INGAME"
+	}
+}

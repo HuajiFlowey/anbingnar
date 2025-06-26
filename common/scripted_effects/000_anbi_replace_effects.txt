@@ -1,0 +1,200 @@
+feiten_update_shuimu_capacity = {
+	set_variable = {
+		which = feiten_shuimu_bonus_cap
+		value = 25
+	}
+	change_variable = {
+		which = feiten_shuimu_bonus_cap
+		value = 1000
+	}
+	if = {
+		limit = { current_age = age_of_absolutism }
+		change_variable = {
+			which = feiten_shuimu_bonus_cap
+			value = 5
+		}
+	}
+	else_if = {
+		limit = { current_age = age_of_revolutions }
+		change_variable = {
+			which = feiten_shuimu_bonus_cap
+			value = 10
+		}
+	}
+	if = {
+		limit = {
+			estate_territory = {
+				estate = estate_artificers
+				territory = 50
+			}
+		}
+		change_variable = {
+			which = feiten_shuimu_bonus_cap
+			value = 10
+		}
+	}
+	else_if = {
+		limit = {
+			estate_territory = {
+				estate = estate_artificers
+				territory = 40
+			}
+		}
+		change_variable = {
+			which = feiten_shuimu_bonus_cap
+			value = 8
+		}
+	}
+	else_if = {
+		limit = {
+			estate_territory = {
+				estate = estate_artificers
+				territory = 30
+			}
+		}
+		change_variable = {
+			which = feiten_shuimu_bonus_cap
+			value = 6
+		}
+	}
+	else_if = {
+		limit = {
+			estate_territory = {
+				estate = estate_artificers
+				territory = 20
+			}
+		}
+		change_variable = {
+			which = feiten_shuimu_bonus_cap
+			value = 4
+		}
+	}
+	else_if = {
+		limit = {
+			estate_territory = {
+				estate = estate_artificers
+				territory = 10
+			}
+		}
+		change_variable = {
+			which = feiten_shuimu_bonus_cap
+			value = 2
+		}
+	}
+	if = {
+		limit = {
+			4879 = {
+				if = {
+					limit = { has_dlc = "Leviathan" }
+					has_great_project = {
+						type = feiten_aerodrome
+						tier = 3
+					}
+				}
+				else = { has_province_modifier = feiten_grand_skyport_level_3 }
+			}
+		}
+		change_variable = {
+			which = feiten_shuimu_bonus_cap
+			value = 20
+		}
+	}
+	else_if = {
+		limit = {
+			4879 = {
+				if = {
+					limit = { has_dlc = "Leviathan" }
+					has_great_project = {
+						type = feiten_aerodrome
+						tier = 2
+					}
+				}
+				else = { has_province_modifier = feiten_grand_skyport_level_2 }
+			}
+		}
+		change_variable = {
+			which = feiten_shuimu_bonus_cap
+			value = 10
+		}
+	}
+	else_if = {
+		limit = {
+			4879 = {
+				if = {
+					limit = { has_dlc = "Leviathan" }
+					has_great_project = {
+						type = feiten_aerodrome
+						tier = 1
+					}
+				}
+				else = { has_province_modifier = feiten_grand_skyport_level_1 }
+			}
+		}
+		change_variable = {
+			which = feiten_shuimu_bonus_cap
+			value = 5
+		}
+	}
+	change_variable = {
+		which = feiten_shuimu_bonus_cap
+		which = feitenActiveSkyports
+	}
+	export_to_variable = {
+		which = feiten_current_stated_provinces
+		value = trigger_value:num_of_provinces_in_states
+		who = event_target:feiten_or_was_feiten_target
+	}
+
+	set_variable = {
+		which = feiten_province_balance
+		which = feiten_current_stated_provinces
+	}
+	
+	subtract_variable = { 
+		which = feiten_province_balance
+		which = feiten_shuimu_bonus_cap
+	}
+	if = {
+		limit = {
+			check_variable = {
+				which = feiten_province_balance
+				value = 1
+			}
+		}
+		divide_variable = {
+			which = feiten_province_balance
+			which = feiten_shuimu_bonus_cap
+		}
+	}
+}
+
+merfolk_spawn_modifier = { #PROVINCE SCOPE #姆皮亚马哈拉
+	set_province_flag = merfolk_settlement
+	if = {
+		limit = { owner = { tag = AB3 } }
+		add_province_modifier = {
+			name = offcoast_merfolk_ab3_1_level
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = { owner = { has_country_flag = merfolk_opinion_neutral } }
+		add_permanent_province_modifier = {
+			name = offcoast_merfolk_neutral
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = { owner = { has_country_flag = merfolk_opinion_allied } }
+		add_permanent_province_modifier = {
+			name = offcoast_merfolk_allied
+			duration = -1
+		}
+	}
+	else = {
+		add_permanent_province_modifier = {
+			name = offcoast_merfolk_isolated
+			duration = -1
+		}
+	}
+}

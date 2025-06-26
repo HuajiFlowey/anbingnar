@@ -1,0 +1,11 @@
+can_add_seat_in_parliament = {
+	condition = {
+		tooltip = "NO_SEAT_KUHAI"
+		potential = {
+			FROM = { has_reform = anbi_kuhai_yanshen_parliament }
+		}
+		allow = {
+			always = no
+		}
+	}
+}

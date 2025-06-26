@@ -1,0 +1,474 @@
+#byd下次一定要用参数
+defined_text = {
+	name = AnbiEatOrcsA
+	random = no
+	text = { 
+		trigger = {
+			NOT = {
+				check_variable = {
+					FoodResearchV > 0.5 
+				}		
+			}
+			NOT = {
+				has_global_flag = eat_orcs_a_upup
+			}
+		}
+		localisation_key = anbi_eat_orcs_a.e
+	}
+	text = { 
+		trigger = {
+			NOT = {
+				has_global_flag = eat_orcs_a_upup
+			}
+		}
+		localisation_key = anbi_eat_orcs_a.g
+	}
+	text = { 
+		trigger = {
+			has_global_flag = eat_orcs_a_upup
+		}
+		localisation_key = anbi_eat_orcs_a.t
+	}
+}
+defined_text = {
+	name = AnbiEatOrcsB
+	random = no
+	text = { 
+		trigger = {
+			NOT = {
+				check_variable = {
+					FoodResearchV > 0.5 
+				}		
+			}
+			NOT = {
+				has_global_flag = eat_orcs_b_upup
+			}
+		}
+		localisation_key = anbi_eat_orcs_b.e
+	}
+	text = { 
+		trigger = {
+			check_variable = {
+				FoodResearchV > 0.5 
+			}
+			NOT = {
+				has_global_flag = eat_orcs_b_upup
+			}
+		}
+		localisation_key = anbi_eat_orcs_b.g
+	}
+	text = { 
+		trigger = {
+			has_global_flag = eat_orcs_b_upup
+		}
+		localisation_key = anbi_eat_orcs_b.t
+	}
+}
+defined_text = {
+	name = AnbiEatOrcsC
+	random = no
+	text = { 
+		trigger = {
+			NOT = {
+				check_variable = {
+					FoodResearchV > 0.5 
+				}		
+			}
+			NOT = {
+				has_global_flag = eat_orcs_c_upup
+			}
+		}
+		localisation_key = anbi_eat_orcs_c.e
+	}
+	text = { 
+		trigger = {
+			check_variable = {
+				FoodResearchV > 0.5 
+			}
+			NOT = {
+				has_global_flag = eat_orcs_c_upup
+			}
+		}
+		localisation_key = anbi_eat_orcs_c.g
+	}
+	text = { 
+		trigger = {
+			has_global_flag = eat_orcs_c_upup
+		}
+		localisation_key = anbi_eat_orcs_c.t
+	}
+}
+defined_text = {
+	name = AnbiEatGoblin
+	random = no
+	text = { 
+		trigger = {
+			NOT = {
+				check_variable = {
+					FoodResearchV > 0.5 
+				}		
+			}
+			NOT = {
+				has_global_flag = eat_goblin_a_upup
+			}
+		}
+		localisation_key = anbi_eat_goblin_a.e
+	}
+	text = { 
+		trigger = {
+			check_variable = {
+				FoodResearchV > 0.5 
+			}
+			NOT = {
+				has_global_flag = eat_goblin_a_upup
+			}
+		}
+		localisation_key = anbi_eat_goblin_a.g
+	}
+	text = { 
+		trigger = {
+			has_global_flag = eat_goblin_a_upup
+		}
+		localisation_key = anbi_eat_goblin_a.t
+	}
+}
+defined_text = {
+	name = AnbiEatGreenskinliver
+	random = no
+	text = { 
+		trigger = {
+			NOT = {
+				check_variable = {
+					FoodResearchV > 0.5 
+				}		
+			}
+			NOT = {
+				has_global_flag = eat_greenskin_liver_upup
+			}
+		}
+		localisation_key = anbi_eat_greenskin_liver.e
+	}
+	text = { 
+		trigger = {
+			check_variable = {
+				FoodResearchV > 0.5 
+			}
+			NOT = {
+				has_global_flag = eat_greenskin_liver_upup
+			}
+		}
+		localisation_key = anbi_eat_greenskin_liver.g
+	}
+	text = { 
+		trigger = {
+			has_global_flag = eat_greenskin_liver_upup
+		}
+		localisation_key = anbi_eat_greenskin_liver.t
+	}
+}
+defined_text = {
+	name = AnbiEatHarpy
+	random = no
+	text = { 
+		trigger = {
+			NOT = {
+				check_variable = {
+					FoodResearchV > 0.5 
+				}		
+			}
+			NOT = {
+				has_global_flag = eat_harpy_upup
+			}
+		}
+		localisation_key = anbi_eat_harpy.e
+	}
+	text = { 
+		trigger = {
+			check_variable = {
+				FoodResearchV > 0.5 
+			}
+			NOT = {
+				has_global_flag = eat_harpy_upup
+			}
+		}
+		localisation_key = anbi_eat_harpy.g
+	}
+	text = { 
+		trigger = {
+			has_global_flag = eat_harpy_upup
+		}
+		localisation_key = anbi_eat_harpy.t
+	}
+}
+defined_text = {
+	name = AnbiEatTroll
+	random = no
+	text = { 
+		trigger = {
+			NOT = {
+				check_variable = {
+					FoodResearchV > 0.5 
+				}		
+			}
+			NOT = {
+				has_global_flag = eat_troll_upup
+			}
+		}
+		localisation_key = anbi_eat_troll.e
+	}
+	text = { 
+		trigger = {
+			check_variable = {
+				FoodResearchV > 0.5 
+			}
+			NOT = {
+				has_global_flag = eat_troll_upup
+			}
+		}
+		localisation_key = anbi_eat_troll.g
+	}
+	text = { 
+		trigger = {
+			has_global_flag = eat_troll_upup
+		}
+		localisation_key = anbi_eat_troll.t
+	}
+}
+defined_text = {
+	name = AnbiEatOgre
+	random = no
+	text = { 
+		trigger = {
+			NOT = {
+				check_variable = {
+					FoodResearchV > 0.5 
+				}		
+			}
+			NOT = {
+				has_global_flag = eat_ogre_upup
+			}
+		}
+		localisation_key = anbi_eat_ogre.e
+	}
+	text = { 
+		trigger = {
+			check_variable = {
+				FoodResearchV > 0.5 
+			}
+			NOT = {
+				has_global_flag = eat_ogre_upup
+			}
+		}
+		localisation_key = anbi_eat_ogre.g
+	}
+	text = { 
+		trigger = {
+			has_global_flag = eat_ogre_upup
+		}
+		localisation_key = anbi_eat_ogre.t
+	}
+}
+defined_text = {
+	name = AnbiEatCentaur
+	random = no
+	text = { 
+		trigger = {
+			NOT = {
+				check_variable = {
+					FoodResearchV > 0.5 
+				}		
+			}
+			NOT = {
+				has_global_flag = eat_centaur_upup
+			}
+		}
+		localisation_key = anbi_eat_centaur.e
+	}
+	text = { 
+		trigger = {
+			check_variable = {
+				FoodResearchV > 0.5 
+			}
+			NOT = {
+				has_global_flag = eat_centaur_upup
+			}
+		}
+		localisation_key = anbi_eat_centaur.g
+	}
+	text = { 
+		trigger = {
+			has_global_flag = eat_centaur_upup
+		}
+		localisation_key = anbi_eat_centaur.t
+	}
+}
+defined_text = {
+	name = AnbiEatEvilElven
+	random = no
+	text = { 
+		trigger = {
+			NOT = {
+				check_variable = {
+					FoodResearchV > 0.5 
+				}		
+			}
+			NOT = {
+				has_global_flag = eat_evil_elven_upup
+			}
+		}
+		localisation_key = anbi_eat_evil_elven.e
+	}
+	text = { 
+		trigger = {
+			check_variable = {
+				FoodResearchV > 0.5 
+			}
+			NOT = {
+				has_global_flag = eat_evil_elven_upup
+			}
+		}
+		localisation_key = anbi_eat_evil_elven.g
+	}
+	text = { 
+		trigger = {
+			has_global_flag = eat_evil_elven_upup
+		}
+		localisation_key = anbi_eat_evil_elven.t
+	}
+}
+defined_text = {
+	name = AnbiEatXianling
+	random = no
+	text = { 
+		trigger = {
+			NOT = {
+				check_variable = {
+					FoodResearchV > 0.5 
+				}		
+			}
+			NOT = {
+				has_global_flag = eat_xianling_upup
+			}
+		}
+		localisation_key = anbi_eat_xianling.e
+	}
+	text = { 
+		trigger = {
+			check_variable = {
+				FoodResearchV > 0.5 
+			}
+			NOT = {
+				has_global_flag = eat_xianling_upup
+			}
+		}
+		localisation_key = anbi_eat_xianling.g
+	}
+	text = { 
+		trigger = {
+			has_global_flag = eat_xianling_upup
+		}
+		localisation_key = anbi_eat_xianling.t
+	}
+}
+defined_text = {
+	name = AnbiEatKobold
+	random = no
+	text = { 
+		trigger = {
+			NOT = {
+				check_variable = {
+					FoodResearchV > 0.5 
+				}		
+			}
+			NOT = {
+				has_global_flag = eat_kobold_upup
+			}
+		}
+		localisation_key = anbi_eat_kobold.e
+	}
+	text = { 
+		trigger = {
+			check_variable = {
+				FoodResearchV > 0.5 
+			}
+			NOT = {
+				has_global_flag = eat_kobold_upup
+			}
+		}
+		localisation_key = anbi_eat_kobold.g
+	}
+	text = { 
+		trigger = {
+			has_global_flag = eat_kobold_upup
+		}
+		localisation_key = anbi_eat_kobold.t
+	}
+}
+defined_text = {
+	name = AnbiEatKhet
+	random = no
+	text = { 
+		trigger = {
+			NOT = {
+				check_variable = {
+					FoodResearchV > 0.5 
+				}		
+			}
+			NOT = {
+				has_global_flag = eat_khet_upup
+			}
+		}
+		localisation_key = anbi_eat_khet.e
+	}
+	text = { 
+		trigger = {
+			check_variable = {
+				FoodResearchV > 0.5 
+			}
+			NOT = {
+				has_global_flag = eat_khet_upup
+			}
+		}
+		localisation_key = anbi_eat_khet.g
+	}
+	text = { 
+		trigger = {
+			has_global_flag = eat_khet_upup
+		}
+		localisation_key = anbi_eat_khet.t
+	}
+}
+defined_text = {
+	name = AnbiEatGnollish
+	random = no
+	text = { 
+		trigger = {
+			NOT = {
+				check_variable = {
+					FoodResearchV > 0.5 
+				}		
+			}
+			NOT = {
+				has_global_flag = eat_gnollish_upup
+			}
+		}
+		localisation_key = anbi_eat_gnollish.e
+	}
+	text = { 
+		trigger = {
+			check_variable = {
+				FoodResearchV > 0.5 
+			}
+			NOT = {
+				has_global_flag = eat_gnollish_upup
+			}
+		}
+		localisation_key = anbi_eat_gnollish.g
+	}
+	text = { 
+		trigger = {
+			has_global_flag = eat_gnollish_upup
+		}
+		localisation_key = anbi_eat_gnollish.t
+	}
+}
