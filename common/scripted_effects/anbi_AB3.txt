@@ -967,19 +967,44 @@ anbi_merfolk_research_effect = {
 				anbi_merfolk_shipgirls_progress = 100
 			}
 		}
-		subtract_variable = {
-			anbi_merfolk_shipgirls_progress = 100
+		set_variable = {
+			anbi_merfolk_shipgirls_progress = 0
 		}
+		if = {
+			limit = { 
+				has_country_flag = anbi_merfolk_ShipGirlsHull_doing
+			}
+			country_event = {
+				id = anbi_merfolk.301
+			}
+		}
+		if = {
+			limit = { 
+				has_country_flag = anbi_merfolk_ShipGirlsBrain_doing
+			}
+			country_event = {
+				id = anbi_merfolk.302
+			}
+		}
+		if = {
+			limit = { 
+				has_country_flag = anbi_merfolk_ShipGirlsIntoWater_doing
+			}
+			country_event = {
+				id = anbi_merfolk.303
+			}
+		}
+		#牛魔bug，elseif不执行事件
 		if = {
 			limit = { 
 				has_country_flag = anbi_merfolk_ShipGirlsTheory_doing
 			}
 			set_country_flag = anbi_merfolk_ShipGirlsTheory_complete
 			set_country_flag = anbi_merfolk_ShipGirlsHull_doing
-			clr_country_flag = anbi_merfolk_ShipGirlsTheory_doing
 			country_event = {
 				id = anbi_merfolk.300
 			}
+			clr_country_flag = anbi_merfolk_ShipGirlsTheory_doing
 		}
 		else_if = {
 			limit = { 
@@ -988,9 +1013,6 @@ anbi_merfolk_research_effect = {
 			set_country_flag = anbi_merfolk_ShipGirlsHull_complete
 			set_country_flag = anbi_merfolk_ShipGirlsBrain_doing
 			clr_country_flag = anbi_merfolk_ShipGirlsHull_doing
-			country_event = {
-				id = anbi_merfolk.301
-			}
 		}
 		else_if = {
 			limit = {
@@ -999,9 +1021,6 @@ anbi_merfolk_research_effect = {
 			set_country_flag = anbi_merfolk_ShipGirlsBrain_complete
 			set_country_flag = anbi_merfolk_ShipGirlsIntoWater_doing
 			clr_country_flag = anbi_merfolk_ShipGirlsBrain_doing
-			country_event = {
-				id = anbi_merfolk.302
-			}
 		}
 		else_if = {
 			limit = { 
@@ -1009,9 +1028,6 @@ anbi_merfolk_research_effect = {
 			}
 			set_country_flag = anbi_merfolk_ShipGirlsIntoWater_complete
 			clr_country_flag = anbi_merfolk_ShipGirlsIntoWater_doing
-			country_event = {
-				id = anbi_merfolk.303
-			}
-		}
+		}		
 	}
 }

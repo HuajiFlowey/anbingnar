@@ -2915,8 +2915,8 @@ anbi_merfolk_5 = {
 					6584 = {
 						add_core = S92
 						cede_province = S92
-						move_capital_effect = yes
 					}
+					set_capital = 6584
 					change_government = monarchy
 					merfolk_discover = yes
 					add_country_modifier = {
@@ -2985,6 +2985,8 @@ anbi_merfolk_5 = {
 		}
 
 		trigger = {
+			stability = 2
+			years_of_income = 1
 			any_owned_province = { has_any_halfling_pop_trigger = yes } 
 			any_owned_province = { has_any_lizardfolk_pop_trigger = yes } 
 			OR = {
@@ -3010,6 +3012,8 @@ anbi_merfolk_5 = {
 		}
 
 		effect = {
+			add_stability = -1
+			add_years_of_income = -1
 			custom_tooltip = anbi_merfolk_land_army_research_tt
 			clr_country_flag = disables_estate_adeen_flag
 			country_event = { 
@@ -3226,8 +3230,14 @@ anbi_merfolk_1_win = {
 			custom_trigger_tooltip = {
 				tooltip = anbi_merfolk_the_dreamful_city_ctt
 				OR = {
-					has_country_flag = anbi_merfolk_shipgirl_research_complete
-					mission_completed = anbi_merfolk_the_dreamful_city
+					has_country_flag = anbi_merfolk_shipgirl_who_1
+					has_country_flag = anbi_merfolk_shipgirl_who_2
+					has_country_flag = anbi_merfolk_shipgirl_who_3
+					has_country_flag = anbi_merfolk_shipgirl_who_4
+					has_country_flag = anbi_merfolk_shipgirl_who_5
+					has_country_flag = anbi_merfolk_shipgirl_who_6
+					has_country_flag = anbi_merfolk_shipgirl_who_7
+					has_country_flag = anbi_merfolk_shipgirl_who_8
 				}				
 			}
 		} 
@@ -3519,6 +3529,9 @@ anbi_merfolk_3_win = {
 				name = "anbi_merfolk_take_a_look_buff"
 				duration = 36500
 			}
+			4420 = {
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -3679,7 +3692,7 @@ anbi_merfolk_3_win = {
 		provinces_to_highlight = {  } 
 
 		trigger = {  
-			naval_forcelimit = 8000
+			naval_forcelimit = 3000
 			sailors = 1000000
 			num_of_owned_provinces_with = {
 				value = 20
@@ -3732,6 +3745,7 @@ anbi_merfolk_4_win = {
 				has_estate = estate_artificers
 				natural_scientist = 5
 			}
+			owns = 4420
 		} 
 
 		effect = {  

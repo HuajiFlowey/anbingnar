@@ -2373,6 +2373,7 @@ country_event = {
 			clr_country_flag = anbi_merfolk_ShipGirlsHull_complete
 			clr_country_flag = anbi_merfolk_ShipGirlsBrain_complete
 			clr_country_flag = anbi_merfolk_ShipGirlsIntoWater_complete
+			set_country_flag = anbi_merfolk_ShipGirlsTheory_doing
 		}	
 	}
 
@@ -2392,145 +2393,101 @@ country_event = {
 			subtract_variable = {
 				anbi_merfolk_shipgirls_power_investment = 10
 			}
-			clr_country_flag = anbi_merfolk_ShipGirlsTheory_complete
-			clr_country_flag = anbi_merfolk_ShipGirlsHull_complete
-			clr_country_flag = anbi_merfolk_ShipGirlsBrain_complete
-			clr_country_flag = anbi_merfolk_ShipGirlsIntoWater_complete
 		}		
-		random_list = {
-			1 = {
-				trigger = {
-					NOT = {
-						has_country_flag = anbi_merfolk_shipgirl_who_1
+		hidden_effect = {
+			random_list = {
+				1 = {
+					trigger = {
+						NOT = {
+							has_country_flag = anbi_merfolk_shipgirl_who_1
+						}
+					}
+					set_country_flag = anbi_merfolk_shipgirl_who_1
+					country_event = {
+						id = anbi_merfolk.307
 					}
 				}
-				set_country_flag = anbi_merfolk_shipgirl_who_1
-			}
-			1 = {
-				trigger = {
-					NOT = {
-						has_country_flag = anbi_merfolk_shipgirl_who_2
+				1 = {
+					trigger = {
+						NOT = {
+							has_country_flag = anbi_merfolk_shipgirl_who_2
+						}
+					}
+					set_country_flag = anbi_merfolk_shipgirl_who_2
+					country_event = {
+						id = anbi_merfolk.306
 					}
 				}
-				set_country_flag = anbi_merfolk_shipgirl_who_2
-			}
-			1 = {
-				trigger = {
-					NOT = {
-						has_country_flag = anbi_merfolk_shipgirl_who_3
+				1 = {
+					trigger = {
+						NOT = {
+							has_country_flag = anbi_merfolk_shipgirl_who_3
+						}
+					}
+					set_country_flag = anbi_merfolk_shipgirl_who_3
+					country_event = {
+						id = anbi_merfolk.305
 					}
 				}
-				set_country_flag = anbi_merfolk_shipgirl_who_3
-			}
-			1 = {
-				trigger = {
-					NOT = {
-						has_country_flag = anbi_merfolk_shipgirl_who_4
+				1 = {
+					trigger = {
+						NOT = {
+							has_country_flag = anbi_merfolk_shipgirl_who_4
+						}
+					}
+					set_country_flag = anbi_merfolk_shipgirl_who_4
+					country_event = {
+						id = anbi_merfolk.304
 					}
 				}
-				set_country_flag = anbi_merfolk_shipgirl_who_4
-			}
-			1 = {
-				trigger = {
-					NOT = {
-						has_country_flag = anbi_merfolk_shipgirl_who_5
+				1 = {
+					trigger = {
+						NOT = {
+							has_country_flag = anbi_merfolk_shipgirl_who_5
+						}
+					}
+					set_country_flag = anbi_merfolk_shipgirl_who_5
+					country_event = {
+						id = anbi_merfolk.308
 					}
 				}
-				set_country_flag = anbi_merfolk_shipgirl_who_5
-			}
-			1 = {
-				trigger = {
-					NOT = {
-						has_country_flag = anbi_merfolk_shipgirl_who_6
+				1 = {
+					trigger = {
+						NOT = {
+							has_country_flag = anbi_merfolk_shipgirl_who_6
+						}
+					}
+					set_country_flag = anbi_merfolk_shipgirl_who_6
+					country_event = {
+						id = anbi_merfolk.309
 					}
 				}
-				set_country_flag = anbi_merfolk_shipgirl_who_6
-			}
-			1 = {
-				trigger = {
-					NOT = {
-						has_country_flag = anbi_merfolk_shipgirl_who_7
+				1 = {
+					trigger = {
+						NOT = {
+							has_country_flag = anbi_merfolk_shipgirl_who_7
+						}
+					}
+					set_country_flag = anbi_merfolk_shipgirl_who_7
+					country_event = {
+						id = anbi_merfolk.310
 					}
 				}
-				set_country_flag = anbi_merfolk_shipgirl_who_7
-			}
-			1 = {
-				trigger = {
-					NOT = {
-						has_country_flag = anbi_merfolk_shipgirl_who_8
+				1 = {
+					trigger = {
+						NOT = {
+							has_country_flag = anbi_merfolk_shipgirl_who_8
+						}
+					}
+					set_country_flag = anbi_merfolk_shipgirl_who_8
+					country_event = {
+						id = anbi_merfolk.311
 					}
 				}
-				set_country_flag = anbi_merfolk_shipgirl_who_8
 			}
-		}
+		}		
 	}
 
-	after = {
-		if = {
-			limit = { 
-				has_country_flag = anbi_merfolk_shipgirl_who_1
-			}
-			country_event = {
-				id = anbi_merfolk.304
-			}
-		}
-		else_if = {
-			limit = { 
-				has_country_flag = anbi_merfolk_shipgirl_who_2
-			}
-			country_event = {
-				id = anbi_merfolk.305
-			}
-		}
-		else_if = {
-			limit = { 
-				has_country_flag = anbi_merfolk_shipgirl_who_3
-			}
-			country_event = {
-				id = anbi_merfolk.306
-			}
-		}
-		else_if = {
-			limit = { 
-				has_country_flag = anbi_merfolk_shipgirl_who_4
-			}
-			country_event = {
-				id = anbi_merfolk.307
-			}
-		}
-		else_if = {
-			limit = { 
-				has_country_flag = anbi_merfolk_shipgirl_who_5
-			}
-			country_event = {
-				id = anbi_merfolk.308
-			}
-		}
-		else_if = {
-			limit = { 
-				has_country_flag = anbi_merfolk_shipgirl_who_6
-			}
-			country_event = {
-				id = anbi_merfolk.309
-			}
-		}
-		else_if = {
-			limit = { 
-				has_country_flag = anbi_merfolk_shipgirl_who_7
-			}
-			country_event = {
-				id = anbi_merfolk.310
-			}
-		}
-		else_if = {
-			limit = { 
-				has_country_flag = anbi_merfolk_shipgirl_who_8
-			}
-			country_event = {
-				id = anbi_merfolk.311
-			}
-		}
-	}
 }
 #科林号宣誓效忠(304)
 country_event = {

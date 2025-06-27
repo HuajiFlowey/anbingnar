@@ -190,7 +190,7 @@ anbi_merfolk_lizardfolk_land_army = {
 	benefits = {
 		global_ship_cost = -0.05
 		allowed_marine_fraction = 0.05
-		shock_damage_received = -0.05
+		shock_damage_received = -0.1
 		nobles_privilege_slots = 1
 	}
 	conditional_modifier = {
@@ -198,9 +198,9 @@ anbi_merfolk_lizardfolk_land_army = {
 			high_tolerance_lizardfolk_race_trigger = yes
 		}
 		modifier = {
-			naval_morale = 0.05
+			naval_morale = 0.1
 			core_creation = -0.05
-			infantry_shock = 0.1
+			infantry_shock = 0.15
 		}
 	}
 	ai_will_do = {
@@ -244,6 +244,7 @@ anbi_merfolk_halfling_land_army = {
 		}
 		modifier = {
 			global_manpower_modifier = 0.1
+			fire_damage = 0.1
 			land_forcelimit_modifier = 0.1
 			morale_damage_received = -0.05
 		}

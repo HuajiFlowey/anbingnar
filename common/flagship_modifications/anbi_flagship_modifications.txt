@@ -61,7 +61,7 @@ anbi_merfolk_flagship_shipgirls = {
 		naval_maintenance_flagship_modifier = 25
 		flagship_durability = 100
 		flagship_morale = 100
-		number_of_cannons_flagship_modifier = 1
+		number_of_cannons_flagship_modifier = 100
 	}
 	ai_trade_score = {
 		factor = 0

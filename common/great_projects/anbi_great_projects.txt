@@ -2703,8 +2703,7 @@ anbi_merfolk_mage_school = {
 		}
 	}
 }
-anbi_merfolk_landpalace = {
-	start = 6052	#Rayavhashapal
+anbi_merfolk_landpalace = {	#Rayavhashapal
 
 	date = 2000.01.01
 
