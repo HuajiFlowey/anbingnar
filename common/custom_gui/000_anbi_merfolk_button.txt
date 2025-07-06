@@ -77,7 +77,7 @@ custom_button = { #Merfolk Settlements
 						has_province_modifier = anbi_AB3_the_devils_looking
 					}
 				}
-				is_core = FROM
+				is_core = FROM #国家
 				if = {
 					limit = { 
 						owner = {

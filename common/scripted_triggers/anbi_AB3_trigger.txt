@@ -1,6 +1,5 @@
 anbi_AB3_merfolk_devils_area_owns = {
 	OR = {
-		owns = 5653
 		owns = 6671
 		owns = 6017
 		owns = 6675
@@ -114,7 +113,7 @@ anbi_merfolk_settlement_expand_first = {
 }
 anbi_merfolk_settlement_expand_haless = {
 	OR = {
-		province_id = 4964
+		province_id = 4963
 		province_id = 4716
 		province_id = 4962
 		province_id = 4701
@@ -138,5 +137,44 @@ anbi_merfolk_settlement_expand_yansheni = {
 		province_id = 5354
 		province_id = 5419
 		province_id = 4990
+	}
+}
+anbi_merfolk_shipgirls_can_change = {
+	OR = {
+		NOT = {
+			check_variable = {
+				anbi_merfolk_shipgirls_is_queen_var = 1
+			}
+		}
+		AND = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 1
+			}
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirl_who_1_love
+				value = 4
+			}
+		}
+		AND = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 2
+			}
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirl_who_2_love
+				value = 3
+			}
+		}
+		AND = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 3
+			}
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirl_who_3_love
+				value = 3
+			}
+		}
 	}
 }

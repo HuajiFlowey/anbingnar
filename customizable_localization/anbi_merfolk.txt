@@ -74,3 +74,563 @@ defined_text = {
 		localisation_key = anbi_merfolk_shipgirls_2
 	}
 }
+#Corin
+defined_text = {
+	name = ShipGirlsCorinActionF
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 1
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 1
+			}
+		}
+		localisation_key = anbi_merfolk.312.f2
+	}
+}
+defined_text = {
+	name = ShipGirlsCorinActionG
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 1
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 1
+			}
+		}
+		localisation_key = anbi_merfolk.312.g2
+	}
+}
+defined_text = {
+	name = ShipGirlsCorinActionH
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 1
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 1
+			}
+		}
+		localisation_key = anbi_merfolk.312.h2
+	}
+}
+#Jaher
+defined_text = {
+	name = ShipGirlsJaherActionF
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 2
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 2
+			}
+		}
+		localisation_key = anbi_merfolk.313.f2
+	}
+}
+defined_text = {
+	name = ShipGirlsJaherActionG
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 2
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 2
+			}
+		}
+		localisation_key = anbi_merfolk.313.g2
+	}
+}
+defined_text = {
+	name = ShipGirlsJaherActionH
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 2
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 2
+			}
+		}
+		localisation_key = anbi_merfolk.313.h2
+	}
+}
+#Gertyene
+defined_text = {
+	name = ShipGirlsGertyeneActionF
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 3
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 3
+			}
+		}
+		localisation_key = anbi_merfolk.314.f2
+	}
+}
+defined_text = {
+	name = ShipGirlsGertyeneActionG
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 3
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 3
+			}
+		}
+		localisation_key = anbi_merfolk.314.g2
+	}
+}
+defined_text = {
+	name = ShipGirlsGertyeneActionH
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 3
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 3
+			}
+		}
+		localisation_key = anbi_merfolk.314.h2
+	}
+}
+#Pingshuang
+defined_text = {
+	name = ShipGirlsPingshuangActionF
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 4
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 4
+			}
+		}
+		localisation_key = anbi_merfolk.315.f2
+	}
+}
+defined_text = {
+	name = ShipGirlsPingshuangActionG
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 4
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 4
+			}
+		}
+		localisation_key = anbi_merfolk.315.g2
+	}
+}
+defined_text = {
+	name = ShipGirlsPingshuangActionH
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 4
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 4
+			}
+		}
+		localisation_key = anbi_merfolk.315.h2
+	}
+}
+#Suhan
+defined_text = {
+	name = ShipGirlsSuhanActionF
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 5
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 5
+			}
+		}
+		localisation_key = anbi_merfolk.316.f2
+	}
+}
+defined_text = {
+	name = ShipGirlsSuhanActionG
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 5
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 5
+			}
+		}
+		localisation_key = anbi_merfolk.316.g2
+	}
+}
+defined_text = {
+	name = ShipGirlsSuhanActionH
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 5
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 5
+			}
+		}
+		localisation_key = anbi_merfolk.316.h2
+	}
+}
+#Calasadur
+defined_text = {
+	name = ShipGirlsCalasadurActionF
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 6
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 6
+			}
+		}
+		localisation_key = anbi_merfolk.317.f2
+	}
+}
+defined_text = {
+	name = ShipGirlsCalasadurActionG
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 6
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 6
+			}
+		}
+		localisation_key = anbi_merfolk.317.g2
+	}
+}
+defined_text = {
+	name = ShipGirlsCalasadurActionH
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 6
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 6
+			}
+		}
+		localisation_key = anbi_merfolk.317.h2
+	}
+}
+#Huxian
+defined_text = {
+	name = ShipGirlsHuxianActionF
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 7
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 7
+			}
+		}
+		localisation_key = anbi_merfolk.318.f2
+	}
+}
+defined_text = {
+	name = ShipGirlsHuxianActionG
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 7
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 7
+			}
+		}
+		localisation_key = anbi_merfolk.318.g2
+	}
+}
+defined_text = {
+	name = ShipGirlsHuxianActionH
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 7
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 7
+			}
+		}
+		localisation_key = anbi_merfolk.318.h2
+	}
+}
+#Dragon
+defined_text = {
+	name = ShipGirlsDragonActionF
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 8
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 8
+			}
+		}
+		localisation_key = anbi_merfolk.319.f2
+	}
+}
+defined_text = {
+	name = ShipGirlsDragonActionG
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 8
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 8
+			}
+		}
+		localisation_key = anbi_merfolk.319.g2
+	}
+}
+defined_text = {
+	name = ShipGirlsDragonActionH
+	text = { 
+		trigger = {
+			NOT = {
+				is_variable_equal = {
+					which = anbi_merfolk_shipgirls_is_queen_var
+					value = 8
+				}
+			}
+		}
+		localisation_key = anbi_merfolk.shipgirl.noqueen
+	}
+	text = { 
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirls_is_queen_var
+				value = 8
+			}
+		}
+		localisation_key = anbi_merfolk.319.h2
+	}
+}

@@ -808,7 +808,6 @@ anbi_merfolk_binary_empire = {
 		has_reform = anbi_merfolk_binary_empire
 	}
 	modifiers = {
-		culture_conversion_cost = 50
 		global_sailors_modifier = 0.25
 		min_autonomy = -0.05
 		max_absolutism = -25
@@ -820,18 +819,8 @@ anbi_merfolk_binary_empire = {
 	icon = "anbi_merfolk"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
-	
-	maintain_dynasty = yes
-	heirs_can_be_generals = no
-	rulers_can_be_generals = no
-	royal_marriage = no
 
 	custom_attributes = {
-		can_change_primary_culture = no
-		locked_government_type = yes
-		anbi_is_merfolk_state = yes
-		disabled_expelling = yes
-		disabled_purging = yes
 		has_parliament = yes
 		parliament_seat_bonus = yes
 	}
@@ -841,7 +830,6 @@ anbi_merfolk_absolutism_empire = {
 		has_reform = anbi_merfolk_absolutism_empire
 	}
 	modifiers = {
-		culture_conversion_cost = 50
 		global_sailors_modifier = 0.25
 		administrative_efficiency = 0.05
 		max_absolutism = 25
@@ -853,20 +841,8 @@ anbi_merfolk_absolutism_empire = {
 	nation_designer_cost = 10
 	icon = "anbi_merfolk"
 	allow_normal_conversion = no
-	lock_level_when_selected = yes
-	
-	maintain_dynasty = yes
-	heirs_can_be_generals = no
-	rulers_can_be_generals = no
-	royal_marriage = no
+	lock_level_when_selected = yes	
 
-	custom_attributes = {
-		can_change_primary_culture = no
-		locked_government_type = yes
-		anbi_is_merfolk_state = yes
-		disabled_expelling = yes
-		disabled_purging = yes
-	}
 }
 anbi_merfolk_artificers_government = {
 	potential = {

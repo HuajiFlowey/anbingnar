@@ -2732,7 +2732,6 @@ anbi_merfolk_landpalace = {	#Rayavhashapal
 	can_upgrade_trigger = {
 		owner = {
 			tag = AB3
-			years_of_sailors = 3
 		}
 	}
 

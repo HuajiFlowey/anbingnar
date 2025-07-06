@@ -78,14 +78,14 @@ country_event = {
 			add_sailors = -10000
 			add_manpower = -10
 			change_variable = {
-				anbi_merfolk_shipgirls_sailors_investment = 1
+				anbi_merfolk_shipgirls_sailors_investment = 3
 			}
 		}
 		else = {
 			tooltip = {
 				add_manpower = -10
 				change_variable = {
-					anbi_merfolk_shipgirls_sailors_investment = 1
+					anbi_merfolk_shipgirls_sailors_investment = 3
 				}
 			}
 		}
@@ -104,7 +104,7 @@ country_event = {
 			add_dip_power = -100
 			add_mil_power = -100
 			change_variable = {
-				anbi_merfolk_shipgirls_power_investment = 1
+				anbi_merfolk_shipgirls_power_investment = 10
 			}
 		}
 		else = {
@@ -113,7 +113,7 @@ country_event = {
 				add_dip_power = -100
 				add_mil_power = -100
 				change_variable = {
-					anbi_merfolk_shipgirls_power_investment = 1
+					anbi_merfolk_shipgirls_power_investment = 10
 				}
 			}
 		}

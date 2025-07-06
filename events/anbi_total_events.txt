@@ -53,6 +53,7 @@ country_event = {
 
 	is_triggered_only = yes
 	trigger = {
+		ai = no
 		all_province = {
 			NOT = {
 				region = gowon_region
@@ -94,9 +95,6 @@ country_event = {
 	is_triggered_only = yes
 	hidden = yes
 
-	trigger = {
-		
-	}
 	option = {
 		name = anbitotal.5.a
 		trigger_switch = {

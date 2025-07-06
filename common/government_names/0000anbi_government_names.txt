@@ -174,5 +174,61 @@ anbi_merfolk = {
 	
 	trigger = {
 		tag = AB3
+		NOT = {
+			check_variable = {
+				anbi_merfolk_shipgirls_is_queen_var = 1
+			}
+		}
+	}
+}
+
+anbi_merfolk_shipgirls = {
+	rank = {
+		1 = ANBI_MERFOLK_STATE
+		2 = ANBI_MERFOLK_KINGDOM
+		3 = ANBI_MERFOLK_EMPIRE
+	}
+	
+	ruler_male = {
+		1 = ANBI_MERFOLK_MALE_RULER
+		2 = ANBI_MERFOLK_MALE_RULER
+		3 = ANBI_MERFOLK_MALE_RULER
+	}
+
+	ruler_female = {
+		1 = ANBI_MERFOLK_FEMALE_RULER
+		2 = ANBI_MERFOLK_FEMALE_RULER
+		3 = ANBI_MERFOLK_FEMALE_RULER
+	}
+
+	consort_male  = {
+		1 = ANBI_MERFOLK_MALE_CONSORT
+		2 = ANBI_MERFOLK_MALE_CONSORT
+		3 = ANBI_MERFOLK_MALE_CONSORT
+	}
+	
+	consort_female = {
+		1 = ANBI_MERFOLK_SHIPGIRL
+		2 = ANBI_MERFOLK_SHIPGIRL
+		3 = ANBI_MERFOLK_SHIPGIRL
+	}
+	
+	heir_male = {
+		1 = ANBI_MERFOLK_MALE_HEIR
+		2 = ANBI_MERFOLK_MALE_HEIR
+		3 = ANBI_MERFOLK_MALE_HEIR
+	}
+	
+	heir_female = {
+		1 = ANBI_MERFOLK_FEMALE_HEIR
+		2 = ANBI_MERFOLK_FEMALE_HEIR
+		3 = ANBI_MERFOLK_FEMALE_HEIR
+	}
+	
+	trigger = {
+		tag = AB3
+		check_variable = {
+			anbi_merfolk_shipgirls_is_queen_var = 0
+		}
 	}
 }

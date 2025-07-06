@@ -59,7 +59,7 @@ anbi_merfolk_mahalaya_regilion_lonely_privilege = {
 			has_country_flag = anbi_merfolk_integration_of_land_and_sea_cf
 		}
 		modifier = {
-			governing_cost = -0.35
+			governing_cost = -0.25
 			stability_cost_modifier = -0.3
 			global_autonomy = 0.05
 		}
@@ -582,14 +582,26 @@ anbi_merfolk_the_great_elven_is_merfolks = {
 			}
 			AND = {
 				has_estate_privilege = anbi_merfolk_the_great_elven_is_merfolks
-				medium_tolerance_elven_race_trigger = yes
-				medium_tolerance_ruinborn_race_trigger = yes
+				OR = {
+					medium_tolerance_elven_race_trigger = yes
+					high_tolerance_elven_race_trigger = yes
+				}
+				OR = {
+					medium_tolerance_ruinborn_race_trigger = yes
+					high_tolerance_ruinborn_race_trigger = yes
+				}
 			}						
 		}
 	}
 	can_select = {
-		medium_tolerance_elven_race_trigger = yes
-		medium_tolerance_ruinborn_race_trigger = yes	
+		OR = {
+			medium_tolerance_elven_race_trigger = yes
+			high_tolerance_elven_race_trigger = yes
+		}
+		OR = {
+			medium_tolerance_ruinborn_race_trigger = yes
+			high_tolerance_ruinborn_race_trigger = yes
+		}	
 	} 					 					
 	can_revoke = { 
 		always = no
@@ -601,6 +613,70 @@ anbi_merfolk_the_great_elven_is_merfolks = {
 		administrative_efficiency = 0.1
 		province_warscore_cost = -0.15
 		church_privilege_slots = 1
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+anbi_merfolk_hunjie = {
+	icon = privilege_hunjian
+	max_absolutism = 25
+	loyalty = 0.2
+	influence = 0
+	is_valid = {
+		tag = AB3
+		mission_completed = anbi_merfolk_the_dreamful_city
+	}
+	can_select = {
+		always = no
+	}
+	can_revoke = {
+		always = no
+	}
+	on_granted = {
+	}
+	benefits = {
+		yearly_absolutism = 1
+		all_estate_loyalty_equilibrium = -0.1 
+		all_power_cost = -0.025
+	}
+	conditional_modifier = {
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirl_who_1_love
+				value = 4
+			}
+		}
+		modifier = {
+			land_morale = 0.075
+			discipline = 0.05
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirl_who_2_love
+				value = 3
+			}
+		}
+		modifier = {
+			administrative_efficiency = 0.1
+			min_autonomy = -5
+			autonomy_change_time = -0.5
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			is_variable_equal = {
+				which = anbi_merfolk_shipgirl_who_3_love
+				value = 3
+			}
+		}
+		modifier = {
+			global_unrest = -2
+			cb_on_religious_enemies = yes
+			regiment_manpower_usage = -0.25
+		}
 	}
 	ai_will_do = {
 		factor = 0

@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType= {
+		name = "privilege_hunjian"
+		texturefile = "gfx//interface//privilege_hunjian.dds"
+	}
+}

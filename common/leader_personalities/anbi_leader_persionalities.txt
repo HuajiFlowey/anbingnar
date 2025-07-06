@@ -6,3 +6,17 @@ anbi_mage_admiral = {
 	number_of_cannons_modifier = 0.1
 	naval_tradition_from_battle = -1
 }
+anbi_shipgirls = {
+	allow = {
+		always = no
+	}
+	artillery_fire = 1
+	infantry_fire = 1
+}
+anbi_shipgirls_admiral = {
+	allow = {
+		always = no
+	}
+	number_of_cannons_modifier = 1
+	ship_durability = 1
+}

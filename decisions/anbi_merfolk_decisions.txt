@@ -175,6 +175,10 @@ country_decisions = {
 		}
 		potential = {
 			has_country_flag = anbi_merfolk_shipgirl_who_1
+			NOT = {
+				has_country_flag = anbi_merfolk_shipgirl_who_1_decision	
+			}
+			
 		}
 		allow = {
 			custom_trigger_tooltip = {
@@ -187,7 +191,8 @@ country_decisions = {
 				country_event = {
 					id = anbi_merfolk.312
 				}
-			}			
+			}
+			set_country_flag = anbi_merfolk_shipgirl_who_1_decision			
 		}
 	}
 	anbi_merfolk_shipgirl_jaher = {
@@ -196,6 +201,10 @@ country_decisions = {
 		}
 		potential = {
 			has_country_flag = anbi_merfolk_shipgirl_who_2
+			NOT = {
+				has_country_flag = anbi_merfolk_shipgirl_who_2_decision	
+			}
+			
 		}
 		allow = {
 			custom_trigger_tooltip = {
@@ -208,7 +217,8 @@ country_decisions = {
 				country_event = {
 					id = anbi_merfolk.313
 				}
-			}	
+			}
+			set_country_flag = anbi_merfolk_shipgirl_who_2_decision	
 		}
 	}
 	anbi_merfolk_shipgirl_gertyene = {
@@ -217,6 +227,10 @@ country_decisions = {
 		}
 		potential = {
 			has_country_flag = anbi_merfolk_shipgirl_who_3
+			NOT = {
+				has_country_flag = anbi_merfolk_shipgirl_who_3_decision	
+			}
+			
 		}
 		allow = {
 			custom_trigger_tooltip = {
@@ -229,7 +243,8 @@ country_decisions = {
 				country_event = {
 					id = anbi_merfolk.314
 				}
-			}	
+			}
+			set_country_flag = anbi_merfolk_shipgirl_who_3_decision	
 		}
 	}
 	anbi_merfolk_shipgirl_pingshuang = {
@@ -238,6 +253,10 @@ country_decisions = {
 		}
 		potential = {
 			has_country_flag = anbi_merfolk_shipgirl_who_4
+			NOT = {
+				has_country_flag = anbi_merfolk_shipgirl_who_4_decision	
+			}
+			
 		}
 		allow = {
 			custom_trigger_tooltip = {
@@ -250,7 +269,8 @@ country_decisions = {
 				country_event = {
 					id = anbi_merfolk.315
 				}
-			}	
+			}
+			set_country_flag = anbi_merfolk_shipgirl_who_4_decision	
 		}
 	}
 	anbi_merfolk_shipgirl_suhan = {
@@ -259,6 +279,10 @@ country_decisions = {
 		}
 		potential = {
 			has_country_flag = anbi_merfolk_shipgirl_who_5
+			NOT = {
+				has_country_flag = anbi_merfolk_shipgirl_who_5_decision	
+			}
+			
 		}
 		allow = {
 			custom_trigger_tooltip = {
@@ -271,7 +295,8 @@ country_decisions = {
 				country_event = {
 					id = anbi_merfolk.316
 				}
-			}	
+			}
+			set_country_flag = anbi_merfolk_shipgirl_who_5_decision	
 		}
 	}
 	anbi_merfolk_shipgirl_calasadur = {
@@ -280,6 +305,10 @@ country_decisions = {
 		}
 		potential = {
 			has_country_flag = anbi_merfolk_shipgirl_who_6
+			NOT = {
+				has_country_flag = anbi_merfolk_shipgirl_who_6_decision	
+			}
+			
 		}
 		allow = {
 			custom_trigger_tooltip = {
@@ -292,7 +321,8 @@ country_decisions = {
 				country_event = {
 					id = anbi_merfolk.317
 				}
-			}	
+			}
+			set_country_flag = anbi_merfolk_shipgirl_who_6_decision	
 		}
 	}
 	anbi_merfolk_shipgirl_huxian = {
@@ -301,6 +331,10 @@ country_decisions = {
 		}
 		potential = {
 			has_country_flag = anbi_merfolk_shipgirl_who_7
+			NOT = {
+				has_country_flag = anbi_merfolk_shipgirl_who_7_decision	
+			}
+			
 		}
 		allow = {
 			custom_trigger_tooltip = {
@@ -313,7 +347,8 @@ country_decisions = {
 				country_event = {
 					id = anbi_merfolk.318
 				}
-			}	
+			}
+			set_country_flag = anbi_merfolk_shipgirl_who_7_decision	
 		}
 	}
 	anbi_merfolk_shipgirl_dragon = {
@@ -322,6 +357,10 @@ country_decisions = {
 		}
 		potential = {
 			has_country_flag = anbi_merfolk_shipgirl_who_8
+			NOT = {
+				has_country_flag = anbi_merfolk_shipgirl_who_8_decision	
+			}
+			
 		}
 		allow = {
 			custom_trigger_tooltip = {
@@ -334,7 +373,8 @@ country_decisions = {
 				country_event = {
 					id = anbi_merfolk.319
 				}
-			}	
+			}
+			set_country_flag = anbi_merfolk_shipgirl_who_8_decision	
 		}
 	}
 }

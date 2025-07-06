@@ -61,6 +61,7 @@ estate_church = {
 estate_artificers = {
 	privileges = {
 		anbi_kuhai_the_shuimu_engineer_up
+		anbi_merfolk_hunjie
 	}
 }
 estate_burghers = {

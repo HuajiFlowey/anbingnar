@@ -227,7 +227,7 @@ anbi_merfolk_island_defense_buff = {
 	hostile_fleet_attrition = 5
 	blockade_force_required = 1
 	fort_level = 1
-	defensiveness = 0.25
+	defensiveness = 0.1
 	local_sailors = 100
 	local_manpower_modifier = -0.5
 }
@@ -245,9 +245,9 @@ anbi_merfolk_as_rising_sun_buff2 = {
 anbi_merfolk_surround_the_evil_buff = {
 	local_fort_maintenance_modifier = -2
 	local_governing_cost = 0.25
-	local_tax_modifier = -10
+	local_tax_modifier = -0.75
 	local_defensiveness = 0.5
-	local_manpower_modifier =-0.25
+	local_manpower_modifier = -0.25
 	local_sailors_modifier = 0.25
 	land_forcelimit = 0.1
 	naval_forcelimit = 0.1
@@ -334,7 +334,7 @@ anbi_AB4_buff = {
 	global_sailors = 100000
 	land_forcelimit = 1000
 	naval_forcelimit = 10000
-	land_morale = 1
+	land_morale = 0.5
 	ship_durability = 1
 	naval_morale = 10
 	heavy_ship_power = 1
@@ -464,4 +464,84 @@ anbi_merfolk_tianlou_and_shuimu_buff = {
 	global_tax_income = -240
 	sailors_recovery_speed = 0.1
 	technology_cost = 0.025
+}
+anbi_merfolk_shipgirls_corin_buff = {
+	flagship_durability = -0.01
+}
+anbi_merfolk_shipgirls_jaher_buff = {
+	flagship_durability = -0.01
+}
+anbi_merfolk_shipgirls_gertyene_buff = {
+	flagship_durability = -0.01
+}
+anbi_merfolk_shipgirls_pingshuang_buff = {
+	flagship_durability = -0.01
+}
+anbi_merfolk_shipgirls_suhan_buff = {
+	flagship_durability = -0.01
+}
+anbi_merfolk_shipgirls_calasadur_buff = {
+	flagship_durability = -0.01
+}
+anbi_merfolk_shipgirls_huxian_buff = {
+	flagship_durability = -0.01
+}
+anbi_merfolk_shipgirls_dragon_buff = {
+	flagship_durability = -0.01
+}
+anbi_merfolk_shipgirls_corin_buff2 = {
+	advisor_cost = 0.5
+	administrative_efficiency = 0.02
+	land_morale = 0.15
+}
+anbi_merfolk_shipgirls_jaher_buff2 = {
+	advisor_cost = 0.5
+	administrative_efficiency = 0.02
+	missionaries = 1
+	global_missionary_strength = 0.05
+	discipline = 0.05
+}
+anbi_merfolk_shipgirls_gertyene_buff2 = {
+	shock_damage = 0.5
+	fire_damage = 0.15
+	shock_damage_received = -0.25
+	fire_damage_received = -0.25
+	drill_gain_modifier = 2
+	infantry_shock = 0.25
+	infantry_fire = 0.25
+	is_marine_modifier = yes
+}
+anbi_merfolk_shipgirls_pingshuang_buff2 = {
+	advisor_cost = 0.25
+	administrative_efficiency = 0.02
+	merchants = 2
+	global_ship_trade_power = 0.5
+	reduced_trade_penalty_on_non_main_tradenode = 0.5
+}
+anbi_merfolk_shipgirls_suhan_buff2 = {
+	advisor_cost = 0.5
+	administrative_efficiency = 0.02
+	missionaries = 2
+	global_tax_modifier = -0.25
+	idea_cost = -0.05
+}
+anbi_merfolk_shipgirls_calasadur_buff2 = {
+	advisor_cost = 0.25
+	administrative_efficiency = 0.02
+	min_autonomy_in_territories = -0.05
+	allow_free_estate_privilege_revocation = yes
+}
+anbi_merfolk_shipgirls_huxian_buff2 = {
+	advisor_cost = 0.25
+	administrative_efficiency = 0.02
+	diplomats = 2
+	country_diplomatic_power = 1
+}
+anbi_merfolk_shipgirls_dragon_buff2 = {
+	advisor_cost = 0.25
+	administrative_efficiency = 0.02
+	siege_ability = 0.1
+	leader_siege = 1
+	max_general_siege = 1
+	movement_speed = 0.1
 }
