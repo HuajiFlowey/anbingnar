@@ -1,0 +1,357 @@
+namespace = racial_pop_events_goblin
+
+country_event = {
+	id = racial_pop_events_goblin.10
+	title = racial_pop_events_goblin.10.t
+	desc = racial_pop_events_goblin.10.d
+	picture = REFUGEES_ESCAPING_eventPicture
+	goto = destination_province
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			choose_pop_destination_province = { race = goblin }
+			choose_refugee_country_target = { race = goblin }
+			calculate_refugee_exploit_rewards = yes
+		}
+	}
+	
+	#Let them in
+	option = {		
+		name = racial_pop_events_goblin.10.a
+		trigger = {
+			NOT = {
+				has_country_modifier = racial_pop_goblin_purge
+				has_country_modifier = racial_pop_goblin_expulsion
+				religion = giantkin_regent_court
+			}			
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				wants_to_increase_tolerance_goblin = yes
+			}
+			modifier = {
+				factor = 2
+				high_tolerance_goblin_race_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					is_colonial_nation = yes
+					is_subject_of = ROOT
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = kind_hearted_personality
+					ruler_has_personality = benevolent_personality
+				}
+			}
+			modifier = {
+				factor = 3
+				has_idea_group = humanist_ideas
+			}
+		}
+	
+		add_country_modifier = { name = non_primary_refugees duration = 1825 }
+		event_target:destination_province = { racial_pop_migration_arrive = { race = goblin } }
+		generic_increase_of_racial_tolerance_effect = { race = goblin small = yes }
+	}
+	
+	#Prey on their desperation to exploit them for labor
+	option = {		
+		name = racial_pop_events_goblin.10.b
+		trigger = {
+			culture_is_goblin = no
+			NOT = {
+				religion = giantkin_regent_court
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				wants_to_decrease_tolerance_goblin = yes
+			}
+			modifier = {
+				factor = 1.5
+				is_bankrupt = yes
+			}
+			modifier = {
+				factor = 2
+				ruler_has_personality = greedy_personality
+			}
+			modifier = {
+				factor = 1.5
+				has_personal_deity = ara
+			}
+		}
+		custom_tooltip = exploit_refugees_gain_effect_tt
+		hidden_effect = {
+			var_effect = { effect = add_treasury var = ducats_gained_on_exploit sign = + }
+			var_effect_granular = { effect = add_manpower var = manpower_gained_on_exploit sign = + }
+		}
+		remove_country_modifier = non_primary_refugees
+		event_target:destination_province = { racial_pop_migration_arrive = { race = goblin } }
+		generic_decrease_of_racial_tolerance_effect = { race = goblin medium = yes }
+	}
+
+	#special option for primary culture 
+	option = {
+		name = racial_pop_events_goblin.10.p
+		highlight = yes
+		trigger = {
+			culture_is_goblin = yes
+		}
+		ai_chance = { factor = 1000 }
+		add_country_modifier = { name = goblin_primary_refugees duration = 3650 }
+		event_target:destination_province = { racial_pop_migration_arrive = { race = goblin } }
+	}
+	
+	#There's no room for you here!
+	option = {		
+		name = racial_pop_events_goblin.10.c
+		trigger = {
+			NOT = {
+				religion = giantkin_regent_court
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				wants_to_decrease_tolerance_goblin = yes
+			}
+			modifier = {
+				factor = 2
+				low_tolerance_goblin_race_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					ruler_has_personality = malevolent_personality
+					ruler_has_personality = cruel_personality
+				}
+			}
+			modifier = {
+				factor = 1.5
+				ruler_has_personality = careful_personality
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					has_country_modifier = racial_pop_goblin_purge
+					has_country_modifier = racial_pop_goblin_expulsion
+				}
+			}
+		}
+		hidden_effect = {
+			event_target:racial_pop_migration_country = {
+				country_event = {
+					id = racial_pop_events_goblin.11
+					days = 31
+					random = 31
+				}
+			}
+		}
+		add_mil_power = -20
+		remove_country_modifier = non_primary_refugees
+		generic_decrease_of_racial_tolerance_effect = { race = goblin medium = yes }
+	}
+
+	option = {
+		name = anbi_racial_pop_events_orcish.a
+		highlight = yes
+		trigger = {
+			religion = giantkin_regent_court
+		}
+		add_church_power = 10
+		add_treasury = 25
+		generic_decrease_of_racial_tolerance_effect = { race = goblin largest = yes }
+	}
+}
+
+
+#Refugees Arrive - Second Try (forcefully settle)
+country_event = {
+	id = racial_pop_events_goblin.11
+	title = racial_pop_events_goblin.11.t
+	desc = racial_pop_events_goblin.11.d
+	picture = REFUGEES_ESCAPING_eventPicture
+	goto = destination_province
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			choose_pop_destination_province = { race = goblin }
+			calculate_refugee_exploit_rewards = yes
+		}
+	}
+	
+	#Let those poor souls in
+	option = {		
+		name = racial_pop_events_goblin.11.a #no trigger, already checked to not be purging
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				wants_to_increase_tolerance_goblin = yes
+			}
+			modifier = {
+				factor = 2
+				high_tolerance_goblin_race_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					is_colonial_nation = yes
+					is_subject_of = ROOT
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = kind_hearted_personality
+					ruler_has_personality = benevolent_personality
+				}
+			}
+			modifier = {
+				factor = 3
+				has_idea_group = humanist_ideas
+			}
+		}
+		trigger = {
+			NOT = {
+				religion = giantkin_regent_court
+			}
+		}
+	
+		#Add Minority to New Province
+		add_country_modifier = { name = non_primary_refugees duration = 1825 }
+		event_target:destination_province = { racial_pop_migration_arrive = { race = goblin } }
+		generic_increase_of_racial_tolerance_effect = { race = goblin small = yes }
+	}
+	
+	#Prey on their desperation to exploit them for labor
+	option = {		
+		name = racial_pop_events_goblin.11.b
+		trigger = {
+			culture_is_goblin = no
+			NOT = {
+				religion = giantkin_regent_court
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				wants_to_decrease_tolerance_goblin = yes
+			}
+			modifier = {
+				factor = 1.5
+				is_bankrupt = yes
+			}
+			modifier = {
+				factor = 2
+				ruler_has_personality = greedy_personality
+			}
+			modifier = {
+				factor = 1.5
+				has_personal_deity = ara
+			}
+		}
+		custom_tooltip = exploit_refugees_gain_effect_tt
+		hidden_effect = {
+			var_effect = { effect = add_treasury var = ducats_gained_on_exploit sign = + }
+			var_effect_granular = { effect = add_manpower var = manpower_gained_on_exploit sign = + }
+		}
+		remove_country_modifier = non_primary_refugees
+	
+		#Add Minority to New Province
+		event_target:destination_province = { racial_pop_migration_arrive = { race = goblin } }
+		generic_decrease_of_racial_tolerance_effect = { race = goblin medium = yes }
+	}
+
+	#special option for primary culture 
+	option = {
+		name = racial_pop_events_goblin.10.p
+		highlight = yes
+		trigger = {
+			culture_is_goblin = yes
+		}
+		ai_chance = { factor = 1000 }
+		add_country_modifier = { name = goblin_primary_refugees duration = 3650 }
+		event_target:destination_province = { racial_pop_migration_arrive = { race = goblin } }
+	}
+	
+	#Prevent them with force, if necessary
+	option = {		
+		name = racial_pop_events_goblin.11.c
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				wants_to_decrease_tolerance_goblin = yes
+			}
+			modifier = {
+				factor = 2
+				low_tolerance_goblin_race_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					ruler_has_personality = malevolent_personality
+					ruler_has_personality = cruel_personality
+				}
+			}
+			modifier = {
+				factor = 1.5
+				ruler_has_personality = careful_personality
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					has_country_modifier = racial_pop_goblin_purge
+					has_country_modifier = racial_pop_goblin_expulsion
+				}
+			}
+		}
+		trigger = {
+			NOT = {
+				religion = giantkin_regent_court
+			}
+		}
+		
+		random = {
+			chance = 50
+			event_target:destination_province = { racial_pop_migration_arrive = { race = goblin} }
+		}
+		add_mil_power = -30
+		if = {
+			limit = { culture_is_goblin = yes }
+			remove_country_modifier = primary_refugees
+		}
+		else = {
+			remove_country_modifier = non_primary_refugees
+		}
+		generic_decrease_of_racial_tolerance_effect = { race = goblin large = yes }
+	}
+
+	option = {
+		name = anbi_racial_pop_events_orcish.a
+		trigger = {
+			religion = giantkin_regent_court
+		}
+		highlight = yes
+		add_church_power = 10
+		add_treasury = 25
+		generic_decrease_of_racial_tolerance_effect = { race = goblin largest = yes }
+	}
+}

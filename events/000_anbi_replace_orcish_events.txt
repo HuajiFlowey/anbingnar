@@ -1,0 +1,375 @@
+namespace = racial_pop_events_orcish
+#Refugees Arrive - First Try
+country_event = {
+	id = racial_pop_events_orcish.10
+	title = racial_pop_events_orcish.10.t
+	desc = racial_pop_events_orcish.10.d
+	picture = REFUGEES_ESCAPING_eventPicture
+	goto = destination_province
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			choose_pop_destination_province = { race = orcish }
+			choose_refugee_country_target = { race = orcish }
+			event_target:destination_province = { set_province_flag = orcish_refugee_destination_province }
+			calculate_refugee_exploit_rewards = yes
+		}
+	}
+	after = {
+		event_target:destination_province = { clr_province_flag = orcish_refugee_destination_province }
+	}
+	
+	#Let them in
+	option = {		
+		name = racial_pop_events_orcish.10.a
+		trigger = {
+			NOT = {
+				has_country_modifier = racial_pop_orcish_purge
+				has_country_modifier = racial_pop_orcish_expulsion
+				religion = giantkin_regent_court #anbi
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				wants_to_increase_tolerance_orcish = yes
+			}
+			modifier = {
+				factor = 2
+				high_tolerance_orcish_race_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					is_colonial_nation = yes
+					is_subject_of = ROOT
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = kind_hearted_personality
+					ruler_has_personality = benevolent_personality
+				}
+			}
+			modifier = {
+				factor = 3
+				has_idea_group = humanist_ideas
+			}
+		}
+	
+		add_country_modifier = { name = non_primary_refugees duration = 1825 }
+		event_target:destination_province = { racial_pop_migration_arrive = { race = orcish } }
+		generic_increase_of_racial_tolerance_effect = { race = orcish small = yes }
+	}
+	
+	#Prey on their desperation to exploit them for labor
+	option = {		
+		name = racial_pop_events_orcish.10.b
+		trigger = {
+			culture_is_orcish = no
+			NOT = {
+				religion = giantkin_regent_court #anbi
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				wants_to_decrease_tolerance_orcish = yes
+			}
+			modifier = {
+				factor = 1.5
+				is_bankrupt = yes
+			}
+			modifier = {
+				factor = 2
+				ruler_has_personality = greedy_personality
+			}
+			modifier = {
+				factor = 1.5
+				has_personal_deity = ara
+			}
+		}
+		custom_tooltip = exploit_refugees_gain_effect_tt
+		hidden_effect = {
+			var_effect = { effect = add_treasury var = ducats_gained_on_exploit sign = + }
+			var_effect_granular = { effect = add_manpower var = manpower_gained_on_exploit sign = + }
+		}
+		remove_country_modifier = non_primary_refugees
+		event_target:destination_province = { racial_pop_migration_arrive = { race = orcish } }
+		generic_decrease_of_racial_tolerance_effect = { race = orcish medium = yes }
+	}
+
+	#special option for primary culture 
+	option = {
+		name = racial_pop_events_orcish.10.p
+		highlight = yes
+		trigger = {
+			culture_is_orcish = yes
+		}
+		ai_chance = { factor = 1000 }
+		add_years_of_owned_provinces_manpower = {
+			years = 1
+			trigger = {
+				has_province_flag = orcish_refugee_destination_province
+			}
+			custom_tooltip = orcish_refugees_manpower_desc
+		}
+		event_target:destination_province = { racial_pop_migration_arrive = { race = orcish } }
+	}
+	
+	#There's no room for you here!
+	option = {		
+		name = racial_pop_events_orcish.10.c
+		trigger = {
+			NOT = {
+				religion = giantkin_regent_court
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				wants_to_decrease_tolerance_orcish = yes
+			}
+			modifier = {
+				factor = 2
+				low_tolerance_orcish_race_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					ruler_has_personality = malevolent_personality
+					ruler_has_personality = cruel_personality
+				}
+			}
+			modifier = {
+				factor = 1.5
+				ruler_has_personality = careful_personality
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					has_country_modifier = racial_pop_orcish_purge
+					has_country_modifier = racial_pop_orcish_expulsion
+				}
+			}
+		}
+		hidden_effect = {
+			event_target:racial_pop_migration_country = {
+				country_event = {
+					id = racial_pop_events_orcish.11
+					days = 31
+					random = 31
+				}
+			}
+		}
+		add_mil_power = -20
+		remove_country_modifier = non_primary_refugees
+		generic_decrease_of_racial_tolerance_effect = { race = orcish medium = yes }
+	}
+	option = {
+		name = anbi_racial_pop_events_orcish.a
+		trigger = {
+			religion = giantkin_regent_court
+		}
+		highlight = yes
+		add_church_power = 10
+		add_treasury = 25
+		generic_decrease_of_racial_tolerance_effect = { race = orcish largest = yes }
+	}
+}
+
+
+#Refugees Arrive - Second Try (forcefully settle)
+country_event = {
+	id = racial_pop_events_orcish.11
+	title = racial_pop_events_orcish.11.t
+	desc = racial_pop_events_orcish.11.d
+	picture = REFUGEES_ESCAPING_eventPicture
+	goto = destination_province
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			choose_pop_destination_province = { race = orcish }
+			calculate_refugee_exploit_rewards = yes
+			event_target:destination_province = { set_province_flag = orcish_refugee_destination_province }
+		}
+	}
+	after = {
+		event_target:destination_province = { clr_province_flag = orcish_refugee_destination_province }
+	}
+	
+	#Let those poor souls in
+	option = {		
+		name = racial_pop_events_orcish.11.a #no trigger, already checked to not be purging
+		trigger = {
+			NOT = {
+				religion = giantkin_regent_court
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				wants_to_increase_tolerance_orcish = yes
+			}
+			modifier = {
+				factor = 2
+				high_tolerance_orcish_race_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					is_colonial_nation = yes
+					is_subject_of = ROOT
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					ruler_has_personality = tolerant_personality
+					ruler_has_personality = kind_hearted_personality
+					ruler_has_personality = benevolent_personality
+				}
+			}
+			modifier = {
+				factor = 3
+				has_idea_group = humanist_ideas
+			}
+		}
+	
+		#Add Minority to New Province
+		add_country_modifier = { name = non_primary_refugees duration = 1825 }
+		event_target:destination_province = { racial_pop_migration_arrive = { race = orcish } }
+		generic_increase_of_racial_tolerance_effect = { race = orcish small = yes }
+	}
+	
+	#Prey on their desperation to exploit them for labor
+	option = {		
+		name = racial_pop_events_orcish.11.b
+		trigger = {
+			culture_is_orcish = no
+			NOT = {
+				religion = giantkin_regent_court
+			}
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				wants_to_decrease_tolerance_orcish = yes
+			}
+			modifier = {
+				factor = 1.5
+				is_bankrupt = yes
+			}
+			modifier = {
+				factor = 2
+				ruler_has_personality = greedy_personality
+			}
+			modifier = {
+				factor = 1.5
+				has_personal_deity = ara
+			}
+		}
+		custom_tooltip = exploit_refugees_gain_effect_tt
+		hidden_effect = {
+			var_effect = { effect = add_treasury var = ducats_gained_on_exploit sign = + }
+			var_effect_granular = { effect = add_manpower var = manpower_gained_on_exploit sign = + }
+		}
+		remove_country_modifier = non_primary_refugees
+	
+		#Add Minority to New Province
+		event_target:destination_province = { racial_pop_migration_arrive = { race = orcish } }
+		generic_decrease_of_racial_tolerance_effect = { race = orcish medium = yes }
+	}
+
+	#special option for primary culture 
+	option = {
+		name = racial_pop_events_orcish.10.p
+		highlight = yes
+		trigger = {
+			culture_is_orcish = yes
+		}
+		ai_chance = { factor = 1000 }
+		add_years_of_owned_provinces_manpower = {
+			years = 1
+			trigger = {
+				has_province_flag = orcish_refugee_destination_province
+			}
+			custom_tooltip = orcish_refugees_manpower_desc
+		}
+		event_target:destination_province = { racial_pop_migration_arrive = { race = orcish } }
+	}
+	
+	#Prevent them with force, if necessary
+	option = {		
+		name = racial_pop_events_orcish.11.c
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				wants_to_decrease_tolerance_orcish = yes
+			}
+			modifier = {
+				factor = 2
+				low_tolerance_orcish_race_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					ruler_has_personality = malevolent_personality
+					ruler_has_personality = cruel_personality
+				}
+			}
+			modifier = {
+				factor = 1.5
+				ruler_has_personality = careful_personality
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					has_country_modifier = racial_pop_orcish_purge
+					has_country_modifier = racial_pop_orcish_expulsion
+				}
+			}
+		}
+		trigger = {
+			NOT = {
+				religion = giantkin_regent_court
+			}
+		}
+		random = {
+			chance = 50
+			event_target:destination_province = { racial_pop_migration_arrive = { race = orcish} }
+		}
+		add_mil_power = -30
+		if = {
+			limit = { culture_is_orcish = yes }
+			remove_country_modifier = primary_refugees
+		}
+		else = {
+			remove_country_modifier = non_primary_refugees
+		}
+		generic_decrease_of_racial_tolerance_effect = { race = orcish large = yes }
+	}
+
+	option = {
+		name = anbi_racial_pop_events_orcish.a
+		trigger = {
+			religion = giantkin_regent_court
+		}
+		highlight = yes
+		add_church_power = 10
+		add_treasury = 25
+		generic_decrease_of_racial_tolerance_effect = { race = orcish largest = yes }
+	}
+}

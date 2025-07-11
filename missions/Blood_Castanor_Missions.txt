@@ -1126,20 +1126,22 @@ bloody_canstanor_second_3 = {
 
 		effect = {
 			custom_tooltip = anbi_ab1_unite_the_escanni_ct
-			random_owned_province = {
-				limit = { culture_group = orcish } 
-				change_culture = ROOT
-				add_unrest = 10
-				spawn_rebels = { size = 1 } 
-				add_base_manpower = -1
-				add_base_production = -1
-				add_base_tax = -1
-				remove_orcish_minority_size_effect = yes
-				add_province_modifier = {
-					name = "anbi_ab1_the_forest_of_east_modifier"
-					duration = 7300
+			tooltip = {
+				random_owned_province = {
+					limit = { culture_group = orcish } 
+					change_culture = ROOT
+					add_unrest = 10
+					spawn_rebels = { size = 1 } 
+					add_base_manpower = -1
+					add_base_production = -1
+					add_base_tax = -1
+					remove_orcish_minority_size_effect = yes
+					add_province_modifier = {
+						name = "anbi_ab1_the_forest_of_east_modifier"
+						duration = 7300
+					}
 				}
-			}
+			}			
 			hidden_effect = {
 				every_owned_province = {
 					limit = { 
@@ -1149,10 +1151,10 @@ bloody_canstanor_second_3 = {
 						}
 						OR = {
 							region = south_castanor_region
-						region = inner_castanor_region
-						region = west_castanor_region
-						area = whistlevale_area
-						area = cursewood_area
+							region = inner_castanor_region
+							region = west_castanor_region
+							area = whistlevale_area
+							area = cursewood_area
 						}
 					} 
 					change_culture = ROOT
@@ -1506,7 +1508,10 @@ bloody_canstanor_second_4 = {
 			large_increase_of_dwarven_tolerance_effect = yes
 			hidden_effect = {
 				every_owned_province = {
-					limit = { culture_group = dwarven } 
+					limit = { 
+						culture_group = dwarven 
+						superregion = escann_superregion
+					} 
 					change_culture = ROOT
 				}
 			}
@@ -1872,7 +1877,7 @@ bloody_canstanor_development_1 = {
 		provinces_to_highlight = {
 			province_group = white_walls
 			OR = {
-				NOT = { has_fort_building_trigger = yes } 
+				NOT = { province_has_current_tech_fort_trigger = yes } 
 				AND = {
 					NOT = { has_building = ramparts } 
 					NOT = { has_building = soldier_households } 
@@ -1998,14 +2003,18 @@ bloody_canstanor_development_1 = {
 					limit = { 831 = { has_province_modifier = castonath_dragonforge }  } 
 					831 = { 
 						add_base_production = 3 
-						add_building = training_fields
 					} 
 					add_country_modifier = {
 						name = "castanor_dragonforge_built_already"
 						duration = 7300
 					}					
 				}
-				else = { set_country_flag = castanor_unlock_dragonforge_early } 
+				else = { 
+					set_country_flag = castanor_unlock_dragonforge_early 
+					831 = {
+						add_building = training_fields
+					}
+				} 
 			}
 		}
 	}
@@ -3750,6 +3759,7 @@ bloody_canstanor_eating_3 = {
 			west_dameshead_region = { add_permanent_claim = ROOT } 
 			east_dameshead_region = { add_permanent_claim = ROOT } 
 			businor_region = { add_permanent_claim = ROOT } 
+			alenic_frontier_region = { add_permanent_claim = ROOT } 
 			if = {
 				limit = { 
 					any_country = {
@@ -4291,8 +4301,10 @@ bloody_canstanor_eating_5 = {
 			has_any_half_orcish_pop_trigger = yes
 			has_any_orcish_pop_trigger = yes
 			NOT = {
-				development = 30
-				has_production_or_gold_building_trigger = yes
+				AND = {
+					development = 30
+					has_production_or_gold_building_trigger = yes
+				}				
 			}
 		}
 

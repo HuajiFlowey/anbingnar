@@ -269,7 +269,7 @@ anbi_AB1_spice_vegetable = {
 	}
 	monarch_power = mil
 	modifier = {
-		manpower_in_culture_group_provinces = 0.1
+		manpower_in_accepted_culture_provinces = 0.1
 		manpower_in_own_culture_provinces = 0.1
 	}
 	ai_will_do = {

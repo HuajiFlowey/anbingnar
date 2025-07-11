@@ -5,6 +5,9 @@ tsarai = {
 	global_unrest = -1
 	country_admin_power = 1
 	
+	#mp
+	stability_cost_modifier = -0.15
+	
 	potential = {
 		religion = saanorgegh
 		OR = {
@@ -37,8 +40,11 @@ tsarai = {
 }
 
 jaal = {
-	cavalry_shock = 0.1
+	cavalry_shock = 0.25	#mp
 	raze_power_gain = 0.20
+	
+	#mp
+	cav_to_inf_ratio = 0.25
 	
 	potential = {
 		religion = saanorgegh
@@ -75,6 +81,9 @@ jaal = {
 oedek = {
 	global_missionary_strength = 0.02
 	tolerance_heathen = -2
+
+	#mp
+	missionaries = 1
 	
 	potential = {
 		religion = saanorgegh
@@ -110,6 +119,9 @@ oedek = {
 daxuusgen = {
 	monthly_reform_progress_modifier = 0.2
 	global_autonomy = -0.05
+		
+	#mp
+	governing_capacity_modifier = 0.2
 
 	potential = {
 		religion = saanorgegh
@@ -140,6 +152,9 @@ daxuusgen = {
 faceless_queen = {
 	core_creation = -0.1
 	cavalry_power = 0.25
+
+	#mp
+	diplomatic_reputation = 1
 	
 	potential = {
 		religion = saanorgegh
@@ -167,13 +182,16 @@ faceless_queen = {
 	}
 }
 
-menjaeng = {
+manjang = {
 	religious_unity = 0.5
 	tolerance_heretic = 3
+		
+	#mp
+	global_trade_goods_size_modifier = 0.1
 	
 	potential = {
 		religion = saanorgegh
-		has_global_flag = Y91_menjaeng_added
+		has_global_flag = Y91_manjang_added
 		owns_core_province = 5419
 		NOT = { has_country_flag = faceless_emperor_only_1 }
 	}
@@ -200,7 +218,9 @@ menjaeng = {
 bhengudakhnar = {
 	cb_on_religious_enemies = yes
 	warscore_cost_vs_other_religion = -0.2
-#	enforce_religion_cost = -0.5
+
+	#mp
+	manpower_in_true_faith_provinces = 0.2
 	
 	potential = {
 		religion = saanorgegh

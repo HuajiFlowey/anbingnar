@@ -140,7 +140,7 @@ anbi_kuhai_is_gold_party = {
 	}
 
 	province_warscore_cost = -0.05
-	manpower_in_culture_group_provinces = 0.1
+	manpower_in_accepted_culture_provinces = 0.1
 	manpower_in_own_culture_provinces = 0.1
 
 	nation_designer_cost = 10000

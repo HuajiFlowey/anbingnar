@@ -176,3 +176,15 @@ is_not_free_merc_company = {
 		NOT = { mercenary_company = merc_anbi_foxarmy_4 }
 	}
 }
+holds_castanor_legacy = {
+	custom_trigger_tooltip = {
+		tooltip = holds_castanor_legacy_tooltip
+		OR = {
+			tag = B32
+			is_subject_of = B32
+			tag = Z34
+			tag = AB2
+			tag = AB1
+		}	
+	}
+}

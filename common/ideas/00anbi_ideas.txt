@@ -113,7 +113,7 @@ Y27_new_ideas = {
 	}
 
 	anbi_Y27_the_dream_of_yanshen = {
-		manpower_in_culture_group_provinces = 0.25
+		manpower_in_accepted_culture_provinces = 0.25
 		manpower_in_own_culture_provinces = 0.25
 	}
 

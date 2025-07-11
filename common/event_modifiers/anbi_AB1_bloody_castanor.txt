@@ -13,6 +13,8 @@ anbi_AB1_reconstruction_work = {
 anbi_AB1_ban_colonies = {
 	colonists = -10
 	native_uprising_chance = -10
+	may_explore = yes
+	leader_cost = -0.5
 }
 anbi_AB1_doubt_1 = {
 	picture = "attrition"
@@ -133,8 +135,8 @@ anbi_ab1_seek_the_future_modifier = {
 	institution_spread_from_true_faith = 0.25
 }
 anbi_ab1_castle_of_marsh_modifier = {
-	army_tradition_decay = -0.02
-	drill_gain_modifier = 0.4
+	drill_gain_modifier = 0.5
+	land_attrition = -0.25
 }
 anbi_ab1_kill_the_mosquito_modifier = {
 	global_tax_modifier = 0.1
@@ -147,6 +149,7 @@ anbi_ab1_the_spice_of_vampire_modifier = {
 	local_unrest = -10
 	fort_level = 1
 	global_missionary_strength = 0.01
+	missionaries = 1
 }
 anbi_ab1_the_liver_mousse_modifier = {
 	trade_goods_size_modifier = 1
@@ -408,4 +411,12 @@ anbi_ab1_cross_food = {
 	trade_goods_size_modifier = 0.25
 	church_power_modifier = 0.01
 	global_missionary_strength = 0.001
+}
+anbi_AB1_great_war_craze = {
+	war_exhaustion = 0.05
+	war_exhaustion_cost = 10
+	global_manpower_modifier = 1
+	land_forcelimit_modifier = 0.5
+	extra_manpower_at_religious_war = yes
+	land_attrition = -1
 }

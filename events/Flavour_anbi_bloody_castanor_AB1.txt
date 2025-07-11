@@ -312,10 +312,6 @@ country_event = {
 			power_type = anbi_AB1_doubt_count
 			value = 10
 		}
-		add_country_modifier = {
-			name = anbi_AB1_ban_colonies
-			duration = -1
-		}
 		hidden_effect = {
 			add_ruler_personality = conqueror_personality
 			add_ruler_personality = inspiring_leader_personality
@@ -324,6 +320,9 @@ country_event = {
 			set_ruler_flag = long_lived_ruler
 			set_ruler_flag = immortal_ruler
 			remove_country_modifier = anbi_AB1_ban_colonies
+			country_event = {
+				id = bloody_castanor.40
+			}
 		}
 	}
 
@@ -860,6 +859,9 @@ country_event = {
 			every_country = {
 				limit = {
 					has_country_flag = AB2_great_war_cf
+					NOT = {
+						has_country_flag = AB2_great_war_target_cf
+					}
 				}
 				join_all_offensive_wars_of = event_target:AB2_great_war_target
 			}
@@ -903,6 +905,12 @@ country_event = {
 				alliance_with = AB2
 			}
 			break_alliance = AB2
+			add_aggressive_expansion = {
+				who = AB2
+				value = 300
+				apply_calc = no
+			}
+			add_historical_rival = AB2
 		}
 		every_war_enemy_country = {
 			white_peace = ROOT
@@ -956,7 +964,6 @@ country_event = {
 					TAG = ROOT
 					has_country_modifier = monstrous_nation
 					religion = skaldhyrric_faith
-					truce_with = ROOT
 				}
 				is_subject = no
 			}
@@ -965,6 +972,10 @@ country_event = {
 			}
 			country_event = {
 				id = bloody_castanor.13
+			}
+			add_country_modifier = {
+				name = anbi_AB1_great_war_craze
+				duration = -1
 			}
 		}
 	}
@@ -1058,6 +1069,7 @@ country_event = {
 				has_country_flag = AB2_great_war_cf
 			}
 			clr_country_flag = AB2_great_war_cf
+			remove_country_modifier = anbi_AB1_great_war_craze
 			add_country_modifier = {
 				name = anbi_ab1_the_big_failure
 				duration = 7300
@@ -1681,26 +1693,22 @@ country_event = {
 			}
 			set_ruler_flag = mage_ruler_general
 		}
+		hidden_effect = {
+			set_ruler_flag = immortal_ruler
+			add_ruler_personality = conqueror_personality
+			add_ruler_personality = inspiring_leader_personality
+			add_ruler_personality = mage_personality
+		}
 		add_stability = -1
 		name = bloody_castanor.30.a
 	}
 
 	after = {
-		set_ruler_flag = long_lived_ruler
-		set_ruler_flag = immortal_ruler
-		add_ruler_personality = conqueror_personality
-		add_ruler_personality = inspiring_leader_personality
-		add_ruler_personality = mage_personality
+		set_ruler_flag = long_lived_ruler				
 		ruler_give_saved_spell_schools = yes
 		ruler_save_spell_schools = yes
-		if = {
-			limit = { 
-				has_country_flag = witch_king_flag
-			}
-			add_ruler_modifier = {
-				name = witch_king_modifier
-				duration = -1
-			}
+		country_event = {
+			id = witch_king.0
 		}
 		set_ruler_flag = initialized_magic_flags
 	}
@@ -2184,8 +2192,32 @@ country_event = {
 		}
 	}
 }
+#征服者补丁
+country_event = {
+	id = bloody_castanor.40
+	title = bloody_castanor.40.t
+	picture = CONQUEROR_eventPicture
+	desc = bloody_castanor.40.d
 
-#加特权
+	is_triggered_only = yes
+
+	option = {
+		name = bloody_castanor.40.a
+		custom_tooltip = bloody_castanor.40_tt
+		define_conquistador = {
+			shock = 7
+			fire = 2
+			manuever = 4
+			siege = 3
+		}
+		add_country_modifier = {
+			name = anbi_AB1_ban_colonies
+			duration = -1
+		}
+	}
+}
+
+#加特权(1000)
 country_event = {
 	id = bloody_castanor.1000
 	title = bloody_castanor.1000.t
@@ -2449,6 +2481,7 @@ country_event = {
 		}
 	}
 }
+
 
 
 #打包来的军团大道
@@ -6235,7 +6268,7 @@ country_event = {
 		name = bloody_castanor.3000.a
 		change_price = {
 			trade_goods = cloves
-			key = bloody_castanor.3000.d
+			key = bloody_castanor.3000.d2
 			value = 0.5
 			duration = -1
 		}
@@ -6253,7 +6286,7 @@ country_event = {
 		name = bloody_castanor.3001.a
 		change_price = {
 			trade_goods = livestock
-			key = bloody_castanor.3001.d
+			key = bloody_castanor.3001.d2
 			value = 0.5
 			duration = -1
 		}

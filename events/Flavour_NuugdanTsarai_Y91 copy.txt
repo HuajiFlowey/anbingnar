@@ -16,8 +16,8 @@ country_event = {
 	}
 	
 	immediate = {
-		set_country_flag = faceless_queen_spawner		
-		set_country_flag = Y91_first_war
+		set_country_flag = faceless_queen_spawner
+		set_country_flag = Y91_first_war	
 	}
 	
 	#Long may she Reign
@@ -30,28 +30,6 @@ country_event = {
 			duration = -1
 		}
 		custom_tooltip = Y91_starting_war_tt
-		if = {
-			limit = {
-				ai = no
-			}
-			custom_tooltip = flavor_nuugdan_tsarai.1_ct
-			define_general = {
-				fire = 1
-				shock = 6
-				manuever = 5
-				siege = 3
-				female = yes
-				name = "The Nameless"
-			}
-			define_general = {
-				fire = 1
-				shock = 6
-				manuever = 5
-				siege = 3
-				female = yes
-				name = "The Anonymous"
-			}
-		}		
 	}
 }
 
@@ -73,23 +51,24 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		years = 1
+		# years = 1
 	
-		modifier = {
-			factor = 0.75
-			OR = {
-				accepted_culture = giteuni
-				accepted_culture = wonju
-			}
-		}
-		modifier = {
-			factor = 0.5
-			OR = {
-				dominant_culture = giteuni
-				dominant_culture = wonju
-			}
-		}
-    }
+		# modifier = {
+		# 	factor = 0.75
+		# 	OR = {
+		# 		accepted_culture = menjeotaen
+		# 		accepted_culture = wonju
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 0.5
+		# 	OR = {
+		# 		dominant_culture = menjeotaen
+		# 		dominant_culture = wonju
+		# 	}
+		# }
+		months = 1
+    }#MP
 
 	#Adopt the native ways
 	option = {
@@ -99,9 +78,14 @@ country_event = {
 			NOT = { tag = Y98 }
 		}
 		change_technology_group = tech_halessi
-		change_primary_culture = guwaadun
-		set_ruler_culture = guwaadun
-		set_heir_culture = guwaadun
+		if = {
+			limit = {
+				primary_culture = shuvuush
+			}
+			change_primary_culture = guwaadun
+			set_ruler_culture = guwaadun
+			set_heir_culture = guwaadun
+		}#MP
 		if = {
 			limit = {
 				capital_scope = {
@@ -155,9 +139,6 @@ country_event = {
 	trigger = {
 		has_country_flag = faceless_queen_spawner
 		NOT = { has_ruler_modifier = faceless_queen_modifier }
-		NOT = {
-			has_country_flag = faceless_queen_great_conquer
-		}
 	}
 	
 	immediate = {
@@ -211,14 +192,13 @@ country_event = {
 		tag = Y98
 		has_country_flag = formed_daxugo_flag
 		NOT = { has_ruler_flag = daxugo_former }
-		NOT = { has_country_flag = faceless_queen_great_conquer_good }
 	}
 	
 	immediate = {
 		set_global_flag = daxugo_ascension
 	}
 	
-	#A New God For All Shav��sh
+	#A New God For All Shavuush
 	option = {
 		name = flavor_nuugdan_tsarai.5.a
 		ai_chance = { factor = 100 }
@@ -459,6 +439,28 @@ country_event = {
 			add_base_manpower = -1
 		}
 		add_treasury = 50
+		
+		#MP
+		choogiaza_area = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		5412 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		5415 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		5406 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
 	}
 }
 
@@ -553,10 +555,35 @@ country_event = {
 			}
 			change_culture = beikling
 			change_religion = accretive_path
+			#MP
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
 		}
 		add_treasury = 100
 		
 		country_event = { id = flavor_nuugdan_tsarai.11 days = 20 }
+		#MP
+		choogiaza_area = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		5412 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		5415 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		5406 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
 	}
 }
 
@@ -653,315 +680,6 @@ country_event = {
 	}
 }
 
-#Lakefolk 4
-country_event = {
-	id = flavor_nuugdan_tsarai.16
-	title = flavor_nuugdan_tsarai.16.t
-	picture = traders_eventPicture
-	desc = flavor_nuugdan_tsarai.16.d
-	
-	fire_only_once = yes
-
-	trigger = {
-		is_year = 1490
-		owns_core_province = 5338
-		religion = saanorgegh
-		has_country_flag = Y91_face_stealersfirstcleared
-	#	has_country_flag = Y91_face_stealersmountainjoined #removed event that added this flag with Runsukhi colonisation event purge
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-	
-	immediate = {
-		set_country_flag = Y91_face_stealerslakefolkjoined
-	}
-	
-	#promise autonomy
-	option = {
-		name = flavor_nuugdan_tsarai.16.a
-		ai_chance = { factor = 100 }
-		trigger = {
-			OR = {
-				5337 = { is_empty = yes }
-				5337 = { owned_by = ROOT }
-			}
-			OR = {
-				5335 = { is_empty = yes }
-				5335 = { owned_by = ROOT }
-			}
-			OR = {
-				5336 = { is_empty = yes }
-				5336 = { owned_by = ROOT }
-			}
-			OR = {
-				5421 = { is_empty = yes }
-				5421 = { owned_by = ROOT }
-			}
-			OR = {
-				5418 = { is_empty = yes }
-				5418 = { owned_by = ROOT }
-			}
-			OR = {
-				5378 = { is_empty = yes }
-				5378 = { owned_by = ROOT }
-			}
-		}
-		add_years_of_income = -0.2
-		add_adm_power = -20
-		swap_non_generic_missions = yes
-		if = { limit = { 5337 = { is_empty = yes } }
-			5337 = {
-				hidden_effect = {
-					create_colony = 1000
-					add_core = ROOT
-				}
-				cede_province = ROOT
-				change_culture = runsukhi
-				change_religion = levaajan
-				change_trade_goods = livestock
-				add_province_modifier = {
-					name = Y91_autonomous_clan
-					duration = 21900
-				}
-			}
-			add_adm_power = -25
-		}
-		else = {
-			5337 = {
-				add_core = ROOT
-			}
-		}
-		if = { limit = { 5335 = { is_empty = yes } }
-			5335 = {
-				hidden_effect = {
-					create_colony = 1000
-					add_core = ROOT
-				}
-				cede_province = ROOT
-				change_culture = runsukhi
-				change_religion = levaajan
-				change_trade_goods = fish
-				add_province_modifier = {
-					name = Y91_autonomous_clan
-					duration = 21900
-				}
-			}
-			add_adm_power = -25
-		}
-		else = {
-			5335 = {
-				add_core = ROOT
-			}
-		}
-		if = { limit = { 5336 = { is_empty = yes } }
-			5336 = {
-				hidden_effect = {
-					create_colony = 1000
-					add_core = ROOT
-				}
-				cede_province = ROOT
-				change_culture = runsukhi
-				change_religion = levaajan
-				change_trade_goods = wool
-				add_province_modifier = {
-					name = Y91_autonomous_clan
-					duration = 21900
-				}
-			}
-			add_adm_power = -25
-		}
-		else = {
-			5336 = {
-				add_core = ROOT
-			}
-		}
-		if = { limit = { 5421 = { is_empty = yes } }
-			5421 = {
-				hidden_effect = {
-					create_colony = 1000
-					add_core = ROOT
-				}
-				cede_province = ROOT
-				change_culture = runsukhi
-				change_religion = levaajan
-				change_trade_goods = wool
-				add_province_modifier = {
-					name = Y91_autonomous_clan
-					duration = 21900
-				}
-			}
-			add_adm_power = -25
-		}
-		else = {
-			5421 = {
-				add_core = ROOT
-			}
-		}
-		if = { limit = { 5418 = { is_empty = yes } }
-			5418 = {
-				hidden_effect = {
-					create_colony = 1000
-					add_core = ROOT
-				}
-				cede_province = ROOT
-				change_culture = runsukhi
-				change_religion = levaajan
-				change_trade_goods = wool
-				add_province_modifier = {
-					name = Y91_autonomous_clan
-					duration = 21900
-				}
-			}
-			add_adm_power = -25
-		}
-		else = {
-			5418 = {
-				add_core = ROOT
-			}
-		}
-		if = { limit = { 5378 = { is_empty = yes } }
-			5378 = {
-				hidden_effect = {
-					create_colony = 1000
-					add_core = ROOT
-				}
-				cede_province = ROOT
-				change_culture = runsukhi
-				change_religion = levaajan
-				change_trade_goods = wool
-				add_province_modifier = {
-					name = Y91_autonomous_clan
-					duration = 21900
-				}
-			}
-			add_adm_power = -25
-		}
-		else = {
-			5378 = {
-				add_core = ROOT
-			}
-		}
-	}
-	
-	#buy them out
-	option = {
-		name = flavor_nuugdan_tsarai.16.b
-		ai_chance = { factor = 100 }
-		add_years_of_income = -0.5
-		add_adm_power = -20
-		swap_non_generic_missions = yes
-		if = { limit = { 5337 = { is_empty = yes } }
-			5337 = {
-				hidden_effect = {
-					create_colony = 1000
-					add_core = ROOT
-				}
-				cede_province = ROOT
-				change_culture = runsukhi
-				change_religion = levaajan
-				change_trade_goods = livestock
-			}
-			add_adm_power = -25
-		}
-		else = {
-			5337 = {
-				add_core = ROOT
-			}
-		}
-		if = { limit = { 5335 = { is_empty = yes } }
-			5335 = {
-				hidden_effect = {
-					create_colony = 1000
-					add_core = ROOT
-				}
-				cede_province = ROOT
-				change_culture = runsukhi
-				change_religion = levaajan
-				change_trade_goods = fish
-			}
-			add_adm_power = -25
-		}
-		else = {
-			5335 = {
-				add_core = ROOT
-			}
-		}
-		if = { limit = { 5336 = { is_empty = yes } }
-			5336 = {
-				hidden_effect = {
-					create_colony = 1000
-					add_core = ROOT
-				}
-				cede_province = ROOT
-				change_culture = runsukhi
-				change_religion = levaajan
-				change_trade_goods = wool
-			}
-			add_adm_power = -25
-		}
-		else = {
-			5336 = {
-				add_core = ROOT
-			}
-		}
-		if = { limit = { 5421 = { is_empty = yes } }
-			5421 = {
-				hidden_effect = {
-					create_colony = 1000
-					add_core = ROOT
-				}
-				cede_province = ROOT
-				change_culture = runsukhi
-				change_religion = levaajan
-				change_trade_goods = wool
-			}
-			add_adm_power = -25
-		}
-		else = {
-			5421 = {
-				add_core = ROOT
-			}
-		}
-		if = { limit = { 5418 = { is_empty = yes } }
-			5418 = {
-				hidden_effect = {
-					create_colony = 1000
-					add_core = ROOT
-				}
-				cede_province = ROOT
-				change_culture = runsukhi
-				change_religion = levaajan
-				change_trade_goods = wool
-			}
-			add_adm_power = -25
-		}
-		else = {
-			5418 = {
-				add_core = ROOT
-			}
-		}
-		if = { limit = { 5378 = { is_empty = yes } }
-			5378 = {
-				hidden_effect = {
-					create_colony = 1000
-					add_core = ROOT
-				}
-				cede_province = ROOT
-				change_culture = runsukhi
-				change_religion = levaajan
-				change_trade_goods = wool
-			}
-			add_adm_power = -25
-		}
-		else = {
-			5378 = {
-				add_core = ROOT
-			}
-		}
-	}
-}
 
 #Rung Oedek migration fix | isn't fired by anything?
 country_event = {
@@ -1046,52 +764,334 @@ country_event = {
 }
 
 #harem main lady has grown old or is dead.
-# 舒武什后宫制度事件的起源。
-# 在0.42版本中被架空，连带着任务被修改。
 country_event = {
 	id = flavor_nuugdan_tsarai.18
 	title = flavor_nuugdan_tsarai.18.t
-	desc = flavor_nuugdan_tsarai.18.anbingnar.d
+	desc = flavor_nuugdan_tsarai.18.d
 	picture = DIPLOMACY_eventPicture
 	
 	trigger = {
-		has_reform = anbingnar_daxugo_harem_reform
-		NOT = {
-			4871 = {
-				OR = {
-					has_province_modifier = Y98_huagai_palace
-					has_province_modifier = Y98_tanxiang_palace
-					has_province_modifier = Y98_rahen_palace
-					has_province_modifier = Y98_southest_palace
-					has_province_modifier = Y98_harimari_palace
-				}
-			}
-		}
+		has_reform = guwaamud_harem_reform
 		OR = {
 			has_consort = no
-			consort_age = 28
+			consort_age = 30
 		}
 		has_consort_regency = no
 		has_regency = no
-		NOT = {
-			has_ruler_flag = Y98_I_love_holi_cflag
-		}
+		is_female = no
 	}
 	
-	hidden = yes
 	mean_time_to_happen = {
-		days = 180
+		days = 1
 	}
 	
 	immediate = {
-		Y98_queen_death = yes
-		Y98_clr_harem_flag = yes
+		hidden_effect = {
+			remove_country_modifier = Y91_noble_consort
+			remove_country_modifier = Y91_harimari_consort
+			remove_country_modifier = Y91_goldscale_consort
+		}
 	}
 	
+	#prominent nobles daughter
 	option = {
+		trigger = { has_estate = estate_nobles }
 		name = flavor_nuugdan_tsarai.18.a
-		country_event = {
-			id = flavour_anbingnar_daxugo.2001
+		ai_chance = { factor = 60 }
+		define_consort = {
+			culture = ROOT
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = Y91_noble_consort
+			duration = 3650
+		}
+	}
+	
+	#harimari wife
+	option = {
+		name = flavor_nuugdan_tsarai.18.f
+		ai_chance = { factor = 60 }
+		trigger = {
+			any_owned_province = {
+				OR = {
+					culture = serene_harimari
+					culture = royal_harimari
+					culture = roaming_harimari
+					culture = primal_harimari
+					culture = worthy_harimari
+					has_province_modifier = harimari_minority_coexisting_small
+					has_province_modifier = harimari_minority_coexisting_large
+					has_province_modifier = harimari_minority_integrated_small
+					has_province_modifier = harimari_minority_integrated_large
+				}
+			}
+			OR = {
+				medium_tolerance_harimari_race_trigger = yes
+				high_tolerance_harimari_race_trigger = yes
+			}
+		}
+		define_consort = {
+			culture = serene_harimari
+			religion = ROOT
+			adm = 3
+			age = 20
+		}
+		add_country_modifier = {
+			name = Y91_harimari_consort
+			duration = 3650
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = serene_harimari
+						culture = royal_harimari
+						culture = roaming_harimari
+						culture = primal_harimari
+						culture = worthy_harimari
+					}
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	#a northern yanshen girl
+	option = {
+		name = flavor_nuugdan_tsarai.18.g
+		ai_chance = { factor = 60 }
+		trigger = {
+			any_owned_province = {
+				culture = jiangyang
+			}
+		}
+		define_consort = {
+			culture = jiangyang
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = jiangyang
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	#a river yanshen girl
+	option = {
+		name = flavor_nuugdan_tsarai.18.h
+		ai_chance = { factor = 60 }
+		trigger = {
+			any_owned_province = {
+				culture = jiangszun
+			}
+		}
+		define_consort = {
+			culture = jiangszun
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = jiangszun
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	#a hill yanshen girl
+	option = {
+		name = flavor_nuugdan_tsarai.18.i
+		ai_chance = { factor = 60 }
+		trigger = {
+			any_owned_province = {
+				culture = beikling
+			}
+		}
+		define_consort = {
+			culture = beikling
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = beikling
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	#a coastal yanshen girl
+	option = {
+		name = flavor_nuugdan_tsarai.18.j
+		ai_chance = { factor = 60 }
+		trigger = {
+			any_owned_province = {
+				culture = gangim
+			}
+		}
+		define_consort = {
+			culture = gangim
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = gangim
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	#a forest yanshen girl
+	option = {
+		name = flavor_nuugdan_tsarai.18.k
+		ai_chance = { factor = 60 }
+		trigger = {
+			any_owned_province = {
+				culture = naamjyut
+			}
+		}
+		define_consort = {
+			culture = naamjyut
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = naamjyut
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	#a western yanshen girl
+	option = {
+		name = flavor_nuugdan_tsarai.18.l
+		ai_chance = { factor = 60 }
+		trigger = {
+			any_owned_province = {
+				culture = szitu
+			}
+		}
+		define_consort = {
+			culture = szitu
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = szitu
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	#a goldscale kobold girl
+	option = {
+		name = flavor_nuugdan_tsarai.18.m
+		ai_chance = { factor = 60 }
+		trigger = {
+			any_owned_province = {
+				OR = {
+					culture = goldscale_kobold
+					has_province_modifier = kobold_minority_coexisting_small
+					has_province_modifier = kobold_minority_coexisting_large
+					has_province_modifier = kobold_minority_integrated_small
+					has_province_modifier = kobold_minority_integrated_large
+				}
+			}
+			OR = {
+				medium_tolerance_kobold_race_trigger = yes
+				high_tolerance_kobold_race_trigger = yes
+			}
+		}
+		define_consort = {
+			culture = goldscale_kobold
+			religion = ROOT
+			age = 20
+		}
+		add_country_modifier = {
+			name = Y91_goldscale_consort
+			duration = 3650
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture = goldscale_kobold
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
+		}
+	}
+	
+	#a gowon girl
+	option = {
+		name = flavor_nuugdan_tsarai.18.n
+		ai_chance = { factor = 60 }
+		define_consort = {
+			culture = guwaadun
+			religion = ROOT
+			age = 20
+		}
+		custom_tooltip = Y98_harem_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = gowon
+				}
+				add_province_modifier = {
+					name = Y91_represented_by_consort
+					duration = 3650
+				}
+			}
 		}
 	}
 }
@@ -3113,7 +3113,7 @@ country_event = {
 	#Progressive: Favor the cities
 	option = {
 		name = flavor_nuugdan_tsarai.48.a
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 0 }#MP
 		every_owned_province = {
 			limit = { has_terrain = city_terrain }
 			add_province_modifier = {
@@ -3263,7 +3263,12 @@ country_event = {
 	#Tradition: lose small tolerance of all races except humans
 	option = {
 		trigger = {
-			always = no #anbingnar
+			NOT = {
+				OR = {
+					has_personal_deity = daxuusgen #integrated harimari further
+					has_personal_deity = faceless_queen #loved kobolds
+				}
+			}
 		}
 		name = flavor_nuugdan_tsarai.49.c
 		ai_chance = { factor = 100 }
@@ -3346,24 +3351,18 @@ country_event = {
 	}
 
 	#Estates General
-	#宪政主义
 	option = {
-		name = flavor_nuugdan_tsarai.50.g
+		name = flavor_nuugdan_tsarai.50.f
 		ai_chance = { factor = 100 }
 		trigger = { NOT = { has_reform = guwaamud_harem_reform } }
-		add_government_reform = anbingnar_daxugo_constitutional_government
+		add_government_reform = states_general_reform
 		country_event = { id = flavor_nuugdan_tsarai.51 days = 30 }
 	}
 	
 	after = {
 		hidden_effect = {
 			if = {
-				limit = { 
-					OR = {
-						has_reform = parliamentary_reform 
-						has_reform = anbingnar_daxugo_constitutional_government
-					}
-				}
+				limit = { has_reform = parliamentary_reform }
 				country_event = { id = flavor_nuugdan_tsarai.56 days = 40 }
 			}
 		}
@@ -3414,20 +3413,11 @@ country_event = {
 		name = flavor_nuugdan_tsarai.52.a
 		ai_chance = { factor = 100 }
 		add_country_modifier = {
-			name = Y9888_diguomao_war_conduct
+			name = Y91_diguomao_war_conduct
 			duration = -1
 		}
 		add_army_tradition = 15
 		add_army_professionalism = -0.05
-	}
-
-	option = {
-		name = flavor_nuugdan_tsarai.52.c
-		ai_chance = { factor = 100 }
-		add_country_modifier = {
-			name = Y9888_diguomao_academy_solidarity
-			duration = -1
-		}
 	}
 	
 	#Please The Academy
@@ -3435,13 +3425,24 @@ country_event = {
 		name = flavor_nuugdan_tsarai.52.b
 		ai_chance = { factor = 100 }
 		add_country_modifier = {
-			name = Y9888_academy_war_conduct
+			name = Y91_academy_war_conduct
 			duration = -1
 		}
 		add_army_tradition = -15
 		add_army_professionalism = 0.05
 	}
-
+	
+	after = {
+		hidden_effect = {
+			if = {
+				limit = { has_country_modifier = Y91_diguomao_war_conduct }
+				country_event = { id = flavor_nuugdan_tsarai.59 days = 10 }
+			}
+			else = {
+				country_event = { id = flavor_nuugdan_tsarai.60 days = 10 }
+			}
+		}
+	}
 }
 
 #Great Daxugo Legal Code: Religious Rights
@@ -3457,6 +3458,14 @@ country_event = {
 	option = {
 		name = flavor_nuugdan_tsarai.53.a
 		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = {
+				OR = {
+					has_personal_deity = bhengudakhnar #Saanorgegh supremacist
+					has_idea_group = religious_ideas
+				}
+			}
+		}
 		add_country_modifier = {
 			name = Y91_tolerant_religious_code
 			duration = -1
@@ -3478,6 +3487,9 @@ country_event = {
 	option = {
 		name = flavor_nuugdan_tsarai.53.c
 		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = { has_idea_group = humanist_ideas }
+		}
 		add_country_modifier = {
 			name = Y91_intolerant_religious_code
 			duration = -1
@@ -4306,15 +4318,6 @@ country_event = {
 				}
 			}
 		}
-	}
-
-	option = {
-		highlight = yes
-		trigger = {
-			has_ruler_modifier = faceless_queen_modifier
-		}
-		name = flavor_nuugdan_tsarai.62.b
-		custom_tooltip = faceless_queen_power
 	}
 }
 
@@ -6394,6 +6397,9 @@ country_event = {
 			name = Y91_jaal_horde_fl
 			duration = -1 
 		}
+
+		#mp
+		country_event = { id = mp.159 }
 	}
 }
 
@@ -6576,19 +6582,19 @@ country_event = { #danggun Receives treaty offer
 			cede_province = Y91
 		}
 		4910 = {
-		if = {
+			if = {
 				limit = { owned_by = ROOT }
 				cede_province = Y14 #Zhiqian
 			}
 		}
 		4909 = {
-		if = {
+			if = {
 				limit = { owned_by = ROOT }
 				cede_province = Y15 #Beikdugang
 			}
 		}
 		4908 = {
-		if = {
+			if = {
 				limit = { owned_by = ROOT }
 				cede_province = Y15 #Beikdugang
 			}
@@ -6687,7 +6693,7 @@ country_event = {
 	}
 }
 
-#狗屎洋人更新出来的战争事件
+#Hus Bhal and Ashag lose - Delete this later
 country_event = {
 	id = flavor_nuugdan_tsarai.104
 	title = flavor_nuugdan_tsarai.104.t
@@ -6696,9 +6702,13 @@ country_event = {
 
 	is_triggered_only = yes
 
+	#MP
+	major = yes
+
 	trigger = {
 		tag = Y91
-	}
+		# ai = no
+	}#MPFIX
 
 	option = {
 		name = flavor_nuugdan_tsarai.104.a
@@ -6739,5 +6749,18 @@ country_event = {
 		baztazhad_area = { add_core = ROOT }
 		zunkazhad_area = { add_core = ROOT }
 		zirariik_area = { add_core = ROOT }
+
+		#mp
+		set_capital = 5406
+		hidden_effect = {
+			4919 = {
+				if = { 
+					limit = { NOT = { has_building = fort_15th } }
+					add_building = fort_15th
+				}
+			}
+		}
+		country_event = { id = mp.156 days = 90 }
+		country_event = { id = mp.163 days = 365 }
 	}
 }
