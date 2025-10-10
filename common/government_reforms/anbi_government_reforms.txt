@@ -128,6 +128,10 @@ anbi_castanor_panzer_reform = {
 		ae_impact = -0.4
 	}
 
+	custom_attributes = {
+		rulers_cant_be_war_wizards = yes
+	}
+
 	government_abilities = {
 		anbi_has_doubt_count_mechanics
 	}
@@ -773,6 +777,7 @@ anbi_merfolk_the_refugee = {
 		locked_government_type = yes
 		disabled_expelling = yes
 		disabled_purging = yes
+		rulers_cant_be_war_wizards = yes
 	}
 }
 anbi_merfolk_the_land_merfolk_kingdom = {
@@ -802,6 +807,7 @@ anbi_merfolk_the_land_merfolk_kingdom = {
 		anbi_is_merfolk_state = yes
 		disabled_expelling = yes
 		disabled_purging = yes
+		rulers_cant_be_war_wizards = yes
 	}
 }
 anbi_merfolk_binary_empire = {

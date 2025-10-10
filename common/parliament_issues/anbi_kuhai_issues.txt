@@ -12,7 +12,7 @@ anbi_kukai_war_with_hobgoblin = {
 
 	effect = {
 		declare_war_with_cb = {
-			casus_belli = cb_dissolve_command
+			casus_belli = cb_anbi_kuhai_anti_imperialism
 			who = R62
 		}
 	}

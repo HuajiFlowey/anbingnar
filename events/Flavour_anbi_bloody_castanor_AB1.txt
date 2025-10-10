@@ -303,7 +303,7 @@ country_event = {
 			change_religion = giantkin_regent_court
 		}
 		add_government_reform = anbi_castanor_panzer_reform
-		set_country_flag = necromancy_disallowed
+		set_ruler_flag = banned_necromancy
 		set_country_flag = AB1_panzer_bloodtooth_cf
 		swap_free_idea_group = yes
 		swap_non_generic_missions = yes
@@ -315,44 +315,42 @@ country_event = {
 		hidden_effect = {
 			add_ruler_personality = conqueror_personality
 			add_ruler_personality = inspiring_leader_personality
-			add_ruler_personality = mage_personality
-			set_ruler_flag = mage_ruler_general
 			set_ruler_flag = long_lived_ruler
 			set_ruler_flag = immortal_ruler
 			remove_country_modifier = anbi_AB1_ban_colonies
+			define_powerful_mage = {
+				type = ruler
+				bonus = 4
+				save_levels = immortal
+			}
 			country_event = {
 				id = bloody_castanor.40
 			}
 		}
 	}
-
-	after = {
-		country_event = {
-			id = bloody_castanor.32 days = 5
-		}
-	}
 }
 
-#魔法保存补丁(不知道生不生效)
-country_event = {
-	id = bloody_castanor.32
-	title = bloody_castanor.32.t
-	picture = HRE_eventPicture
-	desc = bloody_castanor.32.d
+##魔法更新提供了更为简便的魔法继承方法，故移除魔法补丁事件。
+#魔法保存补丁
+# country_event = {
+# 	id = bloody_castanor.32
+# 	title = bloody_castanor.32.t
+# 	picture = HRE_eventPicture
+# 	desc = bloody_castanor.32.d
 
-	fire_only_once = yes
-	is_triggered_only = yes
-	hidden = yes
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+# 	hidden = yes
 
-	trigger = {
-		has_country_flag = AB1_panzer_bloodtooth_cf
-	}
+# 	trigger = {
+# 		has_country_flag = AB1_panzer_bloodtooth_cf
+# 	}
 
-	option = {
-		name = bloody_castanor.32.a
-		ruler_save_spell_schools = yes
-	}
-}
+# 	option = {
+# 		name = bloody_castanor.32.a
+# 		save_spell_levels_for_type_to_name = yes
+# 	}
+# }
 #转换文化
 country_event = { #Change culture of conquered adventurer provinces
 	id = bloody_castanor.6
@@ -802,7 +800,6 @@ country_event = {
 		restore_country_name = yes
 		swap_non_generic_missions = yes
 		set_country_flag = anbi_ab1_the_great_war
-		clr_ruler_flag = mage_ruler_general
 		remove_country_modifier = anbi_ab1_put_on_the_ring_modifier
 		remove_country_modifier = anbi_ab1_tight_the_dog_chain_modifier
 		hidden_effect = {
@@ -822,14 +819,14 @@ country_event = {
 				id = bloody_castanor.31 days = 30
 			}
 		}
-		increase_witch_king_points_massive = yes
-		increase_witch_king_points_massive = yes
-		increase_witch_king_points_massive = yes
-		increase_witch_king_points_massive = yes
-		increase_witch_king_points_massive = yes
-		increase_witch_king_points_massive = yes
-		increase_witch_king_points_massive = yes
-		increase_witch_king_points_massive = yes
+		increase_ruler_witch_king_points = { size = large }
+		increase_ruler_witch_king_points = { size = large }
+		increase_ruler_witch_king_points = { size = large }
+		increase_ruler_witch_king_points = { size = large }
+		increase_ruler_witch_king_points = { size = large }
+		increase_ruler_witch_king_points = { size = large }
+		increase_ruler_witch_king_points = { size = large }
+		increase_ruler_witch_king_points = { size = large }
 	}
 
 }
@@ -1687,30 +1684,23 @@ country_event = {
 				male = yes
 			}
 		}
-		if = {
-			limit = { 
-				has_reform = anbi_castanor_panzer_reform
-			}
-			set_ruler_flag = mage_ruler_general
-		}
 		hidden_effect = {
 			set_ruler_flag = immortal_ruler
 			add_ruler_personality = conqueror_personality
 			add_ruler_personality = inspiring_leader_personality
-			add_ruler_personality = mage_personality
 		}
 		add_stability = -1
 		name = bloody_castanor.30.a
 	}
 
 	after = {
+		set_ruler_flag = banned_necromancy
 		set_ruler_flag = long_lived_ruler				
-		ruler_give_saved_spell_schools = yes
-		ruler_save_spell_schools = yes
-		country_event = {
-			id = witch_king.0
+		define_powerful_mage = {
+			type = ruler
+			saved_levels = immortal
+			witch_king = yes
 		}
-		set_ruler_flag = initialized_magic_flags
 	}
 }
 #31为包围网补丁，已被占用，移动至上方

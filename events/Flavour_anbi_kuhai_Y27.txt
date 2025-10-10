@@ -39,19 +39,17 @@ country_event = {
 			age = 21
 		}
 		hidden_effect = {
-			add_ruler_personality = mage_personality
+			define_powerful_mage = {
+				type = ruler
+				evocation = 2
+				divination = 2
+				enchantment = 2
+				conjuration = 1
+			}
 			add_ruler_personality = huangke_mil_personality
 			add_ruler_personality = huangke_adm_personality
 			set_ruler_flag = is_huangke
-			set_ruler_flag = evocation_1
-			set_ruler_flag = evocation_2
-			set_ruler_flag = divination_1
-			set_ruler_flag = divination_2
-			set_ruler_flag = conjuration_1
-			set_ruler_flag = enchantment_1
-			set_ruler_flag = enchantment_2
-			set_ruler_flag = initialized_magic_flags
-			set_country_flag = necromancy_disallowed
+			set_country_flag = banned_necromancy
 			add_faction_influence = {
 				faction = anbi_feiten_0
 				influence = -15
@@ -2093,7 +2091,7 @@ country_event = {
 	trigger = {
 		has_ruler_flag = is_huangke
 		check_variable = {
-			which = pointsWitchKing
+			which = ruler_witch_king_points
 			value = 0
 		}
 	}
@@ -2104,7 +2102,9 @@ country_event = {
 	}
 
 	option = {
-		clear_witch_king_points = yes
+		clr_type_witch_king_points = {
+			type = ruler
+		}
 	}
 }
 #被三势力夺舍的事件
@@ -3643,7 +3643,7 @@ country_event = {
 		federation_increase_cohesion_all = yes
 		set_global_flag = anbi_greatest_yanshen_worldline
 		B05 = {
-			set_country_flag = necromancy_disallowed
+			set_country_flag = banned_necromancy
 			set_country_flag = anbi_kuhai_is_B05
 			add_ruler_personality = mythical_conqueror_personality
 			set_country_flag = feudal_escann_kingdom
@@ -3673,7 +3673,7 @@ country_event = {
 			}
 		}
 		F46 = {
-			set_country_flag = necromancy_disallowed
+			set_country_flag = banned_necromancy
 			set_country_flag = anbi_kuhai_is_F46
 			add_ruler_personality = mythical_conqueror_personality
 			add_ruler_modifier = {
@@ -3714,7 +3714,7 @@ country_event = {
 			}
 		}
 		G52 = {
-			set_country_flag = necromancy_disallowed
+			set_country_flag = banned_necromancy
 			set_country_flag = anbi_kuhai_is_G52
 			add_ruler_personality = mythical_conqueror_personality
 			add_ruler_modifier = {
@@ -4023,6 +4023,7 @@ country_event = {
 		name = anbi_kuhai.10006.b
 		highlight = yes
 		custom_tooltip = anbi_kuhai.10006_tt
+		set_country_flag = anbi_kuhai_the_great_war_immediate_win
 		country_event = {
 			id = anbi_kuhai.10010
 		}
@@ -4132,10 +4133,13 @@ country_event = {
 	trigger = {
 		has_global_flag = anbi_kuhai_the_great_war
 		tag = Z65
-		war_score_against = {
-			who = event_target:anbi_kuhai_is_B05_target
-			value = 75
-		}
+		OR = {
+			war_score_against = {
+				who = event_target:anbi_kuhai_is_B05_target
+				value = 75
+			}
+			has_country_flag = anbi_kuhai_the_great_war_immediate_win
+		}		
 	}
 
 	option = {
@@ -4169,10 +4173,13 @@ country_event = {
 	trigger = {
 		has_global_flag = anbi_kuhai_the_great_war
 		tag = Z65
-		war_score_against = {
-			who = event_target:anbi_kuhai_is_G52_target
-			value = 75
-		}
+		OR = {
+			war_score_against = {
+				who = event_target:anbi_kuhai_is_G52_target
+				value = 75
+			}
+			has_country_flag = anbi_kuhai_the_great_war_immediate_win
+		}		
 	}
 
 	option = {
@@ -4206,10 +4213,13 @@ country_event = {
 	trigger = {
 		has_global_flag = anbi_kuhai_the_great_war
 		tag = Z65
-		war_score_against = {
-			who = event_target:anbi_kuhai_is_F46_target
-			value = 75
-		}
+		OR = {
+			war_score_against = {
+				who = event_target:anbi_kuhai_is_F46_target
+				value = 75
+			}
+			has_country_flag = anbi_kuhai_the_great_war_immediate_win
+		}		
 	}
 
 	option = {

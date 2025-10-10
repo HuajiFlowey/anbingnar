@@ -327,7 +327,7 @@ country_event = {
 			}
 			"
 		}
-		set_global_flag = saanorgegh_faceless_queen_death
+		5415 = { add_permanent_province_modifier = { name = saanorgegh_nurgai_mod duration = -1 } }
 	}
 
 	option = {
@@ -361,6 +361,7 @@ country_event = {
 
 	option = {
 		swap_non_generic_missions = yes
+		5415 = { add_permanent_province_modifier = { name = saanorgegh_nurgai_mod duration = -1 } }
 		name = flavour_anbingnar_daxugo.4.a
 		add_prestige = 10
 	}
@@ -571,105 +572,105 @@ country_event = {
 }
 
 #东洲天命，换线
-country_event = {
-	id = flavour_anbingnar_daxugo.12
-	title = flavour_anbingnar_daxugo.12.t
-	desc = flavour_anbingnar_daxugo.12.d
-	picture = AIRSHIP_SKYPORT_eventPicture
+# country_event = {
+# 	id = flavour_anbingnar_daxugo.12
+# 	title = flavour_anbingnar_daxugo.12.t
+# 	desc = flavour_anbingnar_daxugo.12.d
+# 	picture = AIRSHIP_SKYPORT_eventPicture
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	option = {
-		name = flavour_anbingnar_daxugo.12.a
-		hidden_effect = {
-			country_event = {
-				id = flavour_anbingnar_daxugo.13 days = 30
-			}
-		}
-	}
-}
-country_event = {
-	id = flavour_anbingnar_daxugo.13
-	title = flavour_anbingnar_daxugo.13.t
-	desc = flavour_anbingnar_daxugo.13.d
-	picture = failed_revolution_eventpicture
+# 	option = {
+# 		name = flavour_anbingnar_daxugo.12.a
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = flavour_anbingnar_daxugo.13 days = 30
+# 			}
+# 		}
+# 	}
+# }
+# country_event = {
+# 	id = flavour_anbingnar_daxugo.13
+# 	title = flavour_anbingnar_daxugo.13.t
+# 	desc = flavour_anbingnar_daxugo.13.d
+# 	picture = failed_revolution_eventpicture
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			add_stability = -3
-			kill_ruler = yes
-			kill_consort = yes
-			remove_heir = {}
-			define_ruler = {
-				max_random_adm = 0
-				max_random_dip = 0
-				max_random_mil = 0
-				name = "nobody"
-			}
-		}
-		for = {
-			amount = 20
-			effect = "
-			random_owned_province = {
-			limit = {
-				NOT = { culture = ROOT }
-			}
-			spawn_rebels = {
-				size = 4
-				type = nationalist_rebels
-			}
-			}
-			"
-		}
-	}
+# 	immediate = {
+# 		hidden_effect = {
+# 			add_stability = -3
+# 			kill_ruler = yes
+# 			kill_consort = yes
+# 			remove_heir = {}
+# 			define_ruler = {
+# 				max_random_adm = 0
+# 				max_random_dip = 0
+# 				max_random_mil = 0
+# 				name = "nobody"
+# 			}
+# 		}
+# 		for = {
+# 			amount = 20
+# 			effect = "
+# 			random_owned_province = {
+# 			limit = {
+# 				NOT = { culture = ROOT }
+# 			}
+# 			spawn_rebels = {
+# 				size = 4
+# 				type = nationalist_rebels
+# 			}
+# 			}
+# 			"
+# 		}
+# 	}
 
-	option = {
-		name = flavour_anbingnar_daxugo.13.a
-		set_country_flag = daxugo_conquer_never_end
-		swap_non_generic_missions = yes
-		country_event = {
-			id = flavour_anbingnar_daxugo.14
-		}
-	}
+# 	option = {
+# 		name = flavour_anbingnar_daxugo.13.a
+# 		set_country_flag = daxugo_conquer_never_end
+# 		swap_non_generic_missions = yes
+# 		country_event = {
+# 			id = flavour_anbingnar_daxugo.14
+# 		}
+# 	}
 
-}
-country_event = {
-	id = flavour_anbingnar_daxugo.14
-	title = flavour_anbingnar_daxugo.14.t
-	desc = flavour_anbingnar_daxugo.14.d
-	picture = ANB_GLOBAL_TRADE_eventPicture
+# }
+# country_event = {
+# 	id = flavour_anbingnar_daxugo.14
+# 	title = flavour_anbingnar_daxugo.14.t
+# 	desc = flavour_anbingnar_daxugo.14.d
+# 	picture = ANB_GLOBAL_TRADE_eventPicture
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	option = {
-		name = flavour_anbingnar_daxugo.14.a
-		custom_tooltip = faceless_emperor_only
-		set_global_flag = faceless_emperor_win
-		set_country_flag = faceless_emperor_only_1
-		add_country_modifier = {
-			name = A_hawk_screaming_for_a_bloody_war
-			duration = -1
-		}
-		nuzurbokh_region = {
-			add_permanent_claim = ROOT
-		}
-		moduk_region = {
-			add_permanent_claim = ROOT
-		}
-		bulwar_superregion = {
-			add_permanent_claim = ROOT
-		}
-		define_ruler = {
-			adm = 4
-			dip = 5
-			mil = 6
-			age = 20
-			female = yes
-		}
-	}
-}
+# 	option = {
+# 		name = flavour_anbingnar_daxugo.14.a
+# 		custom_tooltip = faceless_emperor_only
+# 		set_global_flag = faceless_emperor_win
+# 		set_country_flag = faceless_emperor_only_1
+# 		add_country_modifier = {
+# 			name = A_hawk_screaming_for_a_bloody_war
+# 			duration = -1
+# 		}
+# 		nuzurbokh_region = {
+# 			add_permanent_claim = ROOT
+# 		}
+# 		moduk_region = {
+# 			add_permanent_claim = ROOT
+# 		}
+# 		bulwar_superregion = {
+# 			add_permanent_claim = ROOT
+# 		}
+# 		define_ruler = {
+# 			adm = 4
+# 			dip = 5
+# 			mil = 6
+# 			age = 20
+# 			female = yes
+# 		}
+# 	}
+# }
 #15是共和走向的事件，已被移除
 
 #湖人，完蛋了！

@@ -205,7 +205,6 @@ faithless = {
 		}
 	}
 
-
 	harmonized_modifier = harmonized_faithless
 	crusade_name = CRUSADE
 }

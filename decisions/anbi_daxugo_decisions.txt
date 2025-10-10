@@ -633,14 +633,7 @@ country_decisions = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = Y91_plant_growth
-				any_owned_province = {
-					OR = {
-						has_province_modifier = magic_realm_transmutation_plant_growth_1
-						has_province_modifier = magic_realm_transmutation_plant_growth_2
-						has_province_modifier = magic_realm_transmutation_plant_growth_3
-						has_province_modifier = magic_realm_transmutation_plant_growth_4
-					}
-				}
+				has_cast_plant_growth = yes
 			}
 			OR = {
 				consort_culture = naamjyut

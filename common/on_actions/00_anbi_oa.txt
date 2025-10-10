@@ -1,4 +1,5 @@
 on_startup = {
+	country_event = { id = flavor_nuugdan_tsarai.1 }
 	country_event = { id = flavour_anbingnar_daxugo.44444 }
 	country_event = { id = flavour_anbingnar_daxugo.44445 }
 	country_event = { id = bloody_castanor.1  days = 1 }
@@ -95,5 +96,16 @@ on_country_creation = {
 			AB3 = { mission_completed = anbi_merfolk_our_cousin }
 		}
 		largest_increase_of_ruinborn_tolerance_effect = yes
+	}
+}
+
+on_main_war_won_effect = {
+	if = { #Nuugdan Tsarai - Y91
+		limit = { 
+			has_country_flag = Y91_first_war
+			FROM = { tag = V25 } #Hus Bhal 
+		}
+		country_event = { id = flavor_nuugdan_tsarai.104 }
+		clr_country_flag = Y91_first_war
 	}
 }

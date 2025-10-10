@@ -55,11 +55,10 @@ country_event = {
 				set_variable = { which = merfolkOpinionVar value = 100 }
 				set_country_flag = merfolk_opinion_allied
 				set_country_flag = disables_estate_adeen_flag
-				set_country_flag = necromancy_disallowed
+				set_country_flag = banned_necromancy
 				set_country_flag = disabled_heir_events
 				set_ruler_flag = anbi_is_gertyene
 				set_ruler_flag = ruinborn_ruler
-				set_ruler_flag = mage_ruler_general
 				set_ruler_flag = enchantment_1
 				set_ruler_flag = illusion_1
 				set_ruler_flag = initialized_magic_flags

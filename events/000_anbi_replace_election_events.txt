@@ -1,0 +1,732 @@
+
+#覆盖选举
+country_event = {
+	id = 701
+	title = "EVTNAME700"
+	desc = {	#Yinquan
+		trigger = { OR = { has_country_flag = holi_retirement_2 has_country_flag = holi_retirement_6 has_country_flag = holi_retirement_7 } }
+		desc = "EVTDESC701RETIREMENT"
+	}
+	desc = {	#Normal
+		trigger = { always = yes }
+		desc = "EVTDESC701"
+	}
+	picture = ELECTION_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_states_general_mechanic = yes }
+		NOT = { has_government_attribute = lottery_election }
+		NOT = { has_government_attribute = is_pirate_republic_reform }
+		NOT = { has_reform = military_dictatorship_reform }
+		NOT = { has_reform = admiralty_reform }
+		# NOT = { has_reform = prussian_republic_reform }
+		NOT = { has_reform = black_demesne_reform }
+		NOT = { has_reform = black_acolyte_reform }
+		NOT = { has_reform = medasi_reform }
+		# NOT = { has_disaster =  bonfire_of_the_vanities_disaster }
+		NOT = { has_country_modifier = just_had_revolution_bringing_someone_to_power_timer }
+		if = {
+			limit = {
+				has_reform = junior_revolutionary_republic_reform
+				has_country_flag = caretaker_revolutionary_government
+			}
+			republican_tradition = 50
+		}
+		
+		
+		#Anbennar
+		NOT = { has_reform = anbi_kuhai_united_yanshen }
+		NOT = { has_reform = obsidian_council_reform }
+		NOT = { has_reform = roilsard_elective }
+		NOT = { has_reform = ar_callein_reform }
+		NOT = { has_reform = reuyeli_republic }
+		# NOT = { has_reform = original_castanor_trials_reform }
+		NOT = { has_reform = krak_clan_council }
+		NOT = { has_reform = krak_free_council }
+		NOT = { has_reform = eternal_council }
+		NOT = { has_reform = sunrise_court_reform }
+		NOT = { AND = { tag = Y86 has_ruler_flag = is_hiderion } }
+		NOT = { has_reform = sinistral_republic_reform }
+		NOT = { has_reform = bulwar_twelve_families_reform }
+		NOT = { has_reform = golden_republic_reform }
+		NOT = { has_reform = krakazol_olzonog }
+		NOT = { has_reform = varamhar_eternal_empire }
+		NOT = { has_reform = varamhar_eternal_empire_mandate }
+		NOT = { has_reform = trollsbayer_pluralism_reform }
+		NOT = { has_reform = dakinshi_warlord_reform }
+		NOT = {	has_country_flag = g27_drozmasrecat_flag }
+		NOT = { has_reform = besolaki_chaotic_republicanism }
+		NOT = {	#From Bulwar MT
+			AND = {
+				tag = F24
+				has_country_flag = bulwar_got_rabsukalukaturanised
+			}
+		}
+		NOT = { has_reform = newshire_stewardship }
+		NOT = { has_reform = newshire_high_stewardship }
+		NOT = { has_reform = land_of_thousand_shrines}
+		NOT = { has_reform = bulwari_temple_reform }
+		NOT = { has_reform = mountainshark_govzenszel }
+		OR = { NOT = { has_ruler_flag = is_holi } has_country_flag = Y26_election_allowed }
+		NOT = { has_reform = pentapandemonium_reform }
+		NOT = { has_reform = brelar_ynnic_dynastic_republic }
+		NOT = { AND = { tag = U04 OR = { has_country_modifier = aakheta_uprising_modifier has_country_modifier = aakheta_uprising_modifier_ai } } }
+		NOT = { has_government_attribute = generals_become_rulers }
+		NOT = { has_reform = shadow_horde }
+		NOT = { has_reform = haraf_kinah_conclave }
+		NOT = { has_reform = husziens_council }
+		NOT = { has_reform = kai_republic }
+		NOT = { has_reform = free_slave_reform }
+		NOT = { has_reform = praxic_meritocracy_reform }
+		NOT = { has_reform = united_federation }
+		NOT = { has_reform = isagumze_scaled_lords_reform }
+		NOT = { has_reform = vels_bacar_bacaran_republic }
+		NOT = { has_reform = technocracy_republic_reform }
+		NOT = { has_reform = imperial_technocracy_republic_reform }
+		NOT = { has_country_modifier = thirabnir_stayin_alive } #I wish I wasn't forced to do this, but life extension doesn't work
+		NOT = { has_reform = racial_tolerance_reform }
+		NOT = { has_reform = abyssal_otardom_reform }
+		NOT = { has_reform = forge_council_reform }
+		NOT = { has_reform = ameion_republic }
+		NOT = { has_reform = the_mazukxiem }
+		NOT = { has_reform = exemplar_state }
+		NOT = { has_ruler_flag = is_huangke }
+		NOT = { has_reform = anbi_kuhai_twin_republic }
+		is_mteibhar_parliament = no
+		NOT = { has_government_attribute = enables_corrivalry }
+		NOT = { has_reform = z22_prince_elect }
+		NOT = { has_reform = z22_prince_elect_improved }
+	}
+
+	immediate = {
+		hidden_effect = {
+			pre_select_possible_ruler_focus = yes
+		}
+	}
+	after = {
+		post_ruler_focus_clearance = yes
+		holi_retirement_flag_clearance = yes #Yinquan
+	}
+	# #New Anbennar one for liches
+	option = {
+		name = "magic_project_lichdom.14.b"	# Current ruler stays
+		trigger = {
+			ruler_can_revive = yes
+		}
+		ai_chance = { 
+			factor = 1000	
+		}
+		custom_tooltip = remains_ruler
+
+		add_scaled_republican_tradition = -20
+		add_karma = -5
+		
+		revival_stat_loss = yes
+	}
+	
+	option = {
+		name = "EVTOPTB700"	# An administrator type
+		ai_chance = { factor = 40 }
+		if = {
+			limit = { has_country_modifier = harpy_administration }
+			define_ruler = {
+				mil = 1
+				adm = 4
+				dip = 1				
+				female = yes # Allows random gender for republics
+			}
+		}
+		else_if = {
+			limit = { culture_group = dwarven }
+			dwarovar_republic_generic_election_effect = {
+				mil = 1
+				adm = 4
+				dip = 1
+			}
+		}
+		else_if = {
+			limit = { has_government_attribute = tanizu_elections }
+			define_ruler = {
+				mil = 1
+				adm = 4
+				dip = 1
+				random_gender = yes
+			}
+		}
+		else_if = {
+			limit = { republic_with_female_rulers_trigger = yes }
+			define_ruler = {
+				mil = 1
+				adm = 4
+				dip = 1					
+				random_gender = yes # Allows random gender for republics
+			}
+		}
+		else = {
+			define_ruler = {
+				mil = 1
+				adm = 4
+				dip = 1					
+			}
+		}
+		if = {
+			limit = { has_government_attribute = elections_increase_factions_influence }
+			add_influence_to_adm_faction = {
+				influence = 20
+			}
+		}
+		if = {
+			limit = { has_government_attribute = elections_influence_estates }
+			add_estate_loyalty_by_class_adm = {
+				loyalty = 10
+			}
+		}
+		if = {
+			limit = { has_government_attribute = has_candidate_bonus }
+			assign_ruler_focus = {
+				type = adm
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC700"	# A diplomat
+		ai_chance = { factor = 30 }
+		if = {
+			limit = { has_country_modifier = harpy_administration }
+			define_ruler = {
+				dip = 4
+				adm = 1
+				mil = 1					
+				female = yes # Allows random gender for republics
+			}
+		}
+		else_if = {
+			limit = { culture_group = dwarven }
+			dwarovar_republic_generic_election_effect = {
+				dip = 4
+				adm = 1
+				mil = 1
+			}
+		}
+		else_if = {
+			limit = { has_government_attribute = tanizu_elections }
+			define_ruler = {
+				dip = 4
+				adm = 1
+				mil = 1
+				random_gender = yes
+			}
+		}
+		else_if = {
+			limit = { republic_with_female_rulers_trigger = yes }
+			define_ruler = {
+				dip = 4
+				adm = 1
+				mil = 1					
+				random_gender = yes # Allows random gender for republics
+			}
+		}
+		else = {
+			define_ruler = {
+				dip = 4
+				adm = 1
+				mil = 1					
+			}
+		}
+		if = {
+			limit = { has_government_attribute = elections_increase_factions_influence }
+			add_influence_to_dip_faction = {
+				influence = 20
+			}
+		}
+		if = {
+			limit = { has_government_attribute = elections_influence_estates }
+			add_estate_loyalty_by_class_dip = {
+				loyalty = 10
+			}
+		}
+		if = {
+			limit = { has_government_attribute = has_candidate_bonus }
+			assign_ruler_focus = {
+				type = dip
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD700"	# A military man
+		ai_chance = { factor = 30 }
+		if = {
+			limit = { has_country_modifier = harpy_administration }
+			define_ruler = {
+				mil = 4
+				adm = 1
+				dip = 1	
+				female = yes # Makes harpies always have female ruler
+			}
+		}
+		else_if = {
+			limit = { culture_group = dwarven }
+			dwarovar_republic_generic_election_effect = {
+				mil = 4
+				adm = 1
+				dip = 1
+			}
+		}
+		else_if = {
+			limit = { has_government_attribute = tanizu_elections }
+			define_ruler = {
+				mil = 4
+				adm = 1
+				dip = 1
+				random_gender = yes
+			}
+		}
+		else_if = {
+			limit = { republic_with_female_rulers_trigger = yes }
+			define_ruler = {
+				mil = 4
+				adm = 1
+				dip = 1					
+				random_gender = yes # Allows random gender for republics
+			}
+		}
+		else = {
+			define_ruler = {
+				mil = 4
+				adm = 1
+				dip = 1					
+			}
+		}
+		if = {
+			limit = { has_government_attribute = elections_increase_factions_influence }
+			add_influence_to_mil_faction = {
+				influence = 20
+			}
+		}	
+		if = {
+			limit = { has_government_attribute = elections_influence_estates }
+			add_estate_loyalty_by_class_mil = {
+				loyalty = 10
+			}
+		}
+		if = {
+			limit = { has_government_attribute = has_candidate_bonus }
+			assign_ruler_focus = {
+				type = mil
+			}
+		}
+	}
+	option = { # Nepotism choice, re-electing within dynasty
+		name = "EVTOPTE700"
+		trigger = {
+			has_government_attribute = enables_nepotism
+		}
+		ai_chance = { factor = 10 }
+		if = {
+			limit = {
+				has_country_flag = strengthened_signoria_flag
+			}
+			custom_tooltip = strengthened_signoria_election_tt
+			clr_country_flag = strengthened_signoria_flag
+		}
+		else = {
+			add_scaled_republican_tradition = -4
+		}
+		if = {
+			limit = { 
+				has_country_modifier = harpy_administration
+				NOT = { has_reform = signoria_reform }
+			}
+			define_ruler = {
+				change_mil = -2
+				change_adm = -2
+				change_dip = -2
+				min_age = 30
+				max_age = 50
+				name = "lastname"
+				female = yes # Makes harpies always have female ruler
+			}
+		}
+		else_if = {
+			limit = { 
+				republic_with_female_rulers_trigger = yes
+				NOT = { has_reform = signoria_reform }
+			}
+			define_ruler = {
+				change_mil = -2
+				change_adm = -2
+				change_dip = -2
+				min_age = 30
+				max_age = 50
+				name = "lastname"
+				random_gender = yes # Allows random gender for republics
+			}
+		}
+		else_if = {
+			limit = { 
+				has_country_modifier = harpy_administration
+				has_reform = signoria_reform
+			}
+			define_ruler = {
+				min_age = 30
+				max_age = 50
+				name = "lastname"
+				female = yes # Makes harpies always have female ruler
+			}
+		}
+		else_if = {
+			limit = { 
+				republic_with_female_rulers_trigger = yes
+				has_reform = signoria_reform
+			}
+			define_ruler = {
+				min_age = 30
+				max_age = 50
+				name = "lastname"
+				random_gender = yes # Allows random gender for republics
+			}
+		}
+		else_if = {
+			limit = { 
+				has_reform = signoria_reform
+			}
+			define_ruler = {
+				min_age = 30
+				max_age = 50
+				name = "lastname"
+				random_gender = yes # Allows random gender for republics
+			}
+		}
+		else_if = {
+			limit = { culture_group = dwarven }
+			if = {
+				limit = { has_reform = dwarovar_new_minds } 
+				define_ruler = {
+					change_mil = -2
+					change_adm = -2
+					change_dip = -2
+					min_age = 50
+					max_age = 70
+				}
+				if = {
+					limit = { has_government_attribute = dwarovar_new_minds_effect }
+					random_list = {
+						20 = {
+							trigger = { has_estate = estate_church }
+							add_estate_loyalty = { estate = estate_church loyalty = 5 }
+						}
+						20 = {
+							trigger = { has_estate = estate_nobles }
+							add_estate_loyalty = { estate = estate_nobles loyalty = 5 }
+						}
+						20 = {
+							trigger = { has_estate = estate_burghers }
+							add_estate_loyalty = { estate = estate_burghers loyalty = 5 }
+						}
+						20 = {
+							trigger = { has_estate = estate_mages }
+							add_estate_loyalty = { estate = estate_mages loyalty = 5 }
+						}
+						20 = {
+							trigger = { has_estate = estate_artificers }
+							add_estate_loyalty = { estate = estate_artificers loyalty = 5 }
+						}
+						#no adventurers
+					}
+				}
+			}
+			else_if = {
+				limit = { has_reform = dwarovar_elder_wisdom } 
+				define_ruler = {
+					change_mil = -2
+					change_adm = -2
+					change_dip = -2
+					min_age = 70
+					max_age = 90
+					name = "lastname"
+				}
+			}
+			else = {
+				define_ruler = {
+					change_mil = -2
+					change_adm = -2
+					change_dip = -2
+					min_age = 60
+					max_age = 80
+					name = "lastname"
+				}
+			}
+		}
+		else_if = {
+			limit = { has_government_attribute = tanizu_elections }
+			define_ruler = {
+				change_mil = -2
+					change_adm = -2
+					change_dip = -2
+					min_age = 60
+					max_age = 80
+					name = "lastname"
+				random_gender = yes
+			}
+		}
+		else = {
+			define_ruler = {
+				change_mil = -2
+				change_adm = -2
+				change_dip = -2
+				min_age = 30
+				max_age = 50
+				name = "lastname"
+			}
+		}
+		if = {
+			limit = { 
+				has_faction = mr_aristocrats 
+			}
+			add_faction_influence = {
+				faction = mr_aristocrats
+				influence = 10
+			}				
+		}
+		if = {
+			limit = { has_government_attribute = elections_influence_estates }
+			add_estate_loyalty = {
+				estate = all
+				loyalty = 10
+			}
+		}
+		if = {
+			limit = { has_government_attribute = has_candidate_bonus }
+			assign_ruler_focus = {
+				type = rng
+			}
+		}
+	}
+	option = { # Epednar Option
+		name = "EVTOPTF700"
+		trigger = { has_government_attribute = epednar_election }
+		ai_chance = { factor = 10 }
+
+		define_ruler = {
+			adm = 0
+			dip = 2
+			mil = 3
+			culture = epednar
+		}
+	}
+	option = { # Ravelian Option
+		name = "EVTOPTG700"
+		trigger = { has_government_attribute = ravelian_election }
+		ai_chance = { factor = 10 }
+
+		define_ruler = {
+			adm = 5
+			dip = 1
+			mil = 0
+			religion = ravelian
+		}
+		random_list = {
+			25 = { add_ruler_personality = zealot_personality }
+			25 = { add_ruler_personality = scholar_personality }
+			50 = { }
+		}
+	}
+	option = { # Vanbury Candidate
+		trigger = { 
+		    AND = {
+		         has_government_attribute = metropolis_election
+				 tag = G97
+				 }
+			}
+		add_scaled_republican_tradition = -4
+		add_prestige = 5
+		name = "EVTOPTH700"
+		ai_chance = { factor = 10 }
+
+		define_ruler = {
+			change_mil = 1
+			change_adm = -2
+			change_dip = -1
+			min_age = 30
+			max_age = 50
+			dynasty = "of Vanbury"
+		}
+		random_list = {
+			20 = { add_ruler_personality = well_connected_personality }
+			20 = { add_ruler_personality = industrious_personality }
+			20 = { add_ruler_personality = embezzler_personality }
+			20 = { add_ruler_personality = greedy_personality }
+			20 = { }
+		}
+	}
+	option = { # Silcalas Candidate 
+		trigger = { 
+		    AND = {
+		         has_government_attribute = metropolis_election
+				 tag = G98
+				 }
+			}
+		add_scaled_republican_tradition = -4
+		add_prestige = 5
+		name = "EVTOPTJ700"
+		ai_chance = { factor = 10 }
+
+		define_ruler = {
+			change_mil = -2
+			change_adm = 1
+			change_dip = -1
+			min_age = 30
+			max_age = 50
+			dynasty = "Silcalas"
+		}
+		random_list = {
+			20 = { add_ruler_personality = well_connected_personality }
+			20 = { add_ruler_personality = architectural_visionary_personality }
+			20 = { add_ruler_personality = embezzler_personality }
+			20 = { add_ruler_personality = obsessive_perfectionist_personality }
+			20 = { }
+		}
+		}
+		#silver republic stuff
+	option = { #Ekha 
+		name = "EVTOPTK700"
+		trigger = { has_reform = reformed_silver_council_reform }
+		define_ruler = {
+				mil = 1
+				adm = 4
+				dip = 1					
+				random_gender = yes # Allows random gender for republics
+		}
+		set_ruler_flag = is_from_ekha
+		402 = {
+			add_province_modifier = {
+				name = silver_touched_province
+				duration = 2920
+			}
+		}
+	}
+	option = { #Khasa  
+		name = "EVTOPTL700"
+		trigger = { has_reform = reformed_silver_council_reform }
+		define_ruler = {
+				mil = 1
+				adm = 1
+				dip = 4					
+				random_gender = yes # Allows random gender for republics
+				culture = khasani
+		}
+		set_ruler_flag = is_from_khasa 
+		400 = {
+			add_province_modifier = {
+				name = silver_touched_province
+				duration = 2920
+			}
+		}
+	}
+	option = { #Deshak   
+		name = "EVTOPTM700"
+		trigger = { has_reform = reformed_silver_council_reform }
+		define_ruler = {
+				mil = 4
+				adm = 1
+				dip = 1					
+				random_gender = yes # Allows random gender for republics
+				culture = desha
+		}
+		set_ruler_flag = is_from_deshak  
+		382 = {
+			add_province_modifier = {
+				name = silver_touched_province
+				duration = 2920
+			}
+		}
+	}
+	option = { #Sigilan    
+		name = "EVTOPTN700"
+		trigger = { 
+			has_reform = reformed_silver_council_reform 
+			5813 = { owned_by = ROOT }
+		}
+		random_list = {
+			14 = {
+				define_ruler = {
+					mil = 2
+					adm = 1
+					dip = 4					
+					random_gender = yes # Allows random gender for republics
+					culture = binwarji
+					religion = fangaulan_pantheon
+				}
+			}
+			14 = {
+				define_ruler = {
+					mil = 1
+					adm = 2
+					dip = 4					
+					random_gender = yes # Allows random gender for republics
+					culture = binwarji
+					religion = fangaulan_pantheon
+				}
+			}
+			15 = {
+				define_ruler = {
+					mil = 2
+					adm = 4
+					dip = 1					
+					random_gender = yes # Allows random gender for republics
+					culture = binwarji
+					religion = fangaulan_pantheon
+				}
+			}
+			15 = {
+				define_ruler = {
+					mil = 1
+					adm = 4
+					dip = 2				
+					random_gender = yes # Allows random gender for republics
+					culture = binwarji
+					religion = fangaulan_pantheon
+				}
+			}
+			14 = {
+				define_ruler = {
+					mil = 1
+					adm = 2
+					dip = 4					
+					random_gender = yes # Allows random gender for republics
+					culture = binwarji
+					religion = fangaulan_pantheon
+				}
+			}
+			14 = {
+				define_ruler = {
+					mil = 4
+					adm = 2
+					dip = 1					
+					random_gender = yes # Allows random gender for republics
+					culture = binwarji
+					religion = fangaulan_pantheon
+				}
+			}
+			14 = {
+				define_ruler = {
+					mil = 4
+					adm = 1
+					dip = 2					
+					random_gender = yes # Allows random gender for republics
+					culture = binwarji
+					religion = fangaulan_pantheon
+				}
+			}
+		}
+		set_ruler_flag = is_from_sigilan   
+		5813 = {
+			add_province_modifier = {
+				name = silver_touched_province
+				duration = 2920
+			}
+		}
+	}
+}

@@ -209,7 +209,7 @@
  desc_huangke_mil_personality:0 "yYŽah`±›NTºN„v¶RO¦R˜R00WIN0›Q–00IN&&\nlVºNNˆ‰w„vÒkÇ†s‹QNšR‰«ˆˆmmpr^ÀQÿÖN‰8xŽxÙ*NïSŽa„vçeNLu0\n\n§Tåb	gdkyr(„vßu»lwàeÕlO(u¡NupÕl=g0§!"
  huangke_mil_personality_die_desc:0 "8xŽxçeßpÞT„vOºN»S†N&&"
  huangke_adm_personality:0 "j`ˆR,gÃV"
- desc_huangke_adm_personality:0 "FOßpÞT—‰„vNÅNÅN=fUS¯u„v4xOWÿyY—‰ÎNN†ºN0¾|up0¦R˜R0´fT„v|ƒÒk-Nb`YÇegÿyYÅV—Í‘·ƒ°eu0\n0b	gN*N¦hó`ÿq™×S­—c„vßpÞTOÙzËzwegÿb:NÈTpQgŽ‹Y„výV¦^00Äžj`\n\n§Tåb	gdkyr(„vßu»lw8lÜNOb:NëT^‹sÿNNýwÊ‘>eÐcØšv`TØšŽN-NIr„vÕl=g0§!"
+ desc_huangke_adm_personality:0 "FOßpÞT—‰„vNÅNÅN=fUS¯u„v4xOWÿyY—‰ÎNN†ºN0¾|up0¦R˜R0´fT„v|ƒÒk-Nb`YÇegÿyYÅV—Í‘·ƒ°eu0\n0b	gN*N¦hó`ÿq™×S­—c„vßpÞTOÙzËzwegÿb:NÈTpQgŽ‹Y„výV¦^00Äžj`\n\n§Tåb	gdkyr(„vßu»lw8lÜNOb:NëT^‹s§!"
  huangke_adm_personality_die_desc:0 "ú^Ëz°eßpÞT„vOºN»S†N&&"
  huangke_adm_personality_tt:0 "- [Root.Monarch.GetName] àeÕlO(uØšv`TÕl=gÿ"
  anbi_kuhai_is_blue_party:0 "Ý„>mbXT"
@@ -610,9 +610,9 @@
  anbi_kuhai.1010.e:0 "NT‹v>mbXTÿ"
  anbi_kuhai.1011.t:0 "ßpÞTqQŒTýV	>Nÿ"
  anbi_kuhai.1011.d:0 "1uŽN[Root.GetRulerTitleAndNameOrRegencyCap]„vNx^»yNÿßpÞTqQŒTýVVËY†N4Nöe	>N0àQMOP	ºNŒRb†NÀoÈp„vÒ‰ÿgÈuÿb:NßpÞTqQŒTýVI`ßu„vºN=f"
- anbi_kuhai.1012.t:0 "ŠbbìN„vNˆ‰w&&"
- anbi_kuhai.1012.d:0 "îO™^‹NöNÿ”^å‹	gN'Yµk‡e,g0"
- anbi_kuhai.1012.a:0 "&&QrbÝOkSßpÞT„v!X’Wÿ"
+ anbi_kuhai.1012.t:0 "ŠbbìN„vNˆ‰wQrb!X’W"
+ anbi_kuhai.1012.d:0 "¸‹YºNpSaŒÌ‘„vwNˆI`=fOŒT'Y¶RntntèSèS±›NçeßpÞT„væ‚åePR0ÎN4–i–árÈ‹ÿàev`NjO„v¦R˜Rÿ0R*jZ‹k´fÿçpNg¢b c„vuQ*SÿwNˆpSaŒ-N„vçeßpÞT°‹ÆV<ONNxm†Nêl0WlNNˆÿUSUSû•weg1S	gN¡w¾–Š„vv`í0(WwNˆ„vgTöeIQÌ‘ÿ	g„vºNN²‹—VêñT„v?QYRÿôf²‹N—VvQÖNôfuÜ„v²NbÿFOtSNôv²‹—VN*NºNÄžj`0Ïk)YéehfÿsSOekeS–ÊsÿFOÖNìNI`O‰`ÃVædíb'Y…SÌ‘„vÄžj`IuÏPÿ<wiwÌ‘ê•ÁpNwTle„vIQ&&\n\nfåe„vzRPR‚YÊNmNw†N0¸‹YºNv^Ntã‰wNˆºNùRqQŒTýV0«ƒT0„vÅ`aÿ«Ž¹„vºNI`O±b(`zK„vžX R0uQyV„vib'Y0P%„vibceŒTNGS.nS„v)„zÿôf	gèRt^‰ºN`õVäQ^NÃ‹)Rãy„vßu»lÿ²‹:NqQŒT6R¦^gdÁk†NßpÞT„v.OßuN‡eSÿ.1S†N÷mqNŒTÞz‰Nÿ<ONNßpÞT°s‚YÊN„vNRý=ftNb”^SV„v&&\n\nFOupnoeg†N0\n\nSVçeåeéy^„v²QB›íTÉ‹NwßpÞTW0WNCSt^„væ‚¾–öeÿSV2a`„vupSO†TîTNwuMR«ˆ¾xÛålW„vÛuZiöeÿÞg2aNÉZ×O„vºNý²‹Æ‹0RqQŒTýVöeãN=fßpÞTg‹Y„vöeãN0«ˆ't%`VìS„våTz–ÿ<w^yZWÅk„vR—t^ëXuQÿTåwÆ‹nZS„vÕl^NŽbz‚¾|in„vGY°h=gëXìNMRÆNTçuÿ(uu‹TN¾|^ykXeˆNwN™^„v:o&&"
+ anbi_kuhai.1012.a:0 ":NêñTÿ:NßpÞTÿ:NqQŒTýV0"
  anbi_kuhai.1013.t:0 "Ý„r‚ê1uªRÕlžR°s"
  anbi_kuhai.1013.d:0 "–Ï…‹NöN"
  anbi_kuhai.1013.a:0 "–Ï…‹NöN"

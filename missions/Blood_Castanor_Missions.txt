@@ -436,7 +436,6 @@ bloody_canstanor_first_4 = {
 				estate = estate_mages
 				loyalty = 50
 			}
-			has_estate_privilege = estate_mages_patronage_of_the_magical_arts
 		}
 
 		effect = {
@@ -2600,7 +2599,10 @@ bloody_canstanor_development_3 = {
 				}
 			}
 			833 = {
-				has_province_modifier = anbi_escanni_great_city_2_modifier
+				OR = {
+					has_province_modifier = anbi_escanni_great_city_2_modifier
+					has_province_modifier = anbi_escanni_great_city_3_modifier
+				}
 			}
 			num_of_owned_provinces_with = {
 				value = 200

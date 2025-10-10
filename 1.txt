@@ -1,3 +1,5 @@
-831 = {
-	add_building = training_fields
+ROOT = {
+	every_owned_province = {
+		change_culture = ROOT
+	}
 }

@@ -1,4 +1,858 @@
 
+#双任务树
+
+shuvuush_1 = {
+	slot = 1
+	generic = yes
+	ai = yes
+	has_country_shield = yes
+	potential = { technology_group = tech_shuvuush }
+
+	shuvuush_to_ward = {
+		icon = per_sword_of_our_faith
+		position = 1
+
+		trigger = {
+			stability = 1
+			check_variable = { num_of_battles_won_var = 5 }
+			OR = {
+				has_personal_deity = altan
+				has_personal_deity = ulaan
+				has_personal_deity = tsagaan
+				has_personal_deity = bhengudak
+				has_personal_deity = death_mask
+				has_personal_deity = nurgai
+				has_personal_deity = personal_mask
+			}
+		}
+
+		effect = { country_event_with_insight = { id = shuvuush.100 insight_tooltip = shuvuush_to_ward_effect_tt } }
+	}
+
+	shuvuush_to_forget = {
+		icon = mission_head_on_spike
+		position = 2
+		required_missions = { shuvuush_to_ward }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5406 #Zougzengom, Altan
+				province_id = 5341 #Nuugaam, Tsagaan
+				province_id = 5414 #Dashujuj, Ulaan
+				province_id = 5348 #Hyeonseong, Bhengudak
+				AND = {
+					province_id = 5415 #Hogunuug, Nurgai
+					has_province_modifier = saanorgegh_nurgai_mod
+				}
+				has_rebel_faction = face_stealers_rebels
+			}
+		}
+
+		trigger = {
+			calc_true_if = { #Own 2 mask origins
+				amount = 2
+				owns = 5406 #Zougzengom, Altan
+				owns = 5341 #Nuugaam, Tsagaan
+				owns = 5414 #Dashujuj, Ulaan
+				owns = 5348 #Hyeonseong, Bhengudak
+				custom_trigger_tooltip = {
+					tooltip = shuvuush_to_forget_trigger_2_tt
+					OR = {
+						AND = {
+							owns = 5415 #Hogunuug, Nurgai
+							5415 = { has_province_modifier = saanorgegh_nurgai_mod }
+						}
+					}
+				}
+			}
+			NOT = { has_spawned_rebels = face_stealers_rebels }
+			custom_trigger_tooltip = {
+				tooltip = shuvuush_to_forget_trigger_tt
+				has_country_flag = has_defeated_face_stealer
+			}
+		}
+
+		effect = {
+			custom_tooltip = shuvuush_to_forget_effect_tt
+			every_owned_province = {
+				limit = {
+					OR = {
+						province_id = 5406 #Zougzengom, Altan
+						province_id = 5341 #Nuugaam, Tsagaan
+						province_id = 5414 #Dashujuj, Ulaan
+						province_id = 5348 #Hyeonseong, Bhengudak
+						AND = {
+							province_id = 5415 #Hogunuug, Nurgai
+							has_province_modifier = saanorgegh_nurgai_mod
+						}
+					}
+				}
+				add_base_tax = 1
+				add_base_production = 1
+			}
+			hidden_effect = {
+				select_highest_dev_province_with_limit = {
+					index = 0
+					limit = "
+						NOT = { has_building = temple }
+						OR = {
+							province_id = 5406 #Zougzengom, Altan
+							province_id = 5341 #Nuugaam, Tsagaan
+							province_id = 5414 #Dashujuj, Ulaan
+							province_id = 5348 #Hyeonseong, Bhengudak
+							AND = {
+								province_id = 5415 #Hogunuug, Nurgai
+								has_province_modifier = saanorgegh_nurgai_mod
+							}
+						}
+					"
+					effect = "add_building_construction = { building = temple speed = 0.5 cost = 0 }"
+				}
+				country_event = { id = shuvuush.101 days = 365 random = 1460 }
+			}
+		}
+	}
+
+	shuvuush_to_fight = {
+		icon = mission_duel_snow
+		position = 3
+		required_missions = { shuvuush_to_forget }
+		provinces_to_highlight = { has_rebel_faction = face_stealers_rebels }
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = shuvuush_to_fight_trigger_tt
+				has_country_flag = defeated_face_stealer_host
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = shuvuush_to_fight_trigger_2_tt
+					has_country_flag = defeated_face_stealer_host
+				}
+				AND = {
+					has_personal_deity = death_mask
+					is_monarch_leader = yes
+				}
+			}
+		}
+
+		effect = { country_event_with_insight = { id = shuvuush.102 insight_tooltip = shuvuush_to_fight_effect_tt } }
+	}
+}
+shuvuush_2 = {
+	slot = 2
+	generic = yes
+	ai = yes
+	has_country_shield = yes
+	potential = { technology_group = tech_shuvuush }
+
+	shuvuush_surrounded_cornered = {
+		icon = mission_face_off
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				owned_by = V01 #Oinukhudi
+				owned_by = Y93 #Danggun
+				AND = {
+					superregion = yanshen_superregion
+					is_capital = yes
+				}
+			}
+		}
+
+		trigger = {
+			OR = {
+				AND = {
+					army_size = V01 #Oinukhudi
+					army_size = Y93 #Danggun
+				}
+				custom_trigger_tooltip = {
+					tooltip = shuvuush_surrounded_cornered_trigger_tt
+					has_country_flag = shuvuush_won_yanshen_war
+				}
+			}
+		}
+
+		effect = {
+			simple_dynamic_effect = {
+				first_custom_tooltip = shuvuush_surrounded_cornered_effect_req_tt
+				first_limit = "
+					NOT = {
+						AND = {
+							army_size = V01 #Oinukhudi
+							army_size = Y93 #Danggun
+							has_country_flag = shuvuush_won_yanshen_war
+						}
+					}
+				"
+				first_effect = "create_general = { tradition = 60 }"
+				second_custom_tooltip = shuvuush_surrounded_cornered_effect_req_2_tt
+				second_limit = "
+					army_size = V01 #Oinukhudi
+					army_size = Y93 #Danggun
+					has_country_flag = shuvuush_won_yanshen_war
+				"
+				second_effect = "
+					custom_tooltip = shuvuush_surrounded_cornered_effect_tt
+					hidden_effect = { create_general = { tradition = 90 add_siege = 2 } }
+				"
+			}
+		}
+	}
+
+	shuvuush_favor_yomod = {
+		icon = mission_marwari_horses
+		position = 2
+		required_missions = { shuvuush_to_ward }
+
+		trigger = {
+			check_variable = { num_tribes_agendas_completed = 2 }
+			num_of_estate_privileges = {
+				estate = estate_nomadic_tribes
+				value = 5
+			}
+			has_estate_privilege = estate_nomadic_tribes_share_of_the_spoils
+		}
+
+		effect = { add_country_modifier = { name = shuvuush_terror_stampede duration = 5475 } }
+	}
+
+	shuvuush_return_white = {
+		icon = mission_protect_white_sea_trade
+		position = 4
+		required_missions = { shuvuush_to_fight }
+		provinces_to_highlight = {
+			region = shuvuushudi_region
+			culture = ROOT
+			OR = {
+				NOT = { owned_by = ROOT }
+				devastation = 0.01
+				NOT = { num_of_times_improved = 1 }
+			}
+		}
+
+		trigger = {
+			if = {
+				limit = { ai = yes }
+				shuvuushudi_region = {
+					type = all
+					OR = {
+						NOT = { culture = ROOT }
+						AND = {
+							owned_by = ROOT
+							NOT = { devastation = 0.01 }
+						}
+					}
+				}
+			}
+			else = {
+				shuvuushudi_region = {
+					type = all
+					OR = {
+						NOT = { culture = ROOT }
+						AND = {
+							owned_by = ROOT
+							NOT = { devastation = 0.01 }
+							num_of_times_improved = 1
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = shuvuush_return_white_effect_tt
+
+			if = {
+				limit = { ai = yes } #AI can't swap masks
+				add_country_modifier = { name = shuvuush_ancestral_guidance duration = -1 }
+			}
+			else_if = {
+				limit = { has_personal_deity = death_mask }
+				add_army_tradition = 15
+			}
+			else = { add_country_modifier = { name = shuvuush_ancestral_guidance duration = 1825 } }
+		}
+	}
+}
+shuvuush_3 = {
+	slot = 3
+	generic = yes
+	ai = yes
+	has_country_shield = yes
+	potential = { technology_group = tech_shuvuush }
+
+	shuvuush_rule_steppe = {
+		icon = mission_faceless_queen
+		position = 1
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = { religion = saanorgegh }
+		}
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = shuvuush_rule_steppe_trigger_tt
+				has_country_flag = shuvuush_won_saanorgegh_war
+			}
+		}
+
+		effect = {
+			add_manpower = 3
+
+			complex_dynamic_effect_without_alternative = {
+				first_custom_tooltip = shuvuush_rule_steppe_effect_req_tt
+				first_limit = "NOT = { is_year = 1447 }"
+				first_effect = "add_manpower = 5"
+			}
+		}
+	}
+
+	shuvuush_one_kaasheg = {
+		icon = mission_war_for_the_crown
+		position = 2
+		required_missions = {
+			shuvuush_surrounded_cornered
+			shuvuush_rule_steppe
+		}
+		provinces_to_highlight = {
+			OR = {
+				owner = { religion = saanorgegh NOT = { tag = ROOT } }
+				AND = {
+					region = shuvuushudi_region
+					NOT = { owned_by = ROOT }
+				}
+			}
+		}
+
+		trigger = {
+			all_known_country = { NOT = { religion = saanorgegh } }
+			num_of_owned_provinces_with = { value = 20 region = shuvuushudi_region }
+		}
+
+		effect = {
+			add_horde_unity = 25
+			add_war_exhaustion = -5
+
+			complex_dynamic_effect_without_alternative = {
+				first_custom_tooltip = shuvuush_one_kaasheg_effect_req_tt
+				first_limit = "NOT = { is_year = 1450 }"
+				first_effect = "add_country_modifier = { name = shuvuush_relentless_rise duration = 9125 }"
+			}
+		}
+	}
+
+	shuvuush_break_realms = {
+		icon = mission_fire_of_london
+		position = 3
+		required_missions = {
+			shuvuush_favor_yomod
+			shuvuush_one_kaasheg
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = gowon_region
+				region = north_yanshen_region
+				region = khaashalg_region
+			}
+			NOT = { owned_by = ROOT }
+		}
+
+		trigger = {
+			if = {
+				limit = { ai = no } #AI doesn't raze consistently
+				check_variable = { nbProvincesRazed = 20 }
+			}
+			OR = {
+				num_of_owned_provinces_with = { value = 10 region = gowon_region }
+				num_of_owned_provinces_with = { value = 10 region = north_yanshen_region }
+				num_of_owned_provinces_with = { value = 10 region = khaashalg_region }
+			}
+		}
+
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 20
+			}
+			add_treasury = 500
+
+			complex_dynamic_effect_without_alternative = {
+				first_custom_tooltip = shuvuush_break_realms_effect_req_tt
+				first_limit = "NOT = { is_year = 1460 }"
+				first_effect = "shuvuush_break_realms_alias_effect = yes"
+			}
+		}
+	}
+
+	shuvuush_fate_anew = {
+		icon = mission_new_dawn
+		position = 5
+		required_missions = {
+			shuvuush_return_white
+			shuvuush_break_realms
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = gowon_region
+					is_city = yes
+					NOT = { owned_by = ROOT }
+				}
+				AND = {
+					province_id = 4871
+					ROOT = { NOT = { owns_core_province = 4871 } }
+				}
+				AND = {
+					superregion = yanshen_superregion
+					NOT = { owned_by = ROOT }
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 25
+								superregion = yanshen_superregion
+							}
+						}
+					}
+				}
+			}
+		}
+
+		trigger = {
+			OR = {
+				gowon_region = { #Guwaamud
+					type = all
+					OR = {
+						NOT = { is_city = yes }
+						owned_by = ROOT
+					}
+				}
+				AND = { #Daxugo
+					owns_core_province = 4871
+					num_of_owned_provinces_with = {
+						value = 25
+						superregion = yanshen_superregion
+					}
+				}
+				AND = { #Baztungh Khayus
+					shuvuushudi_region = {
+						type = all
+						owned_by = ROOT
+					}
+					gozengun_superregion = {
+						type = all
+						OR = {
+							NOT = { 
+								culture = plateau_runsukhi
+								culture = runsukhi
+							}
+							owned_by = ROOT
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			complex_dynamic_effect_without_alternative = {
+				first_custom_tooltip = shuvuush_fate_anew_daxugo_req_tt
+				first_limit = "
+					owns_core_province = 4871
+					num_of_owned_provinces_with = {
+						value = 25
+						superregion = yanshen_superregion
+					}
+				"
+				first_effect = "
+					if = {
+						limit = { NOT = { is_year = 1470 } }
+						add_country_modifier = { name = shuvuush_daxugo_reward duration = -1 }
+					}
+					else = { add_country_modifier = { name = shuvuush_daxugo_reward duration = 18250 } }
+				"
+				second_custom_tooltip = shuvuush_fate_anew_guwaamud_req_tt
+				second_limit = "
+					gowon_region = {
+						type = all
+						OR = {
+							NOT = { is_city = yes }
+							owned_by = ROOT
+						}
+					}
+				"
+				second_effect = "
+					if = {
+						limit = { NOT = { is_year = 1470 } }
+						add_country_modifier = { name = shuvuush_guwaamud_reward duration = -1 }
+					}
+					else = { add_country_modifier = { name = shuvuush_guwaamud_reward duration = 18250 } }
+				"
+				third_custom_tooltip = shuvuush_fate_anew_baztungh_khayus_req_tt
+				third_limit = "
+					shuvuushudi_region = {
+						type = all
+						owned_by = ROOT
+					}
+					gozengun_superregion = {
+						type = all
+						OR = {
+							NOT = { 
+								culture = plateau_runsukhi
+								culture = runsukhi
+							}
+							owned_by = ROOT
+						}
+					}
+				"
+				third_effect = "
+					if = {
+						limit = { NOT = { is_year = 1470 } }
+						add_country_modifier = { name = shuvuush_baztungh_khayus_reward duration = -1 }
+					}
+					else = { add_country_modifier = { name = shuvuush_baztungh_khayus_reward duration = 18250 } }
+				"
+				fourth_custom_tooltip = shuvuush_fate_anew_effect_req_tt
+				fourth_limit = "NOT = { is_year = 1470 }"
+				fourth_effect = "custom_tooltip = shuvuush_fate_anew_effect_tt"
+			}
+		}
+	}
+}
+
+#p社奇特的任务树读取，盗脸灵任务得移到这里
+daxugo_facestealer_a_1 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = Y91
+			tag = Y96
+			tag = Y98
+		}
+		has_country_flag = runsuhei_face_stealer_1 
+	}
+	has_country_shield = yes
+
+	Y91_the_coming_of_lunsuhei = {
+		icon = mission_bedouins
+		position = 1
+		provinces_to_highlight = { province_id = 5376 } 
+
+		trigger = {
+			5376 = {
+				owned_by = ROOT
+				is_core = ROOT
+				num_of_units_in_province = {
+					amount = 20
+					who = ROOT
+				}
+				cavalry_in_province = ROOT
+			}
+		}
+
+		effect = {
+			add_mil_power = -50
+			custom_tooltip = daxugo_facestealer_a_1_ctt
+			hidden_effect = {
+				country_event = {
+					id = flavour_anbingnar_daxugo.7 days = 30
+				}
+			}
+		}
+	}
+}
+
+daxugo_facestealer_a_2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = Y91
+			tag = Y96
+			tag = Y98
+		}
+		has_country_flag = search_ghost_hunter_1
+	}
+	has_country_shield = yes
+
+	Y91_train_ghosthunter = {
+		icon = mission_hands_praying
+		position = 2
+		required_missions = { Y91_the_coming_of_lunsuhei } 
+		provinces_to_highlight = {
+			OR = {
+				region = xianjie_region
+				owner = {
+					OR = {
+						has_reform = wulin
+						has_reform = one_xia
+						has_reform = indep_xiaken 
+					}
+				}	
+			}
+			is_capital = yes
+		}
+		
+		trigger = {
+			treasury = 50
+			OR = {
+				employed_advisor = {
+					religion = saanorgegh
+					type = inquisitor
+				}
+				employed_advisor = {
+					religion = saanorgegh
+					type = theologian
+				}
+			}
+			OR = {
+				any_known_country = {
+					OR = {
+						has_reform = wulin
+						has_reform = one_xia
+						has_reform = indep_xiaken 
+					}
+					has_spy_network_from = {
+						who = ROOT
+						value = 30
+					}
+				}
+				any_known_country = {
+					OR = {
+						has_reform = wulin
+						has_reform = one_xia
+						has_reform = indep_xiaken 
+					}
+					alliance_with = ROOT
+				}
+				any_owned_province = {
+					culture = szitu
+				}
+			}
+		}
+
+		effect = {
+			add_treasury = -50
+			custom_tooltip = daxugo_facestealer_a_2_ctt
+			country_event = {
+				id = flavour_anbingnar_daxugo.8 days = 365
+			}
+		}
+	}
+}
+  
+daxugo_facestealer_b_1 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = Y91
+			tag = Y96
+			tag = Y98
+		}
+		has_country_flag = ghost_hunter_is_ready
+	}
+	has_country_shield = yes
+
+	Y91_take_revenge_on_facestealer = {
+		icon = mission_chinese_general_riding
+		position = 3
+		required_missions = { Y91_train_ghosthunter } 
+		provinces_to_highlight = {
+			if = {
+				limit = { exists = V02 }
+				is_capital_of = V02
+			}
+			else = {
+				province_id = 5377
+				province_id = 5204
+				province_id = 6802
+			}
+		}
+		
+		trigger = {
+			is_at_war = no
+			if = {
+				limit = { exists = V02 }
+				V02 = {
+					is_subject_of = ROOT
+					NOT = {
+						num_of_rebel_armies = 1
+						num_of_rebel_controlled_provinces = 1
+					}
+					
+					owns_core_province = 5377
+					owns_core_province = 5204
+					owns_core_province = 6802
+					capital_scope = {
+						num_of_units_in_province = {
+							amount = 40
+							who = ROOT
+						}
+					}
+				}
+			}
+			else = {
+				controls = 5377
+				controls = 5204
+				controls = 6802
+				owns_core_province = 5377
+				owns_core_province = 5204
+				owns_core_province = 6802
+				6802 = {
+					num_of_units_in_province = {
+						amount = 40
+						who = ROOT
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = Y91_take_revenge_on_facestealer_ctt
+			hidden_effect = {
+				5377 = {
+					spawn_rebels = {
+						size = 3
+						type = face_stealers_rebels
+					}
+				}
+				5204 = {
+					spawn_rebels = {
+						size = 3
+						type = face_stealers_rebels
+					}
+				}
+				6802 = {
+					spawn_rebels = {
+						size = 3
+						type = face_stealers_rebels
+					}
+				}
+				if = {
+					limit = { exists = V02 }
+					V02 = {
+						add_country_modifier = {
+							name = facestealer_war
+							duration = 365
+						}
+					}
+				}
+			}
+			set_country_flag = Y91_battle_in_desert
+		}
+	}
+}
+
+daxugo_facestealer_b_2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = Y91
+			tag = Y96
+			tag = Y98
+		}
+		has_country_flag = Y91_battle_in_desert_win
+	}
+	has_country_shield = yes
+
+	Y91_integration_haxialege = {
+		icon = mission_chinese_general_riding
+		position = 4
+		required_missions = { Y91_take_revenge_on_facestealer } 
+		provinces_to_highlight = {
+			region = khaashalg_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		trigger = {
+			khaashalg_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5406 = {
+				infantry_in_province = 20
+				cavalry_in_province = 10
+			}
+		}
+
+		effect = {
+			custom_tooltip = Y91_integration_haxialege_ctt
+			5406 = {
+				kill_units = {
+					who = ROOT
+					amount = 30
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavour_anbingnar_daxugo.11 days = 357
+				}
+			}
+		}
+	}
+}
+
+daxugo_facestealer_b_3 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = Y91
+			tag = Y96
+			tag = Y98
+		}
+		has_country_flag = Y91_the_last_battle
+	}
+	has_country_shield = yes
+
+	Y91_the_last_fight = {
+		icon = mission_chinese_general_riding
+		position = 5
+		required_missions = { Y91_integration_haxialege } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = Y91_have_a_deity
+				OR = {
+					has_personal_deity = tsarai
+					has_personal_deity = jaal
+					has_personal_deity = oedek
+					has_personal_deity = bhengudakhnar
+					has_personal_deity = daxuusgen
+					has_personal_deity = faceless_queen
+					has_personal_deity = faceless_emperor
+					has_personal_deity = Y98_bhengudakhnar
+					has_personal_deity = menjaeng
+				}
+			}
+			treasury = 100
+			mil_power = 100
+			owns_or_non_sovereign_subject_of = 5418
+			5418 = {
+				has_ruler_leader_from = ROOT
+				infantry_in_province = 20
+				cavalry_in_province = ROOT
+			}
+		}
+
+		effect = {
+			add_treasury = -100
+			add_mil_power = -100
+			country_event = { id = flavor_nuugdan_tsarai.44 }
+		}
+	}
+}
+
+#老任务
 nuugdan_tsarai_1 = {
 	slot = 1
 	generic = no
@@ -14,7 +868,7 @@ nuugdan_tsarai_1 = {
 
 	Y91_freeing_ogre_subjects = {
 		icon = mission_city_of_the_world's_desire
-		position = 2
+		position = 7	#mp
 		required_missions = { Y91_tuiista_jaal_horde }
 
 		trigger = {
@@ -97,7 +951,7 @@ nuugdan_tsarai_1 = {
 	
 	Y91_start_oni_genocide = {
 		icon = claim_the_borderlands
-		position = 3
+		position = 8	#mp
 		required_missions = { Y91_freeing_ogre_subjects }
 
 		trigger = {
@@ -132,7 +986,7 @@ nuugdan_tsarai_1 = {
 	
 	Y91_clearing_the_demons = {
 		icon = take_the_littoral
-		position = 4
+		position = 9	#mp
 		required_missions = { Y91_start_oni_genocide }
 
 		trigger = {
@@ -192,7 +1046,7 @@ nuugdan_tsarai_2 = {
 	
 	Y91_tuiista_jaal_horde = {
 		icon = mission_chinese_general_riding
-		position = 1
+		position = 6	#mp
 
 		trigger = {
 			is_at_war = no
@@ -221,7 +1075,7 @@ nuugdan_tsarai_2 = {
 	
 	Y91_jindeshi_valley = {
 		icon = mission_rice_field
-		position = 2
+		position = 7	#mp
 		required_missions = { Y91_tuiista_jaal_horde }
 
 		trigger = {
@@ -407,7 +1261,7 @@ nuugdan_tsarai_2 = {
 	
 	Y91_razer_of_upper_yanshen = {
 		icon = mission_steppe_warriors
-		position = 3
+		position = 8	#mp
 		required_missions = { Y91_jindeshi_valley }
 
 		trigger = {
@@ -441,7 +1295,7 @@ nuugdan_tsarai_2 = {
 	
 	Y91_integrating_the_tuiista_jaal = {
 		icon = mission_war_chest
-		position = 4
+		position = 9	#mp
 		required_missions = { Y91_razer_of_upper_yanshen }
 
 		trigger = {
@@ -475,7 +1329,7 @@ nuugdan_tsarai_3 = {
 	
 	Y91_prepare_seconds = {
 		icon = mission_conquer_50_development
-		position = 1
+		position = 6	#mp
 
 		trigger = {
 			NOT = { truce_with = Y16 }
@@ -500,7 +1354,7 @@ nuugdan_tsarai_3 = {
 	
 	Y91_fields_for_the_fearless = {
 		icon = mission_manchu_warrior
-		position = 2
+		position = 7	#mp
 		required_missions = { Y91_prepare_seconds }
 
 		trigger = {
@@ -564,7 +1418,7 @@ nuugdan_tsarai_3 = {
 	
 	Y91_along_the_coast = {
 		icon = mission_junk_boat
-		position = 3
+		position = 8	#mp
 		required_missions = { Y91_fields_for_the_fearless }
 
 		trigger = {
@@ -600,7 +1454,7 @@ nuugdan_tsarai_3 = {
 	
 	Y91_at_the_tianlou_gate = {
 		icon = mission_occupy_alexandria
-		position = 4
+		position = 9	#mp
 		required_missions = { Y91_along_the_coast }
 
 		trigger = {
@@ -648,7 +1502,7 @@ nuugdan_tsarai_4 = {
 	
 	Y91_lucky_scales = {
 		icon = mission_rice_field
-		position = 1
+		position = 6	#mp
 
 		trigger = {
 			OR = {
@@ -682,7 +1536,7 @@ nuugdan_tsarai_4 = {
 	
 	Y91_jiangdu_reborn = {
 		icon = the_ostend_company
-		position = 2
+		position = 7	#mp
 		required_missions = { Y91_lucky_scales }
 
 		trigger = {
@@ -776,7 +1630,7 @@ nuugdan_tsarai_4 = {
 	
 	Y91_yanchung_logistics = {
 		icon = mission_trade_with_cathay
-		position = 3
+		position = 8	#mp
 		required_missions = { Y91_jiangdu_reborn }
 
 		trigger = {
@@ -816,7 +1670,7 @@ nuugdan_tsarai_4 = {
 	
 	Y91_nostalgic_fields = {
 		icon = mission_conquer_tunisia
-		position = 4
+		position = 9	#mp
 		required_missions = { Y91_yanchung_logistics }
 
 		trigger = {
@@ -847,7 +1701,7 @@ nuugdan_tsarai_4 = {
 
 	Y91_the_flanking = {
 		icon = mission_break_sicily
-		position = 5
+		position = 10	#mp
 		required_missions = { Y91_nostalgic_fields Y91_at_the_tianlou_gate  }
 
 		trigger = {
@@ -890,7 +1744,7 @@ nuugdan_tsarai_4 = {
 
 	Y91_daxugo_ambitions = {
 		icon = mission_empire
-		position = 6
+		position = 11	#mp
 		required_missions = { Y91_the_flanking }
 
 		trigger = {
@@ -990,9 +1844,9 @@ nuugdan_tsarai_5 = {
 	}
 	has_country_shield = yes
 	
-	Y91_plan_daengun_invasion = {
+	Y91_plan_danggun_invasion = {
 		icon = mission_unite_home_region
-		position = 1
+		position = 6	#mp
 
 		trigger = {
 			if = {
@@ -1055,13 +1909,13 @@ nuugdan_tsarai_5 = {
 	
 	Y91_guwaamud_ambitions = {
 		icon = mission_empire
-		position = 3
+		position = 8	#mp
 
 		trigger = {
-			Y92 = {
-				is_subject_of = ROOT
-				NOT = { liberty_desire = 50 }
-			}
+			# Y92 = {
+			# 	is_subject_of = ROOT
+			# 	NOT = { liberty_desire = 50 }
+			# }
 			neobunteo_area = {
 				type = all
 				OR = {
@@ -1117,7 +1971,11 @@ nuugdan_tsarai_5 = {
 			dip_power = 200
 			years_of_income = 0.5
 			OR = { horde_unity = 90 legitimacy = 90 }
-		
+			OR = { horde_unity = 90 legitimacy = 90 }
+			Y92 = {
+				is_subject_of = ROOT
+				NOT = { liberty_desire = 50 }
+			}		
 		}
 		
 		provinces_to_highlight = {
@@ -1161,7 +2019,7 @@ nuugdan_tsarai_99 = {
 	has_country_shield = yes
 	Y91_finish_mainland_conquest = {
 		icon = mission_chinese_general_riding
-		position = 4
+		position = 9	#mp
 		
 		provinces_to_highlight = {
 			region = gowon_region
@@ -1224,7 +2082,7 @@ nuugdan_tsarai_99 = {
 	
 	Y91_develop_economy = {
 		icon = mission_potosi_silver
-		position = 5
+		position = 10	#mp
 		required_missions = { Y91_finish_mainland_conquest }
 		
 		provinces_to_highlight = {
@@ -1322,7 +2180,7 @@ nuugdan_tsarai_99 = {
 	
 	Y91_build_Bhengudakhnar_temple = {
 		icon = mission_develop_cordoba
-		position = 6
+		position = 11	#mp
 		required_missions = { Y91_develop_economy }
 		
 		provinces_to_highlight = {
@@ -1386,9 +2244,9 @@ nuugdan_tsarai_99 = {
 		}
 	}
 	
-	Y91_somyonghon_cult = {
+	Y91_nakseseom_cult = {
 		icon = mission_look_west
-		position = 7
+		position = 12	#mp
 		required_missions = { Y91_build_Bhengudakhnar_temple }
 		
 		provinces_to_highlight = {
@@ -1418,364 +2276,22 @@ nuugdan_tsarai_99 = {
 	}
 }
 
-daxugo_facestealer_a_1 = {
-	slot = 1
-	generic = no
-	ai = yes
-	potential = {
-		OR = {
-			tag = Y91
-			tag = Y96
-			tag = Y98
-		}
-		has_country_flag = runsuhei_face_stealer_1 
-	}
-	has_country_shield = yes
-
-	Y91_the_coming_of_lunsuhei = {
-		icon = mission_bedouins
-		position = 5
-		provinces_to_highlight = {
-			province_id = 5376
-		}
-
-		trigger = {
-			5376 = {
-				owned_by = ROOT
-				is_core = ROOT
-				num_of_units_in_province = {
-					amount = 20
-					who = ROOT
-				}
-				cavalry_in_province = ROOT
-			}
-		}
-
-		effect = {
-			add_mil_power = -50
-			custom_tooltip = daxugo_facestealer_a_1_ctt
-			hidden_effect = {
-				country_event = {
-					id = flavour_anbingnar_daxugo.7 days = 30
-				}
-			}
-		}
-	}
-}
-
-daxugo_facestealer_a_2 = {
-	slot = 1
-	generic = no
-	ai = yes
-	potential = {
-		OR = {
-			tag = Y91
-			tag = Y96
-			tag = Y98
-		}
-		has_country_flag = search_ghost_hunter_1
-	}
-	has_country_shield = yes
-
-	Y91_train_ghosthunter = {
-		icon = mission_hands_praying
-		position = 6
-		required_missions = {
-			Y91_the_coming_of_lunsuhei
-		}
-		provinces_to_highlight = {
-			OR = {
-				region = xianjie_region
-				owner = {
-					OR = {
-						has_reform = wulin
-						has_reform = one_xia
-						has_reform = indep_xiaken 
-					}
-				}	
-			}
-			is_capital = yes
-		}
-		
-		trigger = {
-			treasury = 50
-			OR = {
-				employed_advisor = {
-					religion = saanorgegh
-					type = inquisitor
-				}
-				employed_advisor = {
-					religion = saanorgegh
-					type = theologian
-				}
-			}
-			OR = {
-				any_known_country = {
-					OR = {
-						has_reform = wulin
-						has_reform = one_xia
-						has_reform = indep_xiaken 
-					}
-					has_spy_network_from = {
-						who = ROOT
-						value = 30
-					}
-				}
-				any_known_country = {
-					OR = {
-						has_reform = wulin
-						has_reform = one_xia
-						has_reform = indep_xiaken 
-					}
-					alliance_with = ROOT
-				}
-				any_owned_province = {
-					culture = szitu
-				}
-			}
-		}
-
-		effect = {
-			add_treasury = -50
-			custom_tooltip = daxugo_facestealer_a_2_ctt
-			country_event = {
-				id = flavour_anbingnar_daxugo.8 days = 365
-			}
-		}
-	}
-}
-
-daxugo_facestealer_b_1 = {
-	slot = 2
-	generic = no
-	ai = yes
-	potential = {
-		OR = {
-			tag = Y91
-			tag = Y96
-			tag = Y98
-		}
-		has_country_flag = ghost_hunter_is_ready
-	}
-	has_country_shield = yes
-
-	Y91_take_revenge_on_facestealer = {
-		icon = mission_chinese_general_riding
-		position = 5
-		
-		provinces_to_highlight = {
-			if = {
-				limit = { exists = V02 }
-				is_capital_of = V02
-			}
-			else = {
-				province_id = 5377
-				province_id = 5204
-				province_id = 6802
-			}
-		}
-		
-		trigger = {
-			is_at_war = no
-			if = {
-				limit = { exists = V02 }
-				V02 = {
-					is_subject_of = ROOT
-					NOT = {
-						num_of_rebel_armies = 1
-						num_of_rebel_controlled_provinces = 1
-					}
-					
-					owns_core_province = 5377
-					owns_core_province = 5204
-					owns_core_province = 6802
-					capital_scope = {
-						num_of_units_in_province = {
-							amount = 40
-							who = ROOT
-						}
-					}
-				}
-			}
-			else = {
-				controls = 5377
-				controls = 5204
-				controls = 6802
-				owns_core_province = 5377
-				owns_core_province = 5204
-				owns_core_province = 6802
-				6802 = {
-					num_of_units_in_province = {
-						amount = 40
-						who = ROOT
-					}
-				}
-			}
-		}
-
-		effect = {
-			custom_tooltip = Y91_take_revenge_on_facestealer_ctt
-			hidden_effect = {
-				5377 = {
-					spawn_rebels = {
-						size = 3
-						type = face_stealers_rebels
-					}
-				}
-				5204 = {
-					spawn_rebels = {
-						size = 3
-						type = face_stealers_rebels
-					}
-				}
-				6802 = {
-					spawn_rebels = {
-						size = 3
-						type = face_stealers_rebels
-					}
-				}
-				if = {
-					limit = { exists = V02 }
-					V02 = {
-						add_country_modifier = {
-							name = facestealer_war
-							duration = 365
-						}
-					}
-				}
-			}
-			set_country_flag = Y91_battle_in_desert
-		}
-	}
-}
-
-daxugo_facestealer_b_2 = {
-	slot = 2
-	generic = no
-	ai = yes
-	potential = {
-		OR = {
-			tag = Y91
-			tag = Y96
-			tag = Y98
-		}
-		has_country_flag = Y91_battle_in_desert_win
-	}
-	has_country_shield = yes
-
-	Y91_integration_haxialege = {
-		icon = mission_chinese_general_riding
-		position = 6
-		required_missions = {
-			Y91_take_revenge_on_facestealer
-		}
-
-		provinces_to_highlight = {
-			region = khaashalg_region
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-
-		trigger = {
-			khaashalg_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5406 = {
-				infantry_in_province = 20
-				cavalry_in_province = 10
-			}
-		}
-
-		effect = {
-			custom_tooltip = Y91_integration_haxialege_ctt
-			5406 = {
-				kill_units = {
-					who = ROOT
-					amount = 30
-				}
-			}
-			hidden_effect = {
-				country_event = {
-					id = flavour_anbingnar_daxugo.11 days = 357
-				}
-			}
-		}
-	}
-}
-
-daxugo_facestealer_b_3 = {
-	slot = 2
-	generic = no
-	ai = yes
-	potential = {
-		OR = {
-			tag = Y91
-			tag = Y96
-			tag = Y98
-		}
-		has_country_flag = Y91_the_last_battle
-	}
-	has_country_shield = yes
-
-	Y91_the_last_fight = {
-		icon = mission_chinese_general_riding
-		position = 6
-		required_missions = {
-			Y91_integration_haxialege
-		}
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = Y91_have_a_deity
-				OR = {
-					has_personal_deity = tsarai
-					has_personal_deity = jaal
-					has_personal_deity = oedek
-					has_personal_deity = bhengudakhnar
-					has_personal_deity = daxuusgen
-					has_personal_deity = faceless_queen
-					has_personal_deity = faceless_emperor
-					has_personal_deity = Y98_bhengudakhnar
-					has_personal_deity = menjaeng
-				}
-			}
-			treasury = 100
-			mil_power = 100
-			owns_or_non_sovereign_subject_of = 5418
-			5418 = {
-				has_ruler_leader_from = ROOT
-				infantry_in_province = 20
-				cavalry_in_province = ROOT
-			}
-		}
-
-		effect = {
-			add_treasury = -100
-			add_mil_power = -100
-			country_event = { id = flavor_nuugdan_tsarai.44 }
-		}
-	}
-}
 
 daxugo_parade = {
-	slot = 3
+	slot = 5
 	generic = no
 	ai = yes
 	potential = {
 		tag = Y98
 		has_country_flag = daxugo_rebellions_finished
-		OR = {
-			has_global_flag = faceless_emperor_win
-			has_global_flag = saanorgegh_faceless_queen_death
-		}
+		has_global_flag = faceless_emperor_win
 	}
 	has_country_shield = yes
 
 	Y91_the_daxugo_emperor_parade = {
 		icon = mission_great_wall
-		position = 5
+		position = 1
+		provinces_to_highlight = {  } 
 
 		trigger = {
 			years_of_income = 1.0
@@ -1812,26 +2328,22 @@ daxugo_parade = {
 }
 
 daxugo_marry_with_yanshen_god = {
-	slot = 3
+	slot = 5
 	generic = no
 	ai = yes
 	potential = {
 		tag = Y98
 		has_country_flag = daxugo_rebellions_finished
-		OR = {
-			has_global_flag = faceless_emperor_win
-			has_global_flag = saanorgegh_faceless_queen_death
-		}
+		has_global_flag = faceless_emperor_win
 		has_country_flag = Y98_holi_consort
 	}
 	has_country_shield = yes
 
 	Y91_talk_with_hulijing = {
 		icon = mission_rebirth_of_our_saviour
-		position = 6
-		required_missions = {
-			Y91_the_daxugo_emperor_parade
-		}
+		position = 2
+		required_missions = { Y91_the_daxugo_emperor_parade } 
+		provinces_to_highlight = {  } 
 
 		trigger = {
 			custom_trigger_tooltip = {
@@ -1873,26 +2385,22 @@ daxugo_marry_with_yanshen_god = {
 }
 
 daxugo_not_marry_with_yanshen_god = {
-	slot = 3
+	slot = 5
 	generic = no
 	ai = yes
 	potential = {
 		tag = Y98
 		has_country_flag = daxugo_rebellions_finished
 		NOT = { has_country_flag = Y98_holi_consort }
-		OR = {
-			has_global_flag = faceless_emperor_win
-			has_global_flag = saanorgegh_faceless_queen_death
-		}
+		has_global_flag = faceless_emperor_win
 	}
 	has_country_shield = yes
 
 	Y91_palace_standard = {
 		icon = mission_alliances
-		position = 6
-		required_missions = {
-			Y91_the_daxugo_emperor_parade
-		}
+		position = 2
+		required_missions = { Y91_the_daxugo_emperor_parade } 
+		provinces_to_highlight = {  } 
 
 		trigger = {
 			if = {
@@ -1936,7 +2444,7 @@ daxugo_hobgoblin_1 = {
 
 	Y91_plight_of_the_upper_raheni = {
 		icon = mission_crusade_for_varna
-		position = 7
+		position = 10	#mp
 		
 		trigger = {
 			custom_trigger_tooltip = {
@@ -2013,7 +2521,7 @@ daxugo_hobgoblin_1 = {
 	
 	Y91_liberation_for_shamakhad = {
 		icon = mission_indian_stateman
-		position = 8
+		position = 11
 		required_missions = {
 			Y91_plight_of_the_upper_raheni
 		}
@@ -2132,11 +2640,8 @@ daxugo_hobgoblin_1 = {
 	
 	Y91_build_up_upper_rahen = {
 		icon = mission_nomad
-		position = 13
-		required_missions = {
-			Y91_bureaucratization_of_native_officers
-		}
-
+		position = 18
+		required_missions = { Y91_bureaucratization_of_native_officers } 
 		provinces_to_highlight = {
 			region = shamakhad_region
 			NOT = {
@@ -2314,7 +2819,7 @@ nuugdan_tsarai_7 = {
 
 	Y91_jiangyang_unification = {
 		icon = mission_rice_field
-		position = 8
+		position = 13	#mp
 		required_missions = { Y91_daxugo_reforms }
 		
 		trigger = {
@@ -2436,7 +2941,7 @@ nuugdan_tsarai_7 = {
 	
 	Y91_beikling_unification = {
 		icon = mission_rb_prospect_for_coal
-		position = 9
+		position = 14	#mp
 		
 		provinces_to_highlight = {
 			superregion = yanshen_superregion
@@ -2561,7 +3066,7 @@ nuugdan_tsarai_8 = {
 
 	Y91_daxugo_reforms = {
 		icon = mission_scholar_officials
-		position = 7
+		position = 12	#mp
 		
 		trigger = {
 			if = {
@@ -2591,7 +3096,7 @@ nuugdan_tsarai_8 = {
 	
 	Y91_jiangszun_unification = {
 		icon = mission_se_along_the_river
-		position = 8
+		position = 13	#mp
 		required_missions = { Y91_daxugo_reforms }
 		
 		trigger = {
@@ -2747,7 +3252,7 @@ nuugdan_tsarai_8 = {
 	
 	Y91_szitu_unification = {
 		icon = mission_asian_trader
-		position = 10
+		position = 15	#mp
 		required_missions = { Y91_jiangszun_unification Y91_naamjyut_unification Y91_beikling_unification }
 		
 		trigger = {
@@ -2776,7 +3281,7 @@ nuugdan_tsarai_8 = {
 	
 	Y91_yan_unification = {
 		icon = mission_manchu_warrior
-		position = 11
+		position = 16	#mp
 		required_missions = { Y91_szitu_unification }
 		
 		trigger = {
@@ -2852,7 +3357,7 @@ nuugdan_tsarai_9 = {
 
 	Y91_gangim_unification = {
 		icon = mission_invade_island
-		position = 8
+		position = 13	#mp
 		required_missions = { Y91_daxugo_reforms }
 		
 		trigger = {
@@ -2965,7 +3470,7 @@ nuugdan_tsarai_9 = {
 	
 	Y91_naamjyut_unification = {
 		icon = prosper_in_piedmont
-		position = 9
+		position = 14	#mp
 		
 		trigger = {
 			mission_completed = Y91_daxugo_reforms
@@ -3040,14 +3545,7 @@ nuugdan_tsarai_9 = {
 				}
 				custom_trigger_tooltip = {
 					tooltip = Y91_plant_growth
-					any_owned_province = {
-						OR = {
-							has_province_modifier = magic_realm_transmutation_plant_growth_1
-							has_province_modifier = magic_realm_transmutation_plant_growth_2
-							has_province_modifier = magic_realm_transmutation_plant_growth_3
-							has_province_modifier = magic_realm_transmutation_plant_growth_4
-						}
-					}
+					has_cast_plant_growth = yes
 				}
 				OR = {
 					consort_culture = naamjyut
@@ -3121,10 +3619,9 @@ daxugo_222 = {
 
 	Y91_yan_change_project = {
 		icon = mission_luther_theses
-		position = 12
-		required_missions = {
-			Y91_yan_unification
-		}
+		position = 17
+		required_missions = { Y91_yan_unification } 
+		provinces_to_highlight = {  } 
 
 		trigger = {
 			treasury = 2000
@@ -3153,10 +3650,9 @@ daxugo_222 = {
 
 	Y91_daxug_culture_standard = {
 		icon = per_restore_the_avesta
-		position = 13
-		required_missions = {
-			Y91_yan_change_project
-		}
+		position = 18
+		required_missions = { Y91_yan_change_project } 
+		provinces_to_highlight = {  } 
 
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -3179,7 +3675,7 @@ daxugo_222 = {
 	
 	Y91_control_dhujat = {
 		icon = mission_elephant_war
-		position = 14
+		position = 19
 		required_missions = {
 			Y91_along_river
 			Y91_build_up_upper_rahen
@@ -3218,10 +3714,8 @@ daxugo_333 = {
 
 	Y91_go_to_suolisunjia = {
 			icon = mission_steppe_warriors
-			position = 12
-			required_missions = {
-			Y91_yan_unification
-			}
+		position = 17
+		required_missions = { Y91_yan_unification } 
 			provinces_to_highlight = {
 			area = sarisung_area
 			NOT = {
@@ -3261,11 +3755,8 @@ daxugo_333 = {
 
 	Y91_along_river = {
 		icon = mission_se_along_the_river
-		position = 13
-		required_missions = {
-			Y91_go_to_suolisunjia
-		}
-
+		position = 18
+		required_missions = { Y91_go_to_suolisunjia } 
 		provinces_to_highlight = {
 			OR = {
 				area = semphrerong_area
@@ -3319,11 +3810,8 @@ daxugo_333 = {
 
 	Y91_monopoly_rahen_bay = {
 		icon = mission_unite_home_region
-		position = 14
-		required_missions = {
-			Y91_along_river
-		}
-
+		position = 19
+		required_missions = { Y91_along_river } 
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -3378,7 +3866,7 @@ daxugo_333 = {
 
 	Y91_helimoish_uniting = {
 		icon = mission_harimar
-		position = 15
+		position = 20
 		required_missions = {
 			Y91_control_dhujat
 			Y91_monopoly_rahen_bay
@@ -3443,12 +3931,8 @@ daxugo_333 = {
 
 	Y91_north_south_approach = {
 		icon = mission_assemble_an_army
-		position = 16
-
-		required_missions = {
-			Y91_helimoish_uniting
-		}
-
+		position = 21
+		required_missions = { Y91_helimoish_uniting } 
 		provinces_to_highlight = {
 			region = rakhadesh_region
 			NOT = {
@@ -3473,12 +3957,8 @@ daxugo_333 = {
 
 	Y91_Y98_rahen_palace = {
 		icon = mission_asian_city
-		position = 17
-
-		required_missions = {
-			Y91_north_south_approach
-		}
-
+		position = 22
+		required_missions = { Y91_north_south_approach } 
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -3535,95 +4015,101 @@ daxugo_333 = {
 	}
 
 	Y91_the_mandate_of_heaven = {
-			icon = mission_haless_map
-			position = 18
-		
-			required_missions = {
+		icon = mission_haless_map
+		position = 23
+		required_missions = {
 			Y91_Y98_southest_palace
 			Y91_Y98_rahen_palace
-			}
+		}
 
-			provinces_to_highlight = { 
-				OR = {
-					AND = {
-						province_group = golden_highway_yanshen_coast
-						NOT = { has_province_modifier = golden_highway }
-					}
-					AND = {
-						province_group = golden_highway_upper_yanshen
-						NOT = { has_province_modifier = golden_highway }
-					}
-					AND = {
-						province_group = golden_highway_rahen_coast
-						NOT = { has_province_modifier = golden_highway }
-					}
-					AND = {
-						province_group = golden_highway_dhujat
-						NOT = { has_province_modifier = golden_highway }
-					}
-					AND = {
-						province_group = golden_highway_xianjie
-						NOT = { has_province_modifier = golden_highway }
-					}
-					AND = {
-						OR = {
-							superregion = yanshen_superregion
-							superregion = rahen_superregion
-							superregion = vimdatrong_superregion
-						}
-						NOT = {
-							culture_group = yan
-						}
-					}
+		provinces_to_highlight = { 
+			OR = {
+				AND = {
+					province_group = golden_highway_yanshen_coast
+					NOT = { has_province_modifier = golden_highway }
 				}
-			}
-		
-
-
-			trigger = {
-				custom_trigger_tooltip = {
-					tooltip = Y91_golden_highway_completed
-					golden_highway_yanshen_coast = {
-					type = all
-					has_province_modifier = golden_highway
-					}
-					golden_highway_upper_yanshen = {
-					type = all
-					has_province_modifier = golden_highway
-					}
-					golden_highway_xianjie = {
-						type = all
-						has_province_modifier = golden_highway
-					}
-					golden_highway_dhujat = {
-					type = all
-					has_province_modifier = golden_highway
-					}
-					golden_highway_rahen_coast = {
-					type = all
-					has_province_modifier = golden_highway
-					}
+				AND = {
+					province_group = golden_highway_upper_yanshen
+					NOT = { has_province_modifier = golden_highway }
 				}
-				num_of_owned_provinces_with = {
+				AND = {
+					province_group = golden_highway_rahen_coast
+					NOT = { has_province_modifier = golden_highway }
+				}
+				AND = {
+					province_group = golden_highway_dhujat
+					NOT = { has_province_modifier = golden_highway }
+				}
+				AND = {
+					province_group = golden_highway_xianjie
+					NOT = { has_province_modifier = golden_highway }
+				}
+				AND = {
 					OR = {
 						superregion = yanshen_superregion
 						superregion = rahen_superregion
 						superregion = vimdatrong_superregion
-						superregion = gozengun_superregion
 					}
-					value = 500
-					culture_group = yan
+					NOT = {
+						culture_group = yan
+					}
 				}
-				mission_completed = Y91_outward_gaze
 			}
+		}
 
-			effect = {
-				country_event = {
-					id = flavour_anbingnar_daxugo.12
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = Y91_golden_highway_completed
+				golden_highway_yanshen_coast = {
+				type = all
+				has_province_modifier = golden_highway
+				}
+				golden_highway_upper_yanshen = {
+				type = all
+				has_province_modifier = golden_highway
+				}
+				golden_highway_xianjie = {
+					type = all
+					has_province_modifier = golden_highway
+				}
+				golden_highway_dhujat = {
+				type = all
+				has_province_modifier = golden_highway
+				}
+				golden_highway_rahen_coast = {
+				type = all
+				has_province_modifier = golden_highway
 				}
 			}
+			num_of_owned_provinces_with = {
+				OR = {
+					superregion = yanshen_superregion
+					superregion = rahen_superregion
+					superregion = vimdatrong_superregion
+					superregion = gozengun_superregion
+				}
+				value = 500
+				culture_group = yan
+			}
+			mission_completed = Y91_outward_gaze
+		}
+
+		effect = {
+			add_country_modifier = {
+ 				name = A_hawk_screaming_for_a_bloody_war
+ 				duration = -1
+ 			}
+ 			nuzurbokh_region = {
+ 				add_permanent_claim = ROOT
+ 			}
+ 			moduk_region = {
+ 				add_permanent_claim = ROOT
+ 			}
+ 			bulwar_superregion = {
+ 				add_permanent_claim = ROOT
+ 			}
+		} 
 	}
-
 }
 
 daxugo_444 = {
@@ -3638,11 +4124,8 @@ daxugo_444 = {
 
 	Y91_mangtan_attack = {
 		icon = mission_se_birdmen
-		position = 12
-		required_missions = {
-			Y91_yan_unification
-		}
-
+		position = 17
+		required_missions = { Y91_yan_unification } 
 		provinces_to_highlight = {
 			OR ={
 				AND ={
@@ -3681,11 +4164,8 @@ daxugo_444 = {
 
 	Y91_four_daxugo_city = {
 		icon = mission_eastern_european_city
-		position = 13
-		required_missions = {
-			Y91_mangtan_attack
-		}
-
+		position = 18
+		required_missions = { Y91_mangtan_attack } 
 		provinces_to_highlight = {
 				OR = {
 					province_id = 4565
@@ -3779,10 +4259,8 @@ daxugo_444 = {
 
 	Y91_Y98_tanxiang_palace = {
 		icon = mission_colonial
-		position = 15
-		required_missions = {
-			Y91_four_daxugo_city
-		}
+		position = 19
+		required_missions = { Y91_four_daxugo_city } 
 		provinces_to_highlight = {
 			AND = {
 				province_id = 4871
@@ -3823,7 +4301,7 @@ daxugo_444 = {
 
 	Y91_into_the_rainforest = {
 		icon = mission_clear_the_delta
-		position = 16
+		position = 20
 		required_missions = {
 			Y91_Y98_tanxiang_palace
 			Y91_east_dwarf_agreement
@@ -3904,12 +4382,8 @@ daxugo_444 = {
 	
 	Y91_Y98_southest_palace = {
 		icon = mng_outer_city_beijing
-		position = 17
-
-		required_missions = {
-			Y91_into_the_rainforest
-		}
-
+		position = 22
+		required_missions = { Y91_into_the_rainforest } 
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -3960,9 +4434,7 @@ daxugo_555 = {
 	Y91_kai_subject_to = {
 		icon = mission_have_two_subjects
 		position = 12
-		required_missions = {
-			Y91_yan_unification
-		}
+		required_missions = { Y91_yan_unification } 
 		provinces_to_highlight = {
 			region = thidinkai_region
 			NOT = {
@@ -4069,22 +4541,50 @@ daxugo_555 = {
 
 }
 
+daxugo_faceless_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = Y98
+		has_country_flag = daxugo_rebellions_finished
+	}
+	has_country_shield = yes
+
+	Y91_supremacy_of_abaaba_sea = {
+		icon = mission_establish_high_seas_navy
+		position = 25
+		required_missions = { Y91_cross_the_golden_highway } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			1309 = {
+				heavy_ships_in_province = 100
+				transports_in_province = 100
+			}
+		}
+
+		effect = {
+			custom_tooltip = Y91_supremacy_of_abaaba_sea_ctt
+			set_country_flag = Y98_cannor_war
+		}
+	}
+}
+
 daxugo_faceless_2 = {
 	slot = 2
 	generic = no
 	ai = yes
 	potential = {
 		tag = Y98
-		has_country_flag = daxugo_conquer_never_end
+		has_country_flag = daxugo_rebellions_finished
 	}
 	has_country_shield = yes
 
 	Y91_cross_the_golden_highway = {
 		icon = mission_unite_home_region
-		position = 19
-		required_missions = {
-			Y91_the_mandate_of_heaven
-		}
+		position = 24
+		required_missions = { Y91_the_mandate_of_heaven } 
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -4159,10 +4659,8 @@ daxugo_faceless_2 = {
 
 	Y91_the_end_of_hete = {
 		icon = mission_egyptian_mamluk_soldier
-		required_missions = {
-			Y91_cross_the_golden_highway
-		}
-		position = 20
+		position = 25
+		required_missions = { Y91_cross_the_golden_highway } 
 		provinces_to_highlight = {
 			superregion = north_salahad_superregion
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -4208,16 +4706,15 @@ daxugo_faceless_3 = {
 	ai = yes
 	potential = {
 		tag = Y98
-		has_country_flag = daxugo_conquer_never_end
+		has_country_flag = daxugo_rebellions_finished
 	}
 	has_country_shield = yes
 
 	Y91_gnome_settlement = {
 		icon = mission_gnome_tinkering
-		position = 19
-		required_missions = {
-			Y91_the_mandate_of_heaven
-		}
+		position = 24
+		required_missions = { Y91_the_mandate_of_heaven } 
+		provinces_to_highlight = {  } 
 
 		trigger = {
 			OR = {
@@ -4309,10 +4806,9 @@ daxugo_faceless_3 = {
 
 	Y91_yanshen_articles_flourishing_age = {
 		icon = mission_lantern_festival
-		position = 20
-		required_missions = {
-			Y91_gnome_settlement
-		}
+		position = 25
+		required_missions = { Y91_gnome_settlement } 
+		provinces_to_highlight = {  } 
 
 		trigger = {
 			num_artifice_inventions_discovered = { VAL = 6 }
@@ -4376,7 +4872,7 @@ daxugo_faceless_3 = {
 
 	Y91_harem_is_Halann = {
 		icon = mission_faceless_queen
-		position = 21
+		position = 26
 		required_missions = {
 			Y91_yanshen_articles_flourishing_age
 			Y91_the_end_of_hete
@@ -4414,17 +4910,14 @@ daxugo_faceless_4 = {
 	ai = yes
 	potential = {
 		tag = Y98
-		has_country_flag = daxugo_conquer_never_end
+		has_country_flag = daxugo_rebellions_finished
 	}
 	has_country_shield = yes
 
 	Y91_go_laker = {
 		icon = mission_nomad
-		position = 19
-		required_missions = {
-			Y91_the_mandate_of_heaven
-		}
-
+		position = 24
+		required_missions = { Y91_the_mandate_of_heaven } 
 		provinces_to_highlight = {
 			OR = {
 				region = nuzurbokh_region
@@ -4477,10 +4970,9 @@ daxugo_faceless_4 = {
 
 	Y91_laker_semicolony = {
 		icon = mission_city_prosperity
-		position = 20
-		required_missions = {
-			Y91_go_laker
-		}
+		position = 25
+		required_missions = { Y91_go_laker } 
+		provinces_to_highlight = {  } 
 
 		trigger = {
 			custom_trigger_tooltip = {
@@ -4524,52 +5016,21 @@ daxugo_faceless_4 = {
 	}
 }
 
-daxugo_faceless_1 = {
-	slot = 1
-	generic = no
-	ai = yes
-	potential = {
-		tag = Y98
-		has_country_flag = daxugo_conquer_never_end
-	}
-	has_country_shield = yes
-
-	Y91_supremacy_of_abaaba_sea = {
-		icon = mission_establish_high_seas_navy
-		required_missions = {
-			Y91_cross_the_golden_highway
-		}
-		position = 20
-		trigger = {
-			1309 = {
-				heavy_ships_in_province = 100
-				transports_in_province = 100
-			}
-		}
-
-		effect = {
-			custom_tooltip = Y91_supremacy_of_abaaba_sea_ctt
-			set_country_flag = Y98_cannor_war
-		}
-	}
-}
-
 daxugo_faceless_5 = {
 	slot = 5
 	generic = no
 	ai = yes
 	potential = {
 		tag = Y98
-		has_country_flag = daxugo_conquer_never_end
+		has_country_flag = daxugo_rebellions_finished
 	}
 	has_country_shield = yes
 
 	Y91_a_place_in_the_sun = {
 		icon = mission_balloon
-		position = 20
-		required_missions = {
-			Y91_go_laker
-		}
+		position = 25
+		required_missions = { Y91_go_laker } 
+		provinces_to_highlight = {  } 
 
 		trigger = {
 			4871 = {
@@ -4598,412 +5059,7 @@ daxugo_faceless_5 = {
 	}
 }
 
-nuugdan_tsarai_49 = {
-	slot = 2
-	generic = no
-	ai = yes
-	potential = {
-		tag = Y98
-		has_country_flag = daxugo_rebellions_finished
-	}
-	
-	Y91_draft_military_reforms = {
-		icon = mission_assemble_an_army
-		position = 23
-		required_missions = { Y91_inward_perfection }
-		
-		trigger = {
-			mil_power = 100
-			army_reformer = 3
-		}
-
-		effect = {
-			add_mil_power = -100
-			add_army_tradition = -10
-			add_army_professionalism = 0.05
-		}
-	}
-	
-	Y91_big_yellow_birds = {
-		icon = mission_non-western_cavalry_raid
-		position = 24
-		required_missions = { Y91_draft_military_reforms }
-		
-		trigger = {
-			owns_core_province = 5406
-			5406 = { 
-				has_manpower_building_trigger = yes
-				base_manpower = 10
-			}
-			calc_true_if = {
-				all_owned_province = {
-					culture = daxug
-					has_manpower_building_trigger = yes
-				}
-				amount = 6
-			}
-		}
-		
-		provinces_to_highlight = {
-			OR = {
-				AND = {
-					province_id = 5406
-					NOT = {
-						AND = {
-							has_manpower_building_trigger = yes
-							base_manpower = 10
-						}
-					}
-				}
-				AND = {
-					owned_by = ROOT
-					culture = daxug
-					NOT = {
-						has_manpower_building_trigger = yes
-					}
-				}
-			}
-		}
-
-		effect = {
-			5406 = {
-				add_base_manpower = 2
-				add_permanent_province_modifier = {
-					name = Y91_desert_birds
-					duration = -1 
-				}
-			}
-		}
-	}
-	
-	Y91_haisosen_birdrider_academy = {
-		icon = mission_non-western_cavalry_raid
-		position = 25
-		required_missions = { Y91_big_yellow_birds }
-		
-		provinces_to_highlight = {
-			province_id = 5406
-			NOT = {
-				AND = {
-					owned_by = ROOT
-					is_core = ROOT
-					has_manpower_building_trigger = yes
-					base_manpower = 15
-				}
-			}
-		}
-		
-		trigger = {
-			owns_core_province = 5406
-			5406 = {
-				has_manpower_building_trigger = yes
-				base_manpower = 15
-			}
-			treasury = 500
-		}
-
-		effect = {
-			add_treasury = -500
-			5406 = {
-				hidden_effect = {
-					remove_province_modifier = Y91_desert_birds
-				}
-				add_permanent_province_modifier = {
-					name = Y91_desert_birds2
-					duration = -1 
-				}
-			}
-		}
-	}
-	
-	Y91_national_army_academy = {
-		icon = mission_conquer_nagaur
-		position = 26
-		
-		provinces_to_highlight = {
-			province_id = 4868
-			NOT = {
-				AND = {
-					owned_by = ROOT
-					is_core = ROOT
-					has_manpower_building_trigger = yes
-					base_manpower = 15
-				}
-			}
-		}
-		
-		trigger = {
-			mission_completed = Y91_draft_military_reforms
-			treasury = 1500
-			owns_core_province = 4868
-			4868 = { 
-				has_manpower_building_trigger = yes
-				base_manpower = 15
-			}
-		}
-
-		effect = {
-			add_treasury = -1500
-			4868 = {
-				add_permanent_province_modifier = {
-					name = Y91_national_army_academy_modifier
-					duration = -1 
-				}
-				change_culture = daxug
-				change_religion = ROOT
-				change_province_name = "Jianshu"
-			}
-		}
-	}
-	
-	Y91_tsaicun_national_stockpile = {
-		icon = mission_deccanis
-		position = 27
-		
-		trigger = {
-			mission_completed = Y91_draft_military_reforms
-			treasury = 1000
-			owns_core_province = 4846
-			4846 = {
-				has_trade_building_trigger = yes
-				has_courthouse_building_trigger = yes
-				development = 45
-			}
-			4906 = { base_production = 5 }
-			4850 = { base_production = 5 }
-			4849 = { base_production = 5 }
-			4853 = { base_production = 5 }
-			4847 = { base_production = 5 }
-		}
-		
-		provinces_to_highlight = {
-			OR = {
-				AND = {
-					province_id = 4906
-					NOT = { base_production = 5 }
-				}
-				AND = {
-					province_id = 4850
-					NOT = { base_production = 5 }
-				}
-				AND = {
-					province_id = 4849
-					NOT = { base_production = 5 }
-				}
-				AND = {
-					province_id = 4853
-					NOT = { base_production = 5 }
-				}
-				AND = {
-					province_id = 4847
-					NOT = { base_production = 5 }
-				}
-				AND = {
-					province_id = 4846
-					NOT = {
-						AND = {
-							base_production = 20
-							has_courthouse_building_trigger = yes
-							OR = { has_building = trade_depot has_building = stock_exchange }
-						}
-					}
-				}
-			}
-		}
-
-		effect = {
-			4846 = {
-				change_culture = daxug
-				change_religion = ROOT
-				add_permanent_province_modifier = {
-					name = Y91_tsaicun_national_stockpile_modifier
-					duration = -1 
-				}
-			}
-		}
-	}
-}
-
-nuugdan_tsarai_42 = {
-	slot = 3
-	generic = no
-	ai = yes
-	potential = {
-		tag = Y98
-		has_country_flag = daxugo_rebellions_finished
-	}
-	
-	Y91_inward_perfection = {
-		icon = mission_treasure_room
-		position = 22
-		
-		trigger = {
-			has_country_flag = daxugo_rebellions_finished
-			is_at_war = no
-			has_regency = no
-			adm_power = 100
-			dip_power = 100
-			mil_power = 100
-		}
-
-		effect = {
-			add_adm_power = -100
-			add_dip_power = -100
-			add_mil_power = -100
-			add_country_modifier = {
-				name = Y91_inward_perfection
-				duration = 7300 
-			}
-		}
-	}
-	
-	Y91_great_daxugo_legal_code = {
-		icon = mission_scholar_officials
-		position = 23
-		required_missions = { Y91_inward_perfection }
-		
-		trigger = {
-			adm_power = 100
-			government_reform_progress = 10
-			has_regency = no
-		}
-
-		effect = {
-			add_adm_power = -100
-			change_government_reform_progress = -10
-			country_event = { id = flavor_nuugdan_tsarai.48 }
-		}
-	}
-	
-	Y91_articles_on_government = {
-		icon = mission_rule_the_garjats
-		position = 24
-		required_missions = { Y91_great_daxugo_legal_code }
-		
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = Y91_race_theory_tooltip
-				OR = {
-					has_country_flag = Y91_progressive_race_theory
-					has_country_flag = Y91_traditional_human_centered_laws
-					has_country_flag = Y91_neutral_race_theory
-				}
-			}
-			adm_power = 100
-			government_reform_progress = 20
-			has_regency = no
-		}
-
-		effect = {
-			add_adm_power = -100
-			change_government_reform_progress = -20
-			remove_country_modifier = anbi_Y91_horde_heritage_1
-			country_event = { id = flavor_nuugdan_tsarai.50 }
-		}
-	}
-	
-	Y91_war_and_faith = {
-		icon = mission_scholar_officials
-		position = 25
-		required_missions = { Y91_articles_on_government }
-		
-		trigger = {
-			OR = {
-				has_country_modifier = Y91_diguo_entrenchment
-				has_country_modifier = Y91_baduum_clan_system
-			}
-			mission_completed = Y91_haisosen_birdrider_academy
-			mission_completed = Y91_national_army_academy
-			mil_power = 100
-			government_reform_progress = 10
-			has_regency = no
-		}
-
-		effect = {
-			add_mil_power = -100
-			change_government_reform_progress = -10
-			country_event = { id = flavor_nuugdan_tsarai.52 }
-		}
-	}
-	
-	Y91_faith_code = {
-		icon = mission_scholar_officials
-		position = 26
-		required_missions = { Y91_war_and_faith }
-		
-		trigger = {
-			OR = {
-				has_country_modifier = Y9888_diguomao_war_conduct
-				has_country_modifier = Y9888_academy_war_conduct
-				has_country_modifier = Y9888_diguomao_academy_solidarity
-			}
-			adm_power = 100
-			government_reform_progress = 10
-			has_regency = no
-			employed_advisor = {
-				type = theologian
-			}
-		}
-
-		effect = {
-			add_adm_power = -100
-			change_government_reform_progress = -10
-			country_event = { id = flavor_nuugdan_tsarai.53 }
-		}
-	}
-	
-
-	
-	Y91_daxugo_unshaken = {
-		icon = prosperity_for_all
-		position = 27
-		required_missions = { Y91_faith_code }
-		
-		trigger = {
-			has_regency = no
-			OR = {
-				has_country_modifier = Y91_tolerant_religious_code
-				has_country_modifier = Y91_semi_tolerant_religious_code
-				has_country_modifier = Y91_intolerant_religious_code
-			}
-			has_country_flag = Y91_discontents_have_risen
-			NOT = { num_of_revolts = 1 }
-			NOT = { num_of_rebel_armies = 1 }
-		}
-
-		effect = {
-			add_stability = 1
-		}
-	}
-	
-	Y91_outward_gaze = {
-		icon = mission_rb_trinity_college_dublin
-		position = 28
-		required_missions = { Y91_daxugo_unshaken Y91_steppe_line Y91_tsaicun_national_stockpile Y91_silk_road Y91_issue_daxugo_money }
-		
-		trigger = {
-			mission_completed = Y91_crack_down_on_land_annexation
-			mission_completed = Y91_national_army_academy
-			mission_completed = Y91_haisosen_birdrider_academy
-			calc_true_if = {
-				amount = 150
-				all_owned_province = {
-					is_prosperous = yes
-				}
-			}
-		}
-	
-		effect = {
-			add_country_modifier = {
-				name = Y98_siocain_sil_daxugo_mod
-				duration = -1
-			}
-			add_government_reform = halessi_hegemon_reform
-		}
-	}
-}
-
-nuugdan_tsarai_44 = {
+nuugdan_tsarai_41 = {
 	slot = 1
 	generic = no
 	ai = yes
@@ -5014,7 +5070,7 @@ nuugdan_tsarai_44 = {
 	
 	Y91_plugging_the_holes = {
 		icon = fortify_the_passes
-		position = 24
+		position = 29
 		required_missions = { Y91_draft_military_reforms }
 		
 		trigger = {
@@ -5066,7 +5122,7 @@ nuugdan_tsarai_44 = {
 	
 	Y91_the_yanshen_wall = {
 		icon = mission_great_wall
-		position = 25
+		position = 30
 		required_missions = { Y91_plugging_the_holes }
 		
 		trigger = {
@@ -5139,7 +5195,7 @@ nuugdan_tsarai_44 = {
 
 	Y91_city_line = {
 		icon = control_coromandel
-		position = 26
+		position = 31
 		required_missions = { Y91_the_yanshen_wall }
 		
 		trigger = {
@@ -5184,7 +5240,7 @@ nuugdan_tsarai_44 = {
 	
 	Y91_steppe_line = {
 		icon = mission_junnagadh_fort
-		position = 27
+		position = 32
 		required_missions = { Y91_city_line }
 		
 		trigger = {
@@ -5205,7 +5261,413 @@ nuugdan_tsarai_44 = {
 	}
 }
 
-nuugdan_tsarai_48 = {
+nuugdan_tsarai_42 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = Y98
+		has_country_flag = daxugo_rebellions_finished
+	}
+	
+	Y91_draft_military_reforms = {
+		icon = mission_assemble_an_army
+		position = 28
+		required_missions = { Y91_inward_perfection }
+		
+		trigger = {
+			mil_power = 100
+			army_reformer = 3
+		}
+
+		effect = {
+			add_mil_power = -100
+			add_army_tradition = -10
+			add_army_professionalism = 0.05
+		}
+	}
+	
+	Y91_big_yellow_birds = {
+		icon = mission_non-western_cavalry_raid
+		position = 29
+		required_missions = { Y91_draft_military_reforms }
+		
+		trigger = {
+			owns_core_province = 5406
+			5406 = { 
+				has_manpower_building_trigger = yes
+				base_manpower = 10
+			}
+			calc_true_if = {
+				all_owned_province = {
+					culture = daxug
+					has_manpower_building_trigger = yes
+				}
+				amount = 6
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 5406
+					NOT = {
+						AND = {
+							has_manpower_building_trigger = yes
+							base_manpower = 10
+						}
+					}
+				}
+				AND = {
+					owned_by = ROOT
+					culture = daxug
+					NOT = {
+						has_manpower_building_trigger = yes
+					}
+				}
+			}
+		}
+
+		effect = {
+			5406 = {
+				add_base_manpower = 2
+				add_permanent_province_modifier = {
+					name = Y91_desert_birds
+					duration = -1 
+				}
+			}
+		}
+	}
+	
+	Y91_haisosen_birdrider_academy = {
+		icon = mission_non-western_cavalry_raid
+		position = 30
+		required_missions = { Y91_big_yellow_birds }
+		
+		provinces_to_highlight = {
+			province_id = 5406
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+					has_manpower_building_trigger = yes
+					base_manpower = 15
+				}
+			}
+		}
+		
+		trigger = {
+			owns_core_province = 5406
+			5406 = {
+				has_manpower_building_trigger = yes
+				base_manpower = 15
+			}
+			treasury = 500
+		}
+
+		effect = {
+			add_treasury = -500
+			5406 = {
+				hidden_effect = {
+					remove_province_modifier = Y91_desert_birds
+				}
+				add_permanent_province_modifier = {
+					name = Y91_desert_birds2
+					duration = -1 
+				}
+			}
+		}
+	}
+	
+	Y91_national_army_academy = {
+		icon = mission_conquer_nagaur
+		position = 31
+		provinces_to_highlight = {
+			province_id = 4868
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+					has_manpower_building_trigger = yes
+					base_manpower = 15
+				}
+			}
+		}
+		
+		trigger = {
+			mission_completed = Y91_draft_military_reforms
+			treasury = 1500
+			owns_core_province = 4868
+			4868 = { 
+				has_manpower_building_trigger = yes
+				base_manpower = 15
+			}
+		}
+
+		effect = {
+			add_treasury = -1500
+			4868 = {
+				add_permanent_province_modifier = {
+					name = Y91_national_army_academy_modifier
+					duration = -1 
+				}
+				change_culture = daxug
+				change_religion = ROOT
+				change_province_name = "Jianshu"
+			}
+		}
+	}
+	
+	Y91_tsaicun_national_stockpile = {
+		icon = mission_deccanis
+		position = 32
+		
+		trigger = {
+			mission_completed = Y91_draft_military_reforms
+			treasury = 1000
+			owns_core_province = 4846
+			4846 = {
+				has_trade_building_trigger = yes
+				has_courthouse_building_trigger = yes
+				development = 45
+			}
+			4906 = { base_production = 5 }
+			4850 = { base_production = 5 }
+			4849 = { base_production = 5 }
+			4853 = { base_production = 5 }
+			4847 = { base_production = 5 }
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 4906
+					NOT = { base_production = 5 }
+				}
+				AND = {
+					province_id = 4850
+					NOT = { base_production = 5 }
+				}
+				AND = {
+					province_id = 4849
+					NOT = { base_production = 5 }
+				}
+				AND = {
+					province_id = 4853
+					NOT = { base_production = 5 }
+				}
+				AND = {
+					province_id = 4847
+					NOT = { base_production = 5 }
+				}
+				AND = {
+					province_id = 4846
+					NOT = {
+						AND = {
+							base_production = 20
+							has_courthouse_building_trigger = yes
+							OR = { has_building = trade_depot has_building = stock_exchange }
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			4846 = {
+				change_culture = daxug
+				change_religion = ROOT
+				add_permanent_province_modifier = {
+					name = Y91_tsaicun_national_stockpile_modifier
+					duration = -1 
+				}
+			}
+		}
+	}
+}
+
+nuugdan_tsarai_43 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = Y98
+		has_country_flag = daxugo_rebellions_finished
+	}
+	
+	Y91_inward_perfection = {
+		icon = mission_treasure_room
+		position = 27
+		provinces_to_highlight = {  } 
+		
+		trigger = {
+			has_country_flag = daxugo_rebellions_finished
+			is_at_war = no
+			has_regency = no
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+		}
+
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_country_modifier = {
+				name = Y91_inward_perfection
+				duration = 7300 
+			}
+		}
+	}
+	
+	Y91_great_daxugo_legal_code = {
+		icon = mission_scholar_officials
+		position = 28
+		required_missions = { Y91_inward_perfection }
+		
+		trigger = {
+			adm_power = 100
+			government_reform_progress = 10
+			has_regency = no
+		}
+
+		effect = {
+			add_adm_power = -100
+			change_government_reform_progress = -10
+			country_event = { id = flavor_nuugdan_tsarai.48 }
+		}
+	}
+	
+	Y91_articles_on_government = {
+		icon = mission_rule_the_garjats
+		position = 29
+		required_missions = { Y91_great_daxugo_legal_code }
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = Y91_race_theory_tooltip
+				OR = {
+					has_country_flag = Y91_progressive_race_theory
+					has_country_flag = Y91_traditional_human_centered_laws
+					has_country_flag = Y91_neutral_race_theory
+				}
+			}
+			adm_power = 100
+			government_reform_progress = 20
+			has_regency = no
+		}
+
+		effect = {
+			add_adm_power = -100
+			change_government_reform_progress = -20
+			remove_country_modifier = anbi_Y91_horde_heritage_1
+			country_event = { id = flavor_nuugdan_tsarai.50 }
+		}
+	}
+	
+	Y91_war_and_faith = {
+		icon = mission_scholar_officials
+		position = 30
+		required_missions = { Y91_articles_on_government }
+		
+		trigger = {
+			OR = {
+				has_country_modifier = Y91_diguo_entrenchment
+				has_country_modifier = Y91_baduum_clan_system
+			}
+			mission_completed = Y91_haisosen_birdrider_academy
+			mission_completed = Y91_national_army_academy
+			mil_power = 100
+			government_reform_progress = 10
+			has_regency = no
+		}
+
+		effect = {
+			add_mil_power = -100
+			change_government_reform_progress = -10
+			country_event = { id = flavor_nuugdan_tsarai.52 }
+		}
+	}
+	
+	Y91_faith_code = {
+		icon = mission_scholar_officials
+		position = 31
+		required_missions = { Y91_war_and_faith }
+		
+		trigger = {
+			OR = {
+				has_country_modifier = Y9888_diguomao_war_conduct
+				has_country_modifier = Y9888_academy_war_conduct
+				has_country_modifier = Y9888_diguomao_academy_solidarity
+			}
+			adm_power = 100
+			government_reform_progress = 10
+			has_regency = no
+			employed_advisor = {
+				type = theologian
+			}
+		}
+
+		effect = {
+			add_adm_power = -100
+			change_government_reform_progress = -10
+			country_event = { id = flavor_nuugdan_tsarai.53 }
+		}
+	}
+	
+
+	
+	Y91_daxugo_unshaken = {
+		icon = prosperity_for_all
+		position = 32
+		required_missions = { Y91_faith_code }
+		
+		trigger = {
+			has_regency = no
+			OR = {
+				has_country_modifier = Y91_tolerant_religious_code
+				has_country_modifier = Y91_semi_tolerant_religious_code
+				has_country_modifier = Y91_intolerant_religious_code
+			}
+			has_country_flag = Y91_discontents_have_risen
+			NOT = { num_of_revolts = 1 }
+			NOT = { num_of_rebel_armies = 1 }
+		}
+
+		effect = {
+			add_stability = 1
+		}
+	}
+	
+	Y91_outward_gaze = {
+		icon = mission_rb_trinity_college_dublin
+		position = 33
+		required_missions = { Y91_daxugo_unshaken Y91_steppe_line Y91_tsaicun_national_stockpile Y91_silk_road Y91_issue_daxugo_money }
+		provinces_to_highlight = {  } 
+		
+		trigger = {
+			mission_completed = Y91_crack_down_on_land_annexation
+			mission_completed = Y91_national_army_academy
+			mission_completed = Y91_haisosen_birdrider_academy
+			calc_true_if = {
+				amount = 150
+				all_owned_province = {
+					is_prosperous = yes
+				}
+			}
+		}
+	
+		effect = {
+			add_country_modifier = {
+				name = Y98_siocain_sil_daxugo_mod
+				duration = -1
+			}
+			add_government_reform = halessi_hegemon_reform
+		}
+	}
+}
+
+nuugdan_tsarai_44 = {
 	slot = 4
 	generic = no
 	ai = yes
@@ -5216,7 +5678,7 @@ nuugdan_tsarai_48 = {
 	
 	Y91_draft_economic_reforms = {
 		icon = mission_high_income
-		position = 23
+		position = 28
 		required_missions = { Y91_inward_perfection }
 		
 		
@@ -5232,7 +5694,7 @@ nuugdan_tsarai_48 = {
 
 	Y91_expand_the_bureaucracy = {
 		icon = mission_scholar_officials
-		position = 24
+		position = 29
 		
 		required_missions = {
 			Y91_draft_economic_reforms
@@ -5295,11 +5757,9 @@ nuugdan_tsarai_48 = {
 	
 	Y91_reform_gold_standard = {
 		icon = mission_african_gold
-		position = 25
-		
-		required_missions = {
-			Y91_expand_the_bureaucracy
-		}
+		position = 30
+		required_missions = { Y91_expand_the_bureaucracy } 
+		provinces_to_highlight = {  } 
 
 		trigger = {
 			adm_power = 200
@@ -5318,12 +5778,8 @@ nuugdan_tsarai_48 = {
 	
 	Y91_expand_sugarfarms = {
 		icon = mission_wine_monopolies
-		position = 26
-		
-		required_missions = {
-			Y91_reform_gold_standard
-		}
-
+		position = 31
+		required_missions = { Y91_reform_gold_standard } 
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -5402,7 +5858,7 @@ nuugdan_tsarai_48 = {
 	
 	Y91_silk_road = {
 		icon = mission_conquer_malwa_bah
-		position = 27
+		position = 32
 		
 		required_missions = {
 			Y91_expand_sugarfarms
@@ -5466,7 +5922,7 @@ nuugdan_tsarai_48 = {
 	}
 }
 
-nuugdan_tsarai_43 = {
+nuugdan_tsarai_45 = {
 	slot = 5
 	generic = no
 	ai = yes
@@ -5477,7 +5933,7 @@ nuugdan_tsarai_43 = {
 	
 	Y91_anti_corruption_reforms = {
 		icon = mission_asian_trader
-		position = 24
+		position = 29
 		required_missions = { Y91_draft_economic_reforms }
 		
 		trigger = {
@@ -5499,10 +5955,9 @@ nuugdan_tsarai_43 = {
 	
 	Y91_crack_down_on_land_annexation = {
 		icon = balance_the_estates
-		position = 25
-		required_missions = {
-			Y91_anti_corruption_reforms
-		}
+		position = 30
+		required_missions = { Y91_anti_corruption_reforms } 
+		provinces_to_highlight = {  } 
 
 		trigger = {
 			crown_land_share = 60
@@ -5530,11 +5985,8 @@ nuugdan_tsarai_43 = {
 
 	Y91_establish_central_bank = {
 		icon = mission_rb_the_bank_of_scotland
-		position = 26
-		required_missions = {
-			Y91_reform_gold_standard
-		}
-
+		position = 31
+		required_missions = { Y91_reform_gold_standard } 
 		provinces_to_highlight = {
 			OR = {
 				province_id = 4828
@@ -5587,10 +6039,9 @@ nuugdan_tsarai_43 = {
 
 	Y91_issue_daxugo_money = {
 		icon = mission_war_chest
-		position = 27
-		required_missions = {
-			Y91_establish_central_bank
-		}
+		position = 32
+		required_missions = { Y91_establish_central_bank } 
+		provinces_to_highlight = {  } 
 
 		trigger = {
 			adm_power = 200

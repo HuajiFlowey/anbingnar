@@ -143,88 +143,89 @@ country_event = {
 	}
 }
 
+##由于新版本的舒武什宗教更新，安饼注释了舒武什统治者登神事件
 #The Faceless Queen dies and become deity
-country_event = {
-	id = flavor_nuugdan_tsarai.3
-	title = flavor_nuugdan_tsarai.3.t
-	picture = DEATH_OF_HEIR_eventPicture
-	desc = flavor_nuugdan_tsarai.3.d
+# country_event = {
+# 	id = flavor_nuugdan_tsarai.3
+# 	title = flavor_nuugdan_tsarai.3.t
+# 	picture = DEATH_OF_HEIR_eventPicture
+# 	desc = flavor_nuugdan_tsarai.3.d
 	
-	fire_only_once = yes
+# 	fire_only_once = yes
 	
-	trigger = {
-		has_country_flag = faceless_queen_spawner
-		NOT = { has_ruler_modifier = faceless_queen_modifier }
-		NOT = {
-			has_country_flag = faceless_queen_great_conquer
-		}
-	}
+# 	trigger = {
+# 		has_country_flag = faceless_queen_spawner
+# 		NOT = { has_ruler_modifier = faceless_queen_modifier }
+# 		NOT = {
+# 			has_country_flag = faceless_queen_great_conquer
+# 		}
+# 	}
 	
-	immediate = {
-		set_global_flag = saanorgegh_faceless_queen_death
-	}
+# 	immediate = {
+# 		set_global_flag = saanorgegh_faceless_queen_death
+# 	}
 	
-	#A New God For All Shuvuush
-	option = {
-		name = flavor_nuugdan_tsarai.3.a
-		ai_chance = { factor = 100 }
-		add_prestige = 10
-	}
-}
+# 	#A New God For All Shuvuush
+# 	option = {
+# 		name = flavor_nuugdan_tsarai.3.a
+# 		ai_chance = { factor = 100 }
+# 		add_prestige = 10
+# 	}
+# }
 
-#The Guwamuud former dies and becomes a deity
-country_event = {
-	id = flavor_nuugdan_tsarai.4
-	title = flavor_nuugdan_tsarai.4.t
-	picture = DEATH_OF_HEIR_eventPicture
-	desc = flavor_nuugdan_tsarai.4.d
+# #The Guwamuud former dies and becomes a deity
+# country_event = {
+# 	id = flavor_nuugdan_tsarai.4
+# 	title = flavor_nuugdan_tsarai.4.t
+# 	picture = DEATH_OF_HEIR_eventPicture
+# 	desc = flavor_nuugdan_tsarai.4.d
 	
-	fire_only_once = yes
+# 	fire_only_once = yes
 	
-	trigger = {
-		has_country_flag = formed_guwaamud_flag
-		NOT = { has_ruler_flag = guwaamud_former }
-	}
+# 	trigger = {
+# 		has_country_flag = formed_guwaamud_flag
+# 		NOT = { has_ruler_flag = guwaamud_former }
+# 	}
 	
-	immediate = {
-		set_global_flag = guwaamud_ascension
-	}
+# 	immediate = {
+# 		set_global_flag = guwaamud_ascension
+# 	}
 	
-	#A New God For All Shavuush
-	option = {
-		name = flavor_nuugdan_tsarai.4.a
-		ai_chance = { factor = 100 }
-		add_prestige = 10
-	}
-}
+# 	#A New God For All Shavuush
+# 	option = {
+# 		name = flavor_nuugdan_tsarai.4.a
+# 		ai_chance = { factor = 100 }
+# 		add_prestige = 10
+# 	}
+# }
 
-#The Daxugo former dies and becomes a deity
-country_event = {
-	id = flavor_nuugdan_tsarai.5
-	title = flavor_nuugdan_tsarai.5.t
-	picture = DEATH_OF_HEIR_eventPicture
-	desc = flavor_nuugdan_tsarai.5.d
+# #The Daxugo former dies and becomes a deity
+# country_event = {
+# 	id = flavor_nuugdan_tsarai.5
+# 	title = flavor_nuugdan_tsarai.5.t
+# 	picture = DEATH_OF_HEIR_eventPicture
+# 	desc = flavor_nuugdan_tsarai.5.d
 	
-	fire_only_once = yes
+# 	fire_only_once = yes
 	
-	trigger = {
-		tag = Y98
-		has_country_flag = formed_daxugo_flag
-		NOT = { has_ruler_flag = daxugo_former }
-		NOT = { has_country_flag = faceless_queen_great_conquer_good }
-	}
+# 	trigger = {
+# 		tag = Y98
+# 		has_country_flag = formed_daxugo_flag
+# 		NOT = { has_ruler_flag = daxugo_former }
+# 		NOT = { has_country_flag = faceless_queen_great_conquer_good }
+# 	}
 	
-	immediate = {
-		set_global_flag = daxugo_ascension
-	}
+# 	immediate = {
+# 		set_global_flag = daxugo_ascension
+# 	}
 	
-	#A New God For All Shav��sh
-	option = {
-		name = flavor_nuugdan_tsarai.5.a
-		ai_chance = { factor = 100 }
-		add_prestige = 10
-	}
-}
+# 	#A New God For All Shav��sh
+# 	option = {
+# 		name = flavor_nuugdan_tsarai.5.a
+# 		ai_chance = { factor = 100 }
+# 		add_prestige = 10
+# 	}
+# }
 
 #The Harimari of Jondang gain adminstrative roles in the country
 country_event = {
@@ -1226,15 +1227,15 @@ country_event = {
 		}
 	}
 	
-#	option = {
-#		name = flavor_nuugdan_tsarai.21.b
-#		ai_chance = { factor = 100 }
-#		add_prestige = 10
-#		add_power_projection = {
-#			type = mission_rewards_power_projection
-#			amount = 10
-#		}
-#	}
+	#	option = {
+	#		name = flavor_nuugdan_tsarai.21.b
+	#		ai_chance = { factor = 100 }
+	#		add_prestige = 10
+	#		add_power_projection = {
+	#			type = mission_rewards_power_projection
+	#			amount = 10
+	#		}
+	#	}
 }
 
 #Daxugo Disaster
@@ -3165,98 +3166,7 @@ country_event = {
 				medium_tolerance_kobold_race_trigger = yes
 			}
 			largest_increase_of_kobold_tolerance_effect = yes
-		}
-#		if = {
-#			limit = {
-#				medium_tolerance_hobgoblin_race_trigger = yes
-#			}
-#			largest_increase_of_hobgoblin_tolerance_effect = yes
-#		}
-		if = {
-			limit = {
-				medium_tolerance_goblin_race_trigger = yes
-			}
-			largest_increase_of_goblin_tolerance_effect = yes
-		}
-#		if = {
-#			limit = {
-#				medium_tolerance_orcish_race_trigger = yes
-#			}
-#			largest_increase_of_orcish_tolerance_effect = yes
-#		}
-		if = {
-			limit = {
-				medium_tolerance_half_orcish_race_trigger = yes
-			}
-			largest_increase_of_half_orcish_tolerance_effect = yes
-		}
-		if = {
-			limit = {
-				medium_tolerance_elven_race_trigger = yes
-			}
-			largest_increase_of_elven_tolerance_effect = yes
-		}
-		if = {
-			limit = {
-				medium_tolerance_half_elven_race_trigger = yes
-			}
-			largest_increase_of_half_elven_tolerance_effect = yes
-		}
-		if = {
-			limit = {
-				medium_tolerance_dwarven_race_trigger = yes
-			}
-			largest_increase_of_dwarven_tolerance_effect = yes
-		}
-#		if = {
-#			limit = {
-#				medium_tolerance_ogre_race_trigger = yes
-#			}
-#			largest_increase_of_ogre_tolerance_effect = yes
-#		}
-#		if = {
-#			limit = {
-#				medium_tolerance_centaur_race_trigger = yes
-#			}
-#			largest_increase_of_centaur_tolerance_effect = yes
-#		}
-#		if = {
-#			limit = {
-#				medium_tolerance_troll_race_trigger = yes
-#			}
-#			largest_increase_of_troll_tolerance_effect = yes
-#		}
-#		if = {
-#			limit = {
-#				medium_tolerance_gnollish_race_trigger = yes
-#			}
-#			largest_increase_of_gnollish_tolerance_effect = yes
-#		}
-#		if = {
-#			limit = {
-#				medium_tolerance_gnomish_race_trigger = yes
-#			}
-#			largest_increase_of_gnomish_tolerance_effect = yes
-#		}
-		if = {
-			limit = {
-				medium_tolerance_harpy_race_trigger = yes
-			}
-			largest_increase_of_harpy_tolerance_effect = yes
-		}
-#		if = {
-#			limit = {
-#				medium_tolerance_halfling_race_trigger = yes
-#			}
-#			largest_increase_of_halfling_tolerance_effect = yes
-#		}
-#		if = {
-#			limit = {
-#				medium_tolerance_ruinborn_race_trigger = yes
-#			}
-#			largest_increase_of_ruinborn_tolerance_effect = yes
-#		}
-		
+		}		
 		set_country_flag = Y91_progressive_race_theory
 	}
 	
@@ -6687,7 +6597,7 @@ country_event = {
 	}
 }
 
-#狗屎洋人更新出来的战争事件
+#洋人脑子进水了说是，半成品加了又移除，天天吃书，只能从mp那边拿事件回来了
 country_event = {
 	id = flavor_nuugdan_tsarai.104
 	title = flavor_nuugdan_tsarai.104.t
@@ -6696,9 +6606,13 @@ country_event = {
 
 	is_triggered_only = yes
 
+	#MP
+	major = yes
+
 	trigger = {
 		tag = Y91
-	}
+		# ai = no
+	}#MPFIX
 
 	option = {
 		name = flavor_nuugdan_tsarai.104.a
@@ -6739,5 +6653,18 @@ country_event = {
 		baztazhad_area = { add_core = ROOT }
 		zunkazhad_area = { add_core = ROOT }
 		zirariik_area = { add_core = ROOT }
+
+		#mp
+		set_capital = 5406
+		hidden_effect = {
+			4919 = {
+				if = { 
+					limit = { NOT = { has_building = fort_15th } }
+					add_building = fort_15th
+				}
+			}
+		}
+		country_event = { id = mp.156 days = 90 }
+		country_event = { id = mp.163 days = 365 }
 	}
 }
