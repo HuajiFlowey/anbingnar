@@ -1,0 +1,15 @@
+#苦海（Y27）飞腾体系激活桥（2026-08-30 裁剪后新增）
+#本体 feiten 机制依赖全局事件目标 feiten_or_was_feiten_target（本体仅对 Y20 及其变体保存）。苦海成立时已保存该目标（Flavour_anbi_kuhai_Y27），本桥在目标失效（国家灭亡）时按原 anbi PTM 兜底逻辑重建；Y20 存活期间不抢占。
+on_monthly_pulse = {
+	if = {
+		limit = {
+			OR = { tag = Y27 was_tag = Y27 }
+			NOT = {
+				any_country = {
+					tag = event_target:feiten_or_was_feiten_target
+				}
+			}
+		}
+		save_global_event_target_as = feiten_or_was_feiten_target
+	}
+}

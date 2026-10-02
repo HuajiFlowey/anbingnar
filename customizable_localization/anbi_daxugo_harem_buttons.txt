@@ -1,0 +1,2941 @@
+#后宫管理GUI按钮文本定义
+#按钮文本使用动态本地化以支持多条件切换
+#每种行动种类（marriage/stability/building）下按选中宫殿（selected_* flag）区分文本：8 按钮 × 8 宫殿 = 64 种/种类；
+#本文件含两组 defined_text（均为 random = no 顺序匹配）：
+#  · DaxugoHaremButtonText1~8 → 按钮「显示文字」（文本框），文案键 ANBI_DAXUGO_HAREM_button_<N>_<种类>_<宫殿>（26 段）
+#  · DaxugoHaremActionTT1~8   → 按钮 tooltip 的「风味文本」段，文案键 ANBI_DAXUGO_HAREM_action_tt_<种类>_<N>_<宫殿>（25 段）
+#    该段自 2026-09-12 起为占位符，待人工填充；「执行效果说明」不在此文件，
+#    由 scripted_effects/anbi_Y98_harem.txt 各 _effect 钩子内的 custom_tooltip 承载（人工自行添加）。
+#special 种类不绑定宫殿，每按钮 1 种文本。
+
+defined_text = {
+	name = DaxugoHaremButtonText1
+	random = no
+
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_marriage_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_marriage_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_marriage_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_marriage_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_marriage_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_marriage_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_marriage_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_marriage_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_stability_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_stability_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_stability_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_stability_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_stability_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_stability_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_stability_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_stability_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_building_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_building_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_building_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_building_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_building_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_building_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_building_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_building_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_1_special
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_default
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = DaxugoHaremButtonText2
+	random = no
+
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_marriage_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_marriage_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_marriage_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_marriage_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_marriage_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_marriage_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_marriage_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_marriage_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_stability_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_stability_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_stability_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_stability_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_stability_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_stability_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_stability_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_stability_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_building_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_building_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_building_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_building_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_building_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_building_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_building_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_building_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_2_special
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_default
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = DaxugoHaremButtonText3
+	random = no
+
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_marriage_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_marriage_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_marriage_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_marriage_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_marriage_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_marriage_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_marriage_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_marriage_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_stability_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_stability_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_stability_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_stability_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_stability_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_stability_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_stability_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_stability_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_building_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_building_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_building_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_building_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_building_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_building_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_building_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_building_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_3_special
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_default
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = DaxugoHaremButtonText4
+	random = no
+
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_marriage_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_marriage_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_marriage_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_marriage_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_marriage_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_marriage_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_marriage_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_marriage_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_stability_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_stability_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_stability_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_stability_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_stability_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_stability_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_stability_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_stability_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_building_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_building_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_building_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_building_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_building_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_building_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_building_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_building_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_4_special
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_default
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = DaxugoHaremButtonText5
+	random = no
+
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_marriage_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_marriage_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_marriage_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_marriage_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_marriage_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_marriage_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_marriage_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_marriage_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_stability_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_stability_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_stability_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_stability_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_stability_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_stability_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_stability_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_stability_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_building_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_building_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_building_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_building_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_building_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_building_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_building_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_building_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_5_special
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_default
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = DaxugoHaremButtonText6
+	random = no
+
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_marriage_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_marriage_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_marriage_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_marriage_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_marriage_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_marriage_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_marriage_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_marriage_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_stability_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_stability_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_stability_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_stability_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_stability_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_stability_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_stability_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_stability_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_building_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_building_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_building_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_building_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_building_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_building_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_building_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_building_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_6_special
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_default
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = DaxugoHaremButtonText7
+	random = no
+
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_marriage_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_marriage_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_marriage_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_marriage_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_marriage_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_marriage_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_marriage_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_marriage_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_stability_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_stability_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_stability_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_stability_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_stability_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_stability_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_stability_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_stability_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_building_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_building_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_building_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_building_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_building_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_building_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_building_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_building_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_7_special
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_default
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = DaxugoHaremButtonText8
+	random = no
+
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_marriage_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_marriage_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_marriage_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_marriage_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_marriage_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_marriage_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_marriage_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_marriage_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_stability_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_stability_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_stability_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_stability_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_stability_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_stability_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_stability_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_stability_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_building_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_building_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_building_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_building_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_building_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_building_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_building_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_building_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_8_special
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_default
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+#========== 后宫行动按钮 tooltip（2026-09-12 新增） ==========
+#_tt 键的值为 [Root.DaxugoHaremActionTT<槽位>]，由这里按 action_type × menu_selected 分支到具体宫殿文案；
+#结构镜像 DaxugoHaremButtonText1..8（按钮显示文字），但指向独立的 ANBI_DAXUGO_HAREM_action_tt_* 文案键。
+defined_text = {
+	name = DaxugoHaremActionTT1
+	random = no
+
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_1_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_1_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_1_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_1_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_1_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_1_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_1_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_1_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_1_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_1_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_1_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_1_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_1_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_1_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_1_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_1_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_1_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_1_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_1_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_1_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_1_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_1_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_1_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_1_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_default
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = DaxugoHaremActionTT2
+	random = no
+
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_2_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_2_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_2_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_2_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_2_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_2_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_2_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_2_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_2_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_2_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_2_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_2_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_2_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_2_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_2_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_2_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_2_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_2_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_2_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_2_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_2_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_2_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_2_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_2_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_default
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = DaxugoHaremActionTT3
+	random = no
+
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_3_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_3_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_3_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_3_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_3_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_3_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_3_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_3_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_3_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_3_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_3_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_3_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_3_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_3_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_3_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_3_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_3_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_3_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_3_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_3_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_3_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_3_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_3_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_3_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_default
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = DaxugoHaremActionTT4
+	random = no
+
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_4_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_4_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_4_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_4_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_4_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_4_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_4_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_4_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_4_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_4_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_4_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_4_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_4_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_4_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_4_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_4_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_4_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_4_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_4_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_4_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_4_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_4_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_4_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_4_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_default
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = DaxugoHaremActionTT5
+	random = no
+
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_5_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_5_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_5_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_5_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_5_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_5_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_5_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_5_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_5_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_5_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_5_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_5_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_5_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_5_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_5_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_5_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_5_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_5_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_5_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_5_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_5_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_5_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_5_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_5_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_default
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = DaxugoHaremActionTT6
+	random = no
+
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_6_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_6_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_6_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_6_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_6_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_6_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_6_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_6_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_6_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_6_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_6_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_6_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_6_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_6_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_6_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_6_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_6_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_6_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_6_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_6_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_6_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_6_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_6_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_6_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_default
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = DaxugoHaremActionTT7
+	random = no
+
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_7_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_7_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_7_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_7_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_7_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_7_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_7_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_7_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_7_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_7_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_7_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_7_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_7_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_7_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_7_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_7_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_7_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_7_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_7_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_7_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_7_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_7_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_7_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_7_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_default
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = DaxugoHaremActionTT8
+	random = no
+
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_8_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_8_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_8_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_8_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_8_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_8_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_8_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_marriage_8_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_8_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_8_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_8_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_8_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_8_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_8_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_8_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_stability_8_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_8_yanshen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_8_kai
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_8_tanxiang
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_8_jinan
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_8_rahen
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_8_harimari
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_8_khet
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_action_tt_building_8_burwar
+		trigger = {
+			is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+			is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+		}
+	}
+	text = {
+		localisation_key = ANBI_DAXUGO_HAREM_button_default
+		trigger = {
+			always = yes
+		}
+	}
+}

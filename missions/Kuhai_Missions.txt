@@ -260,7 +260,7 @@ kuhai_start_2 = {
 			anbi_kuhai_the_sisiter_yinquan
 		}
 		provinces_to_highlight = {
-			province_group = original_yanszin
+			province_group = yanszin_heartland_group
 			NOT = {
 				owned_by = ROOT
 				owned_by = Y05
@@ -273,7 +273,7 @@ kuhai_start_2 = {
 				NOT = { is_subject = yes } 
 			}
 			4868 = { owned_by = Y05 } 
-			original_yanszin = {
+			yanszin_heartland_group= {
 				type = all
 				OR = {
 					country_or_non_sovereign_subject_holds = ROOT
@@ -1335,6 +1335,13 @@ kuhai_second_3 = {
 				}
 			}
 			custom_tooltip = anbi_kuhai_the_world_is_ours_ct2
+			hidden_effect = {
+				every_subject_country = {
+					country_event = {
+						id = anbi_kuhai.1009 
+					}
+				}
+			}
 		}
 	}
 
@@ -1470,15 +1477,7 @@ kuhai_second_4 = {
 			change_government_reform_progress = -100
 			add_government_reform = anbi_kuhai_zhengdao_path_department
 			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						OR = {
-							religion = accretive_path
-							religion = transmutative_path
-						}
-					}
-					change_religion = zhengdao_path
-				}
+				every_owned_province = { province_event = { id = anbi_kuhai.1007 } }
 			}
 		}
 	}
@@ -2696,7 +2695,7 @@ kuhai_development_1 = {
 				owns_core_province = 4411
 				owns_core_province = 4435
 			}
-			have_cast_aid_construction = yes
+			# have_cast_aid_construction = yes
 		}
 
 		effect = {

@@ -85,7 +85,6 @@ country_event = {
 		NOT = { has_reform = vels_bacar_bacaran_republic }
 		NOT = { has_reform = technocracy_republic_reform }
 		NOT = { has_reform = imperial_technocracy_republic_reform }
-		NOT = { has_country_modifier = thirabnir_stayin_alive } #I wish I wasn't forced to do this, but life extension doesn't work
 		NOT = { has_reform = racial_tolerance_reform }
 		NOT = { has_reform = abyssal_otardom_reform }
 		NOT = { has_reform = forge_council_reform }
@@ -337,7 +336,7 @@ country_event = {
 		if = {
 			limit = { 
 				has_country_modifier = harpy_administration
-				NOT = { has_reform = signoria_reform }
+				# NOT = { has_reform = signoria_reform }
 			}
 			define_ruler = {
 				change_mil = -2
@@ -352,7 +351,7 @@ country_event = {
 		else_if = {
 			limit = { 
 				republic_with_female_rulers_trigger = yes
-				NOT = { has_reform = signoria_reform }
+				# NOT = { has_reform = signoria_reform }
 			}
 			define_ruler = {
 				change_mil = -2
@@ -367,7 +366,7 @@ country_event = {
 		else_if = {
 			limit = { 
 				has_country_modifier = harpy_administration
-				has_reform = signoria_reform
+				# has_reform = signoria_reform
 			}
 			define_ruler = {
 				min_age = 30
@@ -379,7 +378,7 @@ country_event = {
 		else_if = {
 			limit = { 
 				republic_with_female_rulers_trigger = yes
-				has_reform = signoria_reform
+				# has_reform = signoria_reform
 			}
 			define_ruler = {
 				min_age = 30
@@ -390,7 +389,7 @@ country_event = {
 		}
 		else_if = {
 			limit = { 
-				has_reform = signoria_reform
+				# has_reform = signoria_reform
 			}
 			define_ruler = {
 				min_age = 30

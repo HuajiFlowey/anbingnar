@@ -322,7 +322,7 @@ bloody_canstanor_first_3 = {
 		has_country_flag = AB1_panzer_bloodtooth_cf
 	}
 
-	anbi_ab1_the_start_of_blood = {
+	anbi_ab1_the_start_of_blood = {		
 		icon = mission_comet_star_animated
 		position = 1
 		provinces_to_highlight = {  } 
@@ -3712,7 +3712,7 @@ bloody_canstanor_eating_3 = {
 					limit = { NOT = { province_id = 259 }  } 
 					add_province_triggered_modifier = castanor_river_support
 				}
-				heartland_borders_area = {
+				crownshields_area = {
 					limit = { NOT = { province_id = 255 }  } 
 					add_province_triggered_modifier = castanor_river_support
 				}

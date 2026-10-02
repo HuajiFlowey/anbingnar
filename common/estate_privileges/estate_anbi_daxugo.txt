@@ -1,0 +1,130 @@
+anbi_daxugo_waiqi_harem_privilege = {
+	icon = privilege_royal_marriage
+	max_absolutism = 0
+	loyalty = 0
+	influence = 0
+	is_valid = {  
+		has_reform = anbi_daxugo_harem_reform
+	}	
+	can_select = { 
+		always = no	
+	} 					 					
+	can_revoke = { 
+		always = no
+	} 					 		
+	benefits = { 
+		nobles_privilege_slots = 1 
+		heir_chance = 0.5
+	}	
+	on_granted = {
+		custom_tooltip = anbi_daxugo_waiqi_harem_privilege_ct
+		scaling_with_influence_privilege_tooltip = { estate_privilege = anbi_daxugo_waiqi_harem_privilege }
+		scaling_with_influence_privilege_tooltip_one_modifier = { estate_privilege = anbi_daxugo_waiqi_harem_privilege }
+	}
+	on_revoked = {
+		custom_tooltip = anbi_daxugo_waiqi_harem_privilege_ct
+		scaling_with_influence_privilege_tooltip = { estate_privilege = anbi_daxugo_waiqi_harem_privilege }
+		scaling_with_influence_privilege_tooltip_one_modifier = { estate_privilege = anbi_daxugo_waiqi_harem_privilege }
+	}
+	influence_scaled_conditional_modifier = {
+		is_bad = yes
+		trigger = {
+			estate_influence = {
+				estate = estate_nobles
+				influence = 100
+			}
+		}
+		modifier = {
+			nobles_loyalty_modifier = -0.1
+			min_autonomy = 0.1
+			min_autonomy_in_territories = 0.1
+		}
+	}
+	influence_scaled_conditional_modifier = {
+		is_bad = yes
+		modifier = {
+			yearly_corruption = 0.2
+			global_autonomy = 0.1
+			global_tax_modifier = -0.25
+			global_tax_income = -60
+			global_unrest = -2
+		}
+	}
+	influence_scaled_conditional_modifier = {
+		trigger = {
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 30
+			}
+			NOT = {
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}
+			}
+		}
+		modifier = { 
+			land_forcelimit_modifier = 0.2
+			land_morale = 0.1
+			cavalry_shock = 0.3
+		}
+	}
+	influence_scaled_conditional_modifier = {
+		is_bad = yes
+		trigger = {
+			NOT = {
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 30
+				}
+			}
+		}
+		modifier = { 
+			global_unrest = 5
+			ae_impact = 0.2
+			prestige = -5
+			legitimacy = -5
+		}
+	}
+	influence_scaled_conditional_modifier = {
+		trigger = {
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 60
+			}
+		}
+		modifier = { 
+			land_forcelimit_modifier = 0.3
+			land_morale = 0.15
+			cavalry_shock = 0.6
+			global_manpower = 50
+		}
+	}
+	ai_will_do = { factor = 0 }
+}
+anbi_daxugo_shangxu_harem_privilege = {
+	icon = privilege_make_generous_donation
+	max_absolutism = 0
+	loyalty = 0
+	influence = 0
+	is_valid = {  
+		has_reform = anbi_daxugo_harem_reform
+	}	
+	can_select = { 
+		always = no	
+	} 					 					
+	can_revoke = { 
+		always = no
+	} 					 		
+	ai_will_do = { factor = 0 }
+	benefits = {
+		burghers_privilege_slots = 1
+		trade_range_modifier = 0.25
+	}
+	on_granted = {
+		custom_tooltip = anbi_daxugo_shangxu_harem_privilege_ct
+	}
+	on_revoked = {
+		custom_tooltip = anbi_daxugo_shangxu_harem_privilege_ct
+	}
+}

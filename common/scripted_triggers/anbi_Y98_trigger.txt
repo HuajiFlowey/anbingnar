@@ -7,72 +7,2267 @@ anbi_daxugo_new_consort = {
 		}
 	}
 }
+#========== 后宫行动可用条件模块（按钮级，可独立编辑，2026-08） ==========
+#命名：anbi_daxugo_harem_menu_action_<种类>_<按钮N>_<宫殿>_available
+#每个按钮（1~8）× 每种行动（marriage/stability/building）× 每个宫殿 都有独立条件模块，
+#与 common/scripted_effects/anbi_Y98_harem.txt 中 action_<种类>_<N> 效果脚本的宫殿分支一一对应；
+#special 不绑定宫殿，按按钮 N 独立模块。在 TODO 处填写可用条件（返回 true 即可用）。
+#---- tooltip 写法（2026-09-12 第六场修正） ----
+#本文件是 trigger 文件，给条件换显文案必须用 custom_trigger_tooltip，参数名为 tooltip：
+#	custom_trigger_tooltip = {
+#		tooltip = <本地化键>
+#		<被包装的触发器...>
+#	}
+#注意：custom_tooltip 是 effect（参数名 text，且不接受触发器块），写在 trigger 里非法。
+#      effect 文件（如 scripted_effects/anbi_Y98_harem.txt）里的单值 custom_tooltip = <键> 才是合法用法。
+anbi_daxugo_harem_menu_action_marriage_1_yanshen_available = {
+	#婚姻行动 1 @ 神召宫 可用条件（对应 action_marriage_1 的神召宫分支）
+	NOT = { has_country_modifier = anbi_daxugo_harem_yanshen_marriage_1_cooldown }
+}
 
-Y98_independence_random = {
-	OR = {
-		is_variable_equal = {
-			which = anbi_daxugo_harem_independence_random1
-			value = $count$
-		}
-		is_variable_equal = {
-			which = anbi_daxugo_harem_independence_random2
-			value = $count$
-		}
-		is_variable_equal = {
-			which = anbi_daxugo_harem_independence_random3
-			value = $count$
-		}
-		is_variable_equal = {
-			which = anbi_daxugo_harem_independence_random4
-			value = $count$
-		}
-		is_variable_equal = {
-			which = anbi_daxugo_harem_independence_random5
-			value = $count$
-		}
-		is_variable_equal = {
-			which = anbi_daxugo_harem_independence_random6
-			value = $count$
-		}
-		is_variable_equal = {
-			which = anbi_daxugo_harem_independence_random7
-			value = $count$
-		}
-		is_variable_equal = {
-			which = anbi_daxugo_harem_independence_random8
-			value = $count$
-		}
-		is_variable_equal = {
-			which = anbi_daxugo_harem_independence_random9
-			value = $count$
-		}
-		is_variable_equal = {
-			which = anbi_daxugo_harem_independence_random10
-			value = $count$
-		}
-		is_variable_equal = {
-			which = anbi_daxugo_harem_independence_random11
-			value = $count$
-		}
-		is_variable_equal = {
-			which = anbi_daxugo_harem_independence_random12
-			value = $count$
-		}
-		is_variable_equal = {
-			which = anbi_daxugo_harem_independence_random13
-			value = $count$
-		}
-		is_variable_equal = {
-			which = anbi_daxugo_harem_independence_random14
-			value = $count$
-		}
-		is_variable_equal = {
-			which = anbi_daxugo_harem_independence_random15
-			value = $count$
-		}
-		is_variable_equal = {
-			which = anbi_daxugo_harem_independence_random16
-			value = $count$
-		}
+anbi_daxugo_harem_menu_action_marriage_1_kai_available = {
+	#: 婚姻行动 1 @ 华盖宫 可用条件（对应 action_marriage_1 的华盖宫分支）
+	NOT = { has_country_modifier = anbi_daxugo_harem_kai_marriage_1_cooldown }
+	
+}
+
+anbi_daxugo_harem_menu_action_marriage_1_tanxiang_available = {
+	#: 婚姻行动 1 @ 檀香宫 可用条件（对应 action_marriage_1 的檀香宫分支）
+	NOT = { has_country_modifier = anbi_daxugo_harem_tanxiang_marriage_1_cooldown }
+	
+}
+
+anbi_daxugo_harem_menu_action_marriage_1_jinan_available = {
+	#: 婚姻行动 1 @ 极南宫 可用条件（对应 action_marriage_1 的极南宫分支）
+	NOT = { has_country_modifier = anbi_daxugo_harem_jinan_marriage_1_cooldown }
+	
+}
+
+anbi_daxugo_harem_menu_action_marriage_1_rahen_available = {
+	#: 婚姻行动 1 @ 罗祆宫 可用条件（对应 action_marriage_1 的罗祆宫分支）
+	NOT = { has_country_modifier = anbi_daxugo_harem_rahen_marriage_1_cooldown }
+	
+}
+
+anbi_daxugo_harem_menu_action_marriage_1_harimari_available = {
+	#: 婚姻行动 1 @ 虎人宫 可用条件（对应 action_marriage_1 的虎人宫分支）
+	NOT = { has_country_modifier = anbi_daxugo_harem_harimari_marriage_1_cooldown }
+	
+}
+
+anbi_daxugo_harem_menu_action_marriage_1_khet_available = {
+	#: 婚姻行动 1 @ 赫特宫 可用条件（对应 action_marriage_1 的赫特宫分支）
+	NOT = { has_country_modifier = anbi_daxugo_harem_khet_marriage_1_cooldown }
+	
+}
+
+anbi_daxugo_harem_menu_action_marriage_1_burwar_available = {
+	#: 婚姻行动 1 @ 布勒宫 可用条件（对应 action_marriage_1 的布勒宫分支）
+	NOT = { has_country_modifier = anbi_daxugo_harem_burwar_marriage_1_cooldown }
+	
+}
+
+anbi_daxugo_harem_menu_action_marriage_2_yanshen_available = {
+	#婚姻行动 2 @ 神召宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	#注：原 has_country_flag = anbi_daxugo_harem_yanshen_has_consort 已移除——该 flag 全 mod 无人 set，会导致本按钮永久灰置。
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_yanshen_marriage_1_cooldown
 	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_marriage_2_used }
+	}
+	anbi_daxugo_harem_menu_action_marriage_2_is_human = yes #空触发器，留作后续物种判定
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_2_kai_available = {
+	#婚姻行动 2 @ 华盖宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	#注：原 has_country_flag = anbi_daxugo_harem_kai_has_consort 已移除——该 flag 全 mod 无人 set，会导致本按钮永久灰置。
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_kai_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_marriage_2_used }
+	}
+	anbi_daxugo_harem_menu_action_marriage_2_is_human = yes #空触发器，留作后续物种判定
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_2_tanxiang_available = {
+	#婚姻行动 2 @ 檀香宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	#注：原 has_country_flag = anbi_daxugo_harem_tanxiang_has_consort 已移除——该 flag 全 mod 无人 set，会导致本按钮永久灰置。
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_tanxiang_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_marriage_2_used }
+	}
+	anbi_daxugo_harem_menu_action_marriage_2_is_human = yes #空触发器，留作后续物种判定
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_2_jinan_available = {
+	#婚姻行动 2 @ 极南宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	#注：原 has_country_flag = anbi_daxugo_harem_jinan_has_consort 已移除——该 flag 全 mod 无人 set，会导致本按钮永久灰置。
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_jinan_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_marriage_2_used }
+	}
+	anbi_daxugo_harem_menu_action_marriage_2_is_human = yes #空触发器，留作后续物种判定
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_2_rahen_available = {
+	#婚姻行动 2 @ 罗祆宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	#注：原 has_country_flag = anbi_daxugo_harem_rahen_has_consort 已移除——该 flag 全 mod 无人 set，会导致本按钮永久灰置。
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_rahen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_marriage_2_used }
+	}
+	anbi_daxugo_harem_menu_action_marriage_2_is_human = yes #空触发器，留作后续物种判定
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_2_harimari_available = {
+	#婚姻行动 2 @ 虎人宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	#注：原 has_country_flag = anbi_daxugo_harem_harimari_has_consort 已移除——该 flag 全 mod 无人 set，会导致本按钮永久灰置。
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_harimari_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_marriage_2_used }
+	}
+	anbi_daxugo_harem_menu_action_marriage_2_is_human = yes #空触发器，留作后续物种判定
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_2_khet_available = {
+	#婚姻行动 2 @ 赫特宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	#注：原 has_country_flag = anbi_daxugo_harem_khet_has_consort 已移除——该 flag 全 mod 无人 set，会导致本按钮永久灰置。
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_khet_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_marriage_2_used }
+	}
+	anbi_daxugo_harem_menu_action_marriage_2_is_human = yes #空触发器，留作后续物种判定
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_2_burwar_available = {
+	#婚姻行动 2 @ 布勒宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	#注：原 has_country_flag = anbi_daxugo_harem_burwar_has_consort 已移除——该 flag 全 mod 无人 set，会导致本按钮永久灰置。
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_burwar_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_marriage_2_used }
+	}
+	anbi_daxugo_harem_menu_action_marriage_2_is_human = yes #空触发器，留作后续物种判定
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_3_yanshen_available = {
+	#婚姻行动 3 @ 神召宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_yanshen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_marriage_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_3_kai_available = {
+	#婚姻行动 3 @ 华盖宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_kai_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_marriage_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_3_tanxiang_available = {
+	#婚姻行动 3 @ 檀香宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_tanxiang_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_marriage_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_3_jinan_available = {
+	#婚姻行动 3 @ 极南宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_jinan_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_marriage_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_3_rahen_available = {
+	#婚姻行动 3 @ 罗祆宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_rahen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_marriage_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_3_harimari_available = {
+	#婚姻行动 3 @ 虎人宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_harimari_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_marriage_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_3_khet_available = {
+	#婚姻行动 3 @ 赫特宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_khet_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_marriage_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_3_burwar_available = {
+	#婚姻行动 3 @ 布勒宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_burwar_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_marriage_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_4_yanshen_available = {
+	#婚姻行动 4 @ 神召宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_yanshen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_marriage_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_4_kai_available = {
+	#婚姻行动 4 @ 华盖宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_kai_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_marriage_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_4_tanxiang_available = {
+	#婚姻行动 4 @ 檀香宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_tanxiang_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_marriage_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_4_jinan_available = {
+	#婚姻行动 4 @ 极南宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_jinan_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_marriage_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_4_rahen_available = {
+	#婚姻行动 4 @ 罗祆宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_rahen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_marriage_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_4_harimari_available = {
+	#婚姻行动 4 @ 虎人宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_harimari_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_marriage_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_4_khet_available = {
+	#婚姻行动 4 @ 赫特宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_khet_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_marriage_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_4_burwar_available = {
+	#婚姻行动 4 @ 布勒宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_burwar_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_marriage_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_5_yanshen_available = {
+	#婚姻行动 5 @ 神召宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_yanshen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_marriage_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_5_kai_available = {
+	#婚姻行动 5 @ 华盖宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_kai_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_marriage_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_5_tanxiang_available = {
+	#婚姻行动 5 @ 檀香宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_tanxiang_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_marriage_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_5_jinan_available = {
+	#婚姻行动 5 @ 极南宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_jinan_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_marriage_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_5_rahen_available = {
+	#婚姻行动 5 @ 罗祆宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_rahen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_marriage_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_5_harimari_available = {
+	#婚姻行动 5 @ 虎人宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_harimari_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_marriage_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_5_khet_available = {
+	#婚姻行动 5 @ 赫特宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_khet_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_marriage_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_5_burwar_available = {
+	#婚姻行动 5 @ 布勒宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_burwar_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_marriage_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_6_yanshen_available = {
+	#婚姻行动 6 @ 神召宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_yanshen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_marriage_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_6_kai_available = {
+	#婚姻行动 6 @ 华盖宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_kai_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_marriage_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_6_tanxiang_available = {
+	#婚姻行动 6 @ 檀香宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_tanxiang_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_marriage_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_6_jinan_available = {
+	#婚姻行动 6 @ 极南宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_jinan_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_marriage_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_6_rahen_available = {
+	#婚姻行动 6 @ 罗祆宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_rahen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_marriage_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_6_harimari_available = {
+	#婚姻行动 6 @ 虎人宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_harimari_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_marriage_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_6_khet_available = {
+	#婚姻行动 6 @ 赫特宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_khet_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_marriage_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_6_burwar_available = {
+	#婚姻行动 6 @ 布勒宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_burwar_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_marriage_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_7_yanshen_available = {
+	#婚姻行动 7 @ 神召宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_yanshen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_marriage_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_7_kai_available = {
+	#婚姻行动 7 @ 华盖宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_kai_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_marriage_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_7_tanxiang_available = {
+	#婚姻行动 7 @ 檀香宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_tanxiang_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_marriage_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_7_jinan_available = {
+	#婚姻行动 7 @ 极南宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_jinan_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_marriage_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_7_rahen_available = {
+	#婚姻行动 7 @ 罗祆宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_rahen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_marriage_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_7_harimari_available = {
+	#婚姻行动 7 @ 虎人宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_harimari_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_marriage_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_7_khet_available = {
+	#婚姻行动 7 @ 赫特宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_khet_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_marriage_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_7_burwar_available = {
+	#婚姻行动 7 @ 布勒宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_burwar_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_marriage_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_8_yanshen_available = {
+	#婚姻行动 8 @ 神召宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_yanshen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_marriage_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_8_kai_available = {
+	#婚姻行动 8 @ 华盖宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_kai_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_marriage_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_8_tanxiang_available = {
+	#婚姻行动 8 @ 檀香宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_tanxiang_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_marriage_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_8_jinan_available = {
+	#婚姻行动 8 @ 极南宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_jinan_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_marriage_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_8_rahen_available = {
+	#婚姻行动 8 @ 罗祆宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_rahen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_marriage_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_8_harimari_available = {
+	#婚姻行动 8 @ 虎人宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_harimari_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_marriage_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_8_khet_available = {
+	#婚姻行动 8 @ 赫特宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_khet_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_marriage_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_marriage_8_burwar_available = {
+	#婚姻行动 8 @ 布勒宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_burwar_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_marriage_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_1_yanshen_available = {
+	#稳定行动 1 @ 神召宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_yanshen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_stability_1_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_1_kai_available = {
+	#稳定行动 1 @ 华盖宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_kai_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_stability_1_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_1_tanxiang_available = {
+	#稳定行动 1 @ 檀香宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_tanxiang_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_stability_1_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_1_jinan_available = {
+	#稳定行动 1 @ 极南宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_jinan_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_stability_1_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_1_rahen_available = {
+	#稳定行动 1 @ 罗祆宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_rahen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_stability_1_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_1_harimari_available = {
+	#稳定行动 1 @ 虎人宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_harimari_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_stability_1_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_1_khet_available = {
+	#稳定行动 1 @ 赫特宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_khet_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_stability_1_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_1_burwar_available = {
+	#稳定行动 1 @ 布勒宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_burwar_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_stability_1_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_2_yanshen_available = {
+	#稳定行动 2 @ 神召宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_yanshen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_stability_2_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_2_kai_available = {
+	#稳定行动 2 @ 华盖宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_kai_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_stability_2_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_2_tanxiang_available = {
+	#稳定行动 2 @ 檀香宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_tanxiang_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_stability_2_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_2_jinan_available = {
+	#稳定行动 2 @ 极南宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_jinan_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_stability_2_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_2_rahen_available = {
+	#稳定行动 2 @ 罗祆宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_rahen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_stability_2_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_2_harimari_available = {
+	#稳定行动 2 @ 虎人宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_harimari_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_stability_2_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_2_khet_available = {
+	#稳定行动 2 @ 赫特宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_khet_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_stability_2_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_2_burwar_available = {
+	#稳定行动 2 @ 布勒宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_burwar_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_stability_2_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_3_yanshen_available = {
+	#稳定行动 3 @ 神召宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_yanshen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_stability_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_3_kai_available = {
+	#稳定行动 3 @ 华盖宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_kai_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_stability_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_3_tanxiang_available = {
+	#稳定行动 3 @ 檀香宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_tanxiang_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_stability_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_3_jinan_available = {
+	#稳定行动 3 @ 极南宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_jinan_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_stability_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_3_rahen_available = {
+	#稳定行动 3 @ 罗祆宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_rahen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_stability_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_3_harimari_available = {
+	#稳定行动 3 @ 虎人宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_harimari_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_stability_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_3_khet_available = {
+	#稳定行动 3 @ 赫特宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_khet_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_stability_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_3_burwar_available = {
+	#稳定行动 3 @ 布勒宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_burwar_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_stability_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_4_yanshen_available = {
+	#稳定行动 4 @ 神召宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_yanshen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_stability_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_4_kai_available = {
+	#稳定行动 4 @ 华盖宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_kai_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_stability_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_4_tanxiang_available = {
+	#稳定行动 4 @ 檀香宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_tanxiang_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_stability_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_4_jinan_available = {
+	#稳定行动 4 @ 极南宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_jinan_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_stability_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_4_rahen_available = {
+	#稳定行动 4 @ 罗祆宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_rahen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_stability_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_4_harimari_available = {
+	#稳定行动 4 @ 虎人宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_harimari_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_stability_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_4_khet_available = {
+	#稳定行动 4 @ 赫特宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_khet_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_stability_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_4_burwar_available = {
+	#稳定行动 4 @ 布勒宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_burwar_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_stability_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_5_yanshen_available = {
+	#稳定行动 5 @ 神召宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_yanshen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_stability_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_5_kai_available = {
+	#稳定行动 5 @ 华盖宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_kai_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_stability_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_5_tanxiang_available = {
+	#稳定行动 5 @ 檀香宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_tanxiang_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_stability_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_5_jinan_available = {
+	#稳定行动 5 @ 极南宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_jinan_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_stability_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_5_rahen_available = {
+	#稳定行动 5 @ 罗祆宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_rahen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_stability_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_5_harimari_available = {
+	#稳定行动 5 @ 虎人宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_harimari_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_stability_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_5_khet_available = {
+	#稳定行动 5 @ 赫特宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_khet_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_stability_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_5_burwar_available = {
+	#稳定行动 5 @ 布勒宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_burwar_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_stability_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_6_yanshen_available = {
+	#稳定行动 6 @ 神召宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_yanshen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_stability_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_6_kai_available = {
+	#稳定行动 6 @ 华盖宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_kai_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_stability_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_6_tanxiang_available = {
+	#稳定行动 6 @ 檀香宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_tanxiang_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_stability_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_6_jinan_available = {
+	#稳定行动 6 @ 极南宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_jinan_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_stability_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_6_rahen_available = {
+	#稳定行动 6 @ 罗祆宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_rahen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_stability_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_6_harimari_available = {
+	#稳定行动 6 @ 虎人宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_harimari_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_stability_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_6_khet_available = {
+	#稳定行动 6 @ 赫特宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_khet_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_stability_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_6_burwar_available = {
+	#稳定行动 6 @ 布勒宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_burwar_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_stability_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_7_yanshen_available = {
+	#稳定行动 7 @ 神召宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_yanshen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_stability_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_7_kai_available = {
+	#稳定行动 7 @ 华盖宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_kai_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_stability_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_7_tanxiang_available = {
+	#稳定行动 7 @ 檀香宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_tanxiang_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_stability_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_7_jinan_available = {
+	#稳定行动 7 @ 极南宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_jinan_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_stability_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_7_rahen_available = {
+	#稳定行动 7 @ 罗祆宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_rahen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_stability_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_7_harimari_available = {
+	#稳定行动 7 @ 虎人宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_harimari_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_stability_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_7_khet_available = {
+	#稳定行动 7 @ 赫特宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_khet_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_stability_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_7_burwar_available = {
+	#稳定行动 7 @ 布勒宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_burwar_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_stability_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_8_yanshen_available = {
+	#稳定行动 8 @ 神召宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_yanshen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_stability_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_8_kai_available = {
+	#稳定行动 8 @ 华盖宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_kai_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_stability_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_8_tanxiang_available = {
+	#稳定行动 8 @ 檀香宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_tanxiang_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_stability_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_8_jinan_available = {
+	#稳定行动 8 @ 极南宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_jinan_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_stability_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_8_rahen_available = {
+	#稳定行动 8 @ 罗祆宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_rahen_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_stability_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_8_harimari_available = {
+	#稳定行动 8 @ 虎人宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_harimari_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_stability_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_8_khet_available = {
+	#稳定行动 8 @ 赫特宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_khet_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_stability_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_stability_8_burwar_available = {
+	#稳定行动 8 @ 布勒宫 可用条件（周期版：须在婚姻行动一开启的本轮周期内，且本轮尚未执行过）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_cycle_open_ct
+		has_country_modifier = anbi_daxugo_harem_burwar_marriage_1_cooldown
+	}
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_action_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_stability_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_1_yanshen_available = {
+	#建筑行动 1 @ 神召宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_building_1_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_1_kai_available = {
+	#建筑行动 1 @ 华盖宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_building_1_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_1_tanxiang_available = {
+	#建筑行动 1 @ 檀香宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_building_1_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_1_jinan_available = {
+	#建筑行动 1 @ 极南宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_building_1_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_1_rahen_available = {
+	#建筑行动 1 @ 罗祆宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_building_1_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_1_harimari_available = {
+	#建筑行动 1 @ 虎人宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_building_1_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_1_khet_available = {
+	#建筑行动 1 @ 赫特宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_building_1_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_1_burwar_available = {
+	#建筑行动 1 @ 布勒宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_building_1_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_2_yanshen_available = {
+	#建筑行动 2 @ 神召宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_building_2_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_2_kai_available = {
+	#建筑行动 2 @ 华盖宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_building_2_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_2_tanxiang_available = {
+	#建筑行动 2 @ 檀香宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_building_2_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_2_jinan_available = {
+	#建筑行动 2 @ 极南宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_building_2_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_2_rahen_available = {
+	#建筑行动 2 @ 罗祆宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_building_2_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_2_harimari_available = {
+	#建筑行动 2 @ 虎人宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_building_2_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_2_khet_available = {
+	#建筑行动 2 @ 赫特宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_building_2_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_2_burwar_available = {
+	#建筑行动 2 @ 布勒宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_building_2_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_3_yanshen_available = {
+	#建筑行动 3 @ 神召宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_building_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_3_kai_available = {
+	#建筑行动 3 @ 华盖宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_building_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_3_tanxiang_available = {
+	#建筑行动 3 @ 檀香宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_building_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_3_jinan_available = {
+	#建筑行动 3 @ 极南宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_building_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_3_rahen_available = {
+	#建筑行动 3 @ 罗祆宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_building_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_3_harimari_available = {
+	#建筑行动 3 @ 虎人宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_building_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_3_khet_available = {
+	#建筑行动 3 @ 赫特宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_building_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_3_burwar_available = {
+	#建筑行动 3 @ 布勒宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_building_3_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_4_yanshen_available = {
+	#建筑行动 4 @ 神召宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_building_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_4_kai_available = {
+	#建筑行动 4 @ 华盖宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_building_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_4_tanxiang_available = {
+	#建筑行动 4 @ 檀香宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_building_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_4_jinan_available = {
+	#建筑行动 4 @ 极南宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_building_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_4_rahen_available = {
+	#建筑行动 4 @ 罗祆宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_building_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_4_harimari_available = {
+	#建筑行动 4 @ 虎人宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_building_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_4_khet_available = {
+	#建筑行动 4 @ 赫特宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_building_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_4_burwar_available = {
+	#建筑行动 4 @ 布勒宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_building_4_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_5_yanshen_available = {
+	#建筑行动 5 @ 神召宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_building_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_5_kai_available = {
+	#建筑行动 5 @ 华盖宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_building_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_5_tanxiang_available = {
+	#建筑行动 5 @ 檀香宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_building_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_5_jinan_available = {
+	#建筑行动 5 @ 极南宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_building_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_5_rahen_available = {
+	#建筑行动 5 @ 罗祆宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_building_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_5_harimari_available = {
+	#建筑行动 5 @ 虎人宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_building_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_5_khet_available = {
+	#建筑行动 5 @ 赫特宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_building_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_5_burwar_available = {
+	#建筑行动 5 @ 布勒宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_building_5_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_6_yanshen_available = {
+	#建筑行动 6 @ 神召宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_building_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_6_kai_available = {
+	#建筑行动 6 @ 华盖宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_building_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_6_tanxiang_available = {
+	#建筑行动 6 @ 檀香宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_building_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_6_jinan_available = {
+	#建筑行动 6 @ 极南宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_building_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_6_rahen_available = {
+	#建筑行动 6 @ 罗祆宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_building_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_6_harimari_available = {
+	#建筑行动 6 @ 虎人宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_building_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_6_khet_available = {
+	#建筑行动 6 @ 赫特宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_building_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_6_burwar_available = {
+	#建筑行动 6 @ 布勒宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_building_6_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_7_yanshen_available = {
+	#建筑行动 7 @ 神召宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_building_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_7_kai_available = {
+	#建筑行动 7 @ 华盖宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_building_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_7_tanxiang_available = {
+	#建筑行动 7 @ 檀香宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_building_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_7_jinan_available = {
+	#建筑行动 7 @ 极南宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_building_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_7_rahen_available = {
+	#建筑行动 7 @ 罗祆宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_building_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_7_harimari_available = {
+	#建筑行动 7 @ 虎人宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_building_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_7_khet_available = {
+	#建筑行动 7 @ 赫特宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_building_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_7_burwar_available = {
+	#建筑行动 7 @ 布勒宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_building_7_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_8_yanshen_available = {
+	#建筑行动 8 @ 神召宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_yanshen_building_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_8_kai_available = {
+	#建筑行动 8 @ 华盖宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_kai_building_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_8_tanxiang_available = {
+	#建筑行动 8 @ 檀香宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_tanxiang_building_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_8_jinan_available = {
+	#建筑行动 8 @ 极南宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_jinan_building_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_8_rahen_available = {
+	#建筑行动 8 @ 罗祆宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_rahen_building_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_8_harimari_available = {
+	#建筑行动 8 @ 虎人宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_harimari_building_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_8_khet_available = {
+	#建筑行动 8 @ 赫特宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_khet_building_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_building_8_burwar_available = {
+	#建筑行动 8 @ 布勒宫 可用条件（全程一次：执行后永久锁定，与婚姻周期无关）
+	custom_trigger_tooltip = {
+		tooltip = anbi_daxugo_harem_building_unused_ct
+		NOT = { has_country_flag = anbi_daxugo_harem_burwar_building_8_used }
+	}
+	#TODO: 可在上方继续追加真实条件
+}
+
+anbi_daxugo_harem_menu_action_special_1_available = {
+	#TODO: 特殊行动 1 可用条件（不绑定宫殿，对应 action_special_1）
+	always = yes
+}
+
+anbi_daxugo_harem_menu_action_special_2_available = {
+	#TODO: 特殊行动 2 可用条件（不绑定宫殿，对应 action_special_2）
+	always = yes
+}
+
+anbi_daxugo_harem_menu_action_special_3_available = {
+	#TODO: 特殊行动 3 可用条件（不绑定宫殿，对应 action_special_3）
+	always = yes
+}
+
+anbi_daxugo_harem_menu_action_special_4_available = {
+	#TODO: 特殊行动 4 可用条件（不绑定宫殿，对应 action_special_4）
+	always = yes
+}
+
+anbi_daxugo_harem_menu_action_special_5_available = {
+	#TODO: 特殊行动 5 可用条件（不绑定宫殿，对应 action_special_5）
+	always = yes
+}
+
+anbi_daxugo_harem_menu_action_special_6_available = {
+	#TODO: 特殊行动 6 可用条件（不绑定宫殿，对应 action_special_6）
+	always = yes
+}
+
+anbi_daxugo_harem_menu_action_special_7_available = {
+	#TODO: 特殊行动 7 可用条件（不绑定宫殿，对应 action_special_7）
+	always = yes
+}
+
+anbi_daxugo_harem_menu_action_special_8_available = {
+	#TODO: 特殊行动 8 可用条件（不绑定宫殿，对应 action_special_8）
+	always = yes
+}
+
+#========== 宫殿可用性参数化触发器（2026-08-29 参数化重构，取代旧 8 个分发框架 trigger_1~8） ==========
+#参数：$kind$=行动种类(marriage/stability/building)  $n$=按钮序号  $palace$=宫殿名  $palace_value$=宫殿变量值
+#变量只命中一个宫殿值，按钮侧 OR×8 调用后等价于「当前选中宫殿的可用条件模块」。
+#special 不绑定宫殿，按钮 trigger 直连 anbi_daxugo_harem_menu_action_special_<N>_available，不经此触发器。
+anbi_daxugo_harem_menu_palace_available = {
+	is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = $palace_value$ }
+	anbi_daxugo_harem_menu_action_$kind$_$n$_$palace$_available = yes
+}
+#特殊物种判定
+anbi_daxugo_harem_menu_action_marriage_2_is_human = {
+
 }

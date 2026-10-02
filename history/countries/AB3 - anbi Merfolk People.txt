@@ -1,5 +1,5 @@
 
-setup_vision = yes
+setup_vision_generic = yes
 government = anbingnar_monarchy
 add_government_reform = anbi_merfolk_the_refugee
 government_rank = 1

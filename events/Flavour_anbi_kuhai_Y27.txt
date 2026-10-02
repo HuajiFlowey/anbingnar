@@ -319,12 +319,12 @@ country_event = {
 		has_country_flag = anbi_kuhai_continue_the_blue_war_cf
 	}
 	mean_time_to_happen = {
-		days = 1
+		days = 30
 	}
 
 	option = {
 		name = anbi_kuhai.8.a
-		original_yanszin = {
+		yanszin_heartland_group= {
 			add_permanent_claim = ROOT
 		}
 		change_dip = 1
@@ -515,6 +515,10 @@ country_event = {
 		}
 		largest_increase_of_kobold_tolerance_effect = yes
 		anbi_add_kuhai_purple_var = yes
+		if = {
+			limit = { tag = Z65 }
+			country_event = { id = anbi_kuhai.18 }
+		}
 	}
 	option = {
 		name = anbi_kuhai.13.b
@@ -548,7 +552,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			original_yanszin = {
+			yanszin_heartland_group= {
 				limit = {
 					OR = {
 						owned_by = Y05
@@ -682,9 +686,12 @@ country_event = {
 		hidden_effect = {
 			save_global_event_target_as = feiten_or_was_feiten_target
 			save_global_event_target_as = kuhai_or_was_kuhai_target
-			country_event = {
-				id = anbi_kuhai.1020
+			country_event = { id = anbi_kuhai.1020 }
+			if = {
+				limit = { mission_completed = anbi_kuhai_the_gold_dragon_faith }
+				country_event = { id = anbi_kuhai.18 }
 			}
+			every_owned_province = { province_event = { id = anbi_kuhai.1006 } }
 		}
 	}
 }
@@ -698,13 +705,11 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		mission_completed = anbi_kuhai_the_gold_dragon_faith
+		has_country_flag = the_greatest_yanshen
 		tag = Z65
 		exists = Y85
 	}
-	mean_time_to_happen = {
-		days = 1
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = anbi_kuhai.18.a
@@ -790,9 +795,7 @@ country_event = {
 	picture = anbi_speech_eventPicture
 
 	fire_only_once = yes
-	mean_time_to_happen = {
-		days = 1
-	}
+	is_triggered_only = yes
 	trigger = {
 		has_country_flag = anbi_kuhai_kill_the_command_cf
 		war_score_against = {
@@ -1011,7 +1014,7 @@ country_event = {
 
 	option = {
 		name = anbi_kuhai.25.a
-		custom_tooltip = flavour_anbingnar_daxugo.31453_ct
+		custom_tooltip = anbi_daxugo.31453_ct
 		4871 = {
 			add_base_tax = -3
 			add_base_production = -3
@@ -2079,7 +2082,6 @@ country_event = {
 	}
 }
 
-
 ##机制实现(1000)
 #致敬传奇无恶名人
 country_event = {
@@ -2509,80 +2511,57 @@ country_event = {
 	}
 }
 #实现烟州省份自动减造核
-country_event = {
+province_event = {
 	id = anbi_kuhai.1006
 	title = anbi_kuhai.1006.t
 	desc = anbi_kuhai.1006.d
 	picture = anbingnar_eventPicture
 
-	mean_time_to_happen = {
-		days = 1
-	}
+	is_triggered_only = yes
 	hidden = yes
 
 	trigger = {
-		tag = Z65
-		has_country_flag = the_greatest_yanshen_founded
-		any_owned_province = {
-			superregion = yanshen_superregion
-			NOT = {
-				is_state_core = ROOT
-				has_province_modifier = anbi_kuhai_yanshen_nationalism
-			}			
+		owner = {
+			tag = Z65
+			has_country_flag = the_greatest_yanshen_founded
 		}
+		superregion = yanshen_superregion
+		NOT = { is_state_core = ROOT }
 	}
 	
 	option = {
 		name = anbi_kuhai.1006.a
-		every_owned_province = {
-			limit = {
-				superregion = yanshen_superregion
-				NOT = {
-					is_state_core = ROOT
-				}	
-			}
-			add_province_modifier = {
-				name = anbi_kuhai_yanshen_nationalism
-				duration = 18250
-			}
+		add_province_modifier = {
+			name = anbi_kuhai_yanshen_nationalism
+			duration = 18250
 		}
 	}
 }
 #实现自动转化升道与化道
-country_event = {
+province_event = {
 	id = anbi_kuhai.1007
 	title = anbi_kuhai.1007.t
 	desc = anbi_kuhai.1007.d
 	picture = anbingnar_eventPicture
 
-	mean_time_to_happen = {
-		days = 1
-	}
+	is_triggered_only = yes
 	hidden = yes
 
 	trigger = {
-		has_government_attribute = anbi_zhengdao_path_department
-		any_owned_province = {
-			OR = {
-				religion = accretive_path
-				religion = transmutative_path
-			}
+		owner = {
+			tag = Z65
+			has_country_flag = the_greatest_yanshen
+			has_government_attribute = anbi_zhengdao_path_department
+		}		
+		OR = {
+			religion = accretive_path
+			religion = transmutative_path
 		}
 	}
 
 	option = {
 		name = anbi_kuhai.1007.a
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					OR = {
-						religion = accretive_path
-						religion = transmutative_path
-					}
-				}
-				change_religion = zhengdao_path
-			}
-		}
+		change_religion = zhengdao_path
 	}
 }
 #正道节日
@@ -2625,32 +2604,16 @@ country_event = {
 	picture = anbingnar_eventPicture
 
 	trigger = {
-		has_country_flag = anbi_kuhai_the_world_is_ours_cf
-		any_subject_country = {
-			is_colonial_nation_of = Z65
-			NOT = {
-				has_country_modifier = anbi_kuhai_the_world_is_ours_buff
-			}
-		}
+		is_colonial_nation_of = Z65
+		Z65 = { has_country_flag = anbi_kuhai_the_world_is_ours_cf }		
 	}
-	mean_time_to_happen = {
-		days = 1
-	}
-	
+	is_triggered_only = yes	
 	hidden = yes
 
 	option = {
-		every_subject_country = {
-			limit = {
-				is_colonial_nation_of = Z65
-				NOT = {
-					has_country_modifier = anbi_kuhai_the_world_is_ours_buff
-				}
-			}
-			add_country_modifier = {
-				name = anbi_kuhai_the_world_is_ours_buff
-				duration = -1
-			}
+		add_country_modifier = {
+			name = anbi_kuhai_the_world_is_ours_buff
+			duration = -1
 		}
 	}
 }
@@ -2719,7 +2682,7 @@ country_event = {
 			#Anbennar
 			modifier = {
 				factor = 2.0
-				ruler_has_mage_personality = yes
+				ruler_is_powerful_mage = yes
 			}	
 			modifier = {
 				factor = 100.0
@@ -3204,93 +3167,75 @@ country_event = {
 	}
 }
 #自动移交蛇脊省份
-country_event = {
+province_event = {
 	id = anbi_kuhai.1014
 	title = anbi_kuhai.1014.t
 	desc = anbi_kuhai.1014.d
 	picture = anbingnar_eventPicture
 
 	hidden = yes
-	mean_time_to_happen = {
-		days = 1
-	}
+	is_triggered_only = yes
 
 	trigger = {
-		OR = {
-			has_country_flag = anbi_kuhai_the_jade_question_dwarven
-			has_country_flag = anbi_kuhai_the_jade_question_goblin
+		owner = {
+			tag = Z65
+			has_country_flag = the_greatest_yanshen
+			OR = {
+				has_country_flag = anbi_kuhai_the_jade_question_dwarven
+				has_country_flag = anbi_kuhai_the_jade_question_goblin
+			}
 		}
-		any_owned_province = {
-			continent = serpentspine
-		}		
+		continent = serpentspine	
 	}
 
 	option = {
 		name = anbi_kuhai.1014.a
 		if = {
 			limit = { 
-				has_country_flag = anbi_kuhai_the_jade_question_goblin
+				owner = { has_country_flag = anbi_kuhai_the_jade_question_goblin }
 			}
-			serpentspine = {
-				limit = {
-					owned_by = ROOT
-				}
-				cede_province = R81
-			}
+			cede_province = R81
 		}
 		else_if = {
 			limit = { 
-				has_country_flag = anbi_kuhai_the_jade_question_dwarven
+				owner = { has_country_flag = anbi_kuhai_the_jade_question_dwarven }
 			}
-			serpentspine = {
-				limit = {
-					owned_by = ROOT
-				}
-				cede_province = I22
-			}
+			cede_province = I22
 		}
 	}
 }
 #自动图地精
-country_event = {
+province_event = {
 	id = anbi_kuhai.1015
 	title = anbi_kuhai.1015.t
 	desc = anbi_kuhai.1015.d
 	picture = anbingnar_eventPicture
 
 	hidden = yes
-	mean_time_to_happen = {
-		days = 1
-	}
+	is_triggered_only = yes
 
 	trigger = {
-		tag = I22
 		Z65 = {
 			has_country_flag = anbi_kuhai_the_jade_question_dwarven
 		}
-		any_owned_province = {
-			region = jade_mines_region
-			culture_is_goblin = yes
-		}
-		is_subject_of_type_with_overlord = {
-			who = Z65
-			type = anbi_kuhai_republican_subject_state
-		}
+		owner = {
+			tag = I22
+			is_subject_of_type_with_overlord = {
+				who = Z65
+				type = anbi_kuhai_republican_subject_state
+			}
+		}	
+		region = jade_mines_region
+		culture_is_goblin = yes		
 	}
 
 	option = {
 		name = anbi_kuhai.1015.a
-		every_owned_province = {
-			limit = {
-				region = jade_mines_region
-				culture_is_goblin = yes
-			}
-			change_religion = ROOT
-			change_culture = ROOT
-			add_base_tax = -1
-			add_base_manpower = -1
-			add_base_production = -1
-		}
+		change_religion = ROOT
+		change_culture = ROOT
+		add_base_tax = -1
+		add_base_manpower = -1
+		add_base_production = -1
 	}
 }
 #飞腾水母+科学法师特权补丁
@@ -3641,6 +3586,8 @@ country_event = {
 		federation_increase_cohesion_all = yes
 		federation_increase_cohesion_all = yes
 		federation_increase_cohesion_all = yes
+		Y05 = { clr_country_flag = ljh_jiangdu_war_flag }
+		Y13 = { clr_country_flag = ljh_jiangdu_war_flag }
 		set_global_flag = anbi_greatest_yanshen_worldline
 		B05 = {
 			set_country_flag = banned_necromancy
@@ -4066,11 +4013,7 @@ country_event = {
 			name = mythical_conqueror_modifier
 			duration = -1
 		}
-		set_country_flag = witch_king_flag
-		add_ruler_modifier = {
-			name = witch_king_modifier
-			duration = -1
-		}
+		become_a_witch_king_effect = yes
 		country_event = {
 			id = anbi_kuhai.10008
 		}

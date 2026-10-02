@@ -1,6 +1,6 @@
-setup_vision = yes
+setup_vision_generic = yes
 
-government = anbi_castanor_monarchy
+government = anbingnar_monarchy
 add_government_reform = anbi_castanor_adventurer_reform
 government_rank = 1
 primary_culture = castanorian

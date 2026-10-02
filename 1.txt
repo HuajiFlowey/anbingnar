@@ -1,5 +1,43 @@
-ROOT = {
-	every_owned_province = {
-		change_culture = ROOT
+ 
+4871 = {
+	add_province_modifier = {
+		name = Y98_huagai_palace
+		duration = -1
+	}
+	add_province_modifier = {
+		name = Y98_harimari_palace
+		duration = -1
+	}
+	add_province_modifier = {
+		name = Y98_rahen_palace
+		duration = -1
+	}
+	add_province_modifier = {
+		name = Y98_tanxiang_palace
+		duration = -1
+	}
+	add_province_modifier = {
+		name = Y98_southest_palace
+		duration = -1
+	}
+	add_province_modifier = {
+		name = Y98_bulwar_palace
+		duration = -1
+	}
+	add_province_modifier = {
+		name = Y98_great_mage_palace
+		duration = -1
 	}
 }
+# ROOT = {
+# 	anbi_daxugo_harem_menu_action_marriage_1_yanshen_effect = yes
+# 	anbi_daxugo_harem_menu_action_marriage_1_kai_effect = yes
+# 	anbi_daxugo_harem_menu_action_marriage_1_tanxiang_effect = yes
+# 	anbi_daxugo_harem_menu_action_marriage_1_jinan_effect = yes
+# 	anbi_daxugo_harem_menu_action_marriage_1_rahen_effect = yes
+# }
+#generic_increase_of_racial_tolerance_effect = { race = lizardfolk large = yes }
+#shuvuushudi_region = { cede_province = Y91 add_core = Y91 }
+#yanshen_superregion = { cede_province = Y91 add_core = Y91 }
+#country_event = { id = anbi_daxugo.2 }
+#set_estate_privilege = anbi_daxugo_waiqi_harem_privilege

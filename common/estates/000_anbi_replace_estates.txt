@@ -1,0 +1,9 @@
+estate_burghers = {
+	custom_name = {
+		desc = anbi_daxugo_harem_shangxu_name
+		trigger = { 
+			tag = Y98
+			has_reform = anbi_daxugo_harem_reform
+		}
+	}
+}

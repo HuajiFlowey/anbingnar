@@ -37,6 +37,21 @@ estate_nobles = {
 		anbi_kuhai_kill_the_eunuch2_p
 		anbi_merfolk_lizardfolk_land_army
 		anbi_merfolk_halfling_land_army
+		anbi_daxugo_waiqi_harem_privilege 
+	}
+	custom_name = {
+		desc = anbi_daxugo_harem_waiqi_name
+		trigger = { 
+			tag = Y98
+			has_reform = anbi_daxugo_harem_reform
+		}
+	}
+	custom_desc = {
+		desc = anbi_daxugo_harem_waiqi_desc
+		trigger = { 
+			tag = Y98
+			has_reform = anbi_daxugo_harem_reform
+		}
 	}
 }
 estate_adventurers = {
@@ -67,5 +82,13 @@ estate_artificers = {
 estate_burghers = {
 	privileges = {
 		anbi_merfolk_halfling_trader_and_cook
+		anbi_daxugo_shangxu_harem_privilege
+	}
+	custom_desc = {
+		desc = anbi_daxugo_harem_shangxu_desc
+		trigger = { 
+			tag = Y98
+			has_reform = anbi_daxugo_harem_reform
+		}
 	}
 }

@@ -44,47 +44,47 @@ country_event = {
 		save_global_event_target_as = kuhai_or_was_kuhai_target
 	}
 }
-#妈了个巴子的,给我用测试版！
-country_event = {
-	id = anbitotal.3
-	title = anbitotal.3.t
-	desc = anbitotal.3.d
-	picture = ANBI_TONGSINI_eventPicture
+#妈了个巴子的,给我用测试版！(所有版本皆完成了古园改名)
+# country_event = {
+# 	id = anbitotal.3
+# 	title = anbitotal.3.t
+# 	desc = anbitotal.3.d
+# 	picture = ANBI_TONGSINI_eventPicture
 
-	is_triggered_only = yes
-	trigger = {
-		ai = no
-		all_province = {
-			NOT = {
-				region = gowon_region
-			}
-		}
-	}
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		ai = no
+# 		all_province = {
+# 			NOT = {
+# 				region = gowon_region
+# 			}
+# 		}
+# 	}
 
-	option = {
-		name = anbitotal.3.a
-		hidden_effect = {
-			country_event = {
-				id = anbitotal.4
-			}
-		}
-	}
-}
-country_event = {
-	id = anbitotal.4
-	title = anbitotal.4.t
-	desc = anbitotal.4.d
-	picture = ANBI_TONGSINI_eventPicture
+# 	option = {
+# 		name = anbitotal.3.a
+# 		hidden_effect = {
+# 			country_event = {
+# 				id = anbitotal.4
+# 			}
+# 		}
+# 	}
+# }
+# country_event = {
+# 	id = anbitotal.4
+# 	title = anbitotal.4.t
+# 	desc = anbitotal.4.d
+# 	picture = ANBI_TONGSINI_eventPicture
 
-	is_triggered_only = yes
-	hidden = yes
+# 	is_triggered_only = yes
+# 	hidden = yes
 
-	option = {
-		country_event = {
-			id = anbitotal.3
-		}
-	}
-}
+# 	option = {
+# 		country_event = {
+# 			id = anbitotal.3
+# 		}
+# 	}
+# }
 #统治者种族补丁
 country_event = {
 	id = anbitotal.5

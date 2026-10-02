@@ -1,0 +1,2629 @@
+#窗口
+custom_window = {
+	name = anbi_daxugo_harem_menu_parent
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+}
+custom_window = {
+	name = anbi_daxugo_harem_menu_action_list
+	potential = { 
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+}
+custom_window = {
+	name = anbi_daxugo_harem_menu_galgame_window
+	potential = { 
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+}
+
+#tooltip（32 个行动按钮各一行：tooltip = anbi_daxugo_harem_menu_action_list_<种类>_<N>_tt）
+#值为 [Root.DaxugoHaremActionTT<N>]，由 customizable_localization/anbi_daxugo_harem_buttons.txt 的 defined_text
+#按 action_type × menu_selected 分支到具体宫殿文案（2026-09-12 起；旧版是八宫殿共用的静态文案，已废弃）。
+#该段内容自 2026-09-12 起改为「风味文本」占位符，待人工填充；
+#「执行效果说明」改由各 _effect 钩子内的 custom_tooltip 承载（人工在填充效果时自行添加，跨文件，见 scripted_effects/anbi_Y98_harem.txt）。
+#文本框（每个具体行动按钮一个文本框；文本键 = 文本框名，值为 [Root.DaxugoHaremButtonTextN]）
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_marriage_1_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 } #marriage=1
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_marriage_2_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 } #marriage=1
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_marriage_3_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 } #marriage=1
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_marriage_4_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 } #marriage=1
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_marriage_5_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 } #marriage=1
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_marriage_6_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 } #marriage=1
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_marriage_7_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 } #marriage=1
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_marriage_8_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 } #marriage=1
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_stability_1_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 } #stability=2
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_stability_2_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 } #stability=2
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_stability_3_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 } #stability=2
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_stability_4_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 } #stability=2
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_stability_5_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 } #stability=2
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_stability_6_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 } #stability=2
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_stability_7_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 } #stability=2
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_stability_8_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 } #stability=2
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_building_1_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 } #building=3
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_building_2_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 } #building=3
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_building_3_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 } #building=3
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_building_4_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 } #building=3
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_building_5_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 } #building=3
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_building_6_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 } #building=3
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_building_7_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 } #building=3
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_building_8_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 } #building=3
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_special_1_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 } #special=4
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_special_2_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 } #special=4
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_special_3_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 } #special=4
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_special_4_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 } #special=4
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_special_5_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 } #special=4
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_special_6_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 } #special=4
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_special_7_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 } #special=4
+	}
+}
+custom_text_box = {
+	name = anbi_daxugo_harem_menu_action_list_special_8_loc
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 } #special=4
+	}
+}
+#同名占位 custom_button（potential = always no，防止 scripted 文本框报缺失按钮定义）
+custom_button = { name = anbi_daxugo_harem_menu_action_list_marriage_1_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_marriage_2_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_marriage_3_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_marriage_4_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_marriage_5_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_marriage_6_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_marriage_7_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_marriage_8_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_stability_1_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_stability_2_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_stability_3_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_stability_4_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_stability_5_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_stability_6_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_stability_7_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_stability_8_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_building_1_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_building_2_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_building_3_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_building_4_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_building_5_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_building_6_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_building_7_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_building_8_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_special_1_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_special_2_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_special_3_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_special_4_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_special_5_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_special_6_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_special_7_loc potential = { always = no } }
+custom_button = { name = anbi_daxugo_harem_menu_action_list_special_8_loc potential = { always = no } }
+
+#按钮
+custom_button = {
+	name = anbi_daxugo_harem_menu_button_marriage
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+	trigger = {}
+	effect = {
+		#行动种类入口：切换为「婚姻」种类，实际行动由 action_list_<种类>_<N> 具体按钮执行
+		hidden_effect = {
+			set_variable = { which = anbi_daxugo_harem_menu_action_type value = 1 }
+		}
+		custom_tooltip = anbi_daxugo_harem_menu_action_type_switch_marriage_ct
+	}
+	tooltip = ANBI_DAXUGO_HAREM_marriage_tooltip
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_button_stability
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+	trigger = {}
+	effect = {
+		#行动种类入口：切换为「稳定」种类，实际行动由 action_list_<种类>_<N> 具体按钮执行
+		hidden_effect = {
+			set_variable = { which = anbi_daxugo_harem_menu_action_type value = 2 }
+		}
+		custom_tooltip = anbi_daxugo_harem_menu_action_type_switch_stability_ct
+	}
+	tooltip = ANBI_DAXUGO_HAREM_stability_tooltip
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_button_building
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+	trigger = {}
+	effect = {
+		#行动种类入口：切换为「建筑」种类，实际行动由 action_list_<种类>_<N> 具体按钮执行
+		hidden_effect = {
+			set_variable = { which = anbi_daxugo_harem_menu_action_type value = 3 }
+		}
+		custom_tooltip = anbi_daxugo_harem_menu_action_type_switch_building_ct
+	}
+	tooltip = ANBI_DAXUGO_HAREM_building_tooltip
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_button_special
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+	trigger = {}
+	effect = {
+		#行动种类入口：切换为「特殊」种类，实际行动由 action_list_<种类>_<N> 具体按钮执行（不绑定宫殿）
+		hidden_effect = {
+			set_variable = { which = anbi_daxugo_harem_menu_action_type value = 4 }
+		}
+		custom_tooltip = anbi_daxugo_harem_menu_action_type_switch_special_ct
+	}
+	tooltip = ANBI_DAXUGO_HAREM_special_tooltip
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_button_yanshen
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+	} 
+	trigger = {}
+	effect = {
+		hidden_effect = {
+			#行动对象：设置选中宫殿变量（与立绘 flag 分离）
+			set_variable = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			#立绘切换（原有逻辑不变）
+			anbi_daxugo_harem_menu_galgame_clr_flag = yes
+			set_country_flag = anbi_daxugo_harem_menu_galgame_public_flag
+			set_variable = {
+				which = anbi_daxugo_harem_menu_galgame_public_var 
+				which = anbi_daxugo_harem_menu_galgame_yanshen_var
+			}
+		}		
+		custom_tooltip = anbi_daxugo_harem_menu_palace_switch_yanshen_ct
+	}
+	tooltip = ANBI_DAXUGO_HAREM_yanshen_tooltip
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_button_kai
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+	trigger = {
+		4871 = {
+			has_province_modifier = Y98_huagai_palace
+		}
+	}
+	effect = {
+		hidden_effect = {
+			#行动对象：设置选中宫殿变量（与立绘 flag 分离）
+			set_variable = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			#立绘切换（原有逻辑不变）
+			anbi_daxugo_harem_menu_galgame_clr_flag = yes
+			set_country_flag = anbi_daxugo_harem_menu_galgame_public_flag
+			set_variable = {
+				which = anbi_daxugo_harem_menu_galgame_public_var  
+				which = anbi_daxugo_harem_menu_galgame_kai_var
+			}
+		}		
+		custom_tooltip = anbi_daxugo_harem_menu_palace_switch_kai_ct
+	}
+	tooltip = ANBI_DAXUGO_HAREM_kai_tooltip
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_button_tanxiang
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+	trigger = {
+		4871 = {
+			has_province_modifier = Y98_tanxiang_palace
+		}
+	}
+	effect = {
+		hidden_effect = {
+			#行动对象：设置选中宫殿变量（与立绘 flag 分离）
+			set_variable = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			#立绘切换（原有逻辑不变）
+			anbi_daxugo_harem_menu_galgame_clr_flag = yes
+			set_country_flag = anbi_daxugo_harem_menu_galgame_public_flag
+			set_variable = {
+				which = anbi_daxugo_harem_menu_galgame_public_var  
+				which = anbi_daxugo_harem_menu_galgame_tanxiang_var
+			}
+		}		
+		custom_tooltip = anbi_daxugo_harem_menu_palace_switch_tanxiang_ct
+	}
+	tooltip = ANBI_DAXUGO_HAREM_tanxiang_tooltip
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_button_jinan
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+	trigger = {
+		4871 = {
+			has_province_modifier = Y98_southest_palace
+		}
+	}
+	effect = {
+		hidden_effect = {
+			#行动对象：设置选中宫殿变量（与立绘 flag 分离）
+			set_variable = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			#立绘切换（原有逻辑不变）
+			anbi_daxugo_harem_menu_galgame_clr_flag = yes
+			set_country_flag = anbi_daxugo_harem_menu_galgame_public_flag
+			set_variable = {
+				which = anbi_daxugo_harem_menu_galgame_public_var  
+				which = anbi_daxugo_harem_menu_galgame_jinan_var
+			}
+		}		
+		custom_tooltip = anbi_daxugo_harem_menu_palace_switch_jinan_ct
+	}
+	tooltip = ANBI_DAXUGO_HAREM_jinan_tooltip
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_button_rahen
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+	trigger = {
+		4871 = {
+			has_province_modifier = Y98_rahen_palace
+		}
+	}
+	effect = {
+		hidden_effect = {
+			#行动对象：设置选中宫殿变量（与立绘 flag 分离）
+			set_variable = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			#立绘切换（原有逻辑不变）
+			anbi_daxugo_harem_menu_galgame_clr_flag = yes
+			set_country_flag = anbi_daxugo_harem_menu_galgame_public_flag
+			set_variable = {
+				which = anbi_daxugo_harem_menu_galgame_public_var  
+				which = anbi_daxugo_harem_menu_galgame_rahen_var
+			}
+		}		
+		custom_tooltip = anbi_daxugo_harem_menu_palace_switch_rahen_ct
+	}
+	tooltip = ANBI_DAXUGO_HAREM_rahen_tooltip
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_button_harimari
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+	trigger = {
+		4871 = {
+			has_province_modifier = Y98_harimari_palace
+		}
+	}
+	effect = {
+		hidden_effect = {
+			#行动对象：设置选中宫殿变量（与立绘 flag 分离）
+			set_variable = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			#立绘切换（原有逻辑不变）
+			anbi_daxugo_harem_menu_galgame_clr_flag = yes
+			if = { limit = { always = no } set_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag }
+			else_if = { limit = { always = no } set_country_flag = anbi_daxugo_harem_menu_galgame_dwarven_flag }
+			else_if = { limit = { always = no } set_country_flag = anbi_daxugo_harem_menu_galgame_merfolk_flag }
+			else_if = { limit = { always = no } set_country_flag = anbi_daxugo_harem_menu_galgame_centaur_flag }
+			else = { set_country_flag = anbi_daxugo_harem_menu_galgame_public_flag }
+		}
+		custom_tooltip = anbi_daxugo_harem_menu_palace_switch_harimari_ct
+	}
+	tooltip = ANBI_DAXUGO_HAREM_harimari_tooltip
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_button_khet
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+	trigger = {
+		4871 = {
+			has_province_modifier = Y98_great_mage_palace
+		}
+	}
+	effect = {
+		hidden_effect = {
+			#行动对象：设置选中宫殿变量（与立绘 flag 分离）
+			set_variable = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			#立绘切换（原有逻辑不变）
+			anbi_daxugo_harem_menu_galgame_clr_flag = yes
+			set_country_flag = anbi_daxugo_harem_menu_galgame_khet_flag
+		}
+		custom_tooltip = anbi_daxugo_harem_menu_palace_switch_khet_ct
+	}
+	tooltip = ANBI_DAXUGO_HAREM_khet_tooltip
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_button_burwar
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+	trigger = {
+		4871 = {
+			has_province_modifier = Y98_bulwar_palace
+		}
+	}
+	effect = {
+		hidden_effect = {
+			#行动对象：设置选中宫殿变量（与立绘 flag 分离）
+			set_variable = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			#立绘切换（原有逻辑不变）
+			anbi_daxugo_harem_menu_galgame_clr_flag = yes
+			if = { limit = { always = no } set_country_flag = anbi_daxugo_harem_menu_galgame_gnoll_flag }
+			else_if = { limit = { always = no } set_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag }
+			else_if = { limit = { always = no } set_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag }
+			else = { set_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag }	
+		}
+		custom_tooltip = anbi_daxugo_harem_menu_palace_switch_burwar_ct
+	}
+	tooltip = ANBI_DAXUGO_HAREM_burwar_tooltip
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_button_back
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+	trigger = {
+		always = yes
+	}
+	effect = {
+		clr_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+	tooltip = anbi_daxugo_harem_menu_button_back_tooltip
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_tab
+	tooltip = ANBI_DAXUGO_HAREM_MENU_TAB_tooltip
+	potential = { 
+		NOT = { has_country_flag = anbi_daxugo_harem_open_menu_cf }
+		has_reform = anbi_daxugo_harem_reform
+	}
+	trigger = { 
+		always = yes
+	}
+	effect = { 
+		#打开后宫菜单时初始化默认状态（变量/默认种类/默认宫殿/默认立绘），避免 default_占位符
+		hidden_effect = { anbi_daxugo_harem_menu_galgame_var_setup = yes }
+		
+		set_country_flag = anbi_daxugo_harem_open_menu_cf
+	}
+}
+#========== 交互行动按钮（2026-08-29 参数化接线完成；2026-09-12 周期机制改版） ==========
+#命名：anbi_daxugo_harem_menu_action_list_<种类>_<N>；种类变量切换可见（1=marriage 2=stability 3=building 4=special）。
+#trigger：if / else_if ×8 按选中宫殿变量分支，命中该宫殿的可用条件模块 <种类>_<N>_<宫殿>_available（条件实时渲染进按钮 tooltip）。
+#effect：调用行动脚本 anbi_daxugo_harem_menu_action_<种类>_<N>（内部按选中宫殿变量 8 路参数分发）。
+#可用性（2026-09-12 改版）：marriage 2~8 与 stability 1~8 受「婚姻行动一开启的本轮周期」门控且每按钮本轮各一次；
+#  building 1~8 与周期无关、全程仅一次；marriage_1 仍只看自身冷却；special 未改动。
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_marriage_1
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 } #marriage=1
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_1_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_1_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_1_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_1_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_1_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_1_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_1_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_1_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_marriage_1 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_marriage_1_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_marriage_2
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 } #marriage=1
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_2_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_2_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_2_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_2_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_2_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_2_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_2_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_2_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_marriage_2 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_marriage_2_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_marriage_3
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 } #marriage=1
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_3_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_3_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_3_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_3_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_3_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_3_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_3_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_3_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_marriage_3 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_marriage_3_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_marriage_4
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 } #marriage=1
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_4_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_4_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_4_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_4_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_4_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_4_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_4_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_4_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_marriage_4 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_marriage_4_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_marriage_5
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 } #marriage=1
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_5_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_5_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_5_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_5_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_5_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_5_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_5_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_5_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_marriage_5 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_marriage_5_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_marriage_6
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 } #marriage=1
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_6_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_6_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_6_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_6_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_6_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_6_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_6_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_6_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_marriage_6 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_marriage_6_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_marriage_7
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 } #marriage=1
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_7_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_7_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_7_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_7_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_7_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_7_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_7_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_7_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_marriage_7 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_marriage_7_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_marriage_8
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 1 } #marriage=1
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_8_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_8_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_8_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_8_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_8_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_8_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_8_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_marriage_8_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_marriage_8 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_marriage_8_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_stability_1
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 } #stability=2
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_stability_1_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_stability_1_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_stability_1_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_stability_1_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_stability_1_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_stability_1_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_stability_1_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_stability_1_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_stability_1 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_stability_1_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_stability_2
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 } #stability=2
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_stability_2_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_stability_2_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_stability_2_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_stability_2_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_stability_2_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_stability_2_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_stability_2_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_stability_2_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_stability_2 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_stability_2_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_stability_3
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 } #stability=2
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_stability_3_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_stability_3_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_stability_3_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_stability_3_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_stability_3_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_stability_3_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_stability_3_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_stability_3_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_stability_3 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_stability_3_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_stability_4
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 } #stability=2
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_stability_4_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_stability_4_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_stability_4_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_stability_4_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_stability_4_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_stability_4_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_stability_4_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_stability_4_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_stability_4 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_stability_4_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_stability_5
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 } #stability=2
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_stability_5_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_stability_5_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_stability_5_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_stability_5_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_stability_5_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_stability_5_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_stability_5_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_stability_5_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_stability_5 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_stability_5_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_stability_6
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 } #stability=2
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_stability_6_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_stability_6_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_stability_6_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_stability_6_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_stability_6_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_stability_6_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_stability_6_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_stability_6_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_stability_6 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_stability_6_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_stability_7
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 } #stability=2
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_stability_7_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_stability_7_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_stability_7_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_stability_7_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_stability_7_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_stability_7_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_stability_7_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_stability_7_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_stability_7 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_stability_7_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_stability_8
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 2 } #stability=2
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_stability_8_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_stability_8_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_stability_8_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_stability_8_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_stability_8_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_stability_8_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_stability_8_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_stability_8_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_stability_8 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_stability_8_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_building_1
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 } #building=3
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_building_1_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_building_1_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_building_1_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_building_1_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_building_1_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_building_1_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_building_1_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_building_1_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_building_1 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_building_1_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_building_2
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 } #building=3
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_building_2_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_building_2_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_building_2_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_building_2_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_building_2_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_building_2_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_building_2_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_building_2_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_building_2 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_building_2_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_building_3
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 } #building=3
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_building_3_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_building_3_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_building_3_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_building_3_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_building_3_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_building_3_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_building_3_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_building_3_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_building_3 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_building_3_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_building_4
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 } #building=3
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_building_4_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_building_4_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_building_4_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_building_4_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_building_4_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_building_4_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_building_4_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_building_4_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_building_4 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_building_4_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_building_5
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 } #building=3
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_building_5_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_building_5_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_building_5_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_building_5_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_building_5_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_building_5_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_building_5_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_building_5_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_building_5 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_building_5_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_building_6
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 } #building=3
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_building_6_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_building_6_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_building_6_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_building_6_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_building_6_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_building_6_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_building_6_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_building_6_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_building_6 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_building_6_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_building_7
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 } #building=3
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_building_7_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_building_7_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_building_7_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_building_7_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_building_7_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_building_7_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_building_7_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_building_7_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_building_7 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_building_7_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_building_8
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 3 } #building=3
+	}
+	#可用：if/else_if/else 链按选中宫殿变量选分支（EU4 将 trigger_if 重载为 if；limit 内容不显示在按钮文本中），
+	#仅当前宫殿分支显示其可用条件模块（引擎渲染）；末尾 else 收尾
+	trigger = {
+		if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 1 }
+			}
+			anbi_daxugo_harem_menu_action_building_8_yanshen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 2 }
+			}
+			anbi_daxugo_harem_menu_action_building_8_kai_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 3 }
+			}
+			anbi_daxugo_harem_menu_action_building_8_tanxiang_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 4 }
+			}
+			anbi_daxugo_harem_menu_action_building_8_jinan_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 5 }
+			}
+			anbi_daxugo_harem_menu_action_building_8_rahen_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 6 }
+			}
+			anbi_daxugo_harem_menu_action_building_8_harimari_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 7 }
+			}
+			anbi_daxugo_harem_menu_action_building_8_khet_available = yes
+		}
+		else_if = {
+			limit = {
+					is_variable_equal = { which = anbi_daxugo_harem_menu_selected value = 8 }
+			}
+			anbi_daxugo_harem_menu_action_building_8_burwar_available = yes
+		}
+		else = {
+			always = no
+		}
+	}
+	#执行：行动效果（内部按选中宫殿变量分发到 _effect 钩子）
+	effect = {
+		anbi_daxugo_harem_menu_action_building_8 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_building_8_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_special_1
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 } #special=4
+	}
+	#可用：特殊行动不绑定宫殿，直连条件模块
+	trigger = {
+		anbi_daxugo_harem_menu_action_special_1_available = yes
+	}
+	#执行：特殊行动效果（不绑定宫殿）
+	effect = {
+		anbi_daxugo_harem_menu_action_special_1 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_special_1_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_special_2
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 } #special=4
+	}
+	#可用：特殊行动不绑定宫殿，直连条件模块
+	trigger = {
+		anbi_daxugo_harem_menu_action_special_2_available = yes
+	}
+	#执行：特殊行动效果（不绑定宫殿）
+	effect = {
+		anbi_daxugo_harem_menu_action_special_2 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_special_2_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_special_3
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 } #special=4
+	}
+	#可用：特殊行动不绑定宫殿，直连条件模块
+	trigger = {
+		anbi_daxugo_harem_menu_action_special_3_available = yes
+	}
+	#执行：特殊行动效果（不绑定宫殿）
+	effect = {
+		anbi_daxugo_harem_menu_action_special_3 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_special_3_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_special_4
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 } #special=4
+	}
+	#可用：特殊行动不绑定宫殿，直连条件模块
+	trigger = {
+		anbi_daxugo_harem_menu_action_special_4_available = yes
+	}
+	#执行：特殊行动效果（不绑定宫殿）
+	effect = {
+		anbi_daxugo_harem_menu_action_special_4 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_special_4_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_special_5
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 } #special=4
+	}
+	#可用：特殊行动不绑定宫殿，直连条件模块
+	trigger = {
+		anbi_daxugo_harem_menu_action_special_5_available = yes
+	}
+	#执行：特殊行动效果（不绑定宫殿）
+	effect = {
+		anbi_daxugo_harem_menu_action_special_5 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_special_5_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_special_6
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 } #special=4
+	}
+	#可用：特殊行动不绑定宫殿，直连条件模块
+	trigger = {
+		anbi_daxugo_harem_menu_action_special_6_available = yes
+	}
+	#执行：特殊行动效果（不绑定宫殿）
+	effect = {
+		anbi_daxugo_harem_menu_action_special_6 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_special_6_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_special_7
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 } #special=4
+	}
+	#可用：特殊行动不绑定宫殿，直连条件模块
+	trigger = {
+		anbi_daxugo_harem_menu_action_special_7_available = yes
+	}
+	#执行：特殊行动效果（不绑定宫殿）
+	effect = {
+		anbi_daxugo_harem_menu_action_special_7 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_special_7_tt
+}
+custom_button = {
+	name = anbi_daxugo_harem_menu_action_list_special_8
+	potential = {
+		has_reform = anbi_daxugo_harem_reform
+		has_country_flag = anbi_daxugo_harem_open_menu_cf
+		is_variable_equal = { which = anbi_daxugo_harem_menu_action_type value = 4 } #special=4
+	}
+	#可用：特殊行动不绑定宫殿，直连条件模块
+	trigger = {
+		anbi_daxugo_harem_menu_action_special_8_available = yes
+	}
+	#执行：特殊行动效果（不绑定宫殿）
+	effect = {
+		anbi_daxugo_harem_menu_action_special_8 = yes
+	}
+	tooltip = anbi_daxugo_harem_menu_action_list_special_8_tt
+}
+#anbi_daxugo_harem_menu_galgame_centaur_var
+#anbi_daxugo_harem_menu_galgame_dwarven_var
+#anbi_daxugo_harem_menu_galgame_elven_var
+#anbi_daxugo_harem_menu_galgame_gnoll_var
+#anbi_daxugo_harem_menu_galgame_harpy_var
+#anbi_daxugo_harem_menu_galgame_khet_var
+#anbi_daxugo_harem_menu_galgame_merfolk_var
+#anbi_daxugo_harem_menu_galgame_public_var
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_centaur1 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_centaur_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_centaur_var value = 1 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_centaur2 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_centaur_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_centaur_var value = 2 } } } 
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_centaur3 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_centaur_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_centaur_var value = 3 } } } 
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_centaur4 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_centaur_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_centaur_var value = 4 } } } 
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_centaur5 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_centaur_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_centaur_var value = 5 } } } 
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_centaur6 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_centaur_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_centaur_var value = 6 } } } 
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_centaur7 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_centaur_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_centaur_var value = 7 } } } 
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_centaur8 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_centaur_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_centaur_var value = 8 } } } 
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_centaur9 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_centaur_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_centaur_var value = 9 } } } 
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_centaur10 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_centaur_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_centaur_var value = 10 } } } 
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_centaur11 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_centaur_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_centaur_var value = 11 } } } 
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_dwarven1 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_dwarven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_dwarven_var value = 1 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_dwarven2 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_dwarven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_dwarven_var value = 2 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_dwarven3 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_dwarven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_dwarven_var value = 3 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_dwarven4 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_dwarven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_dwarven_var value = 4 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_dwarven5 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_dwarven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_dwarven_var value = 5 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_dwarven6 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_dwarven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_dwarven_var value = 6 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_dwarven7 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_dwarven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_dwarven_var value = 7 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_dwarven8 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_dwarven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_dwarven_var value = 8 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_dwarven9 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_dwarven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_dwarven_var value = 9 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_dwarven10 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_dwarven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_dwarven_var value = 10 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_dwarven11 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_dwarven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_dwarven_var value = 11 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_dwarven12 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_dwarven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_dwarven_var value = 12 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven1 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 1 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven2 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 2 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven3 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 3 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven4 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 4 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven5 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 5 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven6 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 6 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven7 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 7 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven8 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 8 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven9 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 9 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven10 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 10 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven11 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 11 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven12 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 12 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven13 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 13 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven14 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 14 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven15 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 15 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven16 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 16 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven17 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 17 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven18 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 18 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven19 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 19 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven20 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 20 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven21 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 21 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven22 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 22 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven23 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 23 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven24 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 24 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven25 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 25 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven26 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 26 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven27 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 27 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven28 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 28 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven29 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 29 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven30 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 30 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven31 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 31 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven32 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 32 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven33 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 33 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven34 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 34 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven35 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 35 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven36 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 36 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven37 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 37 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven38 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 38 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven39 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 39 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven40 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 40 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven41 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 41 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven42 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 42 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven43 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 43 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven44 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 44 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven45 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 45 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven46 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 46 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven47 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 47 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven48 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 48 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven49 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 49 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven50 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 50 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_elven51 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_elven_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_elven_var value = 51 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_gnoll1 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_gnoll_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_gnoll_var value = 1 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_gnoll2 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_gnoll_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_gnoll_var value = 2 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_gnoll3 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_gnoll_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_gnoll_var value = 3 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_gnoll4 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_gnoll_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_gnoll_var value = 4 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_gnoll5 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_gnoll_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_gnoll_var value = 5 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_gnoll6 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_gnoll_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_gnoll_var value = 6 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_gnoll7 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_gnoll_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_gnoll_var value = 7 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy1 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 1 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy2 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 2 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy3 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 3 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy4 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 4 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy5 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 5 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy6 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 6 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy7 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 7 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy8 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 8 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy9 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 9 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy10 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 10 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy11 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 11 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy12 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 12 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy13 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 13 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy14 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 14 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy15 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 15 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy16 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 16 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy17 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 17 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy18 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 18 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy19 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 19 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy20 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 20 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy21 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 21 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_harpy22 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_harpy_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_harpy_var value = 22 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_khet1 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_khet_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_khet_var value = 1 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_khet2 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_khet_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_khet_var value = 2 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_khet3 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_khet_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_khet_var value = 3 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_khet4 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_khet_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_khet_var value = 4 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_khet5 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_khet_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_khet_var value = 5 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_khet6 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_khet_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_khet_var value = 6 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_khet7 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_khet_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_khet_var value = 7 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_khet8 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_khet_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_khet_var value = 8 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_khet9 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_khet_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_khet_var value = 9 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_khet10 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_khet_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_khet_var value = 10 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_merfolk1 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_merfolk_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_merfolk_var value = 1 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_merfolk2 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_merfolk_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_merfolk_var value = 2 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_merfolk3 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_merfolk_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_merfolk_var value = 3 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_merfolk4 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_merfolk_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_merfolk_var value = 4 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen1 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 1 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen2 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 2 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen3 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 3 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen4 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 4 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen5 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 5 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen6 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 6 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen7 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 7 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen8 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 8 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen9 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 9 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen10 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 10 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen11 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 11 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen12 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 12 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen13 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 13 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen14 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 14 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen15 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 15 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen16 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 16 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen17 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 17 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen18 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 18 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen19 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 19 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen20 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 20 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen21 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 21 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen22 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 22 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen23 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 23 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen24 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 24 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen25 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 25 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen26 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 26 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen27 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 27 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen28 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 28 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen29 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 29 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen30 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 30 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen31 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 31 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen32 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 32 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen33 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 33 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen34 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 34 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen35 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 35 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen36 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 36 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen37 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 37 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen38 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 38 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen39 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 39 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen40 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 40 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen41 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 41 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen42 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 42 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen43 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 43 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen44 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 44 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen45 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 45 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen46 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 46 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen47 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 47 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen48 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 48 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen49 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 49 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen50 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 50 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen51 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 51 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen52 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 52 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen53 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 53 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen54 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 54 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen55 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 55 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen56 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 56 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen57 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 57 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen58 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 58 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen59 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 59 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen60 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 60 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen61 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 61 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen62 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 62 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen63 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 63 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen64 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 64 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen65 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 65 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen66 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 66 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen67 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 67 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen68 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 68 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen69 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 69 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen70 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 70 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen71 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 71 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen72 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 72 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen73 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 73 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen74 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 74 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen75 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 75 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen76 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 76 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen77 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 77 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen78 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 78 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen79 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 79 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen80 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 80 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen81 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 81 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen82 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 82 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen83 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 83 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen84 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 84 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen85 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 85 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen86 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 86 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen87 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 87 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen88 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 88 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen89 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 89 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen90 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 90 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen91 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 91 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen92 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 92 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen93 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 93 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen94 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 94 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen95 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 95 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen96 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 96 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen97 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 97 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen98 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 98 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen99 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 99 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen100 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 100 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen101 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 101 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen102 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 102 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen103 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 103 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen104 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 104 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen105 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 105 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen106 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 106 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen107 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 107 } } }
+custom_icon = { name = anbi_daxugo_harem_menu_galgame_yanshen108 potential = { has_country_flag = anbi_daxugo_harem_menu_galgame_public_flag is_variable_equal = { which = anbi_daxugo_harem_menu_galgame_public_var value = 108 } } }

@@ -831,7 +831,7 @@ anbi_temple_of_undying_flame = {
 		}
 
 		on_upgraded = {
-			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+						
 		}
 	}
 
@@ -865,7 +865,7 @@ anbi_temple_of_undying_flame = {
 			hidden_effect = {
 				province_event = { id = spirits.1001 }
 			}
-			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+						
 		}
 	}
 
@@ -900,7 +900,7 @@ anbi_temple_of_undying_flame = {
 			hidden_effect = {
 				province_event = { id = spirits.1001 }
 			}
-			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+						
 		}
 	}
 }
@@ -992,7 +992,7 @@ anbi_oracle_mountain = {
 		}
 
 		on_upgraded = {
-			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }				
+							
 		}
 	}
 
@@ -1023,7 +1023,7 @@ anbi_oracle_mountain = {
 			hidden_effect = {
 				set_province_flag = tughayasa_better_divination_1
 			}
-			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }				
+							
 		}
 	}
 
@@ -1057,7 +1057,7 @@ anbi_oracle_mountain = {
 				clr_province_flag = tughayasa_better_divination_1
 				set_province_flag = tughayasa_better_divination_2
 			}
-			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }				
+							
 		}
 	}
 }
@@ -1156,7 +1156,7 @@ anbi_jiangliubao = {
 		}
 
 		on_upgraded = {
-			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+						
 		}
 	}
 
@@ -1194,7 +1194,7 @@ anbi_jiangliubao = {
 				custom_tooltip = jiangliubao_t2_tt
 				hidden_effect = { owner = { choose_new_xia_path = { path = 4559 } } }
 			}
-			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+						
 		}
 	}
 
@@ -1231,7 +1231,7 @@ anbi_jiangliubao = {
 				limit = { owner = { NOT = { has_government_attribute = is_in_xia } } }
 				custom_tooltip = jiangliubao_t3_tt
 			}
-			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+						
 		}
 	}
 }
@@ -1326,7 +1326,7 @@ anbi_godswall = {
 		}
 
 		on_upgraded = {
-			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+						
 		}
 	}
 
@@ -1357,7 +1357,7 @@ anbi_godswall = {
 		}
 
 		on_upgraded = {
-			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+						
 		}
 
 		conditional_modifier = {
@@ -1396,7 +1396,7 @@ anbi_godswall = {
 		}
 
 		on_upgraded = {
-			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }				
+							
 		}
 		
 		conditional_modifier = {
@@ -1692,7 +1692,7 @@ anbi_golden_palace = {
 		}
 
 		on_upgraded = {
-			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }				
+							
 		}
 	}
 
@@ -1744,7 +1744,7 @@ anbi_golden_palace = {
 					}
 				}
 			}
-			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }			
+						
 		}
 	}
 
@@ -1797,7 +1797,7 @@ anbi_golden_palace = {
 					}
 				}
 			}
-			owner = { accretive_path_harimari_chi_stacking_effect = { amount = 200 } }				
+							
 		}
 	}
 }

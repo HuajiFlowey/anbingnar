@@ -14,18 +14,17 @@ altan = { #Altan, the Old
 	ai_will_do = {
 		factor = 1
 		modifier = {
-		factor = 3
+			factor = 3
 			personality = ai_capitalist
 		}
-		}
 	}
+}
 
 tsagaan = { #Tsagaan, the Priest
 	global_missionary_strength = 0.02
-
 	#mp
 	idea_cost = -0.1
-	cb_on_religious_enemies = yes
+	technology_cost = -0.1
 	
 	potential = { religion = saanorgegh }
 	trigger = { owns = 5341 } #Nuugaam
@@ -35,7 +34,7 @@ tsagaan = { #Tsagaan, the Priest
 	ai_will_do = {
 		factor = 1
 		modifier = {
-		factor = 3
+			factor = 3
 			personality = ai_diplomat
 		}
 	}
@@ -84,14 +83,39 @@ bhengudak = {
 
 nurgai = { #The Faceless Queen Nurgai, leader of Nuugdan Tsarai at game start
 	core_creation = -0.1
-	cavalry_power = 0.25
-
-	#mp
-	diplomatic_reputation = 1
+	cavalry_power = 0.1
 	
 	potential = {
 		religion = saanorgegh
 		5415 = { has_province_modifier = saanorgegh_nurgai_mod }
+		NOT = {
+			has_country_flag = Y91_nurgai_upgrade
+		}
+		NOT = {	has_global_flag = faceless_emperor_win }
+	}
+	trigger = { owns = 5415 } #Hogunuug
+	
+	sprite = 46
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_balanced
+		}
+	}
+}
+
+nurgai_upgraded = { #Upgraded nurgai mask
+	province_warscore_cost = -0.1
+	core_creation = -0.1
+	cavalry_power = 0.1
+	
+	potential = {
+		religion = saanorgegh
+		5415 = { has_province_modifier = saanorgegh_nurgai_mod }
+		has_country_flag = Y91_nurgai_upgrade
+		NOT = {	has_global_flag = faceless_emperor_win }
 	}
 	trigger = { owns = 5415 } #Hogunuug
 	
@@ -108,13 +132,41 @@ nurgai = { #The Faceless Queen Nurgai, leader of Nuugdan Tsarai at game start
 
 personal_mask = {
 	legitimacy = 1
+	advisor_cost = -0.1
+	same_religion_advisor_cost = -0.1
 	devotion = 1
 	horde_unity = 1
 	republican_tradition = 0.3
 	
-	potential = { religion = saanorgegh }
+	potential = { 
+		religion = saanorgegh 
+		NOT = { has_ruler_flag = Y61_personal_mask_upgrade }
+	}
 	
-	sprite = 46
+	sprite = 228
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_balanced
+		}
+	}
+}
+
+personal_mask_upgraded = {
+	legitimacy = 1
+	devotion = 1
+	horde_unity = 1
+	republican_tradition = 0.3
+	province_warscore_cost = -0.1
+	
+	potential = { 
+		religion = saanorgegh 
+		has_ruler_flag = Y61_personal_mask_upgrade
+	}
+	
+	sprite = 228
 	
 	ai_will_do = {
 		factor = 1
@@ -132,33 +184,40 @@ death_mask = {
 	potential = { religion = saanorgegh }
 	
 	sprite = 43
+
+	effect = {
+		if = {
+			limit = { has_country_flag = hus_bhal_death_mask_buff }
+			if = {
+				limit = { NOT = { mil = 6 } }
+				change_mil = 1
+			}
+			else = {
+				add_mil_power = 100
+			}
+		}
+	}
 	
 	ai_will_do = {
 		factor = 1
 		modifier = {
-		factor = 3
-			personality = ai_balanced
-		}
-		modifier = {
-			factor = 2
-			personality = ai_capitalist
-		}
-		modifier = {
-			factor = 1.2
-			government = monarchy
+			factor = 3
+			personality = ai_militarist
 		}
 	}
 }
 
 faceless_emperor = {
+	legitimacy = 1
+	devotion = 1
+	horde_unity = 1
+	republican_tradition = 0.3
 	core_creation = -0.2
 	cavalry_power = 0.3
-	diplomatic_reputation = 1
 
 	potential = {
 		religion = saanorgegh
 		has_global_flag = faceless_emperor_win
-		owns_core_province = 5406
 		5415 = { has_province_modifier = saanorgegh_nurgai_mod }
 	}
 

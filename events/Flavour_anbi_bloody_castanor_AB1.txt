@@ -331,26 +331,26 @@ country_event = {
 }
 
 ##魔法更新提供了更为简便的魔法继承方法，故移除魔法补丁事件。
-#魔法保存补丁
-# country_event = {
-# 	id = bloody_castanor.32
-# 	title = bloody_castanor.32.t
-# 	picture = HRE_eventPicture
-# 	desc = bloody_castanor.32.d
+	#魔法保存补丁
+	# country_event = {
+	# 	id = bloody_castanor.32
+	# 	title = bloody_castanor.32.t
+	# 	picture = HRE_eventPicture
+	# 	desc = bloody_castanor.32.d
 
-# 	fire_only_once = yes
-# 	is_triggered_only = yes
-# 	hidden = yes
+	# 	fire_only_once = yes
+	# 	is_triggered_only = yes
+	# 	hidden = yes
 
-# 	trigger = {
-# 		has_country_flag = AB1_panzer_bloodtooth_cf
-# 	}
+	# 	trigger = {
+	# 		has_country_flag = AB1_panzer_bloodtooth_cf
+	# 	}
 
-# 	option = {
-# 		name = bloody_castanor.32.a
-# 		save_spell_levels_for_type_to_name = yes
-# 	}
-# }
+	# 	option = {
+	# 		name = bloody_castanor.32.a
+	# 		save_spell_levels_for_type_to_name = yes
+	# 	}
+	# }
 #转换文化
 country_event = { #Change culture of conquered adventurer provinces
 	id = bloody_castanor.6
@@ -1183,10 +1183,7 @@ country_event = {
 	desc = bloody_castanor.17.d
 
 	hidden = yes
-
-	mean_time_to_happen = {
-		days = 1
-	}
+	is_triggered_only = yes
 
 	trigger = {
 		tag = AB2
@@ -2442,17 +2439,17 @@ country_event = {
 	desc = bloody_castanor.1005.d
 
 	hidden = yes
-	mean_time_to_happen = {
-		days = 1
-	}
 	trigger = {
-		has_country_flag = anbi_ab1_the_labs_of_orcs_food
+		has_country_flag = anbi_ab1_the_labs_of_orcs_food_cf
 		any_owned_province = {
 			NOT = {
 				has_province_modifier = anbi_ab1_cross_food
 			}
 			trade_goods = livestock
 		}
+	}
+	mean_time_to_happen = {
+		days = 1
 	}
 
 	option = {
@@ -6388,71 +6385,71 @@ country_event = {
 
 
 #捅死你捅死你捅死你捅死你捅死你捅死你捅死你捅死你捅死你
-country_event = {
-	id = bloody_castanor.10000
-	title = bloody_castanor.10000.t
-	picture = ANBI_TONGSINI_eventPicture
-	desc = bloody_castanor.10000.d
+	# country_event = {
+	# id = bloody_castanor.10000
+	# title = bloody_castanor.10000.t
+	# picture = ANBI_TONGSINI_eventPicture
+	# desc = bloody_castanor.10000.d
 
-	trigger = {
-		has_country_flag = can_form_bd
-		has_country_flag = AB1_panzer_bloodtooth_cf
-	}
+	# trigger = {
+	# 	has_country_flag = can_form_bd
+	# 	has_country_flag = AB1_panzer_bloodtooth_cf
+	# }
 
-	mean_time_to_happen = {
-		days = 1
-	}
+	# mean_time_to_happen = {
+	# 	days = 114514
+	# }
 
-	immediate = {
-		clr_country_flag = can_form_bd
-	}
+	# immediate = {
+	# 	clr_country_flag = can_form_bd
+	# }
 
-	option = {
-		name = bloody_castanor.10000.a
-		add_country_modifier = {
-			name = escanni_wars_escanni_imperialism
-			duration = -1
-		}
-		if = {
-			limit = {
-				NOT = {
-					tag = AB1
-					tag = AB2
-				}
-			}
-			change_tag = AB2
-			override_country_name = AB1_second
-			swap_non_generic_missions = yes
-		}
-	}
-	after = {
-		change_government = anbi_castanor_monarchy
-		add_government_reform = anbi_castanor_state_reform
-		add_government_reform = anbi_castanor_panzer_reform
-	}
-}
-country_event = {
-	id = bloody_castanor.10001
-	title = bloody_castanor.10000.t
-	picture = ANBI_TONGSINI_eventPicture
-	desc = bloody_castanor.10001.d
+	# option = {
+	# 	name = bloody_castanor.10000.a
+	# 	add_country_modifier = {
+	# 		name = escanni_wars_escanni_imperialism
+	# 		duration = -1
+	# 	}
+	# 	if = {
+	# 		limit = {
+	# 			NOT = {
+	# 				tag = AB1
+	# 				tag = AB2
+	# 			}
+	# 		}
+	# 		change_tag = AB2
+	# 		override_country_name = AB1_second
+	# 		swap_non_generic_missions = yes
+	# 	}
+	# }
+	# after = {
+	# 	change_government = anbi_castanor_monarchy
+	# 	add_government_reform = anbi_castanor_state_reform
+	# 	add_government_reform = anbi_castanor_panzer_reform
+	# }
+	# }
+	# country_event = {
+	# id = bloody_castanor.10001
+	# title = bloody_castanor.10000.t
+	# picture = ANBI_TONGSINI_eventPicture
+	# desc = bloody_castanor.10001.d
 
-	trigger = {
-		NOT = {
-			religion = giantkin_regent_court
-		}
-		has_country_flag = AB1_panzer_bloodtooth_cf
-	}
+	# trigger = {
+	# 	NOT = {
+	# 		religion = giantkin_regent_court
+	# 	}
+	# 	has_country_flag = AB1_panzer_bloodtooth_cf
+	# }
 
-	mean_time_to_happen = {
-		days = 1
-	}
+	# mean_time_to_happen = {
+	# 	days = 114514
+	# }
 
-	option = {
-		name = bloody_castanor.10001.a
-		change_religion = giantkin_regent_court
-	}
-}
+	# option = {
+	# 	name = bloody_castanor.10001.a
+	# 	change_religion = giantkin_regent_court
+	# }
+	# }
 
 #宗教节日
 country_event = {

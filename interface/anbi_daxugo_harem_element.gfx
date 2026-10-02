@@ -1,0 +1,248 @@
+spriteTypes = {
+	spriteType = {
+		name = "anbi_daxugo_harem_menu_BG"
+		textureFile = "gfx//interface//anbi_daxugo_harem_galgeme//anbi_daxugo_harem_menu_background.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "anbi_daxugo_harem_menu_button_marriage"
+		textureFile = "gfx//interface//anbi_daxugo_harem_galgeme//anbi_daxugo_harem_menu_button_marriage.dds"
+	}
+	spriteType = {
+		name = "anbi_daxugo_harem_menu_button_stability"
+		textureFile = "gfx//interface//anbi_daxugo_harem_galgeme//anbi_daxugo_harem_menu_button_stability.dds"		
+	}
+	spriteType = {
+		name = "anbi_daxugo_harem_menu_button_building"
+		textureFile = "gfx//interface//anbi_daxugo_harem_galgeme//anbi_daxugo_harem_menu_button_building.dds"
+	}
+	spriteType = {
+		name = "anbi_daxugo_harem_menu_button_special"
+		textureFile = "gfx//interface//anbi_daxugo_harem_galgeme//anbi_daxugo_harem_menu_button_special.dds"
+	}
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_centaur1" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/centaur/centaur (1).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_centaur2" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/centaur/centaur (10).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_centaur3" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/centaur/centaur (11).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_centaur4" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/centaur/centaur (12).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_centaur5" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/centaur/centaur (2).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_centaur6" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/centaur/centaur (3).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_centaur7" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/centaur/centaur (4).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_centaur8" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/centaur/centaur (5).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_centaur9" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/centaur/centaur (6).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_centaur10" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/centaur/centaur (7).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_centaur11" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/centaur/centaur (8).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_dwarven1" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/dwarven/dwarven (1).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_dwarven2" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/dwarven/dwarven (10).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_dwarven3" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/dwarven/dwarven (11).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_dwarven4" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/dwarven/dwarven (12).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_dwarven5" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/dwarven/dwarven (2).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_dwarven6" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/dwarven/dwarven (3).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_dwarven7" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/dwarven/dwarven (4).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_dwarven8" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/dwarven/dwarven (5).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_dwarven9" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/dwarven/dwarven (6).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_dwarven10" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/dwarven/dwarven (7).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_dwarven11" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/dwarven/dwarven (8).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_dwarven12" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/dwarven/dwarven (9).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven1" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (1).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven2" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (10).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven3" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (11).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven4" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (12).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven5" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (13).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven6" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (14).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven7" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (15).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven8" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (16).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven9" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (17).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven10" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (18).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven11" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (19).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven12" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (2).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven13" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (20).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven14" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (21).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven15" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (22).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven16" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (23).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven17" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (24).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven18" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (25).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven19" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (26).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven20" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (27).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven21" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (28).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven22" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (29).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven23" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (3).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven24" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (30).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven25" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (31).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven26" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (32).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven27" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (33).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven28" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (34).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven29" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (35).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven30" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (36).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven31" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (37).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven32" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (38).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven33" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (39).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven34" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (4).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven35" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (40).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven36" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (41).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven37" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (42).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven38" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (43).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven39" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (44).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven40" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (45).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven41" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (46).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven42" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (47).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven43" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (48).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven44" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (49).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven45" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (5).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven46" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (50).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven47" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (51).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven48" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (6).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven49" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (7).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven50" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (8).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_elven51" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/elven/elven (9).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_gnoll1" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/gnoll/gnoll (1).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_gnoll2" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/gnoll/gnoll (2).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_gnoll3" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/gnoll/gnoll (3).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_gnoll4" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/gnoll/gnoll (4).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_gnoll5" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/gnoll/gnoll (5).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_gnoll6" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/gnoll/gnoll (6).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_gnoll7" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/gnoll/gnoll.dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy1" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (1).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy2" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (10).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy3" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (11).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy4" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (12).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy5" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (13).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy6" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (14).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy7" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (15).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy8" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (16).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy9" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (17).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy10" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (18).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy11" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (19).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy12" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (2).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy13" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (20).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy14" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (21).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy15" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (22).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy16" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (3).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy17" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (4).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy18" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (5).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy19" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (6).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy20" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (7).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy21" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (8).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_harpy22" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/harpy/harpy (9).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_khet1" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/khet/khet (1).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_khet2" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/khet/khet (10).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_khet3" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/khet/khet (2).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_khet4" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/khet/khet (3).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_khet5" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/khet/khet (4).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_khet6" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/khet/khet (5).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_khet7" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/khet/khet (6).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_khet8" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/khet/khet (7).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_khet9" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/khet/khet (8).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_khet10" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/khet/khet (9).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_merfolk1" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/merfolk/merfolk (1).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_merfolk2" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/merfolk/merfolk (2).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_merfolk3" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/merfolk/merfolk (3).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_merfolk4" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/merfolk/merfolk (4).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen1" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (1).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen2" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (10).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen3" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (100).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen4" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (101).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen5" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (102).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen6" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (103).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen7" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (104).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen8" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (105).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen9" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (106).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen10" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (107).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen11" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (108).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen12" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (11).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen13" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (12).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen14" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (13).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen15" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (14).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen16" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (15).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen17" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (16).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen18" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (17).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen19" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (18).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen20" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (19).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen21" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (2).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen22" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (20).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen23" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (21).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen24" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (22).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen25" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (23).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen26" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (24).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen27" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (25).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen28" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (26).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen29" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (27).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen30" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (28).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen31" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (29).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen32" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (3).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen33" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (30).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen34" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (31).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen35" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (32).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen36" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (33).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen37" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (34).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen38" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (35).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen39" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (36).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen40" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (37).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen41" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (38).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen42" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (39).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen43" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (4).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen44" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (40).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen45" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (41).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen46" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (42).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen47" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (43).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen48" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (44).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen49" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (45).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen50" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (46).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen51" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (47).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen52" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (48).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen53" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (49).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen54" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (5).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen55" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (50).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen56" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (51).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen57" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (52).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen58" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (53).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen59" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (54).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen60" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (55).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen61" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (56).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen62" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (57).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen63" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (58).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen64" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (59).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen65" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (6).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen66" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (60).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen67" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (61).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen68" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (62).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen69" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (63).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen70" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (64).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen71" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (65).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen72" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (66).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen73" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (67).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen74" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (68).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen75" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (69).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen76" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (7).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen77" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (70).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen78" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (71).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen79" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (72).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen80" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (73).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen81" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (74).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen82" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (75).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen83" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (76).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen84" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (77).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen85" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (78).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen86" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (79).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen87" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (8).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen88" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (80).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen89" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (81).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen90" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (82).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen91" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (83).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen92" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (84).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen93" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (85).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen94" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (86).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen95" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (87).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen96" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (88).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen97" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (89).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen98" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (9).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen99" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (90).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen100" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (91).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen101" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (92).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen102" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (93).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen103" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (94).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen104" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (95).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen105" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (96).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen106" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (97).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen107" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (98).dds" }
+	spriteType = { name = "anbi_daxugo_harem_menu_galgame_yanshen108" textureFile = "gfx/interface/anbi_daxugo_harem_galgeme/yanshen/yanshen (99).dds" }
+}

@@ -1135,6 +1135,7 @@ country_event = {
 	desc = anbi_merfolk.23.d
 	picture = DEATH_OF_HEIR_eventPicture
 
+	fire_only_once = yes
 	trigger = {
 		tag = AB3
 		has_ruler_flag = anbi_is_gertyene
@@ -2286,9 +2287,7 @@ province_event = {
 	picture = anbingnar_eventPicture
 
 	hidden = yes
-	mean_time_to_happen = {
-		days = 1
-	}
+	is_triggered_only = yes
 
 	trigger = {
 		owner = {
@@ -2983,11 +2982,11 @@ country_event = {
 			if = {
 				limit = { 
 					NOT = {
-						has_country_modifier = anbi_merfolk_shipgirls_Jaher_buff
+						has_country_modifier = anbi_merfolk_shipgirls_jaher_buff
 					}
 				}
 				add_country_modifier = {
-					name = anbi_merfolk_shipgirls_Jaher_buff
+					name = anbi_merfolk_shipgirls_jaher_buff
 					duration = 9125
 				}
 				define_general = {

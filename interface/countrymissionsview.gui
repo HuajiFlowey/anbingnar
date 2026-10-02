@@ -47,6 +47,9 @@ guiTypes = {
 		}
 		
 		###############
+		### A N B I ###
+		###############
+		###############
 		#未选中图标
 		
 		guiButtonType = {
@@ -56,12 +59,12 @@ guiTypes = {
 			no_clicksound = yes
 			if_resolution = {
 				max_height = 867
-				position = { x = 545 y = -300 }
+				position = { x = 545 y = 30 }
 			}
 			if_resolution = {
 				min_height = 868
 				max_height = 1047
-				position = { x = 545 y = -150 }
+				position = { x = 545 y = 30 }
 			}
 			if_resolution = {
 				min_height = 1048
@@ -75,22 +78,21 @@ guiTypes = {
 			no_clicksound = yes
 			if_resolution = {
 				max_height = 867
-				position = { x = 545 y = -260 }
+				position = { x = 545 y = 70 }
 			}
 			if_resolution = {
 				min_height = 868
 				max_height = 1047
-				position = { x = 545 y = -110 }
+				position = { x = 545 y = 70 }
 			}
 			if_resolution = {
 				min_height = 1048
 				position = { x = 545 y = 70 }
 			}
 		}
-		
-		###############
+
 		#选中图标
-		
+
 		guiButtonType = {
 			name = "anbi_mission_branch_tab_1_glow"
 			quadTextureSprite ="GFX_anbi_branch_button_1_glow"
@@ -98,12 +100,12 @@ guiTypes = {
 			no_clicksound = yes
 			if_resolution = {
 				max_height = 867
-				position = { x = 545 y = -300 }
+				position = { x = 545 y = 30 }
 			}
 			if_resolution = {
 				min_height = 868
 				max_height = 1047
-				position = { x = 545 y = -150 }
+				position = { x = 545 y = 30 }
 			}
 			if_resolution = {
 				min_height = 1048
@@ -117,19 +119,1138 @@ guiTypes = {
 			no_clicksound = yes
 			if_resolution = {
 				max_height = 867
-				position = { x = 545 y = -260 }
+				position = { x = 545 y = 70 }
 			}
 			if_resolution = {
 				min_height = 868
 				max_height = 1047
-				position = { x = 545 y = -110 }
+				position = { x = 545 y = 70 }
 			}
 			if_resolution = {
 				min_height = 1048
 				position = { x = 545 y = 70 }
 			}
 		}
+
+		#后宫页面图标
+		guiButtonType = {
+			name = "anbi_daxugo_harem_menu_tab"
+			quadTextureSprite ="GFX_anbi_daxugo_harem_menu_tab"
+			scripted = yes
+			if_resolution = {
+				max_height = 867
+				position = { x = 545 y = 30 }
+			}
+			if_resolution = {
+				min_height = 868
+				max_height = 1047
+				position = { x = 545 y = 30 }
+			}
+			if_resolution = {
+				min_height = 1048
+				position = { x = 545 y = 30 }
+			}
+		}
+		#后宫系统container
+		windowType = {
+			name = "anbi_daxugo_harem_menu_parent"
+			backGround = ""
+			position = { x = 600 y = 0 } #Newest
+			size = { x = 841 y = 618 }
+			Orientation = "UPPER_LEFT"
+			moveable = 0
+			scripted = yes
+
+			#背景
+			iconType = {
+				name = "background"
+				spriteType = "anbi_daxugo_harem_menu_BG"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+			
+			#图标交互按钮
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_button_marriage"
+				spriteType = "anbi_daxugo_harem_menu_button_marriage"
+				position = { x = 81 y = 117 }
+				buttonText = ""
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_button_stability"
+				spriteType = "anbi_daxugo_harem_menu_button_stability"
+				position = { x = 188 y = 117 }
+				buttonText = ""
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_button_building"
+				spriteType = "anbi_daxugo_harem_menu_button_building"
+				position = { x = 295 y = 117 }
+				buttonText = ""
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_button_special"
+				spriteType = "anbi_daxugo_harem_menu_button_special"
+				position = { x = 402 y = 117 }
+				buttonText = ""
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+
+			#后宫列表按钮
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_button_yanshen"
+				quadTextureSprite = "button_type_7"
+				position = { x = 30 y = 227 }
+				buttonText = "ANBI_DAXUGO_HAREM_yanshen"
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_button_kai"
+				quadTextureSprite = "button_type_7"
+				position = { x = 30 y = 274 }
+				buttonText = "ANBI_DAXUGO_HAREM_kai"
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_button_tanxiang"
+				quadTextureSprite = "button_type_7"
+				position = { x = 30 y = 321 }
+				buttonText = "ANBI_DAXUGO_HAREM_tanxiang"
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_button_jinan"
+				quadTextureSprite = "button_type_7"
+				position = { x = 30 y = 368 }
+				buttonText = "ANBI_DAXUGO_HAREM_jinan"
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_button_rahen"
+				quadTextureSprite = "button_type_7"
+				position = { x = 30 y = 415 }
+				buttonText = "ANBI_DAXUGO_HAREM_rahen"
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_button_harimari"
+				quadTextureSprite = "button_type_7"
+				position = { x = 30 y = 462 }
+				buttonText = "ANBI_DAXUGO_HAREM_harimari"
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_button_khet"
+				quadTextureSprite = "button_type_7"
+				position = { x = 30 y = 509 }
+				buttonText = "ANBI_DAXUGO_HAREM_khet"
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_button_burwar"
+				quadTextureSprite = "button_type_7"
+				position = { x = 30 y = 556 }
+				buttonText = "ANBI_DAXUGO_HAREM_burwar"
+				buttonFont = "vic_18"
+				scripted = yes
+			}
+
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_button_back"
+				position = { x= 469 y = 73}
+				quadTextureSprite ="GFX_standard_button_71"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "DOMESTIC_BACK"
+				buttonFont = "vic_18"
+				shortcut = "z"
+				extra_shortcut = "ESCAPE"
+				clicksound = back_click
+				scripted = yes
+			}
+
+			#立绘展示
+			windowType = {
+				name = "anbi_daxugo_harem_menu_galgame_window"
+				backGround = ""
+				position = { x = 188 y = 227 } #Newest
+				size = { x = 360 y = 360 }
+				Orientation = "UPPER_LEFT"
+				
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_centaur1" spriteType = "anbi_daxugo_harem_menu_galgame_centaur1"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_centaur2" spriteType = "anbi_daxugo_harem_menu_galgame_centaur2"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_centaur3" spriteType = "anbi_daxugo_harem_menu_galgame_centaur3"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_centaur4" spriteType = "anbi_daxugo_harem_menu_galgame_centaur4"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_centaur5" spriteType = "anbi_daxugo_harem_menu_galgame_centaur5"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_centaur6" spriteType = "anbi_daxugo_harem_menu_galgame_centaur6"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_centaur7" spriteType = "anbi_daxugo_harem_menu_galgame_centaur7"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_centaur8" spriteType = "anbi_daxugo_harem_menu_galgame_centaur8"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_centaur9" spriteType = "anbi_daxugo_harem_menu_galgame_centaur9"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_centaur10" spriteType = "anbi_daxugo_harem_menu_galgame_centaur10"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_centaur11" spriteType = "anbi_daxugo_harem_menu_galgame_centaur11"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_dwarven1" spriteType = "anbi_daxugo_harem_menu_galgame_dwarven1"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_dwarven2" spriteType = "anbi_daxugo_harem_menu_galgame_dwarven2"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_dwarven3" spriteType = "anbi_daxugo_harem_menu_galgame_dwarven3"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_dwarven4" spriteType = "anbi_daxugo_harem_menu_galgame_dwarven4"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_dwarven5" spriteType = "anbi_daxugo_harem_menu_galgame_dwarven5"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_dwarven6" spriteType = "anbi_daxugo_harem_menu_galgame_dwarven6"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_dwarven7" spriteType = "anbi_daxugo_harem_menu_galgame_dwarven7"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_dwarven8" spriteType = "anbi_daxugo_harem_menu_galgame_dwarven8"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_dwarven9" spriteType = "anbi_daxugo_harem_menu_galgame_dwarven9"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_dwarven10" spriteType = "anbi_daxugo_harem_menu_galgame_dwarven10"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_dwarven11" spriteType = "anbi_daxugo_harem_menu_galgame_dwarven11"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_dwarven12" spriteType = "anbi_daxugo_harem_menu_galgame_dwarven12"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven1" spriteType = "anbi_daxugo_harem_menu_galgame_elven1"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven2" spriteType = "anbi_daxugo_harem_menu_galgame_elven2"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven3" spriteType = "anbi_daxugo_harem_menu_galgame_elven3"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven4" spriteType = "anbi_daxugo_harem_menu_galgame_elven4"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven5" spriteType = "anbi_daxugo_harem_menu_galgame_elven5"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven6" spriteType = "anbi_daxugo_harem_menu_galgame_elven6"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven7" spriteType = "anbi_daxugo_harem_menu_galgame_elven7"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven8" spriteType = "anbi_daxugo_harem_menu_galgame_elven8"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven9" spriteType = "anbi_daxugo_harem_menu_galgame_elven9"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven10" spriteType = "anbi_daxugo_harem_menu_galgame_elven10"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven11" spriteType = "anbi_daxugo_harem_menu_galgame_elven11"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven12" spriteType = "anbi_daxugo_harem_menu_galgame_elven12"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven13" spriteType = "anbi_daxugo_harem_menu_galgame_elven13"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven14" spriteType = "anbi_daxugo_harem_menu_galgame_elven14"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven15" spriteType = "anbi_daxugo_harem_menu_galgame_elven15"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven16" spriteType = "anbi_daxugo_harem_menu_galgame_elven16"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven17" spriteType = "anbi_daxugo_harem_menu_galgame_elven17"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven18" spriteType = "anbi_daxugo_harem_menu_galgame_elven18"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven19" spriteType = "anbi_daxugo_harem_menu_galgame_elven19"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven20" spriteType = "anbi_daxugo_harem_menu_galgame_elven20"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven21" spriteType = "anbi_daxugo_harem_menu_galgame_elven21"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven22" spriteType = "anbi_daxugo_harem_menu_galgame_elven22"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven23" spriteType = "anbi_daxugo_harem_menu_galgame_elven23"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven24" spriteType = "anbi_daxugo_harem_menu_galgame_elven24"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven25" spriteType = "anbi_daxugo_harem_menu_galgame_elven25"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven26" spriteType = "anbi_daxugo_harem_menu_galgame_elven26"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven27" spriteType = "anbi_daxugo_harem_menu_galgame_elven27"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven28" spriteType = "anbi_daxugo_harem_menu_galgame_elven28"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven29" spriteType = "anbi_daxugo_harem_menu_galgame_elven29"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven30" spriteType = "anbi_daxugo_harem_menu_galgame_elven30"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven31" spriteType = "anbi_daxugo_harem_menu_galgame_elven31"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven32" spriteType = "anbi_daxugo_harem_menu_galgame_elven32"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven33" spriteType = "anbi_daxugo_harem_menu_galgame_elven33"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven34" spriteType = "anbi_daxugo_harem_menu_galgame_elven34"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven35" spriteType = "anbi_daxugo_harem_menu_galgame_elven35"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven36" spriteType = "anbi_daxugo_harem_menu_galgame_elven36"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven37" spriteType = "anbi_daxugo_harem_menu_galgame_elven37"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven38" spriteType = "anbi_daxugo_harem_menu_galgame_elven38"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven39" spriteType = "anbi_daxugo_harem_menu_galgame_elven39"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven40" spriteType = "anbi_daxugo_harem_menu_galgame_elven40"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven41" spriteType = "anbi_daxugo_harem_menu_galgame_elven41"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven42" spriteType = "anbi_daxugo_harem_menu_galgame_elven42"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven43" spriteType = "anbi_daxugo_harem_menu_galgame_elven43"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven44" spriteType = "anbi_daxugo_harem_menu_galgame_elven44"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven45" spriteType = "anbi_daxugo_harem_menu_galgame_elven45"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven46" spriteType = "anbi_daxugo_harem_menu_galgame_elven46"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven47" spriteType = "anbi_daxugo_harem_menu_galgame_elven47"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven48" spriteType = "anbi_daxugo_harem_menu_galgame_elven48"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven49" spriteType = "anbi_daxugo_harem_menu_galgame_elven49"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven50" spriteType = "anbi_daxugo_harem_menu_galgame_elven50"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_elven51" spriteType = "anbi_daxugo_harem_menu_galgame_elven51"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_gnoll1" spriteType = "anbi_daxugo_harem_menu_galgame_gnoll1"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_gnoll2" spriteType = "anbi_daxugo_harem_menu_galgame_gnoll2"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_gnoll3" spriteType = "anbi_daxugo_harem_menu_galgame_gnoll3"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_gnoll4" spriteType = "anbi_daxugo_harem_menu_galgame_gnoll4"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_gnoll5" spriteType = "anbi_daxugo_harem_menu_galgame_gnoll5"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_gnoll6" spriteType = "anbi_daxugo_harem_menu_galgame_gnoll6"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_gnoll7" spriteType = "anbi_daxugo_harem_menu_galgame_gnoll7"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy1" spriteType = "anbi_daxugo_harem_menu_galgame_harpy1"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy2" spriteType = "anbi_daxugo_harem_menu_galgame_harpy2"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy3" spriteType = "anbi_daxugo_harem_menu_galgame_harpy3"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy4" spriteType = "anbi_daxugo_harem_menu_galgame_harpy4"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy5" spriteType = "anbi_daxugo_harem_menu_galgame_harpy5"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy6" spriteType = "anbi_daxugo_harem_menu_galgame_harpy6"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy7" spriteType = "anbi_daxugo_harem_menu_galgame_harpy7"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy8" spriteType = "anbi_daxugo_harem_menu_galgame_harpy8"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy9" spriteType = "anbi_daxugo_harem_menu_galgame_harpy9"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy10" spriteType = "anbi_daxugo_harem_menu_galgame_harpy10"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy11" spriteType = "anbi_daxugo_harem_menu_galgame_harpy11"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy12" spriteType = "anbi_daxugo_harem_menu_galgame_harpy12"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy13" spriteType = "anbi_daxugo_harem_menu_galgame_harpy13"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy14" spriteType = "anbi_daxugo_harem_menu_galgame_harpy14"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy15" spriteType = "anbi_daxugo_harem_menu_galgame_harpy15"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy16" spriteType = "anbi_daxugo_harem_menu_galgame_harpy16"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy17" spriteType = "anbi_daxugo_harem_menu_galgame_harpy17"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy18" spriteType = "anbi_daxugo_harem_menu_galgame_harpy18"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy19" spriteType = "anbi_daxugo_harem_menu_galgame_harpy19"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy20" spriteType = "anbi_daxugo_harem_menu_galgame_harpy20"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy21" spriteType = "anbi_daxugo_harem_menu_galgame_harpy21"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_harpy22" spriteType = "anbi_daxugo_harem_menu_galgame_harpy22"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_khet1" spriteType = "anbi_daxugo_harem_menu_galgame_khet1"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_khet2" spriteType = "anbi_daxugo_harem_menu_galgame_khet2"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_khet3" spriteType = "anbi_daxugo_harem_menu_galgame_khet3"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_khet4" spriteType = "anbi_daxugo_harem_menu_galgame_khet4"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_khet5" spriteType = "anbi_daxugo_harem_menu_galgame_khet5"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_khet6" spriteType = "anbi_daxugo_harem_menu_galgame_khet6"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_khet7" spriteType = "anbi_daxugo_harem_menu_galgame_khet7"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_khet8" spriteType = "anbi_daxugo_harem_menu_galgame_khet8"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_khet9" spriteType = "anbi_daxugo_harem_menu_galgame_khet9"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_khet10" spriteType = "anbi_daxugo_harem_menu_galgame_khet10"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_merfolk1" spriteType = "anbi_daxugo_harem_menu_galgame_merfolk1"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_merfolk2" spriteType = "anbi_daxugo_harem_menu_galgame_merfolk2"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_merfolk3" spriteType = "anbi_daxugo_harem_menu_galgame_merfolk3"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_merfolk4" spriteType = "anbi_daxugo_harem_menu_galgame_merfolk4"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen1" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen1"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen2" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen2"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen3" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen3"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen4" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen4"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen5" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen5"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen6" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen6"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen7" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen7"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen8" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen8"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen9" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen9"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen10" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen10"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen11" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen11"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen12" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen12"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen13" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen13"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen14" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen14"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen15" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen15"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen16" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen16"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen17" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen17"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen18" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen18"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen19" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen19"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen20" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen20"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen21" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen21"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen22" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen22"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen23" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen23"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen24" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen24"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen25" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen25"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen26" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen26"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen27" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen27"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen28" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen28"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen29" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen29"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen30" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen30"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen31" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen31"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen32" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen32"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen33" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen33"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen34" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen34"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen35" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen35"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen36" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen36"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen37" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen37"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen38" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen38"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen39" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen39"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen40" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen40"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen41" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen41"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen42" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen42"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen43" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen43"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen44" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen44"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen45" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen45"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen46" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen46"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen47" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen47"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen48" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen48"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen49" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen49"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen50" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen50"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen51" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen51"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen52" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen52"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen53" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen53"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen54" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen54"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen55" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen55"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen56" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen56"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen57" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen57"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen58" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen58"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen59" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen59"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen60" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen60"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen61" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen61"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen62" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen62"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen63" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen63"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen64" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen64"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen65" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen65"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen66" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen66"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen67" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen67"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen68" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen68"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen69" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen69"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen70" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen70"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen71" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen71"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen72" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen72"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen73" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen73"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen74" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen74"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen75" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen75"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen76" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen76"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen77" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen77"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen78" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen78"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen79" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen79"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen80" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen80"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen81" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen81"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen82" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen82"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen83" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen83"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen84" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen84"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen85" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen85"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen86" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen86"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen87" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen87"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen88" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen88"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen89" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen89"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen90" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen90"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen91" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen91"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen92" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen92"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen93" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen93"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen94" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen94"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen95" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen95"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen96" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen96"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen97" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen97"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen98" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen98"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen99" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen99"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen100" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen100"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen101" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen101"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen102" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen102"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen103" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen103"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen104" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen104"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen105" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen105"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen106" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen106"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen107" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen107"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+				iconType = { name = "anbi_daxugo_harem_menu_galgame_yanshen108" spriteType = "anbi_daxugo_harem_menu_galgame_yanshen108"  position = { x = 0 y = 0 } Orientation = "UPPER_LEFT" scripted = yes }
+			}
+
+			#交互行动列表
+			windowType = {
+				name = "anbi_daxugo_harem_menu_action_list"
+				backGround = ""
+				position = { x = 538 y = 40 }
+				size = { x = 318 y = 602 }
+				Orientation = "UPPER_LEFT"
+				moveable = 0
+				scripted = yes
+
+				#按钮本体（2026-08 重构：每个具体行动独立按钮，4 种类 × 8 槽位共用坐标，
+			#potential 按行动种类变量切换可见：1=marriage 2=stability 3=building 4=special）
+			#—— marriage（变量值 1）——
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_marriage_1"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 20 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_marriage_2"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 80 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_marriage_3"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 140 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_marriage_4"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 200 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_marriage_5"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 260 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_marriage_6"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 320 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_marriage_7"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 380 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_marriage_8"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 440 }
+			}
+			#—— stability（变量值 2）——
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_stability_1"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 20 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_stability_2"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 80 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_stability_3"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 140 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_stability_4"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 200 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_stability_5"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 260 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_stability_6"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 320 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_stability_7"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 380 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_stability_8"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 440 }
+			}
+			#—— building（变量值 3）——
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_building_1"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 20 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_building_2"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 80 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_building_3"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 140 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_building_4"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 200 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_building_5"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 260 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_building_6"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 320 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_building_7"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 380 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_building_8"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 440 }
+			}
+			#—— special（变量值 4）——
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_special_1"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 20 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_special_2"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 80 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_special_3"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 140 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_special_4"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 200 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_special_5"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 260 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_special_6"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 320 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_special_7"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 380 }
+			}
+			guiButtonType = {
+				name = "anbi_daxugo_harem_menu_action_list_special_8"
+				quadTextureSprite ="GFX_decree_button"
+				Orientation = "UPPER_LEFT"
+				buttonFont = "vic_18_black"
+				buttonText = ""
+				scripted = yes
+				position = { x = 40 y = 440 }
+			}
+			#按钮文本（文本键 = 文本框名，值为 [Root.DaxugoHaremButtonTextN]，随种类/宫殿变量切换）
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_marriage_1_loc"
+				position = { x = 40 y = 30 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_marriage_2_loc"
+				position = { x = 40 y = 90 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_marriage_3_loc"
+				position = { x = 40 y = 150 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_marriage_4_loc"
+				position = { x = 40 y = 210 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_marriage_5_loc"
+				position = { x = 40 y = 270 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_marriage_6_loc"
+				position = { x = 40 y = 330 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_marriage_7_loc"
+				position = { x = 40 y = 390 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_marriage_8_loc"
+				position = { x = 40 y = 450 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_stability_1_loc"
+				position = { x = 40 y = 30 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_stability_2_loc"
+				position = { x = 40 y = 90 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_stability_3_loc"
+				position = { x = 40 y = 150 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_stability_4_loc"
+				position = { x = 40 y = 210 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_stability_5_loc"
+				position = { x = 40 y = 270 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_stability_6_loc"
+				position = { x = 40 y = 330 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_stability_7_loc"
+				position = { x = 40 y = 390 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_stability_8_loc"
+				position = { x = 40 y = 450 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_building_1_loc"
+				position = { x = 40 y = 30 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_building_2_loc"
+				position = { x = 40 y = 90 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_building_3_loc"
+				position = { x = 40 y = 150 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_building_4_loc"
+				position = { x = 40 y = 210 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_building_5_loc"
+				position = { x = 40 y = 270 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_building_6_loc"
+				position = { x = 40 y = 330 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_building_7_loc"
+				position = { x = 40 y = 390 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_building_8_loc"
+				position = { x = 40 y = 450 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_special_1_loc"
+				position = { x = 40 y = 30 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_special_2_loc"
+				position = { x = 40 y = 90 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_special_3_loc"
+				position = { x = 40 y = 150 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_special_4_loc"
+				position = { x = 40 y = 210 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_special_5_loc"
+				position = { x = 40 y = 270 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_special_6_loc"
+				position = { x = 40 y = 330 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_special_7_loc"
+				position = { x = 40 y = 390 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "anbi_daxugo_harem_menu_action_list_special_8_loc"
+				position = { x = 40 y = 450 }
+				font = "vic_18"
+				text_color_code = b
+				borderSize = { x = 4 y = 4 }
+				text = "Cast Spell Slot 1"
+				maxWidth = 253
+				maxHeight = 48
+				format = centre
+				alwaystransparent = yes
+				scripted = yes
+			}			}
+		}
 		###############
+		###############
+		
 
 		instantTextBoxType = {
 			name = "window_title"
@@ -162,6 +1283,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			spacing = 0
 		}
+
 	}
 
 	windowType = {
@@ -337,4 +1459,6 @@ guiTypes = {
 			quadTextureSprite = "GFX_small_shield_overlay_great_power_transparent"
 		}
 	}
+
+	
 }

@@ -1,0 +1,1683 @@
+country_decisions = {
+
+	guwaamud_nation = { #Guwaamud
+		major = yes
+		potential = {
+			technology_group = tech_shuvuush
+			was_never_end_game_tag_trigger = yes
+		}
+		provinces_to_highlight = {
+			region = gowon_region
+			NOT = { owned_by = ROOT }
+			OR = {
+				NOT = { island = yes}
+				ROOT = { NOT = { has_country_flag = islandless_guwaamud } }
+			}
+		}
+		allow = {
+			technology_group = tech_shuvuush
+			gowon_region = {
+				type = all
+				OR = {
+					NOT = { is_city = yes }
+					if = {
+						limit = { ROOT = { has_country_flag = islandless_guwaamud } }
+						island = yes
+					}
+					else = {
+						hidden_trigger = {
+							always = no
+						}
+					}
+					owned_by = ROOT
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = anbi_mission_to_daxugo_ctt
+				ai = yes
+			}
+			is_subject = no
+			is_at_war = no
+			has_regency = no
+			NOT = { exists = Y96 }
+		}
+		effect = {
+			change_tag = Y96
+			hidden_effect = {
+				restore_country_name = yes
+				set_country_flag = formed_end_game_tag_flag
+			}
+			#if = { #This was part of the old thing, unsure if the Nhaless rework wants renames or not. If so uncomment
+			#	limit = { primary_culture = guwaadun }
+			#	override_country_name = GUNGEOMU
+			#}
+			add_prestige = 20
+			increase_government_rank_scripted_effect = { rank = 2 }
+			change_government = monarchy
+			add_government_reform = guwaamud_harem_reform
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { NOT = { has_country_modifier = human_military } }
+				clear_racial_military = yes
+				tooltip = {
+					add_country_modifier = {
+						name = human_military
+						duration = -1
+					}
+				}
+				add_country_modifier = {
+					name = human_military
+					duration = -1
+					hidden = yes
+				}
+			}
+			change_technology_group = tech_halessi
+			change_unit_type = tech_halessi
+			hidden_effect = { update_unit_sprites_for_racial_mil = yes }
+			swap_non_generic_missions = yes
+			country_event = { id = guwaamud.1 }
+			hidden_effect = { country_event = { id = shuvuush.4 days = 90 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	daxugo_nation = { #Daxugo
+		major = yes
+		potential = {
+			technology_group = tech_shuvuush
+			was_never_end_game_tag_trigger = yes
+		}
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			technology_group = tech_shuvuush
+			owns_core_province = 4871
+			num_of_owned_provinces_with = {
+				value = 25
+				superregion = yanshen_superregion
+			}
+			is_subject = no
+			is_at_war = no
+			has_regency = no
+			custom_trigger_tooltip = {
+				tooltip = anbi_mission_to_daxugo_ctt
+				ai = yes
+			}
+			NOT = { exists = Y98 }
+		}
+		effect = {
+			change_tag = Y98
+			hidden_effect = {
+				restore_country_name = yes
+				set_country_flag = formed_end_game_tag_flag
+			}
+			add_prestige = 25
+			change_government = monarchy
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_ruler_modifier = {
+				name = Y98_daxugo_former_mod
+				duration = -1  
+			}
+			yanshen_superregion = {
+				add_permanent_claim = ROOT
+			}
+			hidden_effect = { xianjie_region = { discover_country = ROOT } }
+			primary_and_ruler_culture_change = { race = human new_culture = daxug }
+			increase_government_rank_scripted_effect = { rank = 3 }
+			hidden_effect = {
+				every_owned_province = {
+					limit = { 
+						OR = { 
+							culture = shuvuush
+							culture = kuuldaar
+						}
+					}
+					change_culture = daxug
+				}
+				country_event = { id = shuvuush.4 days = 90 }
+			}
+			set_capital = 4871
+			4871 = {
+				change_culture = daxug
+				change_province_name = "Duzhekho"
+				change_religion = ROOT
+			}
+			if = {
+				limit = { NOT = { has_country_modifier = human_military } }
+				clear_racial_military = yes
+				tooltip = {
+					add_country_modifier = {
+						name = human_military
+						duration = -1
+					}
+				}
+				add_country_modifier = {
+					name = human_military
+					duration = -1
+					hidden = yes
+				}
+			}
+			change_technology_group = tech_halessi
+			change_unit_type = tech_halessi
+			hidden_effect = { update_unit_sprites_for_racial_mil = yes }
+
+			swap_non_generic_missions = yes
+			country_event = { id = daxugo.59 days = 30 }
+			hidden_effect = { #Lets you engage in diplomacy effectively
+				rahen_superregion = { discover_country = ROOT }
+				thidinkai_region = { discover_country = ROOT }
+				bomdan_region = { discover_country = ROOT }
+				
+				#Kharunyana
+				4647 = {
+					discover_country = ROOT
+				}
+				4648 = {
+					discover_country = ROOT
+				}
+				4649 = {
+					discover_country = ROOT
+				}
+				
+				#Rahen Wastelands
+				1788 = {
+					discover_country = ROOT
+				}
+				1786 = {
+					discover_country = ROOT
+				}
+				1896 = {
+					discover_country = ROOT
+				}
+
+				gulf_of_rahen_region = { discover_country = ROOT }
+
+				#Yanshen Seas
+				1372 = {
+					discover_country = ROOT
+				}
+				1371 = {
+					discover_country = ROOT
+				}
+				1370 = {
+					discover_country = ROOT
+				}
+
+				#Phokhao Mountains
+				3261 = {
+					discover_country = ROOT
+				}
+				2334 = {
+					discover_country = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	form_baihon_xinh = { #Three Hundred Soldiers / Unified Tamran Empire
+		major = yes
+		potential = {
+			culture_group = kai
+			OR = {
+				primary_culture = tamran
+				primary_culture = phonan
+				tag = Y68
+			}
+			NOT = { exists = Y97 }
+			NOT = { has_country_flag = formed_baihon_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4697
+				province_id = 4701
+				province_id = 4703
+				province_id = 4764
+				province_id = 5429
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			owns_core_province = 4697
+			owns_core_province = 4701
+			owns_core_province = 4703
+			owns_core_province = 4764
+			owns_core_province = 5429
+			is_at_war = no
+			is_free_or_tributary_trigger = yes			
+		}
+		effect = {
+			change_tag = Y97
+			hidden_effect = {
+				restore_country_name = yes
+				save_global_event_target_as = baihon_winner_event_target
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+				set_country_flag = won_war_for_the_mantle_of_baihon_xinh # this clears diplo restrictions
+				set_country_flag = formed_end_game_tag_flag
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+				}
+			increase_government_rank_scripted_effect = { rank = 2 }
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_baihon_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	unite_thidinkai = {
+		major = yes
+		potential = {
+			culture_group = kai
+			NOT = { primary_culture = phonan }
+			NOT = { primary_culture = tamran }
+			NOT = { primary_culture = binhrung }
+			NOT = { ruler_culture = sunrise_elf }
+			NOT = { exists = Z63 }
+			NOT = { has_country_flag = formed_thidinkai_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+		}
+		provinces_to_highlight = {
+			region = thidinkai_region
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			owns_core_province = 4751
+			owns_core_province = 4955
+			owns_core_province = 4779
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			adm_tech = 7			
+			num_of_owned_provinces_with = {
+				value = 5
+				culture = bokai
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				culture = binhrung
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				culture = sikai
+			}
+			OR = {
+				num_of_owned_provinces_with = {
+				value = 5
+				culture = phonan
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					culture = hinphat
+				}
+			}
+		}
+		effect = {
+			change_tag = Z63
+			hidden_effect = {
+				restore_country_name = yes
+				set_country_flag = formed_end_game_tag_flag
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			hidden_effect = {
+				every_known_country = {
+					limit = { historical_friend_with = ROOT }
+					add_historical_friend = Z63 
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+				}
+			set_government_rank_scripted_effect = { rank = 3 }
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = { primary_culture = binhrung }
+				override_country_name = CHAKKAD_YONHRUNG
+			}
+			set_country_flag = formed_thidinkai_flag
+			thidinkai_region = {
+				limit = { NOT = { province_id = 5424 } }
+				add_permanent_claim = ROOT
+			}
+			thuongidut_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	damoh_yanglam_nation = { #Delete this whenever the lupulan disaster is in
+		major = yes
+		potential = {
+			culture_group = yanglam
+			NOT = { exists = Z64 }
+			NOT = { has_country_flag = formed_damoh_yangla_flag }
+			NOT = { has_country_flag = bawa_simpat_embrace_stone_lady }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+		}
+		provinces_to_highlight = {
+			region = lupulan_rainforest_region
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+		hidden_trigger = {
+				culture_group = yanglam
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			prestige = 75
+			legitimacy = 100
+			num_of_owned_provinces_with = {
+				value = 20
+				region = lupulan_rainforest_region
+			}
+		}
+		effect = {
+			change_tag = Z64
+			hidden_effect = { restore_country_name = yes }
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_government_rank_scripted_effect = { rank = 2 }
+			add_prestige = 15
+			if = {
+				limit = { primary_culture = sirtana }
+				override_country_name = GEHET_SIRTAN
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_damoh_yangla_flag
+			lupulan_rainforest_region = {
+				limit = {
+					NOT = { area = amkamsek_area }
+					NOT = { area = hoangdesinh_area }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_yanshen = {
+		major = yes
+		potential = {
+			government = republic
+			culture_group = yan
+			NOT = { exists = Z65 }
+			NOT = {
+				AND = {
+					primary_culture = beikling
+					religion = devouring_path
+				}
+			}
+			NOT = { 
+				OR = {
+					has_country_flag = formed_yanshen_flag
+					has_country_flag = formed_liang_flag
+					has_country_flag = formed_di_yichan_flag
+					has_country_flag = Y15_no_yanshen
+					primary_culture = szitu
+					primary_culture = pinghoi
+					primary_culture = haiwai
+				}
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_global_flag = anbi_greatest_yanshen_worldline }
+		}
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			hidden_trigger = {
+				culture_group = yan
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			adm_tech = 7
+			OR = {
+				AND = {
+					owns_core_province = 4871
+					capital = 4871
+				}
+				capital_scope = {
+					development = 45
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 50
+				superregion = yanshen_superregion
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					tag = Y26 #Yinquan
+				}
+				custom_tooltip = form_yanshen_warning.tt
+			}
+			change_tag = Z65
+			hidden_effect = {
+				if = {
+					limit = { was_tag = Y20 }
+					save_global_event_target_as = feiten_or_was_feiten_target
+				}
+			}
+			hidden_effect = {
+				restore_country_name = yes
+				set_country_flag = formed_end_game_tag_flag
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+				}
+			set_government_rank_scripted_effect = { rank = 3 }
+			add_prestige = 35
+			set_country_flag = formed_yanshen_flag
+			if = {
+				limit = {
+					NOT = {
+						capital = 4871
+						OR = {
+							primary_culture = naamjyut
+							primary_culture = gangim
+						}
+					}
+				}
+				capital_scope = {
+					change_province_name = "Tongyi Cheng"
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						capital = 4871
+					}
+					primary_culture = naamjyut
+				}
+				capital_scope = {
+					change_province_name = "Tungjat Cing"
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						capital = 4871
+					}
+					primary_culture = gangim
+				}
+				capital_scope = {
+					change_province_name = "Thung Siang"
+				}
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = { primary_culture = naamjyut }
+				override_country_name = YANSING
+			}
+			else_if = {
+				limit = { primary_culture = gangim }
+				override_country_name = YANSENG
+			}
+			yanshen_superregion = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	dahui_nation = {
+		major = yes
+		potential = {
+			government = monarchy
+			culture_group = yan
+			NOT = {
+				AND = {
+					primary_culture = beikling
+					religion = devouring_path
+				}
+			}
+			NOT = { exists = Z66 }
+			NOT = { 
+				OR = {
+					has_country_flag = formed_yanshen_flag
+					has_country_flag = formed_liang_flag
+					has_country_flag = formed_di_yichan_flag
+					primary_culture = szitu
+					primary_culture = pinghoi
+					primary_culture = haiwai
+				}
+			}
+			NOT = { tag = Y91 } #ANBI
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+		}
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			hidden_trigger = {
+				culture_group = yan
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			adm_tech = 7
+			OR = {
+				capital = 4826
+				capital_scope = {
+					development = 45
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 50
+				superregion = yanshen_superregion
+			}
+		}
+		effect = {
+			change_tag = Z66
+			hidden_effect = {
+				restore_country_name = yes
+				set_country_flag = formed_end_game_tag_flag
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+				}
+			set_government_rank_scripted_effect = { rank = 3 }
+			add_prestige = 35
+			set_country_flag = formed_liang_flag
+			if = {
+				limit = {
+					NOT = {
+						capital = 4871
+						OR = {
+							primary_culture = naamjyut
+							primary_culture = gangim
+						}
+					}
+				}
+				capital_scope = {
+					change_province_name = "Zhaoming"
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						capital = 4871
+					}
+					primary_culture = naamjyut
+				}
+				capital_scope = {
+					change_province_name = "Ciuming"
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						capital = 4871
+					}
+					primary_culture = gangim
+				}
+				capital_scope = {
+					change_province_name = "Chiaubeng"
+				}
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = { primary_culture = naamjyut }
+				override_country_name = DAAIFAI
+			}
+			else_if = {
+				limit = { primary_culture = gangim }
+				override_country_name = DUAHUI
+			}
+			if = {
+				limit = { NOT = { has_reform = eunuch_dynasty_reform } }
+				add_government_reform = yan_empire_reform
+			}
+			yanshen_superregion = {
+				add_permanent_claim = ROOT
+			}
+			if = { limit = { was_tag = Y09 } swap_non_generic_missions = yes }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	lianzhou_nation = {
+		major = yes
+		potential = {
+			primary_culture = serene_harimari
+			NOT = { exists = Z67 }
+			NOT = { 
+				OR = {
+					has_country_flag = formed_yanshen_flag
+					has_country_flag = formed_liang_flag
+					has_country_flag = formed_di_yichan_flag
+					has_reform = xiaken
+					has_reform = one_xia
+					has_reform = xia_parliament_reform
+					has_reform = wulin
+					has_reform = indep_xiaken
+				}
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+		}
+		provinces_to_highlight = {
+			superregion = yanshen_superregion
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			owns_core_province = 4871
+			hidden_trigger = {
+				primary_culture = serene_harimari
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			adm_tech = 7
+			num_of_owned_provinces_with = {
+				value = 50
+				superregion = yanshen_superregion
+			}
+		}
+		effect = {
+			change_tag = Z67
+			hidden_effect = {
+				restore_country_name = yes
+				set_country_flag = formed_end_game_tag_flag
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+				}
+			set_government_rank_scripted_effect = { rank = 3 }
+			add_prestige = 35
+			set_country_flag = formed_di_yichan_flag
+			if = {
+				limit = {
+					NOT = {
+						capital = 4871
+					}
+				}
+				4871 = {
+					move_capital_effect = yes 
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						government = monarchy
+					}
+				}
+				change_government = monarchy
+				add_government_reform = liangzhu_reform
+			}
+			else_if = {
+				limit = {
+					government = monarchy
+					NOT = {
+						has_reform = liangzhu_reform
+						has_reform = flame_custodian_reform
+					}
+				}
+				add_government_reform = liangzhu_reform
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			yanshen_superregion = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_sunrise_empire = {
+		major = yes
+		potential = {
+			has_ruler_flag = elven_ruler
+			OR = {
+				ruler_culture = sun_elf
+				ruler_culture = sunrise_elf
+			}
+			capital_scope = {
+				OR = {
+					superregion = yanshen_superregion
+					superregion = gozengun_superregion
+					superregion = vimdatrong_superregion
+				}
+			}
+			NOT = { tag = Y86 }
+			NOT = { exists = Y00 }
+			NOT = { tag = F38 }
+			NOT = { tag = F97 }
+			NOT = { has_country_flag = formed_sunrise_empire_flag }
+			normal_or_historical_nations = yes
+		}
+		provinces_to_highlight = {
+			OR = {
+				superregion = yanshen_superregion
+				superregion = vimdatrong_superregion
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			hidden_trigger = {
+				OR = {
+					ruler_culture = sun_elf
+					ruler_culture = sunrise_elf
+				}
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			OR = {
+				AND = {
+					owns_core_province = 4871
+					capital = 4871
+				}
+				capital_scope = {
+					development = 60
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 150
+				OR = {
+					superregion = yanshen_superregion
+					superregion = vimdatrong_superregion
+				}
+			}
+		}
+		effect = {
+			change_tag = Y00
+			hidden_effect = {
+				restore_country_name = yes
+				set_country_flag = formed_end_game_tag_flag
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+				}
+			set_government_rank_scripted_effect = { rank = 3 }
+			add_prestige = 35
+			set_country_flag = formed_sunrise_empire_flag
+			if = {
+				limit = {
+					NOT = {
+						capital = 4871
+					}
+				}
+				capital_scope = {
+					change_province_name = "Azka Nurdazin"
+				}
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			yanshen_superregion = { add_permanent_claim = ROOT }
+			vimdatrong_superregion = { add_permanent_claim = ROOT }
+			if = {
+					limit = {
+					NOT = { government = republic }
+			}
+				change_government = republic
+			}
+			if = {
+				limit = {
+					NOT = { has_reform = sunrise_court_reform }
+				}
+				add_government_reform = sunrise_court_reform
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_yanszin = {
+		major = yes
+		potential = {
+			capital_scope = {
+				region = upper_yanshen_region
+			}
+			OR = {
+				tag = Y10
+				tag = Y04
+				tag = Y08
+				tag = Y07
+				tag = Y06
+				tag = Z59
+				tag = V22
+			}
+		}
+		provinces_to_highlight = {
+			province_group = yanszin_heartland_group
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			has_reform = eunuch_republic
+			has_estate = estate_eunuchs_anb
+			hidden_trigger = {
+				OR = {
+					tag = Y10
+					tag = Y04
+					tag = Y08
+					tag = Y07
+					tag = Y06
+				}
+			}
+			NOT = { exists = V19 }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			yanszin_heartland_group= {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			change_tag = V19
+			swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	form_nirenun_syul = {
+		major = yes
+		potential = {
+			OR = {
+				tag = V11
+				tag = V12
+				tag = V13
+				tag = V14
+			}
+			NOT = { exists = V17 }
+			NOT = { has_country_flag = eagle_hobgoblin_unification }
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				culture = eagle_command
+				culture = nuzenapu_harpy
+			}
+			religion = banbe_anen
+		}
+		provinces_to_highlight = {
+			region = nomsyulhan_region
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			hidden_trigger = {
+				OR = {
+					tag = V11
+					tag = V12
+					tag = V13
+					tag = V14
+				}
+			} 
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			adm_tech = 7
+			custom_trigger_tooltip = {
+				tooltip = no_other_eagles_tt
+				all_known_country = {
+					if = {
+						limit = {
+							religion = banbe_anen
+							OR = {
+								culture = eagle_command
+								culture = nuzenapu_harpy
+							}
+						}
+						OR = {
+							is_subject_of = ROOT
+							exists = no
+						}
+					}
+				}
+			}
+			owns_core_province = 6841
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				region = nomsyulhan_region
+			}
+			army_size = 30
+			estate_loyalty = {
+				estate = estate_mages
+				loyalty = 60
+			}
+		}
+		effect = {
+			change_tag = V17
+			hidden_effect = { restore_country_name = yes }
+			set_country_flag = eagle_hobgoblin_unification
+			if = {
+				limit = { primary_culture = eagle_command }
+				remove_government_reform = eagle_hobgoblins_searching_reform
+				add_government_reform = eagle_hobgoblins_rule_of_order_reform
+			}
+			set_government_rank_scripted_effect = { rank = 2 }
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			nomsyulhan_region = {
+				limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+				add_permanent_claim = ROOT
+			}
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	form_samthalsu = {
+		major = yes
+		potential = {
+			OR = {
+				tag = V07
+				tag = V08
+				tag = V09
+				tag = V10
+			}
+			NOT = { exists = V18 }
+			NOT = { has_country_flag = soulseeker_unification }
+			was_never_end_game_tag_trigger = yes
+			religion = sudomegi
+			culture = soulseeker_ogre
+		}
+		provinces_to_highlight = {
+			region = nomsyulhan_region
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			hidden_trigger = {
+				OR = {
+					tag = V07
+					tag = V08
+					tag = V09
+					tag = V10
+				}
+			} 
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			adm_tech = 7
+			custom_trigger_tooltip = {
+				tooltip = no_other_soulseekers_tt
+				all_known_country = {
+					if = {
+						limit = {
+							religion = sudomegi
+							culture = soulseeker_ogre
+						}
+						OR = {
+							is_subject_of = ROOT
+							exists = no
+						}
+					}
+				}
+			}
+			owns_core_province = 6836
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				region = nomsyulhan_region
+			}
+			development_in_provinces = {
+				value = 250
+				region = nomsyulhan_region
+			}
+		}
+		effect = {
+			change_tag = V18
+			hidden_effect = { restore_country_name = yes }
+			set_country_flag = soulseeker_unification
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_government_rank_scripted_effect = { rank = 2 }
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			nomsyulhan_region = {
+				limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	form_luzhong = {
+		major = yes
+		potential = {
+			primary_culture = beikling
+			religion = devouring_path
+			was_never_end_game_tag_trigger = yes
+			NOT = { exists = V23 }
+			OR = {
+				ai = no
+				num_of_owned_provinces_with = {
+					value = 10
+					superregion = yanshen_superregion
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+			superregion = yanshen_superregion
+			NOT = { owned_by = ROOT }
+					NOT = { ROOT = { num_of_cities = 20 } }
+				}
+				AND = {
+					OR = {
+						culture = beikling
+						province_id = 4842 #Jincheng
+						province_id = 4952 #Chatzin
+						province_id = 4845 #Hunshui
+					}
+					NOT = { owned_by = ROOT }
+				}
+			}
+		}
+		allow = {
+			hidden_trigger = { primary_culture = beikling }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes		
+			NOT = { government = tribal }
+			num_of_aspects = 2
+			owns = 4842 #Jincheng
+			owns = 4952 #Chatzin
+			owns = 4845 #Hunshui
+			num_of_cities = 20
+			custom_trigger_tooltip = {
+				tooltip = luzhong_beikling_land.tt
+				NOT = {
+					yanshen_superregion = {
+						NOT = { owned_by = ROOT }
+						culture = beikling
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = FORMED_LUZHONG.tt
+
+			set_country_flag = formed_end_game_tag_flag
+			set_country_flag = supernaturally_bound_faith
+			country_event = { id = flavor_beiklings.4 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	form_baztungh_khayus = { #Horde Eternal
+		major = yes
+		potential = {
+			technology_group = tech_shuvuush
+			was_never_end_game_tag_trigger = yes
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = shuvuushudi_region
+				AND = {
+					superregion = gozengun_superregion
+					OR = {
+						culture = plateau_runsukhi
+						culture = runsukhi
+					}
+				}
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			technology_group = tech_shuvuush
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			shuvuushudi_region = {
+				type = all
+				owned_by = ROOT
+			}
+			gozengun_superregion = {
+				type = all
+				OR = {
+					NOT = { 
+						culture = plateau_runsukhi
+						culture = runsukhi
+					}
+					owned_by = ROOT
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = anbi_mission_to_daxugo_ctt
+				ai = yes
+			}
+			NOT = { exists = V28 }
+		}
+		effect = {
+			change_tag = V28
+			hidden_effect = {
+				restore_country_name = yes
+				set_country_flag = formed_end_game_tag_flag
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			enable_tributary_state_use = yes
+			set_country_flag = can_use_tributary_cb_flag
+		}
+	}
+
+	bim_lau_nation = {
+		major = yes
+		potential = {
+			OR = {
+				primary_culture = ranilau
+				primary_culture = biengdi
+				primary_culture = risbeko
+				primary_culture = chengrong
+				primary_culture = teplin
+			}
+			NOT = { has_country_flag = formed_bim_lau_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { tag = Y51 }	#Bim Lau
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4565 # Bim Lau
+				province_id = 4594 # Telesraa
+				province_id = 4560 # Bieng Phang
+				province_id = 4563 # Senuutphro
+				province_id = 4593 # Taiver
+				province_id = 4582 # Kuokedtan
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			owns_core_province = 4565 # Bim Lau
+			owns_core_province = 4594 # Telesraa
+			owns_core_province = 4560 # Bieng Phang
+			owns_core_province = 4563 # Senuutphro
+			owns_core_province = 4593 # Taiver
+			owns_core_province = 4582 # Kuokedtan
+			is_at_war = no
+			is_free_or_tributary_trigger = yes		
+			NOT = { exists = Y51 }
+		}
+		effect = {
+			change_tag = Y51
+			hidden_effect = { restore_country_name = yes }
+			set_country_flag = formed_bim_lau_flag
+			set_country_flag = bim_lau_normal_missions
+			set_country_flag = bim_lau_becomes_human
+			swap_non_generic_missions = yes
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			increase_government_rank_scripted_effect = { rank = 2 }
+			primary_and_ruler_culture_change = { race = human new_culture = ranilau }
+			4565 = { move_capital_effect = yes }
+			bim_lau_area = { add_permanent_claim = Y51 }
+			reanthung_area = { add_permanent_claim = Y51 }
+			li_btei_area = { add_permanent_claim = Y51 }
+			taiver_area = { add_permanent_claim = Y51 }
+			middle_telebei_area = { add_permanent_claim = Y51 }
+			lower_telebei_area = { add_permanent_claim = Y51 }
+			hidden_effect = {
+				complete_mission = Y51_spirits_return
+				complete_mission = Y51_the_succession
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	form_kimni_solenh = { #Harmony of the Spirits
+		major = yes
+		potential = {
+			culture_group = bom
+			NOT = { religion = devouring_path }
+			was_never_end_game_tag_trigger = yes
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_group = spirit_forts_province_group
+					NOT = {
+						AND = {
+							owned_by = ROOT
+							has_province_flag = bom_fort_exalted
+						}
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 4420 #Sramaya
+						province_id = 4560 #Bieng Phang
+						province_id = 4396 #Phangban
+						province_id = 4595 #Ket Btei
+						province_id = 4604 #Khung Btei
+						province_id = 4800 #Maksraa
+						province_id = 4570 #Prukakhin
+						province_id = 4697 #Pralung
+						province_id = 4701 #Cay Cam Sinh
+					}
+					NOT = { owned_by = ROOT }
+				}
+			}
+		}
+		allow = {
+			culture_group = bom
+			NOT = { exists = V99 }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { government = tribal }
+			calc_true_if = {
+				amount = 6
+				owns = 4420 #Sramaya
+				owns = 4560 #Bieng Phang
+				owns = 4396 #Phangban
+				owns = 4595 #Ket Btei
+				owns = 4604 #Khung Btei
+				owns = 4800 #Maksraa
+				owns = 4570 #Prukakhin
+				owns = 4697 #Pralung
+				owns = 4701 #Cay Cam Sinh
+			}
+			if = {
+				limit = { ai = no }
+			num_of_owned_provinces_with = {
+				value = 6
+				custom_trigger_tooltip = {
+					tooltip = kimni_solenh_exalted_forts.tt
+					has_province_flag = bom_fort_exalted
+					}
+				}
+			}
+		}
+		effect = {
+			change_tag = V99
+			hidden_effect = {
+				restore_country_name = yes
+				set_country_flag = formed_end_game_tag_flag
+			}
+			add_prestige = 35
+			increase_government_rank_scripted_effect = { rank = 3 }
+			#if = {
+			#	limit = { has_custom_ideas = no }
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			custom_tooltip = bom_empire_cultural_influence.tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = { culture = chengrong }
+					change_culture = toelnran
+				}
+				every_owned_province = {
+					limit = { culture = tamran }
+					change_culture = khethakran
+				}
+			}
+		}
+	}
+
+	form_nirunkhupen = { #Embrace the Forbidden Kingdom
+		major = yes
+		potential = {
+			NOT = { has_country_flag = nirunkhupen_can_form }
+			OR = {
+				culture = bokai
+				culture = binhrung
+				culture = kai_half_elf
+				culture = phonan
+				culture = naamjyut
+			}
+			OR = {
+				ai = no
+				ruler_is_powerful_mage = yes
+				religion = devouring_path
+				AND = {
+					tag = Y71
+					NOT = { alliance_with = Z23 }
+				}
+				AND = {
+					tag = Z23
+					NOT = { alliance_with = Y71 }
+				}
+			}
+			NOT = { exists = V29 }
+			was_never_end_game_tag_trigger = yes
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = ngaopho_area
+						area = hungngon_area
+					}
+					NOT = {
+						AND = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+				}
+				AND = {
+					owned_by = ROOT
+					NOT = { has_building = mage_tower }
+				}
+			}
+		}
+		allow = {
+			ngaopho_area = {
+				type = ALL
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			hungngon_area = {
+				type = ALL
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { government = tribal }
+			if = {
+				limit = { ai = no }
+			num_of_owned_provinces_with = {
+				value = 5
+				has_building = mage_tower
+			}
+			OR = {
+				is_overall_abjuration_level_3 = yes
+				is_overall_necromancy_level_3 = yes
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = nirunkhupen_warning.tt
+			change_religion = devouring_path
+			
+			custom_tooltip = nirunkhupen_unlock_ritual.tt
+			set_country_flag = nirunkhupen_can_form
+			yemakaibo_area = { add_permanent_claim = ROOT }
+			kasainam_area = { add_permanent_claim = ROOT }
+			phaktai_area = { add_permanent_claim = ROOT }
+			wanglam_area = { add_permanent_claim = ROOT }
+			xiyun_area = { add_permanent_claim = ROOT }
+		}
+	}
+
+	form_bawa_simpat = { #Kneel to the Lady of Stone
+		major = yes
+		potential = {
+			religion = devouring_path
+			culture_group = yanglam
+			has_country_flag = bawa_simpat_embrace_stone_lady
+			was_never_end_game_tag_trigger = yes
+		}
+		provinces_to_highlight = {
+			region = lupulan_rainforest_region
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = bawa_simpat_embrace_stone_lady_tooltip
+				has_country_flag = bawa_simpat_embrace_stone_lady
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { government = tribal }
+			owns = 4765
+			if = {
+				limit = {
+					ai = no
+				}
+				num_of_owned_provinces_with = {
+					value = 20
+					region = lupulan_rainforest_region
+				}
+			}
+		}
+		effect = {
+			change_tag = V30
+			hidden_effect = {
+				restore_country_name = yes
+				set_country_flag = formed_end_game_tag_flag
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_government_rank_scripted_effect = { rank = 2 }
+			add_prestige = 15
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_capital = 4765
+			hidden_effect = {
+				set_ruler_culture = layang
+				set_heir_culture = layang
+				set_consort_culture = layang
+				every_owned_province = {
+					limit = { culture = ROOT }
+					change_culture = layang
+				}
+				4765 = {
+					change_religion = ROOT
+					change_culture = layang
+				}
+			}
+			change_primary_culture = layang
+			if = {
+				limit = { NOT = { ruler_has_bad_personality = yes } }
+				random_list = {
+					33 = { increase_ruler_adm_effect = yes }
+					34 = { increase_ruler_dip_effect = yes }
+					33 = { increase_ruler_mil_effect = yes }
+				}
+			}
+			else = {
+				custom_tooltip = remove_all_bad_personalities_tt
+				hidden_effect = { remove_all_bad_ruler_personalities = yes }
+			}
+			add_country_modifier = {
+				name = bawa_simpat_ruler_of_all
+				duration = 3650
+			}
+			custom_tooltip = government_type_change_theocracy_tt
+            hidden_effect = {
+                change_government = theocracy
+            }
+			add_government_reform = surrogate_of_the_surrounding_reform
+			lupulan_rainforest_region = { add_permanent_claim = ROOT }
+			set_country_flag = supernaturally_bound_faith
+		}
+	}
+
+
+	Y26_form_lingyuk = {
+		major = yes
+
+		potential = {
+			has_country_flag = Y26_great_awakening
+			tag = Y26
+		}
+
+		allow = {
+			mission_completed = Y26_our_lady_wed
+		}
+
+		effect = {
+			change_tag = R86
+			country_event = { id = ideagroups.1 } #Swap Ideas
+			set_country_flag = huszien_special_aspect_unlocked
+			custom_tooltip = huszien_special_unlock_tooltip
+			hidden_effect = { set_country_flag = supernaturally_bound_faith }
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			hidden_effect = {
+				add_historical_friend = Y93 #danggun
+				Y93 = {
+					add_historical_friend = R86
+				}
+			}
+		}
+	}
+}

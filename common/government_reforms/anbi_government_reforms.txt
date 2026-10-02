@@ -1,5 +1,5 @@
 #大徐
-anbingnar_daxugo_harem_reform = {
+anbi_daxugo_harem_reform = {
 	icon = "chinese_palace"
 	allow_normal_conversion = no
 	valid_for_nation_designer = no
@@ -11,16 +11,13 @@ anbingnar_daxugo_harem_reform = {
 	maintain_dynasty = yes
 	potential = {
 		OR = {
-			have_had_reform = anbingnar_daxugo_harem_reform
-			has_reform = anbingnar_daxugo_harem_reform
+			have_had_reform = anbi_daxugo_harem_reform
+			has_reform = anbi_daxugo_harem_reform
 		}
 	}
 
 	trigger = {
-		OR = {
-			tag = Y96
-			tag = Y98
-		}
+		tag = Y98
 	}
 
 	modifiers = {
@@ -36,7 +33,7 @@ anbingnar_daxugo_harem_reform = {
 		can_change_primary_culture = no
 	}
 }
-anbingnar_daxugo_constitutional_government = {
+anbi_daxugo_constitutional_government = {
 	icon = "ballot_box"
 	allow_normal_conversion = no
 	valid_for_nation_designer = no
@@ -45,8 +42,8 @@ anbingnar_daxugo_constitutional_government = {
 
 	potential = {
 		OR = {
-			have_had_reform = anbingnar_daxugo_constitutional_government
-			has_reform = anbingnar_daxugo_constitutional_government
+			have_had_reform = anbi_daxugo_constitutional_government
+			has_reform = anbi_daxugo_constitutional_government
 		}
 	}
 
@@ -71,6 +68,41 @@ anbingnar_daxugo_constitutional_government = {
 
 	post_removed_effect = {
 		give_estate_land_share_init = { estate = estate_nobles }
+	}
+}
+anbi_daxugo_yanshenize_reform = {
+	icon = "retain_tribal_hierarchy"
+	valid_for_nation_designer = no
+
+	lock_level_when_selected = yes
+
+	potential = {
+		OR = {
+			have_had_reform = anbi_daxugo_yanshenize_reform
+			has_reform = anbi_daxugo_yanshenize_reform
+		}
+	}
+
+	trigger = {
+		tag = Y98
+	}
+
+	modifiers = {
+		num_accepted_cultures = 2
+		cav_to_inf_ratio = 0.25
+		global_missionary_strength = 0.005
+		monthly_reform_progress = 0.1
+		global_unrest = 0.5
+		global_autonomy = 0.05
+		culture_conversion_cost = 1		
+		stability_cost_modifier = 0.1
+		manpower_in_own_culture_provinces = 0.25
+		manpower_in_culture_group_provinces = -0.5
+		manpower_in_accepted_culture_provinces = 0.1
+	}
+
+	custom_attributes = {
+		block_cultural_union = yes
 	}
 }
 

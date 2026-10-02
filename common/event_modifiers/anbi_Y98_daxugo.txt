@@ -1,29 +1,24 @@
-faceless_queen_great_conquer = {
-    cavalry_power = 0.2
-	siege_ability = 0.2
-	reinforce_cost_modifier = -0.25
+anbi_faceless_queen_modifier = {
+    cavalry_power = 0.1
+	siege_ability = 0.1
+	embracement_cost = -0.5
+	land_forcelimit = 10
+	global_manpower = 10
+	reinforce_cost_modifier = -0.2
 	province_warscore_cost = -0.2
-	core_creation = -0.25
-	monarch_lifespan = 0.25
+	core_creation = -0.1
+	monarch_lifespan = 2
+	ae_impact = 0.25
 }
 
 you_cant_lose_anbingnar = {
 	prestige = 0.5
-}
-
-happy_in_battle_anbingnar = {
 	prestige_from_land = 0.25
 	army_tradition_from_battle = 0.25 
-}
-
-great_jushen_anbingnar = {
 	legitimacy = 0.2
 	devotion = 0.2
 	horde_unity = 0.2
 	republican_tradition = 0.1
-}
-
-song_in_grass_anbingnar = {
 	cavalry_power = 0.025
 }
 
@@ -74,13 +69,7 @@ Y98_bulwar_palace = {
 	discipline = 0.025
 }
 
-Y98_anben_palace = {
-	development_cost = -0.05	
-}
 
-Y98_canstanuo_palace = {
-	global_trade_power = 0.1
-}
 
 facestealer_war = {
 	global_unrest = -100
@@ -158,10 +147,13 @@ Y98_great_mage_palace = {
 	global_tax_income = -120
 	prestige = 1
 	legitimacy = 0.5
+	devotion = 0.5
+	horde_unity = 0.5
+	republican_tradition = 0.25
 	shock_damage = 0.025
 }
 
-Y98_angry = {
+Y98_angry_ct = {
 	local_unrest = 10
 	min_local_autonomy = 30
 }
@@ -260,6 +252,9 @@ Y98_paper_is_recycle_2 = {
 
 Y98_I_love_holi = {
 	legitimacy = -0.2
+	devotion = -0.2
+	horde_unity = -0.2
+	republican_tradition = -0.1
 	heir_chance = -100
 }
 
@@ -267,7 +262,10 @@ Y98_holi_consort_modifier = {
 	all_estate_loyalty_equilibrium = -0.05
 	core_creation = -0.1
 	global_unrest = -1
-	legitimacy = -0.35
+	legitimacy = -0.2
+	devotion = -0.2
+	horde_unity = -0.2
+	republican_tradition = -0.1
 	heir_chance = -100
 }
 
@@ -445,4 +443,683 @@ anbi_y98_play_with_wumou = {
 	max_general_shock = -1
 	max_general_maneuver = -1
 	max_general_siege = -1
+}
+
+
+#补全洋人移除
+Y91_represented_by_consort = {
+	local_unrest = -3
+	local_tax_modifier = 0.1
+	local_production_efficiency = 0.1
+}
+Y91_harimari_advisors = {
+	administrative_efficiency = 0.025
+	yearly_corruption = 0.1
+	num_accepted_cultures = 1
+}
+Y91_autonomous_clan = {
+	min_local_autonomy = 25
+}
+Y91_disaster_unrest = {
+	local_unrest = 3
+	min_local_autonomy = 40
+}
+Y91_recent_daxugo_rebellion = {
+	local_unrest = -10
+}
+Y91_harimari_aid = {
+	war_exhaustion = -0.05
+}
+Y91_runsukhi_aid = {
+	manpower_recovery_speed = 0.10
+}
+Y91_general_propaganda = {
+	manpower_recovery_speed = 0.10
+}
+Y91_gowon_rebellion = {
+	global_supply_limit_modifier = -0.10
+}
+Y91_admin_betrayal = {
+	administrative_efficiency = -0.1
+	country_admin_power = -1
+	adm_advisor_cost = 0.1
+	expand_administration_cost = 0.5
+	stability_cost_modifier = 0.1
+}
+Y91_diplo_betrayal = {
+	diplomatic_reputation = -1
+	diplomatic_upkeep = -1
+	country_diplomatic_power = -1
+	dip_advisor_cost = 0.1
+}
+Y91_mil_betrayal = {
+	reinforce_cost_modifier = 0.2
+	reinforce_speed = -0.2
+	global_regiment_recruit_speed = 0.20
+	country_military_power = -1
+	land_attrition = 0.05
+	land_maintenance_modifier = 0.05
+}
+Y91_bheng_temple = {
+	prestige = 0.1
+	warscore_cost_vs_other_religion = -0.05
+}
+
+Y91_somyo_temple = {
+	tolerance_heretic = 0.5
+	religious_unity = 0.1
+}
+
+Y91_plagued_by_face_eaters = {
+	max_attrition = 5
+	attrition = 5
+	supply_limit_modifier = -0.25
+	local_development_cost = 0.5
+	min_local_autonomy = 30
+}
+
+Y91_defeated_by_facestealers = {
+	land_morale = -0.10
+	prestige = -0.5
+}
+
+Y91_birb_logistics = {
+	supply_limit = 100
+}
+
+Y91_conquered_spirit_cavern = {
+	army_tradition = 0.5
+	manpower_in_true_faith_provinces = 0.1
+	tolerance_own = 1
+	missionaries = 1
+	global_missionary_strength = 0.02
+}
+
+Y91_desert_birds = {
+	drill_gain_modifier = 0.10
+	cavalry_shock = 0.2
+	cav_to_inf_ratio = 0.05
+}
+
+Y91_desert_birds2 = {
+	cavalry_cost = -0.15
+	cav_to_inf_ratio = 0.10
+	army_tradition_from_battle = 0.2
+}
+
+Y91_levaajan_loyalty = {
+	local_religious_unity_contribution = -1
+	local_manpower_modifier = 0.5
+	local_unrest = -2
+}
+
+Y91_sugar_industry = {
+	trade_goods_size = 1
+}
+
+Y91_propaganda_reform_modifier = {
+	legitimacy = 0.5
+	devotion = 0.25
+	republican_tradition = 0.15
+}
+
+Y91_expanded_bureaucracy_modifier = {
+	expand_administration_cost = -0.2
+}
+
+Y91_war_tax_reform_modifier = {
+	war_taxes_cost_modifier = -1
+	global_tax_modifier = -0.15
+}
+
+Y91_national_army_academy_modifier = {
+	yearly_army_professionalism = 0.002
+	infantry_cost = -0.10
+	infantry_fire = 0.1
+	free_leader_pool = 1
+}
+
+Y91_tsaicun_national_stockpile_modifier = {
+	infantry_cost = -0.05
+	land_attrition = -0.10
+}
+
+Y91_inward_perfection = {
+	global_unrest = -0.5
+	harsh_treatment_cost = -0.5
+}
+
+Y91_fort_expertise1 = {
+	fort_maintenance_modifier = -0.05
+	rival_border_fort_maintenance = -0.05
+	defensiveness = 0.05
+}
+
+Y91_fort_expertise2 = {
+	fort_maintenance_modifier = -0.1
+	rival_border_fort_maintenance = -0.1
+	defensiveness = 0.1
+}
+
+Y91_fort_expertise3 = {
+	fort_maintenance_modifier = -0.15
+	rival_border_fort_maintenance = -0.15
+	defensiveness = 0.15
+}
+
+Y91_anti_inflation_reform = {
+	inflation_action_cost = -0.2
+	inflation_reduction = 0.1
+}
+
+Y91_anti_corruption_reform_modifier = {
+	yearly_corruption = -0.2
+}
+
+Y91_yanification_program_modifier = {
+	culture_conversion_cost = -0.33
+	global_unrest = 1
+}
+
+Y91_naval_investments_modifier = {
+	ship_durability = 0.1
+	sailors_recovery_speed = 0.2
+	sailor_maintenance_modifer = -0.1
+	global_sailors_modifier = 0.1
+	global_ship_repair = 0.1
+}
+
+Y91_do_not_start_with_ships = {
+	naval_forcelimit = -30
+}
+
+Y91_fear_of_yanshen = {
+	siege_ability = 0.1
+	leader_siege = 1
+	shock_damage = 0.10
+	province_warscore_cost = -0.1
+	ae_impact = 0.1
+}
+
+Y91_feiten_flanking = {
+	local_defensiveness = -0.25
+	local_hostile_attrition = -5
+}
+
+Y91_foundation_for_an_empire = {
+	ae_impact = -0.2
+	global_unrest = -1
+	autonomy_change_time = -0.25
+	harsh_treatment_cost = -0.2
+	global_autonomy = -0.025
+}
+
+Y91_feiten_harbor = {
+	local_ship_cost = -0.2
+	local_ship_repair = 1
+	ship_recruit_speed = -0.25
+	local_sailors_modifier = 1
+	local_sailors = 1000
+	local_unrest = 2
+}
+
+Y91_herald_of_runsukhi = {
+	num_accepted_cultures = 1
+	land_attrition = -0.01
+	global_manpower_modifier = 0.02
+}
+
+Y98_improved_silk_mod = {
+	trade_goods_size_modifier = 0.25
+}
+
+Y98_siocain_sil_daxugo_mod = {
+	global_prosperity_growth = 0.25
+}
+
+Y98_daxug_administrators = {
+	local_governing_cost = -1.5
+	min_local_autonomy = -5
+}
+
+Y91_rung_igedch_fanwang = {
+	min_local_autonomy = 5
+	local_state_maintenance_modifier = -0.25
+	local_unrest = -2
+	local_missionary_strength = 0.01
+}
+
+Y91_tuiista_jaal_fanwang = {
+	min_local_autonomy = 5
+	local_state_maintenance_modifier = -0.25
+	local_unrest = -2
+	local_manpower_modifier = 0.25
+}
+
+Y91_goryi_kuulgo_fanwang = {
+	min_local_autonomy = 5
+	local_state_maintenance_modifier = -0.25
+	local_unrest = -2
+	local_defensiveness = 0.25
+}
+
+Y91_noozg_tai_fanwang = {
+	min_local_autonomy = 5
+	local_state_maintenance_modifier = -0.25
+	local_unrest = -2
+	local_development_cost = -0.15
+}
+
+Y91_joolgin_khon_fanwang = {
+	min_local_autonomy = 5
+	local_state_maintenance_modifier = -0.25
+	local_unrest = -2
+	local_production_efficiency = 0.15
+}
+
+Y91_nanzurzhad_fanwang = {
+	min_local_autonomy = 5
+	local_state_maintenance_modifier = -0.25
+	local_unrest = -2
+	local_culture_conversion_cost = -0.25
+}
+
+Y91_dhaiggongek_fanwang = {
+	min_local_autonomy = 5
+	local_state_maintenance_modifier = -0.25
+	local_unrest = -2
+	local_sailors = 250
+}
+
+Y91_bagaatun_fanwang = {
+	min_local_autonomy = 5
+	local_state_maintenance_modifier = -0.25
+	local_unrest = -2
+	local_regiment_cost = -0.15
+}
+
+Y91_khadrei_inghaan_fanwang = {
+	min_local_autonomy = 5
+	local_state_maintenance_modifier = -0.25
+	local_unrest = -2
+	trade_value_modifier = 0.15
+}
+
+Y91_gallkor_fanwang = {
+	min_local_autonomy = 5
+	local_state_maintenance_modifier = -0.25
+	local_unrest = -2
+	local_tax_modifier = 0.15
+}
+
+Y91_baztai_bhengu_fanwang = {
+	min_local_autonomy = 5
+	local_state_maintenance_modifier = -0.25
+	local_unrest = -2
+	local_religious_unity_contribution = -1
+}
+
+Y91_runsukhi_fanwang = {
+	min_local_autonomy = 5
+	local_state_maintenance_modifier = -0.25
+	local_unrest = -2
+	local_hostile_attrition = 3
+	local_hostile_movement_speed = -0.25
+}
+
+Y91_minor_clan_fanwang = {
+	min_local_autonomy = 5
+	local_state_maintenance_modifier = -0.25
+	local_unrest = -2
+}
+
+Y91_festival_hype = {
+	local_culture_conversion_cost = -0.2
+}
+
+Y91_favor_the_cities = {
+	local_development_cost = -0.05
+	local_production_efficiency = 0.05
+}
+
+Y91_diguo_entrenchment = {
+	max_absolutism = 10
+	reduced_liberty_desire = -10
+	autonomy_change_time = -0.15
+}
+
+Y91_baduum_clan_system = {
+	accept_vassalization_reasons = 10
+	reduced_liberty_desire = 10
+	diplomatic_annexation_cost = -0.1
+	diplomatic_upkeep = 1
+	vassal_income = 0.25
+}
+
+Y91_diguomao_war_conduct = {
+	cav_to_inf_ratio = 0.10
+	available_province_loot = 0.33
+	ae_impact = 0.05
+	cavalry_power = 0.10
+	mil_tech_cost_modifier = 0.05
+}
+
+Y91_academy_war_conduct = {
+	cav_to_inf_ratio = -0.2
+	available_province_loot = -0.33
+	ae_impact = -0.05
+	artillery_cost = 0.1
+	artillery_power = 0.10
+	backrow_artillery_damage = 0.05
+}
+
+Y91_tolerant_religious_code = {
+	tolerance_own = 2
+	tolerance_heretic = 2
+	tolerance_heathen = 2
+	global_heretic_missionary_strength = -0.02
+	global_missionary_strength = -0.02
+}
+
+Y91_semi_tolerant_religious_code = {
+	tolerance_own = 2
+	tolerance_heretic = 2
+	tolerance_heathen = -2
+	global_heretic_missionary_strength = -0.02
+	global_missionary_strength = 0.02
+}
+
+Y91_intolerant_religious_code = {
+	tolerance_own = 2
+	tolerance_heretic = -2
+	tolerance_heathen = -2
+	global_heretic_missionary_strength = 0.02
+	global_missionary_strength = 0.02
+	manpower_in_true_faith_provinces = 0.10
+}
+
+Y91_egg_sabotage = {
+	cavalry_cost = 0.20
+	manpower_recovery_speed = -0.20
+}
+
+Y91_tax_fears = {
+	global_tax_modifier = -0.1
+	administrative_efficiency = -0.1
+	governing_capacity_modifier = -0.1
+}
+
+Y91_shipping_lanes_disturbed = {
+	ship_power_propagation = -0.5
+	trade_efficiency = -0.2
+}
+
+Y91_beikling_hexxing = {
+	land_attrition = 0.30
+	movement_speed = -0.20
+}
+
+Y91_desert_campaign_veterancy = {
+	land_attrition = -0.1
+	army_tradition_decay = -0.01
+}
+
+Y91_yanzhong_supply_system = {
+	global_supply_limit_modifier = 0.10
+	land_maintenance_modifier = -0.10
+	local_monthly_devastation = 0.1
+	local_prosperity_growth = -0.1
+}
+
+Y91_jaal_horde_fl = {
+	land_forcelimit = 10
+}
+
+Y91_birb_sabotage = {
+	local_defensiveness = -0.25
+}
+
+Y91_jiangyang_pacified = {
+	development_cost = -0.05
+}
+
+Y91_beikling_pacified = {
+	production_efficiency = 0.1
+}
+
+Y91_jiangszun_pacified = {
+	trade_efficiency = 0.1
+}
+
+Y91_gangim_pacified = {
+	heavy_ship_power = 0.1
+	blockade_impact_on_siege_in_fleet_modifier = 1
+}
+
+Y91_naamjyut_pacified = {
+	build_cost = -0.10
+}
+
+#新buff
+anbi_shuvuush_terror_stampede = {
+	raze_power_gain = 0.5
+	available_province_loot = -0.5
+}
+
+anbi_Y91_rule_facestealer_buff = {
+	global_heretic_missionary_strength = 0.1
+}
+
+anbi_Y91_organization_nomad_buff = {
+	land_morale = 0.05
+	missionaries = 1
+	global_missionary_strength = 0.01
+	tolerance_own = 2
+}
+
+anbi_Y91_fate_anew_buff = {
+	movement_speed = 0.1
+	raze_power_gain = 0.1
+	available_province_loot = 0.1
+	same_culture_advisor_cost = -0.1
+	reform_progress_growth = 0.1
+}
+
+anbi_Y91_empire_buff1 = {
+	global_tax_income = 120
+	cavalry_shock = 0.25
+	land_forcelimit = 20
+	manpower_in_true_faith_provinces = 0.25
+}
+
+anbi_Y91_empire_buff2 = {
+	global_tax_income = 120
+	colony_cost_modifier = -0.75
+	colonists = 3
+	colonist_placement_chance = 0.2
+	global_colonial_growth = 50
+	range = -0.75
+}
+
+anbi_Y91_empire_buff3 = {
+	global_tax_income = 120
+	technology_cost = -0.1
+	idea_cost = -0.1
+	global_unrest = -2
+	global_tax_modifier = -0.25
+	num_accepted_cultures = 5
+}
+
+anbi_Y91_empire_buff4 = {
+	administrative_efficiency = 0.025
+	governing_capacity_modifier = 0.1
+	cavalry_shock = 0.1
+	cavalry_power = 0.1
+}
+
+anbi_Y91_empire_buff5 = {
+	auto_explore_adjacent_to_colony = yes
+	may_establish_frontier = yes
+}
+
+
+
+anbi_Y91_freeing_ogre_subjects_buff_1 = {
+	local_warscore_cost_modifier = -0.1
+}
+
+anbi_Y91_freeing_ogre_subjects_buff_2 = {
+	land_attrition = -0.25
+	siege_ability = 0.1
+	stability_cost_modifier = 0.25
+	war_exhaustion = 0.02
+	land_forcelimit = -5
+}
+
+anbi_Y91_anbi_Y91_nostalgic_fields_buff = {
+	land_attrition = -0.1
+	global_attacker_dice_roll_bonus = 1
+}
+
+anbi_Y91_jindeshi_valley_buff = {
+	local_unrest = 5
+	local_manpower_modifier = 1
+	local_tax_modifier = -0.25
+	trade_goods_size_modifier = -0.2
+}
+
+anbi_Y91_plight_of_the_upper_raheni_buff = {
+	global_manpower = 25
+	technology_cost = -0.1
+	diplomatic_reputation = 2
+	ae_impact = -0.1
+}
+
+anbi_Y91_integrating_the_tuiista_jaal_buff = {
+	num_accepted_cultures = 2
+	manpower_in_own_culture_provinces = -0.1
+	monthly_reform_progress = 0.1
+	culture_conversion_cost = 1
+	stability_cost_modifier = 0.1
+	global_unrest = 0.25
+	global_missionary_strength = 0.005
+}
+anbi_Y91_daxugo_reforms_promised_1 = {
+	global_unrest = -2
+	global_tax_modifier = -0.1
+	stability_cost_modifier = -0.25
+	legitimacy = 0.2
+	devotion = 0.2
+	horde_unity = 0.2
+	republican_tradition = 0.1
+}
+anbi_Y91_daxugo_reforms_promised_2 = {
+	global_autonomy = -0.025 #-0.025 new
+	governing_capacity_modifier = 0.2 #+0.2 new
+	global_tax_modifier = 0.1 #+0.2
+	#+2 global_unrest = 0
+	stability_cost_modifier = -0.35 #-0.1
+	legitimacy = 0.3 #+0.1
+	devotion = 0.3 #+0.1
+	horde_unity = 0.3 #+0.1
+	republican_tradition = 0.15 #+0.05
+	production_efficiency = 0.1
+	land_forcelimit_modifier = 0.1
+	mages_mana_regen = 0.5
+	trade_efficiency = 0.1
+}
+anbi_Y91_forest_yan_pacified = {
+	global_autonomy = -0.01
+	culture_conversion_cost = -0.2
+	manpower_in_culture_group_provinces = 0.1
+	global_unrest = -0.1
+	production_efficiency = 0.1
+}
+anbi_Y91_northern_yan_pacified = {
+	global_autonomy = -0.01
+	culture_conversion_cost = -0.2
+	manpower_in_culture_group_provinces = 0.1
+	global_unrest = -0.1
+	land_forcelimit_modifier = 0.1
+}
+anbi_Y91_hill_yan_pacified = {
+	global_autonomy = -0.01
+	culture_conversion_cost = -0.2
+	manpower_in_culture_group_provinces = 0.1
+	global_unrest = -0.1
+	mages_mana_regen = 0.5
+}
+anbi_Y91_coastal_yan_pacified = {
+	global_autonomy = -0.01
+	culture_conversion_cost = -0.2
+	manpower_in_culture_group_provinces = 0.1
+	global_unrest = -0.1
+	trade_efficiency = 0.1
+}
+#---- marriage_1 专属独立冷却（2026-08-31 新增）：仅婚配行动一（marriage_1）使用；该冷却同时充当后宫行动周期的总闸（有冷却 = 本轮开启，冷却到期 = 本轮关闭、等待下一次选妃）----
+anbi_daxugo_harem_yanshen_marriage_1_cooldown = {
+	#冷却标记：神召宫 婚姻行动一冷却中（可在行动脚本中检查，或在此添加冷却期间修正）
+}
+anbi_daxugo_harem_kai_marriage_1_cooldown = {
+	#冷却标记：华盖宫 婚姻行动一冷却中（可在行动脚本中检查，或在此添加冷却期间修正）
+}
+anbi_daxugo_harem_tanxiang_marriage_1_cooldown = {
+	#冷却标记：檀香宫 婚姻行动一冷却中（可在行动脚本中检查，或在此添加冷却期间修正）
+}
+anbi_daxugo_harem_jinan_marriage_1_cooldown = {
+	#冷却标记：极南宫 婚姻行动一冷却中（可在行动脚本中检查，或在此添加冷却期间修正）
+}
+anbi_daxugo_harem_rahen_marriage_1_cooldown = {
+	#冷却标记：罗祆宫 婚姻行动一冷却中（可在行动脚本中检查，或在此添加冷却期间修正）
+}
+anbi_daxugo_harem_harimari_marriage_1_cooldown = {
+	#冷却标记：虎人宫 婚姻行动一冷却中（可在行动脚本中检查，或在此添加冷却期间修正）
+}
+anbi_daxugo_harem_khet_marriage_1_cooldown = {
+	#冷却标记：赫特宫 婚姻行动一冷却中（可在行动脚本中检查，或在此添加冷却期间修正）
+}
+anbi_daxugo_harem_burwar_marriage_1_cooldown = {
+	#冷却标记：布勒宫 婚姻行动一冷却中（可在行动脚本中检查，或在此添加冷却期间修正）
+}
+
+#tooltip
+anbi_daxugo_waiqi_harem_privilege_loyal = {
+	global_unrest = -2
+	land_forcelimit_modifier = 0.3
+	land_morale = 0.1
+	cavalry_shock = 0.6
+	global_manpower = 50
+}
+anbi_daxugo_waiqi_harem_privilege_neutral = {
+	land_forcelimit_modifier = 0.2
+	land_morale = 0.1
+	cavalry_shock = 0.3
+	global_unrest = -2
+}
+anbi_daxugo_waiqi_harem_privilege_disloyal = {
+	global_unrest = 5
+	ae_impact = 0.2
+	prestige = -5
+	legitimacy = -5
+}
+anbi_daxugo_waiqi_harem_privilege_inf_scaling = {
+	yearly_corruption = 0.2
+	global_autonomy = 0.1
+	global_tax_modifier = -0.25
+	global_tax_income = -60
+}
+
+#后宫修正
+anbi_daxugo_harem_menu_jiangyin_trade = {
+	trade_efficiency = 0.12
+}
+anbi_daxugo_harem_menu_nanyue_goods = {
+	production_efficiency = 0.18
+}
+anbi_daxugo_harem_menu_beiling_mage = {
+	mages_monthly_experience = 0.5
+}
+anbi_daxugo_harem_menu_yanshen_fort = {
+	local_defensiveness = 0.5
+	province_trade_power_value = 5
 }

@@ -15,6 +15,13 @@ anbi_merfolk_mahalaya_regilion_temporary_privilege = {
 	}
 	on_granted = {
 		custom_tooltip = anbi_merfolk_mahalaya_regilion_temporary_privilege_tt
+		hidden_effect = {
+			every_owned_province = {
+				province_event = {
+					id = anbi_merfolk.206
+				}
+			}
+		}
 	}
 	on_invalid = {
 		every_owned_province = {
