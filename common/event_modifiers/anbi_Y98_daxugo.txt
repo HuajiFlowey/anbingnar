@@ -1029,6 +1029,7 @@ anbi_Y91_daxugo_reforms_promised_2 = {
 	trade_efficiency = 0.1
 }
 anbi_Y91_forest_yan_pacified = {
+	num_accepted_cultures = 1
 	global_autonomy = -0.01
 	culture_conversion_cost = -0.2
 	manpower_in_culture_group_provinces = 0.1
@@ -1036,6 +1037,7 @@ anbi_Y91_forest_yan_pacified = {
 	production_efficiency = 0.1
 }
 anbi_Y91_northern_yan_pacified = {
+	num_accepted_cultures = 1
 	global_autonomy = -0.01
 	culture_conversion_cost = -0.2
 	manpower_in_culture_group_provinces = 0.1
@@ -1043,6 +1045,7 @@ anbi_Y91_northern_yan_pacified = {
 	land_forcelimit_modifier = 0.1
 }
 anbi_Y91_hill_yan_pacified = {
+	num_accepted_cultures = 1
 	global_autonomy = -0.01
 	culture_conversion_cost = -0.2
 	manpower_in_culture_group_provinces = 0.1
@@ -1050,6 +1053,7 @@ anbi_Y91_hill_yan_pacified = {
 	mages_mana_regen = 0.5
 }
 anbi_Y91_coastal_yan_pacified = {
+	num_accepted_cultures = 1
 	global_autonomy = -0.01
 	culture_conversion_cost = -0.2
 	manpower_in_culture_group_provinces = 0.1

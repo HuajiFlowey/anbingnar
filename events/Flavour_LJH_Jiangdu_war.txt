@@ -11,7 +11,6 @@ country_event = {
 		#anbi，防止卡苦海或鸟人的流程
 		Y91 = {	ai = yes }
 		Y27 = {	ai = yes }
-
 		NOT = {
 			is_year = 1445
 		}

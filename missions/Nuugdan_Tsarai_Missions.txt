@@ -1155,7 +1155,7 @@ anbi_nuugdan_tsarai_1 = {
 				first_limit = "R62 = { is_in_war = { casus_belli = cb_revolt_of_the_north } }"
 				first_effect = "custom_tooltip = anbi_Y91_plight_of_the_upper_raheni_R62_in_war_ct join_all_offensive_wars_of = R78 shamakhad_region = { add_permanent_claim = ROOT  }"
 				second_custom_tooltip = "anbi_Y91_plight_of_the_upper_raheni_R62_win"
-				second_limit = " has_country_flag = command_sir_revolt_victory"
+				second_limit = "R62 = { has_country_flag = command_sir_revolt_victory }"
 				second_effect = " add_country_modifier = { name = anbi_Y91_plight_of_the_upper_raheni_buff duration = 36500 } add_manpower = 10 shamakhad_region = { add_permanent_claim = ROOT discover_country = ROOT} "
 				third_custom_tooltip = "anbi_Y91_plight_of_the_upper_raheni_R62_loss"
 				third_limit = "NOT = { exists = R62 }"
@@ -1545,7 +1545,7 @@ anbi_nuugdan_tsarai_2 = {
 					remove_province_modifier = anbi_Y91_jindeshi_valley_buff
 				}
 			}
-			anb_add_accepted_culture_or_dip_power = { culture = daxug free = yes }
+			anb_add_accepted_culture_or_dip_power = { culture = daxug }
 			add_country_modifier = {
 				name = anbi_Y91_integrating_the_tuiista_jaal_buff
 				duration = -1
@@ -2381,7 +2381,7 @@ anbi_daxugo_1 = {
 		effect = { 
 			add_stability = -1
 			add_legitimacy_equivalent = { amount = -20 republican_tradition = -10 }	
-			anb_add_accepted_culture_or_dip_power = { culture = naamjyut free = yes }
+			anb_add_accepted_culture_or_dip_power = { culture = naamjyut }
 			add_country_modifier = {
 				name = anbi_Y91_forest_yan_pacified
 				duration = -1
@@ -2771,7 +2771,7 @@ anbi_daxugo_2 = {
 		effect = {  
 			add_stability = -1
 			add_legitimacy_equivalent = { amount = -20 republican_tradition = -10 }
-			anb_add_accepted_culture_or_dip_power = { culture = jiangyang free = yes }
+			anb_add_accepted_culture_or_dip_power = { culture = jiangyang }
 			add_country_modifier = {
 				name = anbi_Y91_northern_yan_pacified
 				duration = -1
@@ -3068,8 +3068,9 @@ anbi_daxugo_3 = {
 		}
 
 		effect = {
-			anb_add_accepted_culture_or_dip_power = { culture = jiangszun free = yes }
+			anb_add_accepted_culture_or_dip_power = { culture = jiangszun }
 			custom_tooltip = anbi_Y91_jiangszun_unification_ct
+			set_country_flag = daxugo_rebellions_finished
 			remove_country_modifier = anbi_Y91_daxugo_reforms_promised_1
 			remove_country_modifier = anbi_Y91_hill_yan_pacified
 			remove_country_modifier = anbi_Y91_forest_yan_pacified
@@ -3767,7 +3768,7 @@ anbi_daxugo_4 = {
 		effect = {  
 			add_stability = -1
 			add_legitimacy_equivalent = { amount = -20 republican_tradition = -10 }
-			anb_add_accepted_culture_or_dip_power = { culture = jiangszun free = yes }
+			anb_add_accepted_culture_or_dip_power = { culture = jiangszun }
 			add_country_modifier = { name = anbi_Y91_hill_yan_pacified duration = -1}
 			custom_tooltip = anbi_daxugo_rebellions_slower_ct
 		} 
@@ -4032,7 +4033,7 @@ anbi_daxugo_5 = {
 		effect = { 
 			add_stability = -1
 			add_legitimacy_equivalent = { amount = -20 republican_tradition = -10 }
-			anb_add_accepted_culture_or_dip_power = { culture = gangim free = yes }
+			anb_add_accepted_culture_or_dip_power = { culture = gangim }
 			add_country_modifier = { name = anbi_Y91_coastal_yan_pacified duration = -1 }
 			custom_tooltip = anbi_daxugo_rebellions_slower_ct
 		} 

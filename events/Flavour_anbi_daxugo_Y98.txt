@@ -196,9 +196,37 @@ country_event = {
 		tooltip = { set_estate_privilege = anbi_daxugo_shangxu_harem_privilege }
 	}
 }
+#8破面者开始
+country_event = {
+	id = anbi_daxugo.8
+	title = anbi_daxugo.8.t
+	picture = WAR_OF_THE_ROSES_eventPicture
+	desc = anbi_daxugo.8.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_daxugo.8.a
+	}
+}
+#9-14预计的破面者过程
+#15破面者结束
+country_event = {
+	id = anbi_daxugo.15
+	title = anbi_daxugo.15.t
+	picture = DECLARATION_INDEPENDENCE_eventPicture
+	desc = anbi_daxugo.15.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = anbi_daxugo.15.a
+	}
+}
 
 #盗脸灵事件链6-11,为适应新版本盗脸灵机制而移除
-
 #12-14是先前版本的转线事件，已移除
 #15是共和走向的事件，已被移除
 

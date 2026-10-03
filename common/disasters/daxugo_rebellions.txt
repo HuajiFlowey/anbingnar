@@ -61,8 +61,8 @@ daxugo_rebellions = {
 	}
 
 
-	on_start = flavor_nuugdan_tsarai.22
-	on_end = flavor_nuugdan_tsarai.23
+	on_start = anbi_daxugo.8
+	on_end = anbi_daxugo.15
 
 
 	on_monthly = {

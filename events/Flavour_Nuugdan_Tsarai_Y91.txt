@@ -3,16 +3,14 @@ namespace = flavor_nuugdan_tsarai
 #1合并安饼无面伟大征服
 country_event = {
 	id = flavor_nuugdan_tsarai.1
-	title = flavor_nuugdan_tsarai.1.t
+	title = anbi_flavor_nuugdan_tsarai.1.t
 	picture = HORDE_ON_HORSEBACK_eventPicture
-	desc = flavor_nuugdan_tsarai.1.d
+	desc = anbi_flavor_nuugdan_tsarai.1.d
 	
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	trigger = {
-		is_year = 1444
-		has_ruler = "Nurgai"
 		tag = Y91
 	}
 	
@@ -23,7 +21,7 @@ country_event = {
 	
 	#Long may she Reign
 	option = {
-		name = flavor_nuugdan_tsarai.1.a
+		name = anbi_flavor_nuugdan_tsarai.1.a
 		ai_chance = { factor = 100 }
 		add_prestige = 10
 		add_ruler_modifier = { 
@@ -49,8 +47,8 @@ country_event = {
 #Negotiations with the Guwon
 country_event = {
 	id = flavor_nuugdan_tsarai.2
-	title = flavor_nuugdan_tsarai.2.t
-	desc = flavor_nuugdan_tsarai.2.d
+	title = anbi_flavor_nuugdan_tsarai.2.t
+	desc = anbi_flavor_nuugdan_tsarai.2.d
 	picture = muslimgfx_HORDE_ON_HORSEBACK_eventPicture 
 
     fire_only_once = yes
@@ -59,7 +57,7 @@ country_event = {
 	trigger = { tag = Y91 } #Nuugdan Tsarai
 
 	option = {
-		name = flavor_nuugdan_tsarai.2.a
+		name = anbi_flavor_nuugdan_tsarai.2.a
 		add_treasury = 150
 		white_peace = Y93
 		north_yanshen_region = {
@@ -91,8 +89,8 @@ country_event = {
 #Visitors to the Bhengudak Temple
 country_event = {
 	id = flavor_nuugdan_tsarai.3
-	title = flavor_nuugdan_tsarai.3.t
-	desc = flavor_nuugdan_tsarai.3.d
+	title = anbi_flavor_nuugdan_tsarai.3.t
+	desc = anbi_flavor_nuugdan_tsarai.3.d
 	picture = TRIBUTARY_FLEET_eventPicture
 
     fire_only_once = yes
@@ -101,7 +99,7 @@ country_event = {
 	trigger = { tag = Y91 } #Nuugdan Tsarai
 
 	option = {
-		name = flavor_nuugdan_tsarai.3.a
+		name = anbi_flavor_nuugdan_tsarai.3.a
 		custom_tooltip = Y61_personal_mask_upgrade_tt
 		set_ruler_flag = Y61_personal_mask_upgrade
 		country_event = {
@@ -114,8 +112,8 @@ country_event = {
 #Celebration and reflection
 country_event = {
 	id = flavor_nuugdan_tsarai.4
-	title = flavor_nuugdan_tsarai.4.t
-	desc = flavor_nuugdan_tsarai.4.d
+	title = anbi_flavor_nuugdan_tsarai.4.t
+	desc = anbi_flavor_nuugdan_tsarai.4.d
 	picture = TRIBUTARY_FLEET_eventPicture
 
     fire_only_once = yes
@@ -124,7 +122,7 @@ country_event = {
 	trigger = { tag = Y91 } #Nuugdan Tsarai
 
 	option = {
-		name = flavor_nuugdan_tsarai.4.a
+		name = anbi_flavor_nuugdan_tsarai.4.a
 		add_country_modifier = {
 			name = Y91_dawn_of_reform
 			duration = 3650
@@ -157,8 +155,8 @@ country_event = {
 #Cooperation with the warlords
 country_event = {
 	id = flavor_nuugdan_tsarai.5
-	title = flavor_nuugdan_tsarai.5.t
-	desc = flavor_nuugdan_tsarai.5.d
+	title = anbi_flavor_nuugdan_tsarai.5.t
+	desc = anbi_flavor_nuugdan_tsarai.5.d
 	picture = NOMAD_ESTATE_eventPicture
 
     fire_only_once = yes
@@ -167,7 +165,7 @@ country_event = {
 	trigger = { tag = Y91 } #Nuugdan Tsarai
 
 	option = {
-		name = flavor_nuugdan_tsarai.5.a
+		name = anbi_flavor_nuugdan_tsarai.5.a
 		create_march = Y13
 		every_neighbor_country = {
 			add_aggressive_expansion = {
@@ -182,8 +180,8 @@ country_event = {
 #Carrot and the Stick
 country_event = {
 	id = flavor_nuugdan_tsarai.6
-	title = flavor_nuugdan_tsarai.6.t
-	desc = flavor_nuugdan_tsarai.6.d
+	title = anbi_flavor_nuugdan_tsarai.6.t
+	desc = anbi_flavor_nuugdan_tsarai.6.d
 	picture = FARMING_eventPicture
 
     fire_only_once = yes
@@ -192,7 +190,7 @@ country_event = {
 	trigger = { tag = Y91 } #Nuugdan Tsarai
 
 	option = {
-		name = flavor_nuugdan_tsarai.6.a
+		name = anbi_flavor_nuugdan_tsarai.6.a
 		north_yanshen_region = {
 			limit = {
 				owned_by = ROOT
@@ -209,8 +207,8 @@ country_event = {
 #The Death of the Faceless Queen (bad)
 country_event = {
 	id = flavor_nuugdan_tsarai.7
-	title = flavor_nuugdan_tsarai.7.t
-	desc = flavor_nuugdan_tsarai.7.d
+	title = anbi_flavor_nuugdan_tsarai.7.t
+	desc = anbi_flavor_nuugdan_tsarai.7.d
 	picture = KING_SICK_IN_BED_eventPicture
 
     fire_only_once = yes
@@ -219,7 +217,7 @@ country_event = {
 	trigger = { tag = Y91 } #Nuugdan Tsarai
 
 	option = {
-		name = flavor_nuugdan_tsarai.7.a
+		name = anbi_flavor_nuugdan_tsarai.7.a
 		add_country_modifier = {
 			name = Y91_tribes_in_turmoil
 			duration = 3650
@@ -230,8 +228,8 @@ country_event = {
 #The Death of the Faceless Queen (good)
 country_event = {
 	id = flavor_nuugdan_tsarai.8
-	title = flavor_nuugdan_tsarai.8.t
-	desc = flavor_nuugdan_tsarai.8.d
+	title = anbi_flavor_nuugdan_tsarai.8.t
+	desc = anbi_flavor_nuugdan_tsarai.8.d
 	picture = KING_SICK_IN_BED_eventPicture
 
     fire_only_once = yes
@@ -240,7 +238,7 @@ country_event = {
 	trigger = { is_or_was_tag = { tag = Y91 } } #Nuugdan Tsarai
 
 	option = {
-		name = flavor_nuugdan_tsarai.8.a
+		name = anbi_flavor_nuugdan_tsarai.8.a
 		custom_tooltip = Y91_nurgai_upgrade_tt
 		set_country_flag = Y91_nurgai_upgrade
 		hidden_effect = {
@@ -257,16 +255,16 @@ country_event = {
 #新9狗头人小弟
 country_event = {
 	id = flavor_nuugdan_tsarai.9
-	title = flavor_nuugdan_tsarai.9.t
+	title = anbi_flavor_nuugdan_tsarai.9.t
 	picture = GIFTS_TO_EMPEROR_eventPicture
-	desc = flavor_nuugdan_tsarai.9.d
+	desc = anbi_flavor_nuugdan_tsarai.9.d
 	
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	#I LOVE kobolds
 	option = {
-		name = flavor_nuugdan_tsarai.9.a
+		name = anbi_flavor_nuugdan_tsarai.9.a
 		ai_chance = { factor = 100 }
 		trigger = { has_ruler_modifier = anbi_faceless_queen_modifier }
 		capital_scope = { add_kobold_minority_size_effect = yes }
@@ -297,7 +295,7 @@ country_event = {
 	
 	#kobolds are cool
 	option = {
-		name = flavor_nuugdan_tsarai.9.b
+		name = anbi_flavor_nuugdan_tsarai.9.b
 		ai_chance = { factor = 100 }
 		trigger = { NOT = { has_ruler_modifier = anbi_faceless_queen_modifier } }
 		capital_scope = { add_kobold_minority_size_effect = yes }
@@ -312,7 +310,7 @@ country_event = {
 	
 	#kobolds are monsters
 	option = {
-		name = flavor_nuugdan_tsarai.9.c
+		name = anbi_flavor_nuugdan_tsarai.9.c
 		ai_chance = { factor = 100 }
 		trigger = { NOT = { has_ruler_modifier = anbi_faceless_queen_modifier } }
 		medium_decrease_of_kobold_tolerance_effect = yes
@@ -322,16 +320,16 @@ country_event = {
 #10杀赤鬼
 country_event = {
 	id = flavor_nuugdan_tsarai.10
-	title = flavor_nuugdan_tsarai.10.t
+	title = anbi_flavor_nuugdan_tsarai.10.t
 	picture = BORDER_TENSION_eventPicture
-	desc = flavor_nuugdan_tsarai.10.d
+	desc = anbi_flavor_nuugdan_tsarai.10.d
 	
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	#good
 	option = {
-		name = flavor_nuugdan_tsarai.10.a
+		name = anbi_flavor_nuugdan_tsarai.10.a
 		ai_chance = { factor = 100 }
 		demon_hills_region = {
 			limit = {
@@ -354,16 +352,16 @@ country_event = {
 #12整合古园小弟
 country_event = {
 	id = flavor_nuugdan_tsarai.12
-	title = flavor_nuugdan_tsarai.12.t
+	title = anbi_flavor_nuugdan_tsarai.12.t
 	picture = DIPLOMACY_eventPicture
-	desc = flavor_nuugdan_tsarai.12.d
+	desc = anbi_flavor_nuugdan_tsarai.12.d
 	
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	#good
 	option = {
-		name = flavor_nuugdan_tsarai.12.a
+		name = anbi_flavor_nuugdan_tsarai.12.a
 		ai_chance = { factor = 100 }
 		add_years_of_income = -1
 		add_dip_power = -200
@@ -373,7 +371,7 @@ country_event = {
 	
 	#alright deal
 	option = {
-		name = flavor_nuugdan_tsarai.12.b
+		name = anbi_flavor_nuugdan_tsarai.12.b
 		ai_chance = { factor = 100 }
 		add_years_of_income = -0.5
 		add_dip_power = -300
@@ -391,8 +389,8 @@ country_event = {
 # 在0.8中彻底废止
 # country_event = {
 # 	id = flavor_nuugdan_tsarai.18
-# 	title = flavor_nuugdan_tsarai.18.t
-# 	desc = flavor_nuugdan_tsarai.18.anbingnar.d
+# 	title = anbi_flavor_nuugdan_tsarai.18.t
+# 	desc = anbi_flavor_nuugdan_tsarai.18.anbingnar.d
 # 	picture = DIPLOMACY_eventPicture
 	
 # 	trigger = {
@@ -430,7 +428,7 @@ country_event = {
 # 	}
 	
 # 	option = {
-# 		name = flavor_nuugdan_tsarai.18.a
+# 		name = anbi_flavor_nuugdan_tsarai.18.a
 # 		country_event = {
 # 			id = anbi_daxugo.2001
 # 		}
@@ -441,16 +439,16 @@ country_event = {
 #19棕皮冲锋队
 country_event = {
 	id = flavor_nuugdan_tsarai.19
-	title = flavor_nuugdan_tsarai.19.t
+	title = anbi_flavor_nuugdan_tsarai.19.t
 	picture = generals_discussing_eventPicture
-	desc = flavor_nuugdan_tsarai.19.d
+	desc = anbi_flavor_nuugdan_tsarai.19.d
 	
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	#accept the orcs
 	option = {
-		name = flavor_nuugdan_tsarai.19.a
+		name = anbi_flavor_nuugdan_tsarai.19.a
 		ai_chance = { factor = 100 }
 			add_years_of_income = -0.1
 			add_mil_power = -100
@@ -466,7 +464,7 @@ country_event = {
 	
 	#reject the orcs
 	option = {
-		name = flavor_nuugdan_tsarai.19.b
+		name = anbi_flavor_nuugdan_tsarai.19.b
 		ai_chance = { factor = 100 }
 		add_prestige = 5
 	}
@@ -481,15 +479,15 @@ country_event = {
 #Daxugo Disaster
 country_event = {
 	id = flavor_nuugdan_tsarai.22
-	title = flavor_nuugdan_tsarai.22.t
+	title = anbi_flavor_nuugdan_tsarai.22.t
 	picture = BATTLE_eventPicture
-	desc = flavor_nuugdan_tsarai.22.d
+	desc = anbi_flavor_nuugdan_tsarai.22.d
 
 	is_triggered_only = yes
 	major = yes
 
 	option = {
-		name = flavor_nuugdan_tsarai.22.a
+		name = anbi_flavor_nuugdan_tsarai.22.a
 		ai_chance = { factor = 100 }
 		add_stability = -2
 		add_legitimacy = -10
@@ -515,15 +513,15 @@ country_event = {
 #Daxugo Disaster Ends
 country_event = {
 	id = flavor_nuugdan_tsarai.23
-	title = flavor_nuugdan_tsarai.23.t
+	title = anbi_flavor_nuugdan_tsarai.23.t
 	picture = wounded_soldiers_eventPicture
-	desc = flavor_nuugdan_tsarai.23.d
+	desc = anbi_flavor_nuugdan_tsarai.23.d
 	
 	is_triggered_only = yes
 	major = yes
 
 	option = {
-		name = flavor_nuugdan_tsarai.23.a
+		name = anbi_flavor_nuugdan_tsarai.23.a
 		ai_chance = { factor = 100 }
 		hidden_effect = {
 			every_owned_province = {
@@ -542,9 +540,9 @@ country_event = {
 #Daxugo Rebels spawn
 country_event = {
 	id = flavor_nuugdan_tsarai.24
-	title = flavor_nuugdan_tsarai.24.t
+	title = anbi_flavor_nuugdan_tsarai.24.t
 	picture = BORDER_TENSION_eventPicture
-	desc = flavor_nuugdan_tsarai.24.d
+	desc = anbi_flavor_nuugdan_tsarai.24.d
 	goto = Y91_rebelprovince_target
 
 	is_triggered_only = yes
@@ -747,7 +745,7 @@ country_event = {
 	}
 
 	option = {
-		name = flavor_nuugdan_tsarai.24.a
+		name = anbi_flavor_nuugdan_tsarai.24.a
 		ai_chance = { factor = 100 }
 		add_war_exhaustion = 0.5
 	}
@@ -756,9 +754,9 @@ country_event = {
 #Harimari loyalists aid against war exhaustion/unrest
 country_event = {
 	id = flavor_nuugdan_tsarai.25
-	title = flavor_nuugdan_tsarai.25.t
+	title = anbi_flavor_nuugdan_tsarai.25.t
 	picture = GIFTS_TO_EMPEROR_eventPicture
-	desc = flavor_nuugdan_tsarai.25.d
+	desc = anbi_flavor_nuugdan_tsarai.25.d
 
 	is_triggered_only = yes
 	
@@ -773,7 +771,7 @@ country_event = {
 	}
 
 	option = {
-		name = flavor_nuugdan_tsarai.25.a
+		name = anbi_flavor_nuugdan_tsarai.25.a
 		ai_chance = { factor = 100 }
 		trigger = {
 			high_tolerance_harimari_race_trigger = yes
@@ -787,7 +785,7 @@ country_event = {
 	}
 	
 	option = {
-		name = flavor_nuugdan_tsarai.25.b
+		name = anbi_flavor_nuugdan_tsarai.25.b
 		ai_chance = { factor = 100 }
 		trigger = {
 			medium_tolerance_harimari_race_trigger = yes
@@ -804,9 +802,9 @@ country_event = {
 #runsukhi loyalists join ranks
 country_event = {
 	id = flavor_nuugdan_tsarai.26
-	title = flavor_nuugdan_tsarai.26.t
+	title = anbi_flavor_nuugdan_tsarai.26.t
 	picture = HORDE_ON_HORSEBACK_eventPicture
-	desc = flavor_nuugdan_tsarai.26.d
+	desc = anbi_flavor_nuugdan_tsarai.26.d
 
 	is_triggered_only = yes
 	
@@ -816,7 +814,7 @@ country_event = {
 	}
 
 	option = {
-		name = flavor_nuugdan_tsarai.26.a
+		name = anbi_flavor_nuugdan_tsarai.26.a
 		ai_chance = { factor = 100 }
 		random_owned_province = {
 			limit = {
@@ -860,7 +858,7 @@ country_event = {
 	}
 	
 	option = {
-		name = flavor_nuugdan_tsarai.26.b
+		name = anbi_flavor_nuugdan_tsarai.26.b
 		ai_chance = { factor = 100 }
 		add_manpower = 5
 		add_country_modifier = {
@@ -873,9 +871,9 @@ country_event = {
 #manjang deity ascends to pantheon
 country_event = {
 	id = flavor_nuugdan_tsarai.27
-	title = flavor_nuugdan_tsarai.27.t
+	title = anbi_flavor_nuugdan_tsarai.27.t
 	picture = TRIBUTARY_FLEET_eventPicture
-	desc = flavor_nuugdan_tsarai.27.d
+	desc = anbi_flavor_nuugdan_tsarai.27.d
 	
 	fire_only_once = yes
 	
@@ -891,7 +889,7 @@ country_event = {
 	
 	#A New God For All Shavuush
 	option = {
-		name = flavor_nuugdan_tsarai.27.a
+		name = anbi_flavor_nuugdan_tsarai.27.a
 		ai_chance = { factor = 100 }
 		add_prestige = 10
 	}
@@ -900,9 +898,9 @@ country_event = {
 #daxuug general comes out of retirement
 country_event = {
 	id = flavor_nuugdan_tsarai.28
-	title = flavor_nuugdan_tsarai.28.t
+	title = anbi_flavor_nuugdan_tsarai.28.t
 	picture = chinese_general_eventPicture
-	desc = flavor_nuugdan_tsarai.28.d
+	desc = anbi_flavor_nuugdan_tsarai.28.d
 	
 	is_triggered_only = yes
 	
@@ -912,7 +910,7 @@ country_event = {
 	
 	#Accept him as a general
 	option = {
-		name = flavor_nuugdan_tsarai.28.a
+		name = anbi_flavor_nuugdan_tsarai.28.a
 		ai_chance = { factor = 100 }
 		create_general = { tradition = 100 }
 		add_country_modifier = {
@@ -922,7 +920,7 @@ country_event = {
 	}
 	#Make war propaganda with him
 	option = {
-		name = flavor_nuugdan_tsarai.28.b
+		name = anbi_flavor_nuugdan_tsarai.28.b
 		ai_chance = { factor = 100 }
 		add_manpower = 5
 		add_country_modifier = {
@@ -936,9 +934,9 @@ country_event = {
 
 country_event = {
 	id = flavor_nuugdan_tsarai.29
-	title = flavor_nuugdan_tsarai.29.t
+	title = anbi_flavor_nuugdan_tsarai.29.t
 	picture = SUFFERING_CHINESE_VILLAGE_eventPicture
-	desc = flavor_nuugdan_tsarai.29.d
+	desc = anbi_flavor_nuugdan_tsarai.29.d
 	goto = Y91_rebelprovince_target
 	
 	is_triggered_only = yes
@@ -973,7 +971,7 @@ country_event = {
 
 	#We shall crush them
 	option = {
-		name = flavor_nuugdan_tsarai.29.a
+		name = anbi_flavor_nuugdan_tsarai.29.a
 		ai_chance = { factor = 100 }
 		add_war_exhaustion = 0.5
 		add_country_modifier = {
@@ -987,9 +985,9 @@ country_event = {
 
 country_event = {
 	id = flavor_nuugdan_tsarai.30
-	title = flavor_nuugdan_tsarai.30.t
+	title = anbi_flavor_nuugdan_tsarai.30.t
 	picture = KING_CHOICE_eventPicture	
-	desc = flavor_nuugdan_tsarai.30.d
+	desc = anbi_flavor_nuugdan_tsarai.30.d
 	
 	mean_time_to_happen = {
 		months = 5
@@ -1010,14 +1008,14 @@ country_event = {
 
 	#"We aren't ready"
 	option = {
-		name = flavor_nuugdan_tsarai.30.a
+		name = anbi_flavor_nuugdan_tsarai.30.a
 		ai_chance = { factor = 0 }
 		add_prestige = -10
 	}
 
 	#"It is time"
 	option = {
-		name = flavor_nuugdan_tsarai.30.b
+		name = anbi_flavor_nuugdan_tsarai.30.b
 		ai_chance = { factor = 100 }
 		add_prestige = 20
 		add_power_projection = {
@@ -1071,9 +1069,9 @@ country_event = {
 
 country_event = {
 	id = flavor_nuugdan_tsarai.31
-	title = flavor_nuugdan_tsarai.31.t
+	title = anbi_flavor_nuugdan_tsarai.31.t
 	picture = KING_CHOICE_eventPicture	
-	desc = flavor_nuugdan_tsarai.31.d
+	desc = anbi_flavor_nuugdan_tsarai.31.d
 	
 	is_triggered_only = yes
 	
@@ -1083,14 +1081,14 @@ country_event = {
 	}
 	
 	option = {		# Why can't the peasants eat cake?
-		name = flavor_nuugdan_tsarai.31.a
+		name = anbi_flavor_nuugdan_tsarai.31.a
 		ai_chance = { factor = 25 }
 		reduce_stability_or_adm_power = yes
 		reduce_legitimacy_small_effect = yes
 		add_war_exhaustion = 2
 	}
 	option = {		# Just import food from abroad.
-		name = flavor_nuugdan_tsarai.31.b
+		name = anbi_flavor_nuugdan_tsarai.31.b
 		ai_chance = { factor = 50 }
 		add_country_modifier = {
 			name = importing_food
@@ -1098,7 +1096,7 @@ country_event = {
 		}
 	}
 	option = {		# Someone must be hoarding food, we must seize it.
-		name = flavor_nuugdan_tsarai.31.c
+		name = anbi_flavor_nuugdan_tsarai.31.c
 		ai_chance = { factor = 25 }
 		reduce_estate_nobles_loyalty_effect = yes
 		reduce_estate_burghers_loyalty_effect = yes
@@ -1108,9 +1106,9 @@ country_event = {
 #Deserters
 country_event = {
 	id = flavor_nuugdan_tsarai.32
-	title = flavor_nuugdan_tsarai.32.t
+	title = anbi_flavor_nuugdan_tsarai.32.t
 	picture = KING_CHOICE_eventPicture	
-	desc = flavor_nuugdan_tsarai.32.d
+	desc = anbi_flavor_nuugdan_tsarai.32.d
 	goto = Y91_deserting_soldier_province
 
 	is_triggered_only = yes
@@ -1134,7 +1132,7 @@ country_event = {
 	}
 	#Welp
 	option = {
-		name = flavor_nuugdan_tsarai.32.a
+		name = anbi_flavor_nuugdan_tsarai.32.a
 		ai_chance = { factor = 10 }
 		trigger = { manpower = 10 }
 		add_yearly_manpower = -2
@@ -1142,13 +1140,13 @@ country_event = {
 	}
 	#Pay them off
 	option = {
-		name = flavor_nuugdan_tsarai.32.b
+		name = anbi_flavor_nuugdan_tsarai.32.b
 		ai_chance = { factor = 10 }
 		add_years_of_income = -0.5
 	}
 	#Scorch and burn
 	option = {
-		name = flavor_nuugdan_tsarai.32.c
+		name = anbi_flavor_nuugdan_tsarai.32.c
 		ai_chance = { factor = 10 }
 		add_legitimacy = -10
 		event_target:Y91_deserting_soldier_province = {
@@ -1162,15 +1160,15 @@ country_event = {
 #Rebel army defeated and leader captured
 country_event = {
 	id = flavor_nuugdan_tsarai.33
-	title = flavor_nuugdan_tsarai.33.t
+	title = anbi_flavor_nuugdan_tsarai.33.t
 	picture = KING_CHOICE_eventPicture	
-	desc = flavor_nuugdan_tsarai.33.d
+	desc = anbi_flavor_nuugdan_tsarai.33.d
 
 	is_triggered_only = yes
 	
 	#Pardon them
 	option = {
-		name =  flavor_nuugdan_tsarai.33.a
+		name =  anbi_flavor_nuugdan_tsarai.33.a
 		ai_chance = { factor = 50 }
 		add_legitimacy = -10
 		add_country_modifier = {
@@ -1180,7 +1178,7 @@ country_event = {
 	}
 	#Execute and seize their holdings
 	option = {
-		name =  flavor_nuugdan_tsarai.33.b
+		name =  anbi_flavor_nuugdan_tsarai.33.b
 		ai_chance = { factor = 50 }
 		add_years_of_income = 0.2
 		add_legitimacy = 10
@@ -1191,9 +1189,9 @@ country_event = {
 #Neighbors supporting rebels
 country_event = {
 	id = flavor_nuugdan_tsarai.34
-	title = flavor_nuugdan_tsarai.34.t
+	title = anbi_flavor_nuugdan_tsarai.34.t
 	picture = SPY_eventPicture
-	desc = flavor_nuugdan_tsarai.34.d
+	desc = anbi_flavor_nuugdan_tsarai.34.d
 	
 	mean_time_to_happen = {
 		months = 18
@@ -1218,7 +1216,7 @@ country_event = {
 	}
 		
 	option = {		# Send some unruly subjects to the rebels as 'volunteers'.
-		name = flavor_nuugdan_tsarai.34.a
+		name = anbi_flavor_nuugdan_tsarai.34.a
 		ai_chance = { factor = 30 }
 		set_country_flag = Y91_support_rebels
 		add_manpower = -2
@@ -1233,7 +1231,7 @@ country_event = {
 		}
 	}
 	option = {		# Give the rebels some monetary aid.
-		name = flavor_nuugdan_tsarai.34.b
+		name = anbi_flavor_nuugdan_tsarai.34.b
 		ai_chance = { factor = 20 }
 		set_country_flag = Y91_support_rebels
 		add_years_of_income = -0.4
@@ -1248,7 +1246,7 @@ country_event = {
 		}
 	}
 	option = {		# We don't help rebel scum.
-		name = flavor_nuugdan_tsarai.34.c
+		name = anbi_flavor_nuugdan_tsarai.34.c
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -1283,9 +1281,9 @@ country_event = {
 # Country Intervenes!
 country_event = {
 	id = flavor_nuugdan_tsarai.35
-	title = flavor_nuugdan_tsarai.35.t
+	title = anbi_flavor_nuugdan_tsarai.35.t
 	picture = SPY_eventPicture
-	desc = flavor_nuugdan_tsarai.35.d
+	desc = anbi_flavor_nuugdan_tsarai.35.d
 	goto = Y91_rebel_spawner
 	is_triggered_only = yes
 	
@@ -1823,7 +1821,7 @@ country_event = {
 	}
 	
 	option = {		# We will not forget this.
-		name = flavor_nuugdan_tsarai.35.a
+		name = anbi_flavor_nuugdan_tsarai.35.a
 		add_war_exhaustion = 0.5
 	}
 }
@@ -1831,9 +1829,9 @@ country_event = {
 #ADM ADVISOR IS A TRAITOR
 country_event = {
 		id = flavor_nuugdan_tsarai.36
-		title = flavor_nuugdan_tsarai.36.t
+		title = anbi_flavor_nuugdan_tsarai.36.t
 		picture = KING_CHOICE_eventPicture	
-		desc = flavor_nuugdan_tsarai.36.d
+		desc = anbi_flavor_nuugdan_tsarai.36.d
 
 		is_triggered_only = yes
 
@@ -1843,7 +1841,7 @@ country_event = {
 
 		#Welp
 		option = {
-			name = flavor_nuugdan_tsarai.36.a
+			name = anbi_flavor_nuugdan_tsarai.36.a
 			ai_chance = { factor = 10 }
 			add_prestige = -5
 			add_legitimacy = -5
@@ -1860,9 +1858,9 @@ country_event = {
 #DIP ADVISOR IS A TRAITOR
 country_event = {
 		id = flavor_nuugdan_tsarai.37
-		title = flavor_nuugdan_tsarai.37.t
+		title = anbi_flavor_nuugdan_tsarai.37.t
 		picture = KING_CHOICE_eventPicture	
-		desc = flavor_nuugdan_tsarai.37.d
+		desc = anbi_flavor_nuugdan_tsarai.37.d
 
 		is_triggered_only = yes
 
@@ -1872,7 +1870,7 @@ country_event = {
 
 		#Welp
 		option = {
-			name = flavor_nuugdan_tsarai.37.a
+			name = anbi_flavor_nuugdan_tsarai.37.a
 			ai_chance = { factor = 10 }
 			add_prestige = -5
 			add_legitimacy = -5
@@ -1889,9 +1887,9 @@ country_event = {
 #MIL ADVISOR IS A TRAITOR
 country_event = {
 		id = flavor_nuugdan_tsarai.38
-		title = flavor_nuugdan_tsarai.38.t
+		title = anbi_flavor_nuugdan_tsarai.38.t
 		picture = KING_CHOICE_eventPicture	
-		desc = flavor_nuugdan_tsarai.38.d
+		desc = anbi_flavor_nuugdan_tsarai.38.d
 
 		is_triggered_only = yes
 
@@ -1901,7 +1899,7 @@ country_event = {
 
 		#Welp
 		option = {
-			name = flavor_nuugdan_tsarai.38.a
+			name = anbi_flavor_nuugdan_tsarai.38.a
 			ai_chance = { factor = 10 }
 			add_prestige = -5
 			add_legitimacy = -5
@@ -1922,15 +1920,15 @@ country_event = {
 #Great Daxugo Legal Code: Urban Areas
 country_event = {
 	id = flavor_nuugdan_tsarai.48
-	title = flavor_nuugdan_tsarai.48.t
+	title = anbi_flavor_nuugdan_tsarai.48.t
 	picture = DECLARATION_INDEPENDENCE_eventPicture
-	desc = flavor_nuugdan_tsarai.48.d
+	desc = anbi_flavor_nuugdan_tsarai.48.d
 
 	is_triggered_only = yes
 
 	#Progressive: Favor the cities
 	option = {
-		name = flavor_nuugdan_tsarai.48.a
+		name = anbi_flavor_nuugdan_tsarai.48.a
 		ai_chance = { factor = 100 }
 		every_owned_province = {
 			limit = { has_terrain = city_terrain }
@@ -1945,7 +1943,7 @@ country_event = {
 	
 	#Tradition: Favor the countryside
 	option = {
-		name = flavor_nuugdan_tsarai.48.b
+		name = anbi_flavor_nuugdan_tsarai.48.b
 		ai_chance = { factor = 100 }
 		custom_tooltip = Y91_grain_livestock_dev
 		hidden_effect = {
@@ -1962,15 +1960,15 @@ country_event = {
 #Great Daxugo Legal Code: Races of Daxugo
 country_event = {
 	id = flavor_nuugdan_tsarai.49
-	title = flavor_nuugdan_tsarai.49.t
+	title = anbi_flavor_nuugdan_tsarai.49.t
 	picture = DECLARATION_INDEPENDENCE_eventPicture
-	desc = flavor_nuugdan_tsarai.49.d
+	desc = anbi_flavor_nuugdan_tsarai.49.d
 
 	is_triggered_only = yes
 
 	#Neutral: All coexisting races gain a huge boost in tolerance
 	option = {
-		name = flavor_nuugdan_tsarai.49.b
+		name = anbi_flavor_nuugdan_tsarai.49.b
 		ai_chance = { factor = 100 }
 		if = {
 			limit = {
@@ -1992,7 +1990,7 @@ country_event = {
 		trigger = {
 			always = no #anbingnar
 		}
-		name = flavor_nuugdan_tsarai.49.c
+		name = anbi_flavor_nuugdan_tsarai.49.c
 		ai_chance = { factor = 100 }
 		largest_increase_of_human_tolerance_effect = yes
 		small_decrease_of_harimari_tolerance_effect = yes
@@ -2034,15 +2032,15 @@ country_event = {
 #Great Daxugo Legal Code: Deliberative Assembly
 country_event = {
 	id = flavor_nuugdan_tsarai.50
-	title = flavor_nuugdan_tsarai.50.t
+	title = anbi_flavor_nuugdan_tsarai.50.t
 	picture = DECLARATION_INDEPENDENCE_eventPicture
-	desc = flavor_nuugdan_tsarai.50.d
+	desc = anbi_flavor_nuugdan_tsarai.50.d
 
 	is_triggered_only = yes
 
 	#Parliamentarism
 	option = {
-		name = flavor_nuugdan_tsarai.50.a
+		name = anbi_flavor_nuugdan_tsarai.50.a
 		ai_chance = { factor = 100 }
 		add_government_reform = parliamentary_reform
 		country_event = { id = flavor_nuugdan_tsarai.51 days = 30 }
@@ -2050,7 +2048,7 @@ country_event = {
 	
 	#Royal Decree
 	option = {
-		name = flavor_nuugdan_tsarai.50.b
+		name = anbi_flavor_nuugdan_tsarai.50.b
 		ai_chance = { factor = 100 }
 		add_government_reform = royal_decree_reform 
 		country_event = { id = flavor_nuugdan_tsarai.51 days = 30 }
@@ -2058,7 +2056,7 @@ country_event = {
 	
 	#Aristocratic Court
 	option = {
-		name = flavor_nuugdan_tsarai.50.c
+		name = anbi_flavor_nuugdan_tsarai.50.c
 		ai_chance = { factor = 100 }
 		add_government_reform = aristocratic_court_reform 
 		country_event = { id = flavor_nuugdan_tsarai.51 days = 30 }
@@ -2066,7 +2064,7 @@ country_event = {
 	
 	#General Estates
 	option = {
-		name = flavor_nuugdan_tsarai.50.e
+		name = anbi_flavor_nuugdan_tsarai.50.e
 		ai_chance = { factor = 100 }
 		add_government_reform = general_estates_reform 
 		country_event = { id = flavor_nuugdan_tsarai.51 days = 30 }
@@ -2075,7 +2073,7 @@ country_event = {
 	#Estates General
 	#宪政主义
 	option = {
-		name = flavor_nuugdan_tsarai.50.g
+		name = anbi_flavor_nuugdan_tsarai.50.g
 		ai_chance = { factor = 100 }
 		trigger = { NOT = { has_reform = guwaamud_harem_reform } }
 		add_government_reform = anbi_daxugo_constitutional_government
@@ -2100,15 +2098,15 @@ country_event = {
 #Great Daxugo Legal Code: Degree of Centralisation
 country_event = {
 	id = flavor_nuugdan_tsarai.51
-	title = flavor_nuugdan_tsarai.51.t
+	title = anbi_flavor_nuugdan_tsarai.51.t
 	picture = DECLARATION_INDEPENDENCE_eventPicture
-	desc = flavor_nuugdan_tsarai.51.d
+	desc = anbi_flavor_nuugdan_tsarai.51.d
 
 	is_triggered_only = yes
 
 	#Progressive: Diguo Entrenchment
 	option = {
-		name = flavor_nuugdan_tsarai.51.a
+		name = anbi_flavor_nuugdan_tsarai.51.a
 		ai_chance = { factor = 100 }
 		add_country_modifier = {
 			name = Y91_diguo_entrenchment
@@ -2118,7 +2116,7 @@ country_event = {
 	
 	#Traditional: Baduum Clan System
 	option = {
-		name = flavor_nuugdan_tsarai.51.b
+		name = anbi_flavor_nuugdan_tsarai.51.b
 		ai_chance = { factor = 100 }
 		add_country_modifier = {
 			name = Y91_baduum_clan_system
@@ -2130,15 +2128,15 @@ country_event = {
 #Great Daxugo Legal Code: War Conduct
 country_event = {
 	id = flavor_nuugdan_tsarai.52
-	title = flavor_nuugdan_tsarai.52.t
+	title = anbi_flavor_nuugdan_tsarai.52.t
 	picture = DECLARATION_INDEPENDENCE_eventPicture
-	desc = flavor_nuugdan_tsarai.52.d
+	desc = anbi_flavor_nuugdan_tsarai.52.d
 
 	is_triggered_only = yes
 
 	#Please The Diguomao
 	option = {
-		name = flavor_nuugdan_tsarai.52.a
+		name = anbi_flavor_nuugdan_tsarai.52.a
 		ai_chance = { factor = 100 }
 		add_country_modifier = {
 			name = Y9888_diguomao_war_conduct
@@ -2149,7 +2147,7 @@ country_event = {
 	}
 
 	option = {
-		name = flavor_nuugdan_tsarai.52.c
+		name = anbi_flavor_nuugdan_tsarai.52.c
 		ai_chance = { factor = 100 }
 		add_country_modifier = {
 			name = Y9888_diguomao_academy_solidarity
@@ -2159,7 +2157,7 @@ country_event = {
 	
 	#Please The Academy
 	option = {
-		name = flavor_nuugdan_tsarai.52.b
+		name = anbi_flavor_nuugdan_tsarai.52.b
 		ai_chance = { factor = 100 }
 		add_country_modifier = {
 			name = Y9888_academy_war_conduct
@@ -2174,15 +2172,15 @@ country_event = {
 #Great Daxugo Legal Code: Religious Rights
 country_event = {
 	id = flavor_nuugdan_tsarai.53
-	title = flavor_nuugdan_tsarai.53.t
+	title = anbi_flavor_nuugdan_tsarai.53.t
 	picture = DECLARATION_INDEPENDENCE_eventPicture
-	desc = flavor_nuugdan_tsarai.53.d
+	desc = anbi_flavor_nuugdan_tsarai.53.d
 
 	is_triggered_only = yes
 
 	#Accept All
 	option = {
-		name = flavor_nuugdan_tsarai.53.a
+		name = anbi_flavor_nuugdan_tsarai.53.a
 		ai_chance = { factor = 100 }
 		add_country_modifier = {
 			name = Y91_tolerant_religious_code
@@ -2193,7 +2191,7 @@ country_event = {
 	
 	#Heretics Only
 	option = {
-		name = flavor_nuugdan_tsarai.53.b
+		name = anbi_flavor_nuugdan_tsarai.53.b
 		ai_chance = { factor = 100 }
 		add_country_modifier = {
 			name = Y91_semi_tolerant_religious_code
@@ -2203,7 +2201,7 @@ country_event = {
 	
 	#True Faith Only
 	option = {
-		name = flavor_nuugdan_tsarai.53.c
+		name = anbi_flavor_nuugdan_tsarai.53.c
 		ai_chance = { factor = 100 }
 		add_country_modifier = {
 			name = Y91_intolerant_religious_code
@@ -2228,9 +2226,9 @@ country_event = {
 #Great Daxugo Legal Code Backlash: Non-Humans Rebel
 country_event = {
 	id = flavor_nuugdan_tsarai.54
-	title = flavor_nuugdan_tsarai.54.t
+	title = anbi_flavor_nuugdan_tsarai.54.t
 	picture = RELIGIOUS_WARS_eventPicture
-	desc = flavor_nuugdan_tsarai.54.d
+	desc = anbi_flavor_nuugdan_tsarai.54.d
 
 	is_triggered_only = yes
 	
@@ -2287,7 +2285,7 @@ country_event = {
 
 	#It Was Expected
 	option = {
-		name = flavor_nuugdan_tsarai.54.a
+		name = anbi_flavor_nuugdan_tsarai.54.a
 		ai_chance = { factor = 100 }
 		if = {
 			limit = { has_spawned_rebels = particularist_rebels }
@@ -2299,9 +2297,9 @@ country_event = {
 #Great Daxugo Legal Code Backlash: Human Racist Rebel
 country_event = {
 	id = flavor_nuugdan_tsarai.55
-	title = flavor_nuugdan_tsarai.55.t
+	title = anbi_flavor_nuugdan_tsarai.55.t
 	picture = RELIGIOUS_TURMOIL_eventPicture
-	desc = flavor_nuugdan_tsarai.55.d
+	desc = anbi_flavor_nuugdan_tsarai.55.d
 
 	is_triggered_only = yes
 	
@@ -2332,7 +2330,7 @@ country_event = {
 
 	#It Was Expected
 	option = {
-		name = flavor_nuugdan_tsarai.55.a
+		name = anbi_flavor_nuugdan_tsarai.55.a
 		ai_chance = { factor = 100 }
 		add_stability = -1
 	}
@@ -2341,9 +2339,9 @@ country_event = {
 #Great Daxugo Legal Code Backlash: Noble Rebels
 country_event = {
 	id = flavor_nuugdan_tsarai.56
-	title = flavor_nuugdan_tsarai.56.t
+	title = anbi_flavor_nuugdan_tsarai.56.t
 	picture = RELIGIOUS_TURMOIL_eventPicture
-	desc = flavor_nuugdan_tsarai.56.d
+	desc = anbi_flavor_nuugdan_tsarai.56.d
 	
 	is_triggered_only = yes
 	
@@ -2379,7 +2377,7 @@ country_event = {
 	
 	#It Was Expected
 	option = {
-		name = flavor_nuugdan_tsarai.56.a
+		name = anbi_flavor_nuugdan_tsarai.56.a
 		ai_chance = { factor = 100 }
 			add_stability = -1
 	}
@@ -2388,9 +2386,9 @@ country_event = {
 #Great Daxugo Legal Code Backlash: Heathen Backlask
 country_event = {
 	id = flavor_nuugdan_tsarai.57
-	title = flavor_nuugdan_tsarai.57.t
+	title = anbi_flavor_nuugdan_tsarai.57.t
 	picture = RELIGIOUS_TURMOIL_eventPicture
-	desc = flavor_nuugdan_tsarai.57.d
+	desc = anbi_flavor_nuugdan_tsarai.57.d
 	
 	is_triggered_only = yes
 	
@@ -2521,7 +2519,7 @@ country_event = {
 	
 	#It Was Expected
 	option = {
-		name = flavor_nuugdan_tsarai.57.a
+		name = anbi_flavor_nuugdan_tsarai.57.a
 		ai_chance = { factor = 100 }
 		if = {
 			limit = {
@@ -2544,9 +2542,9 @@ country_event = {
 #Great Daxugo Legal Code Backlash: Heretic and Heathen Backlask
 country_event = {
 	id = flavor_nuugdan_tsarai.58
-	title = flavor_nuugdan_tsarai.58.t
+	title = anbi_flavor_nuugdan_tsarai.58.t
 	picture = RELIGIOUS_WARS_eventPicture
-	desc = flavor_nuugdan_tsarai.58.d
+	desc = anbi_flavor_nuugdan_tsarai.58.d
 	
 	is_triggered_only = yes
 	
@@ -2752,7 +2750,7 @@ country_event = {
 	
 	#It Was Expected
 	option = {
-		name = flavor_nuugdan_tsarai.58.a
+		name = anbi_flavor_nuugdan_tsarai.58.a
 		ai_chance = { factor = 100 }
 		if = {
 			limit = {
@@ -2775,9 +2773,9 @@ country_event = {
 #Great Daxugo Legal Code Backlash: Academy Coup
 country_event = {
 	id = flavor_nuugdan_tsarai.59
-	title = flavor_nuugdan_tsarai.59.t
+	title = anbi_flavor_nuugdan_tsarai.59.t
 	picture = REVOLUTION_eventPicture
-	desc = flavor_nuugdan_tsarai.59.d
+	desc = anbi_flavor_nuugdan_tsarai.59.d
 	
 	is_triggered_only = yes
 	
@@ -2803,7 +2801,7 @@ country_event = {
 
 	#Here We Go
 	option = {
-		name = flavor_nuugdan_tsarai.59.a
+		name = anbi_flavor_nuugdan_tsarai.59.a
 		ai_chance = { factor = 100 }
 		add_stability = -1
 		add_yearly_manpower = -2
@@ -2813,9 +2811,9 @@ country_event = {
 #Great Daxugo Legal Code Backlash: Diguomao Coup
 country_event = {
 	id = flavor_nuugdan_tsarai.60
-	title = flavor_nuugdan_tsarai.60.t
+	title = anbi_flavor_nuugdan_tsarai.60.t
 	picture = REVOLUTION_eventPicture
-	desc = flavor_nuugdan_tsarai.60.d
+	desc = anbi_flavor_nuugdan_tsarai.60.d
 
 	is_triggered_only = yes
 	
@@ -2854,7 +2852,7 @@ country_event = {
 
 	#Here We Go
 	option = {
-		name = flavor_nuugdan_tsarai.60.a
+		name = anbi_flavor_nuugdan_tsarai.60.a
 		ai_chance = { factor = 100 }
 		add_stability = -1
 		add_yearly_manpower = -0.5
@@ -2866,9 +2864,9 @@ country_event = {
 #Selling Noble titles to tribals
 country_event = {
 	id = flavor_nuugdan_tsarai.61
-	title = flavor_nuugdan_tsarai.61.t
+	title = anbi_flavor_nuugdan_tsarai.61.t
 	picture = DECLARATION_INDEPENDENCE_eventPicture
-	desc = flavor_nuugdan_tsarai.61.d
+	desc = anbi_flavor_nuugdan_tsarai.61.d
 
 	fire_only_once = yes
 	mean_time_to_happen = {
@@ -2885,7 +2883,7 @@ country_event = {
 	
 	#Sell no titles
 	option = {
-		name = flavor_nuugdan_tsarai.61.a
+		name = anbi_flavor_nuugdan_tsarai.61.a
 		ai_chance = { factor = 0 }
 		add_prestige = 5
 		add_legitimacy = 5
@@ -2897,7 +2895,7 @@ country_event = {
 
 	#Sell a few titles
 	option = {
-		name = flavor_nuugdan_tsarai.61.b
+		name = anbi_flavor_nuugdan_tsarai.61.b
 		ai_chance = { factor = 0 }
 		add_years_of_income = 0.5
 		add_estate_loyalty = {
@@ -2909,7 +2907,7 @@ country_event = {
 	}
 	#Sell a bunch of titles
 	option = {
-		name = flavor_nuugdan_tsarai.61.c
+		name = anbi_flavor_nuugdan_tsarai.61.c
 		ai_chance = { factor = 0 }
 		add_years_of_income = 0.75
 		add_estate_loyalty = {
@@ -2921,7 +2919,7 @@ country_event = {
 	}
 	#Sell a ridiculous amount of titles
 	option = {
-		name = flavor_nuugdan_tsarai.61.e
+		name = anbi_flavor_nuugdan_tsarai.61.e
 		ai_chance = { factor = 100 }
 		add_years_of_income = 1
 		add_estate_loyalty = {
@@ -2937,9 +2935,9 @@ country_event = {
 #River Yan try to assassinate Daxugo Former
 country_event = {
 	id = flavor_nuugdan_tsarai.62
-	title = flavor_nuugdan_tsarai.62.t
+	title = anbi_flavor_nuugdan_tsarai.62.t
 	picture = NANBAN_INCIDENT_eventPicture
-	desc = flavor_nuugdan_tsarai.62.d
+	desc = anbi_flavor_nuugdan_tsarai.62.d
 
 	fire_only_once = yes
 	
@@ -3000,7 +2998,7 @@ country_event = {
 	
 	#oh no
 	option = {
-		name = flavor_nuugdan_tsarai.62.a
+		name = anbi_flavor_nuugdan_tsarai.62.a
 		ai_chance = { factor = 100 }
 		random_list = {
 			25 = {
@@ -3036,7 +3034,7 @@ country_event = {
 		trigger = {
 			has_ruler_modifier = anbi_faceless_queen_modifier
 		}
-		name = flavor_nuugdan_tsarai.62.b
+		name = anbi_flavor_nuugdan_tsarai.62.b
 		custom_tooltip = faceless_queen_power
 	}
 }
@@ -3044,9 +3042,9 @@ country_event = {
 #Northern Yan break eggs
 country_event = {
 	id = flavor_nuugdan_tsarai.63
-	title = flavor_nuugdan_tsarai.63.t
+	title = anbi_flavor_nuugdan_tsarai.63.t
 	picture = SUFFERING_CHINESE_VILLAGE_eventPicture
-	desc = flavor_nuugdan_tsarai.63.d
+	desc = anbi_flavor_nuugdan_tsarai.63.d
 	
 	fire_only_once = yes
 	
@@ -3061,7 +3059,7 @@ country_event = {
 	
 	#oh no
 	option = {
-		name = flavor_nuugdan_tsarai.63.a
+		name = anbi_flavor_nuugdan_tsarai.63.a
 		ai_chance = { factor = 100 }
 		add_prestige = -10
 		add_country_modifier = {
@@ -3074,9 +3072,9 @@ country_event = {
 #Forest Yan kill taxcollectors
 country_event = {
 	id = flavor_nuugdan_tsarai.64
-	title = flavor_nuugdan_tsarai.64.t
+	title = anbi_flavor_nuugdan_tsarai.64.t
 	picture = SUFFERING_CHINESE_VILLAGE_eventPicture
-	desc = flavor_nuugdan_tsarai.64.d
+	desc = anbi_flavor_nuugdan_tsarai.64.d
 	
 	fire_only_once = yes
 	
@@ -3091,7 +3089,7 @@ country_event = {
 	
 	#oh no
 	option = {
-		name = flavor_nuugdan_tsarai.64.a
+		name = anbi_flavor_nuugdan_tsarai.64.a
 		ai_chance = { factor = 100 }
 		add_country_modifier = {
 			name = Y91_tax_fears
@@ -3103,9 +3101,9 @@ country_event = {
 #Coastal Yan raid shipping routes
 country_event = {
 	id = flavor_nuugdan_tsarai.65
-	title = flavor_nuugdan_tsarai.65.t
+	title = anbi_flavor_nuugdan_tsarai.65.t
 	picture = TRIBUTARY_FLEET_eventPicture
-	desc = flavor_nuugdan_tsarai.65.d
+	desc = anbi_flavor_nuugdan_tsarai.65.d
 	
 	fire_only_once = yes
 	
@@ -3120,7 +3118,7 @@ country_event = {
 	
 	#oh no
 	option = {
-		name = flavor_nuugdan_tsarai.65.a
+		name = anbi_flavor_nuugdan_tsarai.65.a
 		ai_chance = { factor = 100 }
 		add_country_modifier = {
 			name = Y91_shipping_lanes_disturbed
@@ -3132,9 +3130,9 @@ country_event = {
 #Hill Yan hexx the army
 country_event = {
 	id = flavor_nuugdan_tsarai.66
-	title = flavor_nuugdan_tsarai.66.t
+	title = anbi_flavor_nuugdan_tsarai.66.t
 	picture = COMET_SIGHTED_eventPicture
-	desc = flavor_nuugdan_tsarai.66.d
+	desc = anbi_flavor_nuugdan_tsarai.66.d
 	
 	fire_only_once = yes
 	
@@ -3149,7 +3147,7 @@ country_event = {
 	
 	#oh no
 	option = {
-		name = flavor_nuugdan_tsarai.66.a
+		name = anbi_flavor_nuugdan_tsarai.66.a
 		ai_chance = { factor = 100 }
 		add_country_modifier = {
 			name = Y91_beikling_hexxing
@@ -3164,9 +3162,9 @@ country_event = {
 #Tsuista Khul Deal (与小弟联姻，有改动)
 country_event = {
 	id = flavor_nuugdan_tsarai.73
-	title = flavor_nuugdan_tsarai.73.t
+	title = anbi_flavor_nuugdan_tsarai.73.t
 	picture = GIFTS_TO_EMPEROR_eventPicture
-	desc = flavor_nuugdan_tsarai.73.d
+	desc = anbi_flavor_nuugdan_tsarai.73.d
 	
 	fire_only_once = yes
 	
@@ -3177,7 +3175,7 @@ country_event = {
 	
 	#oh no
 	option = {
-		name = flavor_nuugdan_tsarai.73.a
+		name = anbi_flavor_nuugdan_tsarai.73.a
 		ai_chance = { factor = 100 }
 		add_years_of_income = -0.2
 		reverse_add_opinion = {
@@ -3201,8 +3199,8 @@ country_event = {
 	
 	#oh no
 	option = {
-		name = flavor_nuugdan_tsarai.73.b
-		custom_tooltip = flavor_nuugdan_tsarai.73_tt
+		name = anbi_flavor_nuugdan_tsarai.73.b
+		custom_tooltip = anbi_flavor_nuugdan_tsarai.73_tt
 		ai_chance = { factor = 100 }
 		set_country_flag = Y91_struck_jaal_deal
 		clr_country_flag = Y91_ready_for_jaal_deal
@@ -3215,16 +3213,16 @@ country_event = {
 #Jiangdu War Proposal
 country_event = {
 	id = flavor_nuugdan_tsarai.75
-	title = flavor_nuugdan_tsarai.75.t
+	title = anbi_flavor_nuugdan_tsarai.75.t
 	picture = GIFTS_TO_EMPEROR_eventPicture
-	desc = flavor_nuugdan_tsarai.75.d
+	desc = anbi_flavor_nuugdan_tsarai.75.d
 	
 	fire_only_once = no
 	is_triggered_only = yes
 	
 	#ask them
 	option = {
-		name = flavor_nuugdan_tsarai.75.a
+		name = anbi_flavor_nuugdan_tsarai.75.a
 		ai_chance = { factor = 100 }
 		trigger = {
 			NOT = { war_with = Y05 }
@@ -3234,14 +3232,14 @@ country_event = {
 	
 	#ask again in 5 years
 	option = {
-		name = flavor_nuugdan_tsarai.75.b
+		name = anbi_flavor_nuugdan_tsarai.75.b
 		ai_chance = { factor = 0 }
 		country_event = { id = flavor_nuugdan_tsarai.75 days = 1825 }
 	}
 	
 	#never ask me again
 	option = {
-		name = flavor_nuugdan_tsarai.75.c
+		name = anbi_flavor_nuugdan_tsarai.75.c
 		ai_chance = { factor = 0 }
 		liuminxiang_area = { add_permanent_claim = ROOT }
 		erluxi_area = { add_permanent_claim = ROOT }
@@ -3251,9 +3249,9 @@ country_event = {
 #Jiangdu War Proposal 2
 country_event = {
 	id = flavor_nuugdan_tsarai.76
-	title = flavor_nuugdan_tsarai.76.t
+	title = anbi_flavor_nuugdan_tsarai.76.t
 	picture = GIFTS_TO_EMPEROR_eventPicture
-	desc = flavor_nuugdan_tsarai.76.d
+	desc = anbi_flavor_nuugdan_tsarai.76.d
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -3261,7 +3259,7 @@ country_event = {
 	
 	#let us go
 	option = {
-		name = flavor_nuugdan_tsarai.76.a
+		name = anbi_flavor_nuugdan_tsarai.76.a
 		ai_chance = { factor = 100 }
 		if = {
 			limit = {
@@ -3347,7 +3345,7 @@ country_event = {
 	
 	#now is not the time
 	option = {
-		name = flavor_nuugdan_tsarai.75.b
+		name = anbi_flavor_nuugdan_tsarai.75.b
 		ai_chance = { factor = 0 }
 		if = {
 			limit = { exists = Y91 }
@@ -3368,9 +3366,9 @@ country_event = {
 #Maskbreaker unrest spreader to mid-disaster acquired provinces
 country_event = {
 	id = flavor_nuugdan_tsarai.85
-	title = flavor_nuugdan_tsarai.85.t
+	title = anbi_flavor_nuugdan_tsarai.85.t
 	picture = HORDE_ON_HORSEBACK_eventPicture
-	desc = flavor_nuugdan_tsarai.85.d
+	desc = anbi_flavor_nuugdan_tsarai.85.d
 	
 	hidden = yes
 	
@@ -3506,7 +3504,7 @@ country_event = {
 	
 	#all according to the agreement
 	option = {
-		name = flavor_nuugdan_tsarai.85.a
+		name = anbi_flavor_nuugdan_tsarai.85.a
 		ai_chance = { factor = 100 }
 	}
 }
@@ -3514,22 +3512,22 @@ country_event = {
 #Jiangdu Player vassalisation demand
 country_event = {
 	id = flavor_nuugdan_tsarai.86
-	title = flavor_nuugdan_tsarai.86.t
+	title = anbi_flavor_nuugdan_tsarai.86.t
 	picture = LAND_MILITARY_eventPicture
-	desc = flavor_nuugdan_tsarai.86.d
+	desc = anbi_flavor_nuugdan_tsarai.86.d
 	
 	is_triggered_only = yes
 	
 	#accept
 	option = {
-		name = flavor_nuugdan_tsarai.86.a
+		name = anbi_flavor_nuugdan_tsarai.86.a
 		ai_chance = { factor = 100 }
 		FROM = { vassalize = ROOT }
 	}
 	
 	#decline
 	option = {
-		name = flavor_nuugdan_tsarai.86.b
+		name = anbi_flavor_nuugdan_tsarai.86.b
 		ai_chance = { factor = 0 }
 		FROM = { 
 			add_casus_belli = {
@@ -3544,15 +3542,15 @@ country_event = {
 #Tsuista Khul player info
 country_event = {
 	id = flavor_nuugdan_tsarai.87
-	title = flavor_nuugdan_tsarai.87.t
+	title = anbi_flavor_nuugdan_tsarai.87.t
 	picture = LAND_MILITARY_eventPicture
-	desc = flavor_nuugdan_tsarai.87.d
+	desc = anbi_flavor_nuugdan_tsarai.87.d
 
 	is_triggered_only = yes
 	
 	#accept
 	option = {
-		name = flavor_nuugdan_tsarai.87.a
+		name = anbi_flavor_nuugdan_tsarai.87.a
 		ai_chance = { factor = 100 }
 		switch_tag = Y91
 		Y91 = {	country_event = { id = flavor_nuugdan_tsarai.89 } }
@@ -3562,22 +3560,22 @@ country_event = {
 #Tsuista Khul player info
 country_event = {
 	id = flavor_nuugdan_tsarai.88
-	title = flavor_nuugdan_tsarai.88.t
+	title = anbi_flavor_nuugdan_tsarai.88.t
 	picture = LAND_MILITARY_eventPicture
-	desc = flavor_nuugdan_tsarai.88.d
+	desc = anbi_flavor_nuugdan_tsarai.88.d
 	
 	is_triggered_only = yes
 	
 	#accept
 	option = {
-		name = flavor_nuugdan_tsarai.88.a
+		name = anbi_flavor_nuugdan_tsarai.88.a
 		ai_chance = { factor = 100 }
 		switch_tag = Y90
 	}
 	
 	#decline
 	option = {
-		name = flavor_nuugdan_tsarai.88.b
+		name = anbi_flavor_nuugdan_tsarai.88.b
 		ai_chance = { factor = 100 }
 	}
 }
@@ -3585,15 +3583,15 @@ country_event = {
 #Tsuista Khul player info
 country_event = {
 	id = flavor_nuugdan_tsarai.89
-	title = flavor_nuugdan_tsarai.89.t
+	title = anbi_flavor_nuugdan_tsarai.89.t
 	picture = LAND_MILITARY_eventPicture
-	desc = flavor_nuugdan_tsarai.89.d
+	desc = anbi_flavor_nuugdan_tsarai.89.d
 	
 	is_triggered_only = yes
 	
 	#accept
 	option = {
-		name = flavor_nuugdan_tsarai.89.a
+		name = anbi_flavor_nuugdan_tsarai.89.a
 		ai_chance = { factor = 100 }
 		inherit = Y90
 		every_owned_province = {
@@ -3621,9 +3619,9 @@ country_event = {
 #入侵舒武什实际和谈事件
 country_event = { #danggun Peace treaty event
 	id = flavor_nuugdan_tsarai.100
-	title = flavor_nuugdan_tsarai.100.t
+	title = anbi_flavor_nuugdan_tsarai.100.t
 	picture = LAND_MILITARY_eventPicture
-	desc = flavor_nuugdan_tsarai.100.d
+	desc = anbi_flavor_nuugdan_tsarai.100.d
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3674,7 +3672,7 @@ country_event = { #danggun Peace treaty event
 	}
 
 	option = {
-		name = flavor_nuugdan_tsarai.100.a
+		name = anbi_flavor_nuugdan_tsarai.100.a
 		ai_chance = { factor = 100 }
 		if = {
 			limit = {
@@ -3682,7 +3680,7 @@ country_event = { #danggun Peace treaty event
 					ai = yes
 				}
 			}
-			custom_tooltip = flavor_nuugdan_tsarai.100_ct
+			custom_tooltip = anbi_flavor_nuugdan_tsarai.100_ct
 			tooltip = {
 				white_peace = Y93
 				Y93 = {
@@ -3742,7 +3740,7 @@ country_event = { #danggun Peace treaty event
 	}
 
 	option = {
-		name = flavor_nuugdan_tsarai.100.b
+		name = anbi_flavor_nuugdan_tsarai.100.b
 		ai_chance = { factor = 0 }
 		hidden_effect = {
 			country_event = { id = flavor_nuugdan_tsarai.3 days = 30 }
@@ -3752,14 +3750,14 @@ country_event = { #danggun Peace treaty event
 
 country_event = { #danggun Receives treaty offer #改造用于处决对面君主
 	id = flavor_nuugdan_tsarai.101
-	title = flavor_nuugdan_tsarai.101.t
+	title = anbi_flavor_nuugdan_tsarai.101.t
 	picture = LAND_MILITARY_eventPicture
-	desc = flavor_nuugdan_tsarai.101.d
+	desc = anbi_flavor_nuugdan_tsarai.101.d
 
 	is_triggered_only = yes
 
 	option = {
-		name = flavor_nuugdan_tsarai.101.a
+		name = anbi_flavor_nuugdan_tsarai.101.a
 		ai_chance = { factor = 100 }
 		white_peace = Y91
 		every_owned_province = {
@@ -3817,7 +3815,7 @@ country_event = { #danggun Receives treaty offer #改造用于处决对面君主
 	}
 
 	option = {
-		name = flavor_nuugdan_tsarai.101.b
+		name = anbi_flavor_nuugdan_tsarai.101.b
 		ai_chance = { factor = 0 }
 		Y91 = {
 			country_event = {
@@ -3829,14 +3827,14 @@ country_event = { #danggun Receives treaty offer #改造用于处决对面君主
 
 country_event = { #danggun rejects offer
 	id = flavor_nuugdan_tsarai.102
-	title = flavor_nuugdan_tsarai.102.t
+	title = anbi_flavor_nuugdan_tsarai.102.t
 	picture = LAND_MILITARY_eventPicture
-	desc = flavor_nuugdan_tsarai.102.d
+	desc = anbi_flavor_nuugdan_tsarai.102.d
 
 	is_triggered_only = yes
 
 	option = {
-		name = flavor_nuugdan_tsarai.102.a
+		name = anbi_flavor_nuugdan_tsarai.102.a
 		ai_chance = { factor = 100 }
 	}
 }
@@ -3844,8 +3842,8 @@ country_event = { #danggun rejects offer
 #switch units to halessi
 country_event = {
 	id = flavor_nuugdan_tsarai.103
-	title = flavor_nuugdan_tsarai.103.t
-	desc = flavor_nuugdan_tsarai.103.d
+	title = anbi_flavor_nuugdan_tsarai.103.t
+	desc = anbi_flavor_nuugdan_tsarai.103.d
 	picture = FIREARMS_INCIDENT_eventPicture
 
 	is_triggered_only = yes
@@ -3855,7 +3853,7 @@ country_event = {
 	}
 
 	option = {	#adopt local army
-		name = flavor_nuugdan_tsarai.103.a
+		name = anbi_flavor_nuugdan_tsarai.103.a
 		ai_chance = {
 			factor = 100
 		}
@@ -3892,7 +3890,7 @@ country_event = {
 	}
 
 	option = {	#keep old ways
-		name = flavor_nuugdan_tsarai.103.b
+		name = anbi_flavor_nuugdan_tsarai.103.b
 		ai_chance = {
 			factor = 0
 		}
@@ -3902,8 +3900,8 @@ country_event = {
 #MP拿来的
 country_event = {
 	id = flavor_nuugdan_tsarai.104
-	title = flavor_nuugdan_tsarai.104.t
-	desc = flavor_nuugdan_tsarai.104.d
+	title = anbi_flavor_nuugdan_tsarai.104.t
+	desc = anbi_flavor_nuugdan_tsarai.104.d
 	picture = FIREARMS_INCIDENT_eventPicture
 
 	is_triggered_only = yes
@@ -3916,7 +3914,7 @@ country_event = {
 	}
 
 	option = {
-		name = flavor_nuugdan_tsarai.104.a
+		name = anbi_flavor_nuugdan_tsarai.104.a
 		if = {
 			limit = { 
 				V25 = { #Hus Bhal
