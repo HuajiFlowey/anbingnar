@@ -153,6 +153,10 @@ country_event = {
 
 	fire_only_once = yes
 	is_triggered_only = yes
+	trigger = {
+		NOT = { has_global_flag = faceless_emperor_win }
+		NOT = { has_ruler_modifier = anbi_faceless_queen_modifier }
+	}
 
 	option = {
 		set_global_flag = faceless_emperor_win

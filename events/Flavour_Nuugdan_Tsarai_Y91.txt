@@ -349,7 +349,7 @@ country_event = {
 #11上罗祆收狗 任务取代
 
 #Greasing Rung Palms
-#12整合古园小弟
+#12整合古天国小弟
 country_event = {
 	id = flavor_nuugdan_tsarai.12
 	title = anbi_flavor_nuugdan_tsarai.12.t

@@ -1,34 +1,34 @@
  
-4871 = {
-	add_province_modifier = {
-		name = Y98_huagai_palace
-		duration = -1
-	}
-	add_province_modifier = {
-		name = Y98_harimari_palace
-		duration = -1
-	}
-	add_province_modifier = {
-		name = Y98_rahen_palace
-		duration = -1
-	}
-	add_province_modifier = {
-		name = Y98_tanxiang_palace
-		duration = -1
-	}
-	add_province_modifier = {
-		name = Y98_southest_palace
-		duration = -1
-	}
-	add_province_modifier = {
-		name = Y98_bulwar_palace
-		duration = -1
-	}
-	add_province_modifier = {
-		name = Y98_great_mage_palace
-		duration = -1
-	}
-}
+#4871 = {
+#	add_province_modifier = {
+#		name = Y98_huagai_palace
+#		duration = -1
+#	}
+#	add_province_modifier = {
+#		name = Y98_harimari_palace
+#		duration = -1
+#	}
+#	add_province_modifier = {
+#		name = Y98_rahen_palace
+#		duration = -1
+#	}
+#	add_province_modifier = {
+#		name = Y98_tanxiang_palace
+#		duration = -1
+#	}
+#	add_province_modifier = {
+#		name = Y98_southest_palace
+#		duration = -1
+#	}
+#	add_province_modifier = {
+#		name = Y98_bulwar_palace
+#		duration = -1
+#	}
+#	add_province_modifier = {
+#		name = Y98_great_mage_palace
+#		duration = -1
+#	}
+#}
 # ROOT = {
 # 	anbi_daxugo_harem_menu_action_marriage_1_yanshen_effect = yes
 # 	anbi_daxugo_harem_menu_action_marriage_1_kai_effect = yes
@@ -41,3 +41,7 @@
 #yanshen_superregion = { cede_province = Y91 add_core = Y91 }
 #country_event = { id = anbi_daxugo.2 }
 #set_estate_privilege = anbi_daxugo_waiqi_harem_privilege
+gozengun_superregion = {
+	limit = { religion = levaajan }
+	add_permanent_claim = Y91
+}

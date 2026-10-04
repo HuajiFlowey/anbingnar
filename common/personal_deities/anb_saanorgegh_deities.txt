@@ -54,11 +54,11 @@ ulaan = { #Ulaan, the Fierce
 	ai_will_do = {
 		factor = 1
 		modifier = {
-		factor = 3
+			factor = 3
 			personality = ai_militarist
 		}
-		}
 	}
+}
 
 bhengudak = {
 	warscore_cost_vs_other_religion = -0.2
@@ -75,11 +75,12 @@ bhengudak = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-		factor = 3
+			factor = 3
 			personality = ai_militarist
 		}
-		}
 	}
+
+}
 
 nurgai = { #The Faceless Queen Nurgai, leader of Nuugdan Tsarai at game start
 	core_creation = -0.1

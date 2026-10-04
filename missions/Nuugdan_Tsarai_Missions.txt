@@ -49,7 +49,7 @@ anbi_shuvuush_1 = {
 			custom_tooltip = anbi_Y91_return_white_ct
 			hidden_effect = {
 				gozengun_superregion = {
-					limit = { religion = Levaajan }
+					limit = { religion = levaajan }
 					add_permanent_claim = ROOT
 				}
 			}
@@ -236,9 +236,9 @@ anbi_shuvuush_2 = {
 		}
 
 		effect = {
-			add_country_modifier = {
+			add_ruler_modifier = {
 				name = "anbi_shuvuush_terror_stampede"
-				duration = 5475
+				duration = -1
 			}
 		}
 	}
@@ -1639,7 +1639,7 @@ anbi_nuugdan_tsarai_3 = {
 		}
 
 		effect = {
-			custom_tooltip = Y91_jiangdu_reborn_tt
+			custom_tooltip = Y91_jiangdu_reborn_ct
 			if = {
 				limit = {
 					Y13 = {
@@ -2053,9 +2053,10 @@ anbi_nuugdan_tsarai_4 = {
 		}
 
 		effect = {
-			beikyuan_area = { add_permanent_claim = ROOT } 
-			linghui_area = { add_permanent_claim = ROOT } 
-			beidugang_area = { add_permanent_claim = ROOT } 
+			tianlou_area = { add_permanent_claim = ROOT } 
+			iongsim_area = { add_permanent_claim = ROOT } 
+			mulim_area = { add_permanent_claim = ROOT } 
+			hongnguan_area = { add_permanent_claim = ROOT }
 		}
 	}
 
@@ -2929,10 +2930,7 @@ anbi_daxugo_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			OR = {
-				custom_trigger_tooltip = {
-					tooltip = is_enchantment_3_tt
-					has_ruler_flag = enchantment_3
-				}
+				is_ruler_enchantment_level_3 = yes
 				court_mage = 5
 				estate_influence = {
 					estate = estate_mages
@@ -3353,12 +3351,8 @@ anbi_daxugo_3 = {
 			anbi_Y91_into_the_rainforest
 		}
 		provinces_to_highlight = {
-			OR = {
-				AND = {
-					region = lupulan_rainforest_region
-					NOT = { owned_by = ROOT } 
-				}
-			}
+			region = lupulan_rainforest_region
+			NOT = { owned_by = ROOT } 
 		}
 
 		trigger = {
@@ -4012,12 +4006,10 @@ anbi_daxugo_5 = {
 			1371 = { is_strongest_trade_power = ROOT }
 			4879 = {
 				development = 20
-				has_production_manufactory_or_gold_trigger = yes
 				province_has_center_of_trade_of_level = 2
 			} 
 			4884 = {
 				development = 20
-				has_production_manufactory_or_gold_trigger = yes
 				province_has_center_of_trade_of_level = 2
 			} 
 			if = {

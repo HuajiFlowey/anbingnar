@@ -131,7 +131,7 @@ A_hawk_screaming_for_a_bloody_war = {
 }
 
 the_owner_of_golden_highway = {
-	trade_goods_size_modifier = 0.1
+	global_trade_goods_size_modifier = 0.1
 	trade_efficiency = 0.2
 	merchants = 2
 	trade_steering = 0.25

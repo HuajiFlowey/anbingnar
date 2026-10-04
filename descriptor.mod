@@ -1,4 +1,4 @@
-version="0.7.31"
+version="0.7.33"
 tags={
 	"Missions And Decisions"
 	"New Nations"

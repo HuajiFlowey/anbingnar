@@ -134,6 +134,11 @@ country_event = { #Saanorgegh swap personal deity
 	}
 	option = { #Personal Mask
 		name = personal_mask_full
+		trigger = {
+			NOT = {
+				has_ruler_flag = Y61_personal_mask_upgrade
+			}
+		}
 
 		change_personal_deity = personal_mask
 

@@ -44,7 +44,7 @@ country_event = {
 		save_global_event_target_as = kuhai_or_was_kuhai_target
 	}
 }
-#妈了个巴子的,给我用测试版！(所有版本皆完成了古园改名)
+#妈了个巴子的,给我用测试版！(所有版本皆完成了古天国改名)
 # country_event = {
 # 	id = anbitotal.3
 # 	title = anbitotal.3.t
